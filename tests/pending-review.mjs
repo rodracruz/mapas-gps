@@ -9,8 +9,8 @@ const traces=p=>p.locator('.route').evaluateAll(ns=>ns.map(n=>[n.dataset.segment
 try{
  const page=await browser.newPage({viewport:{width:1440,height:1100}});page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base+'/revision.html');await page.waitForSelector('#stage[aria-busy="false"]');
- assert.equal(await page.locator('#pending-list button').count(),7);
- assert.equal(await page.locator('#pending-count').textContent(),'7');
+ assert.equal(await page.locator('#pending-list button').count(),6);
+ assert.equal(await page.locator('#pending-count').textContent(),'6');
  const originalTraces=await traces(page);
  await page.locator('#pending-review summary').click();
  await page.getByRole('checkbox',{name:'Mostrar Starwars',exact:true}).uncheck();
@@ -22,7 +22,7 @@ try{
  assert.equal(await page.locator('#show-gaps').isChecked(),true);
  assert.equal(await page.getByRole('button',{name:'Superposición',exact:true}).getAttribute('aria-pressed'),'true');
  assert.equal(await page.locator('#pending-list [aria-pressed="true"]').count(),1);
- assert.match(await page.locator('#pending-view-info').textContent(),/Zona 1 de 7/);
+ assert.match(await page.locator('#pending-view-info').textContent(),/Zona 1 de 6/);
  assert.equal(await page.locator('.pending text').first().isVisible(),false,'zoomed annotation digits must not cover the inspected image');
  console.log('PASS pending list focuses a hidden region and restores visible trail, gaps and overlay');
  const view=await page.locator('#map').getAttribute('viewBox');
@@ -37,7 +37,7 @@ try{
  const matrices=await page.evaluate(()=>[document.querySelector('#original'),document.querySelector('.route')].map(n=>{const a=n.getScreenCTM();return [a.a,a.b,a.c,a.d,a.e,a.f];}));assert.deepEqual(matrices[0],matrices[1]);
  console.log('PASS direct photo comparison preserves crop, image/vector alignment and all fragment points');
  await page.getByRole('button',{name:'Revisar zona 4: La Virgen',exact:true}).focus();await page.keyboard.press('Enter');
- assert.match(await page.locator('#selection-detail').textContent(),/Zigzags/);
+ assert.match(await page.locator('#selection-detail').textContent(),/Segundo rótulo/);
  assert.equal(await page.locator('#map').evaluate(n=>document.activeElement===n),true);
  await page.getByRole('button',{name:'Seleccionar Lomo Vetado',exact:true}).click();
  assert.equal(await page.locator('#pending-comparison').isHidden(),true);
@@ -54,10 +54,10 @@ try{
  await mobile.getByRole('button',{name:'Foto original',exact:true}).tap();await mobile.waitForFunction(()=>document.querySelector('#stage').dataset.imageSource==='original');
  await mobile.waitForSelector('#stage[aria-busy="false"]');
  assert.equal(await mobile.getByRole('button',{name:'Mapa oficial',exact:true}).isEnabled(),true);
- assert.equal(await mobile.locator('.route').count(),9);assert.equal(await mobile.locator('.pending').count(),7);
+ assert.equal(await mobile.locator('.route').count(),10);assert.equal(await mobile.locator('.pending').count(),6);
  const out=new URL('../docs/evidence/screenshots/',import.meta.url);await mkdir(out,{recursive:true});
  await mobile.screenshot({path:new URL('pending-review-mobile.png',out).pathname,fullPage:true});
- console.log('PASS mobile direct review, visible stage, 44px controls and unchanged nine fragments/seven gaps');
+ console.log('PASS mobile direct review, visible stage, 44px controls and ten fragments/six pending areas');
  await mobile.getByRole('button',{name:'Mapa oficial',exact:true}).tap();await mobile.waitForFunction(()=>document.querySelector('#stage').dataset.imageSource==='official');
  const failedView=await mobile.locator('#map').getAttribute('viewBox');let failOnce=true;
  await mobile.route('**/elh-durazno.jpg',r=>{if(failOnce){failOnce=false;return r.fulfill({status:503,body:'transient test failure'});}return r.continue();});

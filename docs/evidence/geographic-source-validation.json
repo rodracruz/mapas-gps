@@ -1,0 +1,122 @@
+{
+  "checkedAt": "2026-10-18T23:51:35.923423+00:00",
+  "scope": "Public OSM evidence verification, not independent ground survey or photo correspondence",
+  "references": [
+    {
+      "referenceId": "park-marker",
+      "url": "https://api.openstreetmap.org/api/0.6/node/9258698134.json",
+      "httpStatus": 200,
+      "sourceSha256": "e63372e68249cd1e7ea86eca5a649a793fe2ca55b4953b605a26b65a17a48ec9",
+      "osmVersion": 1,
+      "osmTimestamp": "2021-11-17T01:25:04Z",
+      "matchesRecordedVersionAndCoordinates": true,
+      "acceptedForImageCalibration": false
+    },
+    {
+      "referenceId": "entrance-candidate",
+      "url": "https://api.openstreetmap.org/api/0.6/node/9258698133.json",
+      "httpStatus": 200,
+      "sourceSha256": "1dbdc1787caf6ca83c6d13c486ebce9f8e0f147e220c13314cb3ac1a142544a5",
+      "osmVersion": 1,
+      "osmTimestamp": "2021-11-17T01:25:04Z",
+      "matchesRecordedVersionAndCoordinates": true,
+      "acceptedForImageCalibration": false
+    },
+    {
+      "referenceId": "buitrera-viewpoint",
+      "url": "https://api.openstreetmap.org/api/0.6/node/4705647672.json",
+      "httpStatus": 200,
+      "sourceSha256": "450d31019e2d67a0d4171428ad9da64599985763deb6355b10df8bde2103955e",
+      "osmVersion": 2,
+      "osmTimestamp": "2021-11-17T01:25:04Z",
+      "matchesRecordedVersionAndCoordinates": true,
+      "acceptedForImageCalibration": false
+    },
+    {
+      "referenceId": "virgen-statue",
+      "url": "https://api.openstreetmap.org/api/0.6/node/9258698197.json",
+      "httpStatus": 200,
+      "sourceSha256": "2f860568d53123ba600293daec166df900b28b486cd3eaa7c5153b9d7612e5ad",
+      "osmVersion": 1,
+      "osmTimestamp": "2021-11-17T01:25:04Z",
+      "matchesRecordedVersionAndCoordinates": true,
+      "acceptedForImageCalibration": false
+    },
+    {
+      "referenceId": "plaza-saltos-viewpoint",
+      "url": "https://api.openstreetmap.org/api/0.6/node/9258698201.json",
+      "httpStatus": 200,
+      "sourceSha256": "780605e650fbef8bd5938848eb19113891666ea873c9035b78f360ce8572a444",
+      "osmVersion": 1,
+      "osmTimestamp": "2021-11-17T01:25:04Z",
+      "matchesRecordedVersionAndCoordinates": true,
+      "acceptedForImageCalibration": false
+    },
+    {
+      "referenceId": "information-map-junction",
+      "url": "https://api.openstreetmap.org/api/0.6/node/4705608441.json",
+      "httpStatus": 200,
+      "sourceSha256": "9a1e50c39978ad60cd2df41f51f0bb9ba0c5aa20c330a1c789b4ea3ae47ea446",
+      "osmVersion": 3,
+      "osmTimestamp": "2021-11-17T01:25:04Z",
+      "matchesRecordedVersionAndCoordinates": true,
+      "acceptedForImageCalibration": false
+    },
+    {
+      "referenceId": "upper-buitrera-path-node",
+      "url": "https://api.openstreetmap.org/api/0.6/node/397645997.json",
+      "httpStatus": 200,
+      "sourceSha256": "58e84e730d1875e98a8807d9c809352f3760f662c5eb182ce4d16919b63765f5",
+      "osmVersion": 2,
+      "osmTimestamp": "2017-03-05T15:20:17Z",
+      "matchesRecordedVersionAndCoordinates": true,
+      "acceptedForImageCalibration": false
+    },
+    {
+      "referenceId": "upper-connection-junction",
+      "url": "https://api.openstreetmap.org/api/0.6/node/397646020.json",
+      "httpStatus": 200,
+      "sourceSha256": "89aff07de07b455988887ee211e8b2c4f62f6f3cceebc96c250b8e2ee71b2e44",
+      "osmVersion": 2,
+      "osmTimestamp": "2017-02-25T19:59:10Z",
+      "matchesRecordedVersionAndCoordinates": true,
+      "acceptedForImageCalibration": false
+    },
+    {
+      "referenceId": "lomo-vetado-endpoint",
+      "url": "https://api.openstreetmap.org/api/0.6/node/4705608466.json",
+      "httpStatus": 200,
+      "sourceSha256": "758e8651df4513739844f910b63cd25c8d209afc165b389d0a53a7adddb4849f",
+      "osmVersion": 1,
+      "osmTimestamp": "2017-02-25T19:36:27Z",
+      "matchesRecordedVersionAndCoordinates": true,
+      "acceptedForImageCalibration": false
+    },
+    {
+      "referenceId": "calibre12-lomo-junction",
+      "url": "https://api.openstreetmap.org/api/0.6/node/4705609090.json",
+      "httpStatus": 200,
+      "sourceSha256": "8525d498e64b2dfdd26505b00d5bc8a395fcd72cb0ac45fc39c2c297ae09234f",
+      "osmVersion": 1,
+      "osmTimestamp": "2017-02-25T19:36:27Z",
+      "matchesRecordedVersionAndCoordinates": true,
+      "acceptedForImageCalibration": false
+    }
+  ],
+  "matchingReferenceCount": 10,
+  "newImageControlPoints": 0,
+  "geographicTransform": null,
+  "pdfGeographicDictionariesFound": [],
+  "pdfGeographicDictionaryKeysChecked": [
+    "Viewport",
+    "GPTS",
+    "LGIDict",
+    "GCS",
+    "Measure",
+    "LPTS"
+  ],
+  "lomoWayFullUrl": "https://api.openstreetmap.org/api/0.6/way/477170097/full",
+  "lomoWayVersion": 6,
+  "lomoWayNodeCount": 127,
+  "lomoWayFullSha256": "1287ddf2413cd07c7ccb0fc8f60f35291a338735e278e1232ec806072636c35d"
+}

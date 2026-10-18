@@ -86,3 +86,9 @@ Se volvió a consultar la página del operador, que sigue enlazando el JPG/PDF r
 La [política publicada de Trailforks](https://www.trailforks.com/about/data/) exige acceso autorizado por API para usar sus datos. Se registra esta condición como límite de incorporación: no se solicitaron claves ni se copiaron coordenadas, pistas o geometrías del proveedor. No se toma una consulta de su página como autorización de reutilización.
 
 El JSON de fuentes se actualizó para reflejar correctamente el JPG oficial conservado y la extracción de los tres contornos PDF. Los detalles de las siete zonas y sus comparaciones están en [pending-review.md](pending-review.md).
+
+## Validación técnica posterior
+
+Se consultaron nuevamente las diez referencias directamente en la API pública de OSM: versiones y coordenadas coinciden con el registro. La consulta actual de Lomo Vetado confirmó la vía 477170097 v6 y sus 127 nodos. Se revisaron metadatos y los diccionarios PDF `Viewport`, `GPTS`, `LGIDict`, `GCS`, `Measure` y `LPTS`, sin encontrar transformación geográfica declarada. [Resultado reproducible por URL, versión y hash](geographic-source-validation.json). Esta verificación de fuente no identifica píxeles del cartel ni aporta una comprobación de terreno independiente; siguen cero controles aceptados y transformación nula.
+
+El PDF sí conserva dibujo de sendero bajo algunas placas, visible al aislar sus contornos. No se confundió ese dibujo con una correspondencia geográfica ni con prueba de la edición exacta de lo oculto en la fotografía. Los dos zigzags visibles de La Virgen se recuperaron contrastando directamente la foto, no interpolando bajo un rótulo. [Validación visual](visual-validation.md).

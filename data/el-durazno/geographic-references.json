@@ -601,5 +601,27 @@
       "importedCoordinates": false,
       "importedGeometry": false
     }
+  },
+  "technicalValidation": {
+    "report": "../../docs/evidence/geographic-source-validation.json",
+    "queriedOn": "2026-10-18",
+    "currentOsmReferencesChecked": 10,
+    "unchangedVersionsAndCoordinates": 10,
+    "lomoWay": {
+      "id": 477170097,
+      "version": 6,
+      "nodeCount": 127
+    },
+    "pdfGeographicDictionaryKeysChecked": [
+      "Viewport",
+      "GPTS",
+      "LGIDict",
+      "GCS",
+      "Measure",
+      "LPTS"
+    ],
+    "geographicDictionariesFound": [],
+    "acceptedImageControlPoints": 0,
+    "transform": null
   }
 }

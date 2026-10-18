@@ -17,9 +17,9 @@ async function alignment(p){return p.evaluate(()=>{
 try{
  const desktop=await browser.newContext({viewport:{width:1440,height:1100},acceptDownloads:true});
  const page=await desktop.newPage();page.on('pageerror',e=>errors.push(e.message));
- await check('load actual photo, 9 fragments and 7 pending regions',async()=>{
-  await ready(page);assert.equal(await page.locator('.route').count(),9);assert.equal(await page.locator('.pending').count(),7);
-  assert.match(await page.locator('#dataset-status').textContent(),/9 fragmentos/);
+ await check('load actual photo, 10 fragments and 6 pending regions',async()=>{
+  await ready(page);assert.equal(await page.locator('.route').count(),10);assert.equal(await page.locator('.pending').count(),6);
+  assert.match(await page.locator('#dataset-status').textContent(),/10 fragmentos/);
   const image=await page.locator('#original').evaluate(n=>({x:n.getAttribute('x'),y:n.getAttribute('y'),width:n.getAttribute('width'),height:n.getAttribute('height')}));
   assert.deepEqual(image,{x:'0',y:'0',width:'900',height:'1100'});
  });

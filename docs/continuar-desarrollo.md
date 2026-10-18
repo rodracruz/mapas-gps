@@ -10,10 +10,11 @@ El primer hito es un visor de revisión de Starwars, La Virgen y Lomo Vetado, no
 
 El original público de 900 × 1100 se conserva sin cambios. La fuente oficial de mayor resolución está alineada a ese mismo plano; cambiar de fondo no modifica las coordenadas. La foto completa del usuario se conserva fuera del repositorio público y solo se incluye opcionalmente en la copia privada.
 
-La lista **Revisar zonas pendientes** permite encuadrar cualquiera de las siete zonas y alternar las dos fuentes desde el mismo recorte. La actualización de código `98e2505` está publicada en el visor privado y comprobada por HTTPS con 15 controles; el registro y el despliegue actual están en `docs/evidence/private-site.md`.
+La lista **Revisar zonas pendientes** permite encuadrar cualquiera de las seis zonas actuales y alternar las dos fuentes desde el mismo recorte. La validación propia e independiente resolvió los dos zigzags visibles de La Virgen y ajustó un gancho de Lomo Vetado. Su evidencia y límites están en `docs/evidence/visual-validation.md`; el registro del despliegue actual está en `docs/evidence/private-site.md`.
 
 - Datos editables: `data/el-durazno/visual-trails.json`.
 - Muestras previas a simplificación: `data/el-durazno/centerline-samples.json`.
+- Observaciones y correcciones visuales editables: `data/el-durazno/visual-corrections.json`.
 - Ajuste visual entre imágenes: `data/el-durazno/image-registration.json`.
 - Investigación geográfica separada: `data/el-durazno/geographic-references.json`.
 - Método y límites: `docs/evidence/primer-hito.md`.
@@ -24,7 +25,7 @@ La lista **Revisar zonas pendientes** permite encuadrar cualquiera de las siete 
 
 El visor admite aquí coordenadas de imagen con transformación identidad. Los extremos de cada fragmento deben coincidir con sus nodos visuales; los nodos no se comparten entre fragmentos. Cada sendero seleccionable necesita al menos un fragmento para poder encuadrarlo.
 
-Los recuadros mantienen estado pendiente, fuente conocida y geometría nula. Se comprueban aristas completas frente al interior de los recuadros del mismo sendero, con la banda de límite de 3 px que ya usaba la revisión. Esta comprobación encuentra también una línea que cruce el hueco aunque ambos vértices estén fuera. La banda no es un permiso para interpolar ni una tolerancia geográfica. El JSON original sigue teniendo 9 fragmentos, 245 vértices y 7 zonas pendientes.
+Los recuadros mantienen estado pendiente, fuente conocida y geometría nula. Se comprueban aristas completas frente al interior de los recuadros del mismo sendero, con la banda de límite de 3 px. Esta comprobación encuentra también una línea que cruce el hueco aunque ambos vértices estén fuera. La banda no es un permiso para interpolar ni una tolerancia geográfica. El JSON actual tiene 10 fragmentos, 253 vértices y 6 zonas pendientes. Todos los IDs originales se conservan; `virgen-tight-turns` pasa de `gaps` a `visualReviews`, y el fragmento añadido es `la-virgen-s05`.
 
 Una edición que viole estos contratos se rechaza antes de dibujar o habilitar la descarga. Estos contratos no sustituyen la comparación visual de nuevas geometrías.
 
@@ -48,6 +49,6 @@ Para actualizar el sitio privado, conservar su ID en la copia de alojamiento y s
 
 ## Próxima decisión cartográfica
 
-Las siete zonas siguen pendientes y no se han añadido curvas ni conexiones. La fidelidad visual debe aceptarse antes de avanzar. La investigación registró 10 referencias OSM, pero cero correspondencias píxel/geografía aceptadas. Faltan controles inequívocos e independientes para evaluar una transformación; no hay ajuste GPS validado.
+La revisión técnica de las curvas visibles ya se ejecutó; no se delega al usuario. Quedan cinco rótulos y el extremo inferior de Lomo Vetado por contrastar. Los contornos del PDF aportan evidencia de su propio dibujo bajo las placas; no demuestran por sí solos la edición exacta de lo oculto en la foto. La investigación verificó otra vez las 10 referencias OSM, pero mantiene cero correspondencias píxel/geografía aceptadas. Faltan controles inequívocos e independientes para evaluar una transformación; no hay ajuste GPS validado.
 
 Destinos, loops, distancias sobre caminos, sentidos y ajuste GPS quedan para después de validar esas correspondencias y la conectividad. No reutilizar las geometrías ilustrativas de `visor-vectorial.html` como datos comprobados.

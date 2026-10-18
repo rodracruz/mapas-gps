@@ -4,7 +4,7 @@
     900,
     1100
   ],
-  "geometrySha256": "9b072d4b38fa3ace4666d3c6c7c6035e92fa8b8d0a54ceaaa1b034692193e4c5",
+  "geometrySha256": "14882b099a1d29e81bdd5b5d94bfa3c721a37b9c50442a8e11cd53aa5263cd1f",
   "displayZoom": 4,
   "resampling": "nearest-neighbor; ordinary pixel replication, no generative enhancement",
   "sourceHashes": {
@@ -46,17 +46,6 @@
         436
       ],
       "comparisonFile": "virgen-label-upper-comparacion.png"
-    },
-    {
-      "gapId": "virgen-tight-turns",
-      "status": "pending",
-      "imageCropXYXY": [
-        377,
-        403,
-        445,
-        464
-      ],
-      "comparisonFile": "virgen-tight-turns-comparacion.png"
     },
     {
       "gapId": "virgen-label-lower",

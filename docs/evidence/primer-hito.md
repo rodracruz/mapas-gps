@@ -39,7 +39,7 @@ El método final aprovecha los contornos oficiales como guía visual; evita volv
 
 1. Registrar el JPG oficial sobre la fotografía con SIFT y homografía RANSAC. Se filtraron coincidencias fuera del área de mapa y a más de 50 px de una colocación aproximada `(p−[578,80])/2.2`, evitando falsos emparejamientos de la textura repetida. Hay 102 candidatos y 90 inliers.
 2. Extraer exclusivamente los contornos de Starwars (índice 51), La Virgen (31) y Lomo Vetado (39) del PDF fijado por hash. Los índices son identificadores de extracción para esos bytes, no IDs geográficos.
-3. Rasterizar los contornos a 4 píxeles por punto PDF y proyectarlos al sistema de foto a 3 muestras por píxel; adelgazar y ordenar la línea central entre extremos visuales. Pequeñas espículas del adelgazamiento no se convierten en ramas de red. El área de zigzags verdes con solapamiento del grosor se deja pendiente.
+3. Rasterizar los contornos a 4 píxeles por punto PDF y proyectarlos al sistema de foto a 3 muestras por píxel; adelgazar y ordenar la línea central entre extremos visuales. Pequeñas espículas del adelgazamiento no se convierten en ramas de red. La extracción automática dejó pendiente el área de zigzags verdes; la revisión manual posterior la resolvió directamente contra la fotografía.
 4. Excluir primero los intervalos dentro de los recuadros pendientes. Cada intervalo restante genera un fragmento separado; nunca se unen componentes desconectados.
 5. Centrar localmente cada fragmento sobre la línea de color de la foto mediante búsqueda normal limitada a ±3 px, suavizada para reducir ruido JPEG. Se conserva la topología de la guía y no se buscan caminos alternativos.
 6. Simplificar con Ramer–Douglas–Peucker, tolerancia **1 píxel nativo**; redondear a centésimas. La prueba compara todos los puntos densos contra el resultado y admite solo 0,008 px adicionales por redondeo.
@@ -62,7 +62,7 @@ Comprobación interna 45/45 de las coincidencias seleccionadas: RMSE 1,0002 px, 
 
 ### Geometría resultante
 
-9 fragmentos, 245 vértices, 18 extremos visuales separados y 7 zonas pendientes. Starwars: 3 fragmentos, La Virgen: 4, Lomo Vetado: 2. La Virgen incluye la continuación verde al oeste y su segundo rótulo inferior; no se confunde con Parcero/Papaya.
+Tras la [validación técnica posterior](visual-validation.md): 10 fragmentos, 253 vértices, 20 extremos visuales separados y 6 zonas pendientes. Starwars: 3 fragmentos, La Virgen: 5, Lomo Vetado: 2. La Virgen incluye la continuación verde al oeste y su segundo rótulo inferior; no se confunde con Parcero/Papaya. La extracción automática inicial producía 9 fragmentos y 7 pendientes; las observaciones manuales revisadas recuperan los dos zigzags visibles y ajustan el gancho de Lomo Vetado, conservando los IDs anteriores.
 
 El JSON contiene `nodes`, `segments`, `sources`, `connections: []` y `geographicCorrespondences: []`. Los extremos pertenecen a cada fragmento y no se fusionan por proximidad. Las conexiones transitables no están comprobadas. Los recuadros de incertidumbre no contienen geometría de enlace. Lomo Vetado tiene color violeta en el visor para distinguirlo de Starwars; ese color de revisión no modifica su identificación azul en el cartel.
 
@@ -72,13 +72,13 @@ El visor no necesita instalar dependencias de aplicación. Servir el repositorio
 
 Para generar el HTML autónomo: `python3 scripts/build-standalone.py`. Incluye la foto original, los trazados y la documentación. Los enlaces al mapa oficial y a la app publicada son externos; el visor central no los necesita para funcionar.
 
-Para volver a calcular la geometría (herramientas de análisis opcionales): instalar `scripts/requirements-tracing.txt`; descargar el PDF oficial indicado en el registro de fuentes y ejecutar `python scripts/trace-trails.py --pdf /ruta/al/mapa.pdf`. El script verifica su SHA-256. Para recalcular solo el registro visual: `python scripts/register-images.py --output /ruta/de/salida`; revisar el nuevo ajuste antes de sustituir el registro guardado.
+Para volver a calcular la geometría (herramientas de análisis opcionales): instalar `scripts/requirements-tracing.txt`; descargar el PDF oficial indicado en el registro de fuentes y ejecutar `python scripts/trace-trails.py --pdf /ruta/al/mapa.pdf`. El script verifica su SHA-256 y aplica `visual-corrections.json` antes de publicar ambos JSON; un fallo de corrección conserva la revisión anterior. Las muestras de los intervalos manuales son interpolaciones declaradas, no mediciones fotográficas densas independientes. Para recalcular solo el registro visual: `python scripts/register-images.py --output /ruta/de/salida`; revisar el nuevo ajuste antes de sustituir el registro guardado.
 
 Los IDs actuales se preservan al editar las listas de puntos. Si se divide un fragmento en una revisión futura, mantener el ID histórico y registrar sucesores; no renumerar globalmente para asociarlos a OSM.
 
 ## Pendiente para el siguiente hito
 
-Resolver las siete zonas señaladas mediante mayor evidencia de la misma edición; aceptar visualmente los recorridos; establecer correspondencias geográficas inequívocas y controles de comprobación independientes. Solo después decidir modelo geográfico y topología navegable. No se usan longitudes del cartel como distancias de terreno.
+Contrastar las seis zonas restantes con evidencia de la misma edición y establecer correspondencias geográficas inequívocas y controles de comprobación independientes. La revisión técnica de la forma visible ya se realizó y está documentada; no queda asignada al usuario. Solo después de validar geografía se decide modelo y topología navegable. No se usan longitudes del cartel como distancias de terreno.
 
 ## Actualización de fuentes: fotografía completa
 

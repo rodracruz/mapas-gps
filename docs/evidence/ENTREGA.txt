@@ -22,13 +22,14 @@ solicitudes externas. La URL alojada es privada y separada de GitHub Pages.
 Datos editables: data/el-durazno/visual-trails.json
 Capturas comparativas: docs/evidence/screenshots/*-comparacion.png
 Zonas pendientes: abrir «Revisar zonas pendientes» en el visor.
-Comparaciones ampliadas: docs/evidence/pending/siete-zonas-comparacion.png
+Comparaciones ampliadas: docs/evidence/pending/zonas-pendientes-comparacion.png
 Resultado por zona: docs/evidence/pending-review.md
+Validación propia y ajustes: docs/evidence/visual-validation.md
 Fuentes y método: docs/evidence/primer-hito.md
 Referencias: docs/evidence/geographic-references.md
 Pruebas y limitaciones: docs/evidence/verification.md
 
-Los senderos están en píxeles, no en coordenadas GPS. Quedan siete zonas
+Los senderos están en píxeles, no en coordenadas GPS. Quedan seis zonas
 pendientes; no hay enlaces inventados, transformación geográfica validada
 ni distancias de terreno. No se implementó navegación en este hito.
 

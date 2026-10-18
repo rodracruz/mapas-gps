@@ -52,7 +52,7 @@ for index,gap in enumerate(data['gaps'],1):
  pages.append(page)
 contact=Image.new('RGB',(panels_width*3,len(pages)*550),'#f6f7f2')
 for i,page in enumerate(pages):contact.paste(page,(0,i*550))
-contact.save(args.output_dir/'siete-zonas-comparacion.png')
+contact.save(args.output_dir/'zonas-pendientes-comparacion.png')
 manifest={'coordinateSystem':'image-pixels','coordinateFrame':[data['image']['width'],data['image']['height']],'geometrySha256':hashlib.sha256(data_bytes).hexdigest(),'displayZoom':zoom,'resampling':'nearest-neighbor; ordinary pixel replication, no generative enhancement','sourceHashes':{key:sources[key]['sha256'] for key in rasters},'registration':'data/el-durazno/image-registration.json','geographicTransform':None,'regions':regions}
 (args.output_dir/'comparisons.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 assert data_path.read_bytes()==data_bytes

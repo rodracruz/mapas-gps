@@ -27,6 +27,12 @@
       "method": "official outline centerline, registered and locally centered on original photo",
       "registrationFile": "image-registration.json",
       "pdfSha256": "9a67123b027197042da8e47d0c6dbe61e800d11e0e7fe01a5d85172b65ef39ab"
+    },
+    {
+      "id": "photo-manual-review",
+      "url": "elh-durazno.jpg",
+      "method": "manual observations on original photograph, independently inspected and checked against isolated official PDF contours",
+      "correctionsFile": "visual-corrections.json"
     }
   ],
   "digitization": {
@@ -40,7 +46,8 @@
       "la-virgen": 3141,
       "lomo-vetado": 2261
     },
-    "noGeographicUnits": true
+    "noGeographicUnits": true,
+    "manualCorrectionsFile": "visual-corrections.json"
   },
   "georeferencing": {
     "status": "unvalidated",
@@ -1113,20 +1120,20 @@
           621.8
         ],
         [
-          274.82,
-          627.23
+          274.8,
+          627.1
         ],
         [
-          277.71,
-          632.59
+          278.6,
+          633.2
         ],
         [
-          277.34,
-          630.66
+          282.9,
+          625.9
         ],
         [
-          284.92,
-          627.19
+          285.5,
+          625.8
         ],
         [
           284.0,
@@ -1143,6 +1150,52 @@
         [
           296.09,
           688.32
+        ]
+      ],
+      "manualCorrectionIds": [
+        "lomo-hook-photo-review"
+      ]
+    },
+    {
+      "id": "la-virgen-s05",
+      "trailId": "la-virgen",
+      "sourceId": "photo-manual-review",
+      "status": "visible",
+      "confidence": "reviewable-visual-match",
+      "startNodeId": "la-virgen-s05-a",
+      "endNodeId": "la-virgen-s05-b",
+      "points": [
+        [
+          415.43,
+          423.26
+        ],
+        [
+          420.8,
+          432.3
+        ],
+        [
+          410.0,
+          427.2
+        ],
+        [
+          408.2,
+          427.3
+        ],
+        [
+          408.5,
+          429.4
+        ],
+        [
+          413.0,
+          436.7
+        ],
+        [
+          399.2,
+          432.8
+        ],
+        [
+          401.24,
+          444.3
         ]
       ]
     }
@@ -1186,20 +1239,6 @@
         36
       ],
       "reason": "Rótulo La Virgen superior: no se interpola bajo las letras.",
-      "geometry": null,
-      "status": "pending",
-      "sourceId": "original-photo"
-    },
-    {
-      "id": "virgen-tight-turns",
-      "trailId": "la-virgen",
-      "bounds": [
-        397,
-        423,
-        28,
-        21
-      ],
-      "reason": "Zigzags muy próximos: el grosor y la resolución impiden separar inequívocamente los vértices.",
       "geometry": null,
       "status": "pending",
       "sourceId": "original-photo"
@@ -1409,8 +1448,56 @@
       ],
       "kind": "visual-fragment-end",
       "connectionVerified": false
+    },
+    {
+      "id": "la-virgen-s05-a",
+      "point": [
+        415.43,
+        423.26
+      ],
+      "kind": "visual-fragment-end",
+      "connectionVerified": false
+    },
+    {
+      "id": "la-virgen-s05-b",
+      "point": [
+        401.24,
+        444.3
+      ],
+      "kind": "visual-fragment-end",
+      "connectionVerified": false
     }
   ],
   "connections": [],
-  "geographicCorrespondences": []
+  "geographicCorrespondences": [],
+  "appliedVisualCorrections": [
+    {
+      "id": "lomo-hook-photo-review",
+      "segmentId": "lomo-vetado-s02",
+      "observationsSha256": "a8782782db11f5881b05b97f7a73c42fe93a23b1a3c4728677ca2850cbaf2345",
+      "afterPointsSha256": "027f03a099e25b3658f844882a4f997468e378aab06134c1fb44901f9769549c"
+    },
+    {
+      "id": "virgen-tight-turns",
+      "segmentId": "la-virgen-s05",
+      "observationsSha256": "c44bf989ae9a4656dc9b47e35b016793e1d71ae2e83c64c496f4b823b12ce13d",
+      "afterPointsSha256": "0efdb7e183f81fc07a038d6d125e6ad53040fe1053546123dcc86182f17ee6c8"
+    }
+  ],
+  "visualReviews": [
+    {
+      "id": "virgen-tight-turns",
+      "status": "visually-resolved",
+      "segmentId": "la-virgen-s05",
+      "bounds": [
+        397,
+        423,
+        28,
+        21
+      ],
+      "sourceId": "photo-manual-review",
+      "reason": "Two separate returns and light wedges are visible in the original photograph and agree with the isolated PDF contour. Previously masked by an overly conservative automatic skeletonization decision.",
+      "geographicConnectionVerified": false
+    }
+  ]
 }

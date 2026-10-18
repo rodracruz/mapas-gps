@@ -2,17 +2,19 @@
 
 Fecha: 2026-10-18. Base del repositorio: `87edc6c`. Rama de desarrollo publicada en GitHub: `feat/fiel-vector-review`. Worktree: `/workspace/mapas-gps/.worktrees/vector-review`.
 
+**Estado actual:** revisión técnica visible realizada, con ajustes comprobados en La Virgen y Lomo Vetado: **10 fragmentos / 253 vértices / 6 pendientes**. Se conservan más abajo los registros de ejecuciones anteriores. Resultado y límites actuales en [visual-validation.md](visual-validation.md).
+
 ## Qué se ejecutó
 
 | Comprobación | Resultado |
 | --- | --- |
-| `npm test` | 16 pruebas: fuente/hash y dimensiones, esquema/IDs/coordenadas, separación de geografía, huecos, transformaciones, extremos, tolerancia de simplificación y SHA-256 portátil |
+| `npm test` | 21 pruebas: fuente/hash y dimensiones, esquema/IDs/coordenadas, separación de geografía, huecos, transformaciones, extremos, simplificación, SHA-256, retornos fotografiados, reproducción y conservación ante fallo |
 | `npm run test:browser` | 12 comprobaciones en Chromium 154.0.8037.57: carga, modos, opacidades, capas, selección por ratón/teclado/tap, anclaje de zoom, arrastre, tamaño, descarga, errores, tacto y conservación de datos |
 | `npm run test:sources` | Cambio entre fondos, geometría y encuadre conservados, disposición móvil y recuperación tras fallo de una fuente |
 | `npm run test:pending` | 5 comprobaciones: acceso por zona, restauración de capas, encuadre, comparación sin cambiar puntos, teclado, controles móviles y recuperación ante HTTP 503 con aviso visible |
 | `npm run test:integrity` | 5 comprobaciones móviles: cuatro clases de datos incorrectos rechazadas antes de dibujar/exportar; reintento de foto completa tras error transitorio de decodificación |
 | `npm run build:standalone` y `npm run test:standalone` | HTML con foto/datos/evidencia incrustados; una solicitud inicial al HTML, luego controles en modo offline, sin recursos externos |
-| `python scripts/trace-trails.py --pdf /workspace/scratch/geo/official-map.pdf` | 9 fragmentos / 245 vértices / 7 zonas pendientes; PDF y foto verificados por SHA-256 |
+| `python scripts/trace-trails.py --pdf /workspace/scratch/geo/official-map.pdf` | 10 fragmentos / 253 vértices / 6 pendientes tras correcciones revisadas; igualdad byte por byte, fuente fijada por SHA y conservación de datos si falla el corrector |
 | `curl -I http://127.0.0.1:4173/revision.html` | HTTP 200 en el entorno de ejecución |
 | Comparación con base de los 9 archivos legacy indicados por el usuario | Sin cambios; original JPG idéntico |
 

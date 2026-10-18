@@ -6,6 +6,7 @@ The original and the downloaded official JPG are never modified.
 """
 from pathlib import Path
 import argparse, hashlib, heapq, json, math
+from reviewed_trace_output import publish_reviewed_traces
 import cv2
 import fitz
 import numpy as np
@@ -112,6 +113,6 @@ for trail in trails:
   segments.append({'id':sid,'trailId':trail['id'],'sourceId':'photo-and-official-pdf','status':'visible','confidence':'reviewable-visual-match','startNodeId':ns[0],'endNodeId':ns[1],'points':points_out})
 for g in gaps:g.update({'geometry':None,'status':'pending','sourceId':'original-photo'})
 data={'schemaVersion':1,'id':'el-durazno-visual-v1','coordinateSystem':'image-pixels','image':{'url':'elh-durazno.jpg','width':900,'height':1100,'sha256':hashlib.sha256(photo.read_bytes()).hexdigest(),'transform':[1,0,0,1,0,0]},'sources':[{'id':'original-photo','url':'elh-durazno.jpg'},{'id':'photo-and-official-pdf','url':'https://www.outlife.cl/wp-content/uploads/2023/04/Mapa_El-Durazno-2022_web.pdf','method':'official outline centerline, registered and locally centered on original photo','registrationFile':'image-registration.json','pdfSha256':hashlib.sha256(Path(args.pdf).read_bytes()).hexdigest()}],'digitization':{'method':'source-vector-assisted image tracing','simplificationTolerancePx':1,'localCenteringLimitPx':3,'workingRasterScale':3,'expectedVisualUncertaintyPx':3,'rawCenterlineSamples':raw_counts,'noGeographicUnits':True},'georeferencing':{'status':'unvalidated','transform':None},'trails':trails,'segments':segments,'gaps':gaps,'nodes':nodes,'connections':[],'geographicCorrespondences':[]}
-(ROOT/'data/el-durazno/visual-trails.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
-(ROOT/'data/el-durazno/centerline-samples.json').write_text(json.dumps({'coordinateSystem':'image-pixels','fragments':centered_fragments},separators=(',',':'))+'\n')
 print('Segments',len(segments),'vertices',sum(len(s['points']) for s in segments),'gaps',len(gaps))
+publish_reviewed_traces(data,{'coordinateSystem':'image-pixels','fragments':centered_fragments},ROOT/'data/el-durazno',ROOT/'scripts/apply-visual-corrections.py')
+print('Reviewed corrections applied successfully before publishing trace files')

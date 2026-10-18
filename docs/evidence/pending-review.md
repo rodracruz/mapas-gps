@@ -1,6 +1,8 @@
-# Revisión detallada de las siete zonas
+# Revisión de zonas y resolución técnica
 
-Consulta e inspección: 2026-10-18. Se inspeccionaron los siete recortes de la fotografía original y del mapa oficial alineado, además de la superposición de los fragmentos existentes. No se cambió ninguna coordenada, extremo ni conexión.
+**Estado actual tras validación propia e independiente:** 10 fragmentos / 253 vértices / **6 pendientes**. El antiguo `virgen-tight-turns` está resuelto como dibujo visible mediante el nuevo fragmento `la-virgen-s05`; conserva su ID en `visualReviews`. Se corrigió también el pequeño gancho de Lomo Vetado. Véase [la validación y sus límites](visual-validation.md).
+
+Consulta e inspección: 2026-10-18. Se inspeccionaron los originales, los contornos aislados del PDF, las siete zonas iniciales y las ampliaciones antes/después de los dos ajustes. No se añadieron conexiones transitables ni coordenadas geográficas.
 
 ## Uso en el visor
 
@@ -12,21 +14,22 @@ Si falla una imagen, se conserva la última ya verificada y el aviso aparece jun
 
 | Zona / ID estable | Lo que se observa al comparar | Estado y evidencia necesaria |
 | --- | --- | --- |
-| 1 · `sw-label-east` | El rótulo Starwars y su pictograma cubren el eje en ambas fuentes. Los extremos visibles concuerdan alrededor de la placa. | Pendiente. Falta un eje no cubierto y atribuible a esa edición; no se interpola entre extremos. |
+| 1 · `sw-label-east` | El rótulo Starwars y su pictograma cubren el eje en foto y JPG oficial. El PDF conserva el contorno debajo de la placa. | Pendiente en el modelo de la foto: el contorno oculto del PDF es evidencia de su propio dibujo; su correspondencia exacta bajo el rótulo de la foto no queda validada por verla en ese archivo. |
 | 2 · `sw-label-west` | El segundo rótulo y pictograma se leen mejor en la fuente oficial, pero siguen ocultando el eje. | Pendiente por oclusión, no simplemente por tamaño del archivo. |
 | 3 · `virgen-label-upper` | El rótulo verde superior oculta parte del eje y queda próximo a la subida roja. | Pendiente. El cruce gráfico y el texto no prueban una conexión transitable. |
-| 4 · `virgen-tight-turns` | La fuente oficial permite distinguir dos zigzags. En la foto sus vértices y grosor se solapan; el esqueleto automático puede tomar un atajo. | Pendiente de reconstrucción y revisión del eje de cada giro; no reemplazarlo por una diagonal. La mejor legibilidad del dibujo oficial no valida el eje de la foto ni GPS. |
-| 5 · `virgen-label-lower` | El segundo rótulo La Virgen, junto a líneas punteadas, cubre el eje. Los puntos y líneas de alrededor no se fusionan. | Pendiente de eje bajo el rótulo y correspondencia de edición. |
-| 6 · `lomo-label` | La placa diagonal de Lomo Vetado tapa el recorrido entre dos fragmentos. Calibre 12 está cerca y permanece separado. | Pendiente. Ni proximidad ni cambio de color autorizan cerrar el hueco o conectar senderos. |
-| 7 · `lomo-end` | En la fuente oficial se distingue un extremo azul redondeado, separado de una conexión punteada y de otro sendero. | Pendiente de centro del extremo en la foto y relación topológica. No prolongar hasta la línea cercana. |
+| 4 · `virgen-label-lower` | El segundo rótulo La Virgen, junto a líneas punteadas, cubre el eje. Los puntos y líneas de alrededor no se fusionan. | Pendiente de eje bajo el rótulo y correspondencia de edición. |
+| 5 · `lomo-label` | La placa diagonal de Lomo Vetado tapa el recorrido entre dos fragmentos. Calibre 12 está cerca y permanece separado. | Pendiente. Ni proximidad ni cambio de color autorizan cerrar el hueco o conectar senderos. |
+| 6 · `lomo-end` | En la fuente oficial se distingue un extremo azul redondeado, separado de una conexión punteada y de otro sendero. | Pendiente de centro del extremo en la foto y relación topológica. No prolongar hasta la línea cercana. |
 
-El estado sigue siendo **7 pendientes**, con **9 fragmentos / 245 vértices**. Esta revisión identifica la causa de cada duda; no presenta esos huecos como resueltos.
+La revisión inicial conservaba siete zonas. Al ampliar la foto sin trazado superpuesto, se distinguen las dos cuñas claras y los dos retornos de `virgen-tight-turns`. La revisión independiente y el contorno PDF confirman el orden. Se añadió su eje visible, sin interpolar bajo una placa. Las observaciones editables están en `data/el-durazno/visual-corrections.json`; no son medidas de terreno ni posiciones exactas subpíxel.
 
 ## Comparaciones reproducibles
 
-- [Lámina de las siete zonas](pending/siete-zonas-comparacion.png).
+- [Lámina de las seis zonas pendientes](pending/zonas-pendientes-comparacion.png).
 - [Manifiesto de recortes y hashes](pending/comparisons.json).
 - Archivos individuales: `docs/evidence/pending/*-comparacion.png`.
+- [Zigzags de La Virgen: original / antes / después](visual-audit/virgen-tight-turns-antes-despues.png).
+- [Gancho de Lomo Vetado: original / antes / después](visual-audit/lomo-hook-photo-review-antes-despues.png).
 
 Cada fila contiene fotografía, oficial alineado y fotografía con los fragmentos del mismo sendero. Los tres paneles usan exactamente el mismo recorte en el plano de 900 × 1100. El oficial usa su raster alineado de 1800 × 2200; la foto original usa 900 × 1100. La presentación amplía 4× por replicación ordinaria de píxeles, sin aumento generativo ni generación de curvas. El margen exterior del recorte es de 20 píxeles nativos, recortado contra el límite de la imagen.
 
