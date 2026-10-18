@@ -1,0 +1,30 @@
+MAPAS GPS — HITO 1 · REVISIÓN VECTORIAL
+
+Rama: feat/fiel-vector-review
+Base: 87edc6c
+
+Para revisar el resultado:
+1. Abrir mapas-gps-revision.html, el visor autónomo incluido en la entrega.
+   Contiene fotografía original, datos, CSS, JavaScript y documentación.
+   El núcleo no necesita conexión ni claves.
+2. Si el navegador bloquea archivos locales por política, descomprimir todo
+   el ZIP, ejecutar `python3 -m http.server 4173` en esta carpeta y abrir:
+   http://127.0.0.1:4173/mapas-gps-revision.html
+   También está la versión de desarrollo: /revision.html
+
+La apertura file:// está bloqueada por la política del Chromium de QA;
+se comprobó este mismo HTML por HTTP y después en modo offline sin
+solicitudes externas. No se publicó una URL de vista previa pública.
+
+Datos editables: data/el-durazno/visual-trails.json
+Capturas comparativas: docs/evidence/screenshots/*-comparacion.png
+Fuentes y método: docs/evidence/primer-hito.md
+Referencias: docs/evidence/geographic-references.md
+Pruebas y limitaciones: docs/evidence/verification.md
+
+Los senderos están en píxeles, no en coordenadas GPS. Quedan siete zonas
+pendientes; no hay enlaces inventados, transformación geográfica validada
+ni distancias de terreno. No se implementó navegación en este hito.
+
+La aplicación anterior y sus almacenes permanecen intactos. No hubo push,
+merge ni publicación. La rama y el worktree se conservan para continuar.
