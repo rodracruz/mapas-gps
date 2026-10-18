@@ -1,0 +1,582 @@
+{
+  "schemaVersion": 1,
+  "queriedOn": "2026-10-18",
+  "scope": "Public geographic references for RKF El Durazno, Chile; evidence register only.",
+  "status": "georeferencing_unvalidated",
+  "originalImage": {
+    "path": "elh-durazno.jpg",
+    "width": 900,
+    "height": 1100,
+    "sha256": "c9fde34725691801933b3ba72f887a31677dba305d30f0f938f0ddf81211d018",
+    "modified": false
+  },
+  "sources": [
+    {
+      "id": "outlife-park",
+      "type": "official_operator_page",
+      "organization": "Outlife",
+      "url": "https://www.outlife.cl/parques/rkf-el-durazno/",
+      "queriedOn": "2026-10-18",
+      "retrieval": "HTTP 200; HTML inspected",
+      "supports": [
+        "Public park identity and textual entry address",
+        "Links to the official 2022 JPG and PDF",
+        "Trail names Starwars, La Virgen and Lomo Vetado"
+      ],
+      "limitations": [
+        "No geographic coordinates or image-to-world control pairs found in the page."
+      ],
+      "independenceGroup": "outlife"
+    },
+    {
+      "id": "outlife-map-2022-jpg",
+      "type": "official_operator_map",
+      "organization": "Outlife",
+      "url": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg",
+      "discoveredFrom": "outlife-park",
+      "queriedOn": "2026-10-18",
+      "retrieval": "HTTP 200; downloaded and visually inspected",
+      "bytes": 4739485,
+      "width": 2570,
+      "height": 3077,
+      "sha256": "ee124136bc9930ca1928d2df1f79a9810fb4d245c66503a2d4c6ae888aea29af",
+      "httpLastModified": "2023-04-18T13:25:05Z",
+      "editionLabel": "2022 in title/filename; not a demonstrated date of the user photograph",
+      "supports": [
+        "Higher-resolution official map visually compatible with the photographed network of Starwars, La Virgen and Lomo Vetado."
+      ],
+      "limitations": [
+        "Visual compatibility does not establish identity of publication edition, equality of every vertex, photograph date or a pixel transform.",
+        "No explicit open reuse license verified. No downloaded asset redistributed in this repository."
+      ],
+      "independenceGroup": "outlife"
+    },
+    {
+      "id": "outlife-map-2022-pdf",
+      "type": "official_operator_map",
+      "organization": "Outlife",
+      "url": "https://www.outlife.cl/wp-content/uploads/2023/04/Mapa_El-Durazno-2022_web.pdf",
+      "discoveredFrom": "outlife-park",
+      "queriedOn": "2026-10-18",
+      "retrieval": "HTTP 200; downloaded; PDF metadata inspected",
+      "bytes": 82626422,
+      "pages": 1,
+      "pageSizePoints": [
+        1233.54,
+        1476.85
+      ],
+      "sha256": "9a67123b027197042da8e47d0c6dbe61e800d11e0e7fe01a5d85172b65ef39ab",
+      "httpLastModified": "2023-04-18T13:28:31Z",
+      "pdfTitle": "Mapa_El Durazno 2022_web",
+      "pdfCreationDate": "2023-04-18T12:26:33Z",
+      "pdfModificationDate": "2023-04-18T13:26:34Z",
+      "limitations": [
+        "Same operator/source family as the JPG; not independent geographic validation.",
+        "No geographic reference metadata or geographic control pairs validated.",
+        "PDF not rasterized for a separate full visual comparison."
+      ],
+      "independenceGroup": "outlife"
+    },
+    {
+      "id": "outlife-map-older-jpg",
+      "type": "official_operator_map_older_candidate",
+      "organization": "Outlife",
+      "url": "https://www.outlife.cl/wp-content/uploads/2020/07/mapa-parque-el-durazno.jpg",
+      "discoveredFrom": "wikiexplora",
+      "queriedOn": "2026-10-18",
+      "retrieval": "HTTP 200; downloaded and visually inspected",
+      "bytes": 964993,
+      "width": 2000,
+      "height": 2400,
+      "sha256": "bbe3355d3874201f45a90bbead11389be30bdc431e734aec3c360598c0949bff",
+      "httpLastModified": "2021-10-04T15:40:51Z",
+      "status": "different_edition",
+      "limitations": [
+        "Different from supplied photograph: climb shown in orange, Cebolla shown in blue, skills area in the operations inset. Do not use this candidate to silently replace or repair the photograph."
+      ],
+      "independenceGroup": "outlife"
+    },
+    {
+      "id": "municipal-decree-0031-2023",
+      "type": "official_municipal_document",
+      "organization": "Municipalidad de Lo Barnechea",
+      "url": "https://www.lobarnechea.cl/transparencia/DEC_DAEP_152945_0031__13-03-2023__.pdf",
+      "documentId": "DAEP 0031/2023",
+      "documentDate": "2023-03-13",
+      "page": 2,
+      "section": "5(a)",
+      "queriedOn": "2026-10-18",
+      "retrieval": "PDF text read through web tool; direct workspace HTTP download returned 403",
+      "supports": [
+        "Historical textual identification of access area at Camino La Cumbre and Camino Quebrada Norte"
+      ],
+      "limitations": [
+        "No coordinate provided. A road intersection/hydration-point context does not identify the exact park gate or a pixel in the supplied map.",
+        "Document concerns 2023 public-space activities; does not establish current operating status."
+      ],
+      "independenceGroup": "municipality"
+    },
+    {
+      "id": "municipal-bike-map",
+      "type": "official_municipal_map",
+      "organization": "Municipalidad de Lo Barnechea",
+      "url": "https://www.lobarnechea.cl/wp-content/uploads/2021/02/MAPA_BICIVIAS0402.pdf",
+      "queriedOn": "2026-10-18",
+      "retrieval": "PDF text and screenshot requested through web tool; direct workspace HTTP download returned 403",
+      "supports": [
+        "Broad road context and El Durazno hydration point at Quebrada Norte/Camino La Cumbre"
+      ],
+      "limitations": [
+        "Schematic regional map, not the photographed trail sign and not a coordinate source.",
+        "Upload path alone does not prove publication date."
+      ],
+      "independenceGroup": "municipality"
+    },
+    {
+      "id": "osm-area",
+      "type": "open_cartographic_database",
+      "organization": "OpenStreetMap contributors",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-70.518,-33.328,-70.485,-33.290",
+      "queriedOn": "2026-10-18",
+      "retrieval": "HTTP 200; XML nodes, tags, way memberships, versions and timestamps inspected",
+      "bytes": 2454053,
+      "sha256": "d8aae668ead1085372efecd2078d7abf83fd06473fd6ba4b301b6f5705ba374b",
+      "bbox": [
+        -70.518,
+        -33.328,
+        -70.485,
+        -33.29
+      ],
+      "bboxOrder": "west,south,east,north",
+      "license": "ODbL 1.0",
+      "attributionUrl": "https://www.openstreetmap.org/copyright",
+      "limitations": [
+        "OSM tags and topology verify database content, not survey accuracy or current field access.",
+        "Relevant named POIs were last edited together in changeset 113876046 on 2021-11-17; they are not independent measurements.",
+        "No named Starwars or Cactus way was found in this inspected bounding box; this does not prove absence elsewhere."
+      ],
+      "independenceGroup": "openstreetmap"
+    },
+    {
+      "id": "wikiexplora",
+      "type": "third_party_guide",
+      "organization": "Wikiexplora",
+      "url": "https://www.wikiexplora.com/index.php?title=El_Durazno_Bike_Park&oldid=100975",
+      "queriedOn": "2026-10-18",
+      "retrieval": "Current article initially timed out in web tool; direct article HTTP 200 and HTML inspected; revision id obtained from permanent link",
+      "supports": [
+        "Discovery of older Outlife map link and broad entry context"
+      ],
+      "limitations": [
+        "Its map links to Outlife, so map imagery is not an independent corroborating source.",
+        "Embedded Google route coordinates and community tracks were not accepted as control points."
+      ],
+      "independenceGroup": "wikiexplora"
+    },
+    {
+      "id": "mapcarta",
+      "type": "osm_derived_reference",
+      "organization": "Mapcarta",
+      "url": "https://mapcarta.com/es/N4705608441",
+      "queriedOn": "2026-10-18",
+      "retrieval": "Web page inspected",
+      "supports": [
+        "Discovery of OpenStreetMap node IDs"
+      ],
+      "limitations": [
+        "Derived from OSM; not independent verification of OSM coordinates.",
+        "Canonical OSM API data used for recorded precision."
+      ],
+      "independenceGroup": "openstreetmap"
+    }
+  ],
+  "references": [
+    {
+      "id": "park-marker",
+      "name": "Bikepark RKF El Durazno",
+      "kind": "generic_park_marker",
+      "coordinate": {
+        "longitude": -70.5128438,
+        "latitude": -33.3218441,
+        "crs": "EPSG:4326"
+      },
+      "osm": {
+        "type": "node",
+        "id": 9258698134,
+        "version": 1,
+        "timestamp": "2021-11-17T01:25:04Z",
+        "url": "https://www.openstreetmap.org/node/9258698134",
+        "versionApiUrl": "https://api.openstreetmap.org/api/0.6/node/9258698134/1",
+        "tags": {
+          "leisure": "sports_centre",
+          "name": "Bikepark RKF El Durazno"
+        }
+      },
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "reason": "Identifies the park by name and official website, for broad map location only. It is about 171 m from the OSM entrance node; it is not an entrance or trail junction.",
+      "verificationStatus": "source_data_verified_image_correspondence_unvalidated",
+      "imagePoint": null,
+      "acceptedForCalibration": false
+    },
+    {
+      "id": "entrance-candidate",
+      "name": "OSM entrance",
+      "kind": "entrance_candidate",
+      "coordinate": {
+        "longitude": -70.5121506,
+        "latitude": -33.3232656,
+        "crs": "EPSG:4326"
+      },
+      "osm": {
+        "type": "node",
+        "id": 9258698133,
+        "version": 1,
+        "timestamp": "2021-11-17T01:25:04Z",
+        "url": "https://www.openstreetmap.org/node/9258698133",
+        "versionApiUrl": "https://api.openstreetmap.org/api/0.6/node/9258698133/1",
+        "tags": {
+          "entrance": "yes"
+        }
+      },
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "reason": "Node is tagged as an entrance and shared by a fence and Sendero Subida Buitrera. Candidate gate location in OSM; exact correspondence with the operator entry address and photographed operations area is not validated.",
+      "verificationStatus": "source_data_verified_image_correspondence_unvalidated",
+      "imagePoint": null,
+      "acceptedForCalibration": false
+    },
+    {
+      "id": "buitrera-viewpoint",
+      "name": "Buitrera",
+      "kind": "named_viewpoint",
+      "coordinate": {
+        "longitude": -70.493732,
+        "latitude": -33.301319,
+        "crs": "EPSG:4326"
+      },
+      "osm": {
+        "type": "node",
+        "id": 4705647672,
+        "version": 2,
+        "timestamp": "2021-11-17T01:25:04Z",
+        "url": "https://www.openstreetmap.org/node/4705647672",
+        "versionApiUrl": "https://api.openstreetmap.org/api/0.6/node/4705647672/2",
+        "tags": {
+          "name": "Buitrera",
+          "tourism": "viewpoint"
+        }
+      },
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "reason": "Named viewpoint matches a label visible in the photograph. No pixel/world control pair established. It is about 51 m from the separately mapped Virgen statue.",
+      "verificationStatus": "source_data_verified_image_correspondence_unvalidated",
+      "imagePoint": null,
+      "acceptedForCalibration": false
+    },
+    {
+      "id": "virgen-statue",
+      "name": "Virgen",
+      "kind": "named_statue",
+      "coordinate": {
+        "longitude": -70.4937586,
+        "latitude": -33.300859,
+        "crs": "EPSG:4326"
+      },
+      "osm": {
+        "type": "node",
+        "id": 9258698197,
+        "version": 1,
+        "timestamp": "2021-11-17T01:25:04Z",
+        "url": "https://www.openstreetmap.org/node/9258698197",
+        "versionApiUrl": "https://api.openstreetmap.org/api/0.6/node/9258698197/1",
+        "tags": {
+          "name": "Virgen",
+          "tourism": "artwork",
+          "artwork_type": "statue"
+        }
+      },
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "reason": "Named statue may explain the Virgin icon by Buitrera. It is a point feature, not the entire La Virgen trail or an independently surveyed anchor.",
+      "verificationStatus": "source_data_verified_image_correspondence_unvalidated",
+      "imagePoint": null,
+      "acceptedForCalibration": false
+    },
+    {
+      "id": "plaza-saltos-viewpoint",
+      "name": "Plaza de Los Saltos",
+      "kind": "named_viewpoint",
+      "coordinate": {
+        "longitude": -70.5037364,
+        "latitude": -33.3136744,
+        "crs": "EPSG:4326"
+      },
+      "osm": {
+        "type": "node",
+        "id": 9258698201,
+        "version": 1,
+        "timestamp": "2021-11-17T01:25:04Z",
+        "url": "https://www.openstreetmap.org/node/9258698201",
+        "versionApiUrl": "https://api.openstreetmap.org/api/0.6/node/9258698201/1",
+        "tags": {
+          "name": "Plaza de Los Saltos",
+          "tourism": "viewpoint"
+        }
+      },
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "reason": "Named viewpoint is separate from the nearby information-map node by about 18.5 m. Do not exchange the viewpoint icon and trail junction as an anchor.",
+      "verificationStatus": "source_data_verified_image_correspondence_unvalidated",
+      "imagePoint": null,
+      "acceptedForCalibration": false
+    },
+    {
+      "id": "information-map-junction",
+      "name": "Bikepark El Durazno",
+      "kind": "information_map_and_shared_trail_endpoint",
+      "coordinate": {
+        "longitude": -70.5036907,
+        "latitude": -33.3138365,
+        "crs": "EPSG:4326"
+      },
+      "osm": {
+        "type": "node",
+        "id": 4705608441,
+        "version": 3,
+        "timestamp": "2021-11-17T01:25:04Z",
+        "url": "https://www.openstreetmap.org/node/4705608441",
+        "versionApiUrl": "https://api.openstreetmap.org/api/0.6/node/4705608441/3",
+        "tags": {
+          "name": "Bikepark El Durazno",
+          "tourism": "information",
+          "information": "map",
+          "map_size": "route",
+          "map_type": "cycleway"
+        }
+      },
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "reason": "This is an information-map node, not a park-wide centroid or access. OSM paths Lomo Vetado, Calibre 12 and Los Saltos share this endpoint; a common graph node does not identify a pixel in the sign.",
+      "verificationStatus": "source_data_verified_image_correspondence_unvalidated",
+      "imagePoint": null,
+      "acceptedForCalibration": false
+    },
+    {
+      "id": "upper-buitrera-path-node",
+      "name": "Subida Buitrera / conexión",
+      "kind": "shared_path_endpoint",
+      "coordinate": {
+        "longitude": -70.4938151,
+        "latitude": -33.3013392,
+        "crs": "EPSG:4326"
+      },
+      "osm": {
+        "type": "node",
+        "id": 397645997,
+        "version": 2,
+        "timestamp": "2017-03-05T15:20:17Z",
+        "url": "https://www.openstreetmap.org/node/397645997",
+        "versionApiUrl": "https://api.openstreetmap.org/api/0.6/node/397645997/2",
+        "tags": {}
+      },
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "reason": "Shared endpoint of OSM ways 477168992 and 477174834, close to Buitrera viewpoint. This node has no place-name tag; do not replace the viewpoint coordinate with it.",
+      "verificationStatus": "source_data_verified_image_correspondence_unvalidated",
+      "imagePoint": null,
+      "acceptedForCalibration": false
+    },
+    {
+      "id": "upper-connection-junction",
+      "name": "Conexiones / Sendero XL",
+      "kind": "shared_path_endpoint",
+      "coordinate": {
+        "longitude": -70.4919406,
+        "latitude": -33.3028752,
+        "crs": "EPSG:4326"
+      },
+      "osm": {
+        "type": "node",
+        "id": 397646020,
+        "version": 2,
+        "timestamp": "2017-02-25T19:59:10Z",
+        "url": "https://www.openstreetmap.org/node/397646020",
+        "versionApiUrl": "https://api.openstreetmap.org/api/0.6/node/397646020/2",
+        "tags": {}
+      },
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "reason": "Shared endpoint of OSM ways 477174834, 477174835 and 477174836. Names differ from some map labels; correspondence to a photographed junction remains unvalidated.",
+      "verificationStatus": "source_data_verified_image_correspondence_unvalidated",
+      "imagePoint": null,
+      "acceptedForCalibration": false
+    },
+    {
+      "id": "lomo-vetado-endpoint",
+      "name": "Lomo Vetado / conexión",
+      "kind": "shared_path_endpoint",
+      "coordinate": {
+        "longitude": -70.4923871,
+        "latitude": -33.3040099,
+        "crs": "EPSG:4326"
+      },
+      "osm": {
+        "type": "node",
+        "id": 4705608466,
+        "version": 1,
+        "timestamp": "2017-02-25T19:36:27Z",
+        "url": "https://www.openstreetmap.org/node/4705608466",
+        "versionApiUrl": "https://api.openstreetmap.org/api/0.6/node/4705608466/1",
+        "tags": {}
+      },
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "reason": "Endpoint of OSM Lomo Vetado way 477170097 and connection way 477174836. Candidate topology reference only; not a verified image control point.",
+      "verificationStatus": "source_data_verified_image_correspondence_unvalidated",
+      "imagePoint": null,
+      "acceptedForCalibration": false
+    },
+    {
+      "id": "calibre12-lomo-junction",
+      "name": "Calibre 12 / Lomo Vetado",
+      "kind": "shared_path_node",
+      "coordinate": {
+        "longitude": -70.4928546,
+        "latitude": -33.3043399,
+        "crs": "EPSG:4326"
+      },
+      "osm": {
+        "type": "node",
+        "id": 4705609090,
+        "version": 1,
+        "timestamp": "2017-02-25T19:36:27Z",
+        "url": "https://www.openstreetmap.org/node/4705609090",
+        "versionApiUrl": "https://api.openstreetmap.org/api/0.6/node/4705609090/1",
+        "tags": {}
+      },
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "reason": "Node belongs to OSM Lomo Vetado way 477170097 and is an endpoint of Calibre 12 way 1003300258. Graph connectivity verified; correspondence to the drawing not validated.",
+      "verificationStatus": "source_data_verified_image_correspondence_unvalidated",
+      "imagePoint": null,
+      "acceptedForCalibration": false
+    }
+  ],
+  "osmWays": [
+    {
+      "osmId": 477168992,
+      "version": 11,
+      "timestamp": "2024-05-29T18:50:47Z",
+      "name": "Sendero Subida Buitrera",
+      "url": "https://www.openstreetmap.org/way/477168992",
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "use": "Topology verification only; no geometry imported into the traced map."
+    },
+    {
+      "osmId": 477170097,
+      "version": 6,
+      "timestamp": "2023-02-07T21:55:08Z",
+      "name": "Sendero Lomo Vetado",
+      "url": "https://www.openstreetmap.org/way/477170097",
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "use": "Topology verification only; no geometry imported into the traced map."
+    },
+    {
+      "osmId": 477174834,
+      "version": 2,
+      "timestamp": "2021-11-17T01:25:04Z",
+      "name": "Conexión Calibre 12-La Virgen",
+      "url": "https://www.openstreetmap.org/way/477174834",
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "use": "Topology verification only; no geometry imported into the traced map."
+    },
+    {
+      "osmId": 477174835,
+      "version": 5,
+      "timestamp": "2024-05-29T18:36:57Z",
+      "name": "Sendero XL",
+      "url": "https://www.openstreetmap.org/way/477174835",
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "use": "Topology verification only; no geometry imported into the traced map."
+    },
+    {
+      "osmId": 477174836,
+      "version": 3,
+      "timestamp": "2021-11-17T01:25:04Z",
+      "name": "Conexión Calibre 12-Lomo Vetado",
+      "url": "https://www.openstreetmap.org/way/477174836",
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "use": "Topology verification only; no geometry imported into the traced map."
+    },
+    {
+      "osmId": 1003300258,
+      "version": 2,
+      "timestamp": "2025-05-08T19:30:02Z",
+      "name": "Sendero Calibre 12",
+      "url": "https://www.openstreetmap.org/way/1003300258",
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "use": "Topology verification only; no geometry imported into the traced map."
+    },
+    {
+      "osmId": 1003300259,
+      "version": 1,
+      "timestamp": "2021-11-17T01:25:04Z",
+      "name": "Ssendero Los Saltos",
+      "url": "https://www.openstreetmap.org/way/1003300259",
+      "sourceId": "osm-area",
+      "queriedOn": "2026-10-18",
+      "use": "Topology verification only; no geometry imported into the traced map."
+    }
+  ],
+  "controlPoints": [],
+  "calibration": {
+    "status": "unvalidated",
+    "acceptedControlPointCount": 0,
+    "transform": null,
+    "reason": "No unambiguous reviewed pixel/world pairs or independent check points have been established for the original photograph. Named POIs, generic markers, mapped gates and graph junctions must not be interchanged.",
+    "useForNavigation": false
+  },
+  "independenceNotes": [
+    "Outlife webpage, JPG and PDF are one operator source family.",
+    "Municipality is independent for broad road/access context only; no coordinates supplied.",
+    "Mapcarta and other OSM-based maps are derivatives of OSM, not additional coordinate sources.",
+    "OSM POIs edited in one changeset are not independent field measurements.",
+    "Wikiexplora republishes/links Outlife imagery; community tracks and Google embeds were not used as calibration sources."
+  ],
+  "requestFailures": [
+    {
+      "url": "https://www.wikiexplora.com/El_Durazno_Bike_Park",
+      "method": "web open",
+      "result": "timeout; direct HTTP retrieval subsequently succeeded"
+    },
+    {
+      "url": "https://www.openstreetmap.org/node/4705608441",
+      "method": "web open",
+      "result": "not accessible via web tool; public OSM API subsequently succeeded"
+    },
+    {
+      "url": "https://www.lobarnechea.cl/transparencia/DEC_DAEP_152945_0031__13-03-2023__.pdf",
+      "method": "workspace direct HTTP GET",
+      "result": "403 Forbidden; read-only PDF web tool succeeded"
+    },
+    {
+      "url": "https://www.lobarnechea.cl/wp-content/uploads/2021/02/MAPA_BICIVIAS0402.pdf",
+      "method": "workspace direct HTTP GET",
+      "result": "403 Forbidden; read-only PDF web tool succeeded"
+    }
+  ],
+  "excludedEvidence": [
+    "Previous repository viewer geometries or guessed coordinates",
+    "Downloaded map assets as automatic replacements for the original",
+    "Generic park markers treated as gates or trail junctions",
+    "Tile imagery or provider route geometry copied without verified permission",
+    "Private/personal locations, keys, billing or paid endpoints"
+  ]
+}

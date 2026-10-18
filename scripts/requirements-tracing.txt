@@ -1,0 +1,6 @@
+PyMuPDF==1.26.6
+opencv-python-headless==5.0.0.93
+numpy==2.3.5
+scipy==1.17.0
+scikit-image==0.26.0
+Pillow==12.3.0
