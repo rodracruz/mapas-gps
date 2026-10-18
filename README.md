@@ -29,3 +29,7 @@ Visor ejecutable separado en `revision.html`: fotografía original, tres sendero
 - Pruebas: `npm ci`, `npm test`; con el servidor activo: `npm run test:browser`. Chromium del sistema en `/usr/bin/chromium` o variable `CHROMIUM_PATH`. `npm run build:standalone && npm run test:standalone` comprueba el artefacto sin recursos externos.
 
 Los archivos de aplicación previos, el original JPG, el service worker y la base de datos permanecen intactos. Este visor no exporta GeoJSON ni convierte sus líneas en metros.
+
+### Acceso directo privado
+
+[Visor de revisión de El Durazno](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site) — copia privada en Sites, accesible con la cuenta propietaria de ChatGPT. Publicación y comprobaciones documentadas en [private-site.md](docs/evidence/private-site.md). La publicación GitHub Pages original y main no se modificaron.
