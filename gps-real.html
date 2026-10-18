@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>El Durazno · Verificación GPS</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0e1d1a;color:#e7f5f0;font:15px system-ui,-apple-system,sans-serif}header{padding:13px 16px;background:#17312a;display:flex;align-items:center;justify-content:space-between;gap:10px}header strong{display:block;font-size:16px}header small{font-size:12px;color:#a1beb3}a{color:#91ebd1}.warning{padding:9px 15px;background:#3e3324;color:#fbe4ab;font-size:13px;line-height:1.4}.wrapper{display:grid;grid-template-columns:1fr 290px;min-height:calc(100dvh - 112px)}#geoMap{height:calc(100dvh - 112px);min-height:460px;background:#1a3931}.side{border-left:1px solid #3a6557;background:#143027;padding:16px;display:flex;flex-direction:column;gap:10px}.side h2{font-size:17px;margin:0}.side p{font-size:13px;color:#b6cfc6;line-height:1.5;margin:0}.btn{background:#276c58;border:1px solid #629883;border-radius:10px;padding:12px 10px;font-weight:650;color:white;cursor:pointer;min-height:44px}.btn.secondary{background:#203e35}.btn:disabled{opacity:.4}.fields{display:flex;gap:7px;flex-wrap:wrap}.fields button{flex:1}#status{border:1px solid #416a5c;background:#1c3b31;border-radius:10px;padding:12px;line-height:1.4;min-height:56px}#selection{border:1px solid #416a5c;border-radius:10px;padding:12px;font-size:14px;min-height:88px}#selection strong{display:block;margin-bottom:6px}.hint{color:#a9c5ba;font-size:12px}.ref{border-top:1px solid #3e5b50;padding-top:9px;font-size:12px;color:#b2c6ba}.ref div{margin:6px 0}.leaflet-container{font:inherit}.leaflet-control-attribution{font-size:10px!important}button:focus-visible{outline:3px solid #fce094}#gpsReadout{font-size:13px;color:#e5ecb8}
+@media(max-width:700px){.wrapper{grid-template-columns:1fr}#geoMap{height:58dvh;min-height:370px}.side{border:0}.warning{font-size:12px}} 
+</style>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head><body><header><div><strong>📍 El Durazno · Georreferenciación real</strong><small>Comparación de trazados públicos y GPS del teléfono</small></div><a href="./">App GPS actual</a></header>
+<div class="warning">⚠ Vista experimental: solo los trazados cargados desde OpenStreetMap tienen geometría geográfica real. No se han identificado ni validado todos los senderos del cartel. No usar para decidir giros en bicicleta.</div>
+<div class="wrapper"><div id="geoMap" role="application" aria-label="Mapa de senderos geográficos RKF El Durazno"></div>
+<aside class="side"><h2>Plano digital sobre coordenadas reales</h2><p>Los puntos de referencia están publicados en fuentes cartográficas. Para ver las líneas GPS disponibles pulsa «Buscar senderos OSM». No se dibuja ninguna ruta inventada.</p>
+<button id="load" class="btn">🗺️ Buscar senderos OSM</button><div id="status" role="status">4 puntos de referencia públicos identificados. Trazados pendientes de cargar.</div>
+<div class="fields"><button id="gps" class="btn secondary">⌖ GPS</button><button id="center" class="btn secondary" disabled>Centrarme</button></div><div id="gpsReadout">Ubicación GPS desactivada.</div>
+<div id="selection"><strong>Selecciona una línea</strong>Al cargar los senderos, toca cualquiera para ver su nombre, longitud y procedencia.</div>
+<button id="export" class="btn secondary" disabled>Exportar trazados GeoJSON</button>
+<div class="ref"><b>Referencias geográficas externas</b><div>① Bikepark RKF OSM: −33.32184, −70.51284</div><div>② Sector alto RKF OSM: −33.30106, −70.49340</div><div>③ Inicio Papaya, Trailforks: −33.31592, −70.50585</div><div>④ Inicio Lomo Vetado, Trailforks: −33.30430, −70.49284</div><p class="hint">Las ubicaciones ③ y ④ son puntos iniciales, no el recorrido completo; no permiten deducir todas las curvas.</p></div>
+</aside></div>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id),R=6371008.8,rad=x=>x*Math.PI/180;
+if(!window.L){$('status').textContent='No pudo cargarse el visor cartográfico. Revisa la conexión.';return;}
+const map=L.map('geoMap',{zoomControl:true}).setView([-33.3135,-70.5028],14);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>'}).addTo(map);
+const refs=[
+ {name:'Bikepark RKF · punto OSM',p:[-33.32184,-70.51284],source:'OpenStreetMap / Mapcarta',color:'#fae09b'},
+ {name:'Sector alto RKF · punto OSM',p:[-33.30106,-70.49340],source:'OpenStreetMap / Mapcarta',color:'#fae09b'},
+ {name:'Papaya · inicio de pista',p:[-33.31592,-70.50585],source:'Trailforks',color:'#8fe4ac'},
+ {name:'Lomo Vetado · inicio de pista',p:[-33.30430,-70.49284],source:'Trailforks',color:'#83c4f5'}];
+refs.forEach((r,i)=>L.circleMarker(r.p,{radius:7,color:'#0e2a20',weight:2,fillColor:r.color,fillOpacity:1}).addTo(map).bindPopup(String(i+1)+'. '+r.name+'<br>Fuente: '+r.source+'<br>'+r.p.join(', ')));
+let lines=[],group=L.featureGroup().addTo(map),selected=null,selectedLayer=null,watch=null,gpsCircle=null,lastFix=null;
+const status=s=>$('status').textContent=s;
+function dist(a,b){const dLat=rad(b[0]-a[0]),dLon=rad(b[1]-a[1]);return 2*R*Math.asin(Math.min(1,Math.sqrt(Math.sin(dLat/2)**2+Math.cos(rad(a[0]))*Math.cos(rad(b[0]))*Math.sin(dLon/2)**2)));}
+function len(coords){let sum=0;for(let i=1;i<coords.length;i++)sum+=dist(coords[i-1],coords[i]);return sum;}
+function meters(x){return x>=1000?(x/1000).toFixed(2)+' km':Math.round(x)+' m';}
+function nearSegment(p,a,b){const lat0=rad(p[0]),ax=rad(a[1]-p[1])*R*Math.cos(lat0),ay=rad(a[0]-p[0])*R,bx=rad(b[1]-p[1])*R*Math.cos(lat0),by=rad(b[0]-p[0])*R,dx=bx-ax,dy=by-ay,t=Math.max(0,Math.min(1,-(ax*dx+ay*dy)/(dx*dx+dy*dy||1))),x=ax+t*dx,y=ay+t*dy;return {d:Math.hypot(x,y),t};}
+function measure(){if(!selected||!lastFix)return;const info=$('gpsReadout');if(lastFix.accuracy>25){info.textContent='GPS ±'+Math.round(lastFix.accuracy)+' m: precisión insuficiente para identificar una pista.';return;}
+const v=selected.coords,p=[lastFix.lat,lastFix.lon];let best={d:Infinity,remaining:0};let total=selected.length,prefix=0;for(let i=1;i<v.length;i++){const seg=dist(v[i-1],v[i]),test=nearSegment(p,v[i-1],v[i]);if(test.d<best.d)best={d:test.d,remaining:total-prefix-seg*test.t};prefix+=seg;}
+if(best.d>20){info.textContent='GPS ±'+Math.round(lastFix.accuracy)+' m; estás a unos '+Math.round(best.d)+' m del tramo elegido. Sin coincidencia segura.';return;}
+info.textContent='Cerca del tramo seleccionado (±'+Math.round(lastFix.accuracy)+' m). Hasta un extremo de la línea: '+meters(best.remaining)+'. NO equivale a distancia hasta un destino ni confirma en qué pista vas.';
+}
+function select(line,layer){selected=line;if(selectedLayer)selectedLayer.setStyle({weight:4,opacity:.75});selectedLayer=layer;layer.setStyle({weight:8,opacity:1});layer.bringToFront();$('selection').replaceChildren();const b=document.createElement('strong'),p=document.createElement('p');b.textContent=line.name||'Sendero OSM sin nombre';p.textContent=meters(line.length)+' según trazado OSM · ID '+line.id+'. Sin correspondencia confirmada con el cartel ni sentido de circulación validado.';$('selection').append(b,p);measure();}
+function render(found){group.clearLayers();lines=found;selected=null;selectedLayer=null;$('export').disabled=!lines.length;
+const bounds=L.latLngBounds([]);for(const line of lines){const layer=L.polyline(line.coords,{color:line.tags?.mtb_scale?'#eda94e':'#54dabb',weight:4,opacity:.75}).addTo(group);layer.on('click',()=>select(line,layer));line.coords.forEach(p=>bounds.extend(p));}
+if(bounds.isValid())map.fitBounds(bounds.pad(.08),{maxZoom:15});$('selection').innerHTML='<strong>Selecciona una línea</strong>Hay '+lines.length+' segmentos OSM disponibles. Toca uno para inspeccionarlo.';}
+async function fetchWays(){const q='[out:json][timeout:25];way["highway"~"^(path|track|footway|cycleway)$"](around:3500,-33.3135,-70.5028);out geom;';const urls=['https://overpass-api.de/api/interpreter','https://overpass.kumi.systems/api/interpreter'];let last;
+for(const url of urls){const ac=new AbortController(),timer=setTimeout(()=>ac.abort(),28000);try{const r=await fetch(url+'?data='+encodeURIComponent(q),{signal:ac.signal});if(!r.ok)throw Error('HTTP '+r.status);const j=await r.json();return j.elements||[];}catch(e){last=e}finally{clearTimeout(timer);}}
+throw(last||Error('No hay respuesta de OpenStreetMap'));}
+$('load').addEventListener('click',async()=>{if(!navigator.onLine)return status('Sin conexión. La descarga de senderos necesita internet.');$('load').disabled=true;status('Consultando trazados cartográficos públicos…');
+try{const elements=await fetchWays();const found=elements.filter(x=>x.type==='way'&&x.geometry?.length>1).map(x=>{const coords=x.geometry.map(y=>[y.lat,y.lon]);return{id:x.id,name:x.tags?.name||'',tags:x.tags||{},coords,length:len(coords)}}).filter(x=>x.length>10);
+render(found);status(found.length+' segmentos OSM con coordenadas reales cargados. Ojo: no se ha comprobado que correspondan a las 15 pistas del croquis.');}catch(e){status('Servicio de senderos no disponible: '+e.message+'. Puedes volver a intentarlo.');}finally{$('load').disabled=false;}});
+$('gps').addEventListener('click',()=>{if(watch!==null){navigator.geolocation.clearWatch(watch);watch=null;lastFix=null;if(gpsCircle){map.removeLayer(gpsCircle);gpsCircle=null;}$('gps').textContent='⌖ GPS';$('center').disabled=true;$('gpsReadout').textContent='GPS detenido.';return;}
+if(!navigator.geolocation||!isSecureContext){$('gpsReadout').textContent='GPS requiere navegador compatible y página HTTPS.';return;}$('gpsReadout').textContent='Buscando ubicación…';
+watch=navigator.geolocation.watchPosition(pos=>{lastFix={lat:pos.coords.latitude,lon:pos.coords.longitude,accuracy:pos.coords.accuracy};const ll=[lastFix.lat,lastFix.lon];if(!gpsCircle)gpsCircle=L.circle(ll,{radius:lastFix.accuracy,color:'#2088ff',fillColor:'#2088ff',fillOpacity:.25}).addTo(map);else gpsCircle.setLatLng(ll).setRadius(lastFix.accuracy);$('center').disabled=false;if(!selected)$('gpsReadout').textContent='GPS ±'+Math.round(lastFix.accuracy)+' m. Selecciona un segmento para comparar.';else measure();},e=>{$('gpsReadout').textContent='GPS: '+e.message;},{enableHighAccuracy:true,maximumAge:1500,timeout:20000});$('gps').textContent='■ Detener';});
+$('center').addEventListener('click',()=>{if(lastFix)map.setView([lastFix.lat,lastFix.lon],17);});
+$('export').addEventListener('click',()=>{if(!lines.length)return;const j={type:'FeatureCollection',metadata:{source:'OpenStreetMap',license:'ODbL',disclaimer:'Geometry from OSM; no identification against photo or navigation validation'},features:lines.map(x=>({type:'Feature',properties:{osm_id:x.id,name:x.name,...x.tags},geometry:{type:'LineString',coordinates:x.coords.map(p=>[p[1],p[0]])}}))};const url=URL.createObjectURL(new Blob([JSON.stringify(j)],{type:'application/geo+json'})),a=document.createElement('a');a.href=url;a.download='durazno-trazados-osm-sin-validar.geojson';a.click();setTimeout(()=>URL.revokeObjectURL(url),3000);});
+})();
+</script></body></html>
