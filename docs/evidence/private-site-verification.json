@@ -1,11 +1,14 @@
 {
   "url": "https://mapas-gps-revision-durazno.rodracruz.chatgpt.site",
-  "checkedAt": "2026-10-18T19:38:40.854Z",
+  "checkedAt": "2026-10-18T19:55:00.901Z",
   "browser": "154.0.8037.57",
   "checks": [
     "authenticated root HTTP 200",
     "deployed HTML byte-identical to tested artifact",
     "actual photograph, 9 fragments, 7 pending areas load",
+    "higher-detail aligned image is the default source",
+    "source switching preserves geometry and viewport",
+    "complete received photograph rendered and original SHA verified",
     "trail selection and focus",
     "vector-only and overlay modes",
     "image/vector transform agrees after zoom",
@@ -13,5 +16,5 @@
     "no JavaScript runtime errors"
   ],
   "errors": [],
-  "htmlSha256": "31a76e751463e2782d3158e54c8587088a3c29d51313beef61a1129eac6d0209"
+  "htmlSha256": "5ef31273a7c3cadbf37e51f47a95d49323d72d8b334f9c76c1b4d201ad36bfd2"
 }

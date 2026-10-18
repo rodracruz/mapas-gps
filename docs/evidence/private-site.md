@@ -36,3 +36,11 @@ Resultados: [private-site-verification.json](private-site-verification.json). La
 El helper de publicación descrito por la skill Sites no estaba instalado ni disponible en los recursos. Se preparó una copia estática equivalente, se pasó la credencial por stdin con eco desactivado, se aplicó al proceso Git solo en memoria, se verificó el commit remoto y se empaquetaron únicamente `.openai/hosting.json` y `dist/`. No se persistieron credenciales. Se reutiliza este mismo ID para futuras actualizaciones, sin crear otro sitio.
 
 La publicación resuelve el acceso directo. No cambia las limitaciones cartográficas: las zonas pendientes y la georreferenciación no validada siguen indicadas en el visor.
+
+## Actualización con la fotografía completa recibida
+
+La copia privada se actualizó con el cambio de fondos y la foto completa. Código de la app: `b734c08`; commit privado publicado: `3419225876770733d47d121061a603f8f1b912f3`. Despliegue `appgdep_6ad523fb1018819181d220cfc9cc9f6a`, resultado `succeeded`, misma URL y acceso del propietario.
+
+HTML publicado SHA-256: `5ef31273a7c3cadbf37e51f47a95d49323d72d8b334f9c76c1b4d201ad36bfd2`. Se abrió realmente el sitio publicado y se comprobó el cuerpo idéntico al artefacto probado, carga de los dos fondos, conservación de geometría/zoom y apertura de la foto completa con dimensiones 960 × 1280 y SHA original `c6391281460cc5c6ad65d61069bd310bdd1dd64b8fedbb4d2c12d81898668fb9`. También pasaron selección, modos, matrices foto/vector y móvil emulado; sin errores de JavaScript. El JSON de verificación enlazado arriba refleja esta última comprobación.
+
+La fotografía permanece fuera de los archivos públicos. Se incrusta solo en el HTML generado con `--reference-photo` que se publica en la copia privada. Su análisis está en [new-photo-81184.md](new-photo-81184.md). La geometría y los siete recuadros pendientes no se alteraron al cambiar la imagen de fondo.

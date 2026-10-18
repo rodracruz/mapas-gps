@@ -38,3 +38,5 @@ La foto nueva puede abrirse completa dentro del visor privado, sin rectificar y 
 - Se conserva la geometría y la separación entre dibujo y geografía. Los archivos de la app anterior y sus almacenes no se modifican.
 
 La verificación publicada se registra tras desplegar esta actualización en el mismo sitio privado.
+
+Publicación comprobada: mismo sitio privado, despliegue `appgdep_6ad523fb1018819181d220cfc9cc9f6a`. Las 11 comprobaciones remotas finalizaron sin errores; incluyeron imagen oficial de mayor detalle, cambio de fondo sin desplazar vectores y apertura de la foto recibida con su SHA original. Resultados: [private-site-verification.json](private-site-verification.json).
