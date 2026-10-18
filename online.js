@@ -29,7 +29,7 @@ function render(){
  const dot=$('realDot'),fix=api.state.gpsFix;
  if(fix){const p=world(fix.lat,fix.lon),x=p.x-left,y=p.y-top;dot.classList.toggle('hidden',x<0||y<0||x>r.width||y>r.height);dot.style.left=x+'px';dot.style.top=y+'px';const metersPerPx=156543.03392*Math.cos(rad(fix.lat))/Math.pow(2,z);dot.style.setProperty('--circle',Math.min(250,Math.max(12,fix.accuracy/metersPerPx))+'px')}
  else dot.classList.add('hidden');
- $('realCredit').innerHTML=base==='osm'?'© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>':'Imágenes © Esri y proveedores · datos © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>';
+ $('realCredit').innerHTML=base==='osm'?'© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>':'Imágenes © Esri, Vantor y proveedores · datos © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>';
  $('realPosition').textContent=lat.toFixed(5)+', '+lon.toFixed(5)+' · z'+z+' · '+lines.length+' rutas';
 }
 function move(dx,dy){const c=world(lat,lon),g=coords(c.x-dx,c.y-dy);lat=g.lat;lon=((g.lon+540)%360)-180;render();}
@@ -46,7 +46,7 @@ async function find(){const q=$('realQuery').value.trim();if(q.length<3)return s
 async function load(){if(!navigator.onLine)return status('Sin internet. Puedes usar rutas guardadas si existen.');
  $('realLoad').disabled=true;status('Consultando senderos GPS de OpenStreetMap…');
  try{const query='[out:json][timeout:25];way["highway"~"^(path|track|footway|cycleway)$"](around:2500,'+lat.toFixed(6)+','+lon.toFixed(6)+');out geom;';
- const r=await fetch('https://overpass.kumi.systems/api/interpreter',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:'data='+encodeURIComponent(query)});
+ const r=await fetch('https://overpass-api.de/api/interpreter',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:'data='+encodeURIComponent(query)});
  if(!r.ok)throw Error('Servidor de senderos: '+r.status);const json=await r.json();
  const found=(json.elements||[]).filter(e=>e.type==='way'&&e.geometry?.length>1).map(e=>({id:e.id,name:e.tags?.name||'',tags:e.tags||{},coords:e.geometry.map(p=>[p.lon,p.lat])}));
  if(!found.length)return status('No hay trazados digitalizados en el sector buscado.');
