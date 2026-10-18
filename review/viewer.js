@@ -1,9 +1,9 @@
-import {sha256} from './sha256.mjs';
+import {validateReviewImages,verifyImageBytes} from './images.mjs';
 import {validateDataset,fitView,zoomView,panView} from './geometry.mjs';
 const $=id=>document.getElementById(id),svg=$('map'),stage=$('stage');
 const NS='http://www.w3.org/2000/svg';
 const make=(tag,attrs={})=>{const n=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);return n;};
-let data,view=fitView(900,1100),selected=null,selectedGap=null,mode='overlay',imageURL;
+let data,view=fitView(900,1100),selected=null,selectedGap=null,mode='overlay',imageURL,reviewImages,currentSource,sourceRequest=0,referenceURL;
 const visible=new Set(),groups=new Map(),pointers=new Map();
 let gesture=null,moved=false,multitouch=false;
 function apply(){svg.setAttribute('viewBox',`${view.x} ${view.y} ${view.width} ${view.height}`);$('view-readout').textContent=`${Math.round(900/view.width*100)} % · Píxeles de imagen`;}
@@ -116,24 +116,56 @@ $('show-gaps').onchange=refreshLayers;
 $('download').onclick=()=>{
  const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='el-durazno-trazados-pixeles.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 };
+async function loadImageSource(id){
+ const source=reviewImages.sources.find(s=>s.id===id),request=++sourceRequest;
+ const embedded=$('embedded-images');const assets=embedded?JSON.parse(embedded.textContent):null;
+ $('image-source').disabled=true;stage.setAttribute('aria-busy','true');$('source-error').hidden=true;
+ $('load-status').hidden=false;$('load-status').textContent='Cargando imagen de referencia…';
+ let url;
+ try{
+  const response=await fetch(assets?.[id]||new URL('../'+source.url,import.meta.url));if(!response.ok)throw new Error(`No se cargó la imagen de referencia (HTTP ${response.status}).`);
+  const blob=await response.blob();await verifyImageBytes(await blob.arrayBuffer(),source.sha256);
+  url=URL.createObjectURL(blob);const image=new Image();image.src=url;await image.decode();
+  if(image.naturalWidth!==source.naturalWidth||image.naturalHeight!==source.naturalHeight)throw new Error('La imagen tiene dimensiones distintas a las declaradas.');
+  if(request!==sourceRequest){URL.revokeObjectURL(url);return;}
+  const old=imageURL;imageURL=url;$('original').setAttribute('href',imageURL);if(old)URL.revokeObjectURL(old);
+  currentSource=id;stage.dataset.imageSource=id;$('image-source').value=id;
+  $('image-source-info').textContent=`${source.naturalWidth} × ${source.naturalHeight} px · ${source.note}`;
+  $('image-tag').textContent=`${source.naturalWidth} × ${source.naturalHeight} px`;
+ }catch(error){
+  if(url)URL.revokeObjectURL(url);
+  if(!currentSource)throw error;
+  $('image-source').value=currentSource;$('source-error').textContent='Se conserva la imagen anterior. '+error.message;$('source-error').hidden=false;
+ }finally{if(request===sourceRequest){$('load-status').hidden=true;stage.setAttribute('aria-busy','false');$('image-source').disabled=false;}}
+}
+$('image-source').onchange=()=>loadImageSource($('image-source').value);
+$('close-reference-photo').onclick=()=>$('reference-photo-dialog').close();
+async function setupReferencePhoto(){
+ const embedded=$('embedded-reference-photo');if(!embedded)return;
+ const reference=JSON.parse(embedded.textContent);$('show-reference-photo').hidden=false;
+ $('show-reference-photo').onclick=async()=>{
+  try{
+   if(!referenceURL){const response=await fetch(reference.dataUrl),blob=await response.blob();await verifyImageBytes(await blob.arrayBuffer(),reference.sha256);referenceURL=URL.createObjectURL(blob);const image=new Image();image.src=referenceURL;await image.decode();if(image.naturalWidth!==reference.width||image.naturalHeight!==reference.height){URL.revokeObjectURL(referenceURL);referenceURL=null;throw new Error('Dimensiones de la foto recibida incorrectas.');}$('reference-photo-image').src=referenceURL;}
+   $('reference-photo-info').textContent=`${reference.width} × ${reference.height} px · Fotografía completa conservada sin cambios. Esta imagen no tiene un ajuste geográfico validado.`;
+   $('reference-photo-dialog').showModal();
+  }catch(error){$('source-error').textContent='No se pudo mostrar la foto completa. '+error.message;$('source-error').hidden=false;}
+ };
+}
 async function init(){
  try{
-  const embedded=$('embedded-data');
-  let candidate;
+  const embedded=$('embedded-data');let candidate;
   if(embedded)candidate=validateDataset(JSON.parse(embedded.textContent));
   else{const r=await fetch(new URL('../data/el-durazno/visual-trails.json',import.meta.url));if(!r.ok)throw new Error(`No se cargaron los trazados (HTTP ${r.status}).`);candidate=validateDataset(await r.json());}
-  const source=await fetch(embedded?$('embedded-image').textContent.trim():new URL('../'+candidate.image.url,import.meta.url));if(!source.ok)throw new Error(`No se cargó la fotografía (HTTP ${source.status}).`);
-  const blob=await source.blob();
-  const bytes=await blob.arrayBuffer();let hash;
-  if(globalThis.crypto?.subtle){const digest=await crypto.subtle.digest('SHA-256',bytes);hash=[...new Uint8Array(digest)].map(x=>x.toString(16).padStart(2,'0')).join('');}
-  else hash=sha256(new Uint8Array(bytes));
-  if(hash!==candidate.image.sha256)throw new Error('La fotografía cambió: no coincide con la fuente de los trazados.');
-  imageURL=URL.createObjectURL(blob);const img=new Image();img.src=imageURL;await img.decode();
-  if(img.naturalWidth!==candidate.image.width||img.naturalHeight!==candidate.image.height)throw new Error('La fotografía tiene dimensiones distintas a las del trazado.');
-  data=candidate;$('original').setAttribute('href',imageURL);draw();setMode('overlay');apply();
+  const embeddedConfig=$('embedded-image-config');let config;
+  if(embeddedConfig)config=JSON.parse(embeddedConfig.textContent);
+  else{const r=await fetch(new URL('../data/el-durazno/review-images.json',import.meta.url));if(!r.ok)throw new Error('No se cargó el registro de imágenes.');config=await r.json();}
+  reviewImages=validateReviewImages(config,candidate.image);
+  for(const source of reviewImages.sources){const option=document.createElement('option');option.value=source.id;option.textContent=source.label;$('image-source').append(option);}
+  await loadImageSource(reviewImages.defaultId);
+  data=candidate;draw();setMode('overlay');apply();await setupReferencePhoto();
   $('load-status').hidden=true;stage.setAttribute('aria-busy','false');$('download').disabled=false;
   $('dataset-status').textContent=`${data.segments.length} fragmentos · ${data.gaps.length} zonas pendientes`;
- }catch(error){stage.classList.add('error');stage.setAttribute('aria-busy','false');$('load-status').textContent='No se pudo abrir la revisión. '+error.message;$('load-status').setAttribute('role','alert');$('dataset-status').textContent='Revisión no disponible';}
+ }catch(error){stage.classList.add('error');stage.setAttribute('aria-busy','false');$('load-status').hidden=false;$('load-status').textContent='No se pudo abrir la revisión. '+error.message;$('load-status').setAttribute('role','alert');$('dataset-status').textContent='Revisión no disponible';$('image-source').disabled=true;}
 }
-window.addEventListener('pagehide',()=>{if(imageURL)URL.revokeObjectURL(imageURL);});
+window.addEventListener('pagehide',()=>{if(imageURL)URL.revokeObjectURL(imageURL);if(referenceURL)URL.revokeObjectURL(referenceURL);});
 init();

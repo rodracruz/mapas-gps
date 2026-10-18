@@ -58,3 +58,9 @@ Encontró un fallo importante: la comprobación de SHA se omitía sin `crypto.su
 ## Continuar sin reconstruir contexto
 
 Revisar las tres comparaciones y las siete zonas del JSON, conservar los IDs al corregir vértices y resolver ambigüedades con evidencia de la misma edición. Después establecer controles geográficos inequívocos y puntos independientes para evaluar el ajuste. No convertir longitudes del cartel en metros ni usar las viejas geometrías ilustrativas como atajo.
+
+## Actualización tras recibir `81184.jpg`
+
+Se volvió a ejecutar la suite: **11 pruebas unitarias/de datos**, las **12 comprobaciones de navegador**, una comprobación adicional de fuentes en móvil (`npm run test:sources`) y el HTML autónomo con las dos imágenes y la foto completa privada. Todas pasaron. Se probó la recuperación al fallar una imagen: conserva la anterior ya verificada. Cambiar de fuente mantiene los puntos de las polilíneas y el viewBox, y la imagen y los vectores siguen compartiendo la misma matriz.
+
+El nuevo fondo tiene 1800 × 2200 píxeles y se muestra en el mismo plano 900 × 1100. La foto nueva completa (960 × 1280) se puede abrir en un diálogo de la copia privada; su SHA coincide con el adjunto. No se incorpora a los archivos públicos ni se convierte en un control geográfico. Véase [new-photo-81184.md](new-photo-81184.md).

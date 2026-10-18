@@ -7,8 +7,8 @@
 <header class="header"><a class="brand" href="./" aria-label="Volver a Mapas GPS"><span class="brand-mark">⌁</span><span>MAPAS GPS<small>Cuaderno de cartografía</small></span></a><div class="milestone"><span class="status-dot"></span> Hito 01 · Revisión visual</div><a class="back" href="./">Mis mapas →</a></header>
 <main>
 <section class="workspace" aria-labelledby="page-title">
- <div class="title-row"><div><p class="eyebrow">RKF EL DURAZNO · CHILE</p><h1 id="page-title">Revisión de senderos.</h1><p class="intro">Compara el trazado con el mapa original.</p></div><span class="image-tag">900 × 1100 px</span></div>
- <div class="toolbar" aria-label="Vista del mapa"><div class="mode-group"><button data-mode="photo" aria-pressed="false">Fotografía</button><button data-mode="overlay" aria-pressed="true">Superposición</button><button data-mode="vectors" aria-pressed="false">Vectores</button></div><button id="fit" class="fit">⤢ <span>Mapa completo</span></button></div>
+ <div class="title-row"><div><p class="eyebrow">RKF EL DURAZNO · CHILE</p><h1 id="page-title">Revisión de senderos.</h1><p class="intro">Compara el trazado con el mapa original.</p></div><span id="image-tag" class="image-tag">900 × 1100 px</span></div>
+ <div class="toolbar" aria-label="Vista del mapa"><div class="mode-group"><button data-mode="photo" aria-pressed="false">Imagen</button><button data-mode="overlay" aria-pressed="true">Superposición</button><button data-mode="vectors" aria-pressed="false">Vectores</button></div><button id="fit" class="fit">⤢ <span>Mapa completo</span></button></div>
  <div id="stage" class="stage" aria-busy="true">
   <svg id="map" viewBox="0 0 900 1100" preserveAspectRatio="xMidYMid meet" tabindex="0" role="img" aria-label="Comparación interactiva en coordenadas de la fotografía. Usa los controles para acercar y las flechas para desplazar.">
    <defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#d9e3dd" stroke-width=".6"/></pattern></defs>
@@ -25,7 +25,9 @@
 <aside class="sidebar" aria-label="Revisión de trazados">
  <section class="layers-section"><div class="section-heading"><span class="number">01</span><h2>Senderos</h2><span id="trail-count" class="counter">3</span></div><p class="section-hint">Selecciona para destacar. Usa la casilla para ocultar.</p><div id="layers" class="layers"></div></section>
  <section class="settings"><div class="section-heading"><span class="number">02</span><h2>Comparación</h2></div>
-  <label class="range-label" for="photo-opacity">Opacidad de la foto <output id="photo-value">100 %</output></label><input id="photo-opacity" type="range" min="0" max="100" value="100">
+  <label class="source-label" for="image-source">Imagen de referencia</label><select id="image-source" disabled aria-describedby="image-source-info"></select><p id="image-source-info" class="source-info" role="status">Cargando referencias…</p><p id="source-error" class="source-error" role="alert" hidden></p>
+  <button id="show-reference-photo" class="reference-button" hidden>Ver foto completa recibida</button>
+  <label class="range-label" for="photo-opacity">Opacidad de la imagen <output id="photo-value">100 %</output></label><input id="photo-opacity" type="range" min="0" max="100" value="100">
   <label class="range-label" for="vector-opacity">Opacidad del trazado <output id="vector-value">90 %</output></label><input id="vector-opacity" type="range" min="0" max="100" value="90">
   <label class="check-label"><input id="show-gaps" type="checkbox" checked> Mostrar zonas pendientes</label>
  </section>
@@ -35,5 +37,6 @@
 </aside>
 </main>
 <footer class="page-footer">Fotografía original conservada · Sin ajuste GPS ni distancias de terreno · <span id="dataset-status">Validando fuente…</span></footer>
+<dialog id="reference-photo-dialog"><div class="reference-heading"><strong>Foto completa del cartel</strong><button id="close-reference-photo" autofocus aria-label="Cerrar foto completa">Cerrar</button></div><p id="reference-photo-info"></p><img id="reference-photo-image" alt="Fotografía completa del cartel enviada por el usuario, conservada sin rectificar"></dialog>
 <script type="module" src="./review/viewer.js"></script>
 </body></html>

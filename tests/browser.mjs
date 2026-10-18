@@ -2,7 +2,7 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
-const changedPhoto=Buffer.concat([await readFile(new URL('../elh-durazno.jpg',import.meta.url)),Buffer.from('changed source trailer')]);
+const changedPhoto=Buffer.concat([await readFile(new URL('../sources/el-durazno-official-aligned-2x.jpg',import.meta.url)),Buffer.from('changed source trailer')]);
 const base=process.env.REVIEW_BASE_URL||'http://127.0.0.1:4173';
 const out=new URL('../docs/evidence/screenshots/',import.meta.url);await mkdir(out,{recursive:true});
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
@@ -25,7 +25,7 @@ try{
  });
  await page.screenshot({path:new URL('desktop-overlay.png',out).pathname,fullPage:true});
  await check('photo, overlay, vectors, independent opacity and per-trail visibility',async()=>{
-  await page.getByRole('button',{name:'Fotografía',exact:true}).click();assert.equal(await page.locator('.trail-group').first().isVisible(),false);
+  await page.getByRole('button',{name:'Imagen',exact:true}).click();assert.equal(await page.locator('.trail-group').first().isVisible(),false);
   await page.getByRole('button',{name:'Vectores',exact:true}).click();assert.equal(await page.locator('#original').isVisible(),false);assert.equal(await page.locator('.route').first().isVisible(),true);
   await page.getByRole('button',{name:'Superposición',exact:true}).click();
   await page.locator('#photo-opacity').fill('38');await page.locator('#photo-opacity').dispatchEvent('input');assert.equal(await page.locator('#original').evaluate(n=>n.style.opacity),'0.38');
@@ -59,10 +59,11 @@ try{
   const promise=page.waitForEvent('download');await page.locator('#download').click();const d=await promise;assert.equal(d.suggestedFilename(),'el-durazno-trazados-pixeles.json');
   const exported=JSON.parse(await readFile(await d.path(),'utf8'));assert.equal(exported.coordinateSystem,'image-pixels');assert.equal(exported.georeferencing.transform,null);assert.deepEqual(exported.connections,[]);
  });
+ await page.locator('#image-source').selectOption('original');await page.waitForFunction(()=>document.querySelector('#stage').dataset.imageSource==='original');
  // Exactly the same viewBox for all three comparisons for each trail.
  for(const [id,name] of [['starwars','Starwars'],['la-virgen','La Virgen'],['lomo-vetado','Lomo Vetado']]){
   await page.getByRole('button',{name:`Seleccionar ${name}`,exact:true}).click();await page.locator('#focus-trail').click();
-  for(const [mode,label] of [['photo','Fotografía'],['overlay','Superposición'],['vectors','Vectores']]){
+  for(const [mode,label] of [['photo','Imagen'],['overlay','Superposición'],['vectors','Vectores']]){
    await page.getByRole('button',{name:label,exact:true}).click();await page.locator('#stage').screenshot({path:new URL(`${id}-${mode}.png`,out).pathname});
   }
  }
@@ -71,12 +72,12 @@ try{
   await p.route('**/data/el-durazno/visual-trails.json',route=>route.fulfill({contentType:'application/json',body:'{"schemaVersion":1,"coordinateSystem":"EPSG:4326"}'}));
   await p.goto(base+'/revision.html');await p.waitForSelector('#stage.error');assert.match(await p.getByRole('alert').textContent(),/Datos de trazado inválidos/);assert.equal(await p.locator('.route').count(),0);
   await ctx.close();
-  const ctx2=await browser.newContext();p=await ctx2.newPage();await p.route('**/elh-durazno.jpg',route=>route.fulfill({status:404,body:'missing'}));await p.goto(base+'/revision.html');await p.waitForSelector('#stage.error');assert.match(await p.getByRole('alert').textContent(),/fotografía/);assert.equal(await p.locator('#download').isDisabled(),true);await ctx2.close();
-  const ctx3=await browser.newContext();p=await ctx3.newPage();await p.route('**/elh-durazno.jpg',route=>route.fulfill({status:200,contentType:'image/jpeg',body:Buffer.from('changed image bytes')}));await p.goto(base+'/revision.html');await p.waitForSelector('#stage.error');assert.match(await p.getByRole('alert').textContent(),/no coincide con la fuente/);await ctx3.close();
+  const ctx2=await browser.newContext();p=await ctx2.newPage();await p.route('**/el-durazno-official-aligned-2x.jpg',route=>route.fulfill({status:404,body:'missing'}));await p.goto(base+'/revision.html');await p.waitForSelector('#stage.error');assert.match(await p.getByRole('alert').textContent(),/imagen de referencia/);assert.equal(await p.locator('#download').isDisabled(),true);await ctx2.close();
+  const ctx3=await browser.newContext();p=await ctx3.newPage();await p.route('**/el-durazno-official-aligned-2x.jpg',route=>route.fulfill({status:200,contentType:'image/jpeg',body:Buffer.from('changed image bytes')}));await p.goto(base+'/revision.html');await p.waitForSelector('#stage.error');assert.match(await p.getByRole('alert').textContent(),/no coincide con la fuente/);await ctx3.close();
  });
  await check('HTTP without SubtleCrypto verifies original and rejects changed source bytes',async()=>{
   const ctx=await browser.newContext();await ctx.addInitScript(()=>Object.defineProperty(window,'crypto',{value:{},configurable:true}));const p=await ctx.newPage();await ready(p);
-  await p.route('**/elh-durazno.jpg',route=>route.fulfill({status:200,contentType:'image/jpeg',body:changedPhoto}));
+  await p.route('**/el-durazno-official-aligned-2x.jpg',route=>route.fulfill({status:200,contentType:'image/jpeg',body:changedPhoto}));
   await p.reload();await p.waitForSelector('#stage[aria-busy="false"]');assert.equal(await p.locator('#stage.error').count(),1,'changed source must be rejected without SubtleCrypto');assert.match(await p.getByRole('alert').textContent(),/no coincide con la fuente/);await ctx.close();
  });
  const mobile=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});

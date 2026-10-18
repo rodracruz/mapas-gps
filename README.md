@@ -33,3 +33,5 @@ Los archivos de aplicación previos, el original JPG, el service worker y la bas
 ### Acceso directo privado
 
 [Visor de revisión de El Durazno](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site) — copia privada en Sites, accesible con la cuenta propietaria de ChatGPT. Publicación y comprobaciones documentadas en [private-site.md](docs/evidence/private-site.md). La publicación GitHub Pages original y main no se modificaron.
+
+La revisión incluye ahora el mapa oficial alineado de mayor detalle (1800 × 2200) y un selector para contrastarlo con la foto original. `npm run test:sources` comprueba que cambiar de fondo mantiene la geometría y el encuadre. La opción de construcción `--reference-photo /ruta/a/foto.jpg` incorpora una foto completa únicamente al HTML generado; ese archivo no se añade al código público. La copia privada incluye la foto completa recibida y su análisis está en [new-photo-81184.md](docs/evidence/new-photo-81184.md).

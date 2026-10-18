@@ -79,3 +79,7 @@ Los IDs actuales se preservan al editar las listas de puntos. Si se divide un fr
 ## Pendiente para el siguiente hito
 
 Resolver las siete zonas señaladas mediante mayor evidencia de la misma edición; aceptar visualmente los recorridos; establecer correspondencias geográficas inequívocas y controles de comprobación independientes. Solo después decidir modelo geográfico y topología navegable. No se usan longitudes del cartel como distancias de terreno.
+
+## Actualización de fuentes: fotografía completa
+
+Se recibió `81184.jpg` (960 × 1280), se inspeccionó y se conservó sin cambios en el almacén privado. Ver [análisis de la nueva foto y mejora de resolución](new-photo-81184.md). El visor permite alternar ahora entre un fondo oficial alineado de 1800 × 2200 y la foto anterior de 900 × 1100. El plano de coordenadas y los trazados siguen idénticos. La nueva foto se abre completa en la copia privada; no se publica su binario en GitHub.
