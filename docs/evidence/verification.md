@@ -1,6 +1,6 @@
 # Verificación del primer hito
 
-Fecha: 2026-10-18. Base del repositorio: `87edc6c`. Rama local: `feat/fiel-vector-review`. Worktree: `/workspace/mapas-gps/.worktrees/vector-review`.
+Fecha: 2026-10-18. Base del repositorio: `87edc6c`. Rama de desarrollo publicada en GitHub: `feat/fiel-vector-review`. Worktree: `/workspace/mapas-gps/.worktrees/vector-review`.
 
 ## Qué se ejecutó
 

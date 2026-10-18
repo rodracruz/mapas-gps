@@ -9,7 +9,7 @@ Fecha de recepción y consulta: 2026-10-18. Se inspeccionó el archivo real y su
 | JPG oficial de Outlife | 2570 × 3077 | 4739485 | Fuente de mayor detalle; original conservado |
 | Fondo oficial alineado | 1800 × 2200 | 1685997 | Nueva imagen de revisión a doble densidad de píxel, en el mismo plano 900 × 1100 |
 
-SHA-256 de la nueva foto: `c6391281460cc5c6ad65d61069bd310bdd1dd64b8fedbb4d2c12d81898668fb9`. No contiene orientación EXIF. Se conserva su copia exacta fuera del repositorio público, en el almacén privado de fuentes del entorno. Solo se incrusta en la copia de alojamiento con acceso exclusivo del propietario; no se añade su binario a GitHub ni se hace push de la rama pública.
+SHA-256 de la nueva foto: `c6391281460cc5c6ad65d61069bd310bdd1dd64b8fedbb4d2c12d81898668fb9`. No contiene orientación EXIF. Se conserva su copia exacta fuera del repositorio público, en el almacén privado de fuentes del entorno. Solo se incrusta en la copia de alojamiento con acceso exclusivo del propietario; su binario no forma parte de la rama pública de GitHub.
 
 ## Qué aporta
 
