@@ -142,13 +142,22 @@ $('image-source').onchange=()=>loadImageSource($('image-source').value);
 $('close-reference-photo').onclick=()=>$('reference-photo-dialog').close();
 async function setupReferencePhoto(){
  const embedded=$('embedded-reference-photo');if(!embedded)return;
- const reference=JSON.parse(embedded.textContent);$('show-reference-photo').hidden=false;
- $('show-reference-photo').onclick=async()=>{
+ const reference=JSON.parse(embedded.textContent),button=$('show-reference-photo');button.hidden=false;
+ button.onclick=async()=>{
+  let candidateURL;
+  button.disabled=true;$('source-error').hidden=true;
   try{
-   if(!referenceURL){const response=await fetch(reference.dataUrl),blob=await response.blob();await verifyImageBytes(await blob.arrayBuffer(),reference.sha256);referenceURL=URL.createObjectURL(blob);const image=new Image();image.src=referenceURL;await image.decode();if(image.naturalWidth!==reference.width||image.naturalHeight!==reference.height){URL.revokeObjectURL(referenceURL);referenceURL=null;throw new Error('Dimensiones de la foto recibida incorrectas.');}$('reference-photo-image').src=referenceURL;}
+   if(!referenceURL){
+    const response=await fetch(reference.dataUrl);if(!response.ok)throw new Error('No se cargó la foto recibida.');
+    const blob=await response.blob();await verifyImageBytes(await blob.arrayBuffer(),reference.sha256);
+    candidateURL=URL.createObjectURL(blob);const image=new Image();image.src=candidateURL;await image.decode();
+    if(image.naturalWidth!==reference.width||image.naturalHeight!==reference.height)throw new Error('Dimensiones de la foto recibida incorrectas.');
+    referenceURL=candidateURL;candidateURL=null;$('reference-photo-image').src=referenceURL;
+   }
    $('reference-photo-info').textContent=`${reference.width} × ${reference.height} px · Fotografía completa conservada sin cambios. Esta imagen no tiene un ajuste geográfico validado.`;
    $('reference-photo-dialog').showModal();
   }catch(error){$('source-error').textContent='No se pudo mostrar la foto completa. '+error.message;$('source-error').hidden=false;}
+  finally{if(candidateURL)URL.revokeObjectURL(candidateURL);button.disabled=false;}
  };
 }
 async function init(){

@@ -2,6 +2,8 @@
 
 Aplicación web móvil para posicionarse con GPS sobre imágenes de mapas de senderos.
 
+El desarrollo del visor vectorial está en `feat/fiel-vector-review`. Para retomar el estado, reproducir pruebas y conocer los límites cartográficos, leer [Continuar el desarrollo](docs/continuar-desarrollo.md).
+
 ### Probar
 - Abre `https://<usuario>.github.io/<repo>/` (tras activar Pages) desde Android en Chrome.
 - Abre `RKF El Durazno` o importa una imagen JPG/PNG/WebP.

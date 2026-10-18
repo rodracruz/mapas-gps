@@ -7,7 +7,8 @@
     "serve": "python3 -m http.server 4173 --bind 0.0.0.0",
     "build:standalone": "python3 scripts/build-standalone.py",
     "test:standalone": "node tests/standalone.mjs",
-    "test:sources": "node tests/browser-sources.mjs"
+    "test:sources": "node tests/browser-sources.mjs",
+    "test:integrity": "node tests/browser-integrity.mjs"
   },
   "devDependencies": {
     "playwright": "1.58.2"
