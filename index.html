@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#10211d"/>
+<meta name="description" content="Tu posición GPS sobre fotografías de mapas de senderos, incluso sin internet."/>
+<link rel="manifest" href="./manifest.webmanifest"/><link rel="icon" href="./icons/icon192.png"/>
+<link rel="stylesheet" href="./style.css"/><title>Mapas GPS · Senderos</title>
+</head><body><div id="app">
+<header class="header" id="header"><div class="brand"><span class="brand-symbol">⌁</span><span><strong>MAPAS GPS</strong><small>Senderos a tu manera</small></span></div><span id="networkBadge" class="badge">● Offline listo</span></header>
+<main id="library" class="library">
+ <div class="intro"><div class="eyebrow">NAVEGACIÓN OUTDOOR</div><h1>Tus mapas.<br><em>Tu ubicación.</em></h1><p>Importa una foto de un mapa, calíbrala con puntos reales y ubícate con GPS. Sin cuentas y sin conexión durante el recorrido.</p></div>
+ <div class="library-title"><h2>Mis mapas</h2><button class="btn accent" id="importButton">＋ Añadir mapa</button></div><div class="map-list" id="mapList"></div>
+ <input id="fileInput" type="file" accept="image/jpeg,image/png,image/webp" hidden/>
+ <div class="info-block"><span class="info-icon">⌖</span><div><b>¿Por qué debo calibrar una foto?</b><p>Una imagen no trae coordenadas GPS. Une al menos 3 puntos de la foto con lugares reales; recomendamos 4 o más.</p></div></div>
+</main>
+<section id="viewer" class="viewer hidden" aria-label="Visor de mapa">
+ <div class="viewer-top"><button id="backButton" class="iconbtn" aria-label="Volver">←</button><div class="viewer-name"><strong id="viewerTitle"></strong><small id="viewerState">Sin calibrar</small></div><button id="calibrateButton" class="btn tiny">Calibrar</button></div>
+ <div id="mapViewport" class="map-viewport"><div id="mapContent" class="map-content"><img id="mapImage" alt="Mapa de senderos" draggable="false"/><div id="markersLayer"></div></div></div>
+ <div class="map-controls"><button id="zoomIn" aria-label="Acercar">＋</button><button id="zoomOut" aria-label="Alejar">−</button><button id="resetView" aria-label="Ver mapa completo">⤢</button></div>
+ <div class="gps-card" id="gpsCard"><div class="gps-status"><i id="gpsLamp" class="lamp"></i><div><b id="gpsText">GPS detenido</b><small id="gpsDetail">Actívalo para ver tu posición</small></div></div><div class="gps-actions"><button id="gpsButton" class="btn accent">⌖ Activar GPS</button><button id="centerGps" class="iconbtn" title="Centrar posición" disabled>◎</button></div></div>
+ <div class="cal-panel hidden" id="calPanel"><div class="cal-heading"><strong>Calibrar imagen</strong><button class="plainbtn" id="closeCal">✕</button></div><p id="calInstructions" class="cal-instructions">1. Toca un lugar identificable en la foto.</p>
+ <div class="selection-row" id="selectionRow"><span id="selectionText">Ningún punto seleccionado</span><button id="chooseReference" class="btn tiny" disabled>Ubicar en mapa real</button></div>
+ <div class="coordinate-inputs"><label>Latitud<input id="latInput" inputmode="decimal" placeholder="-33.32000" type="text"/></label><label>Longitud<input id="lonInput" inputmode="decimal" placeholder="-70.49000" type="text"/></label></div>
+ <div class="cal-actions"><button class="btn" id="useHere">⌖ Usar GPS aquí</button><button class="btn accent" id="addAnchor" disabled>Guardar punto ＋</button></div>
+ <div id="calMessage" class="feedback"></div><div id="anchorList" class="anchor-list"></div><div id="calQuality" class="quality"></div>
+ </div>
+ <div class="viewer-bottom" id="viewerBottom"><span>Arrastra o pellizca para explorar</span><button id="helpButton" class="plainbtn">Cómo funciona ⓘ</button></div>
+</section>
+<div id="referenceDialog" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="referenceTitle"><div class="modal-card"><div class="modal-header"><div><strong id="referenceTitle">Ubicar punto real</strong><small>Marca el mismo lugar en OpenStreetMap</small></div><button id="closeReference" class="iconbtn" aria-label="Cerrar">✕</button></div><div id="referenceMap" class="reference-map"><div id="tileLayer" class="tile-layer"></div><div class="ref-cross">＋</div><div class="osm-attrib">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a></div><div class="ref-zoom"><button id="refPlus">+</button><button id="refMinus">−</button></div></div><div class="ref-coordinates" id="refCoordinates">Mueve el mapa hasta centrar el lugar correcto</div><div class="ref-hint">El punto de referencia es el centro de la cruz. Debes tener conexión para ver este mapa base.</div><button id="confirmReference" class="btn accent wide">Usar punto central</button></div></div>
+<div id="helpDialog" class="modal hidden" role="dialog" aria-modal="true"><div class="modal-card help-card"><div class="modal-header"><strong>Cómo usar Mapas GPS</strong><button id="closeHelp" class="iconbtn" aria-label="Cerrar">✕</button></div><div class="help-content"><p><b>1 · Importa tu mapa.</b> Puedes usar una fotografía JPG/PNG del cartel de un parque.</p><p><b>2 · Calibra.</b> Toca una intersección o hito claro en la fotografía. Busca el mismo lugar en OpenStreetMap, introduce sus coordenadas o registra el GPS estando allí. Repite con 4 o más puntos repartidos.</p><p><b>3 · Navega.</b> Activa el GPS. El punto azul aparece en la fotografía cuando hay calibración suficiente. Toca ◎ para centrarlo.</p><p><b>Offline.</b> Una vez instalada y abierta, la app puede visualizar fotos y posición GPS sin datos móviles. El mapa de referencia online necesita internet.</p><p><b>Seguridad.</b> La imagen puede no estar a escala; una calibración con 3 puntos no permite comprobar el error. Comprueba visualmente senderos, señales y terreno. No dependas exclusivamente de esta aplicación.</p><p><b>Privacidad.</b> Las fotos y calibraciones se guardan en este dispositivo y no se envían a un servidor.</p></div><button id="understood" class="btn accent wide">Entendido</button></div></div>
+<div id="toast" class="toast hidden" role="status"></div>
+</div><script type="module" src="./app.js"></script></body></html>

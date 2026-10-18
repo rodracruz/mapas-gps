@@ -1,0 +1,52 @@
+MAPAS GPS — PROTOTIPO 0.1
+========================
+
+OBJETIVO
+Mostrar la posición GPS real sobre fotografías de mapas de senderos, con varios mapas guardados localmente.
+
+QUÉ INCLUYE
+- Foto corregida visualmente de RKF El Durazno (NO georreferenciada).
+- Importación de imágenes JPG/PNG/WebP desde el teléfono.
+- Almacenamiento local IndexedDB.
+- Selección de puntos sobre la imagen y coordenadas equivalentes desde OpenStreetMap, ingreso manual o captura del GPS en terreno.
+- Transformación afín desde coordenadas geográficas a píxeles. Requiere al menos 3 puntos no colineales; usa 4 o más y revisa el error.
+- Visualización GPS en vivo, precisión aproximada y aviso al salir del mapa.
+- Pan, zoom, funcionamiento offline de la aplicación y fotos ya almacenadas (una vez cacheadas).
+
+CÓMO PROBAR EN UN PC
+1. Extrae ZIP en una carpeta.
+2. Abre una terminal dentro de esa carpeta.
+3. Ejecuta: python -m http.server 8080
+4. Abre http://localhost:8080 en Chrome o Edge. El GPS puede usar la posición del PC, si existe.
+
+CÓMO INSTALAR EN ANDROID
+La versión PWA no se instala abriendo el archivo ZIP o index.html directamente.
+1. Publica toda la carpeta en un servidor HTTPS (por ejemplo, GitHub Pages o Cloudflare Pages).
+2. En Android abre esa URL HTTPS en Chrome.
+3. Menú ⋮ → Instalar app / Añadir a pantalla principal (texto puede variar).
+4. Abre la aplicación con internet por primera vez para guardar archivos offline.
+5. Autoriza la ubicación cuando actives el GPS.
+
+USO
+- Abre RKF El Durazno o importa otro mapa desde una foto.
+- Pulsa Calibrar y toca un punto identificable sobre la foto.
+- Usa Ubicar en mapa real (OpenStreetMap) para escoger coordenadas, introdúcelas manualmente o visita ese punto y pulsa Usar GPS aquí.
+- Guarda punto. Repite en otros puntos distribuidos por toda la foto (4 o más).
+- Sal de Calibrar y pulsa Activar GPS; el punto azul aparecerá únicamente si hay ubicación y calibración válidas.
+- La imagen y el seguimiento GPS pueden funcionar sin datos móviles, pero elegir puntos en OpenStreetMap requiere internet.
+
+LIMITACIONES IMPORTANTES
+- PROTOTIPO SIN VALIDACIÓN EN TERRENO: no usar como instrumento único de navegación ni de seguridad.
+- Los mapas dibujados a mano pueden no tener escala constante: un error RMS bajo no garantiza que todos los senderos coincidan.
+- El algoritmo usa un ajuste afín global, no deformación local de la imagen. La precisión real depende de los puntos de referencia.
+- Con solo 3 puntos el ajuste matemático no permite verificar su precisión.
+- Para usar el GPS del móvil desde navegador se necesita HTTPS y permiso explícito.
+- No incluye registro GPX, rutas calculadas, brújula ni seguimiento con pantalla bloqueada.
+- El almacenamiento offline depende de las políticas del navegador; no elimines datos del sitio si necesitas conservar los mapas.
+- Los mosaicos de OpenStreetMap usan conexión a Internet y están sujetos a su política de uso.
+- La versión completa NO fue probada en un dispositivo Android. Se comprobaron sintaxis de JavaScript y cálculos matemáticos de georreferenciación.
+
+PRIVACIDAD
+No hay servidor ni cuenta. Las fotos, calibraciones y coordenadas GPS se procesan localmente. Solo el mapa base de referencia solicita mosaicos al servidor público de OpenStreetMap mientras se usa online.
+
+CONTENIDO: index.html, app.js, style.css, manifest.webmanifest, sw.js, icons/, elh-durazno.jpg.
