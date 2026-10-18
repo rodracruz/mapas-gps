@@ -4,17 +4,20 @@ Rama: feat/fiel-vector-review
 Base: 87edc6c
 
 Para revisar el resultado:
-1. Abrir mapas-gps-revision.html, el visor autónomo incluido en la entrega.
+1. Abrir el visor privado comprobado:
+   https://mapas-gps-revision-durazno.rodracruz.chatgpt.site
+   Iniciar sesión con la cuenta propietaria si se solicita.
+2. Alternativamente, abrir mapas-gps-revision.html incluido en la entrega.
    Contiene fotografía original, datos, CSS, JavaScript y documentación.
    El núcleo no necesita conexión ni claves.
-2. Si el navegador bloquea archivos locales por política, descomprimir todo
+3. Si el navegador bloquea archivos locales por política, descomprimir todo
    el ZIP, ejecutar `python3 -m http.server 4173` en esta carpeta y abrir:
    http://127.0.0.1:4173/mapas-gps-revision.html
    También está la versión de desarrollo: /revision.html
 
 La apertura file:// está bloqueada por la política del Chromium de QA;
 se comprobó este mismo HTML por HTTP y después en modo offline sin
-solicitudes externas. No se publicó una URL de vista previa pública.
+solicitudes externas. La URL alojada es privada y separada de GitHub Pages.
 
 Datos editables: data/el-durazno/visual-trails.json
 Capturas comparativas: docs/evidence/screenshots/*-comparacion.png
@@ -26,5 +29,10 @@ Los senderos están en píxeles, no en coordenadas GPS. Quedan siete zonas
 pendientes; no hay enlaces inventados, transformación geográfica validada
 ni distancias de terreno. No se implementó navegación en este hito.
 
-La aplicación anterior y sus almacenes permanecen intactos. No hubo push,
-merge ni publicación. La rama y el worktree se conservan para continuar.
+La aplicación anterior y sus almacenes permanecen intactos. El código está
+subido a la rama feat/fiel-vector-review y al PR en borrador:
+https://github.com/rodracruz/mapas-gps/pull/1
+No se fusionó sobre main ni se cambió GitHub Pages. La foto privada completa
+se incluye únicamente en el HTML privado; no se añade a la rama pública.
+
+Continuar desarrollo: docs/continuar-desarrollo.md

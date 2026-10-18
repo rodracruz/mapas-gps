@@ -44,3 +44,11 @@ La copia privada se actualizó con el cambio de fondos y la foto completa. Códi
 HTML publicado SHA-256: `5ef31273a7c3cadbf37e51f47a95d49323d72d8b334f9c76c1b4d201ad36bfd2`. Se abrió realmente el sitio publicado y se comprobó el cuerpo idéntico al artefacto probado, carga de los dos fondos, conservación de geometría/zoom y apertura de la foto completa con dimensiones 960 × 1280 y SHA original `c6391281460cc5c6ad65d61069bd310bdd1dd64b8fedbb4d2c12d81898668fb9`. También pasaron selección, modos, matrices foto/vector y móvil emulado; sin errores de JavaScript. El JSON de verificación enlazado arriba refleja esta última comprobación.
 
 La fotografía permanece fuera de los archivos públicos. Se incrusta solo en el HTML generado con `--reference-photo` que se publica en la copia privada. Su análisis está en [new-photo-81184.md](new-photo-81184.md). La geometría y los siete recuadros pendientes no se alteraron al cambiar la imagen de fondo.
+
+## Actualización de integridad y reintento de foto
+
+Código de aplicación: `74d6c82`; rama subida a GitHub y [PR #1 en borrador](https://github.com/rodracruz/mapas-gps/pull/1). El código y los datos públicos ya son recuperables desde el repositorio original, sin depender del estado del hilo. `main` permanece en `87edc6c`.
+
+Commit privado de alojamiento: `9559612fcc4a644b4c3b91feecffe42885b46230`. Despliegue `appgdep_6ad542f8d0508191bdb922a3d9a5c7e6`, resultado `succeeded`; versión `appgprj_6ad51f7eb4a08191bf1159e60380c2d4~appgver_3bd7e631a0bc8191b2dfa8e1eefe0658`. Misma URL y acceso exclusivo del propietario, confirmado nuevamente antes de publicar.
+
+HTML SHA-256 `13aee9afec53b681fa4ebc5db9d23a536a3e87d2d33751de7b10b67181545fee`. La comprobación real del sitio el 2026-10-18 pasó 12 controles, incluidos igualdad de bytes, fondos, geometría, selección, zoom y disposición móvil. Se inyectó además un único fallo transitorio de decodificación en móvil: la URL fallida se revocó y el segundo toque abrió la foto completa de 960 × 1280, sin errores de JavaScript. El acceso anónimo sigue respondiendo HTTP 401. El registro JSON enlazado refleja esta versión.

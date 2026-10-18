@@ -2,6 +2,8 @@
 
 Estado del trabajo: 2026-10-18. Repositorio: https://github.com/rodracruz/mapas-gps. Rama de desarrollo: `feat/fiel-vector-review`. La aplicación anterior y sus almacenes de mapas permanecen intactos; no fusionar esta rama sobre `main` sin aprobación del propietario.
 
+El avance está subido a GitHub y se revisa en el [PR #1, en borrador](https://github.com/rodracruz/mapas-gps/pull/1). `main` sigue en `87edc6c`; crear o publicar otra configuración de Codex Cloud no fusiona esta rama ni traslada automáticamente el estado de este hilo.
+
 ## Entrega que se está revisando
 
 El primer hito es un visor de revisión de Starwars, La Virgen y Lomo Vetado, no una red navegable. Abrir `revision.html` con un servidor HTTP o el [visor privado alojado](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site). Este alojamiento es independiente de GitHub Pages.

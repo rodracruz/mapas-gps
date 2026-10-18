@@ -80,3 +80,5 @@ Las suites completas de navegador, fuentes y HTML autónomo offline volvieron a 
 Una segunda revisión independiente confirmó las correcciones y contrastó el recorte de aristas con un oráculo por partición de parámetros en 20.009 casos. También probó recuperación ante fallos transitorios de descarga, hash y dimensiones de la foto completa. Límite preexistente: el validador geométrico admite dimensiones positivas para un plano de imagen; en la carga completa, el registro de imágenes es el que exige que coincidan con el plano actual de 900 × 1100.
 
 Guía para continuar: [continuar-desarrollo.md](../continuar-desarrollo.md).
+
+La rama está subida y el [PR #1](https://github.com/rodracruz/mapas-gps/pull/1) permanece en borrador. `main` sigue en `87edc6c`. El sitio privado actualizado se comprobó por HTTPS con 12 controles, incluidos el nuevo reintento de foto en móvil y hash idéntico al HTML autónomo probado; el acceso anónimo devolvió HTTP 401. Detalles en [private-site.md](private-site.md) y su JSON de verificación.
