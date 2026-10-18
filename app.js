@@ -69,3 +69,6 @@ function wire(){const viewport=$('mapViewport');viewport.addEventListener('point
 function networkUpdate(){$('networkBadge').textContent=navigator.onLine?'● Offline preparado':'● Sin conexión';$('networkBadge').style.color=navigator.onLine?'#bad9bd':'#f3bd72'}
 async function init(){wire();try{await seed();await refreshMaps();navigator.storage?.persist?.().catch(()=>{})}catch(e){console.error(e);toast('No se pudo abrir el almacenamiento de mapas')}if('serviceWorker' in navigator&&window.isSecureContext)navigator.serviceWorker.register('./sw.js').catch(e=>console.warn('SW',e))}
 init();
+
+// Módulo cartográfico independiente, sin transferencia de GPS o fotografías a servidores.
+window.MapasGPS = {state:S,saveCurrent,startGPS,stopGPS};
