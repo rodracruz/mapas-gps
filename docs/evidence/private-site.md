@@ -6,7 +6,15 @@ URL: https://mapas-gps-revision-durazno.rodracruz.chatgpt.site
 
 Es una copia alojada y privada en Sites. La política de acceso comprobada contiene únicamente al propietario, sin grupos. Un visitante sin sesión recibe la pantalla «Continue with ChatGPT» (HTTP 401); debe entrar con la misma cuenta propietaria. No se cambió la audiencia a pública.
 
-## Procedencia
+## Versión actual: revisión directa de siete zonas
+
+Código de la app: `98e2505626c6f33065c483f1e6d479fb35cadf61`, subido a `feat/fiel-vector-review` y al PR #1 en borrador. Copia privada de alojamiento: `d620d5cef5521cc7b8dd04783b3fcd5c8e8c6657`. Despliegue `appgdep_6ad547b8c4e0819183ec9165c4193646`, resultado `succeeded`; versión `appgprj_6ad51f7eb4a08191bf1159e60380c2d4~appgver_575d699e5f108191a705a37bdafd23e2`.
+
+HTML publicado SHA-256: `d74e472c0b275ff2723d054ce1ae9be8d5cd900f1dc704b9a5fbaae6baf77340`. La URL HTTPS real pasó **15 comprobaciones** en Chromium el 2026-10-18 a las 22:27 UTC. Se confirmó igualdad con el artefacto probado, selección directa de zona por teclado y tacto, comparación de fondos sin desplazar geometría, números ocultos al ampliar, documentación incrustada y controles móviles de 44 px. También pasaron carga de la foto completa, reintento de decodificación y ausencia de errores JavaScript. El acceso anónimo volvió a devolver HTTP 401.
+
+La audiencia sigue limitada al propietario. `main` público y GitHub Pages no se modificaron. Siguen **9 fragmentos / 245 vértices / 7 pendientes**, sin GPS validado. El registro [private-site-verification.json](private-site-verification.json) corresponde a esta versión; la captura móvil de revisión está en `/workspace/artifacts/mapas-gps-vista-privada-zonas-movil.png`.
+
+## Primera publicación (histórico)
 
 - Código de Mapas GPS: rama `feat/fiel-vector-review`, commit `287f505`.
 - Copia de alojamiento separada: `/workspace/sites/mapas-gps-revision`.

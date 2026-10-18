@@ -1,6 +1,6 @@
 {
   "url": "https://mapas-gps-revision-durazno.rodracruz.chatgpt.site",
-  "checkedAt": "2026-10-18T22:07:30.491Z",
+  "checkedAt": "2026-10-18T22:27:35.792Z",
   "browser": "154.0.8037.57",
   "checks": [
     "authenticated root HTTP 200",
@@ -12,10 +12,20 @@
     "trail selection and focus",
     "vector-only and overlay modes",
     "image/vector transform agrees after zoom",
+    "hosted pending list, keyboard focus, uncluttered crop and direct source comparison",
+    "hosted pending investigation opens from embedded evidence",
     "hosted mobile load, layout and touch selection",
+    "hosted mobile pending review keeps crop and 44px controls without overflow",
     "hosted mobile retries complete photo after transient decode failure",
     "no JavaScript runtime errors"
   ],
   "errors": [],
-  "htmlSha256": "13aee9afec53b681fa4ebc5db9d23a536a3e87d2d33751de7b10b67181545fee"
+  "htmlSha256": "d74e472c0b275ff2723d054ce1ae9be8d5cd900f1dc704b9a5fbaae6baf77340",
+  "anonymousHttpStatus": 401,
+  "accessMode": "custom",
+  "allowedUserCount": 1,
+  "allowedGroupCount": 0,
+  "applicationCommit": "98e2505626c6f33065c483f1e6d479fb35cadf61",
+  "hostingCommit": "d620d5cef5521cc7b8dd04783b3fcd5c8e8c6657",
+  "deploymentId": "appgdep_6ad547b8c4e0819183ec9165c4193646"
 }

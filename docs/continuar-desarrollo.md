@@ -10,6 +10,8 @@ El primer hito es un visor de revisión de Starwars, La Virgen y Lomo Vetado, no
 
 El original público de 900 × 1100 se conserva sin cambios. La fuente oficial de mayor resolución está alineada a ese mismo plano; cambiar de fondo no modifica las coordenadas. La foto completa del usuario se conserva fuera del repositorio público y solo se incluye opcionalmente en la copia privada.
 
+La lista **Revisar zonas pendientes** permite encuadrar cualquiera de las siete zonas y alternar las dos fuentes desde el mismo recorte. La actualización de código `98e2505` está publicada en el visor privado y comprobada por HTTPS con 15 controles; el registro y el despliegue actual están en `docs/evidence/private-site.md`.
+
 - Datos editables: `data/el-durazno/visual-trails.json`.
 - Muestras previas a simplificación: `data/el-durazno/centerline-samples.json`.
 - Ajuste visual entre imágenes: `data/el-durazno/image-registration.json`.
