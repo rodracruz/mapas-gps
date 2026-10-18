@@ -6,13 +6,13 @@ URL: https://mapas-gps-revision-durazno.rodracruz.chatgpt.site
 
 Es una copia alojada y privada en Sites. La política de acceso comprobada contiene únicamente al propietario, sin grupos. Un visitante sin sesión recibe la pantalla «Continue with ChatGPT» (HTTP 401); debe entrar con la misma cuenta propietaria. No se cambió la audiencia a pública.
 
-## Versión actual: revisión directa de siete zonas
+## Versión actual: validación y corrección de curvas
 
-Código de la app: `98e2505626c6f33065c483f1e6d479fb35cadf61`, subido a `feat/fiel-vector-review` y al PR #1 en borrador. Copia privada de alojamiento: `d620d5cef5521cc7b8dd04783b3fcd5c8e8c6657`. Despliegue `appgdep_6ad547b8c4e0819183ec9165c4193646`, resultado `succeeded`; versión `appgprj_6ad51f7eb4a08191bf1159e60380c2d4~appgver_575d699e5f108191a705a37bdafd23e2`.
+Código de la app: `4b574ace1a9d3ad6293dc0003380ceccac1bd2f3`, subido a `feat/fiel-vector-review` y al PR #1 en borrador. Copia privada de alojamiento: `753529fd9cd1b69f5dc948ef63d2776fc48c7dde`. Despliegue `appgdep_6ad55cfe5dac8191b8d707a03acb8cc0`, resultado `succeeded`; versión `appgprj_6ad51f7eb4a08191bf1159e60380c2d4~appgver_d25491a5b5348191b8e931bffe08677f`.
 
-HTML publicado SHA-256: `d74e472c0b275ff2723d054ce1ae9be8d5cd900f1dc704b9a5fbaae6baf77340`. La URL HTTPS real pasó **15 comprobaciones** en Chromium el 2026-10-18 a las 22:27 UTC. Se confirmó igualdad con el artefacto probado, selección directa de zona por teclado y tacto, comparación de fondos sin desplazar geometría, números ocultos al ampliar, documentación incrustada y controles móviles de 44 px. También pasaron carga de la foto completa, reintento de decodificación y ausencia de errores JavaScript. El acceso anónimo volvió a devolver HTTP 401.
+HTML publicado SHA-256: `d876a5af76f06d8cdcba853b6cb24b55ab65d3ea7d52c439e885a4d5df967929`. La URL HTTPS real pasó **17 comprobaciones** en Chromium el 2026-10-18 a las 20:58 de Chile (23:58 UTC). Se confirmó igualdad con el artefacto probado, carga de los zigzags recuperados y del gancho corregido, selección por teclado y tacto, comparación de fuentes sin desplazar geometría, documentos de validación incrustados y controles móviles de 44 px. También pasaron carga de la foto completa, reintento de decodificación y ausencia de errores JavaScript. El acceso anónimo volvió a devolver HTTP 401.
 
-La audiencia sigue limitada al propietario. `main` público y GitHub Pages no se modificaron. Siguen **9 fragmentos / 245 vértices / 7 pendientes**, sin GPS validado. El registro [private-site-verification.json](private-site-verification.json) corresponde a esta versión; la captura móvil de revisión está en `/workspace/artifacts/mapas-gps-vista-privada-zonas-movil.png`.
+La audiencia sigue limitada al propietario. `main` público y GitHub Pages no se modificaron. Estado actual: **10 fragmentos / 253 vértices / 6 pendientes**, sin GPS validado. La revisión de curvas fue realizada directamente contra la foto, con revisión independiente; no queda asignada al usuario. Evidencia y límites en [visual-validation.md](visual-validation.md). El registro [private-site-verification.json](private-site-verification.json) corresponde a esta versión.
 
 ## Primera publicación (histórico)
 

@@ -16,7 +16,7 @@
 - [x] Actualizar conteos, recortes y documentación; probar esquema, curvas, idempotencia y rechazo de fuente distinta.
 - [x] Ejecutar suites de navegador/móvil y autónomo; inspeccionar ampliaciones corregidas y revisión independiente.
 - [x] Registrar consulta actual de OSM, falta de metadatos geográficos del PDF y controles no validados.
-- [ ] Subir la rama, actualizar el mismo visor privado, verificar la URL y regenerar la entrega.
+- [x] Subir la rama, actualizar el mismo visor privado, verificar la URL y regenerar la entrega.
 
 ## Focos de revisión
 
