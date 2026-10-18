@@ -9,6 +9,7 @@ Fecha: 2026-10-18. Base del repositorio: `87edc6c`. Rama de desarrollo publicada
 | `npm test` | 16 pruebas: fuente/hash y dimensiones, esquema/IDs/coordenadas, separación de geografía, huecos, transformaciones, extremos, tolerancia de simplificación y SHA-256 portátil |
 | `npm run test:browser` | 12 comprobaciones en Chromium 154.0.8037.57: carga, modos, opacidades, capas, selección por ratón/teclado/tap, anclaje de zoom, arrastre, tamaño, descarga, errores, tacto y conservación de datos |
 | `npm run test:sources` | Cambio entre fondos, geometría y encuadre conservados, disposición móvil y recuperación tras fallo de una fuente |
+| `npm run test:pending` | 5 comprobaciones: acceso por zona, restauración de capas, encuadre, comparación sin cambiar puntos, teclado, controles móviles y recuperación ante HTTP 503 con aviso visible |
 | `npm run test:integrity` | 5 comprobaciones móviles: cuatro clases de datos incorrectos rechazadas antes de dibujar/exportar; reintento de foto completa tras error transitorio de decodificación |
 | `npm run build:standalone` y `npm run test:standalone` | HTML con foto/datos/evidencia incrustados; una solicitud inicial al HTML, luego controles en modo offline, sin recursos externos |
 | `python scripts/trace-trails.py --pdf /workspace/scratch/geo/official-map.pdf` | 9 fragmentos / 245 vértices / 7 zonas pendientes; PDF y foto verificados por SHA-256 |
@@ -82,3 +83,13 @@ Una segunda revisión independiente confirmó las correcciones y contrastó el r
 Guía para continuar: [continuar-desarrollo.md](../continuar-desarrollo.md).
 
 La rama está subida y el [PR #1](https://github.com/rodracruz/mapas-gps/pull/1) permanece en borrador. `main` sigue en `87edc6c`. El sitio privado actualizado se comprobó por HTTPS con 12 controles, incluidos el nuevo reintento de foto en móvil y hash idéntico al HTML autónomo probado; el acceso anónimo devolvió HTTP 401. Detalles en [private-site.md](private-site.md) y su JSON de verificación.
+
+## Revisión directa de zonas pendientes
+
+Se contrastaron las siete zonas con recortes idénticos de las dos fuentes. La página oficial sigue enlazando el mapa ya conservado; no se obtuvo evidencia suficiente para cerrar huecos ni nuevos controles geográficos. Resultado y figuras en [pending-review.md](pending-review.md).
+
+El visor permite elegir cada zona desde una lista, encuadrarla y alternar la foto y el oficial sin cambiar viewBox ni coordenadas. Se ejecutaron de nuevo las 16 pruebas unitarias, 12 de navegador, fuentes, 5 de integridad y HTML autónomo. Las 5 comprobaciones nuevas de `test:pending` cubren además selección por teclado, restauración de capas ocultas, controles de al menos 44 px, ausencia de desbordamiento móvil y reintento tras HTTP 503.
+
+La falta de lista se reprodujo antes de implementarla (0 botones frente a 7 esperados). Al revisar la captura se detectaron cifras SVG que tapaban los giros ampliados: la regresión falló al seguir visibles y pasa al ocultarlas durante la inspección. Una revisión independiente detectó el aviso de carga fuera del encuadre móvil; la regresión falló antes de añadir su ubicación junto a los controles y pasa después. El revisor volvió a comprobarlo en 320 × 568 y 390 × 844, con un único aviso visible y limpieza al reintentar.
+
+Se inspeccionaron realmente las siete láminas y la captura [móvil de revisión](screenshots/pending-review-mobile.png). Una comprobación independiente contrastó los 21 paneles contra las imágenes y los recortes declarados. La ampliación es replicación de píxeles, no una mejora generativa. El HTML autónomo también comprueba esta comparación y el documento incrustado con la red desactivada, sin solicitudes externas. La geometría mantiene 9 fragmentos, 245 vértices y 7 pendientes; no se añadieron conexiones ni transformaciones GPS.

@@ -31,7 +31,7 @@ if args.reference_photo:
  extras+='<script id="embedded-reference-photo" type="application/json">'+safe(reference)+'</script>\n'
 
 docs={}
-for link,path in [('geographic-references.md','docs/evidence/geographic-references.md'),('primer-hito.md','docs/evidence/primer-hito.md')]:
+for link,path in [('geographic-references.md','docs/evidence/geographic-references.md'),('primer-hito.md','docs/evidence/primer-hito.md'),('pending-review.md','docs/evidence/pending-review.md')]:
  docs[link]=(root/path).read_text()
 extras+='<script id="embedded-docs" type="application/json">'+safe(docs)+'</script>'
 extras+='''<dialog id="evidence-dialog" style="max-width:900px;width:92vw;max-height:85dvh;border:1px solid #b9c9b5;border-radius:9px;padding:18px"><button id="close-evidence" autofocus style="float:right;min-width:44px;min-height:44px">Cerrar</button><pre style="white-space:pre-wrap;font:13px/1.7 system-ui;clear:both"></pre></dialog>'''

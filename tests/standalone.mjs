@@ -1,6 +1,6 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
-import {existsSync} from 'node:fs';
+import {existsSync,readFileSync} from 'node:fs';
 const path=new URL('../dist/mapas-gps-revision.html',import.meta.url);
 assert.ok(existsSync(path),'Missing executable standalone viewer');
 const b=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});
@@ -19,6 +19,15 @@ try{
  }
  await p.getByRole('button',{name:'Seleccionar Lomo Vetado',exact:true}).tap();await p.locator('#focus-trail').tap();
  await p.getByRole('button',{name:'Vectores',exact:true}).tap();assert.equal(await p.locator('#original').isVisible(),false);
+ await p.locator('#pending-review summary').tap();
+ await p.getByRole('button',{name:'Revisar zona 4: La Virgen',exact:true}).tap();
+ const pendingView=await p.locator('#map').getAttribute('viewBox');
+ await p.getByRole('button',{name:'Foto original',exact:true}).tap();await p.waitForSelector('#stage[aria-busy="false"]');
+ assert.equal(await p.locator('#stage').getAttribute('data-image-source'),'original');
+ assert.equal(await p.locator('#map').getAttribute('viewBox'),pendingView);
+ await p.getByRole('link',{name:'Revisión de zonas pendientes',exact:false}).click();await p.waitForSelector('dialog[open]');
+ assert.equal(await p.locator('dialog pre').textContent(),readFileSync(new URL('../docs/evidence/pending-review.md',import.meta.url),'utf8'));
+ await p.locator('dialog[open] button').click();
  await p.getByRole('link',{name:'Método, fuentes y límites',exact:false}).click();await p.waitForSelector('dialog[open]');assert.match(await p.locator('dialog pre').textContent(),/900 × 1100/);
- assert.equal(http.length,1);console.log('PASS standalone HTML served once, mobile selection, vector mode and evidence while offline; two image sources and complete photo verified; zero external resources');
+ assert.equal(http.length,1);console.log('PASS standalone served once, mobile selection, vector mode, pending comparison and both evidence documents offline; two image sources and complete photo verified; zero external resources');
 }finally{await b.close();}

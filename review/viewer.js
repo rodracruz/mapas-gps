@@ -3,7 +3,7 @@ import {validateDataset,fitView,zoomView,panView} from './geometry.mjs';
 const $=id=>document.getElementById(id),svg=$('map'),stage=$('stage');
 const NS='http://www.w3.org/2000/svg';
 const make=(tag,attrs={})=>{const n=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);return n;};
-let data,view=fitView(900,1100),selected=null,selectedGap=null,mode='overlay',imageURL,reviewImages,currentSource,sourceRequest=0,referenceURL;
+let data,view=fitView(900,1100),selected=null,selectedGap=null,mode='overlay',imageURL,reviewImages,currentSource,sourceRequest=0,referenceURL,sourceError='';
 const visible=new Set(),groups=new Map(),pointers=new Map();
 let gesture=null,moved=false,multitouch=false;
 function apply(){svg.setAttribute('viewBox',`${view.x} ${view.y} ${view.width} ${view.height}`);$('view-readout').textContent=`${Math.round(900/view.width*100)} % · Píxeles de imagen`;}
@@ -14,9 +14,14 @@ function zoom(factor,anchor){
 function setMode(next){mode=next;stage.classList.remove('mode-photo','mode-overlay','mode-vectors');stage.classList.add(`mode-${next}`);document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===next)));}
 function refreshLayers(){
  for(const [id,g] of groups){g.style.display=visible.has(id)?'':'none';g.classList.toggle('selected',selected===id);g.classList.toggle('dim',selected!==null&&selected!==id);}
- document.querySelectorAll('.layer-row').forEach(row=>row.classList.toggle('active',row.dataset.trail===selected));
- for(const g of $('gaps').children)g.style.display=visible.has(g.dataset.trail)?'':'none';
+ document.querySelectorAll('.layer-row').forEach(row=>{row.classList.toggle('active',row.dataset.trail===selected);row.querySelector('input').checked=visible.has(row.dataset.trail);});
+ for(const g of $('gaps').children){g.style.display=visible.has(g.dataset.trail)?'':'none';g.classList.toggle('current',selectedGap?.id===g.dataset.gap);}
  $('gaps').style.display=$('show-gaps').checked?'':'none';
+ stage.classList.toggle('reviewing-gap',selectedGap!==null);
+ for(const button of $('pending-list').children)button.setAttribute('aria-pressed',String(selectedGap?.id===button.dataset.gapId));
+ $('pending-comparison').hidden=!selectedGap;
+ if(selectedGap){$('pending-view-info').textContent=`Zona ${data.gaps.indexOf(selectedGap)+1} de ${data.gaps.length} · ${data.trails.find(t=>t.id===selectedGap.trailId).name}`;$('pending-view-reason').textContent=selectedGap.reason;}
+ renderSourceError();
 }
 function select(id){
  selected=id;selectedGap=null;const trail=data.trails.find(t=>t.id===id);
@@ -30,6 +35,11 @@ function pickGap(id){
  $('selection-title').textContent=`${data.trails.find(t=>t.id===g.trailId).name} · pendiente`;
  $('selection-detail').textContent=g.reason+' No se ha dibujado un tramo para cerrar esta zona.';
  $('focus-trail').disabled=false;refreshLayers();
+}
+function reviewGap(id){
+ const gap=data.gaps.find(g=>g.id===id);
+ visible.add(gap.trailId);$('show-gaps').checked=true;setMode('overlay');
+ pickGap(id);fitSelection();svg.focus({preventScroll:true});stage.scrollIntoView({block:'center'});
 }
 function fitSelection(){
  if(!selected)return;
@@ -66,7 +76,14 @@ function draw(){
   const [x,y,w,h]=g.bounds;const group=make('g',{'class':'pending','data-gap':g.id,'data-trail':g.trailId,tabindex:0,role:'button','aria-label':g.reason});
   group.append(make('rect',{x,y,width:w,height:h,rx:3}));const tag=make('text',{x:x+3,y:y+11});tag.textContent=String(i+1);group.append(tag);
   group.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pickGap(g.id);}});$('gaps').append(group);
+  const button=document.createElement('button');button.className='pending-button';button.dataset.gapId=g.id;button.setAttribute('aria-pressed','false');
+  const trail=data.trails.find(t=>t.id===g.trailId);button.setAttribute('aria-label',`Revisar zona ${i+1}: ${trail.name}`);button.setAttribute('aria-describedby',`pending-reason-${i}`);
+  const number=document.createElement('span');number.className='pending-number';number.textContent=String(i+1);
+  const content=document.createElement('span'),name=document.createElement('strong'),reason=document.createElement('span');
+  name.textContent=trail.name;reason.textContent=g.reason;reason.id=`pending-reason-${i}`;reason.className='pending-reason';
+  content.append(name,reason);button.append(number,content);button.onclick=()=>reviewGap(g.id);$('pending-list').append(button);
  }
+ $('pending-count').textContent=String(data.gaps.length);
  $('trails').style.opacity=$('vector-opacity').value/100;
  refreshLayers();
 }
@@ -119,7 +136,7 @@ $('download').onclick=()=>{
 async function loadImageSource(id){
  const source=reviewImages.sources.find(s=>s.id===id),request=++sourceRequest;
  const embedded=$('embedded-images');const assets=embedded?JSON.parse(embedded.textContent):null;
- $('image-source').disabled=true;stage.setAttribute('aria-busy','true');$('source-error').hidden=true;
+ $('image-source').disabled=true;refreshSourceButtons(true);stage.setAttribute('aria-busy','true');showSourceError('');
  $('load-status').hidden=false;$('load-status').textContent='Cargando imagen de referencia…';
  let url;
  try{
@@ -135,9 +152,19 @@ async function loadImageSource(id){
  }catch(error){
   if(url)URL.revokeObjectURL(url);
   if(!currentSource)throw error;
-  $('image-source').value=currentSource;$('source-error').textContent='Se conserva la imagen anterior. '+error.message;$('source-error').hidden=false;
- }finally{if(request===sourceRequest){$('load-status').hidden=true;stage.setAttribute('aria-busy','false');$('image-source').disabled=false;}}
+  $('image-source').value=currentSource;showSourceError('Se conserva la imagen anterior. '+error.message);
+ }finally{if(request===sourceRequest){$('load-status').hidden=true;stage.setAttribute('aria-busy','false');$('image-source').disabled=false;refreshSourceButtons(false);}}
 }
+function refreshSourceButtons(busy){
+ for(const button of document.querySelectorAll('[data-review-source]')){button.disabled=busy||!reviewImages?.sources.some(s=>s.id===button.dataset.reviewSource);button.setAttribute('aria-pressed',String(currentSource===button.dataset.reviewSource));}
+}
+function renderSourceError(scroll=false){
+ const target=$(selectedGap?'pending-source-error':'source-error');
+ for(const node of [$('source-error'),$('pending-source-error')]){node.textContent=sourceError;node.hidden=!sourceError||node!==target;}
+ if(scroll&&sourceError)target.scrollIntoView({block:'nearest'});
+}
+function showSourceError(message){sourceError=message;renderSourceError(true);}
+for(const button of document.querySelectorAll('[data-review-source]'))button.onclick=()=>{setMode('overlay');loadImageSource(button.dataset.reviewSource);};
 $('image-source').onchange=()=>loadImageSource($('image-source').value);
 $('close-reference-photo').onclick=()=>$('reference-photo-dialog').close();
 async function setupReferencePhoto(){
@@ -145,7 +172,7 @@ async function setupReferencePhoto(){
  const reference=JSON.parse(embedded.textContent),button=$('show-reference-photo');button.hidden=false;
  button.onclick=async()=>{
   let candidateURL;
-  button.disabled=true;$('source-error').hidden=true;
+  button.disabled=true;showSourceError('');
   try{
    if(!referenceURL){
     const response=await fetch(reference.dataUrl);if(!response.ok)throw new Error('No se cargó la foto recibida.');
@@ -156,7 +183,7 @@ async function setupReferencePhoto(){
    }
    $('reference-photo-info').textContent=`${reference.width} × ${reference.height} px · Fotografía completa conservada sin cambios. Esta imagen no tiene un ajuste geográfico validado.`;
    $('reference-photo-dialog').showModal();
-  }catch(error){$('source-error').textContent='No se pudo mostrar la foto completa. '+error.message;$('source-error').hidden=false;}
+  }catch(error){showSourceError('No se pudo mostrar la foto completa. '+error.message);}
   finally{if(candidateURL)URL.revokeObjectURL(candidateURL);button.disabled=false;}
  };
 }

@@ -78,3 +78,11 @@ Versiones y fechas de las vías comprobadas:
 **Resultado para calibración:** no validado. Faltan correspondencias inequívocas revisadas entre píxeles de la foto original y posiciones geográficas, con comprobaciones distribuidas espacialmente. El parentesco visual con un mapa oficial y la existencia de puntos OSM no bastan para declarar precisión GPS, inferir accesos por proximidad o ajustar una transformación como si estuviera comprobada.
 
 Registro estructurado: [geographic-references.json](../../data/el-durazno/geographic-references.json).
+
+## Seguimiento durante la revisión por zonas
+
+Se volvió a consultar la página del operador, que sigue enlazando el JPG/PDF registrados. La revisión del snapshot OSM conserva a Lomo Vetado como vía identificada por nombre; la vía «Conexión Calibre 12-La Virgen» no se transforma en la pista completa La Virgen. No se añadieron controles ni transformaciones.
+
+La [política publicada de Trailforks](https://www.trailforks.com/about/data/) exige acceso autorizado por API para usar sus datos. Se registra esta condición como límite de incorporación: no se solicitaron claves ni se copiaron coordenadas, pistas o geometrías del proveedor. No se toma una consulta de su página como autorización de reutilización.
+
+El JSON de fuentes se actualizó para reflejar correctamente el JPG oficial conservado y la extracción de los tres contornos PDF. Los detalles de las siete zonas y sus comparaciones están en [pending-review.md](pending-review.md).

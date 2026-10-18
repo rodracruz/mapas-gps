@@ -16,6 +16,7 @@ El original público de 900 × 1100 se conserva sin cambios. La fuente oficial d
 - Investigación geográfica separada: `data/el-durazno/geographic-references.json`.
 - Método y límites: `docs/evidence/primer-hito.md`.
 - Evidencia y pruebas: `docs/evidence/verification.md`.
+- Revisión por zona, recortes y causas de incertidumbre: `docs/evidence/pending-review.md`.
 
 ## Qué protege la carga
 
@@ -35,6 +36,7 @@ npm run test:browser
 npm run test:sources
 npm run build:standalone
 npm run test:integrity
+npm run test:pending
 npm run test:standalone
 ```
 

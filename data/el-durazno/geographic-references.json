@@ -47,7 +47,7 @@
       ],
       "limitations": [
         "Visual compatibility does not establish identity of publication edition, equality of every vertex, photograph date or a pixel transform.",
-        "No explicit open reuse license verified. No downloaded asset redistributed in this repository."
+        "No explicit open reuse license verified. A retained source JPG is present in sources/el-durazno-official-2022.jpg for visual review; it is not geographic open data."
       ],
       "independenceGroup": "outlife"
     },
@@ -73,7 +73,7 @@
       "limitations": [
         "Same operator/source family as the JPG; not independent geographic validation.",
         "No geographic reference metadata or geographic control pairs validated.",
-        "PDF not rasterized for a separate full visual comparison."
+        "The three named trail outlines were extracted and visually compared; the complete remaining PDF network has not been independently reviewed."
       ],
       "independenceGroup": "outlife"
     },
@@ -578,5 +578,28 @@
     "Generic park markers treated as gates or trail junctions",
     "Tile imagery or provider route geometry copied without verified permission",
     "Private/personal locations, keys, billing or paid endpoints"
-  ]
+  ],
+  "followUpInvestigation": {
+    "queriedOn": "2026-10-18",
+    "officialMapCheck": {
+      "sourceId": "outlife-park",
+      "url": "https://www.outlife.cl/parques/rkf-el-durazno/",
+      "result": "The operator page still links the recorded 2022 JPG and PDF. No additional geographic control pairs were established.",
+      "editionIdentityWithPhoto": "unvalidated"
+    },
+    "openMappingCheck": {
+      "sourceId": "osm-area",
+      "result": "The retained OSM snapshot has Sendero Lomo Vetado (way 477170097, v6). No exact named Starwars or La Virgen trail was found; the named Conexión Calibre 12-La Virgen is not treated as the complete La Virgen trail.",
+      "newAcceptedControlPoints": 0,
+      "geographicTransform": null
+    },
+    "restrictedProviderCheck": {
+      "provider": "Trailforks",
+      "referencePage": "https://www.trailforks.com/trails/lomo-vetado/",
+      "policyUrl": "https://www.trailforks.com/about/data/",
+      "result": "The published Data Use Policy requires authorized API access for data use. No API key was requested and no coordinates, tracks or geometry were imported.",
+      "importedCoordinates": false,
+      "importedGeometry": false
+    }
+  }
 }
