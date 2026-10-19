@@ -1,23 +1,32 @@
 # Mapa público georreferenciado de El Durazno
 
 Fecha de consulta: 18-10-2026, America/Santiago (19-10-2026 UTC).
-Estado: especificación para planificación; no implica aceptación del prototipo ni publicación.
+Estado: especificación corregida tras la referencia aportada por el usuario; planificación con subagentes, sin aceptación del prototipo ni publicación.
 
 ## Objetivo y alcance
 
-Mostrar Star Wars, La Virgen y Lomo Vetado sobre cartografía pública georreferenciada. La fotografía conserva su función de documento de comparación, accesible como vista secundaria. No será el fondo principal de navegación.
+Mostrar Star Wars, La Virgen y Lomo Vetado como capas seleccionables sobre **un único mapa mundial continuo**, siguiendo el comportamiento de las líneas de metro en [la referencia del usuario](https://real-state-map.onrender.com/). Deben poder verse juntas y mantener su ubicación al desplazar o cambiar el zoom del mapa. La fotografía conserva su función de documento de comparación, accesible como vista secundaria.
 
 Esta entrega permite consultar y seleccionar pistas. No implementa navegación, distancia restante, loops ni ajuste del GPS. No afirma que una ficha pública o una línea con coordenadas esté validada sobre el terreno.
 
 ## Decisión de arquitectura
 
-1. Usar el **widget oficial de Trailforks por pista** para consultar las tres pistas individualmente. Es la modalidad encontrada que muestra las tres con nombre y trazado independiente sobre cartografía geográfica. Mantener el enlace y la atribución del proveedor, y cargar solo la selección actual.
-2. Ofrecer una vista propia OSM, con Leaflet, para **Lomo Vetado y contexto abierto**. Conservar los nodos originales de OSM, su orden, ID, versión y procedencia. Identificar expresamente esta modalidad como una fuente diferente del widget.
-3. Conservar el trazado fotográfico en coordenadas de imagen y sin transformación geográfica. No trasladarlo a OSM ni usarlo para completar huecos.
+1. Mantener **una sola instancia Leaflet**, con fondo cartográfico mundial, encuadre inicial en El Durazno y pan/zoom compartidos. Seleccionar una pista nunca reemplaza el mapa por un iframe ni cambia a una página del proveedor.
+2. Añadir capas nativas por pista/fuente, con color estable, trazo visible y halo; leyenda, selección, visibilidad individual y acción explícita para encuadrar. Conservar coordenadas y curvas: el estilo de metro no autoriza enderezar trazados ni crear conexiones.
+3. Separar pistas identificadas, contexto abierto y resaltado. Lomo puede dibujarse con OSM; las vías sin nombre permanecen como contexto sin atribuirlas a Starwars o La Virgen.
+4. Conservar el trazado fotográfico en coordenadas de imagen y sin transformación geográfica. No trasladarlo a OSM ni usarlo para completar huecos. Trailforks y Wikiloc quedan como enlaces de referencia secundarios, sin widgets en la vista principal.
 
-Las modalidades son independientes: tras validar el catálogo, las consultas Trailforks no esperan la carga del snapshot OSM. Si falta o está alterado, deshabilitar únicamente la vista/exportación OSM y mantener disponibles los widgets de las tres pistas.
+El mapa base debe inicializarse aunque una fuente de pistas falte o falle. Cada colección tiene validación y estado independientes; deshabilitar solo sus líneas/exportación afectadas. Una geometría pendiente se representa como ausencia de datos y no mediante líneas aproximadas.
 
-La vista oficial externa y el mapa OSM propio no comparten una supuesta geometría equivalente. No se promete superponer las tres pistas en una única capa propia. Esa posibilidad requiere geometrías con derechos de reutilización y correspondencias comprobadas.
+El objetivo completo exige las tres capas nativas simultáneas. Con los datos revisados solo puede demostrarse Lomo más contexto abierto: eso es un avance parcial, no aceptación del conjunto. Para completar las otras dos faltan geometrías reutilizables y delimitación acreditada. La semejanza de un camino sin nombre no basta para asignarle una pista.
+
+## Referencia visual inspeccionada
+
+La página del usuario respondió HTTP 200, cargó cartografía y líneas de metro en navegador. Se observó una única instancia cartográfica, sin iframes, con 50 teselas cargadas en el estado inicial y líneas de colores; el zoom mediante su control funcionó. El código público usa Leaflet 1.9.4, `L.polyline(coords, {color, weight: 5, opacity: 0.85, lineCap: 'round', lineJoin: 'round'})`, tooltip y un grupo de capas de metro.
+
+Se adopta ese comportamiento, no se copia su aplicación inmobiliaria ni se asume que la precisión de sus coordenadas esté comprobada. La cartografía de fondo se elige según sus propias condiciones; la referencia visual no obliga a usar su proveedor Esri.
+
+Capturas locales: `/workspace/scratch/reference-map/reference-desktop.png` y `reference-zoom.png`. En el prototipo actual se reprodujo la sustitución del mapa por Wikiloc al elegir Starwars, con errores de acceso a almacenamiento y sin pista visible. Ese flujo queda descartado.
 
 ## Evidencia por pista
 
@@ -29,7 +38,7 @@ La vista oficial externa y el mapa OSM propio no comparten una supuesta geometr�
 
 La búsqueda nominal ampliada OSM se realizó con bbox `(-33.34,-70.53,-33.27,-70.47)`, base 19-10-2026 00:15:36 UTC. Encontró Lomo y conexiones. Esto no descarta vías sin nombre y no demuestra que dos caminos cercanos sean la misma pista.
 
-## Mapa oficial: prueba y condiciones
+## Mapas externos: evidencia secundaria, fuera de la interfaz principal
 
 - [Catálogo de widgets](https://www.trailforks.com/widgets/): modalidad oficial “Trail Details”, mapa de una pista.
 - [Configurador por pista](https://www.trailforks.com/widgets/config/trail/?trailid=76316): accesible sin login; genera iframe y enlace al proveedor.
@@ -37,7 +46,7 @@ La búsqueda nominal ampliada OSM se realizó con bbox `(-33.34,-70.53,-33.27,-7
 - También existe [configurador de región 4442](https://www.trailforks.com/widgets/config/region_map/?rid=4442); no es necesario para el alcance mínimo ni sustituye la identificación por pista.
 - [Política de datos de Trailforks](https://www.trailforks.com/about/data/): no asumir que el widget concede acceso o derechos para extraer/republicar geometrías. No solicitar ni publicar claves ni activar servicios de pago.
 
-Los tres widgets renderizaron en un iframe de un origen tercero en Chromium: mapa topográfico, pista individual resaltada, controles y perfil visibles. Hubo un error de `CacheStorage.open` debido a la política del navegador, sin impedir el render. No se modificó esa política. Esta prueba es de escritorio y del widget aislado: falta interacción móvil, integración final y disponibilidad desde el destino publicado.
+Los tres widgets renderizaron en un iframe de un origen tercero en Chromium: mapa topográfico, pista individual resaltada, controles y perfil visibles. Hubo un error de `CacheStorage.open` debido a la política del navegador, sin impedir el render. No se modificó esa política. Esta prueba de escritorio acredita visualización externa, pero **no cumple el requisito de capas propias simultáneas** ni concede geometría. Se conserva como evidencia de investigación, no como arquitectura de la entrega.
 
 Evidencia local de investigación, fuera del repositorio público:
 
@@ -78,8 +87,8 @@ No se encontró una validación independiente de precisión, un control geográf
 
 ## Conservación e interfaz
 
-- La nueva página tiene mapa principal, selección de pista, fuente visible, enlace público alternativo, opción OSM cuando hay geometría abierta y acceso secundario a fotografía/biblioteca.
-- No extraer datos de iframes de otro origen. Mantener un aviso neutral de disponibilidad externa y enlace alternativo permanente; informar errores detectables. El anfitrión no puede detectar automáticamente un mapa vacío sin una señal oficial del proveedor. Confirmar el render mediante la inspección de aceptación, sin tratar `iframe.load` como prueba de pista cargada.
+- La nueva página tiene un mapa persistente, selección/visibilidad de pistas, fuente visible, referencias externas secundarias y acceso a fotografía/biblioteca. Debe poder alejarse hasta vista mundial y volver al parque.
+- No usar iframes para suplir capas ausentes ni extraer datos de ellos. El mapa base permanece visible al seleccionar una pista pendiente; la ficha explica su falta de geometría. No presentar un enlace externo como si la pista estuviera dibujada en nuestro mapa.
 - Mantener `mapas-gps-v1` versión 1, almacén `maps`, Blob, calibraciones, `trails`, `webCenter`, IDs y localStorage existentes. No migrar ni borrar para activar el visor.
 - Sites y GitHub Pages son orígenes diferentes y no comparten IndexedDB. Conservar datos no significa trasladarlos; cualquier futura migración requiere un alcance explícito.
 - Mantener enlaces a la aplicación original. Probar también con el service worker anterior activo y datos ausentes/versiones mezcladas.

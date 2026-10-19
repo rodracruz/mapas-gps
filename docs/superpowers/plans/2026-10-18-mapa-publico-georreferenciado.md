@@ -1,12 +1,12 @@
 # Plan: mapa público georreferenciado
 
-> Estado: planificación solicitada por el usuario con tres subagentes. Implementación y publicación en pausa. El prototipo geográfico existente es exploratorio y no cumple todavía la aceptación. Este documento no afirma cambio del modo de la interfaz de Codex.
+> Estado: planificación con subagentes, corregida tras la referencia del usuario `real-state-map.onrender.com`. Implementación y publicación en pausa. El prototipo geográfico existente es exploratorio y no cumple la aceptación. Este documento no afirma cambio del modo de la interfaz de Codex.
 
-**Objetivo:** consultar Star Wars, La Virgen y Lomo Vetado en mapas públicos georreferenciados, conservando fuentes, derechos y mapas guardados.
+**Objetivo:** mostrar Star Wars, La Virgen y Lomo Vetado simultáneamente como líneas seleccionables sobre un único mapa mundial, con zoom/pan compartidos, conservando fuentes, derechos y mapas guardados.
 
-**Arquitectura:** widgets oficiales Trailforks por pista para las tres; vista propia OSM para Lomo y contexto abierto; fotografía secundaria e independiente. Sin copiar geometría del proveedor ni trasladar píxeles a latitud/longitud.
+**Arquitectura:** un único mapa Leaflet persistente; capas nativas independientes por pista/fuente, contexto OSM y resaltado; fotografía secundaria. Referencias externas solo como enlaces. Sin copiar geometría protegida ni trasladar píxeles a latitud/longitud.
 
-**Tecnología:** aplicación estática HTML/CSS/JavaScript, Leaflet 1.9.4 local, snapshot OSM con SHA256, iframe oficial Trailforks, Node test runner y Playwright/Chromium. Sin backend, cuentas nuevas, claves ni facturación.
+**Tecnología:** aplicación estática HTML/CSS/JavaScript, Leaflet 1.9.4 local, snapshot OSM con SHA256 y futuras colecciones autorizadas, Node test runner y Playwright/Chromium. Sin backend, cuentas nuevas, claves ni facturación.
 
 **Especificación:** [mapa público georreferenciado](../specs/2026-10-18-mapa-publico-georreferenciado.md), con URLs, IDs, coordenadas y resultados de investigación.
 
@@ -27,37 +27,40 @@
 | `plan_mapas_publicos` | Mapas públicos que realmente rendericen | Widgets oficiales Trailforks 76316, 205330 y 7601: las tres pistas visibles en iframe externo, con fondo geográfico. No concede reutilización de geometría. Pendiente móvil/integración final. |
 | `plan_integracion` | Arquitectura, almacenamiento y pruebas | Página independiente, preservación de campos reales `trails/webCenter`, revisión del SW, capa de selección propia y pruebas que comprueben mapas visibles en lugar de solo un contenedor. |
 
-El hallazgo de Trailforks amplía la investigación inicial de fuentes: hay mapa individual público para las tres, aunque solo Lomo tiene aquí geometría abierta identificada. No mantener la conclusión antigua de que únicamente se pueden mostrar circuitos completos de Wikiloc.
+El hallazgo de Trailforks amplía las referencias disponibles, pero los widgets separados no satisfacen la corrección posterior del usuario. Se descarta la arquitectura de widgets del plan anterior. Solo Lomo dispone aquí de geometría abierta identificada; falta obtener polilíneas reutilizables y delimitadas de Starwars y La Virgen antes de aceptar el conjunto.
+
+La referencia se inspeccionó en navegador y código público: un mapa Leaflet, capas `L.polyline`, colores por línea, tooltip y zoom funcional. El prototipo actual reemplaza el mapa por un iframe al elegir Starwars; se reprodujeron errores de almacenamiento y ausencia de la pista. Capturas y registro: `/workspace/scratch/reference-map/`.
 
 ## Tarea 1: cerrar catálogo y procedencia
 
 Archivos: `data/el-durazno/geographic-catalog.json`, `sources/el-durazno-osm.json`, `geographic/data.mjs`, `tests/geographic.test.mjs`; nuevo `docs/geographic-evidence.md`.
 
-- [ ] Definir `validateCatalog(catalog) -> Catalog`: objetivos únicos, IDs estables, correspondencia con fuente, modalidades disponibles y URLs HTTPS de proveedores autorizados. Registrar fecha de consulta y límites de cada fuente. Distinguir metadatos ODbL de OSM y condiciones de contenido externo.
-- [ ] Sustituir la referencia primaria Wikiloc del prototipo por widgets oficiales individuales: Star Wars 76316, La Virgen 205330, Lomo 7601. Mantener circuitos Wikiloc solo como referencias secundarias etiquetadas.
+- [ ] Definir `validateCatalog(catalog) -> Catalog`: objetivos únicos, IDs estables, geometría disponible o `null`, correspondencia con fuente, licencia y referencias HTTPS. Registrar fecha de consulta y límites. Cada fuente conserva su licencia; no etiquetar una futura traza de otro origen como OSM.
+- [ ] Registrar Trailforks 76316/205330/7601 y circuitos Wikiloc solo como referencias secundarias. Retirar `embedUrl` del flujo principal. Starwars y La Virgen permanecen sin geometría nativa hasta obtener datos permitidos y delimitados, sin asignarles vías anónimas por parecido.
 - [ ] Escribir primero pruebas de rechazo: IDs duplicados, URL ajena al proveedor, pista atribuida a una vía sin respaldo, ejes invertidos, píxeles, nodos ausentes y huella alterada. Ejecutarlas y comprobar que detectan la carencia antes de implementar la validación.
 - [ ] Mantener `fromOsmSnapshot(source, catalog) -> FeatureCollection` y `validateGeographic(data,catalog) -> FeatureCollection`, orden `[longitud,latitud]`, secuencias completas sin simplificación/recorte ni conexiones por cercanía.
 - [ ] Comparar los 127 nodos de Lomo con la respuesta OSM y las tres anclas documentadas en la especificación. Mantener la vía 477174834 como conexión, nunca como La Virgen completa.
-- [ ] Fijar huella exacta del snapshot y comprobarla antes de dibujar o habilitar exportación OSM. Su fallo no bloquea widgets ni enlaces de un catálogo válido. Documentar que la comparación acredita fidelidad a OSM, no precisión independiente.
+- [ ] Fijar huella exacta del snapshot y comprobarla antes de dibujar o habilitar exportación OSM. Su fallo no bloquea el mapa base ni fuentes independientes válidas. Documentar que la comparación acredita fidelidad a OSM, no precisión independiente.
 - [ ] Mantener transformación del cartel `null` y navegación no validada. Ejecutar `node --test tests/geographic.test.mjs` y revisar el diff.
 
-Salida: catálogo verificable que no confunde visualización externa con datos descargables o transitables.
+Salida: catálogo verificable que distingue las capas nativas disponibles de las referencias externas y datos pendientes. Investigar la obtención remota de un GPX/GeoJSON original autorizado por operador/autor o acceso permitido a datos; no exigir visita física al usuario ni contactar terceros sin autorización.
 
 ## Tarea 2: convertir la página geográfica en la vista de consulta
 
 Archivos: `mapa-geografico.html`, `geographic/viewer.mjs`, `geographic/style.css`, `tests/geographic-browser.mjs`.
 
-Interfaces: `showTarget(targetId) -> void`, `showSourceMode(mode) -> void`; un único widget activo y mapa Leaflet propio con ciclo de montaje/desmontaje explícito.
+Interfaces: `selectTarget(targetId,{fit=false}={})`, `setTargetVisible(targetId,visible)`, `setContextVisible(visible)`, `fitAvailableRoutes()`, `addRouteCollection(sourceId,featureCollection)`.
 
-- [ ] Añadir primero pruebas del comportamiento deseado: tres selecciones, ID y proveedor correctos, enlace alternativo visible y regreso a OSM sin mapa duplicado.
-- [ ] Montar el código oficial por pista con `basicmap=1`, preservando atribución/enlace del proveedor. No leer ni almacenar geometría interna del iframe.
-- [ ] Hacer visibles la fuente y el alcance: “Mapa de Trailforks” frente a “Geometría OSM”. No presentar ambas como geometrías ya comparadas o fusionadas.
-- [ ] Inicializar widgets después de validar el catálogo, independientemente de la carga del snapshot OSM. Probar que un hash OSM incorrecto o una fuente ausente mantienen disponibles las tres consultas Trailforks y deshabilitan solo la modalidad/exportación OSM.
-- [ ] Permitir vista OSM de Lomo y contexto abierto. Mantener fotografía/biblioteca como destinos secundarios. No anunciar exportación de Starwars o La Virgen sin datos reutilizables.
-- [ ] Ofrecer “Abrir en Trailforks” permanentemente y un aviso neutral de disponibilidad externa. Probar bloqueo del proveedor e informar errores detectables. No prometer detección automática de un mapa vacío: el acceso cross-origin está restringido y `load` no acredita render. Confirmarlo en las pruebas visuales de aceptación.
-- [ ] Verificar visualmente dentro de la aplicación que cada pista aparece sobre un mapa real. Capturar escritorio y móvil; distinguir comprobación automatizada de inspección humana del render.
+- [ ] Añadir primero pruebas: una sola instancia cartográfica, ningún iframe principal; seleccionar una pista conserva centro/zoom y las otras capas. La selección sin geometría mantiene el fondo y explica el dato pendiente.
+- [ ] Crear el mapa base una vez, independientemente de las fuentes. Quitar alternancia `native-map-panel/public-map-panel` y permitir pan mundial/zoom; el parque es encuadre inicial, no límite territorial.
+- [ ] Añadir pistas válidas como capas geográficas nativas con colores estables, halo y trazo visible. Respetar curvas/nodos originales; no añadir círculos de conexión como si fueran estaciones de metro ni simplificar por motivos estéticos.
+- [ ] Separar capas de pistas, contexto y selección. Incorporar leyenda, visibilidad individual y “Encuadrar pistas disponibles”; cambiar selección no recrea el mapa ni ajusta encuadre salvo petición explícita.
+- [ ] Cargar cada colección de forma independiente. Hash incorrecto/fuente ausente impide dibujar o exportar esa colección, sin ocultar mapa base ni otras colecciones válidas.
+- [ ] Mostrar fuente y disponibilidad por pista. Mantener enlaces de investigación externos y acceso secundario a fotografía/biblioteca. No ofrecer exportación de geometrías inexistentes.
+- [ ] Verificar Lomo nativo sobre fondo realmente cargado en tres niveles de zoom y después de pan; alejar hasta Chile/vista mundial, desplazar fuera del parque y regresar. Comprobar alineación, nunca dibujo fijo sobre pantalla.
+- [ ] La aceptación completa requiere las tres pistas simultáneas y ocultables de forma independiente, con sus fuentes permitidas. Hasta conseguir las otras dos geometrías, declarar avance parcial; enlaces y widgets no sustituyen ese criterio.
 
-Salida: las tres selecciones muestran mapas públicos geográficos operativos; ningún circuito compuesto suplanta una pista individual.
+Salida parcial posible ahora: Lomo y contexto abierto en el mapa continuo. Salida final exigida: tres capas nativas acreditadas simultáneas; pendiente de datos de Starwars y La Virgen.
 
 ## Tarea 3: corregir selección nativa y exportación
 
@@ -90,10 +93,10 @@ Archivos: nuevo `scripts/build-geographic-standalone.py`, prueba del artefacto, 
 
 - [ ] Añadir pruebas significativas del artefacto antes de implementar el constructor: código y datos locales presentes, huella válida y error ante alteración.
 - [ ] Incrustar Leaflet, estilos y datos. Conservar bytes exactos del snapshot mediante base64 y comprobar SHA antes de parsear. No reserializar JSON y conservar la huella anterior.
-- [ ] Distinguir código/datos incluidos de fondos OSM/widgets externos que requieren conexión. No preparar paquetes offline de teselas.
+- [ ] Distinguir código/datos incluidos de fondos cartográficos online. No preparar paquetes offline de teselas.
 - [ ] Añadir comandos explícitos `test:geographic`, `test:geographic:browser`, construcción y prueba autónoma. Ejecutar `npm test` y los controles de navegador/artefacto/preservación afectados; registrar comando, resultado y límites.
 - [ ] Inspeccionar resultados escritorio, 390×844 y 360×800: pista real, controles táctiles, pan/pellizco, rotación, tamaño recuperado y ausencia de desbordamiento. Una mera etiqueta iframe/canvas o HTTP 200 no satisface la prueba.
-- [ ] Probar hash erróneo, JSON ausente y teselas/proveedor inaccesibles. Guardar capturas comparativas y evidencia sin cookies, tokens ni trazas personales.
+- [ ] Probar hash erróneo, JSON ausente y teselas inaccesibles, con estados independientes por fuente. Guardar capturas comparativas y evidencia sin cookies, tokens ni trazas personales.
 - [ ] Solicitar revisión independiente del diff y criterios de aceptación; corregir incidencias y repetir solo verificaciones afectadas.
 - [ ] Revisar archivos añadidos y commits; conservar rama aislada y `main` intacta. Preparar resultado revisable antes de proponer publicación.
 
@@ -101,12 +104,13 @@ Archivos: nuevo `scripts/build-geographic-standalone.py`, prueba del artefacto, 
 
 | Criterio | Evidencia exigida |
 |---|---|
-| Tres pistas geográficas | Cada selección muestra su pista individual en widget oficial operativo; escritorio y móvil inspeccionados dentro del visor final. |
+| Mapa único | Una instancia Leaflet mundial, sin iframes como sustitutos. Seleccionar/ocultar una pista no reemplaza el mapa ni modifica centro/zoom salvo petición explícita. |
+| Tres pistas geográficas | Tres capas nativas simultáneas con fuentes reutilizables y segmentos identificados; escritorio y móvil inspeccionados. Pendiente de datos para Starwars y La Virgen; Lomo solo no cierra este criterio. |
 | Datos abiertos | Lomo conserva 127 nodos OSM y fuente/versión; ejes correctos, hash íntegro y exportación verificable. |
 | Honestidad | Ninguna conexión renombrada como pista, geometría protegida copiada, hueco inventado o precisión de terreno sin prueba. |
-| Interacción | Selección visible con contexto apagado, pan/zoom/pellizco y cambio de fuente sin duplicados/desfases. |
+| Interacción | Selección visible con contexto apagado, visibilidad individual y pan/zoom/pellizco compartidos sin desfases. Alejar a vista mundial y regresar mantiene las coordenadas. |
 | Conservación | Blob, calibración, `trails/webCenter`, biblioteca y localStorage idénticos antes/después en el mismo origen, también con SW. |
-| Fallos | Datos OSM alterados/inaccesibles deshabilitan solo OSM; widgets siguen disponibles. Un proveedor bloqueado conserva aviso neutral, alternativa permanente e información de errores detectables, sin anunciar render exitoso. |
+| Fallos | Datos de una fuente alterados/inaccesibles deshabilitan solo sus capas/exportación; el mapa y fuentes independientes permanecen disponibles. Pista pendiente no produce trazado ficticio ni cambia a un widget. |
 | Entrega | Código/datos editables, artefacto ejecutable, capturas, pruebas y documentación de pendientes. URL local diferenciada de vista previa accesible y publicación; comprobar la URL antes de llamarla operativa. |
 
 ## Fuera de este cierre
