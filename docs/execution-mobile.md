@@ -31,3 +31,5 @@ Final: fixed visible attribution — regresión `elementFromPoint` muestra copyr
 Final: fixed standalone links — logo abre listado y foto404 RED → logo vuelve al selector en el mismo archivo y constructor genera/enlaza el HTML fotográfico compañero GREEN.
 
 No menores diferidos reportados. No se probó dispositivo físico, Safari ni GPS de terreno. El código de Leaflet conserva sus bytes originales, incluidos CRLF; la comprobación de espacios del código propio excluye `vendor/leaflet`.
+
+Task 4: complete — rama subida, PR2 en borrador y visor privado actualizado manteniendo audiencia. Siete comprobaciones del sitio real: bytes idénticos al artefacto, entrada/parque/tarjetas, fichas, mapa con once teselas, revisión fotográfica completa y cero errores. Solicitud anónima401. Detalles en `docs/evidence/mobile-private-release.md`.

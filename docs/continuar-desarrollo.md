@@ -1,5 +1,15 @@
 # Continuar Mapas GPS
 
+## Estado más reciente: flujo móvil ejecutado
+
+Rama activa `feat/mapa-geografico`, [PR #2 en borrador](https://github.com/rodracruz/mapas-gps/pull/2). Entrada `mapa-geografico.html`: elegir parque → información/servicios → tarjetas iguales de mapa y senderos → detalles desplegables → mapa a pantalla completa con ficha inferior al tocar pista. Uso móvil95%; no volver a sustituir las capas por widgets de otros proveedores.
+
+La [aplicación privada](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site) ya abre ese flujo. Contiene capas OSM de Subida Buitrera y Lomo; La Virgen/Starwars tienen ficha y geometría pendiente. El mapa es mundial y persistente. Dificultad/servicios conservan fuente; desnivel/velocidad no se inventan. [Evidencia y pruebas](evidence/mobile-parks.md), [publicación comprobada](evidence/mobile-private-release.md) y [registro de decisiones](execution-mobile.md).
+
+`main`/GitHub Pages y la biblioteca anterior no cambian. El enlace Mis mapas del sitio privado conserva el origen original; no hay migración entre IndexedDB de diferentes orígenes. La revisión fotográfica permanece accesible desde el parque.
+
+## Historial del hito fotográfico
+
 Estado del trabajo: 2026-10-18. Repositorio: https://github.com/rodracruz/mapas-gps. Rama de desarrollo: `feat/fiel-vector-review`. La aplicación anterior y sus almacenes de mapas permanecen intactos; no fusionar esta rama sobre `main` sin aprobación del propietario.
 
 El avance está subido a GitHub y se revisa en el [PR #1, en borrador](https://github.com/rodracruz/mapas-gps/pull/1). `main` sigue en `87edc6c`; crear o publicar otra configuración de Codex Cloud no fusiona esta rama ni traslada automáticamente el estado de este hilo.
