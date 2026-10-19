@@ -9,5 +9,5 @@ test('private build embeds original photograph bytes for the park screen without
  const embedded=html.match(/id="embedded-park-photo"[^>]*>(.*?)<\/script>/s);assert.ok(embedded,'park screen has its own original photograph');
  const data=JSON.parse(embedded[1]),bytes=Buffer.from(data.dataUrl.split(',')[1],'base64'),original=await readFile(new URL('../elh-durazno.jpg',import.meta.url));
  assert.deepEqual(bytes,original);assert.equal(data.sha256,createHash('sha256').update(original).digest('hex'));assert.equal(data.width,900);assert.equal(data.height,1100);
- assert.match(html,/id="park-photo"/);assert.match(html,/id="park-photo-dialog"/);
+ assert.match(html,/id="park-photo" src="\.\/sources\/el-durazno-official-2022\.jpg"/);assert.match(html,/id="open-original-photo"/);assert.match(html,/id="park-photo-dialog"/);
 });

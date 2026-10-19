@@ -3,3 +3,9 @@
 
 .sign-dialog[open]{display:flex;flex-direction:column}.sign-dialog>header,.sign-toolbar{flex-shrink:0}.sign-layout{height:auto;flex:1;min-height:0}
 @media(max-width:760px){.sign-layout{grid-template-rows:minmax(0,1fr) auto}}
+
+/* Display crop only: native official pixels x580,y0,w1990,h2500.
+   Source bytes and image/vector coordinates stay unchanged. */
+.park-photo-frame{position:relative;width:100%;aspect-ratio:1990/2500;overflow:hidden;background:#e3e4d9}
+.park-photo-frame #park-photo{position:absolute;left:-29.1457286432%;top:0;width:129.1457286432%;height:auto;max-width:none;object-fit:initial}
+.original-photo-button{display:block;padding:0 14px 12px;font-size:11px;min-height:44px}

@@ -1,6 +1,10 @@
 # Continuar Mapas GPS
 
-## Estado más reciente: todos los senderos y foto principal
+## Ajuste más reciente: mapa legible en portada
+
+Se reemplazó la miniatura estrecha por la fuente oficial2570×3077 a todo el ancho del panel, encuadrada sobre el área del mapa. Tocar «Ampliar mapa» abre el visor existente en modo Cartel, con zoom. La fotografía privada960×1280 sigue intacta en «Ver tu fotografía original»; ya no sustituye la fuente de alta resolución de portada. [Encuadre y verificaciones](evidence/park-image-framing.md).
+
+## Estado anterior: todos los senderos y foto principal
 
 Rama `feat/all-trails-from-sign` sobre `156a270`: foto privada original en la página principal de El Durazno,20 senderos del cartel y2 subidas en plano visual separado,21 fichas y13 vías OSM nominales. [Método, límites y pruebas](evidence/all-trails.md), [catálogo geográfico](evidence/all-catalog.md). Datos editables `data/el-durazno/all-visual-trails.json`: píxeles2570×3077,104 fragmentos,72.831 vértices,164 huecos. Ningún ajuste GPS ni conexión inferida.
 

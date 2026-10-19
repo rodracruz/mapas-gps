@@ -28,7 +28,6 @@ if args.reference_photo:
         assert photo.format == 'JPEG', 'The preserved photograph must be JPEG'
         width, height = photo.size
     photo_data = {'width': width, 'height': height, 'sha256': hashlib.sha256(raw).hexdigest(), 'dataUrl': 'data:image/jpeg;base64,' + base64.b64encode(raw).decode()}
-    html = html.replace('src="./sources/el-durazno-official-2022.jpg"', 'src="' + photo_data['dataUrl'] + '"')
     payload += '<script id="embedded-park-photo" type="application/json">' + json.dumps(photo_data) + '</script>'
 visual_path = root / 'data/el-durazno/all-visual-trails.json'
 if visual_path.exists():

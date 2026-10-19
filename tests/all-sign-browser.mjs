@@ -8,7 +8,7 @@ try{
  const page=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
  await page.goto(base+'/mapa-geografico.html#parque=el-durazno');await page.waitForSelector('#map-card[data-ready="true"]');
  assert.equal(await page.locator('#park-photo').count(),1,'photograph is on the principal park screen');
- await page.locator('#open-park-photo').tap();await page.waitForSelector('#park-photo-dialog[open]');assert.ok(await page.locator('#park-original-photo').evaluate(n=>n.naturalWidth>0));await page.locator('#close-park-photo').tap();
+ await page.locator('#open-park-photo').tap();await page.waitForSelector('#sign-raster[href]');assert.equal(await page.locator('[data-sign-mode="photo"]').getAttribute('aria-pressed'),'true');await page.locator('#close-sign').tap();
  await page.locator('#open-sign').tap();await page.waitForSelector('#sign-dialog[data-ready="true"]');
  assert.equal(await page.locator('#sign-trails input').count(),20,'every legend trail can be toggled');assert.ok(await page.locator('.sign-route').count()>=20);
  assert.equal(await page.locator('#sign-svg').getAttribute('viewBox'),'0 0 2570 3077');
