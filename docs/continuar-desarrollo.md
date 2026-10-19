@@ -1,6 +1,20 @@
 # Continuar Mapas GPS
 
-## Estado más reciente: flujo móvil ejecutado
+## Estado más reciente: curvas del cartel en Mapa de senderos
+
+La fuente predeterminada de «Mapa de senderos» ahora es Cartel: curvas originales completas del PDF oficial, con nombres y puntos encima, sobre el mapa mundial. La posición es experimental y permanece marcada «Ubicación aproximada · Sin ajuste GPS». OSM sigue como comparación; sus longitudes se identifican como OSM. [Método, límites y pruebas](evidence/continuous-cartel.md), [registro experimental](evidence/cartel-registration.md). Datos separados `continuous-sign-trails.json` (píxeles) y `cartel-registration.json` (modelo de presentación no aceptado para GPS). No volver a confundir líneas OSM nominales con el dibujo exacto del cartel.
+
+## Ajuste anterior: mapa legible en portada
+
+Se reemplazó la miniatura estrecha por la fuente oficial2570×3077 a todo el ancho del panel, encuadrada sobre el área del mapa. Tocar «Ampliar mapa» abre el visor existente en modo Cartel, con zoom. La fotografía privada960×1280 sigue intacta en «Ver tu fotografía original»; ya no sustituye la fuente de alta resolución de portada. [Encuadre y verificaciones](evidence/park-image-framing.md).
+
+## Estado anterior: todos los senderos y foto principal
+
+Rama `feat/all-trails-from-sign` sobre `156a270`: foto privada original en la página principal de El Durazno,20 senderos del cartel y2 subidas en plano visual separado,21 fichas y13 vías OSM nominales. [Método, límites y pruebas](evidence/all-trails.md), [catálogo geográfico](evidence/all-catalog.md). Datos editables `data/el-durazno/all-visual-trails.json`: píxeles2570×3077,104 fragmentos,72.831 vértices,164 huecos. Ningún ajuste GPS ni conexión inferida.
+
+Código en [PR #3 en borrador](https://github.com/rodracruz/mapas-gps/pull/3), apilado sobre #2. [Despliegue comprobado](evidence/all-trails-release.md). La vista privada mantiene su URL; `main` y los datos locales del usuario siguen intactos. Para reconstruir con el adjunto privado se debe pasar `--reference-photo` al constructor. Sin ese argumento se usa la fuente oficial pública identificada como tal. No subir `dist/` ni el adjunto al repositorio público.
+
+## Estado anterior: flujo móvil ejecutado
 
 Rama activa `feat/mapa-geografico`, [PR #2 en borrador](https://github.com/rodracruz/mapas-gps/pull/2). Entrada `mapa-geografico.html`: elegir parque → información/servicios → tarjetas iguales de mapa y senderos → detalles desplegables → mapa a pantalla completa con ficha inferior al tocar pista. Uso móvil95%; no volver a sustituir las capas por widgets de otros proveedores.
 

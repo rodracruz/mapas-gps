@@ -1,0 +1,438 @@
+{
+  "pdfSha256": "9a67123b027197042da8e47d0c6dbe61e800d11e0e7fe01a5d85172b65ef39ab",
+  "officialJpgSha256": "ee124136bc9930ca1928d2df1f79a9810fb4d245c66503a2d4c6ae888aea29af",
+  "trails": [
+    {
+      "id": "chilling",
+      "sourceDrawingIndex": 2833,
+      "sourceNativeBounds": [
+        716.5725599594663,
+        2044.7901314682865,
+        755.5785910366585,
+        2180.0564030399178
+      ],
+      "rawSkeletonSamples": 555,
+      "finalFragments": 3,
+      "finalVertices": 84,
+      "pendingRectangles": 5,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.2,
+      "labelDrawingIndices": [
+        2839
+      ]
+    },
+    {
+      "id": "papaya",
+      "sourceDrawingIndex": 19,
+      "sourceNativeBounds": [
+        883.6932878846054,
+        1796.5533572952688,
+        1102.4789721290904,
+        2029.5352922773386
+      ],
+      "rawSkeletonSamples": 1554,
+      "finalFragments": 5,
+      "finalVertices": 1148,
+      "pendingRectangles": 8,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.7676962676962676,
+      "labelDrawingIndices": [
+        113
+      ]
+    },
+    {
+      "id": "la-virgen",
+      "sourceDrawingIndex": 31,
+      "sourceNativeBounds": [
+        1003.5811266224384,
+        582.0658365124846,
+        1832.3818766847828,
+        1765.5603207626161
+      ],
+      "rawSkeletonSamples": 9227,
+      "finalFragments": 7,
+      "finalVertices": 8365,
+      "pendingRectangles": 9,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.9111303782377804,
+      "labelDrawingIndices": [
+        120,
+        129
+      ]
+    },
+    {
+      "id": "parcero",
+      "sourceDrawingIndex": 23,
+      "sourceNativeBounds": [
+        877.7956064030653,
+        1775.916596595157,
+        1094.674866602805,
+        2012.4009388879729
+      ],
+      "rawSkeletonSamples": 1470,
+      "finalFragments": 3,
+      "finalVertices": 1025,
+      "pendingRectangles": 5,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.7108843537414966,
+      "labelDrawingIndices": [
+        147
+      ]
+    },
+    {
+      "id": "skills",
+      "sourceDrawingIndex": 258,
+      "sourceNativeBounds": [
+        1001.705603127511,
+        2067.7565741788862,
+        1181.4996892676613,
+        2171.166478913869
+      ],
+      "rawSkeletonSamples": 1150,
+      "finalFragments": 3,
+      "finalVertices": 690,
+      "pendingRectangles": 10,
+      "finalMaxEdgeLengthPx": 0.34996807161212357,
+      "categoricalVisibilityFraction": 0.671304347826087,
+      "labelDrawingIndices": [
+        260
+      ]
+    },
+    {
+      "id": "mampato",
+      "sourceDrawingIndex": 67,
+      "sourceNativeBounds": [
+        934.5203688016815,
+        1798.6823712810544,
+        1147.361957158521,
+        2050.467714040463
+      ],
+      "rawSkeletonSamples": 1616,
+      "finalFragments": 4,
+      "finalVertices": 1251,
+      "pendingRectangles": 6,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.7871287128712872,
+      "labelDrawingIndices": [
+        348
+      ]
+    },
+    {
+      "id": "starwars",
+      "sourceDrawingIndex": 51,
+      "sourceNativeBounds": [
+        1045.3760276927826,
+        105.65317741544202,
+        2000.570390275859,
+        1307.6365242216814
+      ],
+      "rawSkeletonSamples": 8287,
+      "finalFragments": 6,
+      "finalVertices": 7415,
+      "pendingRectangles": 9,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.8986364184867865,
+      "labelDrawingIndices": [
+        138,
+        184
+      ]
+    },
+    {
+      "id": "cactus",
+      "sourceDrawingIndex": 55,
+      "sourceNativeBounds": [
+        1662.6305328168974,
+        331.3836274332337,
+        1952.9759137905783,
+        529.5608825332039
+      ],
+      "rawSkeletonSamples": 1800,
+      "finalFragments": 3,
+      "finalVertices": 1376,
+      "pendingRectangles": 5,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.775,
+      "labelDrawingIndices": [
+        193
+      ]
+    },
+    {
+      "id": "lomo-vetado",
+      "sourceDrawingIndex": 39,
+      "sourceNativeBounds": [
+        1158.8405576952764,
+        852.0449530122071,
+        1902.2620077267454,
+        1605.6532111183712
+      ],
+      "rawSkeletonSamples": 6659,
+      "finalFragments": 4,
+      "finalVertices": 6099,
+      "pendingRectangles": 7,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.9186063973569605,
+      "labelDrawingIndices": [
+        102
+      ]
+    },
+    {
+      "id": "la-bala",
+      "sourceDrawingIndex": 343,
+      "sourceNativeBounds": [
+        927.3863474205257,
+        2059.6802584318284,
+        1066.6035609530181,
+        2281.863506898252
+      ],
+      "rawSkeletonSamples": 1562,
+      "finalFragments": 3,
+      "finalVertices": 1101,
+      "pendingRectangles": 10,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.7234314980793854,
+      "labelDrawingIndices": [
+        2089
+      ]
+    },
+    {
+      "id": "cebolla",
+      "sourceDrawingIndex": 15,
+      "sourceNativeBounds": [
+        1164.864638956731,
+        1804.4192132318817,
+        1238.5057356835518,
+        2011.2199477945558
+      ],
+      "rawSkeletonSamples": 1106,
+      "finalFragments": 3,
+      "finalVertices": 667,
+      "pendingRectangles": 5,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.6229656419529838,
+      "labelDrawingIndices": [
+        155
+      ]
+    },
+    {
+      "id": "los-saltos",
+      "sourceDrawingIndex": 35,
+      "sourceNativeBounds": [
+        1228.3024504312648,
+        1644.8993242056463,
+        1293.1473178059525,
+        1741.1960688457234
+      ],
+      "rawSkeletonSamples": 567,
+      "finalFragments": 2,
+      "finalVertices": 145,
+      "pendingRectangles": 5,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.2821869488536155,
+      "labelDrawingIndices": [
+        174
+      ]
+    },
+    {
+      "id": "el-gringo",
+      "sourceDrawingIndex": 47,
+      "sourceNativeBounds": [
+        1485.3947705924497,
+        1282.1338818376548,
+        2060.5268669669754,
+        1661.349524253504
+      ],
+      "rawSkeletonSamples": 5659,
+      "finalFragments": 4,
+      "finalVertices": 5180,
+      "pendingRectangles": 6,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.9211874889556458,
+      "labelDrawingIndices": [
+        200
+      ]
+    },
+    {
+      "id": "el-duro",
+      "sourceDrawingIndex": 12,
+      "sourceNativeBounds": [
+        1592.6248921343156,
+        1607.2916184886294,
+        2285.535642186764,
+        1987.853313528988
+      ],
+      "rawSkeletonSamples": 4112,
+      "finalFragments": 4,
+      "finalVertices": 3674,
+      "pendingRectangles": 6,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.9000486381322957,
+      "labelDrawingIndices": [
+        209
+      ]
+    },
+    {
+      "id": "xl",
+      "sourceDrawingIndex": 4,
+      "sourceNativeBounds": [
+        1389.2479005775267,
+        1291.5553600468825,
+        2372.066591721457,
+        2437.4760919149753
+      ],
+      "rawSkeletonSamples": 7701,
+      "finalFragments": 8,
+      "finalVertices": 6972,
+      "pendingRectangles": 10,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.9116997792494481,
+      "labelDrawingIndices": [
+        227,
+        231,
+        235
+      ]
+    },
+    {
+      "id": "rock-n-roll",
+      "sourceDrawingIndex": 8,
+      "sourceNativeBounds": [
+        1343.114142675623,
+        2003.5700198084783,
+        2281.753567484335,
+        2260.1099739592696
+      ],
+      "rawSkeletonSamples": 3962,
+      "finalFragments": 4,
+      "finalVertices": 3288,
+      "pendingRectangles": 7,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.8432609793033822,
+      "labelDrawingIndices": [
+        90
+      ]
+    },
+    {
+      "id": "las-nieves",
+      "sourceDrawingIndex": 59,
+      "sourceNativeBounds": [
+        2230.4095699622767,
+        1389.8578947716446,
+        2459.3081267392104,
+        1562.5540939243394
+      ],
+      "rawSkeletonSamples": 1064,
+      "finalFragments": 3,
+      "finalVertices": 573,
+      "pendingRectangles": 5,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.5676691729323309,
+      "labelDrawingIndices": [
+        216
+      ]
+    },
+    {
+      "id": "calibre-12",
+      "sourceDrawingIndex": 43,
+      "sourceNativeBounds": [
+        1233.6347662976143,
+        898.5477330802411,
+        1908.6258678734428,
+        1616.669987407379
+      ],
+      "rawSkeletonSamples": 5152,
+      "finalFragments": 3,
+      "finalVertices": 4618,
+      "pendingRectangles": 6,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.9004270186335404,
+      "labelDrawingIndices": [
+        163
+      ]
+    },
+    {
+      "id": "calibre-loco",
+      "sourceDrawingIndex": 27,
+      "sourceNativeBounds": [
+        1416.819838082722,
+        1406.8720762450764,
+        1522.5208274782387,
+        1627.3510453280633
+      ],
+      "rawSkeletonSamples": 1087,
+      "finalFragments": 3,
+      "finalVertices": 566,
+      "pendingRectangles": 5,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.5427782888684453,
+      "labelDrawingIndices": [
+        70
+      ]
+    },
+    {
+      "id": "mordor",
+      "sourceDrawingIndex": 63,
+      "sourceNativeBounds": [
+        1288.3129712938735,
+        1638.33870059194,
+        1449.6583483091806,
+        2017.3460450201703
+      ],
+      "rawSkeletonSamples": 1671,
+      "finalFragments": 3,
+      "finalVertices": 1257,
+      "pendingRectangles": 5,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.7690005984440454,
+      "labelDrawingIndices": [
+        82
+      ]
+    },
+    {
+      "id": "subida-cartel",
+      "sourceDrawingIndex": 240,
+      "sourceNativeBounds": [
+        665.5219269165456,
+        660.3937005692096,
+        1845.4304286127087,
+        2496.3633827078147
+      ],
+      "rawSkeletonSamples": 12058,
+      "finalFragments": 11,
+      "finalVertices": 10889,
+      "pendingRectangles": 12,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.9080278653176315,
+      "labelDrawingIndices": [
+        244,
+        251,
+        271
+      ]
+    },
+    {
+      "id": "subida-e-bike",
+      "sourceDrawingIndex": 356,
+      "sourceNativeBounds": [
+        836.4481910726797,
+        670.0567306877671,
+        1870.0005620890713,
+        2066.6357326264606
+      ],
+      "rawSkeletonSamples": 8067,
+      "finalFragments": 15,
+      "finalVertices": 6448,
+      "pendingRectangles": 18,
+      "finalMaxEdgeLengthPx": 0.3535533905932738,
+      "categoricalVisibilityFraction": 0.8146770794595265,
+      "labelDrawingIndices": [
+        359,
+        372
+      ]
+    }
+  ],
+  "trailCount": 22,
+  "legendTrailCount": 20,
+  "auxiliaryCount": 2,
+  "fragmentCount": 104,
+  "vertexCount": 72831,
+  "pendingCount": 164,
+  "outputSha256": "f68ae492e04724e2cbad56a3bf64910868c237a486a4576b6c48fb0f526d1368"
+}

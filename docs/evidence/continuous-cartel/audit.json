@@ -1,0 +1,358 @@
+{
+  "sourcePdfSha256": "9a67123b027197042da8e47d0c6dbe61e800d11e0e7fe01a5d85172b65ef39ab",
+  "sourceImageSha256": "ee124136bc9930ca1928d2df1f79a9810fb4d245c66503a2d4c6ae888aea29af",
+  "visibleOnlyUnchangedSha256": "f68ae492e04724e2cbad56a3bf64910868c237a486a4576b6c48fb0f526d1368",
+  "outputSha256": "73521732a4b58bcd14a0aefc17697dca35e5aa05f8f7bd5d3830f2c661f56f78",
+  "trails": 22,
+  "legendTrails": 20,
+  "auxiliaryTrails": 2,
+  "routePaths": 23,
+  "axisChains": 95,
+  "vertices": 86103,
+  "labels": 29,
+  "markers": 45,
+  "sourceRecoveredOcclusionBoxes": 162,
+  "medialAxisBranchesNotInterpreted": 39,
+  "maxEdgePx": 0.3535533905932738,
+  "svgValidation": {
+    "nativeRasterRmsRgb": 0.08739338722828316,
+    "meanAbsoluteRgb": 0.006990908236373209,
+    "maxAbsoluteRgb": 14.0,
+    "pixelsWithChannelErrorOver32": 0,
+    "method": "serialized SVG versus independent PDF drawing primitives, both 2570x3077"
+  },
+  "validation": "source hashes, route coverage 20+2, explicit pixel system/noGPS, finite in-bounds coordinates, <=0.354px centerline edges, exact source marker centers, no implicit connectivity, predecessor unchanged",
+  "perTrail": [
+    {
+      "trailId": "chilling",
+      "sourceDrawingIndices": [
+        2833
+      ],
+      "axisChains": 5,
+      "vertices": 559,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        716.57256,
+        2044.79013,
+        39.00603,
+        135.26627
+      ]
+    },
+    {
+      "trailId": "papaya",
+      "sourceDrawingIndices": [
+        19
+      ],
+      "axisChains": 13,
+      "vertices": 1568,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        883.69329,
+        1796.55336,
+        218.78568,
+        232.98193
+      ]
+    },
+    {
+      "trailId": "la-virgen",
+      "sourceDrawingIndices": [
+        31
+      ],
+      "axisChains": 5,
+      "vertices": 9231,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        1003.58113,
+        582.06584,
+        828.80075,
+        1183.49448
+      ]
+    },
+    {
+      "trailId": "parcero",
+      "sourceDrawingIndices": [
+        23
+      ],
+      "axisChains": 5,
+      "vertices": 1474,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        877.79561,
+        1775.9166,
+        216.87926,
+        236.48434
+      ]
+    },
+    {
+      "trailId": "skills",
+      "sourceDrawingIndices": [
+        258
+      ],
+      "axisChains": 1,
+      "vertices": 1093,
+      "maxEdgePx": 0.34996807161212357,
+      "sourceNativeBounds": [
+        1001.7056,
+        2067.75657,
+        179.79409,
+        103.4099
+      ]
+    },
+    {
+      "trailId": "mampato",
+      "sourceDrawingIndices": [
+        67
+      ],
+      "axisChains": 3,
+      "vertices": 1618,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        934.52037,
+        1798.68237,
+        212.84159,
+        251.78534
+      ]
+    },
+    {
+      "trailId": "starwars",
+      "sourceDrawingIndices": [
+        51
+      ],
+      "axisChains": 5,
+      "vertices": 8291,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        1045.37603,
+        105.65318,
+        955.19436,
+        1201.98335
+      ]
+    },
+    {
+      "trailId": "cactus",
+      "sourceDrawingIndices": [
+        55
+      ],
+      "axisChains": 3,
+      "vertices": 1802,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        1662.63053,
+        331.38363,
+        290.34538,
+        198.17726
+      ]
+    },
+    {
+      "trailId": "lomo-vetado",
+      "sourceDrawingIndices": [
+        39
+      ],
+      "axisChains": 3,
+      "vertices": 6661,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        1158.84056,
+        852.04495,
+        743.42145,
+        753.60826
+      ]
+    },
+    {
+      "trailId": "la-bala",
+      "sourceDrawingIndices": [
+        343
+      ],
+      "axisChains": 5,
+      "vertices": 1566,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        927.38635,
+        2059.68026,
+        139.21721,
+        222.18325
+      ]
+    },
+    {
+      "trailId": "cebolla",
+      "sourceDrawingIndices": [
+        15
+      ],
+      "axisChains": 3,
+      "vertices": 1108,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        1164.86464,
+        1804.41921,
+        73.6411,
+        206.80073
+      ]
+    },
+    {
+      "trailId": "los-saltos",
+      "sourceDrawingIndices": [
+        35
+      ],
+      "axisChains": 3,
+      "vertices": 569,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        1228.30245,
+        1644.89932,
+        64.84487,
+        96.29674
+      ]
+    },
+    {
+      "trailId": "el-gringo",
+      "sourceDrawingIndices": [
+        47
+      ],
+      "axisChains": 7,
+      "vertices": 5665,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        1485.39477,
+        1282.13388,
+        575.1321,
+        379.21564
+      ]
+    },
+    {
+      "trailId": "el-duro",
+      "sourceDrawingIndices": [
+        12
+      ],
+      "axisChains": 5,
+      "vertices": 4116,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        1592.62489,
+        1607.29162,
+        692.91075,
+        380.5617
+      ]
+    },
+    {
+      "trailId": "xl",
+      "sourceDrawingIndices": [
+        4
+      ],
+      "axisChains": 5,
+      "vertices": 7705,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        1389.2479,
+        1291.55536,
+        982.81869,
+        1145.92073
+      ]
+    },
+    {
+      "trailId": "rock-n-roll",
+      "sourceDrawingIndices": [
+        8
+      ],
+      "axisChains": 3,
+      "vertices": 3964,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        1343.11414,
+        2003.57002,
+        938.63942,
+        256.53995
+      ]
+    },
+    {
+      "trailId": "las-nieves",
+      "sourceDrawingIndices": [
+        59
+      ],
+      "axisChains": 1,
+      "vertices": 1064,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        2230.40957,
+        1389.85789,
+        228.89856,
+        172.6962
+      ]
+    },
+    {
+      "trailId": "calibre-12",
+      "sourceDrawingIndices": [
+        43
+      ],
+      "axisChains": 3,
+      "vertices": 5154,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        1233.63477,
+        898.54773,
+        674.9911,
+        718.12225
+      ]
+    },
+    {
+      "trailId": "calibre-loco",
+      "sourceDrawingIndices": [
+        27
+      ],
+      "axisChains": 3,
+      "vertices": 1089,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        1416.81984,
+        1406.87208,
+        105.70099,
+        220.47897
+      ]
+    },
+    {
+      "trailId": "mordor",
+      "sourceDrawingIndices": [
+        63
+      ],
+      "axisChains": 5,
+      "vertices": 1675,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        1288.31297,
+        1638.3387,
+        161.34538,
+        379.00734
+      ]
+    },
+    {
+      "trailId": "subida-cartel",
+      "sourceDrawingIndices": [
+        240,
+        239
+      ],
+      "axisChains": 4,
+      "vertices": 12060,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        665.52193,
+        660.3937,
+        1179.9085,
+        1835.96968
+      ]
+    },
+    {
+      "trailId": "subida-e-bike",
+      "sourceDrawingIndices": [
+        356
+      ],
+      "axisChains": 5,
+      "vertices": 8071,
+      "maxEdgePx": 0.3535533905932738,
+      "sourceNativeBounds": [
+        836.44819,
+        670.05673,
+        1033.55237,
+        1396.579
+      ]
+    }
+  ]
+}

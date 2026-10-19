@@ -1,0 +1,17 @@
+{
+  "checks": [
+    "owner-private access preserved",
+    "published bytes match tested artifact",
+    "live park selection, cards and geographic data",
+    "high-resolution main map2570x3077 and intact960x1280 private original in separate dialog",
+    "20 sign trails plus 2 ascents, 23 native continuous paths, identical raster/vector coordinates and vector-only mode",
+    "live expandable trail information",
+    "live full-screen map, real tiles and bottom sheet",
+    "continuous sign artwork over world map, approximate-position disclosure, no fabricated distances and separate OSM comparison",
+    "preserved complete private photographic review",
+    "no runtime errors"
+  ],
+  "anonymousStatus": 401,
+  "liveSha256": "a3931d31b606bce3d4263aed9e115af8e21a6d38239243587814478c9f8931d3",
+  "loadedTiles": 10
+}

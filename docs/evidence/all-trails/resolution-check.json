@@ -1,0 +1,178 @@
+{
+  "method": "retained 4x-axis samples compared with independently rasterized 8x skeleton; stability check, not a geographic accuracy claim",
+  "trails": [
+    {
+      "id": "chilling",
+      "finalSamplesChecked": 84,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "papaya",
+      "finalSamplesChecked": 1148,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.2651650429449553,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "la-virgen",
+      "finalSamplesChecked": 8365,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.31868871959954903,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "parcero",
+      "finalSamplesChecked": 1025,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "skills",
+      "method": "direct adaptive flattening of genuine cubic stroke",
+      "flatteningTolerancePx": 0.025
+    },
+    {
+      "id": "mampato",
+      "finalSamplesChecked": 1251,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "starwars",
+      "finalSamplesChecked": 7415,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "cactus",
+      "finalSamplesChecked": 1376,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "lomo-vetado",
+      "finalSamplesChecked": 6099,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "la-bala",
+      "finalSamplesChecked": 1101,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "cebolla",
+      "finalSamplesChecked": 667,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "los-saltos",
+      "finalSamplesChecked": 145,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "el-gringo",
+      "finalSamplesChecked": 5180,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "el-duro",
+      "finalSamplesChecked": 3674,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "xl",
+      "finalSamplesChecked": 6972,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "rock-n-roll",
+      "finalSamplesChecked": 3288,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "las-nieves",
+      "finalSamplesChecked": 573,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "calibre-12",
+      "finalSamplesChecked": 4618,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "calibre-loco",
+      "finalSamplesChecked": 566,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "mordor",
+      "finalSamplesChecked": 1257,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "subida-cartel",
+      "finalSamplesChecked": 10889,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    },
+    {
+      "id": "subida-e-bike",
+      "finalSamplesChecked": 6448,
+      "comparisonRasterScale": 8,
+      "nearest8xAxisMaxDistancePx": 0.19764235376052372,
+      "p99DistancePx": 0.19764235376052372,
+      "samplesExceeding1Px": 0
+    }
+  ]
+}

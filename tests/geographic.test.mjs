@@ -4,6 +4,47 @@ import {readFile} from 'node:fs/promises';
 const api=await import('../geographic/data.mjs').catch(()=>({}));
 const source=JSON.parse(await readFile(new URL('../sources/el-durazno-osm.json',import.meta.url)));
 const catalog=JSON.parse(await readFile(new URL('../data/el-durazno/geographic-catalog.json',import.meta.url)));
+const nominalWays={
+ 'subida-buitrera':[[477168992,'Sendero Subida Buitrera']],
+ 'papaya':[[747369689,'Sendero Papaya']],
+ 'parcero':[[1003300262,'Sendero Parcero']],
+ 'mampato':[[478641797,'Sendero Mampato'],[1003300261,'Sendero Mampato']],
+ 'lomo-vetado':[[477170097,'Sendero Lomo Vetado']],
+ 'la-bala':[[1003300263,'Sendero la Bala']],
+ 'cebolla':[[1003300260,'Sendero Cebolla']],
+ 'los-saltos':[[1003300259,'Ssendero Los Saltos']],
+ 'xl':[[75311770,'Sendero XL'],[477174835,'Sendero XL']],
+ 'rock-n-roll':[[1003300257,'Sendero Rock´n Roll']],
+ 'calibre-12':[[1003300258,'Sendero Calibre 12']]
+};
+test('all nominally identified OSM ways are attributed only through their explicit written aliases',()=>{
+ const geo=api.fromOsmSnapshot(source,catalog);
+ assert.equal(catalog.targets.filter(t=>t.status==='osm-identified').length,11);
+ assert.equal(geo.features.filter(f=>f.properties.targetId!==null).length,13);
+ for(const [targetId,ways] of Object.entries(nominalWays)){
+  const target=catalog.targets.find(t=>t.id===targetId);
+  assert.deepEqual(target.osmWayIds,ways.map(([id])=>id),targetId);
+  assert.deepEqual(target.osmNames,[...new Set(ways.map(([,name])=>name))],targetId);
+  assert.deepEqual(geo.features.filter(f=>f.properties.targetId===targetId).map(f=>[f.properties.osmId,f.properties.name]),ways,targetId);
+ }
+ for(const id of [477170748,477174834,477174836,747368856,1003300264])assert.equal(geo.features.find(f=>f.properties.osmId===id).properties.targetId,null,String(id));
+});
+test('every geographic way retains every original ordered node and coordinate without joining separate ways',()=>{
+ const geo=api.fromOsmSnapshot(source,catalog),nodes=new Map(source.elements.filter(e=>e.type==='node').map(n=>[n.id,n]));
+ for(const w of source.elements.filter(e=>e.type==='way')){
+  const f=geo.features.find(f=>f.properties.osmId===w.id);
+  assert.equal(f.id,'osm-way-'+w.id);assert.equal(f.properties.osmVersion,w.version);assert.equal(f.properties.osmTimestamp,w.timestamp);
+  assert.deepEqual(f.properties.nodeIds,w.nodes);assert.deepEqual(f.properties.tags,w.tags||{});
+  assert.deepEqual(f.geometry.coordinates,w.nodes.map(id=>[nodes.get(id).lon,nodes.get(id).lat]));
+ }
+ for(const id of ['mampato','xl'])assert.equal(geo.features.filter(f=>f.properties.targetId===id).length,2);
+});
+test('converter refuses unnamed, fuzzy or alternative names even when an OSM ID is assigned',()=>{
+ for(const mutate of [s=>s.elements.find(e=>e.id===1003300259).tags.name='Sendero Los Saltos',s=>s.elements.find(e=>e.id===1003300257).tags.name='Sendero Rock n Roll',s=>s.elements.find(e=>e.id===1003300263).tags.name='Sendero La Bala',s=>delete s.elements.find(e=>e.id===477170097).tags.name]){const bad=structuredClone(source);mutate(bad);assert.throws(()=>api.fromOsmSnapshot(bad,catalog),/nombre|geogr/i);}
+ for(const [targetId,osmId] of [['la-bala',1003300264],['la-bala',477170748],['calibre-12',477174834],['papaya',747368856]]){const bad=structuredClone(catalog);bad.targets.find(t=>t.id===targetId).osmWayIds.push(osmId);assert.throws(()=>api.fromOsmSnapshot(source,bad),/nombre|geogr/i);}
+ const missing=structuredClone(source);missing.elements=missing.elements.filter(e=>e.type!=='way'||e.id!==1003300261);assert.throws(()=>api.fromOsmSnapshot(missing,catalog),/geogr/i);
+ const bad=api.fromOsmSnapshot(source,catalog);bad.features.find(f=>f.properties.osmId===1003300259).properties.name='Sendero Los Saltos';assert.throws(()=>api.validateGeographic(bad,catalog),/geogr/i);
+});
 test('geographic paths preserve exact ordered OSM nodes, identities and source versions',()=>{
  assert.equal(typeof api.fromOsmSnapshot,'function');
  const geo=api.fromOsmSnapshot(source,catalog),way=source.elements.find(e=>e.type==='way'&&e.id===477170097),nodes=new Map(source.elements.filter(e=>e.type==='node').map(n=>[n.id,n]));

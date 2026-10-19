@@ -1,0 +1,9 @@
+{
+  "exitCode": 0,
+  "beforeSha256": "f68ae492e04724e2cbad56a3bf64910868c237a486a4576b6c48fb0f526d1368",
+  "afterSha256": "f68ae492e04724e2cbad56a3bf64910868c237a486a4576b6c48fb0f526d1368",
+  "byteIdentical": true,
+  "runtimeSeconds": 18.824,
+  "stdout": "Tracing Chilling (drawing 2833)\nTracing Papaya (drawing 19)\nTracing La Virgen (drawing 31)\nTracing Parcero (drawing 23)\nTracing Skills (drawing 258)\nTracing Mampato (drawing 67)\nTracing Starwars (drawing 51)\nTracing Cactus (drawing 55)\nTracing Lomo Vetado (drawing 39)\nTracing La Bala (drawing 343)\nTracing Cebolla (drawing 15)\nTracing Los Saltos (drawing 35)\nTracing El Gringo (drawing 47)\nTracing El Duro (drawing 12)\nTracing XL (drawing 4)\nTracing Rock N’Roll (drawing 8)\nTracing Las Nieves (drawing 59)\nTracing Calibre12 (drawing 43)\nTracing Calibre Loco (drawing 27)\nTracing Mordor (drawing 63)\nTracing Subida (drawing 240)\nTracing Subida E-Bike (drawing 356)\nWrote 22 trails, 104 fragments, 164 pending rectangles: /workspace/mapas-gps/.worktrees/all-trails/data/el-durazno/all-visual-trails.json\n",
+  "stderr": ""
+}
