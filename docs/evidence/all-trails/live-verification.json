@@ -1,0 +1,16 @@
+{
+  "checks": [
+    "owner-private access preserved",
+    "published bytes match tested artifact",
+    "live park selection, cards and geographic data",
+    "exact original uploaded photograph on main park screen and full-photo dialog",
+    "20 visual trails plus 2 ascents, 104 fragments, identical raster/vector coordinates and vector-only mode",
+    "live expandable trail information",
+    "live full-screen map, real tiles and bottom sheet",
+    "preserved complete private photographic review",
+    "no runtime errors"
+  ],
+  "anonymousStatus": 401,
+  "liveSha256": "72007815d63355880721e0813e75d1d8b5f740b51e55bbf2bfe4bc370e131b59",
+  "loadedTiles": 8
+}
