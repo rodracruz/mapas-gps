@@ -16,7 +16,8 @@
     "test:geographic:acceptance": "node tests/geographic-acceptance.mjs",
     "build:geographic": "python3 scripts/build-geographic-standalone.py",
     "test:geographic:regressions": "node tests/geographic-regressions.mjs",
-    "test:sign": "node tests/all-sign-browser.mjs && node tests/all-sign-interactions.mjs && node tests/all-sign-recovery.mjs"
+    "test:sign": "node tests/all-sign-browser.mjs && node tests/all-sign-interactions.mjs && node tests/all-sign-recovery.mjs",
+    "test:cartel": "node --test tests/cartel-world.test.mjs && node tests/cartel-world-browser.mjs"
   },
   "devDependencies": {
     "playwright": "1.58.2"

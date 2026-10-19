@@ -1,0 +1,842 @@
+{
+  "schemaVersion": 1,
+  "id": "el-durazno-cartel-registration-experimental-v1",
+  "status": "experimental-not-for-navigation",
+  "validated": false,
+  "acceptedTransform": null,
+  "transform": null,
+  "sourceCoordinateSystem": "image-pixels",
+  "image": {
+    "url": "sources/el-durazno-official-2022.jpg",
+    "width": 2570,
+    "height": 3077,
+    "sha256": "ee124136bc9930ca1928d2df1f79a9810fb4d245c66503a2d4c6ae888aea29af",
+    "transform": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "experimentalModel": {
+    "type": "similarity-with-image-y-reversal",
+    "targetCRS": "EPSG:3857",
+    "matrixConvention": "[a,b,c,d,e,f]: X=a*x+c*y+e; Y=b*x+d*y+f. Input image x right/y down; output Mercator metres X east/Y north.",
+    "matrix": [
+      1.7954033321768108,
+      -0.04585917216400048,
+      -0.04585917216400048,
+      -1.7954033321768108,
+      -7850590.02345322,
+      -3934056.979365916
+    ],
+    "permittedUse": "Approximate visual display of original sign artwork over a world map, explicitly labelled experimental.",
+    "useForNavigation": false,
+    "useForGpsSnapping": false,
+    "useForGroundDistances": false,
+    "useForConnections": false
+  },
+  "fit": {
+    "method": "Robust symmetric, exact-name-constrained nearest-curve ICP; equal baseline weight per route/direction; centroid initialisation only.",
+    "trainingTrailIds": [
+      "lomo-vetado",
+      "papaya",
+      "calibre-12"
+    ],
+    "heldOutTrailIds": [
+      "parcero",
+      "mampato",
+      "la-bala",
+      "cebolla",
+      "los-saltos",
+      "xl",
+      "rock-n-roll"
+    ],
+    "imageSampleSpacingPx": 2,
+    "osmSampleSpacingMercatorM": 2.4,
+    "robustLossTransitionMercatorM": 24,
+    "maximumIterations": 100,
+    "geographicControlPoints": [],
+    "modelChoice": "Similarity has fewer degrees of freedom and transfers better to the remote held-out XL/Rock areas than the affine candidate. Affine retained for comparison, not selected."
+  },
+  "validation": {
+    "status": "unvalidated",
+    "independentGeographicCheckPoints": [],
+    "independentFieldEvidence": false,
+    "residualMeaning": "Nearest-curve SHAPE DISAGREEMENT of candidate same-name routes, not positional accuracy or ground truth. Whole-route holdouts were not used by the fit but share the same OSM source; they are not independent field validation.",
+    "distanceFrame": {
+      "originLonLat": [
+        -70.5,
+        -33.31
+      ],
+      "degreesToLocalMetres": [
+        93125.03562982475,
+        110909.98596841944
+      ],
+      "method": "WGS84 local east/north tangent linearisation at the origin; coordinates inverse-projected from Mercator before measuring."
+    },
+    "scopeLimitations": [
+      "No unambiguous geographic control point has been accepted. No surveyed/image-to-field point pair is used.",
+      "Exact photograph edition versus the official 2022 PDF is not established.",
+      "OSM and sign may differ in route limits, dates and segmentation. XL, Rock N’Roll and Los Saltos have much larger OSM-to-cartel residuals because nominally assigned OSM ways extend beyond the matching sign portion.",
+      "Nearest points may correspond to the wrong part of a nearby/parallel curve. Small residuals do not prove correspondence or location.",
+      "The training routes cluster in the west/centre; the far north is extrapolation with no named geographic holdout.",
+      "Names, graphical crossings and dot symbols do not prove traversable connectivity or direction.",
+      "Raster sampling, original map distortions and OSM accuracy are not quantified as independent uncertainty."
+    ]
+  },
+  "candidateEndpointCorrespondences": [
+    {
+      "markerId": "papaya-marker-1",
+      "trailId": "papaya",
+      "imagePixel": [
+        885.47719,
+        2030.07181
+      ],
+      "imageSourceDrawingIndices": [
+        20
+      ],
+      "osmNodeId": 6993096511,
+      "sourceCoordinateLonLat": [
+        -70.5098757,
+        -33.3194703
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/6993096511",
+      "queriedAt": "2026-10-19T00:07:44.489947+00:00",
+      "candidateDifferenceM": 43.847,
+      "basis": "Same-name route endpoint and original PDF dot; an endpoint hypothesis, not proof that the dot and OSM node identify the same real place.",
+      "acceptedControl": false,
+      "usedForFit": false,
+      "independentFieldValidation": false
+    },
+    {
+      "markerId": "papaya-marker-2",
+      "trailId": "papaya",
+      "imagePixel": [
+        1100.67587,
+        1797.74382
+      ],
+      "imageSourceDrawingIndices": [
+        21,
+        22
+      ],
+      "osmNodeId": 6993090732,
+      "sourceCoordinateLonLat": [
+        -70.5059531,
+        -33.3159794
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/6993090732",
+      "queriedAt": "2026-10-19T00:07:44.489947+00:00",
+      "candidateDifferenceM": 14.591,
+      "basis": "Same-name route endpoint and original PDF dot; an endpoint hypothesis, not proof that the dot and OSM node identify the same real place.",
+      "acceptedControl": false,
+      "usedForFit": false,
+      "independentFieldValidation": false
+    },
+    {
+      "markerId": "lomo-vetado-marker-1",
+      "trailId": "lomo-vetado",
+      "imagePixel": [
+        1214.56054,
+        1605.57163
+      ],
+      "imageSourceDrawingIndices": [
+        40
+      ],
+      "osmNodeId": 4705608441,
+      "sourceCoordinateLonLat": [
+        -70.5036907,
+        -33.3138365
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/4705608441",
+      "queriedAt": "2026-10-19T00:07:44.489947+00:00",
+      "candidateDifferenceM": 52.038,
+      "basis": "Same-name route endpoint and original PDF dot; an endpoint hypothesis, not proof that the dot and OSM node identify the same real place.",
+      "acceptedControl": false,
+      "usedForFit": false,
+      "independentFieldValidation": false
+    },
+    {
+      "markerId": "lomo-vetado-marker-2",
+      "trailId": "lomo-vetado",
+      "imagePixel": [
+        1901.8542,
+        890.99299
+      ],
+      "imageSourceDrawingIndices": [
+        41,
+        42
+      ],
+      "osmNodeId": 4705608466,
+      "sourceCoordinateLonLat": [
+        -70.4923871,
+        -33.3040099
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/4705608466",
+      "queriedAt": "2026-10-19T00:07:44.489947+00:00",
+      "candidateDifferenceM": 36.34,
+      "basis": "Same-name route endpoint and original PDF dot; an endpoint hypothesis, not proof that the dot and OSM node identify the same real place.",
+      "acceptedControl": false,
+      "usedForFit": false,
+      "independentFieldValidation": false
+    },
+    {
+      "markerId": "calibre-12-marker-1",
+      "trailId": "calibre-12",
+      "imagePixel": [
+        1906.90834,
+        899.93483
+      ],
+      "imageSourceDrawingIndices": [
+        44,
+        45
+      ],
+      "osmNodeId": 4705609090,
+      "sourceCoordinateLonLat": [
+        -70.4928546,
+        -33.3043399
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/4705609090",
+      "queriedAt": "2026-10-19T00:07:44.489947+00:00",
+      "candidateDifferenceM": 19.427,
+      "basis": "Same-name route endpoint and original PDF dot; an endpoint hypothesis, not proof that the dot and OSM node identify the same real place.",
+      "acceptedControl": false,
+      "usedForFit": false,
+      "independentFieldValidation": false
+    },
+    {
+      "markerId": "calibre-12-marker-2",
+      "trailId": "calibre-12",
+      "imagePixel": [
+        1243.32234,
+        1616.35474
+      ],
+      "imageSourceDrawingIndices": [
+        46
+      ],
+      "osmNodeId": 4705608441,
+      "sourceCoordinateLonLat": [
+        -70.5036907,
+        -33.3138365
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/4705608441",
+      "queriedAt": "2026-10-19T00:07:44.489947+00:00",
+      "candidateDifferenceM": 16.008,
+      "basis": "Same-name route endpoint and original PDF dot; an endpoint hypothesis, not proof that the dot and OSM node identify the same real place.",
+      "acceptedControl": false,
+      "usedForFit": false,
+      "independentFieldValidation": false
+    },
+    {
+      "markerId": "parcero-marker-1",
+      "trailId": "parcero",
+      "imagePixel": [
+        881.79891,
+        2012.18902
+      ],
+      "imageSourceDrawingIndices": [
+        24
+      ],
+      "osmNodeId": 6993096492,
+      "sourceCoordinateLonLat": [
+        -70.5097711,
+        -33.3191924
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/6993096492",
+      "queriedAt": "2026-10-19T00:07:44.489947+00:00",
+      "candidateDifferenceM": 33.65,
+      "basis": "Same-name route endpoint and original PDF dot; an endpoint hypothesis, not proof that the dot and OSM node identify the same real place.",
+      "acceptedControl": false,
+      "usedForFit": false,
+      "independentFieldValidation": false
+    },
+    {
+      "markerId": "parcero-marker-2",
+      "trailId": "parcero",
+      "imagePixel": [
+        1093.56741,
+        1786.58328
+      ],
+      "imageSourceDrawingIndices": [
+        25,
+        26
+      ],
+      "osmNodeId": 4718549998,
+      "sourceCoordinateLonLat": [
+        -70.5057756,
+        -33.3159629
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/4718549998",
+      "queriedAt": "2026-10-19T00:07:44.489947+00:00",
+      "candidateDifferenceM": 34.856,
+      "basis": "Same-name route endpoint and original PDF dot; an endpoint hypothesis, not proof that the dot and OSM node identify the same real place.",
+      "acceptedControl": false,
+      "usedForFit": false,
+      "independentFieldValidation": false
+    },
+    {
+      "markerId": "cebolla-marker-1",
+      "trailId": "cebolla",
+      "imagePixel": [
+        1216.54861,
+        2010.09701
+      ],
+      "imageSourceDrawingIndices": [
+        16
+      ],
+      "osmNodeId": 4705617530,
+      "sourceCoordinateLonLat": [
+        -70.5043398,
+        -33.3191802
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/4705617530",
+      "queriedAt": "2026-10-19T00:07:44.489947+00:00",
+      "candidateDifferenceM": 22.292,
+      "basis": "Same-name route endpoint and original PDF dot; an endpoint hypothesis, not proof that the dot and OSM node identify the same real place.",
+      "acceptedControl": false,
+      "usedForFit": false,
+      "independentFieldValidation": false
+    },
+    {
+      "markerId": "cebolla-marker-2",
+      "trailId": "cebolla",
+      "imagePixel": [
+        1182.98966,
+        1809.8995
+      ],
+      "imageSourceDrawingIndices": [
+        17,
+        18
+      ],
+      "osmNodeId": 4705617587,
+      "sourceCoordinateLonLat": [
+        -70.5048325,
+        -33.3161822
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/4705617587",
+      "queriedAt": "2026-10-19T00:07:44.489947+00:00",
+      "candidateDifferenceM": 15.488,
+      "basis": "Same-name route endpoint and original PDF dot; an endpoint hypothesis, not proof that the dot and OSM node identify the same real place.",
+      "acceptedControl": false,
+      "usedForFit": false,
+      "independentFieldValidation": false
+    }
+  ],
+  "modelComparison": {
+    "similarity": {
+      "matrix": [
+        1.7954033321768108,
+        -0.04585917216400048,
+        -0.04585917216400048,
+        -1.7954033321768108,
+        -7850590.02345322,
+        -3934056.979365916
+      ],
+      "iterations": 24,
+      "routeShapeResiduals": {
+        "papaya": {
+          "cartelToOsm": {
+            "medianM": 4.719,
+            "p95M": 17.464,
+            "maxM": 29.352
+          },
+          "osmToCartel": {
+            "medianM": 5.219,
+            "p95M": 18.492,
+            "maxM": 44.376
+          },
+          "pooledDirections": {
+            "medianM": 5.131,
+            "p95M": 17.899,
+            "maxM": 44.376
+          },
+          "cartelSampleCount": 253,
+          "osmSampleCount": 369,
+          "osmWayIds": [
+            747369689
+          ],
+          "role": "fit"
+        },
+        "parcero": {
+          "cartelToOsm": {
+            "medianM": 2.969,
+            "p95M": 10.243,
+            "maxM": 20.762
+          },
+          "osmToCartel": {
+            "medianM": 3.604,
+            "p95M": 21.006,
+            "maxM": 35.294
+          },
+          "pooledDirections": {
+            "medianM": 3.394,
+            "p95M": 19.161,
+            "maxM": 35.294
+          },
+          "cartelSampleCount": 218,
+          "osmSampleCount": 358,
+          "osmWayIds": [
+            1003300262
+          ],
+          "role": "held-out-route"
+        },
+        "mampato": {
+          "cartelToOsm": {
+            "medianM": 7.096,
+            "p95M": 24.548,
+            "maxM": 34.489
+          },
+          "osmToCartel": {
+            "medianM": 9.537,
+            "p95M": 53.522,
+            "maxM": 81.194
+          },
+          "pooledDirections": {
+            "medianM": 8.311,
+            "p95M": 44.401,
+            "maxM": 81.194
+          },
+          "cartelSampleCount": 237,
+          "osmSampleCount": 468,
+          "osmWayIds": [
+            478641797,
+            1003300261
+          ],
+          "role": "held-out-route"
+        },
+        "lomo-vetado": {
+          "cartelToOsm": {
+            "medianM": 6.405,
+            "p95M": 29.196,
+            "maxM": 40.702
+          },
+          "osmToCartel": {
+            "medianM": 6.241,
+            "p95M": 26.868,
+            "maxM": 50.393
+          },
+          "pooledDirections": {
+            "medianM": 6.296,
+            "p95M": 27.418,
+            "maxM": 50.393
+          },
+          "cartelSampleCount": 968,
+          "osmSampleCount": 1392,
+          "osmWayIds": [
+            477170097
+          ],
+          "role": "fit"
+        },
+        "la-bala": {
+          "cartelToOsm": {
+            "medianM": 9.05,
+            "p95M": 38.004,
+            "maxM": 55.315
+          },
+          "osmToCartel": {
+            "medianM": 11.726,
+            "p95M": 35.805,
+            "maxM": 38.874
+          },
+          "pooledDirections": {
+            "medianM": 10.67,
+            "p95M": 36.44,
+            "maxM": 55.315
+          },
+          "cartelSampleCount": 235,
+          "osmSampleCount": 369,
+          "osmWayIds": [
+            1003300263
+          ],
+          "role": "held-out-route"
+        },
+        "cebolla": {
+          "cartelToOsm": {
+            "medianM": 3.809,
+            "p95M": 13.144,
+            "maxM": 14.75
+          },
+          "osmToCartel": {
+            "medianM": 4.218,
+            "p95M": 14.577,
+            "maxM": 22.287
+          },
+          "pooledDirections": {
+            "medianM": 4.07,
+            "p95M": 13.888,
+            "maxM": 22.287
+          },
+          "cartelSampleCount": 160,
+          "osmSampleCount": 235,
+          "osmWayIds": [
+            1003300260
+          ],
+          "role": "held-out-route"
+        },
+        "los-saltos": {
+          "cartelToOsm": {
+            "medianM": 1.29,
+            "p95M": 5.386,
+            "maxM": 7.003
+          },
+          "osmToCartel": {
+            "medianM": 4.228,
+            "p95M": 116.88,
+            "maxM": 135.653
+          },
+          "pooledDirections": {
+            "medianM": 2.66,
+            "p95M": 108.557,
+            "maxM": 135.653
+          },
+          "cartelSampleCount": 93,
+          "osmSampleCount": 219,
+          "osmWayIds": [
+            1003300259
+          ],
+          "role": "held-out-route"
+        },
+        "xl": {
+          "cartelToOsm": {
+            "medianM": 19.684,
+            "p95M": 39.74,
+            "maxM": 46.961
+          },
+          "osmToCartel": {
+            "medianM": 25.415,
+            "p95M": 619.254,
+            "maxM": 837.197
+          },
+          "pooledDirections": {
+            "medianM": 22.428,
+            "p95M": 518.694,
+            "maxM": 837.197
+          },
+          "cartelSampleCount": 1145,
+          "osmSampleCount": 2194,
+          "osmWayIds": [
+            75311770,
+            477174835
+          ],
+          "role": "held-out-route"
+        },
+        "rock-n-roll": {
+          "cartelToOsm": {
+            "medianM": 18.02,
+            "p95M": 25.219,
+            "maxM": 52.18
+          },
+          "osmToCartel": {
+            "medianM": 20.112,
+            "p95M": 245.732,
+            "maxM": 334.68
+          },
+          "pooledDirections": {
+            "medianM": 19.387,
+            "p95M": 233.961,
+            "maxM": 334.68
+          },
+          "cartelSampleCount": 584,
+          "osmSampleCount": 1027,
+          "osmWayIds": [
+            1003300257
+          ],
+          "role": "held-out-route"
+        },
+        "calibre-12": {
+          "cartelToOsm": {
+            "medianM": 6.12,
+            "p95M": 17.497,
+            "maxM": 22.432
+          },
+          "osmToCartel": {
+            "medianM": 5.842,
+            "p95M": 15.966,
+            "maxM": 23.603
+          },
+          "pooledDirections": {
+            "medianM": 5.942,
+            "p95M": 16.93,
+            "maxM": 23.603
+          },
+          "cartelSampleCount": 756,
+          "osmSampleCount": 1080,
+          "osmWayIds": [
+            1003300258
+          ],
+          "role": "fit"
+        }
+      }
+    },
+    "affine": {
+      "matrix": [
+        1.741228318414842,
+        -0.08185995920166109,
+        -0.09042913022215271,
+        -1.8254874482993892,
+        -7850452.113796422,
+        -3933964.629426993
+      ],
+      "iterations": 29,
+      "routeShapeResiduals": {
+        "papaya": {
+          "cartelToOsm": {
+            "medianM": 3.986,
+            "p95M": 17.41,
+            "maxM": 29.588
+          },
+          "osmToCartel": {
+            "medianM": 4.564,
+            "p95M": 17.614,
+            "maxM": 43.608
+          },
+          "pooledDirections": {
+            "medianM": 4.196,
+            "p95M": 17.628,
+            "maxM": 43.608
+          },
+          "cartelSampleCount": 253,
+          "osmSampleCount": 369,
+          "osmWayIds": [
+            747369689
+          ],
+          "role": "fit"
+        },
+        "parcero": {
+          "cartelToOsm": {
+            "medianM": 3.686,
+            "p95M": 11.433,
+            "maxM": 21.17
+          },
+          "osmToCartel": {
+            "medianM": 4.305,
+            "p95M": 21.412,
+            "maxM": 35.965
+          },
+          "pooledDirections": {
+            "medianM": 4.036,
+            "p95M": 19.617,
+            "maxM": 35.965
+          },
+          "cartelSampleCount": 218,
+          "osmSampleCount": 358,
+          "osmWayIds": [
+            1003300262
+          ],
+          "role": "held-out-route"
+        },
+        "mampato": {
+          "cartelToOsm": {
+            "medianM": 3.42,
+            "p95M": 26.652,
+            "maxM": 34.432
+          },
+          "osmToCartel": {
+            "medianM": 7.896,
+            "p95M": 54.652,
+            "maxM": 83.624
+          },
+          "pooledDirections": {
+            "medianM": 5.869,
+            "p95M": 44.819,
+            "maxM": 83.624
+          },
+          "cartelSampleCount": 237,
+          "osmSampleCount": 468,
+          "osmWayIds": [
+            478641797,
+            1003300261
+          ],
+          "role": "held-out-route"
+        },
+        "lomo-vetado": {
+          "cartelToOsm": {
+            "medianM": 4.77,
+            "p95M": 29.124,
+            "maxM": 42.834
+          },
+          "osmToCartel": {
+            "medianM": 4.709,
+            "p95M": 27.078,
+            "maxM": 50.246
+          },
+          "pooledDirections": {
+            "medianM": 4.737,
+            "p95M": 27.302,
+            "maxM": 50.246
+          },
+          "cartelSampleCount": 968,
+          "osmSampleCount": 1392,
+          "osmWayIds": [
+            477170097
+          ],
+          "role": "fit"
+        },
+        "la-bala": {
+          "cartelToOsm": {
+            "medianM": 14.557,
+            "p95M": 45.716,
+            "maxM": 56.799
+          },
+          "osmToCartel": {
+            "medianM": 16.536,
+            "p95M": 45.478,
+            "maxM": 47.39
+          },
+          "pooledDirections": {
+            "medianM": 16.099,
+            "p95M": 45.58,
+            "maxM": 56.799
+          },
+          "cartelSampleCount": 235,
+          "osmSampleCount": 369,
+          "osmWayIds": [
+            1003300263
+          ],
+          "role": "held-out-route"
+        },
+        "cebolla": {
+          "cartelToOsm": {
+            "medianM": 7.491,
+            "p95M": 12.583,
+            "maxM": 14.167
+          },
+          "osmToCartel": {
+            "medianM": 7.359,
+            "p95M": 11.654,
+            "maxM": 15.644
+          },
+          "pooledDirections": {
+            "medianM": 7.415,
+            "p95M": 12.389,
+            "maxM": 15.644
+          },
+          "cartelSampleCount": 160,
+          "osmSampleCount": 235,
+          "osmWayIds": [
+            1003300260
+          ],
+          "role": "held-out-route"
+        },
+        "los-saltos": {
+          "cartelToOsm": {
+            "medianM": 4.814,
+            "p95M": 8.718,
+            "maxM": 9.16
+          },
+          "osmToCartel": {
+            "medianM": 7.557,
+            "p95M": 109.997,
+            "maxM": 128.671
+          },
+          "pooledDirections": {
+            "medianM": 6.22,
+            "p95M": 101.738,
+            "maxM": 128.671
+          },
+          "cartelSampleCount": 93,
+          "osmSampleCount": 219,
+          "osmWayIds": [
+            1003300259
+          ],
+          "role": "held-out-route"
+        },
+        "xl": {
+          "cartelToOsm": {
+            "medianM": 24.613,
+            "p95M": 97.953,
+            "maxM": 101.849
+          },
+          "osmToCartel": {
+            "medianM": 33.33,
+            "p95M": 624.281,
+            "maxM": 843.168
+          },
+          "pooledDirections": {
+            "medianM": 28.517,
+            "p95M": 524.853,
+            "maxM": 843.168
+          },
+          "cartelSampleCount": 1145,
+          "osmSampleCount": 2194,
+          "osmWayIds": [
+            75311770,
+            477174835
+          ],
+          "role": "held-out-route"
+        },
+        "rock-n-roll": {
+          "cartelToOsm": {
+            "medianM": 35.805,
+            "p95M": 72.643,
+            "maxM": 79.5
+          },
+          "osmToCartel": {
+            "medianM": 39.333,
+            "p95M": 232.934,
+            "maxM": 315.186
+          },
+          "pooledDirections": {
+            "medianM": 37.706,
+            "p95M": 219.544,
+            "maxM": 315.186
+          },
+          "cartelSampleCount": 584,
+          "osmSampleCount": 1027,
+          "osmWayIds": [
+            1003300257
+          ],
+          "role": "held-out-route"
+        },
+        "calibre-12": {
+          "cartelToOsm": {
+            "medianM": 6.084,
+            "p95M": 17.475,
+            "maxM": 23.529
+          },
+          "osmToCartel": {
+            "medianM": 6.09,
+            "p95M": 17.181,
+            "maxM": 24.72
+          },
+          "pooledDirections": {
+            "medianM": 6.09,
+            "p95M": 17.36,
+            "maxM": 24.72
+          },
+          "cartelSampleCount": 756,
+          "osmSampleCount": 1080,
+          "osmWayIds": [
+            1003300258
+          ],
+          "role": "fit"
+        }
+      }
+    }
+  },
+  "sources": [
+    {
+      "id": "native-sign-artwork",
+      "path": "data/el-durazno/continuous-sign-trails.json",
+      "sha256": "73521732a4b58bcd14a0aefc17697dca35e5aa05f8f7bd5d3830f2c661f56f78",
+      "url": "https://www.outlife.cl/wp-content/uploads/2023/04/Mapa_El-Durazno-2022_web.pdf",
+      "role": "Graphical source only; not georeferenced source."
+    },
+    {
+      "id": "osm-snapshot",
+      "path": "sources/el-durazno-osm.json",
+      "sha256": "b8926fb02ddcc2410850d831312e64a5c51e5aeb9db49ce970a86e418a0df318",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-70.518,-33.328,-70.485,-33.290",
+      "queriedAt": "2026-10-19T00:07:44.489947+00:00",
+      "role": "Candidate geographic route shapes, exact names and way identifiers; not surveyed ground truth."
+    },
+    {
+      "id": "nominal-associations",
+      "path": "data/el-durazno/geographic-catalog.json",
+      "sha256": "88c93ae8cf5444659a0c5de90e615b9698695dbc37ee4f761ecd3718133b49fb"
+    }
+  ],
+  "reproduction": "python3 scripts/fit-cartel-registration.py"
+}

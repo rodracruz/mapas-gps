@@ -1,6 +1,10 @@
 # Continuar Mapas GPS
 
-## Ajuste más reciente: mapa legible en portada
+## Estado más reciente: curvas del cartel en Mapa de senderos
+
+La fuente predeterminada de «Mapa de senderos» ahora es Cartel: curvas originales completas del PDF oficial, con nombres y puntos encima, sobre el mapa mundial. La posición es experimental y permanece marcada «Ubicación aproximada · Sin ajuste GPS». OSM sigue como comparación; sus longitudes se identifican como OSM. [Método, límites y pruebas](evidence/continuous-cartel.md), [registro experimental](evidence/cartel-registration.md). Datos separados `continuous-sign-trails.json` (píxeles) y `cartel-registration.json` (modelo de presentación no aceptado para GPS). No volver a confundir líneas OSM nominales con el dibujo exacto del cartel.
+
+## Ajuste anterior: mapa legible en portada
 
 Se reemplazó la miniatura estrecha por la fuente oficial2570×3077 a todo el ancho del panel, encuadrada sobre el área del mapa. Tocar «Ampliar mapa» abre el visor existente en modo Cartel, con zoom. La fotografía privada960×1280 sigue intacta en «Ver tu fotografía original»; ya no sustituye la fuente de alta resolución de portada. [Encuadre y verificaciones](evidence/park-image-framing.md).
 

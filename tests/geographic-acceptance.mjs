@@ -6,7 +6,7 @@ const out=new URL('../test-results/geographic/',import.meta.url);await mkdir(out
 const executablePath='/usr/bin/chromium';
 const browser=await chromium.launch({executablePath,args:['--no-sandbox'],proxy:process.env.HTTPS_PROXY?{server:process.env.HTTPS_PROXY}:undefined});
 const checks=[];const check=async(name,fn)=>{await fn();checks.push(name);console.log('PASS',name);};
-const mapUrl=base+'/mapa-geografico.html#parque=el-durazno&mapa=1';
+const mapUrl=base+'/mapa-geografico.html#parque=el-durazno&mapa=1&fuente=osm';
 async function localAssets(page){await page.route(base+'/**',async route=>{const r=await fetch(route.request().url());await route.fulfill({status:r.status,headers:Object.fromEntries(r.headers),body:Buffer.from(await r.arrayBuffer())});});}
 const view=p=>p.locator('#geo-map').getAttribute('data-view');
 try{
@@ -38,7 +38,7 @@ try{
   const ctx=await browser.newContext(),p=await ctx.newPage();await localAssets(p);await p.route('**/geographic-catalog.json',r=>r.fulfill({status:404,body:'missing'}));await p.goto(base+'/mapa-geografico.html');await p.waitForSelector('#app-error:not([hidden])');assert.match(await p.locator('#app-error').innerText(),/información del parque/);assert.equal(await p.locator('.trail-line').count(),0);await ctx.close();
  });
  await check('standalone runs the real mobile flow with embedded data and only online map tiles',async()=>{
-  const ctx=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true}),p=await ctx.newPage();await localAssets(p);const localRequests=[];p.on('request',r=>{if(r.url().startsWith(base))localRequests.push(new URL(r.url()).pathname);});await p.goto(base+'/dist/mapas-gps-parques.html');await p.getByRole('button',{name:/Explorar El Durazno/}).tap();await p.waitForSelector('#map-card[data-ready="true"]');assert.equal(await p.locator('.trail-line').count(),13);await p.waitForFunction(()=>document.querySelector('#park-photo').naturalWidth===2570);assert.deepEqual(localRequests,['/dist/mapas-gps-parques.html','/dist/sources/el-durazno-official-2022.jpg']);await ctx.setOffline(true);await p.locator('#open-map').tap();await p.locator('[data-map-target="lomo-vetado"]').tap();assert.match(await p.locator('#sheet-stats').innerText(),/2,79 km/);await ctx.close();
+  const ctx=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true}),p=await ctx.newPage();await localAssets(p);const localRequests=[];p.on('request',r=>{if(r.url().startsWith(base))localRequests.push(new URL(r.url()).pathname);});await p.goto(base+'/dist/mapas-gps-parques.html#fuente=osm');await p.getByRole('button',{name:/Explorar El Durazno/}).tap();await p.waitForSelector('#map-card[data-ready="true"]');assert.equal(await p.locator('.trail-line').count(),13);await p.waitForFunction(()=>document.querySelector('#park-photo').naturalWidth===2570);assert.deepEqual(localRequests,['/dist/mapas-gps-parques.html','/dist/sources/el-durazno-official-2022.jpg']);await ctx.setOffline(true);await p.locator('#open-map').tap();await p.locator('[data-map-target="lomo-vetado"]').tap();assert.match(await p.locator('#sheet-stats').innerText(),/2,79 km/);await ctx.close();
  });
 }finally{await browser.close();}
 

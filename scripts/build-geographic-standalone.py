@@ -29,11 +29,14 @@ if args.reference_photo:
         width, height = photo.size
     photo_data = {'width': width, 'height': height, 'sha256': hashlib.sha256(raw).hexdigest(), 'dataUrl': 'data:image/jpeg;base64,' + base64.b64encode(raw).decode()}
     payload += '<script id="embedded-park-photo" type="application/json">' + json.dumps(photo_data) + '</script>'
-visual_path = root / 'data/el-durazno/all-visual-trails.json'
+visual_path = root / 'data/el-durazno/continuous-sign-trails.json'
 if visual_path.exists():
     payload += '<script id="embedded-all-visual" type="application/json">' + visual_path.read_text().replace('<', '\\u003c') + '</script>'
+registration = (root / 'data/el-durazno/cartel-registration.json').read_text()
+assert hashlib.sha256(visual_path.read_bytes()).hexdigest() == next(s['sha256'] for s in json.loads(registration)['sources'] if s['id'] == 'native-sign-artwork'), 'Cartel source artwork changed'
+payload += '<script id="embedded-cartel-registration" type="application/json">' + registration.replace('<', '\\u003c') + '</script>'
 modules = []
-for path in ['geographic/data.mjs', 'geographic/catalog.mjs', 'review/geometry.mjs', 'review/sha256.mjs', 'geographic/sign.mjs', 'geographic/viewer.mjs']:
+for path in ['geographic/cartel.mjs', 'geographic/data.mjs', 'geographic/catalog.mjs', 'review/geometry.mjs', 'review/sha256.mjs', 'geographic/sign.mjs', 'geographic/viewer.mjs']:
     text = re.sub(r'^import .*?;\n', '', (root / path).read_text(), flags=re.M)
     modules.append(text.replace('export function ', 'function '))
 html = html.replace('<script type="module" src="./geographic/viewer.mjs"></script>', payload + '<script type="module">\n' + '\n'.join(modules) + '\n</script>')
