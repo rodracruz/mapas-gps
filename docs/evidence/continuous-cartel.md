@@ -36,3 +36,11 @@ GEOGRAPHIC_BASE_URL=http://127.0.0.1:4175 node tests/cartel-world-browser.mjs
 ```
 
 El PDF se obtiene de la URL y SHA registradas; el script rechaza otra fuente. El ajuste usa sólo archivos locales públicos y no modifica OSM ni los datos del usuario. Para el ejecutable privado se conserva `scripts/build-geographic-standalone.py --reference-photo /ruta/privada/81184.jpg`. No subir `dist/`, adjuntos privados o credenciales a GitHub. `main` y GitHub Pages permanecen intactos.
+
+## Actualización privada comprobada
+
+Despliegue `appgdep_6ad5850bcd0c81919b1bf863d583f453` succeeded,19-10-2026,02:49UTC (18-10-2026,23:49 America/Santiago), en la [misma URL privada](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site). Código `86a7581`, copia de alojamiento `0ffabf131d89277305efa3d45c72e5cd3ac15c58`. HTML3.356.604bytes, SHA-256 `a3931d31b606bce3d4263aed9e115af8e21a6d38239243587814478c9f8931d3`, idéntico al archivo local probado.
+
+Diez comprobaciones en el sitio alojado: acceso propietario/401 anónimo; bytes publicados; selección de parque; fuente principal2570×3077 y original privado960×1280 preservados;23 paths del cartel con alineación raster/vector; fichas desplegables; mapa mundial con10 teselas;29 rótulos/45marcas, aviso aproximado, «Sin medir» y comparación OSM con13 vías; revisión anterior conservada; cero errores JavaScript. [Resultado](continuous-cartel/live-verification.json), [captura del sitio con selección](continuous-cartel/live-world-selected.png).
+
+El ZIP privado actualizado fue descargado con200 y coincidió exactamente:8.458.376bytes, SHA-256 `6c11f999f7a5a8586b80b7e426067af0742b35b304a2aee0592b6ffd26eed5b9`. Incluye ejecutable, imagen, datos en píxeles y registro experimental separado. La fotografía privada permanece sólo en el alojamiento y artefactos ignorados. Código y documentación en [PR#3 en borrador](https://github.com/rodracruz/mapas-gps/pull/3), apilado sobre #2. Main remoto continúa en `87edc6c9f8097a9eb34cfc1f7e955a74edfe3ab9`.
