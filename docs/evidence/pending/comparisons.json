@@ -1,0 +1,84 @@
+{
+  "coordinateSystem": "image-pixels",
+  "coordinateFrame": [
+    900,
+    1100
+  ],
+  "geometrySha256": "14882b099a1d29e81bdd5b5d94bfa3c721a37b9c50442a8e11cd53aa5263cd1f",
+  "displayZoom": 4,
+  "resampling": "nearest-neighbor; ordinary pixel replication, no generative enhancement",
+  "sourceHashes": {
+    "original": "c9fde34725691801933b3ba72f887a31677dba305d30f0f938f0ddf81211d018",
+    "official": "d53d3b522b945842e816556a27c11c103463852d2f9d2f50b190cec7d3c9294f"
+  },
+  "registration": "data/el-durazno/image-registration.json",
+  "geographicTransform": null,
+  "regions": [
+    {
+      "gapId": "sw-label-east",
+      "status": "pending",
+      "imageCropXYXY": [
+        568,
+        108,
+        664,
+        182
+      ],
+      "comparisonFile": "sw-label-east-comparacion.png"
+    },
+    {
+      "gapId": "sw-label-west",
+      "status": "pending",
+      "imageCropXYXY": [
+        314,
+        323,
+        399,
+        413
+      ],
+      "comparisonFile": "sw-label-west-comparacion.png"
+    },
+    {
+      "gapId": "virgen-label-upper",
+      "status": "pending",
+      "imageCropXYXY": [
+        378,
+        360,
+        465,
+        436
+      ],
+      "comparisonFile": "virgen-label-upper-comparacion.png"
+    },
+    {
+      "gapId": "virgen-label-lower",
+      "status": "pending",
+      "imageCropXYXY": [
+        193,
+        711,
+        282,
+        784
+      ],
+      "comparisonFile": "virgen-label-lower-comparacion.png"
+    },
+    {
+      "gapId": "lomo-label",
+      "status": "pending",
+      "imageCropXYXY": [
+        356,
+        494,
+        460,
+        586
+      ],
+      "comparisonFile": "lomo-label-comparacion.png"
+    },
+    {
+      "gapId": "lomo-end",
+      "status": "pending",
+      "imageCropXYXY": [
+        270,
+        669,
+        330,
+        729
+      ],
+      "comparisonFile": "lomo-end-comparacion.png"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+import {mkdir} from 'node:fs/promises';
+const base=process.env.GEOGRAPHIC_BASE_URL||'http://127.0.0.1:4174';
+const out=new URL('../test-results/geographic/',import.meta.url);await mkdir(out,{recursive:true});
+const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox'],proxy:process.env.HTTPS_PROXY?{server:process.env.HTTPS_PROXY}:undefined});
+const results=[];const check=async(name,fn)=>{await fn();results.push(name);console.log('PASS',name);};
+try{
+ const context=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true,acceptDownloads:true});
+ const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.route(base+'/**',async route=>{const r=await fetch(route.request().url());await route.fulfill({status:r.status,headers:Object.fromEntries(r.headers),body:Buffer.from(await r.arrayBuffer())});});
+ await page.goto(base+'/mapa-geografico.html');
+ await check('mobile entry starts at park picker',async()=>{assert.equal(await page.locator('#park-picker:visible').count(),1);await page.getByRole('button',{name:/Explorar El Durazno/}).tap();await page.waitForSelector('#park-view:not([hidden])');await page.waitForSelector('#map-card[data-ready="true"]');});
+ await check('map and collapsed trail cards have equal dimensions',async()=>{const sizes=await page.locator('.tile-face').evaluateAll(nodes=>nodes.map(n=>({width:n.getBoundingClientRect().width,height:n.getBoundingClientRect().height})));assert.ok(sizes.length>=5);for(const s of sizes){assert.ok(Math.abs(s.width-sizes[0].width)<1);assert.ok(Math.abs(s.height-sizes[0].height)<1);}assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);});
+ await check('map preview keeps visible OSM attribution',async()=>{assert.equal(await page.locator('.leaflet-control-attribution').isVisible(),true);});
+ await check('trail accordion shows honest sourced difficulty, elevation and speed',async()=>{await page.locator('[data-trail-summary="la-virgen"]').tap();const details=page.locator('[data-trail-details="la-virgen"]');assert.equal(await details.isVisible(),true);assert.match(await details.innerText(),/Principiante/);assert.match(await details.innerText(),/Sin registros/);assert.match(await details.innerText(),/Sin datos/);await page.locator('[data-trail-summary="la-virgen"]').tap();});
+ await page.screenshot({path:new URL('park-mobile.png',out).pathname,fullPage:true});
+ await check('map opens full viewport without iframe and preserves one map',async()=>{await page.locator('#open-map').tap();await page.waitForSelector('#map-card.fullscreen');assert.equal(await page.locator('.leaflet-container').count(),1);assert.equal(await page.locator('iframe').count(),0);const box=await page.locator('#map-card').boundingBox();assert.ok(Math.abs(box.width-390)<1);assert.ok(Math.abs(box.height-844)<1);});
+ await check('pending trail selection leaves geographic map visible and center unchanged',async()=>{const before=await page.locator('#geo-map').getAttribute('data-view');await page.locator('[data-map-target="la-virgen"]').tap();assert.equal(await page.locator('#sheet-title').textContent(),'La Virgen');assert.match(await page.locator('#route-sheet').innerText(),/Trazado pendiente/);assert.equal(await page.locator('#geo-map').getAttribute('data-view'),before);assert.equal(await page.locator('#geo-map:visible').count(),1);});
+ await check('native trail selection displays bottom sheet and exact OSM source',async()=>{await page.locator('[data-map-target="lomo-vetado"]').tap();assert.equal(await page.locator('#sheet-title').textContent(),'Lomo Vetado');assert.equal(await page.locator('.selected-route').count(),2);assert.match(await page.locator('#route-sheet').innerText(),/2,79 km/);assert.match(await page.locator('#sheet-source').getAttribute('href'),/477170097/);});
+ await page.screenshot({path:new URL('map-mobile.png',out).pathname});
+ await check('context hidden still allows selection of a visible OSM line',async()=>{await page.locator('#map-options summary').tap();await page.locator('#show-context').uncheck();await page.locator('#osm-way').selectOption('osm-way-477174834');assert.match(await page.locator('#sheet-title').innerText(),/Conexión Calibre/);assert.equal(await page.locator('.selected-route').count(),2);await page.locator('#map-options summary').tap();});
+ await check('closing map restores park and back restores picker',async()=>{await page.locator('#close-map').tap();await page.waitForSelector('#map-card:not(.fullscreen)');assert.equal(await page.locator('#park-view:visible').count(),1);await page.locator('#back-to-parks').tap();assert.equal(await page.locator('#park-picker:visible').count(),1);});
+ assert.deepEqual(errors,[]);await context.close();console.log(`${results.length} mobile interaction checks passed`);
+}finally{await browser.close();}

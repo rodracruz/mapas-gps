@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "coordinateSystem": "image-pixels",
+  "imageSize": [
+    900,
+    1100
+  ],
+  "sourceImage": "elh-durazno.jpg",
+  "sourceSha256": "c9fde34725691801933b3ba72f887a31677dba305d30f0f938f0ddf81211d018",
+  "queriedOn": "2026-10-18",
+  "method": "manual centerline observations on native original photograph, checked independently and against isolated official PDF outline; no geographical inference",
+  "observationTolerancePx": 1.5,
+  "simplificationTolerancePx": 1,
+  "pdfSha256": "9a67123b027197042da8e47d0c6dbe61e800d11e0e7fe01a5d85172b65ef39ab",
+  "corrections": [
+    {
+      "id": "lomo-hook-photo-review",
+      "kind": "replace-visible-interval",
+      "segmentId": "lomo-vetado-s02",
+      "beforePointsSha256": "6526166c1a6591f8e393aa6587d7297dea9471f03a4db33fb96022a5b140db98",
+      "bounds": [
+        271,
+        620,
+        18,
+        24
+      ],
+      "fromPoint": [
+        275.24,
+        621.8
+      ],
+      "toPoint": [
+        284.0,
+        643.67
+      ],
+      "points": [
+        [
+          275.24,
+          621.8
+        ],
+        [
+          274.5,
+          624.6
+        ],
+        [
+          274.8,
+          627.1
+        ],
+        [
+          276.8,
+          629.3
+        ],
+        [
+          278.6,
+          633.2
+        ],
+        [
+          279.5,
+          633.0
+        ],
+        [
+          280.6,
+          630.9
+        ],
+        [
+          281.6,
+          628.0
+        ],
+        [
+          282.9,
+          625.9
+        ],
+        [
+          284.3,
+          625.0
+        ],
+        [
+          285.5,
+          625.8
+        ],
+        [
+          285.8,
+          629.0
+        ],
+        [
+          284.9,
+          637.2
+        ],
+        [
+          284.0,
+          643.67
+        ]
+      ],
+      "reason": "Reach the photographed upper tip and preserve the small hooked return. Existing displacement was about 2px; within the previously declared 3px uncertainty, but visually avoidable."
+    },
+    {
+      "id": "virgen-tight-turns",
+      "kind": "add-visible-fragment",
+      "segmentId": "la-virgen-s05",
+      "trailId": "la-virgen",
+      "resolvesGapId": "virgen-tight-turns",
+      "bounds": [
+        397,
+        423,
+        28,
+        21
+      ],
+      "points": [
+        [
+          415.43,
+          423.26
+        ],
+        [
+          417.0,
+          426.0
+        ],
+        [
+          419.1,
+          429.2
+        ],
+        [
+          420.8,
+          432.3
+        ],
+        [
+          419.1,
+          432.1
+        ],
+        [
+          414.0,
+          429.7
+        ],
+        [
+          410.0,
+          427.2
+        ],
+        [
+          408.2,
+          427.3
+        ],
+        [
+          408.5,
+          429.4
+        ],
+        [
+          410.9,
+          432.7
+        ],
+        [
+          413.4,
+          435.9
+        ],
+        [
+          413.0,
+          436.7
+        ],
+        [
+          410.7,
+          436.0
+        ],
+        [
+          405.7,
+          434.1
+        ],
+        [
+          401.5,
+          432.8
+        ],
+        [
+          399.2,
+          432.8
+        ],
+        [
+          398.8,
+          434.3
+        ],
+        [
+          400.6,
+          437.0
+        ],
+        [
+          401.3,
+          439.0
+        ],
+        [
+          401.5,
+          441.0
+        ],
+        [
+          401.24,
+          444.3
+        ]
+      ],
+      "reason": "Two separate returns and light wedges are visible in the original photograph and agree with the isolated PDF contour. Previously masked by an overly conservative automatic skeletonization decision."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "coordinateSystem": "image-pixels",
+  "frame": [
+    900,
+    1100
+  ],
+  "sourceSha256": "c9fde34725691801933b3ba72f887a31677dba305d30f0f938f0ddf81211d018",
+  "beforeCommit": "9111b69",
+  "geometrySha256": "14882b099a1d29e81bdd5b5d94bfa3c721a37b9c50442a8e11cd53aa5263cd1f",
+  "geographicTransform": null,
+  "panels": [
+    {
+      "correctionId": "lomo-hook-photo-review",
+      "cropXYXY": [
+        263,
+        612,
+        297,
+        652
+      ],
+      "zoom": 8,
+      "resampling": "nearest-neighbor",
+      "file": "lomo-hook-photo-review-antes-despues.png"
+    },
+    {
+      "correctionId": "virgen-tight-turns",
+      "cropXYXY": [
+        389,
+        415,
+        433,
+        452
+      ],
+      "zoom": 8,
+      "resampling": "nearest-neighbor",
+      "file": "virgen-tight-turns-antes-despues.png"
+    }
+  ]
+}

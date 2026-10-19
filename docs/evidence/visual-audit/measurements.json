@@ -1,0 +1,80 @@
+{
+  "checkedOn": "2026-10-18",
+  "coordinateSystem": "image-pixels",
+  "sourceSha256": "c9fde34725691801933b3ba72f887a31677dba305d30f0f938f0ddf81211d018",
+  "geometrySha256": "14882b099a1d29e81bdd5b5d94bfa3c721a37b9c50442a8e11cd53aa5263cd1f",
+  "beforeCommit": "9111b69",
+  "unchangedPreexistingFragments": [
+    "starwars-s01",
+    "starwars-s02",
+    "starwars-s03",
+    "la-virgen-s01",
+    "la-virgen-s02",
+    "la-virgen-s03",
+    "la-virgen-s04",
+    "lomo-vetado-s01"
+  ],
+  "allPreexistingEndpointsAndNodesUnchanged": true,
+  "stableResolvedRegionId": "virgen-tight-turns",
+  "newFragmentId": "la-virgen-s05",
+  "zigzagPhotoObservations": [
+    {
+      "photoPoint": [
+        420.5,
+        432
+      ],
+      "distanceToTracePx": 0.10471074513017048,
+      "positionOnFragment": 0.9608985288331503
+    },
+    {
+      "photoPoint": [
+        408.5,
+        427.3
+      ],
+      "distanceToTracePx": 0.016641005886761172,
+      "positionOnFragment": 2.8338461538461486
+    },
+    {
+      "photoPoint": [
+        413.5,
+        436.5
+      ],
+      "distanceToTracePx": 0.5385164807134462,
+      "positionOnFragment": 5
+    },
+    {
+      "photoPoint": [
+        399,
+        433
+      ],
+      "distanceToTracePx": 0.23185849289149338,
+      "positionOnFragment": 6.0138697881998295
+    },
+    {
+      "photoPoint": [
+        401,
+        442.5
+      ],
+      "distanceToTracePx": 0.078085282687239,
+      "positionOnFragment": 6.844664236765787
+    }
+  ],
+  "observationTolerancePx": 1.5,
+  "lomoTipObservation": {
+    "photoPoint": [
+      284,
+      625.2
+    ],
+    "distanceToTracePx": 0.6572063879305166
+  },
+  "limitations": [
+    "Landmarks were visually read to native-pixel precision; fractional coordinates do not establish subpixel accuracy.",
+    "These six checks do not establish a global maximum photo-centerline error.",
+    "Interpolated manual samples only test simplification; they are not independent dense measurements.",
+    "No geographic correspondence or navigable connection validated."
+  ],
+  "fragments": 10,
+  "vertices": 253,
+  "pendingRegions": 6,
+  "geographicTransform": null
+}

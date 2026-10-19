@@ -1,0 +1,23 @@
+{
+  "name": "mapas-gps-review",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "serve": "python3 -m http.server 4173 --bind 0.0.0.0",
+    "build:standalone": "python3 scripts/build-standalone.py",
+    "test:standalone": "node tests/standalone.mjs",
+    "test:sources": "node tests/browser-sources.mjs",
+    "test:integrity": "node tests/browser-integrity.mjs",
+    "test:pending": "node tests/pending-review.mjs",
+    "serve:geographic": "python3 -m http.server 4174 --bind 0.0.0.0",
+    "test:geographic": "node --test tests/geographic.test.mjs tests/parks.test.mjs tests/geographic-build.test.mjs",
+    "test:geographic:browser": "node tests/geographic-browser.mjs",
+    "test:geographic:acceptance": "node tests/geographic-acceptance.mjs",
+    "build:geographic": "python3 scripts/build-geographic-standalone.py",
+    "test:geographic:regressions": "node tests/geographic-regressions.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.58.2"
+  }
+}

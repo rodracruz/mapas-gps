@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "coordinateFrame": {
+    "width": 900,
+    "height": 1100
+  },
+  "defaultId": "official",
+  "sources": [
+    {
+      "id": "official",
+      "label": "Mapa oficial · más detalle",
+      "url": "sources/el-durazno-official-aligned-2x.jpg",
+      "naturalWidth": 1800,
+      "naturalHeight": 2200,
+      "sha256": "d53d3b522b945842e816556a27c11c103463852d2f9d2f50b190cec7d3c9294f",
+      "registration": "data/el-durazno/image-registration.json",
+      "rasterScale": 2,
+      "note": "Mapa oficial alineado al plano de la foto. El ajuste visual no valida GPS."
+    },
+    {
+      "id": "original",
+      "label": "Foto de revisión · 900 × 1100",
+      "url": "elh-durazno.jpg",
+      "naturalWidth": 900,
+      "naturalHeight": 1100,
+      "sha256": "c9fde34725691801933b3ba72f887a31677dba305d30f0f938f0ddf81211d018",
+      "rasterScale": 1,
+      "note": "Fotografía original del repositorio, conservada sin cambios."
+    }
+  ]
+}
