@@ -15,3 +15,19 @@ Ruling: no mezclar desniveles de Trailforks con líneas OSM; velocidad máxima p
 Baseline: `npm test`: 25/25 antes de cambios. Pruebas móviles nuevas se escriben antes de implementar y deben fallar por ausencia del selector de parques.
 
 La revisión fotográfica y la biblioteca existentes se conservan. El visor privado se actualiza manteniendo su audiencia; GitHub Pages/main requieren aprobación independiente.
+
+Task 1: complete — catálogo con servicios activos del operador, dificultad con fuente, geometrías ausentes explícitas y rechazo de asignaciones sin evidencia. Pruebas rojas iniciales de catálogo → verdes.
+
+Task 2: complete — selección de parque, tarjetas cerradas iguales, acordeones, mapa persistente a pantalla completa y ficha inferior. Prueba roja por selector inexistente → 9 verificaciones verdes.
+
+Task 3: complete — artefacto con bytes exactos de fuente, 9 controles de aceptación y preservación real de Blob/calibración/trails/webCenter/localStorage con SW activo; 12 regresiones visuales previas y HTML fotográfico autónomo pasan. La cobertura geográfica completa de La Virgen/Starwars permanece pendiente, no se marca resuelta.
+
+Final review: subagente independiente `review_mobile_execution`, base24bc97b..53e7340, sin modificaciones. Encontró tres P2: padding de encuadre en horizontal, atribución tapada y enlaces del HTML autónomo.
+
+Final: fixed landscape framing — regresión zoom5 fuera del parque RED → reserva lateral por ancho real de ficha GREEN.
+
+Final: fixed visible attribution — regresión `elementFromPoint` muestra copyright cubierto RED → atribución adicional siempre visible en barra del mapa GREEN.
+
+Final: fixed standalone links — logo abre listado y foto404 RED → logo vuelve al selector en el mismo archivo y constructor genera/enlaza el HTML fotográfico compañero GREEN.
+
+No menores diferidos reportados. No se probó dispositivo físico, Safari ni GPS de terreno. El código de Leaflet conserva sus bytes originales, incluidos CRLF; la comprobación de espacios del código propio excluye `vendor/leaflet`.

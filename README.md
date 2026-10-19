@@ -1,5 +1,20 @@
 # Mapas GPS · Senderos
 
+## Parques y senderos · móvil
+
+La nueva entrada es [mapa-geografico.html](mapa-geografico.html): elegir parque, consultar servicios y fichas desplegables, abrir un mapa mundial a pantalla completa y tocar una pista para ver su información inferior. Las tarjetas cerradas comparten tamaño. La biblioteca fotográfica anterior continúa disponible.
+
+```sh
+npm ci
+npm run serve:geographic
+# http://127.0.0.1:4174/mapa-geografico.html
+```
+
+El primer catálogo es El Durazno: Subida Buitrera y Lomo Vetado tienen líneas nativas de OSM; La Virgen y Starwars tienen fichas y geometría pendiente. No se inventan velocidades, desniveles ni ubicaciones de servicios.
+
+Construir con `npm run build:geographic`. Pruebas: `npm test`, `npm run test:geographic:browser`, `npm run test:geographic:acceptance` y `npm run test:geographic:regressions`. [Evidencia y pendientes](docs/evidence/mobile-parks.md). El HTML y los datos se incluyen localmente; el fondo cartográfico requiere conexión.
+
+
 Aplicación web móvil para posicionarse con GPS sobre imágenes de mapas de senderos.
 
 El desarrollo del visor vectorial está en `feat/fiel-vector-review`. Para retomar el estado, reproducir pruebas y conocer los límites cartográficos, leer [Continuar el desarrollo](docs/continuar-desarrollo.md).

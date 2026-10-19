@@ -23,6 +23,7 @@ Tarjetas cerradas: 176 px de alto y ancho completo en móvil; mismo tamaño entr
 - `npm run test:geographic:browser`: 9/9; elección de parque, dimensiones iguales, atribución OSM visible, desplegables, pantalla completa, selección, fuentes, contexto apagado y vuelta atrás.
 - `npm run test:geographic:acceptance`: 9/9; teselas realmente cargadas, toque sobre línea real, pellizco/pan por eventos táctiles, zoom mundial/regreso, 360 px/rotación, fuente alterada, catálogo ausente, HTML autónomo y preservación real de almacenamiento con service worker activo.
 - Suite fotográfica existente: 12/12 de navegador y prueba del HTML autónomo anterior. Las imágenes/vectoriales anteriores conservan sus controles y transformaciones.
+- Revisión independiente: tres hallazgos P2 reproducidos con pruebas rojas y corregidos; `node tests/geographic-regressions.mjs`: 3/3. El encuadre reserva ancho cuando la ficha es lateral, hay atribución OSM visible en la barra superior y los enlaces del artefacto llevan al selector y al HTML fotográfico compañero.
 - Preservación adicional: importar PNG real mediante el flujo anterior, guardar calibración válida, campos reales `trails/webCenter`, comparar Blob byte a byte, IDs, campos y localStorage antes/después de app → parque → app, recargar y reabrir imagen calibrada. Se usa un contexto de prueba nuevo; no se accede a mapas del usuario.
 
 Los fallos iniciales del ensayo de zoom mundial se debieron a enviar teclas mientras Leaflet animaba; la prueba final espera cada nivel del control de zoom. La atribución oculta en la miniatura se detectó con prueba roja y se corrigió. No se han probado dispositivos físicos ni navegación GPS en terreno.
@@ -31,7 +32,7 @@ Los fallos iniciales del ensayo de zoom mundial se debieron a enviar teclas mien
 
 Local en este entorno: `npm run serve:geographic`, luego `http://127.0.0.1:4174/mapa-geografico.html`. Esta URL pertenece al entorno remoto; no es un enlace accesible desde el teléfono del usuario.
 
-`npm run build:geographic` produce `dist/mapas-gps-parques.html`, con Leaflet y datos locales incluidos. El fondo OSM requiere conexión; no se descargan teselas masivamente. La revisión fotográfica se conserva como página secundaria al preparar el visor privado.
+`npm run build:geographic` produce `dist/mapas-gps-parques.html`, con Leaflet y datos locales incluidos, y `dist/mapas-gps-revision.html` como revisión fotográfica compañera. Conservar ambos en el paquete para usar el enlace de revisión. El fondo OSM requiere conexión; no se descargan teselas masivamente. El alojamiento privado mantiene la revisión anterior completa, incluida la foto original recibida.
 
 La biblioteca de fotos anterior permanece en su origen. El enlace «Mis mapas» del artefacto alojado abre `https://rodracruz.github.io/mapas-gps/`; Sites y GitHub Pages no comparten IndexedDB. No hay migración ni borrado.
 

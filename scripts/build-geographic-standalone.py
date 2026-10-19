@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Build the mobile parks app with exact, hash-checked geographic source bytes."""
 from pathlib import Path
-import base64, hashlib, json, re
+import base64, hashlib, json, re, subprocess, sys
 
 root = Path(__file__).resolve().parent.parent
+subprocess.run([sys.executable, str(root / 'scripts/build-standalone.py')], check=True, capture_output=True)
 html = (root / 'mapa-geografico.html').read_text()
 for href in ['vendor/leaflet/leaflet.css', 'geographic/style.css']:
     html = html.replace(f'<link rel="stylesheet" href="./{href}">', '<style>' + (root / href).read_text() + '</style>')
@@ -20,7 +21,8 @@ for path in ['geographic/data.mjs', 'geographic/catalog.mjs', 'review/sha256.mjs
     modules.append(text.replace('export function ', 'function '))
 html = html.replace('<script type="module" src="./geographic/viewer.mjs"></script>', payload + '<script type="module">\n' + '\n'.join(modules) + '\n</script>')
 html = html.replace('href="./index.html"', 'href="https://rodracruz.github.io/mapas-gps/"')
-html = html.replace('href="./mapa-geografico.html"', 'href="./"')
+html = html.replace('href="./mapa-geografico.html"', 'href="#"')
+html = html.replace('href="./revision.html"', 'href="./mapas-gps-revision.html"')
 dest = root / 'dist/mapas-gps-parques.html'
 dest.parent.mkdir(exist_ok=True)
 dest.write_text(html)

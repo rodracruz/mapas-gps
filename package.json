@@ -14,7 +14,8 @@
     "test:geographic": "node --test tests/geographic.test.mjs tests/parks.test.mjs tests/geographic-build.test.mjs",
     "test:geographic:browser": "node tests/geographic-browser.mjs",
     "test:geographic:acceptance": "node tests/geographic-acceptance.mjs",
-    "build:geographic": "python3 scripts/build-geographic-standalone.py"
+    "build:geographic": "python3 scripts/build-geographic-standalone.py",
+    "test:geographic:regressions": "node tests/geographic-regressions.mjs"
   },
   "devDependencies": {
     "playwright": "1.58.2"
