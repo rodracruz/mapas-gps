@@ -1,10 +1,12 @@
 import {fromOsmSnapshot} from './data.mjs';
 import {validateCatalog,describeTrail} from './catalog.mjs';
 import {sha256} from '../review/sha256.mjs';
+import {setupSignReview} from './sign.mjs';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let catalog,map,geo,contextLayer,selectionLayer,selectedFeature=null,selectedTarget=null,loadPromise,full=false;
 const targetLayers=new Map(),hiddenTargets=new Set();
+let signReview;
 const metricMarkup=stats=>[['Longitud',stats.distance],['Dificultad',stats.difficulty],['Vel. máxima',stats.maxSpeed],['Ascenso',stats.elevationGain],['Descenso',stats.elevationLoss]].map(([name,value])=>`<div><dt>${esc(name)}</dt><dd>${esc(value)}</dd></div>`).join('');
 function routeState(){const p=new URLSearchParams(location.hash.slice(1));return {park:p.get('parque'),map:p.get('mapa')==='1'};}
 function navigate(park,showMap=false,replace=false){const hash=park?'#'+new URLSearchParams({parque:park,...(showMap?{mapa:'1'}:{})}):'';history[replace?'replaceState':'pushState']({mapasGPS:true,mapasMap:showMap},'',location.pathname+location.search+hash);renderRoute();}
@@ -20,7 +22,9 @@ function renderCatalog(){
  for(const [index,id] of ordered.entries()){
   const t=catalog.targets.find(t=>t.id===id),card=document.createElement('details');card.className='trail-card tile-card';card.style.setProperty('--trail-color',t.color);
   card.innerHTML=`<summary class="tile-face" data-trail-summary="${esc(t.id)}"><span class="trail-topline"><span class="trail-badge"><i></i>${esc(t.difficulty?.label||'Dificultad por confirmar')}</span><span class="trail-number">${String(index+1).padStart(2,'0')}</span></span><span><h3>${esc(t.name)}</h3><span class="trail-footer"><span class="card-distance" data-distance="${esc(t.id)}">Consultando trazado…</span><span class="trail-chevron" aria-hidden="true">⌄</span></span></span></summary><div class="trail-details" data-trail-details="${esc(t.id)}"><p>${esc(t.description)}</p><dl class="stats" data-stats="${esc(t.id)}"></dl><p class="fine-print">${esc(t.sourceNote)}</p><button class="text-button" data-show-on-map="${esc(t.id)}">Ver en el mapa ↗</button></div>`;
-  card.querySelector('[data-show-on-map]').onclick=()=>{selectTarget(t.id);navigate(p.id,true);};$('trail-grid').append(card);
+  card.querySelector('[data-show-on-map]').onclick=()=>{selectTarget(t.id);navigate(p.id,true);};
+  if(t.visualTrailId){const button=document.createElement('button');button.className='text-button';button.textContent='Ver en el plano del cartel →';button.onclick=()=>signReview.open(t.visualTrailId);card.querySelector('.trail-details').append(button);}
+  $('trail-grid').append(card);
  }
  $('map-trails').innerHTML=catalog.targets.map(t=>`<button data-map-target="${esc(t.id)}" data-pending="${t.status!=='osm-identified'}" aria-pressed="false"><i class="trail-color" style="--trail-color:${t.color}"></i>${esc(t.name)}</button>`).join('');
  for(const b of $('map-trails').querySelectorAll('button'))b.onclick=()=>selectTarget(b.dataset.mapTarget);
@@ -28,7 +32,7 @@ function renderCatalog(){
  for(const input of $('visibility-controls').querySelectorAll('input'))input.onchange=()=>setTargetVisible(input.dataset.visibleTarget,input.checked);
  $('open-map').onclick=()=>navigate(p.id,true);$('close-map').onclick=()=>{if(history.state?.mapasMap)history.back();else navigate(p.id,false,true);};
  $('fit-routes').onclick=fitAvailableRoutes;$('close-sheet').onclick=()=>{$('route-sheet').hidden=true;selectedTarget=null;selectedFeature=null;selectionLayer?.clearLayers();updateSelectionButtons();};
- $('fit-selected').onclick=()=>{if(selectedFeature)fitFeatures([selectedFeature]);};
+ $('fit-selected').onclick=()=>{if(selectedFeature)fitFeatures(selectedTarget?featuresFor(selectedTarget):[selectedFeature]);};
  $('show-context').onchange=()=>{if(!contextLayer)return;if($('show-context').checked)contextLayer.addTo(map);else map.removeLayer(contextLayer);};
  $('osm-way').onchange=()=>{const f=geo.features.find(f=>f.id===$('osm-way').value);if(f){selectFeature(f);fitFeatures([f]);}};
  $('download-geojson').onclick=()=>{if(!geo)return;const url=URL.createObjectURL(new Blob([JSON.stringify(geo,null,2)],{type:'application/geo+json'}));const a=document.createElement('a');a.href=url;a.download='el-durazno-trazados-osm.geojson';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
@@ -38,20 +42,22 @@ function updateCards(){
  for(const t of catalog.targets){const stats=describeTrail(t,geo?.features||[]);document.querySelector(`[data-stats="${t.id}"]`).innerHTML=metricMarkup(stats);document.querySelector(`[data-distance="${t.id}"]`).textContent=featuresFor(t.id).length?stats.distance+' · Ver información':'Trazado pendiente · Ver información';}
  const count=catalog.targets.filter(t=>featuresFor(t.id).length).length;
  $('available-count').textContent=count+' trazados disponibles';
- $('data-status').textContent=geo?'Subida Buitrera y Lomo Vetado disponibles en el mapa. Estamos incorporando los trazados de La Virgen y Starwars.':'Los senderos se cargarán al abrir el parque.';
+ $('data-status').textContent=geo?count+' senderos con trazado OSM. Los demás pueden revisarse en el plano del cartel; su ubicación geográfica sigue pendiente.':'Los senderos se cargarán al abrir el parque.';
 }
 function updateSelectionButtons(){for(const button of $('map-trails').querySelectorAll('button'))button.setAttribute('aria-pressed',String(button.dataset.mapTarget===selectedTarget));}
-function paintSelection(feature){
- selectionLayer?.clearLayers();if(!selectionLayer||!feature)return;
+function paintSelection(features){
+ selectionLayer?.clearLayers();if(!selectionLayer||!features)return;
+ for(const feature of (Array.isArray(features)?features:[features])){
  const color=catalog.targets.find(t=>t.id===feature.properties.targetId)?.color||'#687765';const coords=feature.geometry.coordinates.map(([lon,lat])=>[lat,lon]);
  L.polyline(coords,{color:'#fffefa',weight:11,opacity:1,interactive:false,smoothFactor:0,className:'selected-route'}).addTo(selectionLayer);
  L.polyline(coords,{color,weight:6,opacity:1,interactive:false,smoothFactor:0,className:'selected-route'}).addTo(selectionLayer);
+ }
 }
 function selectTarget(id){
  const t=catalog.targets.find(t=>t.id===id);if(!t)return;
  selectedTarget=id;selectedFeature=featuresFor(id)[0]||null;
  if(selectedFeature&&hiddenTargets.has(id))setTargetVisible(id,true);
- paintSelection(selectedFeature);updateSelectionButtons();const stats=describeTrail(t,geo?.features||[]);
+ paintSelection(featuresFor(id));updateSelectionButtons();const stats=describeTrail(t,geo?.features||[]);
  $('sheet-title').textContent=t.name;$('sheet-level').textContent=selectedFeature?'SENDERO · '+stats.difficulty.toUpperCase():'TRAZADO PENDIENTE';
  $('sheet-description').textContent=selectedFeature?t.description:'Trazado pendiente. Esta pista todavía no tiene una línea disponible en nuestro mapa.';
  $('sheet-stats').innerHTML=metricMarkup(stats);$('sheet-source').href=t.publicMapUrl;$('sheet-source').textContent=selectedFeature?'Fuente OpenStreetMap ↗':'Referencia de la pista ↗';$('fit-selected').hidden=!selectedFeature;$('route-sheet').hidden=false;
@@ -93,5 +99,5 @@ async function renderRoute(){
  document.title=(full?'Mapa · ':'')+catalog.park.shortName+' · Mapas GPS';await ensureMap();if(map){map.invalidateSize({animate:false});if(full&&!selectedTarget)fitAvailableRoutes();}
  if(full)$('close-map').focus({preventScroll:true});
 }
-async function init(){try{const embedded=$('embedded-geographic-catalog');if(embedded)catalog=JSON.parse(embedded.textContent);else{const response=await fetch('./data/el-durazno/geographic-catalog.json');if(!response.ok)throw new Error('No se pudo cargar la información del parque.');catalog=await response.json();}validateCatalog(catalog);renderCatalog();await renderRoute();}catch(error){$('app-error').textContent=error.message;$('app-error').hidden=false;$('park-list').replaceChildren();}}
+async function init(){try{const embedded=$('embedded-geographic-catalog');if(embedded)catalog=JSON.parse(embedded.textContent);else{const response=await fetch('./data/el-durazno/geographic-catalog.json');if(!response.ok)throw new Error('No se pudo cargar la información del parque.');catalog=await response.json();}validateCatalog(catalog);signReview=setupSignReview();renderCatalog();await renderRoute();}catch(error){$('app-error').textContent=error.message;$('app-error').hidden=false;$('park-list').replaceChildren();}}
 window.addEventListener('popstate',renderRoute);window.addEventListener('hashchange',renderRoute);window.addEventListener('resize',()=>map?.invalidateSize({animate:false}));window.addEventListener('keydown',event=>{if(event.key==='Escape'&&full)$('close-map').click();});init();

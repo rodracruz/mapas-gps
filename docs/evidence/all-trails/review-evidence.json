@@ -1,0 +1,334 @@
+{
+  "status": "ready for visual review; pending gaps remain intentional",
+  "scope": {
+    "legendTrailCount": 20,
+    "auxiliaryTrailCount": 2,
+    "imageCoordinateSystem": "native official image pixels 2570x3077",
+    "geographicProcessing": false,
+    "generativeProcessing": false
+  },
+  "sourceInspection": [
+    {
+      "kind": "official PDF",
+      "sha256": "9a67123b027197042da8e47d0c6dbe61e800d11e0e7fe01a5d85172b65ef39ab",
+      "pageCount": 1,
+      "drawingCount": 2852,
+      "extractableTextCharacters": 0,
+      "inspection": "viewed official image, vector-label atlas, and all isolated selected outlines over official-image crops"
+    },
+    {
+      "kind": "official JPG",
+      "sha256": "ee124136bc9930ca1928d2df1f79a9810fb4d245c66503a2d4c6ae888aea29af",
+      "dimensions": [
+        2570,
+        3077
+      ]
+    },
+    {
+      "kind": "private original user photograph",
+      "sha256": "c6391281460cc5c6ad65d61069bd310bdd1dd64b8fedbb4d2c12d81898668fb9",
+      "dimensions": [
+        960,
+        1280
+      ],
+      "inspection": "actually viewed; visual corroboration only; not redistributed"
+    },
+    {
+      "kind": "existing cropped user photograph",
+      "sha256": "c9fde34725691801933b3ba72f887a31677dba305d30f0f938f0ddf81211d018",
+      "dimensions": [
+        900,
+        1100
+      ],
+      "inspection": "actually viewed; not the coordinate base for this dataset"
+    }
+  ],
+  "associationEvidence": [
+    {
+      "id": "chilling",
+      "name": "Chilling",
+      "sourceDrawingIndices": [
+        2833
+      ],
+      "labelDrawingIndices": [
+        2839
+      ],
+      "axisAndPendingReviewImage": "chilling-source-evidence.png"
+    },
+    {
+      "id": "papaya",
+      "name": "Papaya",
+      "sourceDrawingIndices": [
+        19
+      ],
+      "labelDrawingIndices": [
+        113
+      ],
+      "axisAndPendingReviewImage": "papaya-source-evidence.png"
+    },
+    {
+      "id": "la-virgen",
+      "name": "La Virgen",
+      "sourceDrawingIndices": [
+        31
+      ],
+      "labelDrawingIndices": [
+        120,
+        129
+      ],
+      "axisAndPendingReviewImage": "la-virgen-source-evidence.png"
+    },
+    {
+      "id": "parcero",
+      "name": "Parcero",
+      "sourceDrawingIndices": [
+        23
+      ],
+      "labelDrawingIndices": [
+        147
+      ],
+      "axisAndPendingReviewImage": "parcero-source-evidence.png"
+    },
+    {
+      "id": "skills",
+      "name": "Skills",
+      "sourceDrawingIndices": [
+        258
+      ],
+      "labelDrawingIndices": [
+        260
+      ],
+      "axisAndPendingReviewImage": "skills-source-evidence.png"
+    },
+    {
+      "id": "mampato",
+      "name": "Mampato",
+      "sourceDrawingIndices": [
+        67
+      ],
+      "labelDrawingIndices": [
+        348
+      ],
+      "axisAndPendingReviewImage": "mampato-source-evidence.png"
+    },
+    {
+      "id": "starwars",
+      "name": "Starwars",
+      "sourceDrawingIndices": [
+        51
+      ],
+      "labelDrawingIndices": [
+        138,
+        184
+      ],
+      "axisAndPendingReviewImage": "starwars-source-evidence.png"
+    },
+    {
+      "id": "cactus",
+      "name": "Cactus",
+      "sourceDrawingIndices": [
+        55
+      ],
+      "labelDrawingIndices": [
+        193
+      ],
+      "axisAndPendingReviewImage": "cactus-source-evidence.png"
+    },
+    {
+      "id": "lomo-vetado",
+      "name": "Lomo Vetado",
+      "sourceDrawingIndices": [
+        39
+      ],
+      "labelDrawingIndices": [
+        102
+      ],
+      "axisAndPendingReviewImage": "lomo-vetado-source-evidence.png"
+    },
+    {
+      "id": "la-bala",
+      "name": "La Bala",
+      "sourceDrawingIndices": [
+        343
+      ],
+      "labelDrawingIndices": [
+        2089
+      ],
+      "axisAndPendingReviewImage": "la-bala-source-evidence.png"
+    },
+    {
+      "id": "cebolla",
+      "name": "Cebolla",
+      "sourceDrawingIndices": [
+        15
+      ],
+      "labelDrawingIndices": [
+        155
+      ],
+      "axisAndPendingReviewImage": "cebolla-source-evidence.png"
+    },
+    {
+      "id": "los-saltos",
+      "name": "Los Saltos",
+      "sourceDrawingIndices": [
+        35
+      ],
+      "labelDrawingIndices": [
+        174
+      ],
+      "axisAndPendingReviewImage": "los-saltos-source-evidence.png"
+    },
+    {
+      "id": "el-gringo",
+      "name": "El Gringo",
+      "sourceDrawingIndices": [
+        47
+      ],
+      "labelDrawingIndices": [
+        200
+      ],
+      "axisAndPendingReviewImage": "el-gringo-source-evidence.png"
+    },
+    {
+      "id": "el-duro",
+      "name": "El Duro",
+      "sourceDrawingIndices": [
+        12
+      ],
+      "labelDrawingIndices": [
+        209
+      ],
+      "axisAndPendingReviewImage": "el-duro-source-evidence.png"
+    },
+    {
+      "id": "xl",
+      "name": "XL",
+      "sourceDrawingIndices": [
+        4
+      ],
+      "labelDrawingIndices": [
+        227,
+        231,
+        235
+      ],
+      "axisAndPendingReviewImage": "xl-source-evidence.png"
+    },
+    {
+      "id": "rock-n-roll",
+      "name": "Rock N’Roll",
+      "sourceDrawingIndices": [
+        8
+      ],
+      "labelDrawingIndices": [
+        90
+      ],
+      "axisAndPendingReviewImage": "rock-n-roll-source-evidence.png"
+    },
+    {
+      "id": "las-nieves",
+      "name": "Las Nieves",
+      "sourceDrawingIndices": [
+        59
+      ],
+      "labelDrawingIndices": [
+        216
+      ],
+      "axisAndPendingReviewImage": "las-nieves-source-evidence.png"
+    },
+    {
+      "id": "calibre-12",
+      "name": "Calibre12",
+      "sourceDrawingIndices": [
+        43
+      ],
+      "labelDrawingIndices": [
+        163
+      ],
+      "axisAndPendingReviewImage": "calibre-12-source-evidence.png"
+    },
+    {
+      "id": "calibre-loco",
+      "name": "Calibre Loco",
+      "sourceDrawingIndices": [
+        27
+      ],
+      "labelDrawingIndices": [
+        70
+      ],
+      "axisAndPendingReviewImage": "calibre-loco-source-evidence.png"
+    },
+    {
+      "id": "mordor",
+      "name": "Mordor",
+      "sourceDrawingIndices": [
+        63
+      ],
+      "labelDrawingIndices": [
+        82
+      ],
+      "axisAndPendingReviewImage": "mordor-source-evidence.png"
+    },
+    {
+      "id": "subida-cartel",
+      "name": "Subida",
+      "sourceDrawingIndices": [
+        240,
+        239
+      ],
+      "labelDrawingIndices": [
+        244,
+        251,
+        271
+      ],
+      "axisAndPendingReviewImage": "subida-cartel-source-evidence.png"
+    },
+    {
+      "id": "subida-e-bike",
+      "name": "Subida E-Bike",
+      "sourceDrawingIndices": [
+        356
+      ],
+      "labelDrawingIndices": [
+        359,
+        372
+      ],
+      "axisAndPendingReviewImage": "subida-e-bike-source-evidence.png"
+    }
+  ],
+  "geometryMethod": {
+    "outlineRasterScale": 4,
+    "rasterGridSpacingNativePx": 0.25,
+    "simplificationToleranceNativePx": 0,
+    "maximumEdgeLengthNativePx": 0.3535533905932738,
+    "skillsMethod": "genuine PDF stroked path 258, adaptive cubic flattening <=0.025 native px",
+    "visibility": "PDF categorical vector repaint in actual order; printed-mark footprint masks; terminal-symbol masks; medial-axis branch masks; no bridge across dropped samples",
+    "pendingRectangles": "initial four-native-pixel tiles over occluded samples, merged only if union removes no retained axis sample"
+  },
+  "verification": {
+    "schemaValidator": "review/geometry.mjs validateDataset passed with 22 trails",
+    "maximum4xTo8xAxisDifferenceNativePx": 0.31868871959954903,
+    "samplesOver1NativePx": 0,
+    "strictEdgeGapIntersections": 0,
+    "strictEdgeGapPairsTested": 667118,
+    "crossingsConnected": 0,
+    "sharedEndpointNodes": 0
+  },
+  "pending": [
+    "164 explicitly pending rectangles preserve printed labels, arrows, endpoint symbols, crossings and local medial-axis ambiguities. None is interpolated.",
+    "Chilling and Los Saltos have short visible fragments because their inline labels cover most of their depicted source axis; hidden outline continuity is not published as visible geometry.",
+    "Nearby white/filled endpoint symbols remain independent; spatial proximity never establishes a connection.",
+    "Dotted green connections and red expert-only dotted connections are not included as navigable trails.",
+    "Two auxiliary ascents are labeled as printed; no identity with any OSM route is asserted.",
+    "No geographic correspondence or georeferencing transform has been established."
+  ],
+  "artifacts": {
+    "combinedOverlay": "all-trails-overlay.png",
+    "inlineLabelAtlas": "review-label-plate-atlas.png",
+    "isolatedOutlineAtlas": "path-atlas.jpg",
+    "perTrailReview": "*-source-evidence.png",
+    "metrics": "extraction-audit.json",
+    "resolutionStability": "resolution-check.json",
+    "strictGapCheck": "edge-mask-check.json",
+    "determinism": "reproducibility-check.json"
+  }
+}

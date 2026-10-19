@@ -32,13 +32,63 @@
       ],
       "publicMapUrl": "https://www.openstreetmap.org/way/477168992",
       "description": "Tramo denominado Sendero Subida Buitrera en OpenStreetMap. No representa todas las alternativas de subida del parque.",
-      "sourceNote": "Tramo OSM identificado por nombre; extensión actual por confirmar.",
+      "sourceNote": "Tramo OSM identificado por nombre; extensión actual por confirmar. El rótulo visual «Subida» no acredita equivalencia con toda esta vía.",
       "color": "#d56b3f",
       "difficulty": null,
       "elevationGainM": null,
       "elevationLossM": null,
       "geometry": null,
-      "geometryImported": true
+      "geometryImported": true,
+      "osmNames": [
+        "Sendero Subida Buitrera"
+      ],
+      "visualTrailId": null
+    },
+    {
+      "id": "chilling",
+      "name": "Chilling",
+      "status": "public-reference",
+      "osmWayIds": [],
+      "osmNames": [],
+      "visualTrailId": "chilling",
+      "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+      "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+      "geometryImported": false,
+      "color": "#53894f",
+      "difficulty": {
+        "label": "Principiante",
+        "style": "Park",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+    },
+    {
+      "id": "papaya",
+      "name": "Papaya",
+      "status": "osm-identified",
+      "osmWayIds": [
+        747369689
+      ],
+      "osmNames": [
+        "Sendero Papaya"
+      ],
+      "visualTrailId": "papaya",
+      "publicMapUrl": "https://www.openstreetmap.org/way/747369689",
+      "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+      "geometryImported": true,
+      "color": "#53894f",
+      "difficulty": {
+        "label": "Principiante",
+        "style": "Trail",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar."
     },
     {
       "id": "la-virgen",
@@ -46,12 +96,13 @@
       "status": "public-reference",
       "osmWayIds": [],
       "publicMapUrl": "https://www.trailforks.com/trails/la-virgen-205330/",
-      "description": "La pista está identificada por el operador. Su trazado todavía no está disponible para mostrarlo en este mapa.",
+      "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
       "geometryImported": false,
       "color": "#53894f",
       "difficulty": {
         "label": "Principiante",
-        "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/"
+        "style": "Park",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
       },
       "elevationGainM": null,
       "elevationLossM": null,
@@ -64,27 +115,81 @@
           "geometryImported": false
         }
       ],
-      "sourceNote": "Dificultad publicada por el operador. Geometría pendiente."
+      "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS.",
+      "osmNames": [],
+      "visualTrailId": "la-virgen"
     },
     {
-      "id": "lomo-vetado",
-      "name": "Lomo Vetado",
+      "id": "parcero",
+      "name": "Parcero",
       "status": "osm-identified",
       "osmWayIds": [
-        477170097
+        1003300262
       ],
-      "publicMapUrl": "https://www.openstreetmap.org/way/477170097",
-      "description": "Trazado de OpenStreetMap identificado por el nombre Sendero Lomo Vetado. La vigencia de accesos y sentidos no está comprobada.",
-      "color": "#247d87",
+      "osmNames": [
+        "Sendero Parcero"
+      ],
+      "visualTrailId": "parcero",
+      "publicMapUrl": "https://www.openstreetmap.org/way/1003300262",
+      "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+      "geometryImported": true,
+      "color": "#53894f",
       "difficulty": {
-        "label": "Intermedio",
-        "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/"
+        "label": "Principiante",
+        "style": "Park",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
       },
       "elevationGainM": null,
       "elevationLossM": null,
       "geometry": null,
+      "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar."
+    },
+    {
+      "id": "skills",
+      "name": "Skills",
+      "status": "public-reference",
+      "osmWayIds": [],
+      "osmNames": [],
+      "visualTrailId": "skills",
+      "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+      "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+      "geometryImported": false,
+      "color": "#486db5",
+      "difficulty": {
+        "label": "Intermedio",
+        "style": "Park",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+    },
+    {
+      "id": "mampato",
+      "name": "Mampato",
+      "status": "osm-identified",
+      "osmWayIds": [
+        478641797,
+        1003300261
+      ],
+      "osmNames": [
+        "Sendero Mampato"
+      ],
+      "visualTrailId": "mampato",
+      "publicMapUrl": "https://www.openstreetmap.org/way/478641797",
+      "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
       "geometryImported": true,
-      "sourceNote": "Geometría OSM; vigencia de accesos y sentidos por comprobar."
+      "color": "#486db5",
+      "difficulty": {
+        "label": "Intermedio",
+        "style": "Park",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar. Se conservan los dos tramos OSM separados, sin unirlos ni convertirlos en una única línea."
     },
     {
       "id": "starwars",
@@ -92,12 +197,13 @@
       "status": "public-reference",
       "osmWayIds": [],
       "publicMapUrl": "https://www.trailforks.com/trails/star-wars-76316/",
-      "description": "La pista está identificada por el operador. Su trazado todavía no está disponible para mostrarlo en este mapa.",
+      "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
       "geometryImported": false,
       "color": "#486db5",
       "difficulty": {
         "label": "Intermedio",
-        "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/"
+        "style": "Trail",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
       },
       "elevationGainM": null,
       "elevationLossM": null,
@@ -110,7 +216,311 @@
           "geometryImported": false
         }
       ],
-      "sourceNote": "Dificultad publicada por el operador. Geometría pendiente."
+      "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS.",
+      "osmNames": [],
+      "visualTrailId": "starwars"
+    },
+    {
+      "id": "cactus",
+      "name": "Cactus",
+      "status": "public-reference",
+      "osmWayIds": [],
+      "osmNames": [],
+      "visualTrailId": "cactus",
+      "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+      "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+      "geometryImported": false,
+      "color": "#486db5",
+      "difficulty": {
+        "label": "Intermedio",
+        "style": "Trail",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+    },
+    {
+      "id": "lomo-vetado",
+      "name": "Lomo Vetado",
+      "status": "osm-identified",
+      "osmWayIds": [
+        477170097
+      ],
+      "publicMapUrl": "https://www.openstreetmap.org/way/477170097",
+      "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+      "color": "#247d87",
+      "difficulty": {
+        "label": "Intermedio",
+        "style": "Park",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": true,
+      "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar.",
+      "osmNames": [
+        "Sendero Lomo Vetado"
+      ],
+      "visualTrailId": "lomo-vetado"
+    },
+    {
+      "id": "la-bala",
+      "name": "La Bala",
+      "status": "osm-identified",
+      "osmWayIds": [
+        1003300263
+      ],
+      "osmNames": [
+        "Sendero la Bala"
+      ],
+      "visualTrailId": "la-bala",
+      "publicMapUrl": "https://www.openstreetmap.org/way/1003300263",
+      "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+      "geometryImported": true,
+      "color": "#486db5",
+      "difficulty": {
+        "label": "Intermedio",
+        "style": "Park",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar."
+    },
+    {
+      "id": "cebolla",
+      "name": "Cebolla",
+      "status": "osm-identified",
+      "osmWayIds": [
+        1003300260
+      ],
+      "osmNames": [
+        "Sendero Cebolla"
+      ],
+      "visualTrailId": "cebolla",
+      "publicMapUrl": "https://www.openstreetmap.org/way/1003300260",
+      "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+      "geometryImported": true,
+      "color": "#343b45",
+      "difficulty": {
+        "label": "Avanzado",
+        "style": "Park",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar."
+    },
+    {
+      "id": "los-saltos",
+      "name": "Los Saltos",
+      "status": "osm-identified",
+      "osmWayIds": [
+        1003300259
+      ],
+      "osmNames": [
+        "Ssendero Los Saltos"
+      ],
+      "visualTrailId": "los-saltos",
+      "publicMapUrl": "https://www.openstreetmap.org/way/1003300259",
+      "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+      "geometryImported": true,
+      "color": "#343b45",
+      "difficulty": {
+        "label": "Avanzado",
+        "style": "Park",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar."
+    },
+    {
+      "id": "el-gringo",
+      "name": "El Gringo",
+      "status": "public-reference",
+      "osmWayIds": [],
+      "osmNames": [],
+      "visualTrailId": "el-gringo",
+      "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+      "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+      "geometryImported": false,
+      "color": "#343b45",
+      "difficulty": {
+        "label": "Avanzado",
+        "style": "Park",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+    },
+    {
+      "id": "el-duro",
+      "name": "El Duro",
+      "status": "public-reference",
+      "osmWayIds": [],
+      "osmNames": [],
+      "visualTrailId": "el-duro",
+      "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+      "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+      "geometryImported": false,
+      "color": "#343b45",
+      "difficulty": {
+        "label": "Avanzado",
+        "style": "Trail",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+    },
+    {
+      "id": "xl",
+      "name": "XL",
+      "status": "osm-identified",
+      "osmWayIds": [
+        75311770,
+        477174835
+      ],
+      "osmNames": [
+        "Sendero XL"
+      ],
+      "visualTrailId": "xl",
+      "publicMapUrl": "https://www.openstreetmap.org/way/75311770",
+      "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+      "geometryImported": true,
+      "color": "#202833",
+      "difficulty": {
+        "label": "Experto",
+        "style": "Trail",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar. Se conservan los dos tramos OSM separados, sin unirlos ni convertirlos en una única línea."
+    },
+    {
+      "id": "rock-n-roll",
+      "name": "Rock N’Roll",
+      "status": "osm-identified",
+      "osmWayIds": [
+        1003300257
+      ],
+      "osmNames": [
+        "Sendero Rock´n Roll"
+      ],
+      "visualTrailId": "rock-n-roll",
+      "publicMapUrl": "https://www.openstreetmap.org/way/1003300257",
+      "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+      "geometryImported": true,
+      "color": "#202833",
+      "difficulty": {
+        "label": "Experto",
+        "style": "Trail",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar."
+    },
+    {
+      "id": "las-nieves",
+      "name": "Las Nieves",
+      "status": "public-reference",
+      "osmWayIds": [],
+      "osmNames": [],
+      "visualTrailId": "las-nieves",
+      "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+      "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+      "geometryImported": false,
+      "color": "#202833",
+      "difficulty": {
+        "label": "Experto",
+        "style": "Trail",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+    },
+    {
+      "id": "calibre-12",
+      "name": "Calibre 12",
+      "status": "osm-identified",
+      "osmWayIds": [
+        1003300258
+      ],
+      "osmNames": [
+        "Sendero Calibre 12"
+      ],
+      "visualTrailId": "calibre-12",
+      "publicMapUrl": "https://www.openstreetmap.org/way/1003300258",
+      "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+      "geometryImported": true,
+      "color": "#202833",
+      "difficulty": {
+        "label": "Experto",
+        "style": "Park",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar."
+    },
+    {
+      "id": "calibre-loco",
+      "name": "Calibre Loco",
+      "status": "public-reference",
+      "osmWayIds": [],
+      "osmNames": [],
+      "visualTrailId": "calibre-loco",
+      "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+      "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+      "geometryImported": false,
+      "color": "#202833",
+      "difficulty": {
+        "label": "Experto",
+        "style": "Trail",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+    },
+    {
+      "id": "mordor",
+      "name": "Mordor",
+      "status": "public-reference",
+      "osmWayIds": [],
+      "osmNames": [],
+      "visualTrailId": "mordor",
+      "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+      "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+      "geometryImported": false,
+      "color": "#202833",
+      "difficulty": {
+        "label": "Experto",
+        "style": "Park",
+        "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
     }
   ],
   "visualToGeographicTransform": null,

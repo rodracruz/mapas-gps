@@ -8,11 +8,12 @@ export function validateCatalog(catalog){
  if(!park||!/^[a-z0-9-]+$/.test(park.id)||typeof park.name!=='string'||!validSource(park.sourceUrl)||!Array.isArray(park.amenities)||!Array.isArray(park.primaryTargetIds))fail();
  for(const amenity of park.amenities)if(!amenity.id||!amenity.label||!validSource(amenity.sourceUrl))fail();
  for(const t of catalog.targets){
-  if(!/^[a-z0-9-]+$/.test(t.id)||ids.has(t.id)||typeof t.name!=='string'||!/^#[0-9a-f]{6}$/i.test(t.color)||!validSource(t.publicMapUrl)||!Array.isArray(t.osmWayIds)||t.geometry!==null)fail();
+  if(!/^[a-z0-9-]+$/.test(t.id)||ids.has(t.id)||typeof t.name!=='string'||!/^#[0-9a-f]{6}$/i.test(t.color)||!validSource(t.publicMapUrl)||!Array.isArray(t.osmWayIds)||!Array.isArray(t.osmNames)||t.osmNames.some(name=>typeof name!=='string'||!name.trim())||new Set(t.osmNames).size!==t.osmNames.length||t.geometry!==null)fail();
+  if(t.visualTrailId!==null&&t.visualTrailId!==undefined&&!/^[a-z0-9-]+$/.test(t.visualTrailId))fail();
   ids.add(t.id);
-  if(t.status==='osm-identified'){if(!t.osmWayIds.length)fail();for(const id of t.osmWayIds){if(!Number.isSafeInteger(id)||wayIds.has(id))fail();wayIds.add(id);}}
-  else if(t.status!=='public-reference'||t.osmWayIds.length||t.geometryImported!==false)fail();
-  if(t.difficulty&&(!['Principiante','Intermedio','Avanzado','Experto'].includes(t.difficulty.label)||!validSource(t.difficulty.sourceUrl)))fail();
+  if(t.status==='osm-identified'){if(!t.osmWayIds.length||!t.osmNames.length||t.geometryImported!==true)fail();for(const id of t.osmWayIds){if(!Number.isSafeInteger(id)||wayIds.has(id))fail();wayIds.add(id);}}
+  else if(t.status!=='public-reference'||t.osmWayIds.length||t.osmNames.length||t.geometryImported!==false)fail();
+  if(t.difficulty&&(!['Principiante','Intermedio','Avanzado','Experto'].includes(t.difficulty.label)||!validSource(t.difficulty.sourceUrl)||(t.difficulty.style!==undefined&&!['Park','Trail'].includes(t.difficulty.style))))fail();
   for(const key of ['elevationGainM','elevationLossM'])if(t[key]!==null&&(!Number.isFinite(t[key])||t[key]<0))fail();
  }
  if(!park.primaryTargetIds.every(id=>ids.has(id))||!validSource(catalog.sourceUrl)||!/^sources\/[a-z0-9-]+\.json$/.test(catalog.sourceSnapshot)||!/^[0-9a-f]{64}$/.test(catalog.sourceSnapshotSha256))fail();

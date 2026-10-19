@@ -1,6 +1,12 @@
 # Continuar Mapas GPS
 
-## Estado más reciente: flujo móvil ejecutado
+## Estado más reciente: todos los senderos y foto principal
+
+Rama `feat/all-trails-from-sign` sobre `156a270`: foto privada original en la página principal de El Durazno,20 senderos del cartel y2 subidas en plano visual separado,21 fichas y13 vías OSM nominales. [Método, límites y pruebas](evidence/all-trails.md), [catálogo geográfico](evidence/all-catalog.md). Datos editables `data/el-durazno/all-visual-trails.json`: píxeles2570×3077,104 fragmentos,72.831 vértices,164 huecos. Ningún ajuste GPS ni conexión inferida.
+
+La vista privada mantiene su URL; `main` y los datos locales del usuario siguen intactos. Para reconstruir con el adjunto privado se debe pasar `--reference-photo` al constructor. Sin ese argumento se usa la fuente oficial pública identificada como tal. No subir `dist/` ni el adjunto al repositorio público.
+
+## Estado anterior: flujo móvil ejecutado
 
 Rama activa `feat/mapa-geografico`, [PR #2 en borrador](https://github.com/rodracruz/mapas-gps/pull/2). Entrada `mapa-geografico.html`: elegir parque → información/servicios → tarjetas iguales de mapa y senderos → detalles desplegables → mapa a pantalla completa con ficha inferior al tocar pista. Uso móvil95%; no volver a sustituir las capas por widgets de otros proveedores.
 
