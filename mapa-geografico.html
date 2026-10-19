@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#203e35"><title>Mapas GPS · Parques y senderos</title><link rel="stylesheet" href="./vendor/leaflet/leaflet.css"><link rel="stylesheet" href="./geographic/style.css"><script src="./vendor/leaflet/leaflet.js" defer></script></head>
+<body>
+<header class="app-header"><a class="brand" href="./mapa-geografico.html" aria-label="Mapas GPS, inicio"><span class="brand-icon" aria-hidden="true">↟</span><span>MAPAS GPS<small>ENCUENTRA TU CAMINO</small></span></a><a class="library-link" href="./index.html">Mis mapas ↗</a></header>
+<main id="app">
+ <section id="park-picker" aria-labelledby="picker-title"><div class="intro"><p class="eyebrow">SAL A EXPLORAR</p><h1 id="picker-title">Tu próxima ruta<br>empieza aquí.</h1><p>Elige un parque y descubre sus senderos.</p></div><div id="park-list" class="park-list"><p role="status">Cargando parques…</p></div><p class="collection-note">Empezamos por El Durazno. Iremos incorporando más parques con información contrastada.</p></section>
+ <section id="park-view" hidden aria-labelledby="park-name"><button id="back-to-parks" class="back-button">← Parques</button><div class="park-heading"><p class="eyebrow" id="park-locality"></p><h1 id="park-name"></h1><p id="park-description"></p></div><ul id="amenities" class="amenities" aria-label="Servicios del parque"></ul><div class="section-heading"><h2>Explora el parque</h2><span id="available-count"></span></div><p class="availability-note" id="data-status" role="status">Cargando senderos…</p>
+ <div class="card-grid" id="trail-grid">
+  <section id="map-card" class="map-card tile-card" aria-label="Mapa del parque">
+   <div class="tile-face map-face"><div id="geo-map" aria-label="Mapa mundial con senderos del parque"></div><button id="open-map" class="map-cover" aria-label="Abrir mapa del parque a pantalla completa"><span class="map-caption"><span class="eyebrow">EL PARQUE, EN EL MAPA</span><strong>Mapa de senderos</strong><span class="map-open-label">Explorar mapa <span aria-hidden="true">↗</span></span></span></button></div>
+   <div class="map-toolbar"><button id="close-map" class="round-button" aria-label="Cerrar mapa">←</button><span><strong id="map-park-title">El Durazno</strong><small>Mapa de senderos</small></span><button id="fit-routes" class="round-button" aria-label="Encuadrar senderos disponibles">⌖</button></div>
+   <nav id="map-trails" class="map-trails" aria-label="Seleccionar sendero en el mapa"></nav>
+   <details id="map-options" class="map-options"><summary>Capas ☷</summary><div class="options-body"><div id="visibility-controls"></div><label class="check-row"><input id="show-context" type="checkbox" checked> Otros caminos OSM</label><label for="osm-way">Inspeccionar tramo</label><select id="osm-way" disabled><option>Cargando…</option></select><button id="download-geojson" class="text-button" disabled>Descargar datos OSM ↓</button><p class="fine-print">Datos © colaboradores de OpenStreetMap · ODbL. Un cruce dibujado no acredita una conexión transitable.</p></div></details>
+   <p id="map-notice" class="map-notice" role="status" hidden></p>
+   <section id="route-sheet" class="route-sheet" aria-labelledby="sheet-title" hidden><div class="sheet-heading"><div><span id="sheet-level" class="eyebrow"></span><h2 id="sheet-title"></h2></div><button id="close-sheet" class="round-button" aria-label="Cerrar información del sendero">×</button></div><p id="sheet-description"></p><dl id="sheet-stats" class="stats"></dl><div class="sheet-actions"><a id="sheet-source" target="_blank" rel="noopener">Ver fuente ↗</a><button id="fit-selected" class="text-button">Encuadrar sendero ⌖</button></div></section>
+  </section>
+ </div>
+ <details class="park-sources"><summary>Información del parque y fuentes</summary><p>Los servicios y dificultades se contrastaron con el operador. Su ubicación exacta dentro del parque aún no está documentada.</p><a id="park-source" target="_blank" rel="noopener">Consultar al operador ↗</a><p>Las líneas OSM conservan las coordenadas de su fuente. Accesos, sentidos y conexiones están pendientes de comprobación para navegar.</p><a href="./revision.html">Revisar la fotografía y los trazados originales ↗</a></details>
+ </section>
+ <p id="app-error" role="alert" hidden></p>
+</main>
+<footer class="app-footer">Hecho para explorar con información clara.<br><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a></footer>
+<script type="module" src="./geographic/viewer.mjs"></script>
+</body></html>

@@ -9,6 +9,16 @@ Mostrar Star Wars, La Virgen y Lomo Vetado como capas seleccionables sobre **un 
 
 Esta entrega permite consultar y seleccionar pistas. No implementa navegación, distancia restante, loops ni ajuste del GPS. No afirma que una ficha pública o una línea con coordenadas esté validada sobre el terreno.
 
+### Flujo móvil autorizado durante la ejecución
+
+1. Entrar y elegir parque; el catálogo inicial ofrece El Durazno sin inventar otros parques.
+2. Ver descripción, servicios contrastados, mapa y senderos destacados. Priorizar Subida Buitrera y La Virgen, seguidos de otros senderos.
+3. Tarjetas cerradas de mapa y senderos con el mismo ancho/alto. Los senderos despliegan un cuerpo de información en esa pantalla; el cuerpo ampliado crece para mantener legibilidad.
+4. Dificultad, longitud de fuente, ascenso/descenso y velocidad máxima: mostrar datos disponibles con procedencia; «Sin datos» o «Sin registros» cuando corresponda. No inventar una velocidad personal ni aplicar desniveles de otra geometría.
+5. Tocar el mapa lo abre a pantalla completa; tocar una línea o seleccionar un sendero abre su ficha inferior. Mantener un mapa persistente, con pan, pellizco y zoom mundial. El botón atrás cierra el mapa antes de salir del parque.
+
+El usuario indicó uso móvil del 95%. Verificar 390×844, 360×800 y rotación, además de escritorio. Este flujo puede entregarse con las geometrías actualmente disponibles, pero no cierra el objetivo de tres pistas completas: La Virgen y Starwars permanecen explícitamente pendientes.
+
 ## Decisión de arquitectura
 
 1. Mantener **una sola instancia Leaflet**, con fondo cartográfico mundial, encuadre inicial en El Durazno y pan/zoom compartidos. Seleccionar una pista nunca reemplaza el mapa por un iframe ni cambia a una página del proveedor.

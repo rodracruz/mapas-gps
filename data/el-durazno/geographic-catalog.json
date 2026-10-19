@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "id": "el-durazno-geographic-v1",
+  "title": "RKF El Durazno",
+  "coordinateSystem": "EPSG:4326",
+  "coordinateOrder": "longitude,latitude",
+  "attribution": "© OpenStreetMap contributors",
+  "license": "ODbL-1.0",
+  "sourceSnapshot": "sources/el-durazno-osm.json",
+  "sourceSnapshotSha256": "b8926fb02ddcc2410850d831312e64a5c51e5aeb9db49ce970a86e418a0df318",
+  "sourceUrl": "https://api.openstreetmap.org/api/0.6/map?bbox=-70.518,-33.328,-70.485,-33.290",
+  "queriedAt": "2026-10-19T00:07:44.489947+00:00",
+  "queryBounds": [
+    -70.518,
+    -33.328,
+    -70.485,
+    -33.29
+  ],
+  "geographicExtent": [
+    -70.5267534,
+    -33.3389899,
+    -70.4762387,
+    -33.2772192
+  ],
+  "targets": [
+    {
+      "id": "subida-buitrera",
+      "name": "Subida Buitrera",
+      "status": "osm-identified",
+      "osmWayIds": [
+        477168992
+      ],
+      "publicMapUrl": "https://www.openstreetmap.org/way/477168992",
+      "description": "Tramo denominado Sendero Subida Buitrera en OpenStreetMap. No representa todas las alternativas de subida del parque.",
+      "sourceNote": "Tramo OSM identificado por nombre; extensión actual por confirmar.",
+      "color": "#d56b3f",
+      "difficulty": null,
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": true
+    },
+    {
+      "id": "la-virgen",
+      "name": "La Virgen",
+      "status": "public-reference",
+      "osmWayIds": [],
+      "publicMapUrl": "https://www.trailforks.com/trails/la-virgen-205330/",
+      "description": "La pista está identificada por el operador. Su trazado todavía no está disponible para mostrarlo en este mapa.",
+      "geometryImported": false,
+      "color": "#53894f",
+      "difficulty": {
+        "label": "Principiante",
+        "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "references": [
+        {
+          "provider": "Trailforks",
+          "id": 205330,
+          "url": "https://www.trailforks.com/trails/la-virgen-205330/",
+          "geometryImported": false
+        }
+      ],
+      "sourceNote": "Dificultad publicada por el operador. Geometría pendiente."
+    },
+    {
+      "id": "lomo-vetado",
+      "name": "Lomo Vetado",
+      "status": "osm-identified",
+      "osmWayIds": [
+        477170097
+      ],
+      "publicMapUrl": "https://www.openstreetmap.org/way/477170097",
+      "description": "Trazado de OpenStreetMap identificado por el nombre Sendero Lomo Vetado. La vigencia de accesos y sentidos no está comprobada.",
+      "color": "#247d87",
+      "difficulty": {
+        "label": "Intermedio",
+        "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": true,
+      "sourceNote": "Geometría OSM; vigencia de accesos y sentidos por comprobar."
+    },
+    {
+      "id": "starwars",
+      "name": "Starwars",
+      "status": "public-reference",
+      "osmWayIds": [],
+      "publicMapUrl": "https://www.trailforks.com/trails/star-wars-76316/",
+      "description": "La pista está identificada por el operador. Su trazado todavía no está disponible para mostrarlo en este mapa.",
+      "geometryImported": false,
+      "color": "#486db5",
+      "difficulty": {
+        "label": "Intermedio",
+        "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/"
+      },
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "references": [
+        {
+          "provider": "Trailforks",
+          "id": 76316,
+          "url": "https://www.trailforks.com/trails/star-wars-76316/",
+          "geometryImported": false
+        }
+      ],
+      "sourceNote": "Dificultad publicada por el operador. Geometría pendiente."
+    }
+  ],
+  "visualToGeographicTransform": null,
+  "navigationValidated": false,
+  "park": {
+    "id": "el-durazno",
+    "name": "RKF El Durazno",
+    "shortName": "El Durazno",
+    "locality": "Lo Barnechea · Región Metropolitana",
+    "description": "Un bikepark en la precordillera de Santiago, con senderos para distintos niveles y espacios para disfrutar la bicicleta.",
+    "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+    "checkedOn": "2026-10-18",
+    "primaryTargetIds": [
+      "subida-buitrera",
+      "la-virgen"
+    ],
+    "amenities": [
+      {
+        "id": "banos",
+        "label": "Baños",
+        "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+        "checkedOn": "2026-10-18"
+      },
+      {
+        "id": "agua",
+        "label": "Agua potable",
+        "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+        "checkedOn": "2026-10-18"
+      },
+      {
+        "id": "cafeteria",
+        "label": "Cafetería",
+        "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+        "checkedOn": "2026-10-18"
+      },
+      {
+        "id": "tienda",
+        "label": "Tienda",
+        "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+        "checkedOn": "2026-10-18"
+      },
+      {
+        "id": "guardaparques",
+        "label": "Guardaparques",
+        "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+        "checkedOn": "2026-10-18"
+      },
+      {
+        "id": "pumptrack",
+        "label": "Pumptrack",
+        "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+        "checkedOn": "2026-10-18"
+      }
+    ]
+  }
+}

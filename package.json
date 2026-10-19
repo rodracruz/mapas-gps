@@ -9,7 +9,12 @@
     "test:standalone": "node tests/standalone.mjs",
     "test:sources": "node tests/browser-sources.mjs",
     "test:integrity": "node tests/browser-integrity.mjs",
-    "test:pending": "node tests/pending-review.mjs"
+    "test:pending": "node tests/pending-review.mjs",
+    "serve:geographic": "python3 -m http.server 4174 --bind 0.0.0.0",
+    "test:geographic": "node --test tests/geographic.test.mjs tests/parks.test.mjs tests/geographic-build.test.mjs",
+    "test:geographic:browser": "node tests/geographic-browser.mjs",
+    "test:geographic:acceptance": "node tests/geographic-acceptance.mjs",
+    "build:geographic": "python3 scripts/build-geographic-standalone.py"
   },
   "devDependencies": {
     "playwright": "1.58.2"
