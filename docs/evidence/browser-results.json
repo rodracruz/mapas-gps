@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-18T23:55:57.758Z",
+  "base": "http://127.0.0.1:4173",
+  "browser": "154.0.8037.57",
+  "desktop": [
+    1440,
+    1100
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "checks": [
+    "load actual photo, 10 fragments and 6 pending regions",
+    "photo, overlay, vectors, independent opacity and per-trail visibility",
+    "selection, pending explanation and no automatic links",
+    "same image/vector transform after anchored zoom, drag and resize",
+    "editable JSON download contains image pixels and no geographic transform",
+    "malformed data and missing image fail closed with visible explanation",
+    "HTTP without SubtleCrypto verifies original and rejects changed source bytes",
+    "mobile 390px layout and touch selection",
+    "mobile two-finger pinch, pan and pointer cancellation",
+    "review preserves stored map blob, calibration, GIS records and localStorage",
+    "legacy app loads its existing sample and opens original image",
+    "no browser runtime errors"
+  ],
+  "errors": []
+}
