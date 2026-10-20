@@ -4,7 +4,7 @@ export function validateParkDirectory(directory){
  if(directory?.schemaVersion!==1||!Array.isArray(directory.parks)||!directory.parks.length)fail();const ids=new Set();
  for(const p of directory.parks){
   if(!p||typeof p.id!=='string'||!/^[a-z0-9-]+$/.test(p.id)||ids.has(p.id)||!['name','shortName','locality','description'].every(k=>typeof p[k]==='string'&&p[k].trim())||typeof p.entry!=='string'||!/^\.\/[a-z0-9-]+\.html#parque=[a-z0-9-]+$/.test(p.entry)||p.entry.split('#')[1]!=='parque='+p.id)fail();
-  for(const key of ['catalog','document'])if(p[key]!==undefined&&p[key]!==`./data/${p.id}/${key==='catalog'?'geographic-catalog':'official-document'}.json`)fail();if(p.visual!==undefined&&(p.visual!==`./data/${p.id}/visual-cycling-trails.json`||!/^[0-9a-f]{64}$/.test(p.visualSha256)))fail();if(p.sharedVisual!==undefined&&(p.sharedVisual!==`./data/${p.id}/visual-paseo-trails.json`||!/^[0-9a-f]{64}$/.test(p.sharedVisualSha256)))fail();ids.add(p.id);
+  for(const key of ['catalog','document'])if(p[key]!==undefined&&p[key]!==`./data/${p.id}/${key==='catalog'?'geographic-catalog':'official-document'}.json`)fail();if(p.visual!==undefined&&(p.visual!==`./data/${p.id}/visual-cycling-trails.json`||!/^[0-9a-f]{64}$/.test(p.visualSha256)))fail();if(p.sharedVisual!==undefined&&(p.sharedVisual!==`./data/${p.id}/visual-paseo-trails.json`||!/^[0-9a-f]{64}$/.test(p.sharedVisualSha256)))fail();if(p.avenueVisual!==undefined&&(p.avenueVisual!==`./data/${p.id}/visual-avenues.json`||!/^[0-9a-f]{64}$/.test(p.avenueVisualSha256)))fail();ids.add(p.id);
  }
  return directory;
 }

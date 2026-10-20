@@ -1,0 +1,1493 @@
+{
+  "schemaVersion": 1,
+  "id": "parquemet-official-avenue-views",
+  "coordinateSystem": "document-pixels",
+  "origin": "top-left",
+  "image": {
+    "path": "sources/parquemet-mapa-oficial.jpg",
+    "width": 6690,
+    "height": 2835,
+    "sha256": "e0d91c5e90bbc290ae1af71d1b51e29960f682ab5dd242c3b24ede003f0a7dd3",
+    "bytes": 3251978
+  },
+  "page": {
+    "widthPt": 6689.759765625,
+    "heightPt": 2834.64990234375,
+    "rotation": 0
+  },
+  "transform": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "source": {
+    "path": "sources/parquemet-mapa-oficial.pdf",
+    "url": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+    "sha256": "e7606172479a0fd585f7f3dcb4187556a202778cd647b31f44aaefcf9bd03cf8",
+    "bytes": 765376,
+    "page": 1,
+    "pageXref": 2,
+    "contentStreamXrefs": [
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126
+    ],
+    "contentStreams": [
+      {
+        "xref": 119,
+        "decodedSha256": "4b8b9f4a6471bc667981042d3189035609fa66b812d8b8b667eae84cbd42a1f1"
+      },
+      {
+        "xref": 120,
+        "decodedSha256": "86a35f8c1c89139cedafd90c7c83db8ba5020d296831aa51740552c3f00d2db9"
+      },
+      {
+        "xref": 121,
+        "decodedSha256": "cd6ef2aa7e241e2267b94e40ff9ed84d65555d9a692270c0c6692664b49beaf6"
+      },
+      {
+        "xref": 122,
+        "decodedSha256": "c8030f1b11bd270568b111bc967b1ebfee1fcdcfcc1bbc209c9654c911739004"
+      },
+      {
+        "xref": 123,
+        "decodedSha256": "65910e811a17c1e7d93903659b703b104b88914e32c81f312d0a78a53982fc83"
+      },
+      {
+        "xref": 124,
+        "decodedSha256": "4ed39a504fc13742372c8de05b8c0cb5e0e193699d0fdd8379ecd5300a1154ac"
+      },
+      {
+        "xref": 125,
+        "decodedSha256": "af507ef3b85228fd6a55ab6ed63fddf5d5f98bcb9098326a489509a29a7d8ad9"
+      },
+      {
+        "xref": 126,
+        "decodedSha256": "1f709e335e32f5f533389e0185931811aa755de00f41b5abd394001df51e50c0"
+      }
+    ],
+    "drawingCount": 3540,
+    "drawingIndexBase": 0,
+    "extractor": "PyMuPDF page.get_drawings + native text blocks; manually reviewed crop index",
+    "pyMuPdfVersion": "1.26.6",
+    "muPdfVersion": "1.26.11"
+  },
+  "fidelity": {
+    "geometry": "not-extracted",
+    "originalImageUnchanged": true,
+    "rasterTracing": false,
+    "interpolatedSegments": 0,
+    "routeExtentInferred": false,
+    "nameAssignmentByProximity": false,
+    "boundsMeaning": "sourceRect, viewBox and label bounds are x,y,width,height in the unchanged original image",
+    "registration": "Existing official-document.json records 72dpi/scale 1, top-left identity; no image stretching or world registration."
+  },
+  "topology": {
+    "crossingsAreJunctions": false,
+    "connectionsInferred": false,
+    "networkAvailable": false
+  },
+  "georeferencing": {
+    "transform": null,
+    "crs": null,
+    "useForNavigation": false,
+    "useForGroundDistances": false
+  },
+  "trails": [],
+  "views": [
+    {
+      "id": "avenida-pedro-bannen",
+      "name": "Av. Pedro Bannen",
+      "category": "avenue",
+      "kind": "document-crop",
+      "viewKind": "original-map-crop",
+      "scope": "inside-park",
+      "coordinateSystem": "document-pixels",
+      "sourceRect": [
+        1690,
+        860,
+        500,
+        440
+      ],
+      "viewBox": [
+        1690,
+        860,
+        500,
+        440
+      ],
+      "sourceLabelEvidence": {
+        "text": "< Av. Pedro Bannen >",
+        "bounds": [
+          2003.0980224609375,
+          1036.8690185546875,
+          39.928955078125,
+          109.3021240234375
+        ],
+        "fragments": [
+          {
+            "blockIndex": 100,
+            "text": "<",
+            "bounds": [
+              2014.43603515625,
+              1132.9412841796875,
+              13.3294677734375,
+              13.2298583984375
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 101,
+            "text": " ",
+            "bounds": [
+              2017.3067626953125,
+              1130.5599365234375,
+              13.108642578125,
+              12.0443115234375
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 102,
+            "text": "A",
+            "bounds": [
+              2019.3214111328125,
+              1125.3199462890625,
+              15.7813720703125,
+              14.0247802734375
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 103,
+            "text": "v",
+            "bounds": [
+              2022.924560546875,
+              1120.9404296875,
+              15.3458251953125,
+              11.5938720703125
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 104,
+            "text": ".",
+            "bounds": [
+              2025.2376708984375,
+              1117.8204345703125,
+              14.7862548828125,
+              8.810302734375
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 105,
+            "text": " ",
+            "bounds": [
+              2026.4847412109375,
+              1114.9232177734375,
+              14.75146484375,
+              7.3905029296875
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 106,
+            "text": "P",
+            "bounds": [
+              2027.406005859375,
+              1109.172119140625,
+              15.260986328125,
+              8.8660888671875
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 107,
+            "text": "e",
+            "bounds": [
+              2028.3892822265625,
+              1104.2613525390625,
+              14.6376953125,
+              6.706298828125
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 108,
+            "text": "d",
+            "bounds": [
+              2028.236083984375,
+              1097.28466796875,
+              14.7889404296875,
+              7.63720703125
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 109,
+            "text": "r",
+            "bounds": [
+              2027.562744140625,
+              1092.365478515625,
+              14.8406982421875,
+              6.4337158203125
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 110,
+            "text": "o",
+            "bounds": [
+              2026.16845703125,
+              1085.43798828125,
+              15.468017578125,
+              9.63916015625
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 111,
+            "text": " ",
+            "bounds": [
+              2025.184326171875,
+              1081.5958251953125,
+              14.740966796875,
+              7.554931640625
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 112,
+            "text": "B",
+            "bounds": [
+              2022.642822265625,
+              1073.8822021484375,
+              16.137939453125,
+              12.2362060546875
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 113,
+            "text": "an",
+            "bounds": [
+              2017.5960693359375,
+              1061.7147216796875,
+              18.2769775390625,
+              17.4852294921875
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 114,
+            "text": "n",
+            "bounds": [
+              2014.6400146484375,
+              1055.087646484375,
+              15.879150390625,
+              12.6131591796875
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 115,
+            "text": "e",
+            "bounds": [
+              2011.5693359375,
+              1049.707763671875,
+              15.355224609375,
+              12.6728515625
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 116,
+            "text": "n",
+            "bounds": [
+              2007.815673828125,
+              1043.68408203125,
+              15.6614990234375,
+              13.814453125
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 117,
+            "text": " ",
+            "bounds": [
+              2005.8172607421875,
+              1040.5960693359375,
+              13.44140625,
+              11.58837890625
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 118,
+            "text": ">",
+            "bounds": [
+              2003.0980224609375,
+              1036.8690185546875,
+              13.7130126953125,
+              12.7896728515625
+            ],
+            "spanCount": 1
+          }
+        ],
+        "blockIndexBase": 0,
+        "extractor": "PyMuPDF page.get_text('dict'); reviewed source block order"
+      },
+      "geometryStatus": "not-extracted",
+      "routeGeometryAvailable": false,
+      "paths": [],
+      "extentMeaning": "reviewed display crop, not the avenue's full extent",
+      "caption": "Rótulo y contexto del plano original; sin trazado individual extraído."
+    },
+    {
+      "id": "avenida-alberto-mackenna",
+      "name": "Av. Alberto Mackenna",
+      "category": "avenue",
+      "kind": "document-crop",
+      "viewKind": "original-map-crop",
+      "scope": "inside-park",
+      "coordinateSystem": "document-pixels",
+      "sourceRect": [
+        1450,
+        550,
+        850,
+        650
+      ],
+      "viewBox": [
+        1450,
+        550,
+        850,
+        650
+      ],
+      "sourceLabelEvidence": {
+        "text": "Av. Alberto Mackenna »",
+        "bounds": [
+          1782.865234375,
+          718.0031127929688,
+          119.5220947265625,
+          66.8587646484375
+        ],
+        "fragments": [
+          {
+            "blockIndex": 36,
+            "text": "Av. Alberto Mack",
+            "bounds": [
+              1782.865234375,
+              718.0031127929688,
+              85.80908203125,
+              52.24298095703125
+            ],
+            "spanCount": 16
+          },
+          {
+            "blockIndex": 37,
+            "text": "enna »",
+            "bounds": [
+              1862.80224609375,
+              757.1229248046875,
+              39.5850830078125,
+              27.73895263671875
+            ],
+            "spanCount": 6
+          }
+        ],
+        "blockIndexBase": 0,
+        "extractor": "PyMuPDF page.get_text('dict'); reviewed source block order"
+      },
+      "geometryStatus": "not-extracted",
+      "routeGeometryAvailable": false,
+      "paths": [],
+      "extentMeaning": "reviewed display crop, not the avenue's full extent",
+      "caption": "Rótulo y contexto del plano original; sin trazado individual extraído."
+    },
+    {
+      "id": "avenida-abate-molina",
+      "name": "Av. Abate Molina",
+      "category": "avenue",
+      "kind": "document-crop",
+      "viewKind": "original-map-crop",
+      "scope": "inside-park",
+      "coordinateSystem": "document-pixels",
+      "sourceRect": [
+        2420,
+        1230,
+        340,
+        330
+      ],
+      "viewBox": [
+        2420,
+        1230,
+        340,
+        330
+      ],
+      "sourceLabelEvidence": {
+        "text": "< Av. Abate Molina >",
+        "bounds": [
+          2565.980712890625,
+          1342.908935546875,
+          68.8037109375,
+          97.909423828125
+        ],
+        "fragments": [
+          {
+            "blockIndex": 71,
+            "text": "< ",
+            "bounds": [
+              2565.980712890625,
+              1342.908935546875,
+              15.735107421875,
+              15.8360595703125
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 72,
+            "text": "A",
+            "bounds": [
+              2571.331298828125,
+              1348.9483642578125,
+              15.375244140625,
+              14.826416015625
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 73,
+            "text": "v.",
+            "bounds": [
+              2575.865234375,
+              1354.5234375,
+              17.2216796875,
+              16.388671875
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 74,
+            "text": " ",
+            "bounds": [
+              2581.52734375,
+              1362.492431640625,
+              13.72607421875,
+              11.1241455078125
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 75,
+            "text": "A",
+            "bounds": [
+              2583.427001953125,
+              1365.6422119140625,
+              15.88037109375,
+              13.661865234375
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 76,
+            "text": "b",
+            "bounds": [
+              2587.038818359375,
+              1372.0323486328125,
+              15.73046875,
+              12.7113037109375
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 77,
+            "text": "a",
+            "bounds": [
+              2590.083984375,
+              1378.219970703125,
+              15.56884765625,
+              11.7332763671875
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 78,
+            "text": "te",
+            "bounds": [
+              2592.61083984375,
+              1384.04296875,
+              17.435546875,
+              15.62451171875
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 79,
+            "text": " M",
+            "bounds": [
+              2596.605712890625,
+              1394.6468505859375,
+              17.89990234375,
+              16.9981689453125
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 80,
+            "text": "o",
+            "bounds": [
+              2601.66748046875,
+              1405.7568359375,
+              15.640380859375,
+              12.8280029296875
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 81,
+            "text": "li",
+            "bounds": [
+              2605.188232421875,
+              1410.9996337890625,
+              15.79345703125,
+              13.8050537109375
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 82,
+            "text": "n",
+            "bounds": [
+              2609.587646484375,
+              1416.278564453125,
+              15.390869140625,
+              14.40966796875
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 83,
+            "text": "a",
+            "bounds": [
+              2614.93212890625,
+              1420.893798828125,
+              14.0263671875,
+              14.806640625
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 84,
+            "text": " ",
+            "bounds": [
+              2620.470458984375,
+              1424.402587890625,
+              10.873779296875,
+              13.8602294921875
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 85,
+            "text": ">",
+            "bounds": [
+              2624.083251953125,
+              1426.0804443359375,
+              10.701171875,
+              14.7379150390625
+            ],
+            "spanCount": 1
+          }
+        ],
+        "blockIndexBase": 0,
+        "extractor": "PyMuPDF page.get_text('dict'); reviewed source block order"
+      },
+      "geometryStatus": "not-extracted",
+      "routeGeometryAvailable": false,
+      "paths": [],
+      "extentMeaning": "reviewed display crop, not the avenue's full extent",
+      "caption": "Rótulo y contexto del plano original; sin trazado individual extraído."
+    },
+    {
+      "id": "avenida-carlos-martner",
+      "name": "Av. Carlos Martner",
+      "category": "avenue",
+      "kind": "document-crop",
+      "viewKind": "original-map-crop",
+      "scope": "inside-park",
+      "coordinateSystem": "document-pixels",
+      "sourceRect": [
+        2400,
+        1060,
+        800,
+        500
+      ],
+      "viewBox": [
+        2400,
+        1060,
+        800,
+        500
+      ],
+      "sourceLabelEvidence": {
+        "text": "< Av. Carlos Martner >",
+        "bounds": [
+          2723.9189453125,
+          1340.1053466796875,
+          91.393798828125,
+          85.3170166015625
+        ],
+        "fragments": [
+          {
+            "blockIndex": 42,
+            "text": "< A",
+            "bounds": [
+              2723.9189453125,
+              1340.1053466796875,
+              20.48291015625,
+              20.49169921875
+            ],
+            "spanCount": 3
+          },
+          {
+            "blockIndex": 43,
+            "text": "v. C",
+            "bounds": [
+              2733.517822265625,
+              1351.0938720703125,
+              23.713623046875,
+              24.023193359375
+            ],
+            "spanCount": 4
+          },
+          {
+            "blockIndex": 44,
+            "text": "arlo",
+            "bounds": [
+              2746.799560546875,
+              1365.10791015625,
+              24.25634765625,
+              24.225830078125
+            ],
+            "spanCount": 4
+          },
+          {
+            "blockIndex": 45,
+            "text": "s M",
+            "bounds": [
+              2761.1611328125,
+              1378.8375244140625,
+              23.133544921875,
+              22.80615234375
+            ],
+            "spanCount": 3
+          },
+          {
+            "blockIndex": 46,
+            "text": "art",
+            "bounds": [
+              2774.90380859375,
+              1390.5933837890625,
+              20.666015625,
+              20.58447265625
+            ],
+            "spanCount": 3
+          },
+          {
+            "blockIndex": 47,
+            "text": "ne",
+            "bounds": [
+              2786.82275390625,
+              1399.658447265625,
+              18.629150390625,
+              19.0345458984375
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 48,
+            "text": "r >",
+            "bounds": [
+              2797.38232421875,
+              1406.80517578125,
+              17.930419921875,
+              18.6171875
+            ],
+            "spanCount": 3
+          }
+        ],
+        "blockIndexBase": 0,
+        "extractor": "PyMuPDF page.get_text('dict'); reviewed source block order"
+      },
+      "geometryStatus": "not-extracted",
+      "routeGeometryAvailable": false,
+      "paths": [],
+      "extentMeaning": "reviewed display crop, not the avenue's full extent",
+      "caption": "Rótulo y contexto del plano original; sin trazado individual extraído."
+    },
+    {
+      "id": "avenida-carlos-reed",
+      "name": "Av. Carlos Reed",
+      "category": "avenue",
+      "kind": "document-crop",
+      "viewKind": "original-map-crop",
+      "scope": "inside-park",
+      "coordinateSystem": "document-pixels",
+      "sourceRect": [
+        1070,
+        1070,
+        1000,
+        480
+      ],
+      "viewBox": [
+        1070,
+        1070,
+        1000,
+        480
+      ],
+      "sourceLabelEvidence": {
+        "text": "< Av. Carlos Reed >",
+        "bounds": [
+          1434.5372314453125,
+          1261.74658203125,
+          98.0029296875,
+          36.0279541015625
+        ],
+        "fragments": [
+          {
+            "blockIndex": 31,
+            "text": "< Av.",
+            "bounds": [
+              1434.5372314453125,
+              1261.74658203125,
+              26.3046875,
+              17.673828125
+            ],
+            "spanCount": 5
+          },
+          {
+            "blockIndex": 32,
+            "text": " Car",
+            "bounds": [
+              1458.466796875,
+              1265.2681884765625,
+              22.77587890625,
+              17.9547119140625
+            ],
+            "spanCount": 4
+          },
+          {
+            "blockIndex": 33,
+            "text": "los ",
+            "bounds": [
+              1478.208984375,
+              1269.200439453125,
+              21.8800048828125,
+              18.4586181640625
+            ],
+            "spanCount": 4
+          },
+          {
+            "blockIndex": 34,
+            "text": "Reed ",
+            "bounds": [
+              1496.2777099609375,
+              1273.8255615234375,
+              32.02685546875,
+              22.523681640625
+            ],
+            "spanCount": 5
+          },
+          {
+            "blockIndex": 35,
+            "text": ">",
+            "bounds": [
+              1523.7374267578125,
+              1282.75830078125,
+              8.802734375,
+              15.0162353515625
+            ],
+            "spanCount": 1
+          }
+        ],
+        "blockIndexBase": 0,
+        "extractor": "PyMuPDF page.get_text('dict'); reviewed source block order"
+      },
+      "geometryStatus": "not-extracted",
+      "routeGeometryAvailable": false,
+      "paths": [],
+      "extentMeaning": "reviewed display crop, not the avenue's full extent",
+      "caption": "Rótulo y contexto del plano original; sin trazado individual extraído."
+    },
+    {
+      "id": "avenida-claudio-gay",
+      "name": "Av. Claudio Gay",
+      "category": "avenue",
+      "kind": "document-crop",
+      "viewKind": "original-map-crop",
+      "scope": "inside-park",
+      "coordinateSystem": "document-pixels",
+      "sourceRect": [
+        3000,
+        1290,
+        620,
+        350
+      ],
+      "viewBox": [
+        3000,
+        1290,
+        620,
+        350
+      ],
+      "sourceLabelEvidence": {
+        "text": "Av. Claudio Gay »",
+        "bounds": [
+          3293.99853515625,
+          1414.135986328125,
+          87.627685546875,
+          56.0452880859375
+        ],
+        "fragments": [
+          {
+            "blockIndex": 49,
+            "text": "Av",
+            "bounds": [
+              3293.99853515625,
+              1452.919921875,
+              16.155029296875,
+              17.2613525390625
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 50,
+            "text": ". C",
+            "bounds": [
+              3305.91796875,
+              1448.4027099609375,
+              18.004150390625,
+              18.2030029296875
+            ],
+            "spanCount": 3
+          },
+          {
+            "blockIndex": 51,
+            "text": "la",
+            "bounds": [
+              3318.768310546875,
+              1444.7989501953125,
+              14.35986328125,
+              16.9490966796875
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 52,
+            "text": "u",
+            "bounds": [
+              3327.1728515625,
+              1442.041015625,
+              12.161865234375,
+              15.76318359375
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 53,
+            "text": "d",
+            "bounds": [
+              3332.708984375,
+              1438.9862060546875,
+              12.84130859375,
+              15.7637939453125
+            ],
+            "spanCount": 1
+          },
+          {
+            "blockIndex": 54,
+            "text": "io ",
+            "bounds": [
+              3338.220703125,
+              1431.8436279296875,
+              19.004638671875,
+              19.34326171875
+            ],
+            "spanCount": 3
+          },
+          {
+            "blockIndex": 55,
+            "text": "Gay »",
+            "bounds": [
+              3348.87646484375,
+              1414.135986328125,
+              32.749755859375,
+              29.4840087890625
+            ],
+            "spanCount": 5
+          }
+        ],
+        "blockIndexBase": 0,
+        "extractor": "PyMuPDF page.get_text('dict'); reviewed source block order"
+      },
+      "geometryStatus": "not-extracted",
+      "routeGeometryAvailable": false,
+      "paths": [],
+      "extentMeaning": "reviewed display crop, not the avenue's full extent",
+      "caption": "Rótulo y contexto del plano original; sin trazado individual extraído."
+    },
+    {
+      "id": "avenida-federico-albert",
+      "name": "Av. Federico Albert",
+      "category": "avenue",
+      "kind": "document-crop",
+      "viewKind": "original-map-crop",
+      "scope": "inside-park",
+      "coordinateSystem": "document-pixels",
+      "sourceRect": [
+        3080,
+        1080,
+        740,
+        410
+      ],
+      "viewBox": [
+        3080,
+        1080,
+        740,
+        410
+      ],
+      "sourceLabelEvidence": {
+        "text": "« Av. Federico Albert",
+        "bounds": [
+          3298.651123046875,
+          1210.022705078125,
+          111.115478515625,
+          36.0279541015625
+        ],
+        "fragments": [
+          {
+            "blockIndex": 56,
+            "text": "« ",
+            "bounds": [
+              3298.651123046875,
+              1228.4285888671875,
+              15.906982421875,
+              17.6220703125
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 57,
+            "text": "Av",
+            "bounds": [
+              3309.09228515625,
+              1223.6885986328125,
+              17.02587890625,
+              17.9716796875
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 58,
+            "text": ". F",
+            "bounds": [
+              3321.327392578125,
+              1219.439208984375,
+              17.187744140625,
+              17.77001953125
+            ],
+            "spanCount": 3
+          },
+          {
+            "blockIndex": 59,
+            "text": "ed",
+            "bounds": [
+              3334.29248046875,
+              1216.1854248046875,
+              15.90673828125,
+              17.0987548828125
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 60,
+            "text": "eri",
+            "bounds": [
+              3346.97900390625,
+              1213.3798828125,
+              16.2568359375,
+              16.7769775390625
+            ],
+            "spanCount": 3
+          },
+          {
+            "blockIndex": 61,
+            "text": "co",
+            "bounds": [
+              3360.876953125,
+              1211.62548828125,
+              13.76025390625,
+              15.896240234375
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 62,
+            "text": " A",
+            "bounds": [
+              3372.950439453125,
+              1210.5947265625,
+              11.903076171875,
+              15.293701171875
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 63,
+            "text": "lb",
+            "bounds": [
+              3383.824951171875,
+              1210.097412109375,
+              10.7294921875,
+              14.8304443359375
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 64,
+            "text": "ert",
+            "bounds": [
+              3394.256103515625,
+              1210.022705078125,
+              15.510498046875,
+              14.560302734375
+            ],
+            "spanCount": 3
+          }
+        ],
+        "blockIndexBase": 0,
+        "extractor": "PyMuPDF page.get_text('dict'); reviewed source block order"
+      },
+      "geometryStatus": "not-extracted",
+      "routeGeometryAvailable": false,
+      "paths": [],
+      "extentMeaning": "reviewed display crop, not the avenue's full extent",
+      "caption": "Rótulo y contexto del plano original; sin trazado individual extraído."
+    },
+    {
+      "id": "avenida-manuel-zanartu",
+      "name": "Av. Manuel Zañartu",
+      "category": "avenue",
+      "kind": "document-crop",
+      "viewKind": "original-map-crop",
+      "scope": "inside-park",
+      "coordinateSystem": "document-pixels",
+      "sourceRect": [
+        3570,
+        1080,
+        980,
+        380
+      ],
+      "viewBox": [
+        3570,
+        1080,
+        980,
+        380
+      ],
+      "sourceLabelEvidence": {
+        "text": "< Av. Manuel Zañartu >",
+        "bounds": [
+          3970.885009765625,
+          1228.3209228515625,
+          117.888916015625,
+          20.5146484375
+        ],
+        "fragments": [
+          {
+            "blockIndex": 65,
+            "text": "< Av. Manuel Za",
+            "bounds": [
+              3970.885009765625,
+              1228.3209228515625,
+              82.028076171875,
+              19.78369140625
+            ],
+            "spanCount": 15
+          },
+          {
+            "blockIndex": 66,
+            "text": "ñartu >",
+            "bounds": [
+              4052.300048828125,
+              1233.762451171875,
+              36.473876953125,
+              15.0731201171875
+            ],
+            "spanCount": 6
+          }
+        ],
+        "blockIndexBase": 0,
+        "extractor": "PyMuPDF page.get_text('dict'); reviewed source block order"
+      },
+      "geometryStatus": "not-extracted",
+      "routeGeometryAvailable": false,
+      "paths": [],
+      "extentMeaning": "reviewed display crop, not the avenue's full extent",
+      "caption": "Rótulo y contexto del plano original; sin trazado individual extraído."
+    },
+    {
+      "id": "avenida-la-montana",
+      "name": "Av. La Montaña",
+      "category": "avenue",
+      "kind": "document-crop",
+      "viewKind": "original-map-crop",
+      "scope": "inside-park",
+      "coordinateSystem": "document-pixels",
+      "sourceRect": [
+        2280,
+        675,
+        1140,
+        510
+      ],
+      "viewBox": [
+        2280,
+        675,
+        1140,
+        510
+      ],
+      "sourceLabelEvidence": {
+        "text": "< Av. La Montaña >",
+        "bounds": [
+          2857.9970703125,
+          1062.5006103515625,
+          98.38818359375,
+          22.2025146484375
+        ],
+        "fragments": [
+          {
+            "blockIndex": 67,
+            "text": "< Av. ",
+            "bounds": [
+              2857.9970703125,
+              1068.455322265625,
+              28.614990234375,
+              16.2208251953125
+            ],
+            "spanCount": 6
+          },
+          {
+            "blockIndex": 68,
+            "text": "La",
+            "bounds": [
+              2886.254150390625,
+              1069.76416015625,
+              12.1689453125,
+              14.93896484375
+            ],
+            "spanCount": 2
+          },
+          {
+            "blockIndex": 69,
+            "text": " Montañ",
+            "bounds": [
+              2897.224853515625,
+              1064.8812255859375,
+              44.87158203125,
+              19.1947021484375
+            ],
+            "spanCount": 7
+          },
+          {
+            "blockIndex": 70,
+            "text": "a >",
+            "bounds": [
+              2940.118896484375,
+              1062.5006103515625,
+              16.266357421875,
+              16.6512451171875
+            ],
+            "spanCount": 3
+          }
+        ],
+        "blockIndexBase": 0,
+        "extractor": "PyMuPDF page.get_text('dict'); reviewed source block order"
+      },
+      "geometryStatus": "not-extracted",
+      "routeGeometryAvailable": false,
+      "paths": [],
+      "extentMeaning": "reviewed display crop, not the avenue's full extent",
+      "caption": "Rótulo y contexto del plano original; sin trazado individual extraído."
+    },
+    {
+      "id": "avenida-gabriela-mistral",
+      "name": "Av. Gabriela Mistral",
+      "category": "avenue",
+      "kind": "document-crop",
+      "viewKind": "original-map-crop",
+      "scope": "inside-park",
+      "coordinateSystem": "document-pixels",
+      "sourceRect": [
+        1980,
+        1120,
+        630,
+        260
+      ],
+      "viewBox": [
+        1980,
+        1120,
+        630,
+        260
+      ],
+      "sourceLabelEvidence": {
+        "text": "Av. Gabriela Mistral >",
+        "bounds": [
+          2245.3330078125,
+          1232.100830078125,
+          105.9130859375,
+          60.0537109375
+        ],
+        "fragments": [
+          {
+            "blockIndex": 38,
+            "text": "Av. Ga",
+            "bounds": [
+              2245.3330078125,
+              1232.100830078125,
+              36.23095703125,
+              28.662109375
+            ],
+            "spanCount": 6
+          },
+          {
+            "blockIndex": 39,
+            "text": "briela ",
+            "bounds": [
+              2274.8837890625,
+              1248.000244140625,
+              35.888427734375,
+              27.42236328125
+            ],
+            "spanCount": 7
+          },
+          {
+            "blockIndex": 40,
+            "text": "Mist",
+            "bounds": [
+              2304.739013671875,
+              1262.3438720703125,
+              26.871337890625,
+              22.3350830078125
+            ],
+            "spanCount": 4
+          },
+          {
+            "blockIndex": 41,
+            "text": "ral >",
+            "bounds": [
+              2326.22412109375,
+              1271.32568359375,
+              25.02197265625,
+              20.828857421875
+            ],
+            "spanCount": 5
+          }
+        ],
+        "blockIndexBase": 0,
+        "extractor": "PyMuPDF page.get_text('dict'); reviewed source block order"
+      },
+      "geometryStatus": "not-extracted",
+      "routeGeometryAvailable": false,
+      "paths": [],
+      "extentMeaning": "reviewed display crop, not the avenue's full extent",
+      "caption": "Rótulo y contexto del plano original; sin trazado individual extraído."
+    }
+  ],
+  "pendingApproachViews": [
+    {
+      "id": "los-turistas",
+      "name": "Los Turistas",
+      "category": "avenue",
+      "kind": "document-crop",
+      "viewKind": "original-map-crop",
+      "scope": "approach-outside-park",
+      "coordinateSystem": "document-pixels",
+      "sourceRect": [
+        3160,
+        360,
+        330,
+        440
+      ],
+      "viewBox": [
+        3160,
+        360,
+        330,
+        440
+      ],
+      "sourceLabelEvidence": {
+        "text": "< Los Turistas >",
+        "bounds": [
+          3262.771484375,
+          498.475341796875,
+          39.602783203125,
+          78.61602783203125
+        ],
+        "fragments": [
+          {
+            "blockIndex": 13,
+            "text": "< Los Turistas >",
+            "bounds": [
+              3262.771484375,
+              498.475341796875,
+              39.602783203125,
+              78.61602783203125
+            ],
+            "spanCount": 1
+          }
+        ],
+        "blockIndexBase": 0,
+        "extractor": "PyMuPDF page.get_text('dict'); reviewed source block order"
+      },
+      "geometryStatus": "not-extracted",
+      "routeGeometryAvailable": false,
+      "paths": [],
+      "extentMeaning": "reviewed display crop, not the avenue's full extent",
+      "caption": "Acceso exterior: rótulo y contexto del plano original; sin trazado individual extraído.",
+      "assignedToTarget": false,
+      "pendingReason": "The official 240 m access reference cannot be delimited against the retained geographic ways without clipping or inference."
+    }
+  ],
+  "pendingSourceMentions": [
+    {
+      "id": "avenida-pablo-neruda",
+      "name": "Av. Pablo Neruda",
+      "category": "avenue",
+      "kind": "document-reference",
+      "viewKind": "distance-table-reference",
+      "coordinateSystem": "document-pixels",
+      "referenceTableRect": [
+        5820,
+        735,
+        750,
+        245
+      ],
+      "sourceLabelEvidence": {
+        "text": "por Av. M. Zañartu y Av. P. Neruda2,9 km",
+        "bounds": [
+          6213.052734375,
+          933.622802734375,
+          328.4013671875,
+          22.3809814453125
+        ],
+        "fragments": [
+          {
+            "blockIndex": 291,
+            "text": "por Av. M. Zañartu y Av. P. Neruda2,9 km",
+            "bounds": [
+              6213.052734375,
+              933.622802734375,
+              328.4013671875,
+              22.3809814453125
+            ],
+            "spanCount": 5
+          }
+        ],
+        "blockIndexBase": 0,
+        "extractor": "PyMuPDF page.get_text('dict'); reviewed source block order"
+      },
+      "mapLocationStatus": "not-located-in-map",
+      "geometryStatus": "not-extracted",
+      "routeGeometryAvailable": false,
+      "caption": "Referencia en la tabla de distancias del plano; sin ubicación dibujada identificada."
+    },
+    {
+      "id": "camino-rafael-elizalde",
+      "name": "Camino Rafael Elizalde",
+      "category": "avenue",
+      "kind": "document-reference",
+      "viewKind": "distance-table-reference",
+      "coordinateSystem": "document-pixels",
+      "referenceTableRect": [
+        5820,
+        480,
+        750,
+        245
+      ],
+      "sourceLabelEvidence": {
+        "text": "por Camino Rafael Elizalde170 m",
+        "bounds": [
+          6214.38671875,
+          571.715576171875,
+          300.58642578125,
+          22.3800048828125
+        ],
+        "fragments": [
+          {
+            "blockIndex": 345,
+            "text": "por Camino Rafael Elizalde170 m",
+            "bounds": [
+              6214.38671875,
+              571.715576171875,
+              300.58642578125,
+              22.3800048828125
+            ],
+            "spanCount": 3
+          }
+        ],
+        "blockIndexBase": 0,
+        "extractor": "PyMuPDF page.get_text('dict'); reviewed source block order"
+      },
+      "mapLocationStatus": "not-located-in-map",
+      "geometryStatus": "not-extracted",
+      "routeGeometryAvailable": false,
+      "caption": "Referencia en la tabla de distancias del plano; sin ubicación dibujada identificada."
+    }
+  ],
+  "unassignedSourceDrawingGroups": [
+    {
+      "drawingIndex": 738,
+      "seqno": 738,
+      "type": "f",
+      "fill": "#ffffff",
+      "bounds": [
+        1083.210205078125,
+        609.3147583007812,
+        3369.949951171875,
+        874.7379760742188
+      ],
+      "operationCount": 600,
+      "cubicCount": 547,
+      "lineCount": 53,
+      "nativePathContentSha256": "2794e0b75ccf3b8b92287fbf39ce6616094d3bb5ce197f58e51b85fc42ee15f1",
+      "assignedToAvenue": false,
+      "centerlineAvailable": false,
+      "reason": "One compound filled network spans multiple roads; it is not an individual named avenue."
+    },
+    {
+      "drawingIndex": 748,
+      "seqno": 748,
+      "type": "f",
+      "fill": "#ffffff",
+      "bounds": [
+        -50.740234375,
+        -112.49609375,
+        5978.712890625,
+        2453.2529296875
+      ],
+      "operationCount": 1852,
+      "cubicCount": 1418,
+      "lineCount": 434,
+      "nativePathContentSha256": "31ccc413a1d1473204e96d80e4fc2017deb203b1903933f80611fe3e579cf175",
+      "assignedToAvenue": false,
+      "centerlineAvailable": false,
+      "reason": "One compound filled network spans multiple roads; it is not an individual named avenue."
+    }
+  ],
+  "contentHashDefinition": "SHA-256 of UTF-8 JSON with sorted keys, ensure_ascii=false and separators=(',',':'), excluding top-level contentSha256",
+  "contentSha256": "f54e01556669b25f3b236105cf566599b72c431cf1c746a5d8a1d1e6a51c76bb"
+}

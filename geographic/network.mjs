@@ -4,7 +4,11 @@ export function bikeAccessRestricted(feature){
  const tags=feature.properties.tags||{};
  return ['no','private'].includes(tags.bicycle)||['no','private'].includes(tags.access)||tags.highway==='steps';
 }
+export function bikePermissionConfirmed(feature){
+ const tags=feature.properties.tags||{};
+ return ['yes','designated','permissive'].includes(tags.bicycle)||Object.entries(tags).some(([key,value])=>/^cycleway(?::(?:left|right|both))?$/.test(key)&&['lane','shared_lane','track','opposite_lane','opposite_track'].includes(value));
+}
 export function bikeMatchingNetwork(geo){
  if(geo?.metadata?.source!=='OpenStreetMap'||!Array.isArray(geo.features))throw new Error('La red de coincidencia requiere datos OSM.');
- return {...geo,features:geo.features.filter(f=>f.properties.targetId&&!bikeAccessRestricted(f)&&(f.properties.targetCategory!=='shared-trail'||['yes','designated','permissive'].includes(f.properties.tags?.bicycle)))};
+ return {...geo,features:geo.features.filter(f=>f.properties.targetId&&!bikeAccessRestricted(f)&&(f.properties.targetCategory==='avenue'?bikePermissionConfirmed(f):f.properties.targetCategory!=='shared-trail'||['yes','designated','permissive'].includes(f.properties.tags?.bicycle)))};
 }

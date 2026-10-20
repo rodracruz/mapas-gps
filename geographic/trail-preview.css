@@ -11,3 +11,6 @@
 .trail-preview-crop>path{filter:drop-shadow(0 0 1px #fff)}
 .trail-preview-unavailable{padding:12px 0 0}
 @media(max-width:360px){.has-trail-miniature h3{max-width:60%;font-size:23px}.trail-miniature{right:12px;width:32%}}
+
+.trail-official-reference{margin:14px 0 18px;border:1px solid #dfe5d5;border-radius:10px;overflow:hidden;background:#fffefa}
+.trail-official-reference figcaption{font-size:10px;line-height:1.5;padding:9px 12px;color:#74806f;border-top:1px solid #e0e5d8}
