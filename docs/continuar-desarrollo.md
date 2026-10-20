@@ -2,7 +2,7 @@
 
 ## Estado más reciente: cuatro filtros con mapa estable
 
-Rama `feat/park-route-filters` sobre `b24e40a`, worktree aislado `parquemet-coverage`. Panel compartido en El Durazno y Parquemet: tipo documentado, longitud OSM, cercanía y dificultad donde existe. Mapa primero y mismo nodo/rectángulo/cámara al filtrar; fichas y capas cambian. Cercanía es distancia al tramo OSM con lectura puntual opt-in, sin usar registro del cartel, iniciar seguimiento ni persistir ubicación. Lecturas caducan a 60 s y requieren precisión ≤100 m. Ordenes de longitud/cercanía mutuamente excluyentes. No modificar fuentes ni geometrías para hacer funcionar filtros. [Decisiones, pruebas y capturas](evidence/route-filters.md). Main/Pages, fotografía privada y biblioteca se conservan.
+Rama `feat/park-route-filters` sobre `b24e40a`, worktree aislado `parquemet-coverage`. Panel compartido en El Durazno y Parquemet: tipo documentado, longitud OSM, cercanía y dificultad donde existe. Mapa primero y mismo nodo/rectángulo/cámara al filtrar; fichas y capas cambian. Cercanía es distancia al tramo OSM con lectura puntual opt-in, sin usar registro del cartel, iniciar seguimiento ni persistir ubicación. Lecturas caducan a 60 s y requieren precisión ≤100 m. Ordenes de longitud/cercanía mutuamente excluyentes. No modificar fuentes ni geometrías para hacer funcionar filtros. [Decisiones, pruebas y capturas](evidence/route-filters.md), [versión privada16 y PR #10](evidence/route-filters-release.md). Main/Pages, fotografía privada y biblioteca se conservan.
 
 ## Estado anterior: avenidas visibles y contrastadas
 
