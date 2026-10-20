@@ -31,4 +31,4 @@
 - [x] Tests first: reject malformed crops; protect all old objects/curves; gate avenue GPS on explicit permission/infrastructure; browser checks for category filtering, named selection, original crops and mobile layout.
 - [x] Implementation: `trail-preview.mjs` crop/reference models; `document-cycling.mjs` honest avenue document views; `park-viewer.mjs` category filters, visible blue avenue strokes and names; `network.mjs` access gate; registry and standalone embedding with hashes.
 - [x] Validation: focused tests, full unit suite, original extraction replay, source and private-bundle mobile QA, legacy storage and El Durazno regression checks.
-- [ ] Delivery: screenshots, repository continuation/evidence docs, branch/draft PR, same owner-private Site and downloadable private bundle. Verify deployed bytes/interactions and preserve main.
+- [x] Delivery: screenshots, repository continuation/evidence docs, branch/draft PR, same owner-private Site and downloadable private bundle. Verify deployed bytes/interactions and preserve main.
