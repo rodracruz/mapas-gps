@@ -13,7 +13,7 @@ if args.reference_photo:
     legacy += ['--reference-photo', str(args.reference_photo.resolve())]
 subprocess.run(legacy, check=True, capture_output=True)
 html = (root / 'mapa-geografico.html').read_text()
-for href in ['vendor/leaflet/leaflet.css', 'geographic/style.css', 'geographic/trail-preview.css']:
+for href in ['vendor/leaflet/leaflet.css', 'geographic/style.css', 'geographic/trail-preview.css', 'geographic/route-filter-ui.css']:
     html = html.replace(f'<link rel="stylesheet" href="./{href}">', '<style>' + (root / href).read_text() + '</style>')
 vendor = (root / 'vendor/leaflet/leaflet.js').read_text()
 html = html.replace('<script src="./vendor/leaflet/leaflet.js" defer></script>', '<script>' + vendor + '</script>')
@@ -55,6 +55,12 @@ modules.append('const {loadParkDirectory,renderParkDirectory}=ParkDirectory;')
 preview_code = re.sub(r'^import .*?;\n', '', (root / 'geographic/trail-preview.mjs').read_text(), flags=re.M).replace('export function ', 'function ')
 modules.append('const TrailPreview=(()=>{\n' + preview_code + '\nreturn {attachTrailPreviews};})();')
 modules.append('const {attachTrailPreviews}=TrailPreview;')
+for path,namespace,exports,bindings in [
+    ('geographic/route-filters.mjs','RouteFilterData','routeType,routeFilterModels,filterRoutes,validFilterLocation,distanceToRoute',''),
+    ('geographic/route-filter-ui.mjs','RouteFilterUI','setupRouteFilters,filterMapPadding','const {routeFilterModels,filterRoutes,validFilterLocation}=RouteFilterData;')]:
+    code=re.sub(r'^import .*?;\n','',(root/path).read_text(),flags=re.M).replace('export function ','function ')
+    modules.append(f'const {namespace}=(()=>{{\n{bindings}\n{code}\nreturn {{{exports}}};\n}})();')
+modules.append('const {setupRouteFilters,filterMapPadding}=RouteFilterUI;')
 modules.append(re.sub(r'^import .*?;\n', '', (root / 'geographic/viewer.mjs').read_text(), flags=re.M))
 html = html.replace('<script type="module" src="./geographic/viewer.mjs"></script>', payload + '<script type="module">\n' + '\n'.join(modules) + '\n</script>')
 html = html.replace('href="./index.html"', 'href="https://rodracruz.github.io/mapas-gps/"')

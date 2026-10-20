@@ -1,3 +1,4 @@
+import {setupRouteFilters,filterMapPadding} from './route-filter-ui.mjs';
 import {validateContinuous,createCartelLayer} from './cartel.mjs';
 import {fromOsmSnapshot} from './data.mjs';
 import {validateCatalog,describeTrail} from './catalog.mjs';
@@ -10,7 +11,14 @@ const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let directory,catalog,map,geo,contextLayer,selectionLayer,selectedFeature=null,selectedTarget=null,loadPromise,full=false;
 const targetLayers=new Map(),hiddenTargets=new Set(),hiddenCartelTargets=new Set();
-let gpsTracking,signReview,cartelData,cartelLayer,registration,mapSource=new URLSearchParams(location.hash.slice(1)).get('fuente')==='osm'?'osm':'cartel';
+let routeFilters,gpsTracking,signReview,cartelData,cartelLayer,registration,mapSource=new URLSearchParams(location.hash.slice(1)).get('fuente')==='osm'?'osm':'cartel';
+function applyRouteFilters(){
+ for(const [id,group]of targetLayers)if(mapSource==='osm'&&!hiddenTargets.has(id)&&routeFilters.includes(id))group.addTo(map);else map.removeLayer(group);
+ if(cartelLayer)for(const t of cartelData.trails)cartelLayer.setVisible(t.id,!hiddenCartelTargets.has(t.id)&&routeFilters.includes(t.id));
+ if(contextLayer){if(mapSource==='osm'&&routeFilters.state.type==='all'&&routeFilters.state.difficulty==='all'&&$('show-context').checked)contextLayer.addTo(map);else map.removeLayer(contextLayer);}
+ if((selectedTarget&&(!routeFilters.includes(selectedTarget)||(mapSource==='cartel'?hiddenCartelTargets:hiddenTargets).has(selectedTarget)))||(selectedFeature&&!selectedTarget&&(routeFilters.state.type!=='all'||routeFilters.state.difficulty!=='all'))){$('route-sheet').hidden=true;selectedTarget=selectedFeature=null;selectionLayer?.clearLayers();cartelLayer?.select(null);updateSelectionButtons();}
+}
+const filterTargets=()=>[...catalog.targets,...(cartelData?.trails||[]).filter(t=>!catalog.targets.some(c=>c.id===t.id))];
 const metricMarkup=stats=>[['Longitud',stats.distance],['Dificultad',stats.difficulty],['Vel. máxima',stats.maxSpeed],['Ascenso',stats.elevationGain],['Descenso',stats.elevationLoss]].map(([name,value])=>`<div><dt>${esc(name)}</dt><dd>${esc(value)}</dd></div>`).join('');
 function routeState(){const p=new URLSearchParams(location.hash.slice(1));return {park:p.get('parque'),map:p.get('mapa')==='1'};}
 function navigate(park,showMap=false,replace=false){const hash=park?'#'+new URLSearchParams({parque:park,...(showMap?{mapa:'1'}:{})}):'';history[replace?'replaceState':'pushState']({mapasGPS:true,mapasMap:showMap},'',location.pathname+location.search+hash);renderRoute();}
@@ -37,15 +45,15 @@ function renderCatalog(){
  $('open-map').onclick=()=>navigate(p.id,true);$('close-map').onclick=()=>{if(history.state?.mapasMap)history.back();else navigate(p.id,false,true);};
  $('map-source-cartel').onclick=()=>setMapSource('cartel');$('map-source-osm').onclick=()=>setMapSource('osm');$('fit-routes').onclick=fitAvailableRoutes;$('close-sheet').onclick=()=>{$('route-sheet').hidden=true;selectedTarget=null;selectedFeature=null;selectionLayer?.clearLayers();cartelLayer?.select(null);updateSelectionButtons();};
  $('fit-selected').onclick=()=>{if(mapSource==='cartel'&&selectedTarget)fitCartel(selectedTarget);else if(selectedFeature)fitFeatures(selectedTarget?featuresFor(selectedTarget):[selectedFeature]);};
- $('show-context').onchange=()=>{if(!contextLayer||mapSource!=='osm')return;if($('show-context').checked)contextLayer.addTo(map);else map.removeLayer(contextLayer);};
+ $('show-context').onchange=applyRouteFilters;
  $('osm-way').onchange=()=>{const f=geo.features.find(f=>f.id===$('osm-way').value);if(f){setMapSource('osm');selectFeature(f);fitFeatures([f]);}};
  $('download-geojson').onclick=()=>{if(!geo)return;const url=URL.createObjectURL(new Blob([JSON.stringify(geo,null,2)],{type:'application/geo+json'}));const a=document.createElement('a');a.href=url;a.download='el-durazno-trazados-osm.geojson';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
- updateCards();
+ updateCards();routeFilters=setupRouteFilters({getTargets:filterTargets,getGeo:()=>geo,onChange:applyRouteFilters});routeFilters.refresh();
 }
 function updateCards(){
  for(const t of catalog.targets){const stats=describeTrail(t,geo?.features||[]);document.querySelector(`[data-stats="${t.id}"]`).innerHTML=metricMarkup({...stats,distance:featuresFor(t.id).length?stats.distance+' · OSM':stats.distance});document.querySelector(`[data-distance="${t.id}"]`).textContent=featuresFor(t.id).length?stats.distance+' en OSM · Ver información':'Trazado pendiente · Ver información';}
  const count=catalog.targets.filter(t=>featuresFor(t.id).length).length;
- $('available-count').textContent='20 senderos del cartel';
+ routeFilters?.refresh();$('available-count').textContent='20 senderos del cartel';
  $('data-status').textContent=geo?'Las curvas del cartel se muestran sobre el mapa con ubicación aproximada. Puedes compararlas con '+count+' senderos de OSM.':'Los senderos se cargarán al abrir el parque.';
 }
 function updateSelectionButtons(){for(const button of $('map-trails').querySelectorAll('button'))button.setAttribute('aria-pressed',String(button.dataset.mapTarget===selectedTarget));}
@@ -58,6 +66,7 @@ function paintSelection(features){
  }
 }
 function selectTarget(id){
+ routeFilters?.reveal(id);routeFilters?.collapse();
  if(mapSource==='cartel'&&cartelData){if(cartelData.trails.some(t=>t.id===id))return selectCartel(id);setMapSource('osm');}
  const t=catalog.targets.find(t=>t.id===id);if(!t)return;
  selectedTarget=id;selectedFeature=featuresFor(id)[0]||null;
@@ -69,22 +78,23 @@ function selectTarget(id){
 }
 function selectFeature(feature){
  if(feature.properties.targetId){selectTarget(feature.properties.targetId);return;}
- selectedTarget=null;selectedFeature=feature;updateSelectionButtons();paintSelection(feature);const t={id:'context',difficulty:null,elevationGainM:null,elevationLossM:null};
+ routeFilters?.clearConstraints();selectedTarget=null;selectedFeature=feature;updateSelectionButtons();paintSelection(feature);const t={id:'context',difficulty:null,elevationGainM:null,elevationLossM:null};
  const temporary={...feature,properties:{...feature.properties,targetId:'context'}};
  $('sheet-title').textContent=feature.properties.name||'Sendero OSM sin nombre';$('sheet-level').textContent='CONTEXTO OPENSTREETMAP';$('sheet-description').textContent='Nombre y geometría conservados de la fuente. No se atribuye este tramo a una pista diferente.';$('sheet-stats').innerHTML=metricMarkup(describeTrail(t,[temporary]));$('sheet-source').href=feature.properties.sourceUrl;$('sheet-source').textContent='Fuente OpenStreetMap ↗';$('fit-selected').hidden=false;$('route-sheet').hidden=false;
 }
-function setTargetVisible(id,visible){if(mapSource==='cartel'&&cartelLayer){cartelLayer.setVisible(id,visible);if(visible)hiddenCartelTargets.delete(id);else hiddenCartelTargets.add(id);return;}const group=targetLayers.get(id);if(!group)return;if(visible){hiddenTargets.delete(id);group.addTo(map);}else{hiddenTargets.add(id);map.removeLayer(group);if(selectedTarget===id)selectionLayer.clearLayers();}const input=document.querySelector(`[data-visible-target="${id}"]`);if(input)input.checked=visible;}
-function fitFeatures(features){if(!map||!features.length)return;const latlngs=features.flatMap(f=>f.geometry.coordinates.map(([lon,lat])=>[lat,lon]));const sheet=full&&!$('route-sheet').hidden?$('route-sheet').getBoundingClientRect():null;const lateral=sheet&&sheet.width<map.getSize().x*.8;const right=lateral?sheet.width+48:28;const bottom=sheet&&!lateral?sheet.height+35:35;map.fitBounds(L.latLngBounds(latlngs),{paddingTopLeft:full?[28,140]:[20,16],paddingBottomRight:full?[right,bottom]:[20,16],maxZoom:17,animate:false});}
-function fitAvailableRoutes(){if(mapSource==='cartel'&&cartelLayer)return fitCartel();fitFeatures(geo?.features.filter(f=>f.properties.targetId&&!hiddenTargets.has(f.properties.targetId))||[]);}
+function setTargetVisible(id,visible){const hidden=mapSource==='cartel'?hiddenCartelTargets:hiddenTargets;if(visible)hidden.delete(id);else hidden.add(id);const input=document.querySelector(`[data-visible-target="${id}"]`);if(input)input.checked=visible;applyRouteFilters();}
+function fitFeatures(features){if(!map||!features.length)return;map.fitBounds(L.latLngBounds(features.flatMap(f=>f.geometry.coordinates.map(([lon,lat])=>[lat,lon]))),{...filterMapPadding(map,full),maxZoom:17,animate:false});}
+function fitAvailableRoutes(){if(mapSource==='cartel'&&cartelLayer)return fitCartel();fitFeatures(geo?.features.filter(f=>f.properties.targetId&&!hiddenTargets.has(f.properties.targetId)&&routeFilters.includes(f.properties.targetId))||[]);}
 function selectCartel(id){
+ routeFilters?.reveal(id);routeFilters?.collapse();
  const visual=cartelData.trails.find(t=>t.id===id),t=catalog.targets.find(t=>t.id===id);if(!visual)return;
  selectedTarget=id;selectedFeature=null;cartelLayer.select(id);cartelLayer.setVisible(id,true);hiddenCartelTargets.delete(id);const input=document.querySelector(`[data-visible-target="${id}"]`);if(input)input.checked=true;updateSelectionButtons();
  $('sheet-title').textContent=visual.name;$('sheet-level').textContent='CARTEL · UBICACIÓN APROXIMADA';$('sheet-description').textContent='Recorrido original del cartel de Outlife. Las curvas continúan bajo sus rótulos y puntos. Su ubicación sobre el mapa es un ajuste experimental, pendiente de validación para GPS.';
  $('sheet-stats').innerHTML=metricMarkup({distance:'Sin medir',difficulty:t?.difficulty?.label||'Sin datos',maxSpeed:'Sin registros',elevationGain:'Sin datos',elevationLoss:'Sin datos'});$('sheet-source').href='https://www.outlife.cl/wp-content/uploads/2023/04/Mapa_El-Durazno-2022_web.pdf';$('sheet-source').textContent='Cartel original de Outlife ↗';$('fit-selected').hidden=false;$('route-sheet').hidden=false;
 }
 function fitCartel(id){
- const points=cartelLayer?.features(id,hiddenCartelTargets);if(!points?.length||!map)return;const sheet=full&&!$('route-sheet').hidden?$('route-sheet').getBoundingClientRect():null,lateral=sheet&&sheet.width<map.getSize().x*.8;
- map.fitBounds(L.latLngBounds(points),{paddingTopLeft:full?[25,175]:[15,10],paddingBottomRight:full?[lateral?sheet.width+45:25,sheet&&!lateral?sheet.height+35:40]:[15,10],maxZoom:id?18:15,animate:false});
+ const hidden=new Set([...hiddenCartelTargets,...(cartelData?.trails||[]).filter(t=>!routeFilters.includes(t.id)).map(t=>t.id)]),points=cartelLayer?.features(id,hidden);if(!points?.length||!map)return;
+ map.fitBounds(L.latLngBounds(points),{...filterMapPadding(map,full),maxZoom:id?18:15,animate:false});
 }
 function setMapSource(source){
  if(source==='cartel'&&!cartelLayer)return;mapSource=source;const visual=source==='cartel';$('map-card').dataset.source=source;
@@ -94,7 +104,7 @@ function setMapSource(source){
  const trails=visual?cartelData.trails:catalog.targets;
  $('map-trails').innerHTML=trails.map(t=>`<button data-map-target="${esc(t.id)}" data-pending="${!visual&&t.status!=='osm-identified'}" aria-pressed="false"><i class="trail-color" style="--trail-color:${t.color}"></i>${esc(t.name)}</button>`).join('');for(const button of $('map-trails').querySelectorAll('button'))button.onclick=()=>selectTarget(button.dataset.mapTarget);
  $('visibility-controls').innerHTML=trails.filter(t=>visual||t.status==='osm-identified').map(t=>`<label class="check-row"><input type="checkbox" data-visible-target="${esc(t.id)}" ${(visual?hiddenCartelTargets:hiddenTargets).has(t.id)?'':'checked'}> ${esc(t.name)}</label>`).join('');for(const input of $('visibility-controls').querySelectorAll('input'))input.onchange=()=>setTargetVisible(input.dataset.visibleTarget,input.checked);
- fitAvailableRoutes();gpsTracking?.sourceChanged(source);
+ routeFilters?.refresh();fitAvailableRoutes();gpsTracking?.sourceChanged(source);
 }
 async function loadCartel(){
  const read=async(id,path)=>{const embedded=$(id);if(embedded)return embedded.textContent;const r=await fetch('./'+path);if(!r.ok)throw new Error('No se pudo cargar la capa del cartel.');return r.text();};
@@ -129,7 +139,7 @@ async function ensureMap(){
 }
 async function renderRoute(){
  if(!catalog)return;const route=routeState();const destination=directory.parks.find(p=>p.id===route.park&&p.id!==catalog.park.id);if(destination){gpsTracking?.stop();location.replace(destination.entry+(route.map?'&mapa=1':''));return;}const show=route.park===catalog.park.id;
- $('park-picker').hidden=show;$('park-view').hidden=!show;full=show&&route.map;$('map-card').classList.toggle('fullscreen',full);document.body.classList.toggle('map-open',full);
+ $('park-picker').hidden=show;$('park-view').hidden=!show;full=show&&route.map;routeFilters?.setFullscreen(full);$('map-card').classList.toggle('fullscreen',full);document.body.classList.toggle('map-open',full);
  gpsTracking?.setMapOpen(full);
  if(!show){document.title='Mapas GPS · Elige un parque';return;}
  document.title=(full?'Mapa · ':'')+catalog.park.shortName+' · Mapas GPS';await ensureMap();if(map){map.invalidateSize({animate:false});if(full&&!selectedTarget)fitAvailableRoutes();}
