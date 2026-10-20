@@ -1,6 +1,10 @@
 # Continuar Mapas GPS
 
-## Estado más reciente: avenidas visibles y contrastadas
+## Estado más reciente: cuatro filtros con mapa estable
+
+Rama `feat/park-route-filters` sobre `b24e40a`, worktree aislado `parquemet-coverage`. Panel compartido en El Durazno y Parquemet: tipo documentado, longitud OSM, cercanía y dificultad donde existe. Mapa primero y mismo nodo/rectángulo/cámara al filtrar; fichas y capas cambian. Cercanía es distancia al tramo OSM con lectura puntual opt-in, sin usar registro del cartel, iniciar seguimiento ni persistir ubicación. Lecturas caducan a 60 s y requieren precisión ≤100 m. Ordenes de longitud/cercanía mutuamente excluyentes. No modificar fuentes ni geometrías para hacer funcionar filtros. [Decisiones, pruebas y capturas](evidence/route-filters.md), [versión privada16 y PR #10](evidence/route-filters-release.md). Main/Pages, fotografía privada y biblioteca se conservan.
+
+## Estado anterior: avenidas visibles y contrastadas
 
 Rama `fix/parquemet-avenues`, sobre `7e72be7`, worktree aislado `parquemet-coverage`. Parquemet: ocho ciclistas + seis compartidos + doce avenidas/caminos. Filtros por categoría, avenidas azules, selección y recortes del plano. Diez recortes rotulados; Neruda/Elizalde son referencias de tabla sin miniatura ubicada. Los polígonos blancos del PDF no se presentan como curvas individuales. Nueva fuente atómica116vías/2694nodos preserva los2722objetos anteriores;103vías atribuidas,91elegibles para GPS. Gabriela Mistral y vías sin permiso permanecen visibles pero fuera del matcher. Los Turistas sigue pendiente de delimitar. [Implementación, capturas y pruebas](evidence/parquemet-avenues.md), [versión privada15 y PR #9](evidence/parquemet-avenues-release.md), [PDF](evidence/parquemet-avenues-pdf.md), [OSM](evidence/parquemet-avenues-geographic.md). No tocar main/Pages ni subir fotografía privada.
 
