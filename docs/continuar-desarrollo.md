@@ -1,6 +1,10 @@
 # Continuar Mapas GPS
 
-## Estado más reciente: curvas del cartel en Mapa de senderos
+## Estado más reciente: continuidad GPS experimental
+
+Rama `feat/gps-route-continuity` sobre `bf2c939`. En Mapa de senderos, Mi ubicación activa GPS bajo permiso; mantiene la pista probable mediante continuidad y reevalúa tras nodos OSM compartidos. Señal dudosa/antigua suspende ajuste; evidencia fiable incompatible permite readquirir sin bloqueo permanente. Probar recorrido ofrece una demo pública Lomo→Calibre12 con pausa y avance, sin solicitar ubicación. El dibujo del cartel sigue sin ajuste GPS. No se guardan recorridos; el fondo OSM carga teselas del área visible (aviso previo). [Implementación, pruebas y límites](evidence/gps-continuity.md), [motor](evidence/gps-matcher.md), [demo](evidence/gps-demo.md). Esta identificación no implementa navegación ni valida accesos/sentidos/loops/distancias restantes.
+
+## Estado anterior: curvas del cartel en Mapa de senderos
 
 La fuente predeterminada de «Mapa de senderos» ahora es Cartel: curvas originales completas del PDF oficial, con nombres y puntos encima, sobre el mapa mundial. La posición es experimental y permanece marcada «Ubicación aproximada · Sin ajuste GPS». OSM sigue como comparación; sus longitudes se identifican como OSM. [Método, límites y pruebas](evidence/continuous-cartel.md), [registro experimental](evidence/cartel-registration.md). Datos separados `continuous-sign-trails.json` (píxeles) y `cartel-registration.json` (modelo de presentación no aceptado para GPS). No volver a confundir líneas OSM nominales con el dibujo exacto del cartel.
 

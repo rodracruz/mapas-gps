@@ -3,11 +3,12 @@ import {fromOsmSnapshot} from './data.mjs';
 import {validateCatalog,describeTrail} from './catalog.mjs';
 import {sha256} from '../review/sha256.mjs';
 import {setupSignReview} from './sign.mjs';
+import {setupGpsTracking} from './gps.mjs';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let catalog,map,geo,contextLayer,selectionLayer,selectedFeature=null,selectedTarget=null,loadPromise,full=false;
 const targetLayers=new Map(),hiddenTargets=new Set(),hiddenCartelTargets=new Set();
-let signReview,cartelData,cartelLayer,registration,mapSource=new URLSearchParams(location.hash.slice(1)).get('fuente')==='osm'?'osm':'cartel';
+let gpsTracking,signReview,cartelData,cartelLayer,registration,mapSource=new URLSearchParams(location.hash.slice(1)).get('fuente')==='osm'?'osm':'cartel';
 const metricMarkup=stats=>[['Longitud',stats.distance],['Dificultad',stats.difficulty],['Vel. máxima',stats.maxSpeed],['Ascenso',stats.elevationGain],['Descenso',stats.elevationLoss]].map(([name,value])=>`<div><dt>${esc(name)}</dt><dd>${esc(value)}</dd></div>`).join('');
 function routeState(){const p=new URLSearchParams(location.hash.slice(1));return {park:p.get('parque'),map:p.get('mapa')==='1'};}
 function navigate(park,showMap=false,replace=false){const hash=park?'#'+new URLSearchParams({parque:park,...(showMap?{mapa:'1'}:{})}):'';history[replace?'replaceState':'pushState']({mapasGPS:true,mapasMap:showMap},'',location.pathname+location.search+hash);renderRoute();}
@@ -91,7 +92,7 @@ function setMapSource(source){
  const trails=visual?cartelData.trails:catalog.targets;
  $('map-trails').innerHTML=trails.map(t=>`<button data-map-target="${esc(t.id)}" data-pending="${!visual&&t.status!=='osm-identified'}" aria-pressed="false"><i class="trail-color" style="--trail-color:${t.color}"></i>${esc(t.name)}</button>`).join('');for(const button of $('map-trails').querySelectorAll('button'))button.onclick=()=>selectTarget(button.dataset.mapTarget);
  $('visibility-controls').innerHTML=trails.filter(t=>visual||t.status==='osm-identified').map(t=>`<label class="check-row"><input type="checkbox" data-visible-target="${esc(t.id)}" ${(visual?hiddenCartelTargets:hiddenTargets).has(t.id)?'':'checked'}> ${esc(t.name)}</label>`).join('');for(const input of $('visibility-controls').querySelectorAll('input'))input.onchange=()=>setTargetVisible(input.dataset.visibleTarget,input.checked);
- fitAvailableRoutes();
+ fitAvailableRoutes();gpsTracking?.sourceChanged(source);
 }
 async function loadCartel(){
  const read=async(id,path)=>{const embedded=$(id);if(embedded)return embedded.textContent;const r=await fetch('./'+path);if(!r.ok)throw new Error('No se pudo cargar la capa del cartel.');return r.text();};
@@ -114,6 +115,7 @@ async function ensureMap(){
    for(const t of catalog.targets){const group=L.layerGroup();for(const f of featuresFor(t.id)){const points=f.geometry.coordinates.map(([lon,lat])=>[lat,lon]);L.polyline(points,{color:'#fffefa',weight:8,opacity:.95,interactive:false,smoothFactor:0}).addTo(group);L.polyline(points,{color:t.color,weight:4.5,opacity:1,interactive:false,smoothFactor:0,className:'trail-line'}).addTo(group);L.polyline(points,{color:t.color,weight:22,opacity:0,smoothFactor:0,className:'route-hit'}).on('click',()=>selectFeature(f)).addTo(group);}targetLayers.set(t.id,group);group.addTo(map);}
    $('osm-way').innerHTML=geo.features.map(f=>`<option value="${f.id}">${esc(f.properties.name||'Sendero sin nombre')} · ${f.properties.osmId}</option>`).join('');$('osm-way').disabled=false;$('download-geojson').disabled=false;
    updateCards();const requestedTarget=selectedTarget;try{await loadCartel();}catch(error){setMapSource('osm');$('map-notice').textContent=error.message+' Se muestran sólo datos OSM.';$('map-notice').dataset.kind='source';$('map-notice').hidden=false;}fitAvailableRoutes();if(requestedTarget)selectTarget(requestedTarget);
+   gpsTracking=setupGpsTracking({map,geo,setSource:setMapSource,getSource:()=>mapSource,routeName:route=>catalog.targets.find(t=>t.id===route.targetId)?.name||route.name});gpsTracking.setMapOpen(full);
   }catch(error){$('data-status').textContent=error.message;$('map-notice').textContent=error.message;$('map-notice').dataset.kind='source';$('map-notice').hidden=false;$('download-geojson').disabled=true;}
   finally{$('map-card').dataset.ready='true';}
  })();return loadPromise;
@@ -121,6 +123,7 @@ async function ensureMap(){
 async function renderRoute(){
  if(!catalog)return;const route=routeState(),show=route.park===catalog.park.id;
  $('park-picker').hidden=show;$('park-view').hidden=!show;full=show&&route.map;$('map-card').classList.toggle('fullscreen',full);document.body.classList.toggle('map-open',full);
+ gpsTracking?.setMapOpen(full);
  if(!show){document.title='Mapas GPS · Elige un parque';return;}
  document.title=(full?'Mapa · ':'')+catalog.park.shortName+' · Mapas GPS';await ensureMap();if(map){map.invalidateSize({animate:false});if(full&&!selectedTarget)fitAvailableRoutes();}
  if(full)$('close-map').focus({preventScroll:true});
