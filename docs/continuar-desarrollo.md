@@ -2,7 +2,7 @@
 
 ## Estado más reciente: fondo del plano en las vistas de ruta
 
-Rama `fix/official-map-preview-background`, sobre `2a0786b`, reutiliza el worktree aislado `parquemet-coverage`. Las ocho fichas ciclistas de Parquemet y veinte de El Durazno muestran un recorte del plano oficial como fondo, tanto en miniatura como al desplegar y ampliar. Se conserva el entorno cercano y se resalta la curva original en el mismo sistema de píxeles. Las imágenes originales se comprueban por SHA256 y se comparten entre las fichas; no se genera ni modifica el contenido del plano. [Implementación, capturas y pruebas](evidence/map-preview-background.md). Si falla el fondo, los vectores del mapa geográfico se mantienen. No alterar curvas/datos GPS para ajustar una miniatura.
+Rama `fix/official-map-preview-background`, sobre `2a0786b`, reutiliza el worktree aislado `parquemet-coverage`. Las ocho fichas ciclistas de Parquemet y veinte de El Durazno muestran un recorte del plano oficial como fondo, tanto en miniatura como al desplegar y ampliar. Se conserva el entorno cercano y se resalta la curva original en el mismo sistema de píxeles. Las imágenes originales se comprueban por SHA256 y se comparten entre las fichas; no se genera ni modifica el contenido del plano. [Implementación, capturas y pruebas](evidence/map-preview-background.md), [versión privada13 verificada y PR #7](evidence/map-preview-background-release.md). Si falla el fondo, los vectores del mapa geográfico se mantienen. No alterar curvas/datos GPS para ajustar una miniatura.
 
 ## Estado anterior: cobertura ciclista y miniaturas oficiales
 
