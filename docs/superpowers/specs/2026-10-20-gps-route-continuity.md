@@ -1,0 +1,11 @@
+# Identificación probable con continuidad de sendero
+
+Petición del propietario: una vez que el ciclista entra en una pista, conservar la hipótesis de esa pista y reevaluar cerca de intersecciones, porque cambiar entre pistas próximas es poco probable. Se implementa como identificación experimental, no como instrucciones de circulación ni navegación validada.
+
+La continuidad debe pesar más que el vecino más cercano de una lectura aislada. La hipótesis requiere varias posiciones coherentes; conserva la pista ante ruido compatible con su incertidumbre; reevaluará en nodos realmente compartidos por vías OSM, sin conectar cruces gráficos o líneas próximas. Varias lecturas fiables incompatibles permiten abandonar una hipótesis equivocada y buscar nuevamente. Una interrupción, posición antigua o mala precisión quita el punto ajustado y reconoce la incertidumbre.
+
+Se usarán únicamente posiciones geográficas OSM del snapshot comprobado. La geometría del cartel y su registro experimental no se convierten en red GPS. Activar seguimiento abre la fuente OSM; al consultar Cartel se puede mostrar la posición real con incertidumbre, pero no se ajusta el GPS al dibujo. No se utilizan sentidos/accesos sin comprobar para sugerir itinerarios. No se implementan loops ni distancias restantes en esta entrega.
+
+Los controles se activan al pulsar Mi ubicación y permiten detener el seguimiento. Nunca se solicita ubicación al cargar la página. No se persisten ubicaciones/historial/tracks ni se envían coordenadas o trazas a un backend de la aplicación. El fondo OSM solicita teselas del área visible, también al centrar el GPS: esas solicitudes pueden revelar el área al proveedor y se informa antes de activar el seguimiento. Al cerrar el mapa se cancela el watch y se limpia el estado. La demo reproduce coordenadas públicas OSM con señal simulada claramente identificada y sin solicitar geolocalización.
+
+Resultados del motor: buscando, probable, ambigua, fuera de ruta o antigua. Sólo probable tiene posición ajustada. El marcador de lectura real y el círculo de precisión permanecen distinguibles del punto probable. No se inventa porcentaje de confianza. La velocidad/dirección sólo participan si son compatibles con la señal; todas las tolerancias son heurísticas documentadas, no garantías de precisión.

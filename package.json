@@ -17,7 +17,9 @@
     "build:geographic": "python3 scripts/build-geographic-standalone.py",
     "test:geographic:regressions": "node tests/geographic-regressions.mjs",
     "test:sign": "node tests/all-sign-browser.mjs && node tests/all-sign-interactions.mjs && node tests/all-sign-recovery.mjs",
-    "test:cartel": "node --test tests/cartel-world.test.mjs && node tests/cartel-world-browser.mjs"
+    "test:cartel": "node --test tests/cartel-world.test.mjs && node tests/cartel-world-browser.mjs",
+    "test:gps": "node --test tests/navigation-matcher.test.mjs tests/navigation-demo.test.mjs && node tests/gps-browser.mjs",
+    "test:gps:layout": "node tests/gps-layout-browser.mjs"
   },
   "devDependencies": {
     "playwright": "1.58.2"
