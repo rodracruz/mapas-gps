@@ -2,7 +2,7 @@
 
 ## Estado más reciente: cobertura ciclista y miniaturas oficiales
 
-Rama `fix/parquemet-cycling-coverage`, worktree `parquemet-coverage`, sobre `d57cd34`. Parquemet muestra ocho senderos ciclistas OSM rotulados, nueve avenidas secundarias y los ocho recorridos nativos del PDF en un visor separado. Las fichas incluyen miniatura y ampliación de sólo la ruta oficial (ocho Parquemet y veinte El Durazno); Subida Buitrera no toma por semejanza una subida del cartel. Restricciones OSM siguen excluidas del GPS. El PDF permanece esquemático, sin transformación geográfica. [Implementación y pruebas](evidence/parquemet-coverage.md), [correspondencias y fuentes](evidence/parquemet-coverage-sources.md), [extracción exacta del PDF](evidence/parquemet-pdf-traces.md). `main`, Pages, foto privada y mapas guardados se conservan.
+Rama `fix/parquemet-cycling-coverage`, worktree `parquemet-coverage`, sobre `d57cd34`. Parquemet muestra ocho senderos ciclistas OSM rotulados, nueve avenidas secundarias y los ocho recorridos nativos del PDF en un visor separado. Las fichas incluyen miniatura y ampliación de sólo la ruta oficial (ocho Parquemet y veinte El Durazno); Subida Buitrera no toma por semejanza una subida del cartel. Restricciones OSM siguen excluidas del GPS. El PDF permanece esquemático, sin transformación geográfica. [Implementación y pruebas](evidence/parquemet-coverage.md), [publicación privada verificada y PR #6](evidence/parquemet-coverage-release.md), [correspondencias y fuentes](evidence/parquemet-coverage-sources.md), [extracción exacta del PDF](evidence/parquemet-pdf-traces.md). `main`, Pages, foto privada y mapas guardados se conservan.
 
 ## Estado anterior: segundo parque Parquemet
 

@@ -10,6 +10,6 @@ Rama `fix/parquemet-cycling-coverage`, worktree aislado sobre `d57cd34`.
 - [x] Priorizar senderos en el mapa, añadir nombres sin tapar controles y comparación con el documento.
 - [x] Miniaturas de sólo la ruta en ocho fichas Parquemet y veinte El Durazno, sin falsa asociación de Buitrera.
 - [x] Comprobar pruebas RED→GREEN, móviles, datos, matrices, integridad y almacenamiento; revisión independiente.
-- [ ] Guardar rama/PR en borrador, actualizar la misma copia privada y ZIP, verificar HTTPS y documentar publicación.
+- [x] Guardar rama/PR en borrador, actualizar la misma copia privada y ZIP, verificar HTTPS y documentar publicación.
 
 Resultados, comandos y límites: `docs/evidence/parquemet-coverage.md`. No fusionar `main`, modificar audiencia ni subir foto/recorridos privados.
