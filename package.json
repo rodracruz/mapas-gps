@@ -19,7 +19,8 @@
     "test:sign": "node tests/all-sign-browser.mjs && node tests/all-sign-interactions.mjs && node tests/all-sign-recovery.mjs",
     "test:cartel": "node --test tests/cartel-world.test.mjs && node tests/cartel-world-browser.mjs",
     "test:gps": "node --test tests/navigation-matcher.test.mjs tests/navigation-demo.test.mjs && node tests/gps-browser.mjs",
-    "test:gps:layout": "node tests/gps-layout-browser.mjs"
+    "test:gps:layout": "node tests/gps-layout-browser.mjs",
+    "test:parquemet": "node tests/parquemet-browser.mjs && node tests/parquemet-hardening.mjs"
   },
   "devDependencies": {
     "playwright": "1.58.2"

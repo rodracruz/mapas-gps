@@ -1,6 +1,10 @@
 # Continuar Mapas GPS
 
-## Estado más reciente: continuidad GPS experimental
+## Estado más reciente: segundo parque Parquemet
+
+Rama `feat/parquemet-second-park` sobre `fa298ab`. Selector común ofrece El Durazno y Parquemet; el nuevo controlador `geographic/park-viewer.mjs` usa catálogo/documento/snapshot del registro elegido. PDF oficial público intacto y render6690×2835 ampliable en coordenadas propias. Ocho fichas ciclistas, seis correspondencias nominales OSM, dos avenidas principales; Zorzal y Pa’ arriba pendientes frente a variantes OSM. Longitudes PDF y OSM separadas, restricciones por tramo y GPS opt-in sólo en red nominal compatible; sin demo Lomo de otro parque. El Durazno, la foto privada, sus capas y la biblioteca guardada se conservan. [Implementación y pruebas](evidence/parquemet.md), [fuentes geográficas](evidence/parquemet-geographic.md), [PDF e imagen](evidence/parquemet-official-document.md). No usar el PDF esquemático como calibración GPS ni mezclar ediciones.
+
+## Estado anterior: continuidad GPS experimental
 
 Rama `feat/gps-route-continuity` sobre `bf2c939`. En Mapa de senderos, Mi ubicación activa GPS bajo permiso; mantiene la pista probable mediante continuidad y reevalúa tras nodos OSM compartidos. Señal dudosa/antigua suspende ajuste; evidencia fiable incompatible permite readquirir sin bloqueo permanente. Probar recorrido ofrece una demo pública Lomo→Calibre12 con pausa y avance, sin solicitar ubicación. El dibujo del cartel sigue sin ajuste GPS. No se guardan recorridos; el fondo OSM carga teselas del área visible (aviso previo). [Implementación, pruebas y límites](evidence/gps-continuity.md), [despliegue privado comprobado y PR #4](evidence/gps-continuity-release.md), [motor](evidence/gps-matcher.md), [demo](evidence/gps-demo.md). Esta identificación no implementa navegación ni valida accesos/sentidos/loops/distancias restantes.
 

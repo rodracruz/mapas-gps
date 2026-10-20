@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const module=await import('../geographic/parks.mjs').catch(()=>({}));
+const fixture={schemaVersion:1,parks:[{id:'el-durazno',name:'RKF El Durazno',shortName:'El Durazno',locality:'Santiago',description:'Parque',entry:'./mapa-geografico.html#parque=el-durazno'},{id:'parquemet',name:'Parque Metropolitano de Santiago',shortName:'Parquemet',locality:'Santiago',description:'Parque',entry:'./parquemet.html#parque=parquemet'}]};
+test('park directory preserves two independent park entries and allows lookup',()=>{assert.equal(typeof module.validateParkDirectory,'function');assert.equal(module.validateParkDirectory(fixture),fixture);assert.equal(module.parkById(fixture,'parquemet').name,'Parque Metropolitano de Santiago');assert.equal(module.parkById(fixture,'missing'),null);});
+test('park directory rejects duplicate IDs, broken identities and external/script/traversal destinations',()=>{assert.equal(typeof module.validateParkDirectory,'function');for(const entry of ['javascript:alert(1)','https://example.com','../parquemet.html','./../../a.html','./parquemet.html#parque=el-durazno']){const d=structuredClone(fixture);d.parks[1].entry=entry;assert.throws(()=>module.validateParkDirectory(d));}const duplicate=structuredClone(fixture);duplicate.parks.push(duplicate.parks[0]);assert.throws(()=>module.validateParkDirectory(duplicate));});
+test('tracked directory includes user-selected Parquemet and preserves El Durazno',async()=>{const d=JSON.parse(await readFile('data/parks.json'));module.validateParkDirectory(d);assert.deepEqual(d.parks.map(p=>p.id),['el-durazno','parquemet']);});

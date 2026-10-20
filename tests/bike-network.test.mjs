@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {fromOsmSnapshot} from '../geographic/data.mjs';
+import {bikeMatchingNetwork} from '../geographic/network.mjs';
+test('Parquemet GPS cannot acquire unassigned spelling variants or a source edge with explicit access=no',async()=>{const catalog=JSON.parse(await readFile('data/parquemet/geographic-catalog.json')),geo=fromOsmSnapshot(JSON.parse(await readFile(catalog.sourceSnapshot)),catalog),copy=structuredClone(geo),matched=bikeMatchingNetwork(geo);assert.equal(matched.features.length,30);for(const id of [479769658,691091446,862880882])assert.equal(matched.features.some(f=>f.properties.osmId===id),false);assert.deepEqual(geo,copy);assert.ok(matched.features.some(f=>f.properties.targetId==='anfiteatro'),'unrestricted named segments are not falsely all marked closed');});
+test('a future bike prohibition or staircase is excluded even with a matched trail ID',()=>{const geo={metadata:{source:'OpenStreetMap'},features:[{properties:{targetId:'a',tags:{bicycle:'no'}}},{properties:{targetId:'b',tags:{access:'private'}}},{properties:{targetId:'c',tags:{highway:'steps'}}},{properties:{targetId:'d',tags:{bicycle:'designated'}}}]};assert.deepEqual(bikeMatchingNetwork(geo).features.map(f=>f.properties.targetId),['d']);assert.throws(()=>bikeMatchingNetwork({metadata:{source:'PDF'},features:[]}));});
