@@ -41,5 +41,5 @@
 **Files:** scripts/build-geographic-standalone.py; scripts/build-parquemet-standalone.py;docs/continuar-desarrollo.md;docs/evidence/parquemet-release.md.
 - [x] Añadir bundle hermano y directorio embebido; probar origen y standalone sin rutas rotas.
 - [x] Ejecutar unitarias y regresiones de ElDurazno/GPS/almacenes, revisión independiente y corregir hallazgos.
-- [ ] Commit/push rama/PR borrador apilado, actualizar la misma copia privada y ZIP; verificar HTTPS/datos/foto original/ambos parques.
-- [ ] Guardar capturas y resultados/hashes/limitaciones; conservar worktree para continuación.
+- [x] Commit/push rama/PR borrador apilado, actualizar la misma copia privada y ZIP; verificar HTTPS/datos/foto original/ambos parques.
+- [x] Guardar capturas y resultados/hashes/limitaciones; conservar worktree para continuación.
