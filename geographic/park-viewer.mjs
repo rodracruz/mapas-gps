@@ -74,7 +74,7 @@ async function loadDocument(meta,entry){
  if(entry.visual){
   const embedded=byId('embedded-park-visual');let visualBytes;if(embedded)visualBytes=Uint8Array.from(atob(embedded.textContent.trim()),c=>c.charCodeAt(0));else{const response=await fetch(entry.visual);if(!response.ok)throw new Error('No se pudieron cargar las curvas oficiales.');visualBytes=new Uint8Array(await response.arrayBuffer());}
   if(sha256(visualBytes)!==entry.visualSha256)throw new Error('Las curvas no coinciden con el PDF documentado.');const data=JSON.parse(new TextDecoder().decode(visualBytes));if(data.source.sha256!==meta.pdf.sha256||data.image.width!==meta.image.width||data.image.height!==meta.image.height)throw new Error('Las curvas y la imagen no pertenecen al mismo plano.');
-  documentCycling=setupDocumentCycling({data,viewer:official});openOfficial=id=>documentCycling.open(id);attachTrailPreviews(data,{onOpen:id=>documentCycling.open(id,{mode:'vectors',isolate:true})});
+  documentCycling=setupDocumentCycling({data,viewer:official});openOfficial=id=>documentCycling.open(id);attachTrailPreviews(data,{background:{imageUrl,width:meta.image.width,height:meta.image.height},onOpen:id=>{byId('document-opacity').value='100';documentCycling.open(id,{mode:'overlay',isolate:true});}});
  }
 byId('park-photo-caption').textContent='PDF oficial de Parquemet · Edición del archivo recibido, no un estado actual de accesos · Toca para ampliar';
 }

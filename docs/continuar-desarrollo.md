@@ -1,6 +1,10 @@
 # Continuar Mapas GPS
 
-## Estado más reciente: cobertura ciclista y miniaturas oficiales
+## Estado más reciente: fondo del plano en las vistas de ruta
+
+Rama `fix/official-map-preview-background`, sobre `2a0786b`, reutiliza el worktree aislado `parquemet-coverage`. Las ocho fichas ciclistas de Parquemet y veinte de El Durazno muestran un recorte del plano oficial como fondo, tanto en miniatura como al desplegar y ampliar. Se conserva el entorno cercano y se resalta la curva original en el mismo sistema de píxeles. Las imágenes originales se comprueban por SHA256 y se comparten entre las fichas; no se genera ni modifica el contenido del plano. [Implementación, capturas y pruebas](evidence/map-preview-background.md). Si falla el fondo, los vectores del mapa geográfico se mantienen. No alterar curvas/datos GPS para ajustar una miniatura.
+
+## Estado anterior: cobertura ciclista y miniaturas oficiales
 
 Rama `fix/parquemet-cycling-coverage`, worktree `parquemet-coverage`, sobre `d57cd34`. Parquemet muestra ocho senderos ciclistas OSM rotulados, nueve avenidas secundarias y los ocho recorridos nativos del PDF en un visor separado. Las fichas incluyen miniatura y ampliación de sólo la ruta oficial (ocho Parquemet y veinte El Durazno); Subida Buitrera no toma por semejanza una subida del cartel. Restricciones OSM siguen excluidas del GPS. El PDF permanece esquemático, sin transformación geográfica. [Implementación y pruebas](evidence/parquemet-coverage.md), [publicación privada verificada y PR #6](evidence/parquemet-coverage-release.md), [correspondencias y fuentes](evidence/parquemet-coverage-sources.md), [extracción exacta del PDF](evidence/parquemet-pdf-traces.md). `main`, Pages, foto privada y mapas guardados se conservan.
 
