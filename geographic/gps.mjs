@@ -2,8 +2,8 @@ import {createRouteMatcher} from '../navigation/matcher.mjs';
 import {createPublicDemo} from '../navigation/demo.mjs';
 
 // Session-only tracking. No positions or inferred trail choices are persisted.
-export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>route.name}){
- const el=id=>document.getElementById(id),matcher=createRouteMatcher(geo),layer=L.layerGroup().addTo(map);
+export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>route.name,demoFactory=createPublicDemo}){
+ const el=id=>document.getElementById(id);el('gps-demo').hidden=!demoFactory;const matcher=createRouteMatcher(geo),layer=L.layerGroup().addTo(map);
  let mode='off',watchId=null,timer=null,ageTimer=null,session=0,result=matcher.snapshot(),demo=null,index=-1,paused=false,follow=false,firstFix=true,signalError=null;
  const text=(id,value)=>{if(el(id).textContent!==value)el(id).textContent=value;};
  const details={
@@ -23,7 +23,7 @@ export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>r
   'teleport-reacquiring':'El salto entre lecturas no es coherente. Comprobando de nuevo.'
  };
  function render(){
-  layer.clearLayers();const active=mode!=='off',isDemo=mode==='demo',sign=getSource()==='cartel';
+  el('gps-panel').dataset.mode=mode;layer.clearLayers();const active=mode!=='off',isDemo=mode==='demo',sign=getSource()==='cartel';
   const name=result.route?routeName(result.route):null;
   const status=el('gps-status');status.dataset.state=active?result.status:'off';status.dataset.routeId=active?result.route?.id||'':'';status.dataset.reason=active?result.reason:'off';
   text('gps-mode',isDemo?(index===demo.fixes.length-1?'Demostración finalizada · posición simulada':'Demostración · posición simulada'):active?'GPS · OSM experimental':'Ubicación desactivada');
@@ -33,7 +33,7 @@ export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>r
   if(isDemo){el('gps-demo-progress').max=demo.fixes.length;el('gps-demo-progress').value=index+1;el('gps-demo-next').disabled=index>=demo.fixes.length-1;el('gps-demo-pause').disabled=index>=demo.fixes.length-1;text('gps-demo-pause',paused?'Continuar':'Pausar');text('gps-demo-stage',`${index+1}/${demo.fixes.length} · ${demo.fixes[index]?.stage==='exit'?'Salida del cruce':demo.fixes[index]?.stage==='junction'?'Cruce OSM':'Lomo Vetado'}`);}
   const heading=!active?'Identificación de pista':sign?'Cartel aproximado · GPS sin ajuste':result.status==='probable'?`Ruta probable: ${name}`:result.status==='ambiguous'?'Pista ambigua':result.status==='stale'?'GPS sin lectura reciente':result.status==='off-route'?'Fuera de la red disponible':result.status==='error'?'No se pudo obtener tu ubicación':'Buscando pista probable…';
   text('gps-status',heading);
-  text('gps-detail',!active?'Activa tu ubicación o prueba el recorrido público Lomo Vetado → Calibre 12.':sign?'El cartel no está calibrado para GPS. Cambia a OSM para ver el ajuste probable.':details[result.reason]||result.message||'Esperando una lectura fiable.');
+  text('gps-detail',!active?(demoFactory?'Activa tu ubicación o prueba el recorrido público Lomo Vetado → Calibre 12.':'Activa tu ubicación para identificar una pista probable en los tramos OSM disponibles.'):sign?'El cartel no está calibrado para GPS. Cambia a OSM para ver el ajuste probable.':details[result.reason]||result.message||'Esperando una lectura fiable.');
   text('gps-accuracy',active&&result.raw?`${isDemo?'Lectura simulada':'Lectura GPS'} · precisión indicada ±${Math.round(result.raw.accuracy)} m${result.status==='stale'?' · antigua':''}`:'');
   if(!active||!result.raw)return;
   const raw=result.raw,latlng=[raw.latitude,raw.longitude],color=isDemo?'#c76722':'#2874bd';
@@ -65,7 +65,7 @@ export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>r
  function step(){if(mode!=='demo'||index>=demo.fixes.length-1)return;index++;show(matcher.update(demo.fixes[index],demo.fixes[index].timestamp));if(index===demo.fixes.length-1){clearInterval(timer);timer=null;paused=true;render();}}
  function playback(){clearInterval(timer);timer=setInterval(step,500);}
  function startDemo(){
-  stop();setSource('osm');demo=createPublicDemo(geo);mode='demo';step();
+  if(!demoFactory)return;stop();setSource('osm');demo=demoFactory(geo);mode='demo';step();
   const size=map.getSize(),panel=el('gps-panel').getBoundingClientRect(),lateral=size.x>size.y&&size.y<=650;
   map.fitBounds(L.latLngBounds(demo.fixes.map(f=>[f.latitude,f.longitude])),{paddingTopLeft:[25,175],paddingBottomRight:lateral?[panel.width+35,30]:[25,Math.min(panel.height+65,size.y-265)],maxZoom:18,animate:false});playback();
  }

@@ -1,0 +1,22 @@
+{
+  "checks": [
+    "owner-private access preserved",
+    "published bytes match tested artifact",
+    "live park selection, cards and geographic data",
+    "high-resolution main map2570x3077 and intact960x1280 private original in separate dialog",
+    "20 sign trails plus 2 ascents, 23 native continuous paths, identical raster/vector coordinates and vector-only mode",
+    "live expandable trail information",
+    "live full-screen map, real tiles and bottom sheet",
+    "continuous sign artwork over world map, approximate-position disclosure, no fabricated distances and separate OSM comparison",
+    "published public demo acquires Lomo and changes to Calibre12 through shared OSM junction, distinct reading and adjusted ring",
+    "published HTTPS native geolocation works with granted browser permission and public CDP-emulated fixes; stop clears session",
+    "preserved complete private photographic review",
+    "second park Parquemet exact published bundle bytes, full official6690px image, eight cycling trails and two avenues with independent OSM data",
+    "official schematic PDF remains separate, portrait framing and full-map controls work",
+    "Parquemet world map loads real tiles, distinct PDF/OSM lengths, pending targets, no foreign GPS demo, return to El Durazno without mixed targets",
+    "no runtime errors"
+  ],
+  "anonymousStatus": 401,
+  "liveSha256": "4fde4664cf17c4c9e701bbc9956f18bb72c3d2ca3b9d5281c753ccac51e1bb05",
+  "loadedTiles": 9
+}

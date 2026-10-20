@@ -21,6 +21,7 @@ catalog = json.loads((root / 'data/el-durazno/geographic-catalog.json').read_tex
 source = (root / catalog['sourceSnapshot']).read_bytes()
 assert hashlib.sha256(source).hexdigest() == catalog['sourceSnapshotSha256'], 'Source snapshot changed'
 payload = '<script id="embedded-geographic-catalog" type="application/json">' + json.dumps(catalog, ensure_ascii=False).replace('<', '\\u003c') + '</script>'
+payload += '<script id="embedded-parks-directory" type="application/json">' + (root / 'data/parks.json').read_text().replace('<', '\\u003c') + '</script>'
 payload += '<script id="embedded-osm-source" type="application/octet-stream">' + base64.b64encode(source).decode() + '</script>'
 if args.reference_photo:
     raw = args.reference_photo.read_bytes()
@@ -48,6 +49,9 @@ for path, namespace, exports, bindings in [
     code = re.sub(r'\bexport (function|const|let|class) ', r'\1 ', code)
     modules.append(f'const {namespace}=(()=>{{\n{bindings}\n{code}\nreturn {{{exports}}};\n}})();')
 modules.append('const {setupGpsTracking}=MapasGPSGps;')
+park_code = re.sub(r'^import .*?;\n', '', (root / 'geographic/parks.mjs').read_text(), flags=re.M).replace('export async function ', 'async function ').replace('export function ', 'function ')
+modules.append('const ParkDirectory=(()=>{\n' + park_code + '\nreturn {loadParkDirectory,renderParkDirectory};})();')
+modules.append('const {loadParkDirectory,renderParkDirectory}=ParkDirectory;')
 modules.append(re.sub(r'^import .*?;\n', '', (root / 'geographic/viewer.mjs').read_text(), flags=re.M))
 html = html.replace('<script type="module" src="./geographic/viewer.mjs"></script>', payload + '<script type="module">\n' + '\n'.join(modules) + '\n</script>')
 html = html.replace('href="./index.html"', 'href="https://rodracruz.github.io/mapas-gps/"')
@@ -60,3 +64,7 @@ source_dir = dest.parent / 'sources'
 source_dir.mkdir(exist_ok=True)
 shutil.copy2(root / 'sources/el-durazno-official-2022.jpg', source_dir / 'el-durazno-official-2022.jpg')
 print(f'{dest}: {dest.stat().st_size} bytes; SHA256 {hashlib.sha256(dest.read_bytes()).hexdigest()}')
+
+# A stable index lets sibling park entries return to the shared picker.
+shutil.copy2(dest, dest.parent / 'index.html')
+subprocess.run([sys.executable, str(root / 'scripts/build-parquemet-standalone.py')], check=True)

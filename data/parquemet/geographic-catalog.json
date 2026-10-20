@@ -1,0 +1,418 @@
+{
+  "schemaVersion": 1,
+  "id": "parquemet-geographic-v1",
+  "title": "Parquemet",
+  "coordinateSystem": "EPSG:4326",
+  "coordinateOrder": "longitude,latitude",
+  "attribution": "© OpenStreetMap contributors",
+  "license": "ODbL-1.0",
+  "sourceSnapshot": "sources/parquemet-osm.json",
+  "sourceSnapshotSha256": "5f804c6b89ceb2e5836429364cf87a8850cdfd57c347bb167d5be08b00dd29db",
+  "sourceUrl": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A40%5D%3B%28way%5B%22highway%22~%22%5E%28path%7Ctrack%7Ccycleway%29%24%22%5D%28-33.44%2C-70.65%2C-33.39%2C-70.59%29%3Bway%5B%22highway%22%5D%5B%22name%22~%22%5E%28Avenida+%29%3F%28Alberto+Mackenna%7CAbate+Molina%7CCarlos+Martner%7CPedro+Bannen%7CManuel+Za%C3%B1artu%7CFederico+Albert%7CClaudio+Gay%7CLa+Monta%C3%B1a%7CGabriela+Mistral%7CCarlos+Reed%29%24%22%5D%28-33.44%2C-70.65%2C-33.39%2C-70.59%29%3B%29%3Bout+meta%3B%3E%3Bout+meta%3B",
+  "queriedAt": "2026-10-20T15:04:36.262293+00:00",
+  "queryBounds": [
+    -70.65,
+    -33.44,
+    -70.59,
+    -33.39
+  ],
+  "geographicExtent": [
+    -70.6380693,
+    -33.4306903,
+    -70.6019812,
+    -33.3894875
+  ],
+  "targets": [
+    {
+      "id": "centenario",
+      "name": "Centenario",
+      "category": "cycling-trail",
+      "status": "osm-identified",
+      "osmWayIds": [
+        749895576,
+        1307648383,
+        1307648385
+      ],
+      "osmNames": [
+        "Sendero Ciclista Centenario"
+      ],
+      "visualTrailId": "centenario",
+      "publicMapUrl": "https://www.openstreetmap.org/way/749895576",
+      "description": "Sendero ciclista de la leyenda oficial. Los tramos OSM se conservan por separado y no acreditan la extensión completa ni la apertura actual.",
+      "sourceNote": "Nombre y distancia referencial de la leyenda ciclista del PDF oficial MapaParque.pdf; el prefijo de categoría «Sendero Ciclista» está registrado literalmente en OSM. Geometría OSM sin unión de vías, interpolación ni registro del esquema. La vigencia operacional no está confirmada.",
+      "color": "#b23f47",
+      "difficulty": null,
+      "officialDistanceM": 900,
+      "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": true,
+      "operationConfirmed": false,
+      "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+    },
+    {
+      "id": "cuatro-y-medio",
+      "name": "4 ½",
+      "category": "cycling-trail",
+      "status": "osm-identified",
+      "osmWayIds": [
+        479769031,
+        479771255,
+        512366462
+      ],
+      "osmNames": [
+        "Sendero Ciclista 4 ½"
+      ],
+      "visualTrailId": "cuatro-y-medio",
+      "publicMapUrl": "https://www.openstreetmap.org/way/479769031",
+      "description": "Sendero ciclista de la leyenda oficial. Los tramos OSM se conservan por separado y no acreditan la extensión completa ni la apertura actual.",
+      "sourceNote": "Nombre y distancia referencial de la leyenda ciclista del PDF oficial MapaParque.pdf; el prefijo de categoría «Sendero Ciclista» está registrado literalmente en OSM. Geometría OSM sin unión de vías, interpolación ni registro del esquema. La vigencia operacional no está confirmada.",
+      "color": "#b23f47",
+      "difficulty": null,
+      "officialDistanceM": 1000,
+      "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": true,
+      "operationConfirmed": false,
+      "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+    },
+    {
+      "id": "anfiteatro",
+      "name": "Anfiteatro",
+      "category": "cycling-trail",
+      "status": "osm-identified",
+      "osmWayIds": [
+        479769658,
+        691091448,
+        929919497,
+        929919498,
+        929919499,
+        1309108626
+      ],
+      "osmNames": [
+        "Sendero Ciclista Anfiteatro"
+      ],
+      "visualTrailId": "anfiteatro",
+      "publicMapUrl": "https://www.openstreetmap.org/way/479769658",
+      "description": "Sendero ciclista de la leyenda oficial. Los tramos OSM se conservan por separado y no acreditan la extensión completa ni la apertura actual.",
+      "sourceNote": "Nombre y distancia referencial de la leyenda ciclista del PDF oficial MapaParque.pdf; el prefijo de categoría «Sendero Ciclista» está registrado literalmente en OSM. Geometría OSM sin unión de vías, interpolación ni registro del esquema. La vigencia operacional no está confirmada.",
+      "color": "#b23f47",
+      "difficulty": null,
+      "officialDistanceM": 700,
+      "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": true,
+      "operationConfirmed": false,
+      "accessNote": "OSM registra access=no en 479769658. Ese tramo se muestra como referencia geográfica y queda excluido de la coincidencia GPS ciclista.",
+      "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+    },
+    {
+      "id": "la-s",
+      "name": "La S",
+      "category": "cycling-trail",
+      "status": "osm-identified",
+      "osmWayIds": [
+        906948595
+      ],
+      "osmNames": [
+        "Sendero Ciclista La S"
+      ],
+      "visualTrailId": "la-s",
+      "publicMapUrl": "https://www.openstreetmap.org/way/906948595",
+      "description": "Sendero ciclista de la leyenda oficial. Los tramos OSM se conservan por separado y no acreditan la extensión completa ni la apertura actual.",
+      "sourceNote": "Nombre y distancia referencial de la leyenda ciclista del PDF oficial MapaParque.pdf; el prefijo de categoría «Sendero Ciclista» está registrado literalmente en OSM. Geometría OSM sin unión de vías, interpolación ni registro del esquema. La vigencia operacional no está confirmada.",
+      "color": "#b23f47",
+      "difficulty": null,
+      "officialDistanceM": 500,
+      "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": true,
+      "operationConfirmed": false,
+      "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+    },
+    {
+      "id": "zorzal",
+      "name": "Zorzal",
+      "category": "cycling-trail",
+      "status": "public-reference",
+      "osmWayIds": [],
+      "osmNames": [],
+      "visualTrailId": "zorzal",
+      "publicMapUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+      "description": "Nombre y distancia publicados en la leyenda oficial. Correspondencia geográfica por confirmar; no hay trazado atribuido a este sendero.",
+      "sourceNote": "El PDF dice «Zorzal» y OSM dice «Sendero Ciclista El Zorzal» (vía 862880882, access=no). No se declara equivalencia ni se asigna su trazado por proximidad o por un alias no confirmado. La consulta a la página oficial citada por OSM devolvió HTTP 503.",
+      "color": "#b23f47",
+      "difficulty": null,
+      "officialDistanceM": 500,
+      "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": false,
+      "operationConfirmed": false,
+      "unassignedOsmReferences": [
+        {
+          "provider": "OpenStreetMap",
+          "id": 862880882,
+          "name": "Sendero Ciclista El Zorzal",
+          "url": "https://www.openstreetmap.org/way/862880882",
+          "geometryImported": false,
+          "reason": "Variante literal sin equivalencia oficial confirmada; access=no."
+        }
+      ],
+      "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+    },
+    {
+      "id": "pa-arriba",
+      "name": "Pa’ arriba",
+      "category": "cycling-trail",
+      "status": "public-reference",
+      "osmWayIds": [],
+      "osmNames": [],
+      "visualTrailId": "pa-arriba",
+      "publicMapUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+      "description": "Nombre y distancia publicados en la leyenda oficial. Correspondencia geográfica por confirmar; no hay trazado atribuido a este sendero.",
+      "sourceNote": "El PDF dice «Pa’ arriba» y OSM dice «Sendero Ciclista Pa' Arriba» (vía 691091446, access=no). No se declara equivalencia por normalización de apóstrofo o mayúsculas; la consulta a la página oficial citada por OSM devolvió HTTP 503.",
+      "color": "#b23f47",
+      "difficulty": null,
+      "officialDistanceM": 600,
+      "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": false,
+      "operationConfirmed": false,
+      "unassignedOsmReferences": [
+        {
+          "provider": "OpenStreetMap",
+          "id": 691091446,
+          "name": "Sendero Ciclista Pa' Arriba",
+          "url": "https://www.openstreetmap.org/way/691091446",
+          "geometryImported": false,
+          "reason": "Variante literal sin equivalencia oficial confirmada; access=no."
+        }
+      ],
+      "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+    },
+    {
+      "id": "torre-5",
+      "name": "Torre 5",
+      "category": "cycling-trail",
+      "status": "osm-identified",
+      "osmWayIds": [
+        741162897,
+        1316047257,
+        1316047258
+      ],
+      "osmNames": [
+        "Sendero Ciclista Torre 5"
+      ],
+      "visualTrailId": "torre-5",
+      "publicMapUrl": "https://www.openstreetmap.org/way/741162897",
+      "description": "Sendero ciclista de la leyenda oficial. Los tramos OSM se conservan por separado y no acreditan la extensión completa ni la apertura actual.",
+      "sourceNote": "Nombre y distancia referencial de la leyenda ciclista del PDF oficial MapaParque.pdf; el prefijo de categoría «Sendero Ciclista» está registrado literalmente en OSM. Geometría OSM sin unión de vías, interpolación ni registro del esquema. La vigencia operacional no está confirmada.",
+      "color": "#b23f47",
+      "difficulty": null,
+      "officialDistanceM": 800,
+      "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": true,
+      "operationConfirmed": false,
+      "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+    },
+    {
+      "id": "piramide",
+      "name": "Pirámide",
+      "category": "cycling-trail",
+      "status": "osm-identified",
+      "osmWayIds": [
+        479774004
+      ],
+      "osmNames": [
+        "Sendero Ciclista Pirámide"
+      ],
+      "visualTrailId": "piramide",
+      "publicMapUrl": "https://www.openstreetmap.org/way/479774004",
+      "description": "Sendero ciclista de la leyenda oficial. Los tramos OSM se conservan por separado y no acreditan la extensión completa ni la apertura actual.",
+      "sourceNote": "Nombre y distancia referencial de la leyenda ciclista del PDF oficial MapaParque.pdf; el prefijo de categoría «Sendero Ciclista» está registrado literalmente en OSM. Geometría OSM sin unión de vías, interpolación ni registro del esquema. La vigencia operacional no está confirmada.",
+      "color": "#b23f47",
+      "difficulty": null,
+      "officialDistanceM": 600,
+      "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": true,
+      "operationConfirmed": false,
+      "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+    },
+    {
+      "id": "avenida-pedro-bannen",
+      "name": "Av. Pedro Bannen",
+      "category": "avenue",
+      "status": "osm-identified",
+      "osmWayIds": [
+        169885900,
+        480868066,
+        482748524,
+        482748525,
+        923017128,
+        929919509,
+        929919510,
+        929919511,
+        929919512
+      ],
+      "osmNames": [
+        "Avenida Pedro Bannen"
+      ],
+      "visualTrailId": null,
+      "publicMapUrl": "https://www.openstreetmap.org/way/169885900",
+      "description": "Avenida rotulada en el mapa oficial y por nombre en OSM, con etiquetas de infraestructura ciclista en cada tramo importado.",
+      "sourceNote": "El PDF abrevia «Av.» y OSM registra «Avenida». Se conserva el nombre propio literal. Todas las vías seleccionadas tienen cycleway=lane/shared_lane o su variante lateral. Los sentidos y el acceso operacional no están validados en terreno.",
+      "color": "#347f81",
+      "difficulty": null,
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": true,
+      "operationConfirmed": false
+    },
+    {
+      "id": "avenida-alberto-mackenna",
+      "name": "Av. Alberto Mackenna",
+      "category": "avenue",
+      "status": "osm-identified",
+      "osmWayIds": [
+        44579782,
+        442629926,
+        919288128,
+        922756659,
+        1035844715
+      ],
+      "osmNames": [
+        "Avenida Alberto Mackenna"
+      ],
+      "visualTrailId": null,
+      "publicMapUrl": "https://www.openstreetmap.org/way/44579782",
+      "description": "Avenida rotulada en el mapa oficial y por nombre en OSM, con etiquetas de infraestructura ciclista en cada tramo importado.",
+      "sourceNote": "El PDF abrevia «Av.» y OSM registra «Avenida». Se conserva el nombre propio literal. Todas las vías seleccionadas tienen cycleway=lane/shared_lane o su variante lateral. Los sentidos y el acceso operacional no están validados en terreno.",
+      "color": "#b8843f",
+      "difficulty": null,
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": true,
+      "operationConfirmed": false
+    }
+  ],
+  "visualToGeographicTransform": null,
+  "navigationValidated": false,
+  "officialMap": {
+    "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+    "sha256": "e7606172479a0fd585f7f3dcb4187556a202778cd647b31f44aaefcf9bd03cf8",
+    "queriedAt": "2026-10-20T15:01:06.256455+00:00",
+    "cyclistTrailCount": 8,
+    "distanceType": "reference-published-in-legend",
+    "georeferenced": false,
+    "sourceSnapshot": "sources/parquemet-mapa-oficial.pdf",
+    "metadata": "data/parquemet/official-document.json"
+  },
+  "park": {
+    "id": "parquemet",
+    "name": "Parquemet",
+    "shortName": "Parquemet",
+    "locality": "Santiago · Región Metropolitana",
+    "description": "Parque Metropolitano de Santiago. Ocho senderos ciclistas de su mapa oficial y dos avenidas con geometría OSM contrastada.",
+    "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+    "checkedOn": "2026-10-20",
+    "primaryTargetIds": [
+      "avenida-pedro-bannen",
+      "avenida-alberto-mackenna"
+    ],
+    "amenities": [
+      {
+        "id": "banos",
+        "label": "Baños · mapa oficial",
+        "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+        "checkedOn": "2026-10-20",
+        "evidenceType": "official-map-legend",
+        "operationConfirmed": false,
+        "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+      },
+      {
+        "id": "primeros-auxilios",
+        "label": "Primeros auxilios · mapa oficial",
+        "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+        "checkedOn": "2026-10-20",
+        "evidenceType": "official-map-legend",
+        "operationConfirmed": false,
+        "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+      },
+      {
+        "id": "informaciones",
+        "label": "Informaciones · mapa oficial",
+        "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+        "checkedOn": "2026-10-20",
+        "evidenceType": "official-map-legend",
+        "operationConfirmed": false,
+        "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+      },
+      {
+        "id": "bicicleteros",
+        "label": "Bicicleteros · mapa oficial",
+        "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+        "checkedOn": "2026-10-20",
+        "evidenceType": "official-map-legend",
+        "operationConfirmed": false,
+        "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+      },
+      {
+        "id": "estacionamiento",
+        "label": "Estacionamiento · mapa oficial",
+        "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+        "checkedOn": "2026-10-20",
+        "evidenceType": "official-map-legend",
+        "operationConfirmed": false,
+        "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+      },
+      {
+        "id": "restaurantes",
+        "label": "Restaurantes · mapa oficial",
+        "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+        "checkedOn": "2026-10-20",
+        "evidenceType": "official-map-legend",
+        "operationConfirmed": false,
+        "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+      },
+      {
+        "id": "kioscos",
+        "label": "Kioscos · mapa oficial",
+        "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+        "checkedOn": "2026-10-20",
+        "evidenceType": "official-map-legend",
+        "operationConfirmed": false,
+        "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+      },
+      {
+        "id": "pump-track",
+        "label": "Pump track · mapa oficial",
+        "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+        "checkedOn": "2026-10-20",
+        "evidenceType": "official-map-legend",
+        "operationConfirmed": false,
+        "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+      }
+    ],
+    "operationConfirmed": false,
+    "amenitiesNote": "Servicios enumerados en la simbología del mapa oficial; su operación actual y sus horarios no están confirmados."
+  }
+}

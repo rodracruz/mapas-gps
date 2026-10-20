@@ -4,9 +4,10 @@ import {validateCatalog,describeTrail} from './catalog.mjs';
 import {sha256} from '../review/sha256.mjs';
 import {setupSignReview} from './sign.mjs';
 import {setupGpsTracking} from './gps.mjs';
+import {loadParkDirectory,renderParkDirectory} from './parks.mjs';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let catalog,map,geo,contextLayer,selectionLayer,selectedFeature=null,selectedTarget=null,loadPromise,full=false;
+let directory,catalog,map,geo,contextLayer,selectionLayer,selectedFeature=null,selectedTarget=null,loadPromise,full=false;
 const targetLayers=new Map(),hiddenTargets=new Set(),hiddenCartelTargets=new Set();
 let gpsTracking,signReview,cartelData,cartelLayer,registration,mapSource=new URLSearchParams(location.hash.slice(1)).get('fuente')==='osm'?'osm':'cartel';
 const metricMarkup=stats=>[['Longitud',stats.distance],['Dificultad',stats.difficulty],['Vel. máxima',stats.maxSpeed],['Ascenso',stats.elevationGain],['Descenso',stats.elevationLoss]].map(([name,value])=>`<div><dt>${esc(name)}</dt><dd>${esc(value)}</dd></div>`).join('');
@@ -15,8 +16,7 @@ function navigate(park,showMap=false,replace=false){const hash=park?'#'+new URLS
 function featuresFor(id){return geo?.features.filter(f=>f.properties.targetId===id)||[];}
 function renderCatalog(){
  const p=catalog.park;
- $('park-list').innerHTML=`<article class="park-choice"><div class="park-art" aria-hidden="true">↟</div><div class="park-choice-body"><span class="eyebrow">${esc(p.locality)}</span><h2>${esc(p.shortName)}</h2><p>Senderos, servicios y el mapa del parque.<br>Todo para preparar tu salida.</p><button id="choose-park" class="primary-button" aria-label="Explorar ${esc(p.shortName)}">Explorar ${esc(p.shortName)} <span aria-hidden="true">→</span></button></div></article>`;
- $('choose-park').onclick=()=>navigate(p.id);$('back-to-parks').onclick=()=>navigate(null);
+ renderParkDirectory($('park-list'),directory,park=>{if(park.id===p.id)navigate(p.id);else location.assign(park.entry);});$('back-to-parks').onclick=()=>navigate(null);
  $('park-name').textContent=p.name;$('park-locality').textContent=p.locality;$('park-description').textContent=p.description;$('map-park-title').textContent=p.shortName;$('park-source').href=p.sourceUrl;
  const symbols={banos:'◫',agua:'♧',cafeteria:'☕',tienda:'◇',guardaparques:'⌂',pumptrack:'↝'};
  $('amenities').innerHTML=p.amenities.map(a=>`<li><span aria-hidden="true">${symbols[a.id]||'✓'}</span><span>${esc(a.label)}</span></li>`).join('');
@@ -121,12 +121,12 @@ async function ensureMap(){
  })();return loadPromise;
 }
 async function renderRoute(){
- if(!catalog)return;const route=routeState(),show=route.park===catalog.park.id;
+ if(!catalog)return;const route=routeState();const destination=directory.parks.find(p=>p.id===route.park&&p.id!==catalog.park.id);if(destination){gpsTracking?.stop();location.replace(destination.entry+(route.map?'&mapa=1':''));return;}const show=route.park===catalog.park.id;
  $('park-picker').hidden=show;$('park-view').hidden=!show;full=show&&route.map;$('map-card').classList.toggle('fullscreen',full);document.body.classList.toggle('map-open',full);
  gpsTracking?.setMapOpen(full);
  if(!show){document.title='Mapas GPS · Elige un parque';return;}
  document.title=(full?'Mapa · ':'')+catalog.park.shortName+' · Mapas GPS';await ensureMap();if(map){map.invalidateSize({animate:false});if(full&&!selectedTarget)fitAvailableRoutes();}
  if(full)$('close-map').focus({preventScroll:true});
 }
-async function init(){try{const embedded=$('embedded-geographic-catalog');if(embedded)catalog=JSON.parse(embedded.textContent);else{const response=await fetch('./data/el-durazno/geographic-catalog.json');if(!response.ok)throw new Error('No se pudo cargar la información del parque.');catalog=await response.json();}validateCatalog(catalog);signReview=setupSignReview();renderCatalog();await renderRoute();}catch(error){$('app-error').textContent=error.message;$('app-error').hidden=false;$('park-list').replaceChildren();}}
+async function init(){try{directory=await loadParkDirectory();const embedded=$('embedded-geographic-catalog');if(embedded)catalog=JSON.parse(embedded.textContent);else{const response=await fetch('./data/el-durazno/geographic-catalog.json');if(!response.ok)throw new Error('No se pudo cargar la información del parque.');catalog=await response.json();}validateCatalog(catalog);signReview=setupSignReview();renderCatalog();await renderRoute();}catch(error){$('app-error').textContent=error.message;$('app-error').hidden=false;$('park-list').replaceChildren();}}
 window.addEventListener('popstate',renderRoute);window.addEventListener('hashchange',renderRoute);window.addEventListener('resize',()=>map?.invalidateSize({animate:false}));window.addEventListener('keydown',event=>{if(event.key==='Escape'&&full)$('close-map').click();});init();

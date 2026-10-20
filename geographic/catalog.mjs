@@ -1,5 +1,5 @@
 import {lineLength} from './data.mjs';
-const permittedHosts=new Set(['www.outlife.cl','www.openstreetmap.org','api.openstreetmap.org','www.trailforks.com','es.wikiloc.com','www.wikiloc.com']);
+const permittedHosts=new Set(['overpass-api.de','mapas.parquemet.cl','parquemet.cl','www.parquemet.cl','www.outlife.cl','www.openstreetmap.org','api.openstreetmap.org','www.trailforks.com','es.wikiloc.com','www.wikiloc.com']);
 function validSource(url){try{const u=new URL(url);return u.protocol==='https:'&&permittedHosts.has(u.hostname)&&!u.username&&!u.password;}catch{return false;}}
 export function validateCatalog(catalog){
  const fail=()=>{throw new Error('El catálogo del parque no es válido.');};
@@ -14,6 +14,7 @@ export function validateCatalog(catalog){
   if(t.status==='osm-identified'){if(!t.osmWayIds.length||!t.osmNames.length||t.geometryImported!==true)fail();for(const id of t.osmWayIds){if(!Number.isSafeInteger(id)||wayIds.has(id))fail();wayIds.add(id);}}
   else if(t.status!=='public-reference'||t.osmWayIds.length||t.osmNames.length||t.geometryImported!==false)fail();
   if(t.difficulty&&(!['Principiante','Intermedio','Avanzado','Experto'].includes(t.difficulty.label)||!validSource(t.difficulty.sourceUrl)||(t.difficulty.style!==undefined&&!['Park','Trail'].includes(t.difficulty.style))))fail();
+  if(t.officialDistanceM!==undefined&&(!Number.isFinite(t.officialDistanceM)||t.officialDistanceM<=0||!validSource(t.officialDistanceSource)))fail();
   for(const key of ['elevationGainM','elevationLossM'])if(t[key]!==null&&(!Number.isFinite(t[key])||t[key]<0))fail();
  }
  if(!park.primaryTargetIds.every(id=>ids.has(id))||!validSource(catalog.sourceUrl)||!/^sources\/[a-z0-9-]+\.json$/.test(catalog.sourceSnapshot)||!/^[0-9a-f]{64}$/.test(catalog.sourceSnapshotSha256))fail();

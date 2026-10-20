@@ -1,0 +1,3 @@
+
+# Preserve original public PDF bytes; do not apply text normalization.
+sources/*.pdf binary
