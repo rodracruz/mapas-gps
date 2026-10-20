@@ -1,6 +1,10 @@
 # Continuar Mapas GPS
 
-## Estado más reciente: segundo parque Parquemet
+## Estado más reciente: cobertura ciclista y miniaturas oficiales
+
+Rama `fix/parquemet-cycling-coverage`, worktree `parquemet-coverage`, sobre `d57cd34`. Parquemet muestra ocho senderos ciclistas OSM rotulados, nueve avenidas secundarias y los ocho recorridos nativos del PDF en un visor separado. Las fichas incluyen miniatura y ampliación de sólo la ruta oficial (ocho Parquemet y veinte El Durazno); Subida Buitrera no toma por semejanza una subida del cartel. Restricciones OSM siguen excluidas del GPS. El PDF permanece esquemático, sin transformación geográfica. [Implementación y pruebas](evidence/parquemet-coverage.md), [correspondencias y fuentes](evidence/parquemet-coverage-sources.md), [extracción exacta del PDF](evidence/parquemet-pdf-traces.md). `main`, Pages, foto privada y mapas guardados se conservan.
+
+## Estado anterior: segundo parque Parquemet
 
 Rama `feat/parquemet-second-park` sobre `fa298ab`. Selector común ofrece El Durazno y Parquemet; el nuevo controlador `geographic/park-viewer.mjs` usa catálogo/documento/snapshot del registro elegido. PDF oficial público intacto y render6690×2835 ampliable en coordenadas propias. Ocho fichas ciclistas, seis correspondencias nominales OSM, dos avenidas principales; Zorzal y Pa’ arriba pendientes frente a variantes OSM. Longitudes PDF y OSM separadas, restricciones por tramo y GPS opt-in sólo en red nominal compatible; sin demo Lomo de otro parque. El Durazno, la foto privada, sus capas y la biblioteca guardada se conservan. [Implementación y pruebas](evidence/parquemet.md), [publicación privada comprobada y PR #5](evidence/parquemet-release.md), [fuentes geográficas](evidence/parquemet-geographic.md), [PDF e imagen](evidence/parquemet-official-document.md). No usar el PDF esquemático como calibración GPS ni mezclar ediciones.
 

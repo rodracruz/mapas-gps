@@ -5,6 +5,7 @@ import {sha256} from '../review/sha256.mjs';
 import {setupSignReview} from './sign.mjs';
 import {setupGpsTracking} from './gps.mjs';
 import {loadParkDirectory,renderParkDirectory} from './parks.mjs';
+import {attachTrailPreviews} from './trail-preview.mjs';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let directory,catalog,map,geo,contextLayer,selectionLayer,selectedFeature=null,selectedTarget=null,loadPromise,full=false;
@@ -25,6 +26,7 @@ function renderCatalog(){
   const t=catalog.targets.find(t=>t.id===id),card=document.createElement('details');card.className='trail-card tile-card';card.style.setProperty('--trail-color',t.color);
   card.innerHTML=`<summary class="tile-face" data-trail-summary="${esc(t.id)}"><span class="trail-topline"><span class="trail-badge"><i></i>${esc(t.difficulty?.label||'Dificultad por confirmar')}</span><span class="trail-number">${String(index+1).padStart(2,'0')}</span></span><span><h3>${esc(t.name)}</h3><span class="trail-footer"><span class="card-distance" data-distance="${esc(t.id)}">Consultando trazado…</span><span class="trail-chevron" aria-hidden="true">⌄</span></span></span></summary><div class="trail-details" data-trail-details="${esc(t.id)}"><p>${esc(t.description)}</p><dl class="stats" data-stats="${esc(t.id)}"></dl><p class="fine-print">${esc(t.sourceNote)}</p><button class="text-button" data-show-on-map="${esc(t.id)}">Ver en el mapa ↗</button></div>`;
   card.querySelector('[data-show-on-map]').onclick=()=>{selectTarget(t.id);navigate(p.id,true);};
+  if(!t.visualTrailId){const note=document.createElement('p');note.className='fine-print trail-preview-unavailable';note.textContent='Este sendero aún no tiene un trazado específico identificado en el plano oficial.';card.querySelector('.trail-details').prepend(note);}
   if(t.visualTrailId){const button=document.createElement('button');button.className='text-button';button.textContent='Ver en el plano del cartel →';button.onclick=()=>signReview.open(t.visualTrailId);card.querySelector('.trail-details').append(button);}
   $('trail-grid').append(card);
  }
@@ -96,7 +98,7 @@ function setMapSource(source){
 }
 async function loadCartel(){
  const read=async(id,path)=>{const embedded=$(id);if(embedded)return embedded.textContent;const r=await fetch('./'+path);if(!r.ok)throw new Error('No se pudo cargar la capa del cartel.');return r.text();};
- const [raw,reg]=await Promise.all([read('embedded-all-visual','data/el-durazno/continuous-sign-trails.json'),read('embedded-cartel-registration','data/el-durazno/cartel-registration.json')]);registration=JSON.parse(reg);cartelData=validateContinuous(JSON.parse(raw));if(sha256(new TextEncoder().encode(raw))!==registration.sources.find(s=>s.id==='native-sign-artwork')?.sha256)throw new Error('El cartel no coincide con su fuente documentada.');cartelLayer=createCartelLayer(map,cartelData,registration,selectCartel);setMapSource(mapSource);
+ const [raw,reg]=await Promise.all([read('embedded-all-visual','data/el-durazno/continuous-sign-trails.json'),read('embedded-cartel-registration','data/el-durazno/cartel-registration.json')]);registration=JSON.parse(reg);cartelData=validateContinuous(JSON.parse(raw));if(sha256(new TextEncoder().encode(raw))!==registration.sources.find(s=>s.id==='native-sign-artwork')?.sha256)throw new Error('El cartel no coincide con su fuente documentada.');attachTrailPreviews(cartelData,{resolveId:id=>catalog.targets.find(t=>t.id===id)?.visualTrailId,onOpen:id=>signReview.open(id,'vectors')});cartelLayer=createCartelLayer(map,cartelData,registration,selectCartel);setMapSource(mapSource);
 }
 async function ensureMap(){
  if(loadPromise)return loadPromise;

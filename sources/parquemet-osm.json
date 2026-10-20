@@ -15,11 +15,11 @@
   ],
   "geographicExtent": [
     -70.6380693,
-    -33.4306903,
-    -70.6019812,
+    -33.4307172,
+    -70.6017231,
     -33.3894875
   ],
-  "selection": "Whole OSM ways with the eight recorded Sendero Ciclista names and Avenida Pedro Bannen / Avenida Alberto Mackenna; all of their ordered nodes. No coordinate clipping, joining, interpolation or schematic PDF registration. Two spelling variants are retained as unassigned context. Contributor/user metadata omitted; node and way versions retained.",
+  "selection": "Whole original OSM ways for all eight recorded Sendero Ciclista names and nine PDF-labelled avenues with explicit positive cycling tags on assigned ways. Context retains two bicycle-prohibited Avenida Gabriela Mistral ways and one Avenida La Montaña way without cycling evidence. Explicit per-ID catalog assignment, including documented El Zorzal / Pa' Arriba spelling differences; no fuzzy or proximity-only match. All ordered nodes retained without clipping, joining, interpolation or schematic PDF registration. Contributor/user metadata omitted; node and way versions retained.",
   "selectionNames": [
     "Sendero Ciclista Centenario",
     "Sendero Ciclista 4 ½",
@@ -30,9 +30,161 @@
     "Sendero Ciclista Torre 5",
     "Sendero Ciclista Pirámide",
     "Avenida Pedro Bannen",
-    "Avenida Alberto Mackenna"
+    "Avenida Alberto Mackenna",
+    "Avenida Abate Molina",
+    "Avenida Carlos Martner",
+    "Avenida Carlos Reed",
+    "Avenida Claudio Gay",
+    "Avenida Federico Albert",
+    "Avenida Manuel Zañartu",
+    "Avenida La Montaña",
+    "Avenida Gabriela Mistral"
   ],
   "elements": [
+    {
+      "type": "node",
+      "id": 13885139,
+      "lat": -33.4154615,
+      "lon": -70.6174141,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 16
+    },
+    {
+      "type": "node",
+      "id": 224430791,
+      "lat": -33.4254652,
+      "lon": -70.6258436,
+      "timestamp": "2018-11-26T20:00:15Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 224430809,
+      "lat": -33.4255385,
+      "lon": -70.6260598,
+      "timestamp": "2018-11-26T20:00:15Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 224430822,
+      "lat": -33.4257176,
+      "lon": -70.6264839,
+      "timestamp": "2018-11-26T20:00:15Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 224430848,
+      "lat": -33.4259997,
+      "lon": -70.6269756,
+      "timestamp": "2018-11-26T20:00:15Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 224430868,
+      "lat": -33.4262175,
+      "lon": -70.6272211,
+      "timestamp": "2017-10-21T22:30:48Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 224430888,
+      "lat": -33.4267471,
+      "lon": -70.6279641,
+      "timestamp": "2018-11-26T20:00:15Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 224430902,
+      "lat": -33.4270108,
+      "lon": -70.6284068,
+      "timestamp": "2018-11-26T20:00:15Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 224430920,
+      "lat": -33.4275241,
+      "lon": -70.6290573,
+      "timestamp": "2018-11-26T20:00:15Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 224430929,
+      "lat": -33.4280388,
+      "lon": -70.6294561,
+      "timestamp": "2018-11-26T20:00:15Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 224430950,
+      "lat": -33.4285211,
+      "lon": -70.6299681,
+      "timestamp": "2018-11-26T20:00:15Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 224430963,
+      "lat": -33.4287735,
+      "lon": -70.6302756,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 224430985,
+      "lat": -33.429542,
+      "lon": -70.6311982,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 224431003,
+      "lat": -33.4298833,
+      "lon": -70.6318234,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 224431023,
+      "lat": -33.4302384,
+      "lon": -70.6325685,
+      "timestamp": "2021-03-26T22:36:18Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 224431036,
+      "lat": -33.4303585,
+      "lon": -70.6330551,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 224431048,
+      "lat": -33.4304992,
+      "lon": -70.633512,
+      "timestamp": "2026-04-11T04:13:25Z",
+      "version": 8
+    },
+    {
+      "type": "node",
+      "id": 225111286,
+      "lat": -33.4306726,
+      "lon": -70.6343978,
+      "timestamp": "2017-10-21T22:30:47Z",
+      "version": 6
+    },
     {
       "type": "node",
       "id": 265684111,
@@ -535,6 +687,461 @@
     },
     {
       "type": "node",
+      "id": 265686600,
+      "lat": -33.4158179,
+      "lon": -70.6222895,
+      "timestamp": "2017-12-18T00:24:18Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 265686601,
+      "lat": -33.4157814,
+      "lon": -70.6220699,
+      "timestamp": "2017-12-18T00:24:18Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 265686647,
+      "lat": -33.4153289,
+      "lon": -70.6210153,
+      "timestamp": "2017-12-18T00:24:18Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 265686648,
+      "lat": -33.4152084,
+      "lon": -70.6208925,
+      "timestamp": "2017-12-18T00:24:18Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 265686649,
+      "lat": -33.4146405,
+      "lon": -70.6208042,
+      "timestamp": "2023-07-18T03:48:14Z",
+      "version": 9
+    },
+    {
+      "type": "node",
+      "id": 265686660,
+      "lat": -33.4135141,
+      "lon": -70.6195394,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686661,
+      "lat": -33.4134766,
+      "lon": -70.6191195,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686662,
+      "lat": -33.4134267,
+      "lon": -70.618894,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686663,
+      "lat": -33.4133962,
+      "lon": -70.6184901,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 265686664,
+      "lat": -33.4134384,
+      "lon": -70.6181376,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 265686665,
+      "lat": -33.413364,
+      "lon": -70.6179067,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686666,
+      "lat": -33.4132428,
+      "lon": -70.61778,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686667,
+      "lat": -33.4131193,
+      "lon": -70.6177019,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 265686699,
+      "lat": -33.4129407,
+      "lon": -70.6175557,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686700,
+      "lat": -33.4127349,
+      "lon": -70.6171793,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 265686701,
+      "lat": -33.4127341,
+      "lon": -70.6169581,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686702,
+      "lat": -33.4129566,
+      "lon": -70.6163317,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 265686703,
+      "lat": -33.4129857,
+      "lon": -70.6159965,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 265686705,
+      "lat": -33.4133886,
+      "lon": -70.6154332,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686706,
+      "lat": -33.4135695,
+      "lon": -70.6152253,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 265686707,
+      "lat": -33.4136328,
+      "lon": -70.6149611,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686708,
+      "lat": -33.4136361,
+      "lon": -70.6147559,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 265686709,
+      "lat": -33.4138125,
+      "lon": -70.6147031,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 265686710,
+      "lat": -33.4138061,
+      "lon": -70.6149857,
+      "timestamp": "2018-01-19T13:59:56Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686711,
+      "lat": -33.4137589,
+      "lon": -70.6152482,
+      "timestamp": "2018-01-19T13:59:56Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686712,
+      "lat": -33.41357,
+      "lon": -70.6155401,
+      "timestamp": "2008-05-19T04:40:34Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 265686713,
+      "lat": -33.4132925,
+      "lon": -70.615783,
+      "timestamp": "2018-01-19T13:59:56Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 265686714,
+      "lat": -33.4132287,
+      "lon": -70.6159161,
+      "timestamp": "2018-01-19T13:59:56Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686715,
+      "lat": -33.4132208,
+      "lon": -70.6160576,
+      "timestamp": "2018-01-19T13:59:56Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 265686716,
+      "lat": -33.4132096,
+      "lon": -70.6163666,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 265686717,
+      "lat": -33.4132141,
+      "lon": -70.6166026,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 265686718,
+      "lat": -33.4131995,
+      "lon": -70.6167582,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 265686719,
+      "lat": -33.4131995,
+      "lon": -70.616903,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 265686720,
+      "lat": -33.413223,
+      "lon": -70.6169942,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 265686721,
+      "lat": -33.4132801,
+      "lon": -70.6171109,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 265686722,
+      "lat": -33.4134268,
+      "lon": -70.6172584,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 265686723,
+      "lat": -33.413626,
+      "lon": -70.6174556,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 265686724,
+      "lat": -33.4138331,
+      "lon": -70.6177318,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 265686725,
+      "lat": -33.4140727,
+      "lon": -70.6179437,
+      "timestamp": "2018-09-09T15:23:40Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686726,
+      "lat": -33.4144175,
+      "lon": -70.6180752,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 265686727,
+      "lat": -33.4146962,
+      "lon": -70.6182213,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 265686728,
+      "lat": -33.4148977,
+      "lon": -70.6183828,
+      "timestamp": "2021-03-08T01:49:22Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686729,
+      "lat": -33.4151597,
+      "lon": -70.6185765,
+      "timestamp": "2021-03-08T01:49:22Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686730,
+      "lat": -33.4154001,
+      "lon": -70.618773,
+      "timestamp": "2021-03-08T01:49:22Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 265686731,
+      "lat": -33.4156974,
+      "lon": -70.618961,
+      "timestamp": "2021-03-08T01:49:22Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 265686732,
+      "lat": -33.4159712,
+      "lon": -70.6191266,
+      "timestamp": "2016-09-13T22:07:43Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 265686735,
+      "lat": -33.4161739,
+      "lon": -70.619333,
+      "timestamp": "2024-08-16T22:59:45Z",
+      "version": 5,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "yes",
+        "highway": "crossing",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 265686736,
+      "lat": -33.4162253,
+      "lon": -70.6193707,
+      "timestamp": "2016-09-13T22:07:44Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 265686739,
+      "lat": -33.4159152,
+      "lon": -70.6188011,
+      "timestamp": "2023-11-05T04:34:23Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 265686740,
+      "lat": -33.4157272,
+      "lon": -70.6185995,
+      "timestamp": "2016-09-13T22:07:44Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 265686741,
+      "lat": -33.4155402,
+      "lon": -70.6183756,
+      "timestamp": "2016-09-13T22:07:44Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 265686742,
+      "lat": -33.4154026,
+      "lon": -70.6181382,
+      "timestamp": "2016-09-13T22:07:44Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 265686743,
+      "lat": -33.4152794,
+      "lon": -70.6179343,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686744,
+      "lat": -33.415173,
+      "lon": -70.6177499,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 265686746,
+      "lat": -33.415153,
+      "lon": -70.6176567,
+      "timestamp": "2018-09-09T15:23:40Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 265686747,
+      "lat": -33.4152185,
+      "lon": -70.6175274,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 4
+    },
+    {
+      "type": "node",
       "id": 265686857,
       "lat": -33.4183943,
       "lon": -70.6336715,
@@ -796,6 +1403,512 @@
       "lon": -70.6231021,
       "timestamp": "2017-12-07T02:49:07Z",
       "version": 7
+    },
+    {
+      "type": "node",
+      "id": 405912200,
+      "lat": -33.4254284,
+      "lon": -70.625576,
+      "timestamp": "2016-09-15T16:58:25Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 483171258,
+      "lat": -33.4129095,
+      "lon": -70.6198812,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171262,
+      "lat": -33.4128497,
+      "lon": -70.6194176,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171271,
+      "lat": -33.4128194,
+      "lon": -70.6189706,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171276,
+      "lat": -33.41258,
+      "lon": -70.6183492,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171293,
+      "lat": -33.4123452,
+      "lon": -70.6180987,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171300,
+      "lat": -33.4121553,
+      "lon": -70.6179124,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171324,
+      "lat": -33.4118454,
+      "lon": -70.6175803,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483171334,
+      "lat": -33.4117701,
+      "lon": -70.6174269,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171342,
+      "lat": -33.4113245,
+      "lon": -70.6161958,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483171348,
+      "lat": -33.4112327,
+      "lon": -70.6158873,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171357,
+      "lat": -33.4112148,
+      "lon": -70.615705,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171365,
+      "lat": -33.4112394,
+      "lon": -70.6151766,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171372,
+      "lat": -33.4112148,
+      "lon": -70.6148413,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171393,
+      "lat": -33.4111432,
+      "lon": -70.6146026,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171398,
+      "lat": -33.4110446,
+      "lon": -70.6142244,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171404,
+      "lat": -33.4108499,
+      "lon": -70.6135538,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483171408,
+      "lat": -33.4107267,
+      "lon": -70.6132212,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483171418,
+      "lat": -33.4103573,
+      "lon": -70.6125239,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483171430,
+      "lat": -33.4101155,
+      "lon": -70.6122127,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483171440,
+      "lat": -33.4098692,
+      "lon": -70.6120008,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483171454,
+      "lat": -33.4094296,
+      "lon": -70.6118089,
+      "timestamp": "2026-06-05T04:26:12Z",
+      "version": 5,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:markings": "yes",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 483171468,
+      "lat": -33.4090858,
+      "lon": -70.6117238,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171502,
+      "lat": -33.4087617,
+      "lon": -70.611669,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483171665,
+      "lat": -33.4051755,
+      "lon": -70.6084933,
+      "timestamp": "2017-11-26T00:10:13Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 483171676,
+      "lat": -33.4049846,
+      "lon": -70.6083207,
+      "timestamp": "2017-11-26T00:10:13Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 483171682,
+      "lat": -33.4046884,
+      "lon": -70.607925,
+      "timestamp": "2016-09-14T22:21:18Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 483171700,
+      "lat": -33.4045557,
+      "lon": -70.6077621,
+      "timestamp": "2017-11-26T00:10:13Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 483171899,
+      "lat": -33.4057296,
+      "lon": -70.6121965,
+      "timestamp": "2017-10-21T23:03:51Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 483171907,
+      "lat": -33.4054476,
+      "lon": -70.6121222,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 483171921,
+      "lat": -33.4052585,
+      "lon": -70.6119868,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 483171927,
+      "lat": -33.405108,
+      "lon": -70.6118303,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171932,
+      "lat": -33.4049496,
+      "lon": -70.6114618,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171935,
+      "lat": -33.4048037,
+      "lon": -70.6112743,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171942,
+      "lat": -33.4046031,
+      "lon": -70.6112179,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171948,
+      "lat": -33.4044006,
+      "lon": -70.6111904,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171954,
+      "lat": -33.4042151,
+      "lon": -70.611303,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 483171958,
+      "lat": -33.4040281,
+      "lon": -70.6115125,
+      "timestamp": "2017-10-21T23:03:51Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 483171964,
+      "lat": -33.4037152,
+      "lon": -70.6117067,
+      "timestamp": "2017-10-21T23:03:51Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 483171968,
+      "lat": -33.403551,
+      "lon": -70.61173,
+      "timestamp": "2017-10-21T23:03:51Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 483171989,
+      "lat": -33.403013,
+      "lon": -70.6118199,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483171995,
+      "lat": -33.4027752,
+      "lon": -70.6117553,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483172007,
+      "lat": -33.4024448,
+      "lon": -70.6115999,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483172013,
+      "lat": -33.4020416,
+      "lon": -70.6111982,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483172019,
+      "lat": -33.4017598,
+      "lon": -70.6108792,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483172023,
+      "lat": -33.4015022,
+      "lon": -70.6106354,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483172031,
+      "lat": -33.4010801,
+      "lon": -70.6104753,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483172041,
+      "lat": -33.400648,
+      "lon": -70.6104282,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483172049,
+      "lat": -33.4004861,
+      "lon": -70.6104619,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483172070,
+      "lat": -33.4002349,
+      "lon": -70.6105309,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483172075,
+      "lat": -33.3999631,
+      "lon": -70.61057,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 483172081,
+      "lat": -33.3998132,
+      "lon": -70.6104014,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483172090,
+      "lat": -33.399734,
+      "lon": -70.6100643,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 483172100,
+      "lat": -33.3997745,
+      "lon": -70.6098281,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483172113,
+      "lat": -33.3997922,
+      "lon": -70.609661,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483172127,
+      "lat": -33.3997358,
+      "lon": -70.6093215,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483172135,
+      "lat": -33.3996382,
+      "lon": -70.6089815,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 483172194,
+      "lat": -33.3993794,
+      "lon": -70.6084064,
+      "timestamp": "2024-05-04T14:06:29Z",
+      "version": 8,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 483172206,
+      "lat": -33.3990612,
+      "lon": -70.6080654,
+      "timestamp": "2017-10-21T23:03:52Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483172221,
+      "lat": -33.3987976,
+      "lon": -70.6075837,
+      "timestamp": "2017-04-10T21:08:35Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 483172232,
+      "lat": -33.3986745,
+      "lon": -70.6073477,
+      "timestamp": "2017-04-10T21:08:35Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 483172244,
+      "lat": -33.3985558,
+      "lon": -70.6072672,
+      "timestamp": "2017-04-10T21:08:35Z",
+      "version": 4
     },
     {
       "type": "node",
@@ -1164,10 +2277,410 @@
     },
     {
       "type": "node",
+      "id": 502616381,
+      "lat": -33.3978997,
+      "lon": -70.6073155,
+      "timestamp": "2017-04-10T21:08:35Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616386,
+      "lat": -33.3975414,
+      "lon": -70.6073933,
+      "timestamp": "2017-04-10T21:08:35Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616396,
+      "lat": -33.3971204,
+      "lon": -70.607514,
+      "timestamp": "2017-04-10T21:08:35Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616402,
+      "lat": -33.3966703,
+      "lon": -70.607404,
+      "timestamp": "2017-04-10T21:08:35Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616408,
+      "lat": -33.3961754,
+      "lon": -70.6073718,
+      "timestamp": "2017-04-10T21:08:35Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616413,
+      "lat": -33.3956895,
+      "lon": -70.6073423,
+      "timestamp": "2017-04-10T21:08:35Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616418,
+      "lat": -33.3954342,
+      "lon": -70.6071331,
+      "timestamp": "2017-04-10T21:08:35Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616424,
+      "lat": -33.3952259,
+      "lon": -70.6068703,
+      "timestamp": "2017-04-10T21:08:35Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616429,
+      "lat": -33.3949438,
+      "lon": -70.6064304,
+      "timestamp": "2017-04-10T21:08:35Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616432,
+      "lat": -33.3946437,
+      "lon": -70.6059663,
+      "timestamp": "2017-04-10T21:08:35Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616433,
+      "lat": -33.3945435,
+      "lon": -70.6057813,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616434,
+      "lat": -33.3944069,
+      "lon": -70.605572,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616449,
+      "lat": -33.3943173,
+      "lon": -70.6054218,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616455,
+      "lat": -33.3942232,
+      "lon": -70.6052904,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616460,
+      "lat": -33.3935895,
+      "lon": -70.6045018,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616465,
+      "lat": -33.3934775,
+      "lon": -70.6043677,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616471,
+      "lat": -33.3931237,
+      "lon": -70.6041049,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 502616477,
+      "lat": -33.3929535,
+      "lon": -70.6039976,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 502616480,
+      "lat": -33.392622,
+      "lon": -70.6037186,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616484,
+      "lat": -33.3923869,
+      "lon": -70.6035363,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 502616487,
+      "lat": -33.3922078,
+      "lon": -70.6033968,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616491,
+      "lat": -33.3920667,
+      "lon": -70.6032761,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616509,
+      "lat": -33.3919189,
+      "lon": -70.6031822,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616514,
+      "lat": -33.391789,
+      "lon": -70.6031125,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 502616518,
+      "lat": -33.3915292,
+      "lon": -70.6030105,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 502616525,
+      "lat": -33.3913657,
+      "lon": -70.6029408,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 502616530,
+      "lat": -33.3912627,
+      "lon": -70.6028737,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 502616535,
+      "lat": -33.3911821,
+      "lon": -70.6027852,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 502616540,
+      "lat": -33.3911037,
+      "lon": -70.6026994,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 502616545,
+      "lat": -33.390714,
+      "lon": -70.601935,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 502616552,
+      "lat": -33.3906469,
+      "lon": -70.6018545,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 502616557,
+      "lat": -33.3905483,
+      "lon": -70.601825,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 502616569,
+      "lat": -33.3903804,
+      "lon": -70.601884,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 502616576,
+      "lat": -33.3900758,
+      "lon": -70.6017767,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 502616583,
+      "lat": -33.3899526,
+      "lon": -70.6017284,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 502616590,
+      "lat": -33.3897553,
+      "lon": -70.6017787,
+      "timestamp": "2016-02-08T18:06:49Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 502616768,
+      "lat": -33.4043618,
+      "lon": -70.6076281,
+      "timestamp": "2017-11-26T00:10:13Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 502616772,
+      "lat": -33.4040993,
+      "lon": -70.6075888,
+      "timestamp": "2017-11-26T00:10:13Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616776,
+      "lat": -33.4039205,
+      "lon": -70.6076719,
+      "timestamp": "2017-11-26T00:10:13Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 502616780,
+      "lat": -33.4037676,
+      "lon": -70.6077945,
+      "timestamp": "2017-11-26T00:10:13Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 502616791,
+      "lat": -33.4035241,
+      "lon": -70.6080404,
+      "timestamp": "2016-09-14T22:21:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 502616793,
+      "lat": -33.4034345,
+      "lon": -70.6081155,
+      "timestamp": "2016-09-14T22:21:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 502616798,
+      "lat": -33.4030695,
+      "lon": -70.6081235,
+      "timestamp": "2016-09-14T22:21:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 502616804,
+      "lat": -33.4029217,
+      "lon": -70.6080967,
+      "timestamp": "2016-09-14T22:21:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 502616808,
+      "lat": -33.402821,
+      "lon": -70.6081047,
+      "timestamp": "2016-09-14T22:21:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 502616812,
+      "lat": -33.4026508,
+      "lon": -70.6081584,
+      "timestamp": "2016-09-14T22:21:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 502616816,
+      "lat": -33.4024493,
+      "lon": -70.6082576,
+      "timestamp": "2016-09-14T22:21:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
       "id": 566161527,
       "lat": -33.4298982,
       "lon": -70.636014,
       "timestamp": "2024-01-06T17:06:33Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 567033435,
+      "lat": -33.4302753,
+      "lon": -70.6350762,
+      "timestamp": "2017-10-21T22:30:47Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 567033436,
+      "lat": -33.4300023,
+      "lon": -70.6355476,
+      "timestamp": "2017-10-21T22:30:47Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 567033437,
+      "lat": -33.4298174,
+      "lon": -70.6357494,
+      "timestamp": "2017-10-21T22:30:47Z",
       "version": 5
     },
     {
@@ -1184,6 +2697,14 @@
     },
     {
       "type": "node",
+      "id": 612440489,
+      "lat": -33.3896647,
+      "lon": -70.6019075,
+      "timestamp": "2012-09-26T11:56:48Z",
+      "version": 5
+    },
+    {
+      "type": "node",
       "id": 693912428,
       "lat": -33.4265064,
       "lon": -70.6376463,
@@ -1192,11 +2713,672 @@
     },
     {
       "type": "node",
+      "id": 835432055,
+      "lat": -33.4301021,
+      "lon": -70.6354262,
+      "timestamp": "2017-10-21T22:30:47Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 835432125,
+      "lat": -33.4307163,
+      "lon": -70.6341132,
+      "timestamp": "2026-04-11T04:13:25Z",
+      "version": 5,
+      "tags": {
+        "crossing": "marked",
+        "crossing:markings": "yes",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1349594404,
+      "lat": -33.3908059,
+      "lon": -70.6021469,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 1349594406,
+      "lat": -33.390461,
+      "lon": -70.6018331,
+      "timestamp": "2017-04-10T22:15:53Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 1349998851,
+      "lat": -33.3996643,
+      "lon": -70.6084671,
+      "timestamp": "2017-10-21T23:03:52Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1349998852,
+      "lat": -33.4002213,
+      "lon": -70.6081047,
+      "timestamp": "2016-09-14T22:21:15Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1349998853,
+      "lat": -33.400752,
+      "lon": -70.6079331,
+      "timestamp": "2016-09-14T22:21:15Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1349998855,
+      "lat": -33.401014,
+      "lon": -70.6079706,
+      "timestamp": "2016-09-14T22:21:15Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1349998856,
+      "lat": -33.4021582,
+      "lon": -70.608389,
+      "timestamp": "2016-09-14T22:21:16Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1349998857,
+      "lat": -33.4020082,
+      "lon": -70.6083649,
+      "timestamp": "2016-09-14T22:21:16Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1350005210,
+      "lat": -33.4077464,
+      "lon": -70.6213304,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1350005213,
+      "lat": -33.4051082,
+      "lon": -70.6183835,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005214,
+      "lat": -33.4003168,
+      "lon": -70.6187045,
+      "timestamp": "2017-08-31T06:47:32Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005217,
+      "lat": -33.4027897,
+      "lon": -70.6177725,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005218,
+      "lat": -33.4110902,
+      "lon": -70.6216727,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005219,
+      "lat": -33.4049676,
+      "lon": -70.6186777,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005220,
+      "lat": -33.4045295,
+      "lon": -70.6188523,
+      "timestamp": "2016-09-14T22:15:46Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1350005221,
+      "lat": -33.4025034,
+      "lon": -70.6176104,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005222,
+      "lat": -33.4099312,
+      "lon": -70.6215947,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005223,
+      "lat": -33.4106743,
+      "lon": -70.6223823,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005225,
+      "lat": -33.4117936,
+      "lon": -70.6228548,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1350005226,
+      "lat": -33.3998548,
+      "lon": -70.6199779,
+      "timestamp": "2026-03-24T17:08:44Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 1350005228,
+      "lat": -33.400649,
+      "lon": -70.6182274,
+      "timestamp": "2016-09-14T22:15:46Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1350005229,
+      "lat": -33.4056108,
+      "lon": -70.6172243,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005231,
+      "lat": -33.4053551,
+      "lon": -70.61721,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005234,
+      "lat": -33.4096439,
+      "lon": -70.6220593,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1350005235,
+      "lat": -33.4120984,
+      "lon": -70.6214923,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005236,
+      "lat": -33.3999583,
+      "lon": -70.6194533,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 1350005237,
+      "lat": -33.4036414,
+      "lon": -70.6178848,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005238,
+      "lat": -33.4077092,
+      "lon": -70.6192853,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005239,
+      "lat": -33.4060361,
+      "lon": -70.6173838,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005240,
+      "lat": -33.4116493,
+      "lon": -70.6226816,
+      "timestamp": "2021-03-28T03:10:19Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 1350005241,
+      "lat": -33.4074861,
+      "lon": -70.6184183,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005242,
+      "lat": -33.4076601,
+      "lon": -70.6188711,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005243,
+      "lat": -33.4077352,
+      "lon": -70.6206597,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1350005244,
+      "lat": -33.4076458,
+      "lon": -70.6198807,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005245,
+      "lat": -33.4138043,
+      "lon": -70.6217281,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 1350005247,
+      "lat": -33.4050749,
+      "lon": -70.6174355,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005248,
+      "lat": -33.4091771,
+      "lon": -70.6212758,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005249,
+      "lat": -33.4034296,
+      "lon": -70.6177831,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005250,
+      "lat": -33.403978,
+      "lon": -70.6187681,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005253,
+      "lat": -33.4050904,
+      "lon": -70.6181144,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005254,
+      "lat": -33.4031555,
+      "lon": -70.6178111,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005260,
+      "lat": -33.4021195,
+      "lon": -70.6174436,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005264,
+      "lat": -33.4095978,
+      "lon": -70.6213444,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005267,
+      "lat": -33.4092809,
+      "lon": -70.6210418,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005268,
+      "lat": -33.4117452,
+      "lon": -70.6215257,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005269,
+      "lat": -33.4104605,
+      "lon": -70.6228458,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005270,
+      "lat": -33.4081283,
+      "lon": -70.621965,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1350005271,
+      "lat": -33.4078639,
+      "lon": -70.6216484,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1350005272,
+      "lat": -33.4071217,
+      "lon": -70.6180437,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005273,
+      "lat": -33.4094753,
+      "lon": -70.6228195,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005274,
+      "lat": -33.4099586,
+      "lon": -70.6222543,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005275,
+      "lat": -33.41014,
+      "lon": -70.6229047,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005276,
+      "lat": -33.4091702,
+      "lon": -70.6210867,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005277,
+      "lat": -33.4103112,
+      "lon": -70.6217405,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005278,
+      "lat": -33.4127816,
+      "lon": -70.6215005,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005279,
+      "lat": -33.4113089,
+      "lon": -70.6229215,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005280,
+      "lat": -33.4093564,
+      "lon": -70.6216645,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1350005283,
+      "lat": -33.4131801,
+      "lon": -70.6214966,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005284,
+      "lat": -33.4115616,
+      "lon": -70.6229562,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1350005285,
+      "lat": -33.4012684,
+      "lon": -70.6175806,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005286,
+      "lat": -33.4112911,
+      "lon": -70.6225456,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1350005287,
+      "lat": -33.4017129,
+      "lon": -70.6174243,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1350005288,
+      "lat": -33.4000849,
+      "lon": -70.6190891,
+      "timestamp": "2017-08-31T06:47:32Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1350005290,
+      "lat": -33.4101598,
+      "lon": -70.622303,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1350005292,
+      "lat": -33.4050142,
+      "lon": -70.6177854,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
       "id": 1692711646,
       "lat": -33.4182066,
       "lon": -70.6288682,
       "timestamp": "2024-02-27T12:07:53Z",
       "version": 6
+    },
+    {
+      "type": "node",
+      "id": 1692712633,
+      "lat": -33.3998928,
+      "lon": -70.6197633,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1704038871,
+      "lat": -33.4140717,
+      "lon": -70.618264,
+      "timestamp": "2022-02-16T20:53:17Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1704038879,
+      "lat": -33.4147356,
+      "lon": -70.6186681,
+      "timestamp": "2017-04-10T16:58:38Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1704038884,
+      "lat": -33.4156398,
+      "lon": -70.6196779,
+      "timestamp": "2017-04-10T16:58:38Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1704038885,
+      "lat": -33.4158257,
+      "lon": -70.6199048,
+      "timestamp": "2017-10-21T23:03:47Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1704038886,
+      "lat": -33.4159472,
+      "lon": -70.6201945,
+      "timestamp": "2017-10-21T23:03:47Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 1704038887,
+      "lat": -33.4160112,
+      "lon": -70.6205898,
+      "timestamp": "2017-10-21T23:03:47Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 1704038888,
+      "lat": -33.4159729,
+      "lon": -70.6203178,
+      "timestamp": "2017-04-10T16:58:38Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1704038891,
+      "lat": -33.4164449,
+      "lon": -70.6227257,
+      "timestamp": "2016-02-08T17:47:45Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1704038892,
+      "lat": -33.4164061,
+      "lon": -70.6210997,
+      "timestamp": "2016-09-15T17:52:25Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1704038895,
+      "lat": -33.4165225,
+      "lon": -70.6219432,
+      "timestamp": "2016-09-15T17:52:25Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 1704038896,
+      "lat": -33.4166329,
+      "lon": -70.622681,
+      "timestamp": "2014-07-09T23:26:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1704038897,
+      "lat": -33.4167923,
+      "lon": -70.6223603,
+      "timestamp": "2016-09-15T17:52:25Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 1704038898,
+      "lat": -33.4168217,
+      "lon": -70.6227426,
+      "timestamp": "2014-07-09T23:26:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 1704038901,
+      "lat": -33.4171505,
+      "lon": -70.622772,
+      "timestamp": "2016-09-15T17:52:25Z",
+      "version": 3
     },
     {
       "type": "node",
@@ -1252,6 +3434,14 @@
     },
     {
       "type": "node",
+      "id": 1933610289,
+      "lat": -33.3898227,
+      "lon": -70.6017231,
+      "timestamp": "2017-04-10T22:15:54Z",
+      "version": 3
+    },
+    {
+      "type": "node",
       "id": 2213116276,
       "lat": -33.4301268,
       "lon": -70.636062,
@@ -1265,6 +3455,34 @@
       "lon": -70.6288251,
       "timestamp": "2024-02-27T12:07:53Z",
       "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2341975054,
+      "lat": -33.4131015,
+      "lon": -70.6156242,
+      "timestamp": "2024-09-17T00:42:32Z",
+      "version": 8,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "yes",
+        "highway": "crossing",
+        "tactile_paving": "no",
+        "traffic_calming": "table"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2545317622,
+      "lat": -33.4152925,
+      "lon": -70.6175354,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 6,
+      "tags": {
+        "access": "permissive",
+        "barrier": "lift_gate"
+      }
     },
     {
       "type": "node",
@@ -1328,6 +3546,323 @@
     },
     {
       "type": "node",
+      "id": 2589703338,
+      "lat": -33.4258431,
+      "lon": -70.6266985,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 2594837142,
+      "lat": -33.416238,
+      "lon": -70.6191453,
+      "timestamp": "2023-11-05T04:34:23Z",
+      "version": 4,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:markings": "yes",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2597211132,
+      "lat": -33.3998988,
+      "lon": -70.6196759,
+      "timestamp": "2021-03-28T03:10:19Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 2652513969,
+      "lat": -33.4082448,
+      "lon": -70.6116753,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2652513993,
+      "lat": -33.4076519,
+      "lon": -70.6112634,
+      "timestamp": "2025-02-13T18:42:57Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 2652513995,
+      "lat": -33.4065562,
+      "lon": -70.6117467,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 2652514008,
+      "lat": -33.4068674,
+      "lon": -70.6117276,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 2652514020,
+      "lat": -33.4066989,
+      "lon": -70.6117398,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 2652514026,
+      "lat": -33.4074828,
+      "lon": -70.610453,
+      "timestamp": "2017-11-25T23:55:33Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2652514030,
+      "lat": -33.4060532,
+      "lon": -70.6120634,
+      "timestamp": "2014-02-03T20:32:08Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 2652514035,
+      "lat": -33.4085267,
+      "lon": -70.6116576,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2652514037,
+      "lat": -33.4076231,
+      "lon": -70.6111203,
+      "timestamp": "2025-02-13T18:42:57Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 2652514044,
+      "lat": -33.4073481,
+      "lon": -70.6098615,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 2652514047,
+      "lat": -33.4060588,
+      "lon": -70.6087458,
+      "timestamp": "2016-09-14T22:21:17Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 2652514057,
+      "lat": -33.4058169,
+      "lon": -70.6087029,
+      "timestamp": "2016-09-14T22:21:17Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 2652514059,
+      "lat": -33.4058566,
+      "lon": -70.6121764,
+      "timestamp": "2017-10-21T23:03:51Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2652514061,
+      "lat": -33.4059334,
+      "lon": -70.6087136,
+      "timestamp": "2016-09-14T22:21:17Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 2652514066,
+      "lat": -33.4056166,
+      "lon": -70.608665,
+      "timestamp": "2014-02-03T20:32:08Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 2652514070,
+      "lat": -33.4078,
+      "lon": -70.6114709,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2652514077,
+      "lat": -33.4074077,
+      "lon": -70.6099446,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2652514086,
+      "lat": -33.4079426,
+      "lon": -70.6116091,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2652514087,
+      "lat": -33.4074419,
+      "lon": -70.6100486,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2652514089,
+      "lat": -33.4071189,
+      "lon": -70.6115422,
+      "timestamp": "2017-10-21T23:03:49Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2652514091,
+      "lat": -33.4073585,
+      "lon": -70.6113141,
+      "timestamp": "2016-09-14T22:15:47Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2652514098,
+      "lat": -33.4077253,
+      "lon": -70.611368,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 2652514099,
+      "lat": -33.4064584,
+      "lon": -70.6117638,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 2652514100,
+      "lat": -33.4075131,
+      "lon": -70.6112377,
+      "timestamp": "2025-02-13T18:42:57Z",
+      "version": 7
+    },
+    {
+      "type": "node",
+      "id": 2652514114,
+      "lat": -33.4074604,
+      "lon": -70.6102049,
+      "timestamp": "2016-09-14T22:21:17Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 2652514115,
+      "lat": -33.4063027,
+      "lon": -70.6118328,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 2652514116,
+      "lat": -33.4071653,
+      "lon": -70.6097342,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 2652514117,
+      "lat": -33.4081022,
+      "lon": -70.6116833,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2652514118,
+      "lat": -33.4062159,
+      "lon": -70.6088535,
+      "timestamp": "2017-10-21T23:05:49Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2652514126,
+      "lat": -33.4059446,
+      "lon": -70.612144,
+      "timestamp": "2017-10-21T23:03:51Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 2652514127,
+      "lat": -33.4053263,
+      "lon": -70.6085712,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2652514128,
+      "lat": -33.4068409,
+      "lon": -70.6095139,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 2652514129,
+      "lat": -33.4062392,
+      "lon": -70.6118865,
+      "timestamp": "2016-02-10T17:25:55Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 2652514136,
+      "lat": -33.4080364,
+      "lon": -70.6116707,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2652514143,
+      "lat": -33.4070245,
+      "lon": -70.6116395,
+      "timestamp": "2017-10-21T23:03:49Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2652514146,
+      "lat": -33.4063772,
+      "lon": -70.6117901,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
       "id": 2832925053,
       "lat": -33.4053387,
       "lon": -70.6098226,
@@ -1344,6 +3879,22 @@
     },
     {
       "type": "node",
+      "id": 2832925130,
+      "lat": -33.4036521,
+      "lon": -70.6079157,
+      "timestamp": "2017-11-26T00:10:13Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 2832925171,
+      "lat": -33.4096438,
+      "lon": -70.6118836,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 6
+    },
+    {
+      "type": "node",
       "id": 2953717033,
       "lat": -33.415885,
       "lon": -70.6225809,
@@ -1352,6 +3903,30 @@
       "tags": {
         "highway": "crossing"
       }
+    },
+    {
+      "type": "node",
+      "id": 2953717035,
+      "lat": -33.4159818,
+      "lon": -70.6205242,
+      "timestamp": "2017-04-10T16:58:39Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2953717036,
+      "lat": -33.4163826,
+      "lon": -70.6210045,
+      "timestamp": "2017-03-16T15:28:42Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2953717037,
+      "lat": -33.41655,
+      "lon": -70.6219928,
+      "timestamp": "2018-09-09T15:23:43Z",
+      "version": 4
     },
     {
       "type": "node",
@@ -1399,6 +3974,118 @@
       "lat": -33.4223925,
       "lon": -70.6365261,
       "timestamp": "2017-12-07T02:49:05Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2953733658,
+      "lat": -33.413768,
+      "lon": -70.6146427,
+      "timestamp": "2018-01-19T13:59:56Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2953733659,
+      "lat": -33.4136204,
+      "lon": -70.6150625,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 2953733661,
+      "lat": -33.4136495,
+      "lon": -70.6146919,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 6
+    },
+    {
+      "type": "node",
+      "id": 2953733662,
+      "lat": -33.4137152,
+      "lon": -70.6146244,
+      "timestamp": "2018-01-19T13:59:56Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2953733663,
+      "lat": -33.4137002,
+      "lon": -70.6153656,
+      "timestamp": "2018-01-19T13:59:56Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 2953733676,
+      "lat": -33.414598,
+      "lon": -70.6208067,
+      "timestamp": "2023-07-18T03:48:14Z",
+      "version": 8
+    },
+    {
+      "type": "node",
+      "id": 2953733677,
+      "lat": -33.4152945,
+      "lon": -70.6209486,
+      "timestamp": "2017-12-18T00:24:18Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2953733678,
+      "lat": -33.41537,
+      "lon": -70.6211669,
+      "timestamp": "2017-12-18T00:24:18Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2953733679,
+      "lat": -33.4130193,
+      "lon": -70.6158302,
+      "timestamp": "2016-09-13T22:07:46Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2953733680,
+      "lat": -33.4128133,
+      "lon": -70.6167341,
+      "timestamp": "2016-09-13T22:07:46Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 2953733681,
+      "lat": -33.412884,
+      "lon": -70.6166269,
+      "timestamp": "2014-07-08T06:53:48Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 2953733682,
+      "lat": -33.4129265,
+      "lon": -70.616512,
+      "timestamp": "2014-07-08T06:53:49Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 2953733683,
+      "lat": -33.4128271,
+      "lon": -70.6173982,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2953733684,
+      "lat": -33.4134351,
+      "lon": -70.6180457,
+      "timestamp": "2022-02-06T14:34:04Z",
       "version": 5
     },
     {
@@ -1501,6 +4188,38 @@
       "lat": -33.4175322,
       "lon": -70.6249614,
       "timestamp": "2016-09-15T17:44:32Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 2956531625,
+      "lat": -33.3998753,
+      "lon": -70.6104825,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2956531626,
+      "lat": -33.4015931,
+      "lon": -70.6107054,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2956531627,
+      "lat": -33.4023201,
+      "lon": -70.6115108,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 2956544636,
+      "lat": -33.4033181,
+      "lon": -70.6081557,
+      "timestamp": "2016-09-14T22:21:17Z",
       "version": 2
     },
     {
@@ -1865,11 +4584,131 @@
     },
     {
       "type": "node",
+      "id": 2956544864,
+      "lat": -33.4137193,
+      "lon": -70.6203019,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 2956544870,
+      "lat": -33.4140453,
+      "lon": -70.6181119,
+      "timestamp": "2014-07-09T23:25:37Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 2956544891,
+      "lat": -33.4153214,
+      "lon": -70.6201725,
+      "timestamp": "2022-02-05T22:13:40Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 2956544896,
+      "lat": -33.4153814,
+      "lon": -70.6200887,
+      "timestamp": "2022-02-05T22:13:40Z",
+      "version": 4,
+      "tags": {
+        "crossing": "marked",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2956544898,
+      "lat": -33.4155308,
+      "lon": -70.6200899,
+      "timestamp": "2017-10-21T23:03:47Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 2956544902,
+      "lat": -33.4156667,
+      "lon": -70.6202449,
+      "timestamp": "2017-10-21T23:03:47Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2956544907,
+      "lat": -33.4158185,
+      "lon": -70.6203837,
+      "timestamp": "2017-10-21T23:03:47Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2956544915,
+      "lat": -33.415897,
+      "lon": -70.6204555,
+      "timestamp": "2017-10-21T23:03:47Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2956544916,
+      "lat": -33.4158638,
+      "lon": -70.6224998,
+      "timestamp": "2021-02-13T16:56:20Z",
+      "version": 9,
+      "tags": {
+        "crossing": "marked",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2956544918,
+      "lat": -33.4160415,
+      "lon": -70.6206574,
+      "timestamp": "2017-03-16T15:28:42Z",
+      "version": 2
+    },
+    {
+      "type": "node",
       "id": 2956544927,
       "lat": -33.4161166,
       "lon": -70.6232158,
       "timestamp": "2017-12-07T02:49:07Z",
       "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2956544931,
+      "lat": -33.4161375,
+      "lon": -70.6207658,
+      "timestamp": "2016-09-15T17:52:25Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 2956545038,
+      "lat": -33.4162962,
+      "lon": -70.6193447,
+      "timestamp": "2022-02-27T21:03:23Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2956545042,
+      "lat": -33.4164375,
+      "lon": -70.621566,
+      "timestamp": "2017-10-21T23:03:46Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 2956545047,
+      "lat": -33.4164676,
+      "lon": -70.6218078,
+      "timestamp": "2017-04-10T16:58:39Z",
+      "version": 3
     },
     {
       "type": "node",
@@ -1886,6 +4725,14 @@
       "lon": -70.6232459,
       "timestamp": "2017-12-07T02:49:08Z",
       "version": 6
+    },
+    {
+      "type": "node",
+      "id": 2956545057,
+      "lat": -33.4170218,
+      "lon": -70.6226487,
+      "timestamp": "2016-09-15T17:52:25Z",
+      "version": 3
     },
     {
       "type": "node",
@@ -1910,6 +4757,30 @@
       "lon": -70.625051,
       "timestamp": "2017-12-07T02:49:07Z",
       "version": 5
+    },
+    {
+      "type": "node",
+      "id": 2956545064,
+      "lat": -33.4171382,
+      "lon": -70.6229021,
+      "timestamp": "2016-09-15T17:52:25Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 2956545065,
+      "lat": -33.4171651,
+      "lon": -70.6228767,
+      "timestamp": "2016-09-15T17:52:25Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 2956545066,
+      "lat": -33.4171729,
+      "lon": -70.6228203,
+      "timestamp": "2016-09-15T17:52:25Z",
+      "version": 2
     },
     {
       "type": "node",
@@ -2096,6 +4967,30 @@
     },
     {
       "type": "node",
+      "id": 3995884239,
+      "lat": -33.4166412,
+      "lon": -70.622139,
+      "timestamp": "2016-09-15T17:52:25Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 3995884240,
+      "lat": -33.4168964,
+      "lon": -70.6224971,
+      "timestamp": "2016-09-15T17:52:25Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 3995884241,
+      "lat": -33.4162205,
+      "lon": -70.6227447,
+      "timestamp": "2018-09-09T15:23:44Z",
+      "version": 2
+    },
+    {
+      "type": "node",
       "id": 3995890158,
       "lat": -33.4241696,
       "lon": -70.6369776,
@@ -2120,11 +5015,203 @@
     },
     {
       "type": "node",
+      "id": 3995890162,
+      "lat": -33.4303975,
+      "lon": -70.6348039,
+      "timestamp": "2017-10-21T22:30:47Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 3995890163,
+      "lat": -33.4307156,
+      "lon": -70.6342725,
+      "timestamp": "2021-03-26T22:36:18Z",
+      "version": 4
+    },
+    {
+      "type": "node",
       "id": 3995918360,
       "lat": -33.4203038,
       "lon": -70.6257365,
       "timestamp": "2020-12-27T00:08:54Z",
       "version": 4
+    },
+    {
+      "type": "node",
+      "id": 3995918361,
+      "lat": -33.3967979,
+      "lon": -70.6074711,
+      "timestamp": "2017-04-10T21:08:36Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 3995918362,
+      "lat": -33.3959045,
+      "lon": -70.6073772,
+      "timestamp": "2017-04-10T21:08:36Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 3995918363,
+      "lat": -33.3951005,
+      "lon": -70.6066664,
+      "timestamp": "2017-04-10T21:08:36Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 3995918364,
+      "lat": -33.3947691,
+      "lon": -70.6061648,
+      "timestamp": "2017-04-10T21:08:36Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 3996623210,
+      "lat": -33.4037784,
+      "lon": -70.6185157,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 3996623211,
+      "lat": -33.4142281,
+      "lon": -70.6212467,
+      "timestamp": "2023-07-18T03:48:14Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 3996623212,
+      "lat": -33.4143032,
+      "lon": -70.6209897,
+      "timestamp": "2023-07-18T03:48:14Z",
+      "version": 8
+    },
+    {
+      "type": "node",
+      "id": 3996623214,
+      "lat": -33.4037749,
+      "lon": -70.6181818,
+      "timestamp": "2016-09-14T22:15:48Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 3996623215,
+      "lat": -33.4140902,
+      "lon": -70.6214449,
+      "timestamp": "2021-02-24T16:30:12Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 3996623216,
+      "lat": -33.4139411,
+      "lon": -70.6214131,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 3999499756,
+      "lat": -33.3995726,
+      "lon": -70.6088098,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 3999501457,
+      "lat": -33.399764,
+      "lon": -70.6103008,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 3999501458,
+      "lat": -33.4001063,
+      "lon": -70.6105658,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 3999501459,
+      "lat": -33.4050128,
+      "lon": -70.6116633,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 3999501461,
+      "lat": -33.4078623,
+      "lon": -70.6115347,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 3999501462,
+      "lat": -33.4079906,
+      "lon": -70.6116427,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 3999501463,
+      "lat": -33.411479,
+      "lon": -70.6166518,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 3999501466,
+      "lat": -33.4107484,
+      "lon": -70.62173,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 3999501467,
+      "lat": -33.4116664,
+      "lon": -70.6229551,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 3999501468,
+      "lat": -33.4099521,
+      "lon": -70.6229244,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 3999501469,
+      "lat": -33.4096883,
+      "lon": -70.622899,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4004794594,
+      "lat": -33.3994686,
+      "lon": -70.6085877,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 3
     },
     {
       "type": "node",
@@ -2142,10 +5229,421 @@
     },
     {
       "type": "node",
+      "id": 4362150716,
+      "lat": -33.4150459,
+      "lon": -70.6190095,
+      "timestamp": "2017-04-10T16:58:39Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4362162272,
+      "lat": -33.4135963,
+      "lon": -70.6198923,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 4386585440,
+      "lat": -33.4044993,
+      "lon": -70.6112002,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 4386585472,
+      "lat": -33.4052585,
+      "lon": -70.6172609,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4395598405,
+      "lat": -33.4069523,
+      "lon": -70.6117,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 4400246076,
+      "lat": -33.4135058,
+      "lon": -70.6192507,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4400246080,
+      "lat": -33.413804,
+      "lon": -70.6150928,
+      "timestamp": "2018-01-19T13:59:56Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4400246081,
+      "lat": -33.4138144,
+      "lon": -70.6148009,
+      "timestamp": "2018-01-19T13:59:56Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4400246082,
+      "lat": -33.4139596,
+      "lon": -70.6178727,
+      "timestamp": "2016-09-13T22:07:15Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4400251496,
+      "lat": -33.4151709,
+      "lon": -70.6175655,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 3,
+      "tags": {
+        "crossing": "informal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4400251497,
+      "lat": -33.4152123,
+      "lon": -70.6178217,
+      "timestamp": "2018-09-09T15:23:44Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4400251501,
+      "lat": -33.4156533,
+      "lon": -70.6185365,
+      "timestamp": "2016-09-13T22:07:15Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4400251505,
+      "lat": -33.4162638,
+      "lon": -70.6193668,
+      "timestamp": "2022-02-27T21:03:23Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4400251506,
+      "lat": -33.4163043,
+      "lon": -70.619214,
+      "timestamp": "2022-02-27T21:03:23Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4400251507,
+      "lat": -33.4163181,
+      "lon": -70.6193065,
+      "timestamp": "2022-02-27T21:03:23Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401823775,
+      "lat": -33.4004945,
+      "lon": -70.6184527,
+      "timestamp": "2016-09-14T22:15:41Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4401823776,
+      "lat": -33.4009759,
+      "lon": -70.6178411,
+      "timestamp": "2016-09-14T22:15:41Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4401823777,
+      "lat": -33.4014693,
+      "lon": -70.6174708,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401823778,
+      "lat": -33.4019973,
+      "lon": -70.617423,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401823779,
+      "lat": -33.4023767,
+      "lon": -70.6175371,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401823780,
+      "lat": -33.4027091,
+      "lon": -70.6177319,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401823781,
+      "lat": -33.4029784,
+      "lon": -70.6178162,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401823782,
+      "lat": -33.4035475,
+      "lon": -70.6178133,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401823783,
+      "lat": -33.4037642,
+      "lon": -70.6180979,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401823784,
+      "lat": -33.4038217,
+      "lon": -70.6186328,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401823785,
+      "lat": -33.404703,
+      "lon": -70.6188418,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401823786,
+      "lat": -33.404836,
+      "lon": -70.6187918,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401823787,
+      "lat": -33.405011,
+      "lon": -70.6176282,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401823788,
+      "lat": -33.4050391,
+      "lon": -70.618576,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401824589,
+      "lat": -33.4051819,
+      "lon": -70.6173106,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401824590,
+      "lat": -33.4054834,
+      "lon": -70.6172038,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401824592,
+      "lat": -33.4073729,
+      "lon": -70.6182654,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401824595,
+      "lat": -33.407586,
+      "lon": -70.6185931,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401824596,
+      "lat": -33.4076496,
+      "lon": -70.6200983,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401824597,
+      "lat": -33.4077026,
+      "lon": -70.6191068,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401824598,
+      "lat": -33.4109528,
+      "lon": -70.6138837,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4401824599,
+      "lat": -33.4112663,
+      "lon": -70.6160295,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4401824600,
+      "lat": -33.411953,
+      "lon": -70.6177473,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4401824601,
+      "lat": -33.4127226,
+      "lon": -70.6186198,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4401824602,
+      "lat": -33.4128014,
+      "lon": -70.6188528,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4401828248,
+      "lat": -33.3995503,
+      "lon": -70.6084678,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4401828249,
+      "lat": -33.4005124,
+      "lon": -70.6079787,
+      "timestamp": "2016-09-14T22:21:15Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4401828250,
+      "lat": -33.4008751,
+      "lon": -70.6079304,
+      "timestamp": "2016-09-14T22:21:15Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4401828251,
+      "lat": -33.40422,
+      "lon": -70.6075779,
+      "timestamp": "2017-11-26T00:10:13Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4401828252,
+      "lat": -33.4042706,
+      "lon": -70.6112465,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4401828253,
+      "lat": -33.4049049,
+      "lon": -70.6113586,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 3
+    },
+    {
+      "type": "node",
       "id": 4402906784,
       "lat": -33.4232297,
       "lon": -70.6319204,
       "timestamp": "2018-01-19T00:53:11Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4402908290,
+      "lat": -33.4268881,
+      "lon": -70.628204,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4402908291,
+      "lat": -33.4273633,
+      "lon": -70.628863,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4402908295,
+      "lat": -33.4289935,
+      "lon": -70.6305426,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4402908296,
+      "lat": -33.4291979,
+      "lon": -70.630742,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4402908297,
+      "lat": -33.4293432,
+      "lon": -70.6309059,
+      "timestamp": "2018-11-26T20:00:16Z",
       "version": 3
     },
     {
@@ -2158,11 +5656,67 @@
     },
     {
       "type": "node",
+      "id": 4402908299,
+      "lat": -33.4295077,
+      "lon": -70.63604,
+      "timestamp": "2020-08-17T20:33:10Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4402908300,
+      "lat": -33.4296112,
+      "lon": -70.6359278,
+      "timestamp": "2020-08-17T20:33:10Z",
+      "version": 3
+    },
+    {
+      "type": "node",
       "id": 4402908302,
       "lat": -33.4296291,
       "lon": -70.6361464,
       "timestamp": "2024-01-06T17:06:33Z",
       "version": 4
+    },
+    {
+      "type": "node",
+      "id": 4402908305,
+      "lat": -33.4301995,
+      "lon": -70.635253,
+      "timestamp": "2016-09-15T16:58:16Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4402908306,
+      "lat": -33.4303148,
+      "lon": -70.632773,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4402908307,
+      "lat": -33.4304135,
+      "lon": -70.6332782,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4402908312,
+      "lat": -33.4306036,
+      "lon": -70.6345215,
+      "timestamp": "2017-10-21T22:30:47Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4402908314,
+      "lat": -33.4307172,
+      "lon": -70.6341853,
+      "timestamp": "2017-10-21T22:30:47Z",
+      "version": 2
     },
     {
       "type": "node",
@@ -2307,6 +5861,52 @@
       "lon": -70.6364518,
       "timestamp": "2017-12-07T02:49:05Z",
       "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4403050058,
+      "lat": -33.4159763,
+      "lon": -70.6204211,
+      "timestamp": "2016-09-15T17:52:23Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4403050059,
+      "lat": -33.4160759,
+      "lon": -70.6207041,
+      "timestamp": "2016-09-15T17:52:23Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4403050060,
+      "lat": -33.4163333,
+      "lon": -70.6209334,
+      "timestamp": "2016-09-15T17:52:23Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4710943523,
+      "lat": -33.3999653,
+      "lon": -70.60829,
+      "timestamp": "2017-10-21T23:03:52Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4728119044,
+      "lat": -33.4141844,
+      "lon": -70.6179935,
+      "timestamp": "2025-04-15T16:51:08Z",
+      "version": 5,
+      "tags": {
+        "crossing": "marked",
+        "crossing:island": "no",
+        "highway": "crossing",
+        "kerb": "lowered"
+      }
     },
     {
       "type": "node",
@@ -3646,6 +7246,14 @@
     },
     {
       "type": "node",
+      "id": 4728204800,
+      "lat": -33.3999021,
+      "lon": -70.6083229,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 4
+    },
+    {
+      "type": "node",
       "id": 4728218266,
       "lat": -33.3895765,
       "lon": -70.602045,
@@ -4414,6 +8022,22 @@
     },
     {
       "type": "node",
+      "id": 4732681452,
+      "lat": -33.4141165,
+      "lon": -70.618309,
+      "timestamp": "2021-02-13T03:35:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4732681472,
+      "lat": -33.4153051,
+      "lon": -70.6202185,
+      "timestamp": "2022-02-05T22:13:40Z",
+      "version": 2
+    },
+    {
+      "type": "node",
       "id": 4732681480,
       "lat": -33.4166075,
       "lon": -70.6230813,
@@ -4470,10 +8094,48 @@
     },
     {
       "type": "node",
+      "id": 4738146706,
+      "lat": -33.3992509,
+      "lon": -70.6082795,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 3
+    },
+    {
+      "type": "node",
       "id": 4738194532,
       "lat": -33.4245164,
       "lon": -70.6296858,
       "timestamp": "2024-08-14T05:46:35Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4738245040,
+      "lat": -33.4125769,
+      "lon": -70.6214935,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4740422650,
+      "lat": -33.4136339,
+      "lon": -70.6149083,
+      "timestamp": "2024-08-16T22:59:45Z",
+      "version": 7,
+      "tags": {
+        "crossing": "marked",
+        "crossing:island": "no",
+        "crossing:markings": "yes",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4740428727,
+      "lat": -33.3957902,
+      "lon": -70.6073745,
+      "timestamp": "2017-04-10T21:08:36Z",
       "version": 2
     },
     {
@@ -4504,6 +8166,246 @@
         "crossing:island": "no",
         "highway": "crossing"
       }
+    },
+    {
+      "type": "node",
+      "id": 4760402163,
+      "lat": -33.4141789,
+      "lon": -70.6213859,
+      "timestamp": "2023-07-18T03:48:14Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 4760402164,
+      "lat": -33.4140147,
+      "lon": -70.621435,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4760402165,
+      "lat": -33.4138303,
+      "lon": -70.6217152,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4760402166,
+      "lat": -33.4130859,
+      "lon": -70.6214978,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4760402167,
+      "lat": -33.4138442,
+      "lon": -70.6216916,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4760402168,
+      "lat": -33.4136554,
+      "lon": -70.6216904,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4760402169,
+      "lat": -33.4138568,
+      "lon": -70.6214812,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 4760402170,
+      "lat": -33.4138198,
+      "lon": -70.6211989,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 4786657352,
+      "lat": -33.4159058,
+      "lon": -70.6200653,
+      "timestamp": "2017-10-21T23:03:47Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 4787094821,
+      "lat": -33.3989192,
+      "lon": -70.6079176,
+      "timestamp": "2017-04-10T20:54:08Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787117043,
+      "lat": -33.3955215,
+      "lon": -70.6072672,
+      "timestamp": "2017-04-10T21:08:34Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787117044,
+      "lat": -33.3955909,
+      "lon": -70.6073048,
+      "timestamp": "2017-04-10T21:08:34Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787117045,
+      "lat": -33.3960142,
+      "lon": -70.6073826,
+      "timestamp": "2017-04-10T21:08:34Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787117046,
+      "lat": -33.396377,
+      "lon": -70.6073638,
+      "timestamp": "2017-04-10T21:08:34Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787117047,
+      "lat": -33.3965225,
+      "lon": -70.6073772,
+      "timestamp": "2017-04-10T21:08:34Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787117048,
+      "lat": -33.396901,
+      "lon": -70.6075193,
+      "timestamp": "2017-04-10T21:08:34Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787117049,
+      "lat": -33.3970196,
+      "lon": -70.6075274,
+      "timestamp": "2017-04-10T21:08:34Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787117050,
+      "lat": -33.3972839,
+      "lon": -70.6074711,
+      "timestamp": "2017-04-10T21:08:34Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787117051,
+      "lat": -33.3982132,
+      "lon": -70.6072404,
+      "timestamp": "2017-04-10T21:08:34Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787117052,
+      "lat": -33.3984058,
+      "lon": -70.607227,
+      "timestamp": "2017-04-10T21:08:34Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787199470,
+      "lat": -33.3902146,
+      "lon": -70.6018599,
+      "timestamp": "2017-04-10T22:15:50Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787199471,
+      "lat": -33.3903042,
+      "lon": -70.6018947,
+      "timestamp": "2017-04-10T22:15:50Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787199472,
+      "lat": -33.3908618,
+      "lon": -70.6022971,
+      "timestamp": "2017-04-10T22:15:50Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787199473,
+      "lat": -33.3909313,
+      "lon": -70.60245,
+      "timestamp": "2017-04-10T22:15:50Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787199474,
+      "lat": -33.3910164,
+      "lon": -70.6025868,
+      "timestamp": "2017-04-10T22:15:50Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787199475,
+      "lat": -33.392781,
+      "lon": -70.6038528,
+      "timestamp": "2017-04-10T22:15:50Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787199476,
+      "lat": -33.3936858,
+      "lon": -70.6046118,
+      "timestamp": "2017-04-10T22:15:50Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787199477,
+      "lat": -33.3937821,
+      "lon": -70.6047486,
+      "timestamp": "2017-04-10T22:15:50Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787199478,
+      "lat": -33.3938828,
+      "lon": -70.6048881,
+      "timestamp": "2017-04-10T22:15:50Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 4787199479,
+      "lat": -33.394015,
+      "lon": -70.6050517,
+      "timestamp": "2017-04-10T22:15:50Z",
+      "version": 1
     },
     {
       "type": "node",
@@ -5179,6 +9081,46 @@
     },
     {
       "type": "node",
+      "id": 5070853362,
+      "lat": -33.3999024,
+      "lon": -70.6196238,
+      "timestamp": "2018-01-19T13:59:58Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5070853378,
+      "lat": -33.3999992,
+      "lon": -70.6202566,
+      "timestamp": "2026-04-01T17:07:31Z",
+      "version": 5
+    },
+    {
+      "type": "node",
+      "id": 5078900853,
+      "lat": -33.4091514,
+      "lon": -70.621202,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5078900854,
+      "lat": -33.4092424,
+      "lon": -70.6210416,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 5078900855,
+      "lat": -33.4094547,
+      "lon": -70.6211805,
+      "timestamp": "2017-12-18T00:13:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
       "id": 5180914551,
       "lat": -33.421201,
       "lon": -70.637608,
@@ -5312,6 +9254,86 @@
       "lon": -70.6366382,
       "timestamp": "2017-10-21T22:30:40Z",
       "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5180914578,
+      "lat": -33.4301556,
+      "lon": -70.6353443,
+      "timestamp": "2017-10-21T22:30:40Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5180914579,
+      "lat": -33.4301188,
+      "lon": -70.6322982,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180914580,
+      "lat": -33.4296661,
+      "lon": -70.6314094,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180914581,
+      "lat": -33.4295998,
+      "lon": -70.6312945,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180914582,
+      "lat": -33.4294405,
+      "lon": -70.6310123,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180914583,
+      "lat": -33.4282179,
+      "lon": -70.629647,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180914584,
+      "lat": -33.4283998,
+      "lon": -70.629838,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180914585,
+      "lat": -33.4278541,
+      "lon": -70.6293378,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180914586,
+      "lat": -33.427682,
+      "lon": -70.629206,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180914587,
+      "lat": -33.4256231,
+      "lon": -70.6262896,
+      "timestamp": "2018-11-26T20:00:16Z",
+      "version": 2
     },
     {
       "type": "node",
@@ -5576,11 +9598,335 @@
     },
     {
       "type": "node",
+      "id": 5180937672,
+      "lat": -33.4158604,
+      "lon": -70.619961,
+      "timestamp": "2017-10-21T23:03:44Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5180937674,
+      "lat": -33.4154269,
+      "lon": -70.6200432,
+      "timestamp": "2017-10-21T23:03:44Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5180937675,
+      "lat": -33.415476,
+      "lon": -70.6200509,
+      "timestamp": "2017-10-21T23:03:44Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5180937676,
+      "lat": -33.4157442,
+      "lon": -70.6219681,
+      "timestamp": "2017-12-18T00:24:18Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 5180937677,
+      "lat": -33.415426,
+      "lon": -70.6213161,
+      "timestamp": "2017-12-18T00:24:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180937681,
+      "lat": -33.412891,
+      "lon": -70.6197879,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180937682,
+      "lat": -33.4129512,
+      "lon": -70.6199721,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180937683,
+      "lat": -33.4124917,
+      "lon": -70.6182365,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180937684,
+      "lat": -33.4102297,
+      "lon": -70.6123388,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180937685,
+      "lat": -33.4099677,
+      "lon": -70.6120786,
+      "timestamp": "2018-11-21T03:19:37Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180937686,
+      "lat": -33.4097371,
+      "lon": -70.611923,
+      "timestamp": "2018-11-21T03:19:37Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180937687,
+      "lat": -33.4089069,
+      "lon": -70.6116846,
+      "timestamp": "2018-11-21T03:19:37Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180937696,
+      "lat": -33.4077558,
+      "lon": -70.6114157,
+      "timestamp": "2018-11-21T03:19:37Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180937697,
+      "lat": -33.4076941,
+      "lon": -70.6113225,
+      "timestamp": "2017-11-25T23:55:34Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180937698,
+      "lat": -33.4074688,
+      "lon": -70.6112412,
+      "timestamp": "2017-10-21T23:03:45Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5180937719,
+      "lat": -33.405545,
+      "lon": -70.6121641,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180937720,
+      "lat": -33.4056295,
+      "lon": -70.61219,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939421,
+      "lat": -33.4053802,
+      "lon": -70.6120781,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939422,
+      "lat": -33.405171,
+      "lon": -70.6119051,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939423,
+      "lat": -33.4049807,
+      "lon": -70.6115629,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939424,
+      "lat": -33.4043426,
+      "lon": -70.6112059,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939425,
+      "lat": -33.404442,
+      "lon": -70.6111942,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939426,
+      "lat": -33.4046714,
+      "lon": -70.6112351,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939427,
+      "lat": -33.4048452,
+      "lon": -70.6112962,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939428,
+      "lat": -33.4047384,
+      "lon": -70.6112502,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939429,
+      "lat": -33.4050494,
+      "lon": -70.6117453,
+      "timestamp": "2017-10-21T23:03:45Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5180939430,
+      "lat": -33.4038687,
+      "lon": -70.6116331,
+      "timestamp": "2017-10-21T23:03:45Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5180939431,
+      "lat": -33.403336,
+      "lon": -70.6117351,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939432,
+      "lat": -33.4036246,
+      "lon": -70.6117305,
+      "timestamp": "2017-10-21T23:03:45Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5180939433,
+      "lat": -33.4032933,
+      "lon": -70.6117434,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939434,
+      "lat": -33.4033957,
+      "lon": -70.6117354,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939435,
+      "lat": -33.4021703,
+      "lon": -70.6113701,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939436,
+      "lat": -33.401928,
+      "lon": -70.6110489,
+      "timestamp": "2017-11-26T00:10:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939437,
+      "lat": -33.4007876,
+      "lon": -70.6104225,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939438,
+      "lat": -33.4009049,
+      "lon": -70.6104307,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939439,
+      "lat": -33.3997382,
+      "lon": -70.6102168,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939440,
+      "lat": -33.4040125,
+      "lon": -70.6076191,
+      "timestamp": "2017-11-26T00:10:13Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939919,
+      "lat": -33.4062884,
+      "lon": -70.6089639,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5180939920,
+      "lat": -33.4073219,
+      "lon": -70.6098341,
+      "timestamp": "2017-11-26T00:10:12Z",
+      "version": 2
+    },
+    {
+      "type": "node",
       "id": 5247968776,
       "lat": -33.4072453,
       "lon": -70.6106148,
       "timestamp": "2017-11-25T23:55:27Z",
       "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5247968785,
+      "lat": -33.4075866,
+      "lon": -70.6109687,
+      "timestamp": "2017-11-25T23:55:27Z",
+      "version": 1,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
     },
     {
       "type": "node",
@@ -5840,11 +10186,152 @@
     },
     {
       "type": "node",
+      "id": 5247970255,
+      "lat": -33.3995034,
+      "lon": -70.6086538,
+      "timestamp": "2024-09-17T00:42:32Z",
+      "version": 4,
+      "tags": {
+        "crossing": "marked",
+        "crossing:markings": "yes",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
       "id": 5247970272,
       "lat": -33.4004849,
       "lon": -70.6096302,
       "timestamp": "2021-03-24T01:13:33Z",
       "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5248002508,
+      "lat": -33.4033676,
+      "lon": -70.6081386,
+      "timestamp": "2017-11-26T00:10:09Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5248002520,
+      "lat": -33.407277,
+      "lon": -70.6113859,
+      "timestamp": "2017-11-26T00:10:09Z",
+      "version": 1,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5248019921,
+      "lat": -33.4028907,
+      "lon": -70.6117978,
+      "timestamp": "2017-11-26T00:10:09Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5248019922,
+      "lat": -33.4029518,
+      "lon": -70.611818,
+      "timestamp": "2017-11-26T00:10:09Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5248019923,
+      "lat": -33.4021034,
+      "lon": -70.6112882,
+      "timestamp": "2017-11-26T00:10:09Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5248019924,
+      "lat": -33.400033,
+      "lon": -70.610578,
+      "timestamp": "2017-11-26T00:10:09Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5248019925,
+      "lat": -33.3997827,
+      "lon": -70.6095685,
+      "timestamp": "2017-11-26T00:10:09Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5248019926,
+      "lat": -33.3996149,
+      "lon": -70.6084776,
+      "timestamp": "2021-04-10T05:12:34Z",
+      "version": 2,
+      "tags": {
+        "crossing": "marked",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5248019928,
+      "lat": -33.4065205,
+      "lon": -70.6092491,
+      "timestamp": "2017-11-26T00:10:09Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5248019929,
+      "lat": -33.4061357,
+      "lon": -70.6087864,
+      "timestamp": "2017-11-26T00:10:09Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5248019930,
+      "lat": -33.4052547,
+      "lon": -70.6085419,
+      "timestamp": "2017-11-26T00:10:09Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5248019931,
+      "lat": -33.4050741,
+      "lon": -70.6084151,
+      "timestamp": "2017-11-26T00:10:09Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5248019932,
+      "lat": -33.4044634,
+      "lon": -70.607685,
+      "timestamp": "2017-11-26T00:10:09Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5248019933,
+      "lat": -33.4042892,
+      "lon": -70.6075949,
+      "timestamp": "2017-11-26T00:10:09Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5248019934,
+      "lat": -33.403836,
+      "lon": -70.6077301,
+      "timestamp": "2017-11-26T00:10:09Z",
+      "version": 1
     },
     {
       "type": "node",
@@ -6152,6 +10639,379 @@
     },
     {
       "type": "node",
+      "id": 5269019113,
+      "lat": -33.4155893,
+      "lon": -70.6216423,
+      "timestamp": "2017-12-18T00:24:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5269019114,
+      "lat": -33.415473,
+      "lon": -70.6214162,
+      "timestamp": "2017-12-18T00:24:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5269019116,
+      "lat": -33.4152605,
+      "lon": -70.6209096,
+      "timestamp": "2017-12-18T00:24:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5269019117,
+      "lat": -33.4148292,
+      "lon": -70.6208408,
+      "timestamp": "2021-03-08T01:47:10Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 5269019118,
+      "lat": -33.4145581,
+      "lon": -70.6208181,
+      "timestamp": "2023-07-18T03:48:14Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 5290640512,
+      "lat": -33.4106623,
+      "lon": -70.6228406,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290640513,
+      "lat": -33.411712,
+      "lon": -70.6229432,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290640514,
+      "lat": -33.4117637,
+      "lon": -70.6229072,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290640515,
+      "lat": -33.4117935,
+      "lon": -70.6228139,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5290640516,
+      "lat": -33.4117629,
+      "lon": -70.6227585,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5290640517,
+      "lat": -33.4110235,
+      "lon": -70.6224458,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290640518,
+      "lat": -33.4108658,
+      "lon": -70.6224136,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290640519,
+      "lat": -33.4103463,
+      "lon": -70.6223355,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290640520,
+      "lat": -33.4100141,
+      "lon": -70.6222745,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653521,
+      "lat": -33.4098084,
+      "lon": -70.6221774,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653522,
+      "lat": -33.4096993,
+      "lon": -70.6221039,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653523,
+      "lat": -33.4095874,
+      "lon": -70.6220053,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653524,
+      "lat": -33.4095488,
+      "lon": -70.6219654,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5290653525,
+      "lat": -33.4094405,
+      "lon": -70.6218257,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5290653526,
+      "lat": -33.4091506,
+      "lon": -70.6211364,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653527,
+      "lat": -33.4092041,
+      "lon": -70.6210539,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653528,
+      "lat": -33.4093649,
+      "lon": -70.6210816,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653529,
+      "lat": -33.4096692,
+      "lon": -70.6214097,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653530,
+      "lat": -33.4097552,
+      "lon": -70.6214797,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653531,
+      "lat": -33.4098562,
+      "lon": -70.6215514,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653532,
+      "lat": -33.4100628,
+      "lon": -70.6216581,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653533,
+      "lat": -33.4099871,
+      "lon": -70.6216226,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653534,
+      "lat": -33.4101829,
+      "lon": -70.6217062,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653535,
+      "lat": -33.410416,
+      "lon": -70.6217497,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653536,
+      "lat": -33.4108973,
+      "lon": -70.6217076,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653537,
+      "lat": -33.4112563,
+      "lon": -70.6216221,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653538,
+      "lat": -33.4114702,
+      "lon": -70.6215708,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653539,
+      "lat": -33.4118151,
+      "lon": -70.6215165,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653540,
+      "lat": -33.4137985,
+      "lon": -70.62076,
+      "timestamp": "2021-03-29T05:04:25Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 5290653543,
+      "lat": -33.4134024,
+      "lon": -70.6205371,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 5290653545,
+      "lat": -33.4131546,
+      "lon": -70.6202517,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 5290653546,
+      "lat": -33.4129889,
+      "lon": -70.620044,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5290653549,
+      "lat": -33.4138101,
+      "lon": -70.6211256,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5290653551,
+      "lat": -33.4138692,
+      "lon": -70.6213306,
+      "timestamp": "2017-12-18T00:13:10Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290653558,
+      "lat": -33.4142569,
+      "lon": -70.6211078,
+      "timestamp": "2023-07-18T03:48:14Z",
+      "version": 4
+    },
+    {
+      "type": "node",
+      "id": 5290653562,
+      "lat": -33.4138436,
+      "lon": -70.621374,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5290660845,
+      "lat": -33.4137962,
+      "lon": -70.6207189,
+      "timestamp": "2017-12-18T00:24:16Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290660846,
+      "lat": -33.4137678,
+      "lon": -70.6205418,
+      "timestamp": "2024-08-16T22:59:45Z",
+      "version": 5,
+      "tags": {
+        "crossing": "marked",
+        "crossing:markings": "yes",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5290660847,
+      "lat": -33.4130145,
+      "lon": -70.6200856,
+      "timestamp": "2018-01-19T13:59:57Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5290660848,
+      "lat": -33.4118865,
+      "lon": -70.6176534,
+      "timestamp": "2017-12-18T00:24:16Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290660849,
+      "lat": -33.4127648,
+      "lon": -70.6187225,
+      "timestamp": "2017-12-18T00:24:16Z",
+      "version": 1
+    },
+    {
+      "type": "node",
       "id": 5290660867,
       "lat": -33.4161669,
       "lon": -70.6228794,
@@ -6164,6 +11024,67 @@
       "lat": -33.4161271,
       "lon": -70.6228468,
       "timestamp": "2017-12-18T00:24:16Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290660870,
+      "lat": -33.4157648,
+      "lon": -70.6220184,
+      "timestamp": "2017-12-18T00:24:16Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290660871,
+      "lat": -33.4153956,
+      "lon": -70.6212485,
+      "timestamp": "2017-12-18T00:24:16Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290660874,
+      "lat": -33.4143838,
+      "lon": -70.6209232,
+      "timestamp": "2023-07-18T03:48:14Z",
+      "version": 4,
+      "tags": {
+        "crossing": "marked",
+        "crossing:markings": "yes",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5290660876,
+      "lat": -33.4141465,
+      "lon": -70.6214297,
+      "timestamp": "2021-02-24T16:30:12Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5290660877,
+      "lat": -33.413985,
+      "lon": -70.6214312,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290660878,
+      "lat": -33.4139027,
+      "lon": -70.621377,
+      "timestamp": "2017-12-18T00:24:17Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5290660879,
+      "lat": -33.4138463,
+      "lon": -70.6212848,
+      "timestamp": "2017-12-18T00:24:17Z",
       "version": 1
     },
     {
@@ -6432,6 +11353,556 @@
     },
     {
       "type": "node",
+      "id": 5349176145,
+      "lat": -33.4130327,
+      "lon": -70.6157397,
+      "timestamp": "2018-09-09T15:23:45Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176146,
+      "lat": -33.4134798,
+      "lon": -70.6153556,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 5349176147,
+      "lat": -33.413532,
+      "lon": -70.6152885,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176149,
+      "lat": -33.4132565,
+      "lon": -70.6158397,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176150,
+      "lat": -33.4137402,
+      "lon": -70.6146276,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176151,
+      "lat": -33.4138015,
+      "lon": -70.6146785,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176152,
+      "lat": -33.4136795,
+      "lon": -70.6146443,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176153,
+      "lat": -33.413598,
+      "lon": -70.6151632,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176154,
+      "lat": -33.4132073,
+      "lon": -70.6155593,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 5349176157,
+      "lat": -33.4127485,
+      "lon": -70.6169065,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176158,
+      "lat": -33.412778,
+      "lon": -70.6168195,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176159,
+      "lat": -33.4127302,
+      "lon": -70.6170738,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176160,
+      "lat": -33.4127595,
+      "lon": -70.6172829,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176161,
+      "lat": -33.4127918,
+      "lon": -70.6173405,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176162,
+      "lat": -33.4128951,
+      "lon": -70.6174995,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176163,
+      "lat": -33.4130216,
+      "lon": -70.6176397,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176164,
+      "lat": -33.4129916,
+      "lon": -70.6176088,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176166,
+      "lat": -33.4133161,
+      "lon": -70.6178494,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176167,
+      "lat": -33.4134005,
+      "lon": -70.6179569,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176168,
+      "lat": -33.4134505,
+      "lon": -70.6190118,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176169,
+      "lat": -33.4135323,
+      "lon": -70.6196628,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176170,
+      "lat": -33.4135217,
+      "lon": -70.6193462,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176171,
+      "lat": -33.4137284,
+      "lon": -70.620808,
+      "timestamp": "2021-02-11T16:56:41Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 5349176172,
+      "lat": -33.4136315,
+      "lon": -70.6207673,
+      "timestamp": "2021-02-11T16:56:41Z",
+      "version": 2,
+      "tags": {
+        "crossing": "marked",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5349176179,
+      "lat": -33.4094108,
+      "lon": -70.6211274,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176180,
+      "lat": -33.4093219,
+      "lon": -70.6210557,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176181,
+      "lat": -33.4094961,
+      "lon": -70.6219037,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176182,
+      "lat": -33.411621,
+      "lon": -70.622957,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176183,
+      "lat": -33.4117799,
+      "lon": -70.6228846,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176184,
+      "lat": -33.4117776,
+      "lon": -70.6227796,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176185,
+      "lat": -33.4117329,
+      "lon": -70.622732,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176186,
+      "lat": -33.4115854,
+      "lon": -70.6226521,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176187,
+      "lat": -33.4114518,
+      "lon": -70.6226023,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176188,
+      "lat": -33.4114352,
+      "lon": -70.6229439,
+      "timestamp": "2024-08-16T22:59:45Z",
+      "version": 3,
+      "tags": {
+        "crossing": "marked",
+        "crossing:island": "no",
+        "crossing:markings": "yes",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5349176189,
+      "lat": -33.4098239,
+      "lon": -70.622919,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176190,
+      "lat": -33.4097518,
+      "lon": -70.6229105,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176191,
+      "lat": -33.4096016,
+      "lon": -70.6228738,
+      "timestamp": "2018-01-19T13:59:53Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176192,
+      "lat": -33.408391,
+      "lon": -70.6221432,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176193,
+      "lat": -33.408028,
+      "lon": -70.6218633,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176194,
+      "lat": -33.4079845,
+      "lon": -70.6218166,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176195,
+      "lat": -33.4079028,
+      "lon": -70.6217107,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176196,
+      "lat": -33.4078058,
+      "lon": -70.6215405,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176197,
+      "lat": -33.4077271,
+      "lon": -70.6212068,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176198,
+      "lat": -33.4077248,
+      "lon": -70.621146,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176199,
+      "lat": -33.4077312,
+      "lon": -70.6209071,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176200,
+      "lat": -33.4077196,
+      "lon": -70.6205189,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176201,
+      "lat": -33.4076797,
+      "lon": -70.620301,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176203,
+      "lat": -33.4076913,
+      "lon": -70.6194086,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176204,
+      "lat": -33.4076579,
+      "lon": -70.6196447,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176205,
+      "lat": -33.4077094,
+      "lon": -70.619206,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176207,
+      "lat": -33.4076314,
+      "lon": -70.6187583,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176208,
+      "lat": -33.4072359,
+      "lon": -70.6181294,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176209,
+      "lat": -33.4059835,
+      "lon": -70.6173577,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176210,
+      "lat": -33.4050055,
+      "lon": -70.6177195,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176211,
+      "lat": -33.4050299,
+      "lon": -70.6175389,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176212,
+      "lat": -33.4038951,
+      "lon": -70.6187189,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176213,
+      "lat": -33.4037718,
+      "lon": -70.6184253,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176215,
+      "lat": -33.4037026,
+      "lon": -70.6179659,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176216,
+      "lat": -33.4037322,
+      "lon": -70.6180163,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176217,
+      "lat": -33.4033354,
+      "lon": -70.6177791,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176218,
+      "lat": -33.4028864,
+      "lon": -70.6178008,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176219,
+      "lat": -33.4022767,
+      "lon": -70.6174829,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176220,
+      "lat": -33.4018252,
+      "lon": -70.6174138,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176321,
+      "lat": -33.4016129,
+      "lon": -70.6174349,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5349176322,
+      "lat": -33.4013486,
+      "lon": -70.6175333,
+      "timestamp": "2018-01-19T13:59:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5355615836,
+      "lat": -33.4137059,
+      "lon": -70.6217032,
+      "timestamp": "2018-01-22T23:06:24Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 5357381923,
+      "lat": -33.4138066,
+      "lon": -70.6149193,
+      "timestamp": "2021-01-29T04:05:39Z",
+      "version": 3,
+      "tags": {
+        "crossing": "marked",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
       "id": 5357382010,
       "lat": -33.4295181,
       "lon": -70.6361704,
@@ -6510,6 +11981,62 @@
     },
     {
       "type": "node",
+      "id": 6077939123,
+      "lat": -33.4105924,
+      "lon": -70.612953,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 6077939124,
+      "lat": -33.4112349,
+      "lon": -70.615029,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 6077939125,
+      "lat": -33.4112439,
+      "lon": -70.6153482,
+      "timestamp": "2018-11-21T03:19:36Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 6093635521,
+      "lat": -33.4254313,
+      "lon": -70.6257033,
+      "timestamp": "2018-11-26T20:00:15Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 6093635522,
+      "lat": -33.4258995,
+      "lon": -70.6268117,
+      "timestamp": "2018-11-26T20:00:15Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 6093635523,
+      "lat": -33.4265045,
+      "lon": -70.627611,
+      "timestamp": "2018-11-26T20:00:15Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 6093635524,
+      "lat": -33.4271405,
+      "lon": -70.6285893,
+      "timestamp": "2018-11-26T20:00:15Z",
+      "version": 1
+    },
+    {
+      "type": "node",
       "id": 6361379613,
       "lat": -33.4079335,
       "lon": -70.6075321,
@@ -6542,6 +12069,14 @@
     },
     {
       "type": "node",
+      "id": 6484453779,
+      "lat": -33.3994284,
+      "lon": -70.6085059,
+      "timestamp": "2019-05-19T20:37:39Z",
+      "version": 1
+    },
+    {
+      "type": "node",
       "id": 6484453786,
       "lat": -33.4003579,
       "lon": -70.6096607,
@@ -6555,6 +12090,22 @@
       "lon": -70.6092194,
       "timestamp": "2021-03-24T01:13:33Z",
       "version": 2
+    },
+    {
+      "type": "node",
+      "id": 6484453792,
+      "lat": -33.3997936,
+      "lon": -70.6083887,
+      "timestamp": "2019-05-19T20:37:39Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 6484453795,
+      "lat": -33.399535,
+      "lon": -70.608725,
+      "timestamp": "2019-05-19T20:37:39Z",
+      "version": 1
     },
     {
       "type": "node",
@@ -6686,6 +12237,17 @@
     },
     {
       "type": "node",
+      "id": 6816215823,
+      "lat": -33.4061354,
+      "lon": -70.6119852,
+      "timestamp": "2025-06-18T14:15:01Z",
+      "version": 2,
+      "tags": {
+        "crossing": "informal"
+      }
+    },
+    {
+      "type": "node",
       "id": 6816215859,
       "lat": -33.4053498,
       "lon": -70.6095724,
@@ -6707,6 +12269,66 @@
       "lon": -70.6019812,
       "timestamp": "2024-12-23T17:18:48Z",
       "version": 3
+    },
+    {
+      "type": "node",
+      "id": 6938709788,
+      "lat": -33.4163206,
+      "lon": -70.6192528,
+      "timestamp": "2022-02-27T21:03:23Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 6938709819,
+      "lat": -33.41472,
+      "lon": -70.6186574,
+      "timestamp": "2021-01-29T04:05:39Z",
+      "version": 2,
+      "tags": {
+        "crossing": "marked",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6938709837,
+      "lat": -33.4137535,
+      "lon": -70.6204311,
+      "timestamp": "2022-02-06T14:34:04Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 6938709923,
+      "lat": -33.4256544,
+      "lon": -70.626361,
+      "timestamp": "2021-05-16T05:41:54Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 6946305166,
+      "lat": -33.4301364,
+      "lon": -70.6323383,
+      "timestamp": "2019-11-04T22:03:38Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 6946305167,
+      "lat": -33.4305805,
+      "lon": -70.633731,
+      "timestamp": "2021-03-26T22:36:18Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 7009221363,
+      "lat": -33.41509,
+      "lon": -70.6190592,
+      "timestamp": "2019-11-25T18:43:33Z",
+      "version": 1
     },
     {
       "type": "node",
@@ -6947,6 +12569,22 @@
       "lon": -70.6282336,
       "timestamp": "2019-11-26T19:28:23Z",
       "version": 1
+    },
+    {
+      "type": "node",
+      "id": 7729519085,
+      "lat": -33.4298155,
+      "lon": -70.6316943,
+      "timestamp": "2020-07-22T15:05:11Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 7729519089,
+      "lat": -33.4277062,
+      "lon": -70.6292246,
+      "timestamp": "2020-07-22T15:05:11Z",
+      "version": 2
     },
     {
       "type": "node",
@@ -7815,6 +13453,50 @@
     },
     {
       "type": "node",
+      "id": 8262977620,
+      "lat": -33.4156639,
+      "lon": -70.6217992,
+      "timestamp": "2020-12-27T00:08:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 8373981206,
+      "lat": -33.4142766,
+      "lon": -70.6183939,
+      "timestamp": "2021-02-13T03:35:18Z",
+      "version": 2,
+      "tags": {
+        "crossing": "marked",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8415630492,
+      "lat": -33.4136811,
+      "lon": -70.6208011,
+      "timestamp": "2021-02-11T16:56:41Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 8415630502,
+      "lat": -33.4133394,
+      "lon": -70.6215358,
+      "timestamp": "2021-02-11T16:56:41Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 8419677872,
+      "lat": -33.4095851,
+      "lon": -70.6118631,
+      "timestamp": "2021-02-13T03:35:18Z",
+      "version": 1
+    },
+    {
+      "type": "node",
       "id": 8419677912,
       "lat": -33.4033682,
       "lon": -70.6081292,
@@ -8532,6 +14214,62 @@
       "lon": -70.6109446,
       "timestamp": "2021-02-14T00:50:27Z",
       "version": 1
+    },
+    {
+      "type": "node",
+      "id": 8439408939,
+      "lat": -33.4153043,
+      "lon": -70.6179772,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 8439408944,
+      "lat": -33.4153956,
+      "lon": -70.6174476,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 3
+    },
+    {
+      "type": "node",
+      "id": 8441915694,
+      "lat": -33.4298716,
+      "lon": -70.6356902,
+      "timestamp": "2021-02-21T02:01:56Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 8450343719,
+      "lat": -33.4079465,
+      "lon": -70.6116119,
+      "timestamp": "2026-06-05T04:26:12Z",
+      "version": 2,
+      "tags": {
+        "crossing": "marked",
+        "crossing:markings": "yes",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8534893441,
+      "lat": -33.3999334,
+      "lon": -70.6201841,
+      "timestamp": "2026-03-24T17:08:44Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 8534893448,
+      "lat": -33.3998527,
+      "lon": -70.6199144,
+      "timestamp": "2026-03-24T17:08:44Z",
+      "version": 2,
+      "tags": {
+        "highway": "turning_loop"
+      }
     },
     {
       "type": "node",
@@ -9695,6 +15433,20 @@
     },
     {
       "type": "node",
+      "id": 8565924200,
+      "lat": -33.429481,
+      "lon": -70.6361108,
+      "timestamp": "2025-04-15T14:42:08Z",
+      "version": 3,
+      "tags": {
+        "crossing": "marked",
+        "crossing:island": "no",
+        "highway": "crossing",
+        "kerb": "flush"
+      }
+    },
+    {
+      "type": "node",
       "id": 8566030119,
       "lat": -33.4302135,
       "lon": -70.6360869,
@@ -9745,6 +15497,18 @@
       "lon": -70.6323856,
       "timestamp": "2021-03-28T03:10:19Z",
       "version": 1
+    },
+    {
+      "type": "node",
+      "id": 8568369711,
+      "lat": -33.3998713,
+      "lon": -70.6200562,
+      "timestamp": "2026-03-24T17:08:44Z",
+      "version": 3,
+      "tags": {
+        "access": "permissive",
+        "barrier": "lift_gate"
+      }
     },
     {
       "type": "node",
@@ -9807,6 +15571,14 @@
       "id": 8613998974,
       "lat": -33.4018422,
       "lon": -70.6092159,
+      "timestamp": "2021-04-10T05:12:34Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 8613998984,
+      "lat": -33.4016661,
+      "lon": -70.6082292,
       "timestamp": "2021-04-10T05:12:34Z",
       "version": 1
     },
@@ -10036,6 +15808,20 @@
     },
     {
       "type": "node",
+      "id": 8735367666,
+      "lat": -33.416142,
+      "lon": -70.6227559,
+      "timestamp": "2021-05-16T03:33:54Z",
+      "version": 1,
+      "tags": {
+        "crossing": "marked",
+        "crossing:island": "no",
+        "highway": "crossing",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
       "id": 8735501266,
       "lat": -33.4228018,
       "lon": -70.6273712,
@@ -10048,6 +15834,22 @@
       "lat": -33.4227783,
       "lon": -70.6274431,
       "timestamp": "2021-05-16T05:41:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 8735502012,
+      "lat": -33.4255178,
+      "lon": -70.6259986,
+      "timestamp": "2021-05-16T05:41:54Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 9483551206,
+      "lat": -33.4134116,
+      "lon": -70.6183069,
+      "timestamp": "2022-02-06T14:34:04Z",
       "version": 1
     },
     {
@@ -10096,6 +15898,22 @@
       "lat": -33.4182858,
       "lon": -70.6286722,
       "timestamp": "2024-05-19T16:46:13Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 11980973032,
+      "lat": -33.399879,
+      "lon": -70.6200881,
+      "timestamp": "2026-03-24T17:08:44Z",
+      "version": 2
+    },
+    {
+      "type": "node",
+      "id": 11980973033,
+      "lat": -33.3998643,
+      "lon": -70.6200271,
+      "timestamp": "2026-03-24T17:08:44Z",
       "version": 2
     },
     {
@@ -10188,11 +16006,330 @@
     },
     {
       "type": "node",
+      "id": 12434388242,
+      "lat": -33.4151581,
+      "lon": -70.6177025,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 12434388243,
+      "lat": -33.4151536,
+      "lon": -70.617606,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 12434388244,
+      "lat": -33.41519,
+      "lon": -70.6175436,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 12434388245,
+      "lat": -33.4152739,
+      "lon": -70.6174651,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 1,
+      "tags": {
+        "access": "permissive",
+        "barrier": "lift_gate"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12434388246,
+      "lat": -33.4152668,
+      "lon": -70.6175457,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 12434388247,
+      "lat": -33.4153486,
+      "lon": -70.6174351,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 12434388248,
+      "lat": -33.4152473,
+      "lon": -70.6174758,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 12434388249,
+      "lat": -33.4153708,
+      "lon": -70.617504,
+      "timestamp": "2024-12-19T21:28:02Z",
+      "version": 1
+    },
+    {
+      "type": "node",
       "id": 13129739167,
       "lat": -33.4162783,
       "lon": -70.6229439,
       "timestamp": "2025-09-08T22:32:39Z",
       "version": 1
+    },
+    {
+      "type": "node",
+      "id": 13722450506,
+      "lat": -33.4306945,
+      "lon": -70.6340519,
+      "timestamp": "2026-04-11T04:13:25Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 13722450522,
+      "lat": -33.4306112,
+      "lon": -70.6338173,
+      "timestamp": "2026-04-11T04:13:25Z",
+      "version": 1
+    },
+    {
+      "type": "node",
+      "id": 13911111414,
+      "lat": -33.4080859,
+      "lon": -70.6116802,
+      "timestamp": "2026-06-05T04:26:12Z",
+      "version": 1
+    },
+    {
+      "type": "way",
+      "id": 40140801,
+      "timestamp": "2024-11-04T21:31:49Z",
+      "version": 20,
+      "nodes": [
+        483171324,
+        483171334,
+        3999501463,
+        483171342,
+        4401824599,
+        483171348,
+        483171357,
+        6077939125,
+        483171365,
+        6077939124,
+        483171372,
+        483171393,
+        483171398,
+        4401824598,
+        483171404,
+        483171408,
+        6077939123,
+        483171418,
+        5180937684,
+        483171430,
+        5180937685,
+        483171440,
+        5180937686,
+        2832925171
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "40",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Carlos Martner",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 40140804,
+      "timestamp": "2024-08-20T19:14:22Z",
+      "version": 31,
+      "nodes": [
+        483172194,
+        6484453779,
+        4004794594,
+        5247970255,
+        6484453795,
+        3999499756,
+        483172135,
+        483172127,
+        5248019925,
+        483172113,
+        483172100,
+        483172090,
+        5180939439,
+        3999501457,
+        483172081,
+        2956531625,
+        483172075,
+        5248019924,
+        3999501458,
+        483172070,
+        483172049,
+        483172041,
+        5180939437,
+        5180939438,
+        483172031,
+        483172023,
+        2956531626,
+        483172019,
+        5180939436,
+        483172013,
+        5248019923,
+        5180939435,
+        2956531627,
+        483172007,
+        483171995,
+        5248019921,
+        5248019922,
+        483171989,
+        5180939433,
+        5180939431,
+        5180939434,
+        483171968,
+        5180939432,
+        483171964,
+        5180939430,
+        483171958,
+        483171954,
+        4401828252,
+        5180939424,
+        483171948,
+        5180939425,
+        4386585440,
+        483171942,
+        5180939426,
+        5180939428,
+        483171935,
+        5180939427,
+        4401828253,
+        483171932,
+        5180939423,
+        3999501459,
+        5180939429,
+        483171927,
+        5180939422,
+        483171921,
+        5180939421,
+        483171907,
+        5180937719,
+        5180937720,
+        483171899,
+        2652514059,
+        2652514126,
+        2652514030,
+        6816215823,
+        2652514129,
+        2652514115,
+        2652514146,
+        2652514099,
+        2652513995,
+        2652514020,
+        2652514008,
+        4395598405,
+        2652514143,
+        2652514089,
+        5248002520,
+        2652514091,
+        5180937698,
+        2652514100
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "unclassified",
+        "lanes": "2",
+        "maxspeed": "40",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Federico Albert",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 41160817,
+      "timestamp": "2024-08-20T19:14:22Z",
+      "version": 30,
+      "nodes": [
+        2652514037,
+        5247968785,
+        2652514026,
+        2652514114,
+        2652514087,
+        2652514077,
+        2652514044,
+        5180939920,
+        2652514116,
+        2652514128,
+        5248019928,
+        5180939919,
+        2652514118,
+        5248019929,
+        2652514047,
+        2652514061,
+        2652514057,
+        2652514066,
+        2652514127,
+        5248019930,
+        483171665,
+        5248019931,
+        483171676,
+        483171682,
+        483171700,
+        5248019932,
+        502616768,
+        5248019933,
+        4401828251,
+        502616772,
+        5180939440,
+        502616776,
+        5248019934,
+        502616780,
+        2832925130,
+        502616791,
+        502616793,
+        5248002508,
+        2956544636,
+        502616798,
+        502616804,
+        502616808,
+        502616812,
+        502616816,
+        1349998856,
+        1349998857,
+        8613998984,
+        1349998855,
+        4401828250,
+        1349998853,
+        4401828249,
+        1349998852,
+        4710943523,
+        4728204800,
+        6484453792,
+        1349998851,
+        5248019926,
+        4401828248,
+        483172194
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "unclassified",
+        "lanes": "2",
+        "maxspeed": "40",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Claudio Gay",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
     },
     {
       "type": "way",
@@ -10435,6 +16572,319 @@
     },
     {
       "type": "way",
+      "id": 48549531,
+      "timestamp": "2026-04-11T04:13:25Z",
+      "version": 27,
+      "nodes": [
+        405912200,
+        6093635521,
+        224430791,
+        8735502012,
+        224430809,
+        5180914587,
+        6938709923,
+        224430822,
+        2589703338,
+        6093635522,
+        224430848,
+        224430868,
+        6093635523,
+        224430888,
+        4402908290,
+        224430902,
+        6093635524,
+        4402908291,
+        224430920,
+        5180914586,
+        7729519089,
+        5180914585,
+        224430929,
+        5180914583,
+        5180914584,
+        224430950,
+        224430963,
+        4402908295,
+        4402908296,
+        4402908297,
+        5180914582,
+        224430985,
+        5180914581,
+        5180914580,
+        7729519085,
+        224431003,
+        5180914579,
+        6946305166,
+        224431023,
+        4402908306,
+        224431036,
+        4402908307,
+        224431048,
+        6946305167,
+        13722450522,
+        13722450506,
+        835432125
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "2.4",
+        "maxspeed": "30",
+        "motor_vehicle": "permit",
+        "name": "Avenida Carlos Reed",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 69889085,
+      "timestamp": "2024-08-14T05:46:35Z",
+      "version": 27,
+      "nodes": [
+        2953717033,
+        2956544916,
+        265686600,
+        265686601,
+        5290660870,
+        5180937676,
+        8262977620,
+        5269019113,
+        5269019114,
+        5180937677,
+        5290660871,
+        2953733678,
+        265686647,
+        2953733677,
+        5269019116,
+        265686648,
+        5269019117,
+        265686649,
+        2953733676,
+        5269019118,
+        5290660874,
+        3996623212,
+        5290653558,
+        3996623211,
+        4760402163,
+        5290660876,
+        3996623215,
+        4760402164,
+        5290660877,
+        3996623216,
+        5290660878,
+        5290653551
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Carlos Martner",
+        "source:name": "image - sign near Jardin Mapulemu",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 120389660,
+      "timestamp": "2024-08-16T22:59:45Z",
+      "version": 22,
+      "nodes": [
+        4386585472,
+        1350005231,
+        4401824590,
+        1350005229,
+        5349176209,
+        1350005239,
+        1350005272,
+        5349176208,
+        4401824592,
+        1350005241,
+        4401824595,
+        5349176207,
+        1350005242,
+        4401824597,
+        5349176205,
+        1350005238,
+        5349176203,
+        5349176204,
+        1350005244,
+        4401824596,
+        5349176201,
+        5349176200,
+        1350005243,
+        5349176199,
+        5349176198,
+        5349176197,
+        1350005210,
+        5349176196,
+        1350005271,
+        5349176195,
+        5349176194,
+        5349176193,
+        1350005270,
+        5349176192,
+        1350005273,
+        5349176191,
+        3999501469,
+        5349176190,
+        5349176189,
+        3999501468,
+        1350005275,
+        1350005269,
+        5290640512,
+        1350005279,
+        5349176188,
+        1350005284,
+        5349176182,
+        3999501467,
+        5290640513,
+        5290640514,
+        5349176183,
+        1350005225,
+        5290640515,
+        5349176184,
+        5290640516,
+        5349176185,
+        1350005240,
+        5349176186,
+        5349176187,
+        1350005286,
+        5290640517,
+        5290640518,
+        1350005223,
+        5290640519,
+        1350005290,
+        5290640520,
+        1350005274,
+        5290653521,
+        5290653522,
+        1350005234,
+        5290653523,
+        5290653524,
+        5349176181,
+        5290653525,
+        1350005280,
+        1350005248,
+        5078900853,
+        5290653526,
+        1350005276,
+        5290653527,
+        5078900854,
+        1350005267,
+        5349176180,
+        5290653528,
+        5349176179,
+        5078900855,
+        1350005264,
+        5290653529,
+        5290653530,
+        5290653531,
+        1350005222,
+        5290653533,
+        5290653532,
+        5290653534,
+        1350005277,
+        5290653535,
+        3999501466,
+        5290653536,
+        1350005218,
+        5290653537,
+        5290653538,
+        1350005268,
+        5290653539,
+        1350005235,
+        4738245040,
+        1350005278,
+        4760402166,
+        1350005283,
+        8415630502,
+        4760402168,
+        5355615836,
+        1350005245,
+        4760402165,
+        4760402167,
+        4760402169
+      ],
+      "tags": {
+        "access": "yes",
+        "bicycle": "yes",
+        "cycleway": "lane",
+        "foot": "yes",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "40",
+        "motor_vehicle": "permit",
+        "name": "Avenida La Montaña",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 158170398,
+      "timestamp": "2025-07-16T03:48:40Z",
+      "version": 20,
+      "nodes": [
+        2953717039,
+        8735367666,
+        3995884241,
+        1704038891,
+        1704038896,
+        1704038898,
+        2956545064,
+        2956545065,
+        2956545066,
+        1704038901,
+        2956545057,
+        3995884240,
+        1704038897,
+        3995884239,
+        2953717037,
+        1704038895,
+        2956545047,
+        2956545042,
+        1704038892,
+        2953717036,
+        4403050060,
+        2956544931,
+        4403050059,
+        2956544918,
+        1704038887,
+        2953717035,
+        4403050058,
+        1704038888,
+        1704038886,
+        4786657352,
+        5180937672,
+        1704038885,
+        1704038884,
+        7009221363,
+        4362150716,
+        1704038879,
+        6938709819,
+        8373981206,
+        4732681452,
+        1704038871,
+        2956544870,
+        265686725
+      ],
+      "tags": {
+        "bicycle": "no",
+        "foot": "yes",
+        "highway": "pedestrian",
+        "horse": "no",
+        "lit": "yes",
+        "motor_vehicle": "no",
+        "name": "Avenida Gabriela Mistral",
+        "surface": "asphalt",
+        "width": "7"
+      }
+    },
+    {
+      "type": "way",
       "id": 169885900,
       "timestamp": "2024-08-16T03:00:16Z",
       "version": 11,
@@ -10457,6 +16907,261 @@
         "name": "Avenida Pedro Bannen",
         "oneway": "yes",
         "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 292124343,
+      "timestamp": "2024-08-16T22:59:45Z",
+      "version": 19,
+      "nodes": [
+        5349176151,
+        265686709,
+        4400246081,
+        5357381923,
+        265686710,
+        4400246080,
+        265686711,
+        2953733663,
+        265686712,
+        265686713,
+        5349176149,
+        265686714,
+        265686715,
+        265686716,
+        265686717,
+        265686718,
+        265686719,
+        265686720,
+        265686721,
+        265686722,
+        265686723,
+        265686724,
+        4400246082,
+        265686725,
+        4728119044,
+        265686726,
+        265686727,
+        265686728,
+        265686729,
+        265686730,
+        265686731,
+        265686732,
+        265686735,
+        265686736,
+        4400251505,
+        2956545038,
+        4400251507,
+        6938709788
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Abate Molina",
+        "source:name": "image - sign near Jardin Mapulemu",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 363378017,
+      "timestamp": "2025-01-16T00:00:45Z",
+      "version": 8,
+      "nodes": [
+        8439408944,
+        12434388247,
+        12434388245,
+        12434388248,
+        265686747
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Abate Molina",
+        "oneway": "yes",
+        "source:name": "image - sign near Jardin Mapulemu",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 441864821,
+      "timestamp": "2025-12-30T22:02:16Z",
+      "version": 14,
+      "nodes": [
+        483172194,
+        4738146706,
+        483172206,
+        4787094821,
+        483172221,
+        483172232,
+        483172244,
+        4787117052,
+        4787117051,
+        502616381,
+        502616386,
+        4787117050,
+        502616396,
+        4787117049,
+        4787117048,
+        3995918361,
+        502616402,
+        4787117047,
+        4787117046,
+        502616408,
+        4787117045,
+        3995918362,
+        4740428727,
+        502616413,
+        4787117044,
+        4787117043,
+        502616418,
+        4728218661,
+        502616424,
+        3995918363,
+        502616429,
+        3995918364,
+        502616432,
+        502616433,
+        502616434,
+        502616449,
+        502616455,
+        4787199479,
+        4787199478,
+        4787199477,
+        4787199476,
+        502616460,
+        502616465,
+        502616471,
+        502616477,
+        4787199475,
+        502616480,
+        502616484,
+        502616487,
+        502616491,
+        502616509,
+        502616514,
+        502616518,
+        502616525,
+        502616530,
+        502616535,
+        502616540,
+        4787199474,
+        4787199473,
+        4787199472,
+        1349594404,
+        502616545,
+        502616552,
+        502616557,
+        1349594406,
+        502616569,
+        4787199471,
+        4787199470,
+        502616576,
+        502616583,
+        1933610289,
+        502616590,
+        612440489
+      ],
+      "tags": {
+        "access": "yes",
+        "cycleway": "lane",
+        "highway": "unclassified",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "40",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Manuel Zañartu",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 442592613,
+      "timestamp": "2026-06-05T04:26:12Z",
+      "version": 11,
+      "nodes": [
+        2832925171,
+        8419677872,
+        483171454,
+        483171468,
+        5180937687,
+        483171502,
+        2652514035,
+        2652513969,
+        2652514117,
+        13911111414,
+        2652514136,
+        3999501462,
+        8450343719,
+        2652514086,
+        3999501461,
+        2652514070,
+        5180937696,
+        2652514098,
+        5180937697,
+        2652513993
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "40",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Carlos Martner",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 442592614,
+      "timestamp": "2024-11-04T21:31:49Z",
+      "version": 13,
+      "nodes": [
+        5290653540,
+        5349176171,
+        8415630492,
+        5349176172,
+        5290653543,
+        5290653545,
+        5290660847,
+        5290653546,
+        5180937682,
+        483171258,
+        5180937681,
+        483171262,
+        483171271,
+        4401824602,
+        5290660849,
+        4401824601,
+        483171276,
+        5180937683,
+        483171293,
+        483171300,
+        4401824600,
+        5290660848,
+        483171324
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "40",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Carlos Martner",
+        "surface": "asphalt"
       }
     },
     {
@@ -10487,6 +17192,25 @@
         "name": "Avenida Alberto Mackenna",
         "oneway": "no",
         "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 442633595,
+      "timestamp": "2024-08-14T05:46:35Z",
+      "version": 8,
+      "nodes": [
+        5290653551,
+        5290660879,
+        4760402170,
+        5290653549
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Carlos Martner"
       }
     },
     {
@@ -11014,6 +17738,55 @@
     },
     {
       "type": "way",
+      "id": 480868075,
+      "timestamp": "2025-07-16T03:48:40Z",
+      "version": 5,
+      "nodes": [
+        4732681472,
+        2956544891,
+        2956544896,
+        5180937674,
+        5180937675,
+        2956544898,
+        2956544902,
+        2956544907,
+        2956544915,
+        2953717035
+      ],
+      "tags": {
+        "bicycle": "no",
+        "foot": "yes",
+        "highway": "pedestrian",
+        "horse": "no",
+        "lit": "yes",
+        "motor_vehicle": "no",
+        "name": "Avenida Gabriela Mistral",
+        "surface": "asphalt",
+        "width": "7"
+      }
+    },
+    {
+      "type": "way",
+      "id": 480868638,
+      "timestamp": "2024-08-14T05:46:35Z",
+      "version": 8,
+      "nodes": [
+        5290653549,
+        5290653540
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Abate Molina",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
       "id": 482748524,
       "timestamp": "2024-08-14T05:46:35Z",
       "version": 5,
@@ -11143,6 +17916,101 @@
         "oneway": "yes",
         "smoothness": "bad",
         "surface": "ground"
+      }
+    },
+    {
+      "type": "way",
+      "id": 520212770,
+      "timestamp": "2024-08-16T22:59:45Z",
+      "version": 8,
+      "nodes": [
+        11980973033,
+        1350005226,
+        8534893448,
+        1692712633,
+        2597211132,
+        5070853362,
+        1350005236,
+        1350005288,
+        1350005214,
+        4401823775,
+        1350005228,
+        4401823776,
+        1350005285,
+        5349176322,
+        4401823777,
+        5349176321,
+        1350005287,
+        5349176220,
+        4401823778,
+        1350005260,
+        5349176219,
+        4401823779,
+        1350005221,
+        4401823780,
+        1350005217,
+        5349176218,
+        4401823781,
+        1350005254,
+        5349176217,
+        1350005249,
+        4401823782,
+        1350005237,
+        5349176215,
+        5349176216,
+        4401823783,
+        3996623214,
+        5349176213,
+        3996623210,
+        4401823784,
+        5349176212,
+        1350005250,
+        1350005220,
+        4401823785,
+        4401823786,
+        1350005219,
+        4401823788,
+        1350005213,
+        1350005253,
+        1350005292,
+        5349176210,
+        4401823787,
+        5349176211,
+        1350005247,
+        4401824589,
+        4386585472
+      ],
+      "tags": {
+        "access": "yes",
+        "bicycle": "yes",
+        "cycleway": "lane",
+        "foot": "yes",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "40",
+        "motor_vehicle": "permit",
+        "name": "Avenida La Montaña",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 542847079,
+      "timestamp": "2024-08-20T19:14:22Z",
+      "version": 5,
+      "nodes": [
+        5248019926,
+        5247970255
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "unclassified",
+        "lanes": "1",
+        "maxspeed": "20",
+        "motor_vehicle": "permit",
+        "name": "Avenida Claudio Gay",
+        "oneway": "yes",
+        "surface": "asphalt"
       }
     },
     {
@@ -11456,6 +18324,44 @@
     },
     {
       "type": "way",
+      "id": 741162913,
+      "timestamp": "2025-01-16T00:00:45Z",
+      "version": 8,
+      "nodes": [
+        6938709788,
+        4400251506,
+        2594837142,
+        265686739,
+        265686740,
+        4400251501,
+        265686741,
+        265686742,
+        8439408939,
+        265686743,
+        4400251497,
+        265686744,
+        12434388242,
+        265686746,
+        12434388243,
+        4400251496,
+        12434388244,
+        265686747
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Abate Molina",
+        "source:name": "image - sign near Jardin Mapulemu",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
       "id": 749895576,
       "timestamp": "2026-03-05T21:28:16Z",
       "version": 6,
@@ -11721,6 +18627,53 @@
     },
     {
       "type": "way",
+      "id": 909201230,
+      "timestamp": "2024-08-21T23:01:19Z",
+      "version": 5,
+      "nodes": [
+        567033437,
+        4402908300,
+        4402908299,
+        8565924200,
+        4402908298
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "2.4",
+        "maxspeed": "30",
+        "motor_vehicle": "permit",
+        "name": "Avenida Carlos Reed",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 909201231,
+      "timestamp": "2024-08-21T23:01:19Z",
+      "version": 4,
+      "nodes": [
+        8441915694,
+        567033437
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "layer": "-1",
+        "lit": "yes",
+        "maxheight": "2.4",
+        "maxspeed": "30",
+        "motor_vehicle": "permit",
+        "name": "Avenida Carlos Reed",
+        "surface": "asphalt",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "type": "way",
       "id": 919288128,
       "timestamp": "2025-12-30T22:02:16Z",
       "version": 7,
@@ -11759,6 +18712,57 @@
         "name": "Avenida Alberto Mackenna",
         "oneway": "yes",
         "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 922756671,
+      "timestamp": "2024-08-21T23:01:19Z",
+      "version": 4,
+      "nodes": [
+        3995890163,
+        225111286,
+        4402908312,
+        3995890162,
+        567033435,
+        4402908305,
+        5180914578,
+        835432055,
+        567033436,
+        8441915694
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "2.4",
+        "maxspeed": "30",
+        "motor_vehicle": "permit",
+        "name": "Avenida Carlos Reed",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 922756672,
+      "timestamp": "2026-04-11T04:13:25Z",
+      "version": 5,
+      "nodes": [
+        835432125,
+        4402908314,
+        3995890163
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "2.4",
+        "maxspeed": "30",
+        "motor_vehicle": "permit",
+        "name": "Avenida Carlos Reed",
+        "surface": "asphalt"
       }
     },
     {
@@ -12014,6 +19018,68 @@
     },
     {
       "type": "way",
+      "id": 1223734901,
+      "timestamp": "2024-08-14T05:46:35Z",
+      "version": 2,
+      "nodes": [
+        4760402169,
+        5290653562,
+        4760402170
+      ],
+      "tags": {
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "motor_vehicle": "permit",
+        "name": "Avenida La Montaña",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1292391201,
+      "timestamp": "2026-03-24T17:08:44Z",
+      "version": 3,
+      "nodes": [
+        5070853378,
+        8534893441,
+        11980973032
+      ],
+      "tags": {
+        "access": "yes",
+        "bicycle": "yes",
+        "cycleway": "lane",
+        "foot": "yes",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Avenida La Montaña",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1292391202,
+      "timestamp": "2024-08-16T22:59:45Z",
+      "version": 2,
+      "nodes": [
+        11980973032,
+        8568369711,
+        11980973033
+      ],
+      "tags": {
+        "access": "yes",
+        "bicycle": "yes",
+        "covered": "yes",
+        "cycleway": "lane",
+        "foot": "yes",
+        "highway": "residential",
+        "lanes": "2",
+        "name": "Avenida La Montaña",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
       "id": 1307648383,
       "timestamp": "2024-08-21T23:01:19Z",
       "version": 2,
@@ -12094,6 +19160,103 @@
         "oneway": "yes",
         "smoothness": "bad",
         "surface": "ground"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1308348020,
+      "timestamp": "2024-08-16T22:59:45Z",
+      "version": 1,
+      "nodes": [
+        5290653540,
+        5290660845,
+        5290660846,
+        6938709837,
+        2956544864,
+        4362162272,
+        5349176169,
+        265686660,
+        5349176170,
+        4400246076,
+        265686661,
+        5349176168,
+        265686662,
+        265686663,
+        9483551206,
+        265686664,
+        2953733684,
+        5349176167,
+        265686665,
+        5349176166,
+        265686666,
+        265686667,
+        5349176163,
+        5349176164,
+        265686699,
+        5349176162,
+        2953733683,
+        5349176161,
+        5349176160,
+        265686700,
+        5349176159,
+        265686701,
+        5349176157,
+        5349176158,
+        2953733680,
+        2953733681,
+        2953733682,
+        265686702,
+        265686703,
+        2953733679,
+        5349176145,
+        2341975054
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "30",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Abate Molina",
+        "source:name": "image - sign near Jardin Mapulemu",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1308348021,
+      "timestamp": "2024-08-16T22:59:45Z",
+      "version": 1,
+      "nodes": [
+        2341975054,
+        5349176154,
+        265686705,
+        5349176146,
+        5349176147,
+        265686706,
+        5349176153,
+        2953733659,
+        265686707,
+        4740422650,
+        265686708,
+        2953733661,
+        5349176152,
+        2953733662,
+        5349176150,
+        2953733658,
+        5349176151
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "20",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Abate Molina",
+        "source:name": "image - sign near Jardin Mapulemu",
+        "surface": "asphalt"
       }
     },
     {
@@ -12179,6 +19342,78 @@
         "source": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
         "surface": "dirt"
       }
+    },
+    {
+      "type": "way",
+      "id": 1343882813,
+      "timestamp": "2025-01-16T00:00:45Z",
+      "version": 2,
+      "nodes": [
+        8439408944,
+        13885139
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Abate Molina",
+        "source:name": "image - sign near Jardin Mapulemu",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1343882814,
+      "timestamp": "2025-01-16T00:00:45Z",
+      "version": 2,
+      "nodes": [
+        265686747,
+        12434388246,
+        2545317622,
+        12434388249,
+        8439408944
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "motor_vehicle": "permit",
+        "motor_vehicle:conditional": "no @ (Su 09:00-14:00)",
+        "name": "Avenida Abate Molina",
+        "oneway": "yes",
+        "source:name": "image - sign near Jardin Mapulemu",
+        "surface": "asphalt"
+      }
     }
-  ]
+  ],
+  "selectionCounts": {
+    "cyclingTrails": 8,
+    "secondaryAvenues": 9,
+    "assignedWays": 59,
+    "contextWays": 3,
+    "bikeMatchingWays": 56,
+    "totalWays": 62,
+    "nodes": 1980
+  },
+  "contextWays": [
+    {
+      "id": 158170398,
+      "reason": "Avenida Gabriela Mistral; bicycle=no."
+    },
+    {
+      "id": 480868075,
+      "reason": "Avenida Gabriela Mistral; bicycle=no."
+    },
+    {
+      "id": 1223734901,
+      "reason": "Avenida La Montaña; no bicycle or cycleway tag; cycling compatibility unverified, no implied continuity."
+    }
+  ],
+  "originalSelectedGeometrySha256": "5719f4586795a98115fce889bbbf2f19b1bd59838813b70992b73bb80bc2d43b"
 }
