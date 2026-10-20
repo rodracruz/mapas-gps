@@ -24,6 +24,32 @@
 
 .generic-park .fullscreen:has(.route-sheet:not([hidden])) .gps-panel[data-mode=off]{display:none}
 
-/* Cycling routes lead the geographic view; avenues remain secondary context. */
+/* Native path labels and explicitly selected avenue labels. */
 .cycling-label{width:auto!important;height:auto!important;white-space:nowrap}.cycling-label-button{font-size:10px;font-weight:750;color:#96362d;background:#fffefaf5;border:1px solid #c48276;border-radius:12px;padding:4px 7px;min-height:29px;box-shadow:0 1px 5px #203e3522;transform:translate(-50%,-110%)}.map-card:not(.fullscreen) .cycling-label{display:none}.sheet-actions{flex-wrap:wrap;justify-content:flex-start}.sheet-actions>*{min-height:44px}.document-modes{display:flex;gap:5px;align-items:center;padding:5px 12px;overflow:auto;flex-shrink:0}.document-modes button,#document-cycling-trails button{font-size:11px;white-space:nowrap;min-height:44px;padding:7px 10px;border:1px solid #cdd8c5;border-radius:7px;background:#fffefa}.document-modes button[aria-pressed=true],#document-cycling-trails button[aria-pressed=true]{color:#fffefa;background:#203e35}.document-modes label{display:flex;align-items:center;gap:4px;font-size:11px}.document-modes input{width:65px;accent-color:#315f50}#document-cycling-trails{display:flex;gap:5px;padding:5px 12px;overflow:auto;flex-shrink:0}#document-cycling-selection{font-size:11px;line-height:1.5;margin:0;padding:6px 14px;flex-shrink:0;background:#fffefa}#document-cycling{cursor:pointer}.document-cycling-trail path{pointer-events:visiblePainted}.document-cycling-trail.selected path{filter:drop-shadow(0 0 1px white)}
 .shared-trail-card h3{font-size:23px;line-height:1.12}.shared-label{width:auto!important;height:auto!important;white-space:nowrap}.shared-label .cycling-label-button{color:#00695f;border-color:#6ca89d;font-size:9px;max-width:140px;overflow:hidden;text-overflow:ellipsis}.map-card:not(.fullscreen) .shared-label{display:none}
+
+/* Parquemet category controls share a single selection between cards and map. */
+.route-categories{display:flex;gap:6px;overflow:auto;padding:0 0 14px;scrollbar-width:none}
+.route-categories button{flex-shrink:0;min-height:44px;border:1px solid #ced8ca;border-radius:23px;background:#fffefa;padding:8px 12px;font-size:11px}
+.route-categories button[aria-pressed=true]{background:#203e35;color:#fffefa;border-color:#203e35}
+.generic-park .section-heading{flex-wrap:wrap;gap:4px}
+.generic-park .section-heading>span{white-space:normal}
+.map-categories{position:absolute;left:12px;right:12px;top:calc(120px + env(safe-area-inset-top));padding:0;z-index:1150}
+.map-card:not(.fullscreen) .map-categories{display:none}
+.generic-park .fullscreen .map-trails{top:calc(171px + env(safe-area-inset-top))}
+.generic-park .fullscreen .map-options,.generic-park .fullscreen .leaflet-top{top:calc(225px + env(safe-area-inset-top))}
+.avenue-label{width:auto!important;height:auto!important;white-space:nowrap}
+.avenue-label .cycling-label-button{font-size:9px;color:#24577a;border-color:#7096ae;max-width:150px;overflow:hidden;text-overflow:ellipsis}
+.map-card:not(.fullscreen) .avenue-label{display:none}
+.avenue-card h3{font-size:23px;overflow-wrap:break-word}
+.avenue-card.has-trail-miniature h3,.avenue-card .has-trail-miniature h3{font-size:21px}
+@media(max-width:360px){.avenue-card .has-trail-miniature h3{font-size:20px}.route-categories button{padding:8px 10px;font-size:10px}}
+
+@media(orientation:landscape) and (max-height:500px){
+ .generic-park .fullscreen .map-source-switch{top:76px;left:auto;right:12px;width:130px}
+ .generic-park .fullscreen #map-source-status{display:none}
+ .generic-park .fullscreen .map-categories{top:76px;right:155px}
+ .generic-park .fullscreen .gps-panel[data-mode=off] #gps-status,.generic-park .fullscreen .gps-panel[data-mode=off] #gps-detail,.generic-park .fullscreen .gps-panel[data-mode=off] #gps-accuracy{display:none}
+ .generic-park .fullscreen .map-trails{top:126px}
+ .generic-park .fullscreen .map-options,.generic-park .fullscreen .leaflet-top{top:184px}
+}

@@ -7,9 +7,9 @@ test('Parquemet GPS excludes restricted cycling trails and unverified or bicycle
  const catalog=JSON.parse(await readFile('data/parquemet/geographic-catalog.json'));
  const geo=fromOsmSnapshot(JSON.parse(await readFile(catalog.sourceSnapshot)),catalog);
  const copy=structuredClone(geo),matched=bikeMatchingNetwork(geo);
- assert.equal(geo.features.length,106);
- assert.equal(geo.features.filter(f=>f.properties.targetId).length,90);
- assert.equal(matched.features.length,84);
+ assert.equal(geo.features.length,116);
+ assert.equal(geo.features.filter(f=>f.properties.targetId).length,103);
+ assert.equal(matched.features.length,91);
  for(const id of [479769658,691091446,862880882,158170398,480868075,1223734901,1308348019,1308348023,256510467])assert.equal(matched.features.some(f=>f.properties.osmId===id),false);
  for(const [osmId,targetId] of [[691091446,'pa-arriba'],[862880882,'zorzal']])assert.equal(geo.features.find(f=>f.properties.osmId===osmId).properties.targetId,targetId);
  assert.deepEqual(geo,copy);

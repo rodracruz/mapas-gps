@@ -1,0 +1,24 @@
+{
+  "checks": [
+    "owner-private access preserved",
+    "published bytes match tested artifact",
+    "live park selection, cards and geographic data",
+    "high-resolution main map2570x3077 and intact960x1280 private original in separate dialog",
+    "20 sign trails plus 2 ascents, 23 native continuous paths, identical raster/vector coordinates and vector-only mode",
+    "live expandable trail information and20 exact official route previews with original map background and enlargement",
+    "live full-screen map, real tiles and bottom sheet",
+    "continuous sign artwork over world map, approximate-position disclosure, no fabricated distances and separate OSM comparison",
+    "published public demo acquires Lomo and changes to Calibre12 through shared OSM junction, distinct reading and adjusted ring",
+    "published HTTPS native geolocation works with granted browser permission and public CDP-emulated fixes; stop clears session",
+    "preserved complete private photographic review",
+    "second park Parquemet exact published bundle bytes, full official6690px image, eight cycling trails, six shared Paseo sections and twelve avenues and access roads with independent OSM data",
+    "official schematic PDF remains separate, portrait framing and full-map controls work",
+    "six previously omitted shared Paseo routes have official map previews, native curve selection, explicit OSM geometry and restrictions",
+    "12avenues selectable in dedicated filter with53source OSMways;10honest original-map crops+2table references, no fake avenue vectors; new access restrictions shown",
+    "Parquemet world map loads real tiles, distinct PDF/OSM lengths, eight labels, fourteen exact native PDF routes with aligned overlay and cropped original map backgrounds in isolated route previews, restrictions, no foreign GPS demo, return to El Durazno without mixed targets",
+    "no runtime errors"
+  ],
+  "anonymousStatus": 401,
+  "liveSha256": "d5a0217a399ec4a966440e7104ab1e130533e8e1fbd22a673eed99538668cd27",
+  "loadedTiles": 10
+}

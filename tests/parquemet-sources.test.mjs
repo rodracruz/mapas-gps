@@ -9,7 +9,7 @@ const bytes=await readFile(new URL('../sources/parquemet-osm.json',import.meta.u
 const source=JSON.parse(bytes);
 // Historical receipt: retain its original geometry/version assertions while the
 // current catalog adds a fresh atomic Paseo receipt in parquemet-shared tests.
-const current=JSON.parse(await readFile(new URL('../data/parquemet/geographic-catalog.json',import.meta.url)));
+const current=JSON.parse(await readFile(new URL('./fixtures/parquemet-catalog-before-avenues.json',import.meta.url)));
 const oldNodes=source.elements.filter(e=>e.type==='node');
 const catalog={...current,targets:current.targets.filter(t=>t.category!=='shared-trail'),sourceSnapshot:'sources/parquemet-osm.json',sourceSnapshotSha256:'4cb185c60c137a15810fb941ca20954bcae6be09487cc27c580617ba156e3e1c',sourceUrl:source.url,queriedAt:source.queriedAt,geographicExtent:[Math.min(...oldNodes.map(n=>n.lon)),Math.min(...oldNodes.map(n=>n.lat)),Math.max(...oldNodes.map(n=>n.lon)),Math.max(...oldNodes.map(n=>n.lat))]};
 const geo=fromOsmSnapshot(source,catalog);

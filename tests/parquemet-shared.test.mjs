@@ -5,7 +5,8 @@ import {validateCatalog} from '../geographic/catalog.mjs';
 import {bikeMatchingNetwork} from '../geographic/network.mjs';
 import {fromOsmSnapshot} from '../geographic/data.mjs';
 import {createHash} from 'node:crypto';
-const catalog=JSON.parse(await readFile('data/parquemet/geographic-catalog.json'));
+// Preserve this historical106-way receipt independently of the new avenue union.
+const catalog=JSON.parse(await readFile('tests/fixtures/parquemet-catalog-before-avenues.json'));
 const expected=[['paseo-infancia','Tramo Parque B. de la Infancia',940],['paseo-sentidos','Sendero de los Sentidos',540],['paseo-bellavista','Tramo Bellavista',1000],['paseo-pedro-valdivia','Tramo Pedro de Valdivia',1500],['paseo-piramide','Tramo Pirámide / Jardín Japonés',3700],['paseo-cascada','Tramo La Cascada',1200]];
 test('Parquemet includes all six shared-use Paseo entries from the same official edition',()=>{
  assert.equal(validateCatalog(catalog),catalog);const shared=catalog.targets.filter(t=>t.category==='shared-trail');assert.deepEqual(shared.map(t=>[t.id,t.name,t.officialDistanceM]),expected);for(const t of shared){assert.equal(t.visualTrailId,t.id);assert.equal(t.geometry,null);assert.equal(t.operationConfirmed,false);assert.equal(t.officialDistanceSource,'https://mapas.parquemet.cl/doc/MapaParque.pdf');}assert.equal(catalog.targets.filter(t=>t.category==='cycling-trail').length,8);

@@ -1,6 +1,10 @@
 # Continuar Mapas GPS
 
-## Estado más reciente: los seis tramos compartidos que faltaban
+## Estado más reciente: avenidas visibles y contrastadas
+
+Rama `fix/parquemet-avenues`, sobre `7e72be7`, worktree aislado `parquemet-coverage`. Parquemet: ocho ciclistas + seis compartidos + doce avenidas/caminos. Filtros por categoría, avenidas azules, selección y recortes del plano. Diez recortes rotulados; Neruda/Elizalde son referencias de tabla sin miniatura ubicada. Los polígonos blancos del PDF no se presentan como curvas individuales. Nueva fuente atómica116vías/2694nodos preserva los2722objetos anteriores;103vías atribuidas,91elegibles para GPS. Gabriela Mistral y vías sin permiso permanecen visibles pero fuera del matcher. Los Turistas sigue pendiente de delimitar. [Implementación, capturas y pruebas](evidence/parquemet-avenues.md), [versión privada15 y PR #9](evidence/parquemet-avenues-release.md), [PDF](evidence/parquemet-avenues-pdf.md), [OSM](evidence/parquemet-avenues-geographic.md). No tocar main/Pages ni subir fotografía privada.
+
+## Estado anterior: los seis tramos compartidos que faltaban
 
 Rama `fix/parquemet-shared-routes` sobre `0055d5b`, worktree aislado `parquemet-coverage`. Parquemet incluye ahora las14rutas con uso ciclista de la edición recibida: ocho rojas y seis verdes del Paseo Metropolitano. Fichas/recortes del plano y selección en mapa mundial para todos; estilos nativos verdes y hueco de Los Sentidos conservados. La omisión geográfica se debía a excluir `highway=pedestrian`, aun cuando las vías declaran bicicletas. Nueva fuente atómica `sources/parquemet-shared-osm.json`:106vías/2615nodos,31vías nominales del Paseo,28con permiso ciclista explícito;84vías totales elegibles para el matcher. Las tres de Pedro restringidas/sin permiso quedan fuera. La fuente anterior permanece intacta y todos sus2042objetos son idénticos en la consulta nueva. [Implementación y pruebas](evidence/parquemet-shared.md), [versión privada14 comprobada y PR #8](evidence/parquemet-shared-release.md), [geografía contrastada](evidence/parquemet-paseo-geographic.md), [curvas originales](evidence/parquemet-paseo-pdf.md). No se georreferencia el PDF esquemático ni se mezclan ediciones.
 

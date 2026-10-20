@@ -6,15 +6,15 @@
   "coordinateOrder": "longitude,latitude",
   "attribution": "© OpenStreetMap contributors",
   "license": "ODbL-1.0",
-  "sourceSnapshot": "sources/parquemet-shared-osm.json",
-  "sourceSnapshotSha256": "0954dccc4a9256fcb1a73a4af744efa8a0f0040770dc2e36c8506212cbcb1cbc",
-  "sourceUrl": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A90%5D%3B%28way%28id%3A40140801%2C40140804%2C41160817%2C44579782%2C48549531%2C69889085%2C120389660%2C158170398%2C169885900%2C179494266%2C180578702%2C256510467%2C292124343%2C363378017%2C396817982%2C441864821%2C442592613%2C442592614%2C442629926%2C442633595%2C479769031%2C479769658%2C479771255%2C479774004%2C480868066%2C480868075%2C480868638%2C482748524%2C482748525%2C512366462%2C520212770%2C542847079%2C555001265%2C555001286%2C555001287%2C691091446%2C691091448%2C727333973%2C741162893%2C741162897%2C741162909%2C741162913%2C749561207%2C749895576%2C777396164%2C777396165%2C777396167%2C777396168%2C862880882%2C906717591%2C906717592%2C906717593%2C906717594%2C906948595%2C909201230%2C909201231%2C910105205%2C910105206%2C919016888%2C919016889%2C919288128%2C919288140%2C922756659%2C922756671%2C922756672%2C922756673%2C923017128%2C923017130%2C929919497%2C929919498%2C929919499%2C929919509%2C929919510%2C929919511%2C929919512%2C981089817%2C1022000922%2C1022000923%2C1035844715%2C1081650302%2C1081650303%2C1081650304%2C1223734901%2C1233612934%2C1233612935%2C1233612936%2C1292391201%2C1292391202%2C1307609502%2C1307609504%2C1307648383%2C1307648385%2C1308348019%2C1308348020%2C1308348021%2C1308348023%2C1309108626%2C1316047257%2C1316047258%2C1343882813%2C1343882814%2C1345197424%2C1346024630%2C1346033271%2C1498379319%2C1498379320%29%3Brelation%2817934042%29%3B%29%3Bout+meta%3B%3E%3Bout+meta%3B",
-  "queriedAt": "2026-10-20T19:10:39.142803+00:00",
+  "sourceSnapshot": "sources/parquemet-avenues-osm.json",
+  "sourceSnapshotSha256": "cf2aa2e2e548e1181a230966e7b6954b4403a6493212cea3c375032e775bc7bc",
+  "sourceUrl": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A90%5D%3B%28way%28id%3A40140801%2C40140804%2C41160817%2C44579782%2C47727162%2C47776335%2C48549531%2C69889085%2C120389660%2C158170398%2C160691199%2C169885900%2C179494266%2C180578702%2C256510467%2C292124343%2C363378017%2C396817982%2C441864821%2C442592613%2C442592614%2C442629926%2C442633595%2C479769031%2C479769658%2C479771255%2C479774004%2C480868066%2C480868075%2C480868638%2C482748524%2C482748525%2C512366462%2C520212770%2C542847079%2C555001265%2C555001286%2C555001287%2C577345674%2C691091446%2C691091448%2C727333973%2C741162893%2C741162897%2C741162909%2C741162913%2C749561207%2C749895576%2C777396164%2C777396165%2C777396167%2C777396168%2C802365175%2C862880882%2C906717591%2C906717592%2C906717593%2C906717594%2C906948595%2C909201230%2C909201231%2C910105205%2C910105206%2C919016888%2C919016889%2C919288128%2C919288140%2C919288157%2C919288158%2C922756659%2C922756671%2C922756672%2C922756673%2C923017128%2C923017130%2C929919497%2C929919498%2C929919499%2C929919509%2C929919510%2C929919511%2C929919512%2C981089817%2C1022000922%2C1022000923%2C1035844715%2C1035844716%2C1081650302%2C1081650303%2C1081650304%2C1223734901%2C1233612934%2C1233612935%2C1233612936%2C1292391201%2C1292391202%2C1307609502%2C1307609504%2C1307648383%2C1307648385%2C1308348019%2C1308348020%2C1308348021%2C1308348023%2C1309108626%2C1316047257%2C1316047258%2C1343882813%2C1343882814%2C1343882815%2C1345175047%2C1345197424%2C1346024630%2C1346033271%2C1498379319%2C1498379320%29%3Brelation%2817934042%29%3B%29%3Bout+meta%3B%3E%3Bout+meta%3B",
+  "queriedAt": "2026-10-20T19:47:49.932301+00:00",
   "geographicExtent": [
     -70.6395256,
     -33.4307661,
-    -70.601453,
-    -33.3894875
+    -70.6012966,
+    -33.3866189
   ],
   "targets": [
     {
@@ -603,15 +603,17 @@
       ],
       "visualTrailId": null,
       "publicMapUrl": "https://www.openstreetmap.org/way/169885900",
-      "description": "Avenida rotulada en el mapa oficial y por nombre en OSM, con etiquetas de infraestructura ciclista en cada tramo importado.",
-      "sourceNote": "El PDF abrevia «Av.» y OSM registra «Avenida». Se conserva el nombre propio literal. Todas las vías seleccionadas tienen cycleway=lane/shared_lane o su variante lateral. Los sentidos y el acceso operacional no están validados en terreno.",
-      "color": "#347f81",
+      "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+      "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+      "color": "#326f99",
       "difficulty": null,
       "elevationGainM": null,
       "elevationLossM": null,
       "geometry": null,
       "geometryImported": true,
-      "operationConfirmed": false
+      "operationConfirmed": false,
+      "officialViewId": "avenida-pedro-bannen",
+      "officialViewKind": "document-crop"
     },
     {
       "id": "avenida-alberto-mackenna",
@@ -630,15 +632,17 @@
       ],
       "visualTrailId": null,
       "publicMapUrl": "https://www.openstreetmap.org/way/44579782",
-      "description": "Avenida rotulada en el mapa oficial y por nombre en OSM, con etiquetas de infraestructura ciclista en cada tramo importado.",
-      "sourceNote": "El PDF abrevia «Av.» y OSM registra «Avenida». Se conserva el nombre propio literal. Todas las vías seleccionadas tienen cycleway=lane/shared_lane o su variante lateral. Los sentidos y el acceso operacional no están validados en terreno.",
-      "color": "#b8843f",
+      "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+      "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+      "color": "#326f99",
       "difficulty": null,
       "elevationGainM": null,
       "elevationLossM": null,
       "geometry": null,
       "geometryImported": true,
-      "operationConfirmed": false
+      "operationConfirmed": false,
+      "officialViewId": "avenida-alberto-mackenna",
+      "officialViewKind": "document-crop"
     },
     {
       "id": "avenida-abate-molina",
@@ -660,15 +664,17 @@
       ],
       "visualTrailId": null,
       "publicMapUrl": "https://www.openstreetmap.org/way/292124343",
-      "description": "Avenida secundaria rotulada en el mapa oficial; cada tramo atribuido conserva etiquetas OSM explícitas de infraestructura ciclista.",
-      "sourceNote": "El PDF abrevia «Av.» y OSM registra «Avenida»; se conserva literalmente el nombre propio. Todos los tramos atribuidos tienen cycleway=lane. Se conservan vías y nodos originales sin unión, recorte ni interpolación. La infraestructura registrada no acredita apertura o continuidad completa.",
-      "color": "#347f81",
+      "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+      "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+      "color": "#326f99",
       "difficulty": null,
       "elevationGainM": null,
       "elevationLossM": null,
       "geometry": null,
       "geometryImported": true,
-      "operationConfirmed": false
+      "operationConfirmed": false,
+      "officialViewId": "avenida-abate-molina",
+      "officialViewKind": "document-crop"
     },
     {
       "id": "avenida-carlos-martner",
@@ -687,15 +693,17 @@
       ],
       "visualTrailId": null,
       "publicMapUrl": "https://www.openstreetmap.org/way/40140801",
-      "description": "Avenida secundaria rotulada en el mapa oficial; cada tramo atribuido conserva etiquetas OSM explícitas de infraestructura ciclista.",
-      "sourceNote": "El PDF abrevia «Av.» y OSM registra «Avenida»; se conserva literalmente el nombre propio. Todos los tramos atribuidos tienen cycleway=lane. Se conservan vías y nodos originales sin unión, recorte ni interpolación. La infraestructura registrada no acredita apertura o continuidad completa.",
-      "color": "#347f81",
+      "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+      "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+      "color": "#326f99",
       "difficulty": null,
       "elevationGainM": null,
       "elevationLossM": null,
       "geometry": null,
       "geometryImported": true,
-      "operationConfirmed": false
+      "operationConfirmed": false,
+      "officialViewId": "avenida-carlos-martner",
+      "officialViewKind": "document-crop"
     },
     {
       "id": "avenida-carlos-reed",
@@ -714,15 +722,17 @@
       ],
       "visualTrailId": null,
       "publicMapUrl": "https://www.openstreetmap.org/way/48549531",
-      "description": "Avenida secundaria rotulada en el mapa oficial; cada tramo atribuido conserva etiquetas OSM explícitas de infraestructura ciclista.",
-      "sourceNote": "El PDF abrevia «Av.» y OSM registra «Avenida»; se conserva literalmente el nombre propio. Todos los tramos atribuidos tienen cycleway=lane. Se conservan vías y nodos originales sin unión, recorte ni interpolación. La infraestructura registrada no acredita apertura o continuidad completa.",
-      "color": "#347f81",
+      "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+      "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+      "color": "#326f99",
       "difficulty": null,
       "elevationGainM": null,
       "elevationLossM": null,
       "geometry": null,
       "geometryImported": true,
-      "operationConfirmed": false
+      "operationConfirmed": false,
+      "officialViewId": "avenida-carlos-reed",
+      "officialViewKind": "document-crop"
     },
     {
       "id": "avenida-claudio-gay",
@@ -738,15 +748,17 @@
       ],
       "visualTrailId": null,
       "publicMapUrl": "https://www.openstreetmap.org/way/41160817",
-      "description": "Avenida secundaria rotulada en el mapa oficial; cada tramo atribuido conserva etiquetas OSM explícitas de infraestructura ciclista.",
-      "sourceNote": "El PDF abrevia «Av.» y OSM registra «Avenida»; se conserva literalmente el nombre propio. Todos los tramos atribuidos tienen cycleway=lane. Se conservan vías y nodos originales sin unión, recorte ni interpolación. La infraestructura registrada no acredita apertura o continuidad completa.",
-      "color": "#347f81",
+      "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+      "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+      "color": "#326f99",
       "difficulty": null,
       "elevationGainM": null,
       "elevationLossM": null,
       "geometry": null,
       "geometryImported": true,
-      "operationConfirmed": false
+      "operationConfirmed": false,
+      "officialViewId": "avenida-claudio-gay",
+      "officialViewKind": "document-crop"
     },
     {
       "id": "avenida-federico-albert",
@@ -761,15 +773,17 @@
       ],
       "visualTrailId": null,
       "publicMapUrl": "https://www.openstreetmap.org/way/40140804",
-      "description": "Avenida secundaria rotulada en el mapa oficial; cada tramo atribuido conserva etiquetas OSM explícitas de infraestructura ciclista.",
-      "sourceNote": "El PDF abrevia «Av.» y OSM registra «Avenida»; se conserva literalmente el nombre propio. Todos los tramos atribuidos tienen cycleway=lane. Se conservan vías y nodos originales sin unión, recorte ni interpolación. La infraestructura registrada no acredita apertura o continuidad completa.",
-      "color": "#347f81",
+      "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+      "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+      "color": "#326f99",
       "difficulty": null,
       "elevationGainM": null,
       "elevationLossM": null,
       "geometry": null,
       "geometryImported": true,
-      "operationConfirmed": false
+      "operationConfirmed": false,
+      "officialViewId": "avenida-federico-albert",
+      "officialViewKind": "document-crop"
     },
     {
       "id": "avenida-manuel-zanartu",
@@ -777,22 +791,30 @@
       "category": "avenue",
       "status": "osm-identified",
       "osmWayIds": [
-        441864821
+        441864821,
+        577345674,
+        1345175047,
+        47776335,
+        1035844716,
+        802365175,
+        47727162
       ],
       "osmNames": [
         "Avenida Manuel Zañartu"
       ],
       "visualTrailId": null,
       "publicMapUrl": "https://www.openstreetmap.org/way/441864821",
-      "description": "Avenida secundaria rotulada en el mapa oficial; cada tramo atribuido conserva etiquetas OSM explícitas de infraestructura ciclista.",
-      "sourceNote": "El PDF abrevia «Av.» y OSM registra «Avenida»; se conserva literalmente el nombre propio. Todos los tramos atribuidos tienen cycleway=lane. Se conservan vías y nodos originales sin unión, recorte ni interpolación. La infraestructura registrada no acredita apertura o continuidad completa.",
-      "color": "#347f81",
+      "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+      "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+      "color": "#326f99",
       "difficulty": null,
       "elevationGainM": null,
       "elevationLossM": null,
       "geometry": null,
       "geometryImported": true,
-      "operationConfirmed": false
+      "operationConfirmed": false,
+      "officialViewId": "avenida-manuel-zanartu",
+      "officialViewKind": "document-crop"
     },
     {
       "id": "avenida-la-montana",
@@ -803,22 +825,106 @@
         120389660,
         520212770,
         1292391201,
-        1292391202
+        1292391202,
+        1223734901
       ],
       "osmNames": [
         "Avenida La Montaña"
       ],
       "visualTrailId": null,
       "publicMapUrl": "https://www.openstreetmap.org/way/120389660",
-      "description": "Avenida secundaria rotulada en el mapa oficial; cada tramo atribuido conserva etiquetas OSM explícitas de infraestructura ciclista.",
-      "sourceNote": "El PDF abrevia «Av.» y OSM registra «Avenida»; se conserva literalmente el nombre propio. Todos los tramos atribuidos tienen cycleway=lane. Se conservan vías y nodos originales sin unión, recorte ni interpolación. La infraestructura registrada no acredita apertura o continuidad completa. Solo se atribuyen cuatro vías con cycleway=lane y bicycle=yes. La vía 1223734901 sin etiqueta ciclista queda íntegra como contexto sin targetId y fuera del GPS; no se supone continuidad sobre ella.",
-      "color": "#347f81",
+      "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+      "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+      "color": "#326f99",
       "difficulty": null,
       "elevationGainM": null,
       "elevationLossM": null,
       "geometry": null,
       "geometryImported": true,
-      "operationConfirmed": false
+      "operationConfirmed": false,
+      "officialViewId": "avenida-la-montana",
+      "officialViewKind": "document-crop"
+    },
+    {
+      "id": "avenida-gabriela-mistral",
+      "name": "Av. Gabriela Mistral",
+      "category": "avenue",
+      "status": "osm-identified",
+      "osmWayIds": [
+        158170398,
+        480868075
+      ],
+      "osmNames": [
+        "Avenida Gabriela Mistral"
+      ],
+      "visualTrailId": null,
+      "officialViewId": "avenida-gabriela-mistral",
+      "officialViewKind": "document-crop",
+      "publicMapUrl": "https://www.openstreetmap.org/way/158170398",
+      "description": "Avenida peatonal rotulada en el plano. OSM registra bicycle=no y foot=yes en sus dos vías: se muestra como referencia, excluida del ajuste GPS ciclista.",
+      "sourceNote": "Identificación nominal y sector contrastados con el PDF oficial. Geometría OSM independiente, sin transformar el esquema ni inferir conexiones. Ver docs/evidence/parquemet-avenues-geographic.md.",
+      "color": "#326f99",
+      "difficulty": null,
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": true,
+      "operationConfirmed": false,
+      "checkedOn": "2026-10-20"
+    },
+    {
+      "id": "avenida-pablo-neruda",
+      "name": "Av. Pablo Neruda",
+      "category": "avenue",
+      "status": "osm-identified",
+      "osmWayIds": [
+        160691199
+      ],
+      "osmNames": [
+        "Avenida Pablo Neruda"
+      ],
+      "visualTrailId": null,
+      "officialViewId": "avenida-pablo-neruda",
+      "officialViewKind": "document-reference",
+      "publicMapUrl": "https://www.openstreetmap.org/way/160691199",
+      "description": "Avenida mencionada en la tabla oficial junto a Manuel Zañartu. OSM registra bicycle=permissive y cycleway=shared_lane; el permiso actual requiere consulta al parque. La tabla no identifica una curva individual en el plano.",
+      "sourceNote": "Identificación nominal y sector contrastados con el PDF oficial. Geometría OSM independiente, sin transformar el esquema ni inferir conexiones. Ver docs/evidence/parquemet-avenues-geographic.md.",
+      "color": "#326f99",
+      "difficulty": null,
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": true,
+      "operationConfirmed": false,
+      "checkedOn": "2026-10-20"
+    },
+    {
+      "id": "camino-rafael-elizalde",
+      "name": "Camino Rafael Elizalde",
+      "category": "avenue",
+      "status": "osm-identified",
+      "osmWayIds": [
+        919288157,
+        919288158,
+        1343882815
+      ],
+      "osmNames": [
+        "Camino Rafael Elizalde"
+      ],
+      "visualTrailId": null,
+      "officialViewId": "camino-rafael-elizalde",
+      "officialViewKind": "document-reference",
+      "publicMapUrl": "https://www.openstreetmap.org/way/919288157",
+      "description": "Acceso desde Pedro de Valdivia hacia Teleférico Oasis, documentado en la tabla oficial. OSM conserva tres vías con motor_vehicle=no; no figura permiso ciclista explícito y quedan fuera del ajuste GPS.",
+      "sourceNote": "Identificación nominal y sector contrastados con el PDF oficial. Geometría OSM independiente, sin transformar el esquema ni inferir conexiones. Ver docs/evidence/parquemet-avenues-geographic.md.",
+      "color": "#326f99",
+      "difficulty": null,
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "geometry": null,
+      "geometryImported": true,
+      "operationConfirmed": false,
+      "checkedOn": "2026-10-20"
     }
   ],
   "visualToGeographicTransform": null,
@@ -839,7 +945,7 @@
     "name": "Parquemet",
     "shortName": "Parquemet",
     "locality": "Santiago · Región Metropolitana",
-    "description": "Ocho senderos ciclistas y seis tramos compartidos del Paseo Metropolitano, con el plano original y sus referencias geográficas.",
+    "description": "Ocho senderos ciclistas, seis tramos del Paseo Metropolitano y doce avenidas y caminos, con plano original y referencias geográficas separadas.",
     "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
     "checkedOn": "2026-10-20",
     "primaryTargetIds": [
