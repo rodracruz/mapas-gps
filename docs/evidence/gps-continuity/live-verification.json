@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "owner-private access preserved",
+    "published bytes match tested artifact",
+    "live park selection, cards and geographic data",
+    "high-resolution main map2570x3077 and intact960x1280 private original in separate dialog",
+    "20 sign trails plus 2 ascents, 23 native continuous paths, identical raster/vector coordinates and vector-only mode",
+    "live expandable trail information",
+    "live full-screen map, real tiles and bottom sheet",
+    "continuous sign artwork over world map, approximate-position disclosure, no fabricated distances and separate OSM comparison",
+    "published public demo acquires Lomo and changes to Calibre12 through shared OSM junction, distinct reading and adjusted ring",
+    "published HTTPS native geolocation works with granted browser permission and public CDP-emulated fixes; stop clears session",
+    "preserved complete private photographic review",
+    "no runtime errors"
+  ],
+  "anonymousStatus": 401,
+  "liveSha256": "6cca255e0dabe7c1b2ecf775df86017a4d5effdbf8d1d788178d5ca4f44ef046",
+  "loadedTiles": 9
+}

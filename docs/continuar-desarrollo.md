@@ -2,7 +2,7 @@
 
 ## Estado más reciente: continuidad GPS experimental
 
-Rama `feat/gps-route-continuity` sobre `bf2c939`. En Mapa de senderos, Mi ubicación activa GPS bajo permiso; mantiene la pista probable mediante continuidad y reevalúa tras nodos OSM compartidos. Señal dudosa/antigua suspende ajuste; evidencia fiable incompatible permite readquirir sin bloqueo permanente. Probar recorrido ofrece una demo pública Lomo→Calibre12 con pausa y avance, sin solicitar ubicación. El dibujo del cartel sigue sin ajuste GPS. No se guardan recorridos; el fondo OSM carga teselas del área visible (aviso previo). [Implementación, pruebas y límites](evidence/gps-continuity.md), [motor](evidence/gps-matcher.md), [demo](evidence/gps-demo.md). Esta identificación no implementa navegación ni valida accesos/sentidos/loops/distancias restantes.
+Rama `feat/gps-route-continuity` sobre `bf2c939`. En Mapa de senderos, Mi ubicación activa GPS bajo permiso; mantiene la pista probable mediante continuidad y reevalúa tras nodos OSM compartidos. Señal dudosa/antigua suspende ajuste; evidencia fiable incompatible permite readquirir sin bloqueo permanente. Probar recorrido ofrece una demo pública Lomo→Calibre12 con pausa y avance, sin solicitar ubicación. El dibujo del cartel sigue sin ajuste GPS. No se guardan recorridos; el fondo OSM carga teselas del área visible (aviso previo). [Implementación, pruebas y límites](evidence/gps-continuity.md), [despliegue privado comprobado y PR #4](evidence/gps-continuity-release.md), [motor](evidence/gps-matcher.md), [demo](evidence/gps-demo.md). Esta identificación no implementa navegación ni valida accesos/sentidos/loops/distancias restantes.
 
 ## Estado anterior: curvas del cartel en Mapa de senderos
 
