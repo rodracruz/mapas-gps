@@ -1,0 +1,29 @@
+# Seis rutas compartidas omitidas en Parquemet
+
+2026-10-20. Rama `fix/parquemet-shared-routes`, base `0055d5b`, mismo worktree aislado `parquemet-coverage`. El usuario detectó rutas faltantes tras aprobar las vistas con fondo del plano. El cotejo real de la leyenda confirmó ocho senderos rojos ciclistas **más seis tramos verdes para peatones y bicicletas** del Paseo Metropolitano. La aplicación sólo representaba los primeros ocho. Los ocho senderos amarillos se identifican como peatonales y siguen visibles en el documento original; no se atribuye permiso ciclista a ellos.
+
+## Corrección y evidencia
+
+Se incorporaron Parque B. de la Infancia940m, Sendero de los Sentidos540m, Bellavista1km, Pedro de Valdivia1,5km, Pirámide/Jardín Japonés3,7km y La Cascada1,2km. Son longitudes publicadas, separadas de las medidas OSM. Hay14fichas de rutas con recortes del plano original, selección y ampliación, además de las nueve avenidas de referencia. Las tarjetas cerradas conservan176px.
+
+`data/parquemet/visual-paseo-trails.json` conserva32objetos nativos (21trazos/11marcas),110curvas Bézier y51líneas, sin simplificación. Se preservan los tres patrones discontinuos de Pirámide y el hueco original de56,745px en Los Sentidos. Los nueve objetos verdes punteados sin número, junto a símbolos de paso no habilitado del PDF, quedan explícitamente sin atribuir; no se inventa un séptimo recorrido ni una conexión. Los ocho senderos rojos y sus fuentes no se modifican. [Asignación por badges/objetos, hashes y extracción reproducible](parquemet-paseo-pdf.md).
+
+La omisión geográfica se confirmó: el filtro anterior `path|track|cycleway` excluía `highway=pedestrian`. La relación OSM17934042 y las vías con nombres explícitos permiten contrastar los seis sectores. La relación se etiqueta `route=hiking`; su mera pertenencia no demuestra acceso ciclista ni un único itinerario continuo. Se importan31vías nominales, de las cuales28declaran `bicycle=yes/designated`. Las tres vías Pedro con prohibición o sin permiso explícito se dibujan como referencia y quedan fuera del GPS. El filtro compartido exige permiso explícito y sigue respetando restricciones generales y escaleras. [IDs, coordenadas, versiones, fuentes y diferencias](parquemet-paseo-geographic.md).
+
+Nueva consulta **atómica**, fuente `sources/parquemet-shared-osm.json`:106vías,2615nodos y una relación;90vías atribuidas,16de contexto y84elegibles para coincidencia GPS. Se conserva `sources/parquemet-osm.json` intacto y se comprobó que sus2042objetos originales están idénticos en la nueva respuesta, incluidas coordenadas/versiones/orden de nodos. No se mezclaron versiones ni se sustituyeron curvas por aproximaciones. La instantánea nueva conserva su URL/consulta/fecha/hash de respuesta, y los tests fijan además una huella independiente de todos los nodos y vías. El PDF permanece en coordenadas de imagen y con transformación geográfica nula.
+
+## Verificación
+
+- `npm test`:109/109. Cuatro pruebas de extracción nueva, tres de catálogo/geografía/filtro compartido, bytes exactos de ambos datasets en standalone y regresiones anteriores. Las pruebas históricas mantienen la huella del snapshot anterior; las nuevas comprueban la consulta atómica y todas las exclusiones.
+- `python3 scripts/extract-parquemet-paseo.py --check`: reproducción exacta del JSON.
+- `parquemet-shared-browser.mjs` en fuente y bundle: seis recortes con curvas originales,14selecciones en el documento, seis grupos geográficos, restricciones, fondo visible, estilos discontinuos nativos y tarjetas sin desbordamiento en320/390px.
+- `parquemet-coverage-browser.mjs`: los ocho rojos continúan visibles y seleccionables; ahora14miniaturas. `trail-map-background-browser.mjs`:34fondos originales entre ambos parques, hashes exactos, recorte y alineación; fuente y bundle.
+- `parquemet-hardening.mjs`: pinch/arrastre/orientación, fallo de snapshot, opt-in/cancelación GPS y enlaces. `parquemet-visual-integrity.mjs`: datos visuales alterados fallan sin desactivar el PDF original o la geografía independiente. `gps-browser.mjs`: continuidad/demo, señales antiguas, permiso denegado y almacenamiento.
+- La regresión `geographic-acceptance.mjs` se ajusta para admitir que la misma imagen JPEG se solicite para portada y fondos; sigue exigiendo el mismo conjunto de assets, sin datos externos adicionales. Comprueba mapa, gestos, integridad, uso offline del bundle y conservación de Blob/calibración/senderos/centro/localStorage con service worker activo.
+- Revisión independiente: siete comparaciones PDF/overlay/vector y consultas de fuente. Se detectó que el estilo de énfasis eliminaba discontinuidades de los nuevos trazos verdes; se corrigió para conservar su estilo nativo. La prueba que elimina ese estilo falla (`stroke-dasharray` ausente), y el visor corregido pasa. Sin otros hallazgos bloqueantes.
+
+[Mapa con14recorridos](parquemet-shared/world-all14.png), [nueva ficha](parquemet-shared/card-mobile.png), [plano con14rutas](parquemet-shared/official-all14.png). Comparaciones: [Infancia/Sentidos](parquemet-shared/infancia-sentidos-comparison.png), [Bellavista](parquemet-shared/bellavista-comparison.png), [Pedro](parquemet-shared/pedro-valdivia-comparison.png), [Pirámide oeste](parquemet-shared/piramide-west-comparison.png), [centro](parquemet-shared/piramide-middle-comparison.png), [este](parquemet-shared/piramide-east-comparison.png), [Cascada](parquemet-shared/cascada-comparison.png).
+
+## Límites
+
+La identidad nominal/contextual contrastada permite mostrar estas fuentes; no acredita cada curva intermedia del esquema sobre el terreno. Las longitudes discrepantes, ramas y huecos se mantienen. No se validaron físicamente apertura, accesos, sentidos, bucles ni navegación. No se habilita GPS en geometría de píxeles. Los nueve objetos sin atribuir y las rutas exclusivamente peatonales no se presentan como nuevas pistas de bicicleta. `main`, Pages, foto privada y mapas guardados se conservan.

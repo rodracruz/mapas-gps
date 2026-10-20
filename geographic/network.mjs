@@ -6,5 +6,5 @@ export function bikeAccessRestricted(feature){
 }
 export function bikeMatchingNetwork(geo){
  if(geo?.metadata?.source!=='OpenStreetMap'||!Array.isArray(geo.features))throw new Error('La red de coincidencia requiere datos OSM.');
- return {...geo,features:geo.features.filter(f=>f.properties.targetId&&!bikeAccessRestricted(f))};
+ return {...geo,features:geo.features.filter(f=>f.properties.targetId&&!bikeAccessRestricted(f)&&(f.properties.targetCategory!=='shared-trail'||['yes','designated','permissive'].includes(f.properties.tags?.bicycle)))};
 }

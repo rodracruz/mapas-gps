@@ -6,20 +6,14 @@
   "coordinateOrder": "longitude,latitude",
   "attribution": "© OpenStreetMap contributors",
   "license": "ODbL-1.0",
-  "sourceSnapshot": "sources/parquemet-osm.json",
-  "sourceSnapshotSha256": "4cb185c60c137a15810fb941ca20954bcae6be09487cc27c580617ba156e3e1c",
-  "sourceUrl": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A40%5D%3B%28way%5B%22highway%22~%22%5E%28path%7Ctrack%7Ccycleway%29%24%22%5D%28-33.44%2C-70.65%2C-33.39%2C-70.59%29%3Bway%5B%22highway%22%5D%5B%22name%22~%22%5E%28Avenida+%29%3F%28Alberto+Mackenna%7CAbate+Molina%7CCarlos+Martner%7CPedro+Bannen%7CManuel+Za%C3%B1artu%7CFederico+Albert%7CClaudio+Gay%7CLa+Monta%C3%B1a%7CGabriela+Mistral%7CCarlos+Reed%29%24%22%5D%28-33.44%2C-70.65%2C-33.39%2C-70.59%29%3B%29%3Bout+meta%3B%3E%3Bout+meta%3B",
-  "queriedAt": "2026-10-20T15:04:36.262293+00:00",
-  "queryBounds": [
-    -70.65,
-    -33.44,
-    -70.59,
-    -33.39
-  ],
+  "sourceSnapshot": "sources/parquemet-shared-osm.json",
+  "sourceSnapshotSha256": "0954dccc4a9256fcb1a73a4af744efa8a0f0040770dc2e36c8506212cbcb1cbc",
+  "sourceUrl": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A90%5D%3B%28way%28id%3A40140801%2C40140804%2C41160817%2C44579782%2C48549531%2C69889085%2C120389660%2C158170398%2C169885900%2C179494266%2C180578702%2C256510467%2C292124343%2C363378017%2C396817982%2C441864821%2C442592613%2C442592614%2C442629926%2C442633595%2C479769031%2C479769658%2C479771255%2C479774004%2C480868066%2C480868075%2C480868638%2C482748524%2C482748525%2C512366462%2C520212770%2C542847079%2C555001265%2C555001286%2C555001287%2C691091446%2C691091448%2C727333973%2C741162893%2C741162897%2C741162909%2C741162913%2C749561207%2C749895576%2C777396164%2C777396165%2C777396167%2C777396168%2C862880882%2C906717591%2C906717592%2C906717593%2C906717594%2C906948595%2C909201230%2C909201231%2C910105205%2C910105206%2C919016888%2C919016889%2C919288128%2C919288140%2C922756659%2C922756671%2C922756672%2C922756673%2C923017128%2C923017130%2C929919497%2C929919498%2C929919499%2C929919509%2C929919510%2C929919511%2C929919512%2C981089817%2C1022000922%2C1022000923%2C1035844715%2C1081650302%2C1081650303%2C1081650304%2C1223734901%2C1233612934%2C1233612935%2C1233612936%2C1292391201%2C1292391202%2C1307609502%2C1307609504%2C1307648383%2C1307648385%2C1308348019%2C1308348020%2C1308348021%2C1308348023%2C1309108626%2C1316047257%2C1316047258%2C1343882813%2C1343882814%2C1345197424%2C1346024630%2C1346033271%2C1498379319%2C1498379320%29%3Brelation%2817934042%29%3B%29%3Bout+meta%3B%3E%3Bout+meta%3B",
+  "queriedAt": "2026-10-20T19:10:39.142803+00:00",
   "geographicExtent": [
-    -70.6380693,
-    -33.4307172,
-    -70.6017231,
+    -70.6395256,
+    -33.4307661,
+    -70.601453,
     -33.3894875
   ],
   "targets": [
@@ -244,6 +238,349 @@
       "geometryImported": true,
       "operationConfirmed": false,
       "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+    },
+    {
+      "id": "paseo-infancia",
+      "name": "Tramo Parque B. de la Infancia",
+      "category": "shared-trail",
+      "color": "#008b7b",
+      "status": "osm-identified",
+      "visualTrailId": "paseo-infancia",
+      "officialDistanceM": 940,
+      "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+      "osmWayIds": [
+        1022000923
+      ],
+      "osmNames": [
+        "Paseo Metropolitano - Parque Bicentenario de la Infancia"
+      ],
+      "geometryImported": true,
+      "geometry": null,
+      "publicMapUrl": "https://www.openstreetmap.org/relation/17934042",
+      "difficulty": null,
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "operationConfirmed": false,
+      "description": "Tramo del Paseo Metropolitano identificado para peatones y bicicletas en el plano oficial. La longitud publicada se conserva separada de la medida geográfica.",
+      "sourceNote": "Correspondencia de nombre, sector del plano, etiquetas de uso y relación OSM17934042. Longitud y ramas OSM no demuestran el recorrido exacto ni acceso vigente del plano.",
+      "sourceReferences": [
+        {
+          "id": 1022000923,
+          "version": 5,
+          "url": "https://www.openstreetmap.org/way/1022000923"
+        }
+      ]
+    },
+    {
+      "id": "paseo-sentidos",
+      "name": "Sendero de los Sentidos",
+      "category": "shared-trail",
+      "color": "#008b7b",
+      "status": "osm-identified",
+      "visualTrailId": "paseo-sentidos",
+      "officialDistanceM": 540,
+      "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+      "osmWayIds": [
+        777396164,
+        777396167,
+        777396168,
+        1498379319
+      ],
+      "osmNames": [
+        "Paseo Metropolitano - Sendero de los Sentidos"
+      ],
+      "geometryImported": true,
+      "geometry": null,
+      "publicMapUrl": "https://www.openstreetmap.org/relation/17934042",
+      "difficulty": null,
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "operationConfirmed": false,
+      "description": "Tramo del Paseo Metropolitano identificado para peatones y bicicletas en el plano oficial. La longitud publicada se conserva separada de la medida geográfica.",
+      "sourceNote": "Correspondencia de nombre, sector del plano, etiquetas de uso y relación OSM17934042. Longitud y ramas OSM no demuestran el recorrido exacto ni acceso vigente del plano.",
+      "sourceReferences": [
+        {
+          "id": 777396164,
+          "version": 3,
+          "url": "https://www.openstreetmap.org/way/777396164"
+        },
+        {
+          "id": 777396167,
+          "version": 5,
+          "url": "https://www.openstreetmap.org/way/777396167"
+        },
+        {
+          "id": 777396168,
+          "version": 5,
+          "url": "https://www.openstreetmap.org/way/777396168"
+        },
+        {
+          "id": 1498379319,
+          "version": 1,
+          "url": "https://www.openstreetmap.org/way/1498379319"
+        }
+      ]
+    },
+    {
+      "id": "paseo-bellavista",
+      "name": "Tramo Bellavista",
+      "category": "shared-trail",
+      "color": "#008b7b",
+      "status": "osm-identified",
+      "visualTrailId": "paseo-bellavista",
+      "officialDistanceM": 1000,
+      "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+      "osmWayIds": [
+        777396165,
+        1307609502,
+        1498379320
+      ],
+      "osmNames": [
+        "Paseo Metropolitano - Sendero Bellavista"
+      ],
+      "geometryImported": true,
+      "geometry": null,
+      "publicMapUrl": "https://www.openstreetmap.org/relation/17934042",
+      "difficulty": null,
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "operationConfirmed": false,
+      "description": "Tramo del Paseo Metropolitano identificado para peatones y bicicletas en el plano oficial. La longitud publicada se conserva separada de la medida geográfica.",
+      "sourceNote": "Correspondencia de nombre, sector del plano, etiquetas de uso y relación OSM17934042. Longitud y ramas OSM no demuestran el recorrido exacto ni acceso vigente del plano.",
+      "sourceReferences": [
+        {
+          "id": 777396165,
+          "version": 9,
+          "url": "https://www.openstreetmap.org/way/777396165"
+        },
+        {
+          "id": 1307609502,
+          "version": 1,
+          "url": "https://www.openstreetmap.org/way/1307609502"
+        },
+        {
+          "id": 1498379320,
+          "version": 1,
+          "url": "https://www.openstreetmap.org/way/1498379320"
+        }
+      ]
+    },
+    {
+      "id": "paseo-pedro-valdivia",
+      "name": "Tramo Pedro de Valdivia",
+      "category": "shared-trail",
+      "color": "#008b7b",
+      "status": "osm-identified",
+      "visualTrailId": "paseo-pedro-valdivia",
+      "officialDistanceM": 1500,
+      "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+      "osmWayIds": [
+        256510467,
+        749561207,
+        981089817,
+        1233612936,
+        1307609504,
+        1308348019,
+        1308348023
+      ],
+      "osmNames": [
+        "Paseo Metropolitano - Sendero Pedro de Valdivia Norte",
+        "Paseo Metropolitano - Tramo Pedro de Valdivia Norte"
+      ],
+      "geometryImported": true,
+      "geometry": null,
+      "publicMapUrl": "https://www.openstreetmap.org/relation/17934042",
+      "difficulty": null,
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "operationConfirmed": false,
+      "description": "Tramo del Paseo Metropolitano identificado para peatones y bicicletas en el plano oficial. La longitud publicada se conserva separada de la medida geográfica.",
+      "sourceNote": "Correspondencia de nombre, sector del plano, etiquetas de uso y relación OSM17934042. Longitud y ramas OSM no demuestran el recorrido exacto ni acceso vigente del plano.",
+      "sourceReferences": [
+        {
+          "id": 256510467,
+          "version": 5,
+          "url": "https://www.openstreetmap.org/way/256510467"
+        },
+        {
+          "id": 749561207,
+          "version": 6,
+          "url": "https://www.openstreetmap.org/way/749561207"
+        },
+        {
+          "id": 981089817,
+          "version": 4,
+          "url": "https://www.openstreetmap.org/way/981089817"
+        },
+        {
+          "id": 1233612936,
+          "version": 3,
+          "url": "https://www.openstreetmap.org/way/1233612936"
+        },
+        {
+          "id": 1307609504,
+          "version": 2,
+          "url": "https://www.openstreetmap.org/way/1307609504"
+        },
+        {
+          "id": 1308348019,
+          "version": 2,
+          "url": "https://www.openstreetmap.org/way/1308348019"
+        },
+        {
+          "id": 1308348023,
+          "version": 1,
+          "url": "https://www.openstreetmap.org/way/1308348023"
+        }
+      ]
+    },
+    {
+      "id": "paseo-piramide",
+      "name": "Tramo Pirámide / Jardín Japonés",
+      "category": "shared-trail",
+      "color": "#008b7b",
+      "status": "osm-identified",
+      "visualTrailId": "paseo-piramide",
+      "officialDistanceM": 3700,
+      "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+      "osmWayIds": [
+        180578702,
+        396817982,
+        727333973,
+        741162893,
+        741162909,
+        906717591,
+        906717592,
+        906717593,
+        906717594,
+        919016888,
+        1346024630,
+        1346033271
+      ],
+      "osmNames": [
+        "Paseo Metropolitano - Tramo Jardín Japonés / Pirámide"
+      ],
+      "geometryImported": true,
+      "geometry": null,
+      "publicMapUrl": "https://www.openstreetmap.org/relation/17934042",
+      "difficulty": null,
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "operationConfirmed": false,
+      "description": "Tramo del Paseo Metropolitano identificado para peatones y bicicletas en el plano oficial. La longitud publicada se conserva separada de la medida geográfica.",
+      "sourceNote": "Correspondencia de nombre, sector del plano, etiquetas de uso y relación OSM17934042. Longitud y ramas OSM no demuestran el recorrido exacto ni acceso vigente del plano.",
+      "sourceReferences": [
+        {
+          "id": 180578702,
+          "version": 19,
+          "url": "https://www.openstreetmap.org/way/180578702"
+        },
+        {
+          "id": 396817982,
+          "version": 11,
+          "url": "https://www.openstreetmap.org/way/396817982"
+        },
+        {
+          "id": 727333973,
+          "version": 9,
+          "url": "https://www.openstreetmap.org/way/727333973"
+        },
+        {
+          "id": 741162893,
+          "version": 6,
+          "url": "https://www.openstreetmap.org/way/741162893"
+        },
+        {
+          "id": 741162909,
+          "version": 6,
+          "url": "https://www.openstreetmap.org/way/741162909"
+        },
+        {
+          "id": 906717591,
+          "version": 3,
+          "url": "https://www.openstreetmap.org/way/906717591"
+        },
+        {
+          "id": 906717592,
+          "version": 4,
+          "url": "https://www.openstreetmap.org/way/906717592"
+        },
+        {
+          "id": 906717593,
+          "version": 3,
+          "url": "https://www.openstreetmap.org/way/906717593"
+        },
+        {
+          "id": 906717594,
+          "version": 4,
+          "url": "https://www.openstreetmap.org/way/906717594"
+        },
+        {
+          "id": 919016888,
+          "version": 5,
+          "url": "https://www.openstreetmap.org/way/919016888"
+        },
+        {
+          "id": 1346024630,
+          "version": 2,
+          "url": "https://www.openstreetmap.org/way/1346024630"
+        },
+        {
+          "id": 1346033271,
+          "version": 1,
+          "url": "https://www.openstreetmap.org/way/1346033271"
+        }
+      ]
+    },
+    {
+      "id": "paseo-cascada",
+      "name": "Tramo La Cascada",
+      "category": "shared-trail",
+      "color": "#008b7b",
+      "status": "osm-identified",
+      "visualTrailId": "paseo-cascada",
+      "officialDistanceM": 1200,
+      "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+      "osmWayIds": [
+        555001286,
+        910105205,
+        910105206,
+        1345197424
+      ],
+      "osmNames": [
+        "Paseo Metropolitano - Sendero La Cascada"
+      ],
+      "geometryImported": true,
+      "geometry": null,
+      "publicMapUrl": "https://www.openstreetmap.org/relation/17934042",
+      "difficulty": null,
+      "elevationGainM": null,
+      "elevationLossM": null,
+      "operationConfirmed": false,
+      "description": "Tramo del Paseo Metropolitano identificado para peatones y bicicletas en el plano oficial. La longitud publicada se conserva separada de la medida geográfica.",
+      "sourceNote": "Correspondencia de nombre, sector del plano, etiquetas de uso y relación OSM17934042. Longitud y ramas OSM no demuestran el recorrido exacto ni acceso vigente del plano.",
+      "sourceReferences": [
+        {
+          "id": 555001286,
+          "version": 6,
+          "url": "https://www.openstreetmap.org/way/555001286"
+        },
+        {
+          "id": 910105205,
+          "version": 3,
+          "url": "https://www.openstreetmap.org/way/910105205"
+        },
+        {
+          "id": 910105206,
+          "version": 3,
+          "url": "https://www.openstreetmap.org/way/910105206"
+        },
+        {
+          "id": 1345197424,
+          "version": 1,
+          "url": "https://www.openstreetmap.org/way/1345197424"
+        }
+      ]
     },
     {
       "id": "avenida-pedro-bannen",
@@ -494,14 +831,15 @@
     "distanceType": "reference-published-in-legend",
     "georeferenced": false,
     "sourceSnapshot": "sources/parquemet-mapa-oficial.pdf",
-    "metadata": "data/parquemet/official-document.json"
+    "metadata": "data/parquemet/official-document.json",
+    "sharedTrailCount": 6
   },
   "park": {
     "id": "parquemet",
     "name": "Parquemet",
     "shortName": "Parquemet",
     "locality": "Santiago · Región Metropolitana",
-    "description": "Parque Metropolitano de Santiago. Ocho senderos ciclistas del PDF oficial con geometría OSM contrastada y nueve avenidas secundarias con infraestructura ciclista. Cobertura parcial; no acredita continuidad ni operación actual.",
+    "description": "Ocho senderos ciclistas y seis tramos compartidos del Paseo Metropolitano, con el plano original y sus referencias geográficas.",
     "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
     "checkedOn": "2026-10-20",
     "primaryTargetIds": [

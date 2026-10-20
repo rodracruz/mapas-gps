@@ -18,6 +18,8 @@ payload=''
 for element,value in [('embedded-parks-directory',directory),('embedded-park-catalog',catalog),('embedded-park-document',document)]:
  payload+=f'<script id="{element}" type="application/json">'+json.dumps(value,ensure_ascii=False).replace('<','\\u003c')+'</script>'
 visual=(root/'data/parquemet/visual-cycling-trails.json').read_bytes();assert hashlib.sha256(visual).hexdigest()==next(p for p in directory['parks'] if p['id']=='parquemet')['visualSha256']
+shared=(root/'data/parquemet/visual-paseo-trails.json').read_bytes();assert hashlib.sha256(shared).hexdigest()==next(p for p in directory['parks'] if p['id']=='parquemet')['sharedVisualSha256']
+payload+='<script id="embedded-park-shared-visual" type="application/octet-stream">'+base64.b64encode(shared).decode()+'</script>'
 payload+='<script id="embedded-park-visual" type="application/octet-stream">'+base64.b64encode(visual).decode()+'</script>'
 payload+='<script id="embedded-park-source" type="application/octet-stream">'+base64.b64encode(source).decode()+'</script>'
 modules=[]

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {mkdir,readFile} from 'node:fs/promises';
 const base=process.env.GEOGRAPHIC_BASE_URL||'http://127.0.0.1:4179',bundle=process.env.BACKGROUND_BUNDLE==='1';
-const parks=[{id:'parquemet',entry:bundle?'/dist/parquemet.html':'/parquemet.html',count:8,trail:'centenario',data:'data/parquemet/visual-cycling-trails.json',image:'sources/parquemet-mapa-oficial.jpg'}, {id:'el-durazno',entry:bundle?'/dist/index.html':'/mapa-geografico.html',count:20,trail:'la-virgen',data:'data/el-durazno/continuous-sign-trails.json',image:'sources/el-durazno-official-2022.jpg'}];
+const parks=[{id:'parquemet',entry:bundle?'/dist/parquemet.html':'/parquemet.html',count:14,trail:'centenario',data:'data/parquemet/visual-cycling-trails.json',image:'sources/parquemet-mapa-oficial.jpg'}, {id:'el-durazno',entry:bundle?'/dist/index.html':'/mapa-geografico.html',count:20,trail:'la-virgen',data:'data/el-durazno/continuous-sign-trails.json',image:'sources/el-durazno-official-2022.jpg'}];
 const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox'],proxy:process.env.HTTPS_PROXY?{server:process.env.HTTPS_PROXY}:undefined});
 try{
  for(const park of parks){
@@ -24,5 +24,5 @@ try{
   else{await page.waitForFunction(()=>document.querySelector('[data-sign-mode="overlay"]').getAttribute('aria-pressed')==='true');assert.equal(await page.locator('#sign-raster').isVisible(),true);assert.ok(Number(await page.locator('#sign-raster').evaluate(n=>getComputedStyle(n).opacity))>=.85);await page.locator('#sign-zoom-in').tap();}
   await page.screenshot({path:`test-results/map-background/${park.id}-enlarged.png`});assert.deepEqual(errors,[]);await page.unrouteAll({behavior:'wait'});await context.close();
  }
- console.log('PASS28 route previews keep exact original map bytes, nearby crops, aligned curves and map-backed enlargement in both parks');
+ console.log('PASS34 route previews keep exact original map bytes, nearby crops, aligned curves and map-backed enlargement in both parks');
 }finally{await browser.close();}
