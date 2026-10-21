@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-21T11:09:21.020Z",
+  "checks": [
+    "anonymous HTTP401, owner-private access preserved",
+    "exact main HTML bytes and private original hash; all49 public demo fixes visible, paused filter expansion, shared-node transition, hollow ring, zero GPS watches and real OSM tiles",
+    "el-durazno: native HTTPS opt-in and public emulated fixes acquire probable route; sheet,320x568,844x390,recenter,poor accuracy suppresses snap,stop clears session and restores warning",
+    "parquemet: native HTTPS opt-in and public emulated fixes acquire probable route; sheet,320x568,844x390,recenter,poor accuracy suppresses snap,stop clears session and restores warning",
+    "zero JavaScript errors; field GPS/physical device not tested"
+  ],
+  "coordinates": "Public OSM fixtures emulated through browser; no real user GPS",
+  "mainSha256": "ac0d7b50271b538939beff5bafac9c1e0567f94917fd4a81b481c0f352d52dbf",
+  "parkSha256": "f3c81cbef9354ac345881b01f2bfdb22e46fa41b04bbb882c558f417b66fe143"
+}
