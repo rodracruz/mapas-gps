@@ -5,6 +5,8 @@ import {gpsViewport} from './gps-viewport.mjs';
 // Session-only tracking. No positions or inferred trail choices are persisted.
 export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>route.name,demoFactory=createPublicDemo}){
  const el=id=>document.getElementById(id);el('gps-demo').hidden=!demoFactory;const matcher=createRouteMatcher(geo),layer=L.layerGroup().addTo(map);
+ const pane='gps-location',gpsPane=map.getPane(pane)||map.createPane(pane);
+ gpsPane.style.zIndex='650';gpsPane.style.pointerEvents='none';
  let mode='off',watchId=null,timer=null,ageTimer=null,session=0,result=matcher.snapshot(),demo=null,index=-1,paused=false,follow=false,firstFix=true,signalError=null,demoFit=false,frame=null;
  const controls='.map-toolbar,.map-source-switch,#map-filter-slot,.route-filters.in-map .route-filter-body,#map-trails,.leaflet-control-zoom,#map-options,#gps-panel,#route-sheet,#map-notice';
  const notice=el('map-notice'),noticeParent=notice.parentNode,noticeNext=notice.nextSibling;
@@ -58,13 +60,13 @@ export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>r
   text('gps-accuracy',active&&result.raw?`${isDemo?'Lectura simulada':'Lectura GPS'} · precisión indicada ±${Math.round(result.raw.accuracy)} m${result.status==='stale'?' · antigua':''}`:'');
   if(!active||!result.raw)return;
   const raw=result.raw,latlng=[raw.latitude,raw.longitude],color=isDemo?'#c76722':'#2874bd';
-  L.circle(latlng,{radius:raw.accuracy,color,weight:1,fillColor:color,fillOpacity:.08,interactive:false,className:'gps-accuracy-circle'}).addTo(layer);
-  L.circleMarker(latlng,{radius:5,color:'#fff',weight:2,fillColor:color,fillOpacity:1,interactive:false,className:'gps-raw-dot'}).addTo(layer);
+  L.circle(latlng,{pane,radius:raw.accuracy,color,weight:1,fillColor:color,fillOpacity:.08,interactive:false,className:'gps-accuracy-circle'}).addTo(layer);
+  L.circleMarker(latlng,{pane,radius:5,color:'#fff',weight:2,fillColor:color,fillOpacity:1,interactive:false,className:'gps-raw-dot'}).addTo(layer);
   if(!sign&&result.snapped&&result.status==='probable'){
    const snap=[result.snapped.latitude,result.snapped.longitude];
-   L.polyline([latlng,snap],{color,weight:1.5,dashArray:'3 5',interactive:false}).addTo(layer);
+   L.polyline([latlng,snap],{pane,color,weight:1.5,dashArray:'3 5',interactive:false}).addTo(layer);
    // A hollow ring keeps the original reading visible even when both coincide.
-   L.circleMarker(snap,{radius:10,color:'#203e35',weight:3,fill:false,interactive:false,className:'gps-snapped-dot'}).addTo(layer);
+   L.circleMarker(snap,{pane,radius:10,color:'#203e35',weight:3,fill:false,interactive:false,className:'gps-snapped-dot'}).addTo(layer);
   }
  }
  function show(next){result=next;render();positionCamera();}

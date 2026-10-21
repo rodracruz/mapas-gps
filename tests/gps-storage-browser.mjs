@@ -1,0 +1,16 @@
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const base=process.env.GEOGRAPHIC_BASE_URL||'http://127.0.0.1:4183',executablePath='/usr/bin/chromium';
+const mapUrl=base+'/mapa-geografico.html#parque=el-durazno&mapa=1&fuente=osm';
+const check=async(name,fn)=>{await fn();console.log('PASS',name);};
+const local=await chromium.launch({executablePath,args:['--no-sandbox']});
+try{
+ await check('legacy Blob, calibration, trails, webCenter and storage survive app→GPS demo→app with active SW',async()=>{
+  const ctx=await local.newContext(),p=await ctx.newPage();await p.goto(base+'/index.html');await p.waitForSelector('#mapList .map-card');await p.evaluate(async()=>{await navigator.serviceWorker.ready;});await p.reload();await p.waitForFunction(()=>!!navigator.serviceWorker.controller);
+  const image=await readFile(new URL('../icons/icon192.png',import.meta.url));await p.locator('#fileInput').setInputFiles({name:'preservation.png',mimeType:'image/png',buffer:image});await p.waitForFunction(()=>window.MapasGPS?.state.current?.name==='preservation');
+  await p.evaluate(async()=>{const m=window.MapasGPS.state.current;m.points=[{px:0,py:0,lat:-33.30,lon:-70.50},{px:190,py:0,lat:-33.30,lon:-70.49},{px:0,py:190,lat:-33.31,lon:-70.50}];m.trails=[{id:'fixture',name:'Private test trail',coordinates:[[-70.5,-33.3],[-70.49,-33.31]]}];m.webCenter={lat:-33.305,lon:-70.495};await window.MapasGPS.saveCurrent();localStorage.setItem('preservation-sentinel','keep');});
+  const snapshot=()=>p.evaluate(async()=>{const db=await new Promise((resolve,reject)=>{const r=indexedDB.open('mapas-gps-v1',1);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});const items=await new Promise((resolve,reject)=>{const r=db.transaction('maps').objectStore('maps').getAll();r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});db.close();return {items:await Promise.all(items.map(async({blob,...rest})=>({...rest,blobType:blob.type,bytes:Array.from(new Uint8Array(await blob.arrayBuffer()))}))),storage:Object.fromEntries(Object.entries(localStorage))};});
+  const before=await snapshot();await p.goto(mapUrl);await p.waitForSelector('#map-card[data-ready="true"]');assert.equal(await p.locator('.trail-line').count(),13);assert.equal(await p.evaluate(()=>!!navigator.serviceWorker.controller),true);await p.locator('#gps-demo').click();await p.locator('#gps-demo-pause').click();for(let i=0;i<5;i++)await p.locator('#gps-demo-next').click();await p.waitForSelector('#gps-status[data-state=probable]');await p.locator('#close-map').click();assert.equal(await p.locator('.gps-raw-dot').count(),0);await p.goto(base+'/index.html');await p.waitForSelector('#mapList .map-card');const after=await snapshot();assert.deepEqual(after,before);await p.locator('.map-card').filter({hasText:'preservation'}).getByRole('button',{name:'Abrir mapa'}).click();await p.waitForFunction(()=>window.MapasGPS.state.current?.name==='preservation');assert.match(await p.locator('#viewerState').innerText(),/Calibrado/);assert.equal(await p.locator('#mapImage').evaluate(n=>n.naturalWidth),192);await ctx.close();
+ });
+}finally{await local.close();}

@@ -15,6 +15,8 @@ En teléfono corto, la ficha se limita al 25% de altura, con desplazamiento para
 
 También se reprodujo una carrera entre dos pruebas que escribían `dist/` simultáneamente: la suite inicial falló 1/128. Ahora ambas protegen la transacción completa construir/leer/verificar con un bloqueo del sistema operativo. Las aserciones de foto y alias siguen activas; el bloqueo se libera por EOF también ante interrupción del proceso. No se serializa toda la suite.
 
+Los rótulos de Parquemet también podían cubrir parte del aro: ahora las cuatro capas GPS se dibujan en un panel Leaflet a z=650, por encima de los rótulos (600), sin capturar eventos táctiles. Se comprobó primero el fallo de orden de capas y después su corrección.
+
 ## Uso para probar
 
 Vista previa privada: https://mapas-gps-revision-durazno.rodracruz.chatgpt.site/#parque=el-durazno&mapa=1
@@ -40,6 +42,7 @@ En otra terminal de esa misma máquina:
 ```sh
 GEOGRAPHIC_BASE_URL=http://127.0.0.1:4183 node tests/gps-browser.mjs
 GEOGRAPHIC_BASE_URL=http://127.0.0.1:4183 npm run test:gps:layout
+GEOGRAPHIC_BASE_URL=http://127.0.0.1:4183 npm run test:gps:storage
 GEOGRAPHIC_BASE_URL=http://127.0.0.1:4183 GPS_ENTRY=/dist/index.html node tests/gps-layout-browser.mjs
 GEOGRAPHIC_BASE_URL=http://127.0.0.1:4183 GPS_ENTRY=/dist/index.html PARK_ENTRY=/dist/parquemet.html node tests/gps-follow-browser.mjs
 GEOGRAPHIC_BASE_URL=http://127.0.0.1:4183 node tests/geographic-regressions.mjs
@@ -49,6 +52,8 @@ GEOGRAPHIC_BASE_URL=http://127.0.0.1:4183 FILTER_BUNDLE=1 node tests/route-filte
 `localhost` es local a la máquina que sirve los archivos; no es una vista accesible desde otro equipo. `npm test` reconstruye el paquete público; para alojar la foto privada hay que generar después con `--reference-photo` apuntando al original fuera de Git. La foto, `dist/` y ZIP privados nunca se añaden al repositorio público.
 
 La suite de visor comprueba las 49 lecturas en 390×844, 844×390, 320×740, 667×375 y 320×568, aro hueco, botón GPS accesible y expansión de filtros con demo pausada. La prueba nativa usa la API real de Chromium con coordenadas públicas emuladas: adquiere pista probable en ambos parques, ficha, giros, recentrado, precisión de 100 m sin ajuste, detención y ausencia de teselas con aviso visible. La suite GPS existente cubre opt-in, continuidad y cambio de pista por nodo compartido, Cartel sin ajuste, pérdida temporal, caducidad, recuperación, permiso rechazado, cancelación al cerrar, ausencia de escrituras y estado guardado intacto.
+
+La prueba adicional `gps-storage-browser.mjs` importa una imagen sintética en la app anterior y activa su service worker real; compara bytes de Blob, calibración, senderos guardados, centro web y todo localStorage antes/después de abrir el parque, reproducir GPS y volver a abrir el mapa original. Pasó sin cambios en esos datos.
 
 ## Límites
 

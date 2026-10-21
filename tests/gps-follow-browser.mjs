@@ -30,6 +30,7 @@ try{
   await page.goto(base+park.entry+'#parque='+park.id+'&mapa=1');await page.waitForSelector('#map-card[data-ready=true]');
   if(park.id==='parquemet')assert.equal(await page.locator('#gps-demo').isVisible(),false,'Parquemet never replays the El Durazno demo');
   await page.locator('#gps-toggle').tap();await page.waitForSelector('.gps-raw-dot');await visiblePoint(page,park.id+' initial native fix');
+  assert.equal(await page.locator('.gps-raw-dot').evaluate(e=>{const pane=e.closest('.leaflet-pane'),markers=document.querySelector('.leaflet-marker-pane');return Number(getComputedStyle(pane).zIndex)>Number(getComputedStyle(markers).zIndex)&&getComputedStyle(pane).pointerEvents==='none';}),true,'GPS paints above route labels without blocking touches');
   for(let i=1;i<9;i++){const fix=park.id==='el-durazno'?fixes[i]:park.fix;await context.setGeolocation({longitude:fix.longitude,latitude:fix.latitude,accuracy:5+i*.01});await page.waitForTimeout(500);}
   await page.waitForSelector('#gps-status[data-state="probable"][data-route-id="'+park.target+'"]');
   await page.locator('[data-map-target="'+park.target+'"]').tap();await visiblePoint(page,park.id+' selected sheet');
