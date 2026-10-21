@@ -1,10 +1,27 @@
 import {createRouteMatcher} from '../navigation/matcher.mjs';
 import {createPublicDemo} from '../navigation/demo.mjs';
+import {gpsViewport} from './gps-viewport.mjs';
 
 // Session-only tracking. No positions or inferred trail choices are persisted.
 export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>route.name,demoFactory=createPublicDemo}){
  const el=id=>document.getElementById(id);el('gps-demo').hidden=!demoFactory;const matcher=createRouteMatcher(geo),layer=L.layerGroup().addTo(map);
- let mode='off',watchId=null,timer=null,ageTimer=null,session=0,result=matcher.snapshot(),demo=null,index=-1,paused=false,follow=false,firstFix=true,signalError=null;
+ let mode='off',watchId=null,timer=null,ageTimer=null,session=0,result=matcher.snapshot(),demo=null,index=-1,paused=false,follow=false,firstFix=true,signalError=null,demoFit=false,frame=null;
+ const controls='.map-toolbar,.map-source-switch,#map-filter-slot,.route-filters.in-map .route-filter-body,#map-trails,.leaflet-control-zoom,#map-options,#gps-panel,#route-sheet,#map-notice';
+ const notice=el('map-notice'),noticeParent=notice.parentNode,noticeNext=notice.nextSibling;
+ function viewport(){
+  const container=map.getContainer().getBoundingClientRect(),size=map.getSize();
+  return gpsViewport({width:size.x,height:size.y},[...document.querySelectorAll(controls)].filter(e=>e.getClientRects().length).map(e=>{const r=e.getBoundingClientRect();return{x:r.x-container.x,y:r.y-container.y,width:r.width,height:r.height};}));
+ }
+ function positionCamera(){
+  if(mode==='off')return;const r=viewport();if(!r)return;
+  const size=map.getSize();
+  if(demoFit&&demo){map.fitBounds(L.latLngBounds(demo.fixes.map(f=>[f.latitude,f.longitude])),{paddingTopLeft:[r.x,r.y],paddingBottomRight:[size.x-r.x-r.width,size.y-r.y-r.height],maxZoom:18,animate:false});}
+  else if(follow&&result.raw){
+   map.setView([result.raw.latitude,result.raw.longitude],firstFix?Math.max(map.getZoom(),17):map.getZoom(),{animate:false});firstFix=false;
+   map.panBy([size.x/2-r.x-r.width/2,size.y/2-r.y-r.height/2],{animate:false});
+  }
+ }
+ const refreshCamera=()=>{if(frame!==null)cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{frame=null;positionCamera();});};
  const text=(id,value)=>{if(el(id).textContent!==value)el(id).textContent=value;};
  const details={
   'awaiting-fix':'Esperando una lectura de ubicación.',acquiring:'Comprobando varias lecturas antes de elegir una pista.',
@@ -24,6 +41,10 @@ export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>r
  };
  function render(){
   el('gps-panel').dataset.mode=mode;layer.clearLayers();const active=mode!=='off',isDemo=mode==='demo',sign=getSource()==='cartel';
+  // A connection warning belongs with GPS status while tracking, so it cannot
+  // cover the last free strip of map on a short phone. Restore it on stop.
+  if(active&&notice.parentNode!==el('gps-panel'))el('gps-panel').append(notice);
+  else if(!active&&notice.parentNode!==noticeParent)noticeParent.insertBefore(notice,noticeNext);
   const name=result.route?routeName(result.route):null;
   const status=el('gps-status');status.dataset.state=active?result.status:'off';status.dataset.routeId=active?result.route?.id||'':'';status.dataset.reason=active?result.reason:'off';
   text('gps-mode',isDemo?(index===demo.fixes.length-1?'Demostración finalizada · posición simulada':'Demostración · posición simulada'):active?'GPS · OSM experimental':'Ubicación desactivada');
@@ -46,8 +67,8 @@ export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>r
    L.circleMarker(snap,{radius:10,color:'#203e35',weight:3,fill:false,interactive:false,className:'gps-snapped-dot'}).addTo(layer);
   }
  }
- function show(next){result=next;render();if(follow&&result.raw){map.setView([result.raw.latitude,result.raw.longitude],firstFix?Math.max(map.getZoom(),17):map.getZoom(),{animate:false});firstFix=false;}}
- function stop(){session++;if(watchId!==null)navigator.geolocation.clearWatch(watchId);watchId=null;clearInterval(timer);clearInterval(ageTimer);timer=ageTimer=null;mode='off';demo=null;index=-1;paused=false;follow=false;firstFix=true;signalError=null;result=matcher.reset();render();}
+ function show(next){result=next;render();positionCamera();}
+ function stop(){session++;if(watchId!==null)navigator.geolocation.clearWatch(watchId);watchId=null;clearInterval(timer);clearInterval(ageTimer);timer=ageTimer=null;mode='off';demo=null;index=-1;paused=false;follow=false;demoFit=false;firstFix=true;signalError=null;result=matcher.reset();render();}
  function fail(error){
   const messages={1:'El permiso de ubicación fue rechazado. Puedes habilitarlo en los permisos del navegador.',2:'No hay una lectura disponible. El GPS sigue activo y espera recuperar señal.',3:'No llegó una lectura a tiempo. El GPS sigue esperando señal.'};
   if(error.code===1){stop();text('gps-status','Permiso de ubicación rechazado');text('gps-detail',messages[1]);el('gps-status').dataset.state='error';el('gps-status').dataset.reason='permission-denied';return;}
@@ -65,14 +86,14 @@ export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>r
  function step(){if(mode!=='demo'||index>=demo.fixes.length-1)return;index++;show(matcher.update(demo.fixes[index],demo.fixes[index].timestamp));if(index===demo.fixes.length-1){clearInterval(timer);timer=null;paused=true;render();}}
  function playback(){clearInterval(timer);timer=setInterval(step,500);}
  function startDemo(){
-  if(!demoFactory)return;stop();setSource('osm');demo=demoFactory(geo);mode='demo';step();
-  const size=map.getSize(),panel=el('gps-panel').getBoundingClientRect(),lateral=size.x>size.y&&size.y<=650;
-  map.fitBounds(L.latLngBounds(demo.fixes.map(f=>[f.latitude,f.longitude])),{paddingTopLeft:[25,175],paddingBottomRight:lateral?[panel.width+35,30]:[25,Math.min(panel.height+65,size.y-265)],maxZoom:18,animate:false});playback();
+  if(!demoFactory)return;stop();setSource('osm');demo=demoFactory(geo);mode='demo';demoFit=true;step();playback();
  }
  el('gps-toggle').onclick=()=>mode==='gps'?stop():startGps();el('gps-demo').onclick=()=>mode==='demo'?stop():startDemo();
  el('gps-demo-pause').onclick=()=>{if(mode!=='demo')return;paused=!paused;if(paused){clearInterval(timer);timer=null;}else playback();render();};
  el('gps-demo-next').onclick=()=>{paused=true;clearInterval(timer);timer=null;step();};
- el('gps-center').onclick=()=>{follow=true;firstFix=true;show(result);};
- const dragged=()=>{follow=false;};map.on('dragstart',dragged);window.addEventListener('pagehide',stop);
- render();return {stop,sourceChanged:()=>render(),setMapOpen:open=>{if(!open)stop();},destroy(){stop();map.off('dragstart',dragged);window.removeEventListener('pagehide',stop);layer.remove();}};
+ el('gps-center').onclick=()=>{demoFit=false;follow=true;firstFix=true;show(result);};
+ const dragged=()=>{follow=false;demoFit=false;};map.on('dragstart',dragged);map.on('resize',refreshCamera);window.addEventListener('pagehide',stop);
+ // The filter body moves into the map after setup; observe its stable ID too.
+ const observer=new ResizeObserver(refreshCamera);for(const node of document.querySelectorAll(controls+',#route-filter-body'))observer.observe(node);
+ render();return {stop,sourceChanged:()=>{render();refreshCamera();},setMapOpen:open=>{if(!open)stop();},destroy(){stop();observer.disconnect();if(frame!==null)cancelAnimationFrame(frame);map.off('dragstart',dragged);map.off('resize',refreshCamera);window.removeEventListener('pagehide',stop);layer.remove();}};
 }
