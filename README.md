@@ -52,3 +52,7 @@ Los archivos de aplicación previos, el original JPG, el service worker y la bas
 [Abrir parques y senderos](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site) — aplicación privada en Sites, accesible con la cuenta propietaria de ChatGPT; la revisión fotográfica está enlazada desde el parque. Publicación actual y comprobaciones en [mobile-private-release.md](docs/evidence/mobile-private-release.md); historial fotográfico en [private-site.md](docs/evidence/private-site.md). La publicación GitHub Pages original y main no se modificaron.
 
 La revisión incluye ahora el mapa oficial alineado de mayor detalle (1800 × 2200) y un selector para contrastarlo con la foto original. `npm run test:sources` comprueba que cambiar de fondo mantiene la geometría y el encuadre. La opción de construcción `--reference-photo /ruta/a/foto.jpg` incorpora una foto completa únicamente al HTML generado; ese archivo no se añade al código público. La copia privada incluye la foto completa recibida y su análisis está en [new-photo-81184.md](docs/evidence/new-photo-81184.md).
+
+### Validación GPS en ambos parques
+
+[Pruebas y uso del GPS](docs/evidence/gps-validation.md): ubicación opt-in, demo pública, continuidad de pista OSM y correcciones de visibilidad en móvil tras añadir filtros. [Evidencia de entrega](docs/evidence/gps-validation-release.md). La verificación usa coordenadas públicas emuladas; no acredita navegación sobre terreno.

@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-21",
+  "code": "a95db68",
+  "coordinates": "Public OSM fixtures emulated through Chromium, no real user location",
+  "unitTests": 130,
+  "unitFailures": 0,
+  "checks": [
+    {
+      "command": "npm test",
+      "summary": [
+        "\u2139 tests 130",
+        "\u2139 pass 130",
+        "\u2139 fail 0"
+      ]
+    },
+    {
+      "command": "node tests/gps-browser.mjs",
+      "summary": [
+        "PASS opt-in GPS, public demo and junction continuity, raw/snap distinction, sign-source guard, stale signal, permission denial, standalone scopes, stop/close cleanup and unchanged storage"
+      ]
+    },
+    {
+      "command": "node tests/gps-layout-browser.mjs (source)",
+      "summary": [
+        "PASS 49 public positions visible without control overlap at390x844,844x390,320x740,667x375,320x568; hollow adjusted ring, reachable GPS button with trail sheet and paused-demo filter expansion"
+      ]
+    },
+    {
+      "command": "node tests/gps-follow-browser.mjs (source)",
+      "summary": [
+        "PASS native GPS with public coordinates in both parks: probable acquisition, unobscured fix, sheet, rotation, recenter, coarse accuracy, stop, failed tiles and no foreign demo"
+      ]
+    },
+    {
+      "command": "node tests/gps-layout-browser.mjs (standalone)",
+      "summary": [
+        "PASS 49 public positions visible without control overlap at390x844,844x390,320x740,667x375,320x568; hollow adjusted ring, reachable GPS button with trail sheet and paused-demo filter expansion"
+      ]
+    },
+    {
+      "command": "node tests/gps-follow-browser.mjs (standalone)",
+      "summary": [
+        "PASS native GPS with public coordinates in both parks: probable acquisition, unobscured fix, sheet, rotation, recenter, coarse accuracy, stop, failed tiles and no foreign demo"
+      ]
+    },
+    {
+      "command": "node tests/gps-storage-browser.mjs",
+      "summary": [
+        "PASS legacy Blob, calibration, trails, webCenter and storage survive app\u2192GPS demo\u2192app with active SW"
+      ]
+    },
+    {
+      "command": "node tests/geographic-regressions.mjs",
+      "summary": [
+        "PASS selected trail keeps attribution unobstructed",
+        "PASS landscape fit reserves lateral sheet width instead of its height",
+        "PASS standalone logo and review links resolve to executable app pages"
+      ]
+    },
+    {
+      "command": "node tests/route-filters-browser.mjs (standalone)",
+      "summary": [
+        "PASS parquemet types, difficulty, both sort directions, one-shot proximity, denied permission, stable map and mobile controls",
+        "PASS el-durazno types, difficulty, both sort directions, one-shot proximity, denied permission, stable map and mobile controls"
+      ]
+    }
+  ],
+  "notTested": [
+    "Physical phone GPS",
+    "Field riding",
+    "Current access or direction on terrain"
+  ]
+}

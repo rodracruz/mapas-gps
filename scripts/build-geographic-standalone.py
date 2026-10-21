@@ -44,7 +44,8 @@ for path in ['geographic/cartel.mjs', 'geographic/data.mjs', 'geographic/catalog
 for path, namespace, exports, bindings in [
     ('navigation/matcher.mjs', 'MapasGPSMatcher', 'createRouteMatcher', ''),
     ('navigation/demo.mjs', 'MapasGPSDemo', 'createPublicDemo', ''),
-    ('geographic/gps.mjs', 'MapasGPSGps', 'setupGpsTracking', 'const {createRouteMatcher}=MapasGPSMatcher; const {createPublicDemo}=MapasGPSDemo;')]:
+    ('geographic/gps-viewport.mjs', 'MapasGPSViewport', 'gpsViewport', ''),
+    ('geographic/gps.mjs', 'MapasGPSGps', 'setupGpsTracking', 'const {createRouteMatcher}=MapasGPSMatcher; const {createPublicDemo}=MapasGPSDemo; const {gpsViewport}=MapasGPSViewport;')]:
     code = re.sub(r'^import .*?;\n', '', (root / path).read_text(), flags=re.M)
     code = re.sub(r'\bexport (function|const|let|class) ', r'\1 ', code)
     modules.append(f'const {namespace}=(()=>{{\n{bindings}\n{code}\nreturn {{{exports}}};\n}})();')

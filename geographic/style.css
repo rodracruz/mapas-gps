@@ -39,6 +39,15 @@
 .generic-park .fullscreen .map-trails{top:calc(171px + env(safe-area-inset-top))}
 .generic-park .fullscreen .map-options,.generic-park .fullscreen .leaflet-top{top:calc(225px + env(safe-area-inset-top))}
 .avenue-label{width:auto!important;height:auto!important;white-space:nowrap}
+#gps-panel>#map-notice{position:static;margin:6px 0 0;padding:6px 8px;font-size:10px;line-height:1.35}
+/* Keep a usable GPS gap between the header and both bottom panels on short phones. */
+@media(orientation:portrait) and (max-height:650px){
+ .map-card.fullscreen .route-sheet{max-height:25dvh}
+ .fullscreen:has(.route-sheet:not([hidden])) .gps-panel{bottom:calc(25dvh + 10px);max-height:none}
+ .fullscreen:has(.route-sheet:not([hidden])) .gps-panel:not([data-mode=off]) #gps-privacy{display:none}
+ .map-card.fullscreen:has(#gps-panel>#map-notice:not([hidden])) .route-sheet{max-height:18dvh}
+ .fullscreen:has(.route-sheet:not([hidden])):has(#gps-panel>#map-notice:not([hidden])) .gps-panel{bottom:calc(18dvh + 10px)}
+}
 .avenue-label .cycling-label-button{font-size:9px;color:#24577a;border-color:#7096ae;max-width:150px;overflow:hidden;text-overflow:ellipsis}
 .map-card:not(.fullscreen) .avenue-label{display:none}
 .avenue-card h3{font-size:23px;overflow-wrap:break-word}
