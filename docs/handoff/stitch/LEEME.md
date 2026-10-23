@@ -1,6 +1,6 @@
 # Mapas GPS para Stitch
 
-Base inspeccionada: `31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f` (`test/gps-validation`),2026-10-23. El proyecto/modelo de Stitch y sus propuestas todavía no se han compartido en este hilo. Este paquete prepara lo existente para ese modelo; las propuestas concretas se completan al recibir su enlace o exportación.
+Base inspeccionada: `31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f` (`test/gps-validation`),2026-10-23. El usuario compartió su proyecto de Stitch y eligió la segunda versión. El enlace permanece en la conversación privada. La revisión de sus pantallas y propuestas está en curso; este documento prepara la base funcional para integrarlas.
 
 ## Cómo pasarlo
 
@@ -26,6 +26,7 @@ La vista alojada del propietario es https://mapas-gps-revision-durazno.rodracruz
 ## Contenido y fuentes
 
 - `capturas/`: pantallas históricas verificadas del producto, numeradas; algunas muestran una etapa anterior a las últimas correcciones. `capturas.json` identifica su fuente y alcance. Las capturas GPS usan posiciones públicas simuladas, nunca una salida personal.
+- `CONTRATO-INTEGRACION.json`: inventario de83 controles estáticos de El Durazno y73 de Parquemet, más sus identificadores de recorridos; conservarlos o entregar una correspondencia al exportar.
 - `FUNCIONES.md`: matriz de funciones y estados que hay que conservar, ampliaciones previstas y módulos de referencia.
 - `catalogos.json`: nombres, IDs, categorías y datos documentados de ambos parques.
 - `codigo/`: archivos públicos de la base exacta; se omiten las capturas históricas voluminosas de `docs/`, que siguen disponibles en GitHub. Incluye código, geometrías, fuentes públicas y pruebas.

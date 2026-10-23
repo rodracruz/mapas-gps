@@ -1,0 +1,746 @@
+{
+  "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+  "purpose": "Preserve functional bindings while applying the user-selected second Stitch version. This is a source-derived interface inventory, not a new design.",
+  "entries": [
+    {
+      "parkId": "el-durazno",
+      "html": "mapa-geografico.html",
+      "controller": "geographic/viewer.mjs",
+      "staticControls": [
+        {
+          "id": "app",
+          "element": "main"
+        },
+        {
+          "id": "park-picker",
+          "element": "section"
+        },
+        {
+          "id": "picker-title",
+          "element": "h1"
+        },
+        {
+          "id": "park-list",
+          "element": "div"
+        },
+        {
+          "id": "park-view",
+          "element": "section"
+        },
+        {
+          "id": "back-to-parks",
+          "element": "button"
+        },
+        {
+          "id": "park-locality",
+          "element": "p"
+        },
+        {
+          "id": "park-name",
+          "element": "h1"
+        },
+        {
+          "id": "park-description",
+          "element": "p"
+        },
+        {
+          "id": "open-park-photo",
+          "element": "button",
+          "label": "Ampliar mapa del parque en alta resolución"
+        },
+        {
+          "id": "park-photo",
+          "element": "img"
+        },
+        {
+          "id": "park-photo-caption",
+          "element": "figcaption"
+        },
+        {
+          "id": "open-original-photo",
+          "element": "button"
+        },
+        {
+          "id": "open-sign",
+          "element": "button"
+        },
+        {
+          "id": "amenities",
+          "element": "ul",
+          "label": "Servicios del parque"
+        },
+        {
+          "id": "available-count",
+          "element": "span"
+        },
+        {
+          "id": "data-status",
+          "element": "p"
+        },
+        {
+          "id": "route-filter-anchor",
+          "element": "div"
+        },
+        {
+          "id": "trail-grid",
+          "element": "div"
+        },
+        {
+          "id": "map-card",
+          "element": "section",
+          "label": "Mapa del parque"
+        },
+        {
+          "id": "geo-map",
+          "element": "div",
+          "label": "Mapa mundial con senderos del parque"
+        },
+        {
+          "id": "open-map",
+          "element": "button",
+          "label": "Abrir mapa del parque a pantalla completa"
+        },
+        {
+          "id": "close-map",
+          "element": "button",
+          "label": "Cerrar mapa"
+        },
+        {
+          "id": "map-park-title",
+          "element": "strong"
+        },
+        {
+          "id": "fit-routes",
+          "element": "button",
+          "label": "Encuadrar senderos disponibles"
+        },
+        {
+          "id": "map-source-cartel",
+          "element": "button"
+        },
+        {
+          "id": "map-source-osm",
+          "element": "button"
+        },
+        {
+          "id": "map-source-status",
+          "element": "span"
+        },
+        {
+          "id": "map-filter-slot",
+          "element": "div"
+        },
+        {
+          "id": "map-trails",
+          "element": "nav",
+          "label": "Seleccionar sendero en el mapa"
+        },
+        {
+          "id": "map-options",
+          "element": "details"
+        },
+        {
+          "id": "visibility-controls",
+          "element": "div"
+        },
+        {
+          "id": "show-context",
+          "element": "input"
+        },
+        {
+          "id": "osm-way",
+          "element": "select"
+        },
+        {
+          "id": "download-geojson",
+          "element": "button"
+        },
+        {
+          "id": "gps-panel",
+          "element": "section",
+          "label": "Ubicación y pista probable"
+        },
+        {
+          "id": "gps-mode",
+          "element": "span"
+        },
+        {
+          "id": "gps-privacy",
+          "element": "small"
+        },
+        {
+          "id": "gps-toggle",
+          "element": "button"
+        },
+        {
+          "id": "gps-demo",
+          "element": "button"
+        },
+        {
+          "id": "gps-center",
+          "element": "button",
+          "label": "Centrar mi posición"
+        },
+        {
+          "id": "gps-status",
+          "element": "strong"
+        },
+        {
+          "id": "gps-detail",
+          "element": "p"
+        },
+        {
+          "id": "gps-accuracy",
+          "element": "small"
+        },
+        {
+          "id": "gps-demo-controls",
+          "element": "div"
+        },
+        {
+          "id": "gps-demo-pause",
+          "element": "button"
+        },
+        {
+          "id": "gps-demo-next",
+          "element": "button"
+        },
+        {
+          "id": "gps-demo-progress",
+          "element": "progress",
+          "label": "Avance de la demostración"
+        },
+        {
+          "id": "gps-demo-stage",
+          "element": "span"
+        },
+        {
+          "id": "map-notice",
+          "element": "p"
+        },
+        {
+          "id": "route-sheet",
+          "element": "section"
+        },
+        {
+          "id": "sheet-level",
+          "element": "span"
+        },
+        {
+          "id": "sheet-title",
+          "element": "h2"
+        },
+        {
+          "id": "close-sheet",
+          "element": "button",
+          "label": "Cerrar información del sendero"
+        },
+        {
+          "id": "sheet-description",
+          "element": "p"
+        },
+        {
+          "id": "sheet-stats",
+          "element": "dl"
+        },
+        {
+          "id": "sheet-source",
+          "element": "a"
+        },
+        {
+          "id": "fit-selected",
+          "element": "button"
+        },
+        {
+          "id": "park-source",
+          "element": "a"
+        },
+        {
+          "id": "app-error",
+          "element": "p"
+        },
+        {
+          "id": "park-photo-dialog",
+          "element": "dialog"
+        },
+        {
+          "id": "close-park-photo",
+          "element": "button",
+          "label": "Cerrar fotografía"
+        },
+        {
+          "id": "park-original-photo",
+          "element": "img"
+        },
+        {
+          "id": "sign-dialog",
+          "element": "dialog"
+        },
+        {
+          "id": "close-sign",
+          "element": "button",
+          "label": "Cerrar plano del cartel"
+        },
+        {
+          "id": "sign-opacity",
+          "element": "input"
+        },
+        {
+          "id": "sign-zoom-out",
+          "element": "button",
+          "label": "Alejar plano"
+        },
+        {
+          "id": "sign-zoom-in",
+          "element": "button",
+          "label": "Acercar plano"
+        },
+        {
+          "id": "sign-fit",
+          "element": "button"
+        },
+        {
+          "id": "sign-download",
+          "element": "button"
+        },
+        {
+          "id": "sign-stage",
+          "element": "section",
+          "label": "Plano vectorizado del cartel"
+        },
+        {
+          "id": "sign-svg",
+          "element": "svg",
+          "label": "Senderos en coordenadas del cartel"
+        },
+        {
+          "id": "sign-raster",
+          "element": "image"
+        },
+        {
+          "id": "sign-paths",
+          "element": "g"
+        },
+        {
+          "id": "sign-gaps",
+          "element": "g"
+        },
+        {
+          "id": "sign-labels",
+          "element": "g"
+        },
+        {
+          "id": "sign-markers",
+          "element": "g"
+        },
+        {
+          "id": "sign-selection",
+          "element": "p"
+        },
+        {
+          "id": "sign-trails-panel",
+          "element": "details"
+        },
+        {
+          "id": "sign-trails",
+          "element": "div"
+        },
+        {
+          "id": "sign-aux-trails",
+          "element": "div"
+        },
+        {
+          "id": "sign-status",
+          "element": "p"
+        },
+        {
+          "id": "sign-retry-source",
+          "element": "button"
+        }
+      ],
+      "stableRouteIds": [
+        "subida-buitrera",
+        "chilling",
+        "papaya",
+        "la-virgen",
+        "parcero",
+        "skills",
+        "mampato",
+        "starwars",
+        "cactus",
+        "lomo-vetado",
+        "la-bala",
+        "cebolla",
+        "los-saltos",
+        "el-gringo",
+        "el-duro",
+        "xl",
+        "rock-n-roll",
+        "las-nieves",
+        "calibre-12",
+        "calibre-loco",
+        "mordor"
+      ]
+    },
+    {
+      "parkId": "parquemet",
+      "html": "parquemet.html",
+      "controller": "geographic/park-viewer.mjs",
+      "staticControls": [
+        {
+          "id": "app",
+          "element": "main"
+        },
+        {
+          "id": "park-view",
+          "element": "section"
+        },
+        {
+          "id": "back-to-parks",
+          "element": "a"
+        },
+        {
+          "id": "park-locality",
+          "element": "p"
+        },
+        {
+          "id": "park-name",
+          "element": "h1"
+        },
+        {
+          "id": "park-description",
+          "element": "p"
+        },
+        {
+          "id": "source-loading",
+          "element": "p"
+        },
+        {
+          "id": "open-park-photo",
+          "element": "button",
+          "label": "Ampliar el mapa oficial de Parquemet"
+        },
+        {
+          "id": "park-photo",
+          "element": "img"
+        },
+        {
+          "id": "park-photo-caption",
+          "element": "figcaption"
+        },
+        {
+          "id": "amenities",
+          "element": "ul",
+          "label": "Servicios documentados en el mapa"
+        },
+        {
+          "id": "available-count",
+          "element": "span"
+        },
+        {
+          "id": "data-status",
+          "element": "p"
+        },
+        {
+          "id": "route-filter-anchor",
+          "element": "div"
+        },
+        {
+          "id": "trail-grid",
+          "element": "div"
+        },
+        {
+          "id": "map-card",
+          "element": "section",
+          "label": "Mapa del parque"
+        },
+        {
+          "id": "geo-map",
+          "element": "div",
+          "label": "Mapa mundial con senderos del parque"
+        },
+        {
+          "id": "open-map",
+          "element": "button",
+          "label": "Abrir mapa del parque a pantalla completa"
+        },
+        {
+          "id": "close-map",
+          "element": "button",
+          "label": "Cerrar mapa"
+        },
+        {
+          "id": "map-park-title",
+          "element": "strong"
+        },
+        {
+          "id": "fit-routes",
+          "element": "button",
+          "label": "Encuadrar recorridos visibles"
+        },
+        {
+          "id": "map-source-status",
+          "element": "span"
+        },
+        {
+          "id": "map-official",
+          "element": "button"
+        },
+        {
+          "id": "map-filter-slot",
+          "element": "div"
+        },
+        {
+          "id": "map-trails",
+          "element": "nav",
+          "label": "Seleccionar sendero en el mapa"
+        },
+        {
+          "id": "map-options",
+          "element": "details"
+        },
+        {
+          "id": "visibility-controls",
+          "element": "div"
+        },
+        {
+          "id": "show-context",
+          "element": "input"
+        },
+        {
+          "id": "osm-way",
+          "element": "select"
+        },
+        {
+          "id": "download-geojson",
+          "element": "button"
+        },
+        {
+          "id": "gps-panel",
+          "element": "section",
+          "label": "Ubicación y pista probable"
+        },
+        {
+          "id": "gps-mode",
+          "element": "span"
+        },
+        {
+          "id": "gps-privacy",
+          "element": "small"
+        },
+        {
+          "id": "gps-toggle",
+          "element": "button"
+        },
+        {
+          "id": "gps-demo",
+          "element": "button"
+        },
+        {
+          "id": "gps-center",
+          "element": "button",
+          "label": "Centrar mi posición"
+        },
+        {
+          "id": "gps-status",
+          "element": "strong"
+        },
+        {
+          "id": "gps-detail",
+          "element": "p"
+        },
+        {
+          "id": "gps-accuracy",
+          "element": "small"
+        },
+        {
+          "id": "gps-demo-controls",
+          "element": "div"
+        },
+        {
+          "id": "gps-demo-pause",
+          "element": "button"
+        },
+        {
+          "id": "gps-demo-next",
+          "element": "button"
+        },
+        {
+          "id": "gps-demo-progress",
+          "element": "progress",
+          "label": "Avance de la demostración"
+        },
+        {
+          "id": "gps-demo-stage",
+          "element": "span"
+        },
+        {
+          "id": "map-notice",
+          "element": "p"
+        },
+        {
+          "id": "route-sheet",
+          "element": "section"
+        },
+        {
+          "id": "sheet-level",
+          "element": "span"
+        },
+        {
+          "id": "sheet-title",
+          "element": "h2"
+        },
+        {
+          "id": "close-sheet",
+          "element": "button",
+          "label": "Cerrar información del sendero"
+        },
+        {
+          "id": "sheet-description",
+          "element": "p"
+        },
+        {
+          "id": "sheet-stats",
+          "element": "dl"
+        },
+        {
+          "id": "sheet-access",
+          "element": "div"
+        },
+        {
+          "id": "sheet-source",
+          "element": "a"
+        },
+        {
+          "id": "compare-official",
+          "element": "button"
+        },
+        {
+          "id": "fit-selected",
+          "element": "button"
+        },
+        {
+          "id": "park-source",
+          "element": "a"
+        },
+        {
+          "id": "app-error",
+          "element": "p"
+        },
+        {
+          "id": "official-dialog",
+          "element": "dialog"
+        },
+        {
+          "id": "official-close",
+          "element": "button",
+          "label": "Cerrar mapa oficial"
+        },
+        {
+          "id": "document-out",
+          "element": "button",
+          "label": "Alejar plano"
+        },
+        {
+          "id": "document-in",
+          "element": "button",
+          "label": "Acercar plano"
+        },
+        {
+          "id": "document-fit",
+          "element": "button"
+        },
+        {
+          "id": "document-map",
+          "element": "button"
+        },
+        {
+          "id": "document-pdf",
+          "element": "a"
+        },
+        {
+          "id": "document-opacity",
+          "element": "input",
+          "label": "Opacidad del plano"
+        },
+        {
+          "id": "document-fit-cycling",
+          "element": "button"
+        },
+        {
+          "id": "document-cycling-trails",
+          "element": "nav",
+          "label": "Senderos del plano oficial"
+        },
+        {
+          "id": "document-cycling-selection",
+          "element": "p"
+        },
+        {
+          "id": "document-stage",
+          "element": "section"
+        },
+        {
+          "id": "document-svg",
+          "element": "svg",
+          "label": "Plano oficial, con zoom y desplazamiento"
+        },
+        {
+          "id": "document-image",
+          "element": "image"
+        },
+        {
+          "id": "document-cycling",
+          "element": "g"
+        },
+        {
+          "id": "document-status",
+          "element": "p"
+        }
+      ],
+      "stableRouteIds": [
+        "centenario",
+        "cuatro-y-medio",
+        "anfiteatro",
+        "la-s",
+        "zorzal",
+        "pa-arriba",
+        "torre-5",
+        "piramide",
+        "paseo-infancia",
+        "paseo-sentidos",
+        "paseo-bellavista",
+        "paseo-pedro-valdivia",
+        "paseo-piramide",
+        "paseo-cascada",
+        "avenida-pedro-bannen",
+        "avenida-alberto-mackenna",
+        "avenida-abate-molina",
+        "avenida-carlos-martner",
+        "avenida-carlos-reed",
+        "avenida-claudio-gay",
+        "avenida-federico-albert",
+        "avenida-manuel-zanartu",
+        "avenida-la-montana",
+        "avenida-gabriela-mistral",
+        "avenida-pablo-neruda",
+        "camino-rafael-elizalde"
+      ]
+    }
+  ],
+  "engines": {
+    "tracking": "geographic/gps.mjs:setupGpsTracking",
+    "matching": "navigation/matcher.mjs:createRouteMatcher",
+    "filtering": "geographic/route-filter-ui.mjs:setupRouteFilters",
+    "officialPreviews": "geographic/trail-preview.mjs:attachTrailPreviews"
+  },
+  "integrationRequirements": [
+    "Retain existing IDs or export an explicit old-to-new ID table.",
+    "Keep the map node stable while filters change routes and ordering.",
+    "Use existing route geometry and IDs; do not redraw geography.",
+    "Treat destinations, loops and network distances as new implementation work, not pre-existing tested behavior.",
+    "Render missing measurements as missing, with source attribution.",
+    "Keep raw GPS reading, accuracy and probable snap separate, with session-only opt-in and stop/close cleanup."
+  ],
+  "stitchTarget": "User-selected second version; project URL stays in the private conversation."
+}
