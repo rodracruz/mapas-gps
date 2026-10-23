@@ -1,0 +1,98 @@
+[
+  {
+    "file": "capturas/01-seleccion-parque.png",
+    "source": "docs/evidence/parquemet/live-picker.png",
+    "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+    "width": 390,
+    "height": 844,
+    "note": "Selector de parques; captura anterior a la última entrega GPS, conservada como referencia de flujo."
+  },
+  {
+    "file": "capturas/02-parquemet-filtros-lista.png",
+    "source": "docs/evidence/route-filters/live-home.png",
+    "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+    "width": 390,
+    "height": 844,
+    "note": "Mapa y fichas; los filtros cambian recorridos conservando el mapa."
+  },
+  {
+    "file": "capturas/03-durazno-lista.png",
+    "source": "docs/evidence/route-filters/el-durazno-home.png",
+    "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+    "width": 390,
+    "height": 844,
+    "note": "Portada/lista de El Durazno durante pruebas de filtros."
+  },
+  {
+    "file": "capturas/04-filtros-desplegados.png",
+    "source": "docs/evidence/route-filters/live-panel.png",
+    "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+    "width": 390,
+    "height": 844,
+    "note": "Controles de tipo, longitud, cercanía y dificultad."
+  },
+  {
+    "file": "capturas/05-ruta-plano-original.png",
+    "source": "docs/evidence/map-preview-background/live-parquemet-card.png",
+    "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+    "width": 390,
+    "height": 844,
+    "note": "Miniatura de ruta con fondo original; captura previa a incorporar todas las avenidas."
+  },
+  {
+    "file": "capturas/06-plano-ampliado.png",
+    "source": "docs/evidence/map-preview-background/live-parquemet-enlarged.png",
+    "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+    "width": 390,
+    "height": 844,
+    "note": "Superposición exacta sobre plano oficial; captura previa a ampliar el catálogo."
+  },
+  {
+    "file": "capturas/07-mapa-filtrado.png",
+    "source": "docs/evidence/route-filters/live-world.png",
+    "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+    "width": 390,
+    "height": 844,
+    "note": "Mapa mundial con avenidas y caminos geográficos."
+  },
+  {
+    "file": "capturas/08-gps-durazno.png",
+    "source": "docs/evidence/gps-validation/live-el-durazno.png",
+    "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+    "width": 320,
+    "height": 568,
+    "note": "Entrega GPS final: coordenadas públicas simuladas en Chromium, no GPS de campo."
+  },
+  {
+    "file": "capturas/09-gps-parquemet.png",
+    "source": "docs/evidence/gps-validation/live-parquemet.png",
+    "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+    "width": 320,
+    "height": 568,
+    "note": "Entrega GPS final: ubicación sobre rótulos; posiciones públicas simuladas."
+  },
+  {
+    "file": "capturas/10-demo-gps.png",
+    "source": "docs/evidence/gps-validation/live-demo.png",
+    "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+    "width": 390,
+    "height": 844,
+    "note": "Demostración sin solicitar ubicación; Lomo Vetado→Calibre12."
+  },
+  {
+    "file": "capturas/11-movil-horizontal.png",
+    "source": "docs/evidence/gps-validation/demo-844x390.png",
+    "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+    "width": 844,
+    "height": 390,
+    "note": "Demo en horizontal; posiciones públicas simuladas."
+  },
+  {
+    "file": "capturas/12-sin-conexion-teselas.png",
+    "source": "docs/evidence/gps-validation/no-tiles-el-durazno.png",
+    "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+    "width": 320,
+    "height": 568,
+    "note": "Aviso de carga de mapa base fallida sin tapar ubicación; posiciones públicas simuladas."
+  }
+]

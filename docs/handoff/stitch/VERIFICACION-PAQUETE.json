@@ -1,0 +1,19 @@
+{
+  "archive": "/workspace/artifacts/mapas-gps-para-stitch.zip",
+  "bytes": 26340006,
+  "sha256": "58306cf1022c5e2042ef3f045bc06950e91093af40babf24a8e439a7718eb922",
+  "fileCount": 255,
+  "screenshots": 12,
+  "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+  "checks": {
+    "publicBuild": true,
+    "imagesVerified": 12,
+    "privatePhotoScriptAbsent": true,
+    "privateBuildUnchanged": true,
+    "browserSmoke": [
+      "public standalone El Durazno loads23 native paths and acquires Lomo in public demo; private photo not embedded",
+      "public standalone Parquemet loads26 routes, filters11 avenues and1 camino, no foreign demo",
+      "no JavaScript runtime errors"
+    ]
+  }
+}

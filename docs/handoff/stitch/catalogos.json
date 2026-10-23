@@ -1,0 +1,1563 @@
+{
+  "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+  "parks": [
+    {
+      "id": "el-durazno",
+      "park": {
+        "id": "el-durazno",
+        "name": "RKF El Durazno",
+        "shortName": "El Durazno",
+        "locality": "Lo Barnechea · Región Metropolitana",
+        "description": "Un bikepark en la precordillera de Santiago, con senderos para distintos niveles y espacios para disfrutar la bicicleta.",
+        "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+        "checkedOn": "2026-10-18",
+        "primaryTargetIds": [
+          "subida-buitrera",
+          "la-virgen"
+        ],
+        "amenities": [
+          {
+            "id": "banos",
+            "label": "Baños",
+            "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+            "checkedOn": "2026-10-18"
+          },
+          {
+            "id": "agua",
+            "label": "Agua potable",
+            "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+            "checkedOn": "2026-10-18"
+          },
+          {
+            "id": "cafeteria",
+            "label": "Cafetería",
+            "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+            "checkedOn": "2026-10-18"
+          },
+          {
+            "id": "tienda",
+            "label": "Tienda",
+            "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+            "checkedOn": "2026-10-18"
+          },
+          {
+            "id": "guardaparques",
+            "label": "Guardaparques",
+            "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+            "checkedOn": "2026-10-18"
+          },
+          {
+            "id": "pumptrack",
+            "label": "Pumptrack",
+            "sourceUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+            "checkedOn": "2026-10-18"
+          }
+        ]
+      },
+      "targets": [
+        {
+          "id": "subida-buitrera",
+          "name": "Subida Buitrera",
+          "status": "osm-identified",
+          "osmWayIds": [
+            477168992
+          ],
+          "publicMapUrl": "https://www.openstreetmap.org/way/477168992",
+          "description": "Tramo denominado Sendero Subida Buitrera en OpenStreetMap. No representa todas las alternativas de subida del parque.",
+          "sourceNote": "Tramo OSM identificado por nombre; extensión actual por confirmar. El rótulo visual «Subida» no acredita equivalencia con toda esta vía.",
+          "color": "#d56b3f",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "osmNames": [
+            "Sendero Subida Buitrera"
+          ],
+          "visualTrailId": null
+        },
+        {
+          "id": "chilling",
+          "name": "Chilling",
+          "status": "public-reference",
+          "osmWayIds": [],
+          "osmNames": [],
+          "visualTrailId": "chilling",
+          "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+          "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+          "geometryImported": false,
+          "color": "#53894f",
+          "difficulty": {
+            "label": "Principiante",
+            "style": "Park",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+        },
+        {
+          "id": "papaya",
+          "name": "Papaya",
+          "status": "osm-identified",
+          "osmWayIds": [
+            747369689
+          ],
+          "osmNames": [
+            "Sendero Papaya"
+          ],
+          "visualTrailId": "papaya",
+          "publicMapUrl": "https://www.openstreetmap.org/way/747369689",
+          "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+          "geometryImported": true,
+          "color": "#53894f",
+          "difficulty": {
+            "label": "Principiante",
+            "style": "Trail",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar."
+        },
+        {
+          "id": "la-virgen",
+          "name": "La Virgen",
+          "status": "public-reference",
+          "osmWayIds": [],
+          "publicMapUrl": "https://www.trailforks.com/trails/la-virgen-205330/",
+          "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+          "geometryImported": false,
+          "color": "#53894f",
+          "difficulty": {
+            "label": "Principiante",
+            "style": "Park",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "references": [
+            {
+              "provider": "Trailforks",
+              "id": 205330,
+              "url": "https://www.trailforks.com/trails/la-virgen-205330/",
+              "geometryImported": false
+            }
+          ],
+          "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS.",
+          "osmNames": [],
+          "visualTrailId": "la-virgen"
+        },
+        {
+          "id": "parcero",
+          "name": "Parcero",
+          "status": "osm-identified",
+          "osmWayIds": [
+            1003300262
+          ],
+          "osmNames": [
+            "Sendero Parcero"
+          ],
+          "visualTrailId": "parcero",
+          "publicMapUrl": "https://www.openstreetmap.org/way/1003300262",
+          "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+          "geometryImported": true,
+          "color": "#53894f",
+          "difficulty": {
+            "label": "Principiante",
+            "style": "Park",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar."
+        },
+        {
+          "id": "skills",
+          "name": "Skills",
+          "status": "public-reference",
+          "osmWayIds": [],
+          "osmNames": [],
+          "visualTrailId": "skills",
+          "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+          "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+          "geometryImported": false,
+          "color": "#486db5",
+          "difficulty": {
+            "label": "Intermedio",
+            "style": "Park",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+        },
+        {
+          "id": "mampato",
+          "name": "Mampato",
+          "status": "osm-identified",
+          "osmWayIds": [
+            478641797,
+            1003300261
+          ],
+          "osmNames": [
+            "Sendero Mampato"
+          ],
+          "visualTrailId": "mampato",
+          "publicMapUrl": "https://www.openstreetmap.org/way/478641797",
+          "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+          "geometryImported": true,
+          "color": "#486db5",
+          "difficulty": {
+            "label": "Intermedio",
+            "style": "Park",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar. Se conservan los dos tramos OSM separados, sin unirlos ni convertirlos en una única línea."
+        },
+        {
+          "id": "starwars",
+          "name": "Starwars",
+          "status": "public-reference",
+          "osmWayIds": [],
+          "publicMapUrl": "https://www.trailforks.com/trails/star-wars-76316/",
+          "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+          "geometryImported": false,
+          "color": "#486db5",
+          "difficulty": {
+            "label": "Intermedio",
+            "style": "Trail",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "references": [
+            {
+              "provider": "Trailforks",
+              "id": 76316,
+              "url": "https://www.trailforks.com/trails/star-wars-76316/",
+              "geometryImported": false
+            }
+          ],
+          "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS.",
+          "osmNames": [],
+          "visualTrailId": "starwars"
+        },
+        {
+          "id": "cactus",
+          "name": "Cactus",
+          "status": "public-reference",
+          "osmWayIds": [],
+          "osmNames": [],
+          "visualTrailId": "cactus",
+          "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+          "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+          "geometryImported": false,
+          "color": "#486db5",
+          "difficulty": {
+            "label": "Intermedio",
+            "style": "Trail",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+        },
+        {
+          "id": "lomo-vetado",
+          "name": "Lomo Vetado",
+          "status": "osm-identified",
+          "osmWayIds": [
+            477170097
+          ],
+          "publicMapUrl": "https://www.openstreetmap.org/way/477170097",
+          "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+          "color": "#247d87",
+          "difficulty": {
+            "label": "Intermedio",
+            "style": "Park",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar.",
+          "osmNames": [
+            "Sendero Lomo Vetado"
+          ],
+          "visualTrailId": "lomo-vetado"
+        },
+        {
+          "id": "la-bala",
+          "name": "La Bala",
+          "status": "osm-identified",
+          "osmWayIds": [
+            1003300263
+          ],
+          "osmNames": [
+            "Sendero la Bala"
+          ],
+          "visualTrailId": "la-bala",
+          "publicMapUrl": "https://www.openstreetmap.org/way/1003300263",
+          "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+          "geometryImported": true,
+          "color": "#486db5",
+          "difficulty": {
+            "label": "Intermedio",
+            "style": "Park",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar."
+        },
+        {
+          "id": "cebolla",
+          "name": "Cebolla",
+          "status": "osm-identified",
+          "osmWayIds": [
+            1003300260
+          ],
+          "osmNames": [
+            "Sendero Cebolla"
+          ],
+          "visualTrailId": "cebolla",
+          "publicMapUrl": "https://www.openstreetmap.org/way/1003300260",
+          "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+          "geometryImported": true,
+          "color": "#343b45",
+          "difficulty": {
+            "label": "Avanzado",
+            "style": "Park",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar."
+        },
+        {
+          "id": "los-saltos",
+          "name": "Los Saltos",
+          "status": "osm-identified",
+          "osmWayIds": [
+            1003300259
+          ],
+          "osmNames": [
+            "Ssendero Los Saltos"
+          ],
+          "visualTrailId": "los-saltos",
+          "publicMapUrl": "https://www.openstreetmap.org/way/1003300259",
+          "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+          "geometryImported": true,
+          "color": "#343b45",
+          "difficulty": {
+            "label": "Avanzado",
+            "style": "Park",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar."
+        },
+        {
+          "id": "el-gringo",
+          "name": "El Gringo",
+          "status": "public-reference",
+          "osmWayIds": [],
+          "osmNames": [],
+          "visualTrailId": "el-gringo",
+          "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+          "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+          "geometryImported": false,
+          "color": "#343b45",
+          "difficulty": {
+            "label": "Avanzado",
+            "style": "Park",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+        },
+        {
+          "id": "el-duro",
+          "name": "El Duro",
+          "status": "public-reference",
+          "osmWayIds": [],
+          "osmNames": [],
+          "visualTrailId": "el-duro",
+          "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+          "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+          "geometryImported": false,
+          "color": "#343b45",
+          "difficulty": {
+            "label": "Avanzado",
+            "style": "Trail",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+        },
+        {
+          "id": "xl",
+          "name": "XL",
+          "status": "osm-identified",
+          "osmWayIds": [
+            75311770,
+            477174835
+          ],
+          "osmNames": [
+            "Sendero XL"
+          ],
+          "visualTrailId": "xl",
+          "publicMapUrl": "https://www.openstreetmap.org/way/75311770",
+          "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+          "geometryImported": true,
+          "color": "#202833",
+          "difficulty": {
+            "label": "Experto",
+            "style": "Trail",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar. Se conservan los dos tramos OSM separados, sin unirlos ni convertirlos en una única línea."
+        },
+        {
+          "id": "rock-n-roll",
+          "name": "Rock N’Roll",
+          "status": "osm-identified",
+          "osmWayIds": [
+            1003300257
+          ],
+          "osmNames": [
+            "Sendero Rock´n Roll"
+          ],
+          "visualTrailId": "rock-n-roll",
+          "publicMapUrl": "https://www.openstreetmap.org/way/1003300257",
+          "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+          "geometryImported": true,
+          "color": "#202833",
+          "difficulty": {
+            "label": "Experto",
+            "style": "Trail",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar."
+        },
+        {
+          "id": "las-nieves",
+          "name": "Las Nieves",
+          "status": "public-reference",
+          "osmWayIds": [],
+          "osmNames": [],
+          "visualTrailId": "las-nieves",
+          "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+          "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+          "geometryImported": false,
+          "color": "#202833",
+          "difficulty": {
+            "label": "Experto",
+            "style": "Trail",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+        },
+        {
+          "id": "calibre-12",
+          "name": "Calibre 12",
+          "status": "osm-identified",
+          "osmWayIds": [
+            1003300258
+          ],
+          "osmNames": [
+            "Sendero Calibre 12"
+          ],
+          "visualTrailId": "calibre-12",
+          "publicMapUrl": "https://www.openstreetmap.org/way/1003300258",
+          "description": "Trazado de OpenStreetMap identificado por nombre. La vigencia de accesos y sentidos no está comprobada.",
+          "geometryImported": true,
+          "color": "#202833",
+          "difficulty": {
+            "label": "Experto",
+            "style": "Park",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad contrastados con la leyenda oficial. Geometría OSM; vigencia de accesos y sentidos por comprobar."
+        },
+        {
+          "id": "calibre-loco",
+          "name": "Calibre Loco",
+          "status": "public-reference",
+          "osmWayIds": [],
+          "osmNames": [],
+          "visualTrailId": "calibre-loco",
+          "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+          "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+          "geometryImported": false,
+          "color": "#202833",
+          "difficulty": {
+            "label": "Experto",
+            "style": "Trail",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+        },
+        {
+          "id": "mordor",
+          "name": "Mordor",
+          "status": "public-reference",
+          "osmWayIds": [],
+          "osmNames": [],
+          "visualTrailId": "mordor",
+          "publicMapUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+          "description": "La pista está identificada en la leyenda del operador. Su trazado geográfico todavía no está disponible para mostrarlo en este mapa.",
+          "geometryImported": false,
+          "color": "#202833",
+          "difficulty": {
+            "label": "Experto",
+            "style": "Park",
+            "sourceUrl": "https://www.outlife.cl/wp-content/uploads/2020/07/Mapa_El-Durazno-2022_web_Mesa-de-trabajo-1.jpg"
+          },
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "sourceNote": "Nombre y dificultad publicados en la leyenda oficial. Geometría geográfica pendiente; el dibujo visual no aporta coordenadas GPS."
+        }
+      ]
+    },
+    {
+      "id": "parquemet",
+      "park": {
+        "id": "parquemet",
+        "name": "Parquemet",
+        "shortName": "Parquemet",
+        "locality": "Santiago · Región Metropolitana",
+        "description": "Ocho senderos ciclistas, seis tramos del Paseo Metropolitano y doce avenidas y caminos, con plano original y referencias geográficas separadas.",
+        "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+        "checkedOn": "2026-10-20",
+        "primaryTargetIds": [
+          "centenario",
+          "cuatro-y-medio"
+        ],
+        "amenities": [
+          {
+            "id": "banos",
+            "label": "Baños · mapa oficial",
+            "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+            "checkedOn": "2026-10-20",
+            "evidenceType": "official-map-legend",
+            "operationConfirmed": false,
+            "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+          },
+          {
+            "id": "primeros-auxilios",
+            "label": "Primeros auxilios · mapa oficial",
+            "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+            "checkedOn": "2026-10-20",
+            "evidenceType": "official-map-legend",
+            "operationConfirmed": false,
+            "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+          },
+          {
+            "id": "informaciones",
+            "label": "Informaciones · mapa oficial",
+            "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+            "checkedOn": "2026-10-20",
+            "evidenceType": "official-map-legend",
+            "operationConfirmed": false,
+            "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+          },
+          {
+            "id": "bicicleteros",
+            "label": "Bicicleteros · mapa oficial",
+            "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+            "checkedOn": "2026-10-20",
+            "evidenceType": "official-map-legend",
+            "operationConfirmed": false,
+            "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+          },
+          {
+            "id": "estacionamiento",
+            "label": "Estacionamiento · mapa oficial",
+            "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+            "checkedOn": "2026-10-20",
+            "evidenceType": "official-map-legend",
+            "operationConfirmed": false,
+            "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+          },
+          {
+            "id": "restaurantes",
+            "label": "Restaurantes · mapa oficial",
+            "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+            "checkedOn": "2026-10-20",
+            "evidenceType": "official-map-legend",
+            "operationConfirmed": false,
+            "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+          },
+          {
+            "id": "kioscos",
+            "label": "Kioscos · mapa oficial",
+            "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+            "checkedOn": "2026-10-20",
+            "evidenceType": "official-map-legend",
+            "operationConfirmed": false,
+            "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+          },
+          {
+            "id": "pump-track",
+            "label": "Pump track · mapa oficial",
+            "sourceUrl": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+            "checkedOn": "2026-10-20",
+            "evidenceType": "official-map-legend",
+            "operationConfirmed": false,
+            "sourceNote": "Categoría publicada en la simbología del PDF; ubicación, horario y disponibilidad actuales sin confirmar."
+          }
+        ],
+        "operationConfirmed": false,
+        "amenitiesNote": "Servicios enumerados en la simbología del mapa oficial; su operación actual y sus horarios no están confirmados."
+      },
+      "targets": [
+        {
+          "id": "centenario",
+          "name": "Centenario",
+          "category": "cycling-trail",
+          "status": "osm-identified",
+          "osmWayIds": [
+            749895576,
+            1307648383,
+            1307648385
+          ],
+          "osmNames": [
+            "Sendero Ciclista Centenario"
+          ],
+          "visualTrailId": "centenario",
+          "publicMapUrl": "https://www.openstreetmap.org/way/749895576",
+          "description": "Sendero ciclista de la leyenda oficial. Los tramos OSM se conservan por separado y no acreditan la extensión completa ni la apertura actual.",
+          "sourceNote": "Nombre y distancia referencial de la leyenda ciclista del PDF oficial MapaParque.pdf; el prefijo de categoría «Sendero Ciclista» está registrado literalmente en OSM. Geometría OSM sin unión de vías, interpolación ni registro del esquema. La vigencia operacional no está confirmada.",
+          "color": "#b23f47",
+          "difficulty": null,
+          "officialDistanceM": 900,
+          "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+        },
+        {
+          "id": "cuatro-y-medio",
+          "name": "4 ½",
+          "category": "cycling-trail",
+          "status": "osm-identified",
+          "osmWayIds": [
+            479769031,
+            479771255,
+            512366462
+          ],
+          "osmNames": [
+            "Sendero Ciclista 4 ½"
+          ],
+          "visualTrailId": "cuatro-y-medio",
+          "publicMapUrl": "https://www.openstreetmap.org/way/479769031",
+          "description": "Sendero ciclista de la leyenda oficial. Los tramos OSM se conservan por separado y no acreditan la extensión completa ni la apertura actual.",
+          "sourceNote": "Nombre y distancia referencial de la leyenda ciclista del PDF oficial MapaParque.pdf; el prefijo de categoría «Sendero Ciclista» está registrado literalmente en OSM. Geometría OSM sin unión de vías, interpolación ni registro del esquema. La vigencia operacional no está confirmada.",
+          "color": "#b23f47",
+          "difficulty": null,
+          "officialDistanceM": 1000,
+          "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+        },
+        {
+          "id": "anfiteatro",
+          "name": "Anfiteatro",
+          "category": "cycling-trail",
+          "status": "osm-identified",
+          "osmWayIds": [
+            479769658,
+            691091448,
+            929919497,
+            929919498,
+            929919499,
+            1309108626
+          ],
+          "osmNames": [
+            "Sendero Ciclista Anfiteatro"
+          ],
+          "visualTrailId": "anfiteatro",
+          "publicMapUrl": "https://www.openstreetmap.org/way/479769658",
+          "description": "Sendero ciclista de la leyenda oficial. Los tramos OSM se conservan por separado y no acreditan la extensión completa ni la apertura actual.",
+          "sourceNote": "Nombre y distancia referencial de la leyenda ciclista del PDF oficial MapaParque.pdf; el prefijo de categoría «Sendero Ciclista» está registrado literalmente en OSM. Geometría OSM sin unión de vías, interpolación ni registro del esquema. La vigencia operacional no está confirmada.",
+          "color": "#b23f47",
+          "difficulty": null,
+          "officialDistanceM": 700,
+          "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "accessNote": "OSM registra access=no en 479769658. Ese tramo se muestra como referencia geográfica y queda excluido de la coincidencia GPS ciclista.",
+          "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+        },
+        {
+          "id": "la-s",
+          "name": "La S",
+          "category": "cycling-trail",
+          "status": "osm-identified",
+          "osmWayIds": [
+            906948595
+          ],
+          "osmNames": [
+            "Sendero Ciclista La S"
+          ],
+          "visualTrailId": "la-s",
+          "publicMapUrl": "https://www.openstreetmap.org/way/906948595",
+          "description": "Sendero ciclista de la leyenda oficial. Los tramos OSM se conservan por separado y no acreditan la extensión completa ni la apertura actual.",
+          "sourceNote": "Nombre y distancia referencial de la leyenda ciclista del PDF oficial MapaParque.pdf; el prefijo de categoría «Sendero Ciclista» está registrado literalmente en OSM. Geometría OSM sin unión de vías, interpolación ni registro del esquema. La vigencia operacional no está confirmada.",
+          "color": "#b23f47",
+          "difficulty": null,
+          "officialDistanceM": 500,
+          "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+        },
+        {
+          "id": "zorzal",
+          "name": "Zorzal",
+          "category": "cycling-trail",
+          "status": "osm-identified",
+          "osmWayIds": [
+            862880882
+          ],
+          "osmNames": [
+            "Sendero Ciclista El Zorzal"
+          ],
+          "visualTrailId": "zorzal",
+          "publicMapUrl": "https://www.openstreetmap.org/way/862880882",
+          "description": "Sendero ciclista de la leyenda oficial con correspondencia nominal OSM documentada. Se muestra su geometría de referencia con restricción de acceso; la apertura actual no está confirmada.",
+          "sourceNote": "Se declara explícitamente la variante «Zorzal» (PDF) / «Sendero Ciclista El Zorzal» (OSM), con artículo El y prefijo de categoría. La vía ciclista 862880882 v6 tiene fuente nominal oficial /lugares/sendero-el-zorzal-descenso-ciclistas/; su posición junto a Pa’ arriba, La S y Anfiteatro es compatible con el sector Embalse / Anfiteatro Pablo Neruda del PDF. La página fuente respondió HTTP 503; no se leyó su contenido ni se presenta como confirmación oficial del alias. Geometría original OSM sin registro del esquema, unión ni interpolación.",
+          "color": "#b23f47",
+          "difficulty": null,
+          "officialDistanceM": 500,
+          "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+          "accessNote": "OSM registra access=no en 862880882. Su trayectoria se muestra como referencia geográfica y queda excluida de la coincidencia GPS ciclista."
+        },
+        {
+          "id": "pa-arriba",
+          "name": "Pa’ arriba",
+          "category": "cycling-trail",
+          "status": "osm-identified",
+          "osmWayIds": [
+            691091446
+          ],
+          "osmNames": [
+            "Sendero Ciclista Pa' Arriba"
+          ],
+          "visualTrailId": "pa-arriba",
+          "publicMapUrl": "https://www.openstreetmap.org/way/691091446",
+          "description": "Sendero ciclista de la leyenda oficial con correspondencia nominal OSM documentada. Se muestra su geometría de referencia con restricción de acceso; la apertura actual no está confirmada.",
+          "sourceNote": "Se declara explícitamente la variante «Pa’ arriba» (PDF) / «Sendero Ciclista Pa' Arriba» (OSM): apóstrofo recto/tipográfico y mayúscula. La vía ciclista 691091446 v6 tiene fuente nominal oficial /lugares/sendero-pa-arriba-ascenso-ciclistas/ y nodos compartidos con La S y Anfiteatro, compatibles con el sector Embalse / Anfiteatro Pablo Neruda del PDF. La página fuente respondió HTTP 503; no se leyó su contenido. No se aplica normalización automática a otros nombres. Geometría original OSM sin registro del esquema, unión ni interpolación.",
+          "color": "#b23f47",
+          "difficulty": null,
+          "officialDistanceM": 600,
+          "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+          "accessNote": "OSM registra access=no en 691091446. Su trayectoria se muestra como referencia geográfica y queda excluida de la coincidencia GPS ciclista."
+        },
+        {
+          "id": "torre-5",
+          "name": "Torre 5",
+          "category": "cycling-trail",
+          "status": "osm-identified",
+          "osmWayIds": [
+            741162897,
+            1316047257,
+            1316047258
+          ],
+          "osmNames": [
+            "Sendero Ciclista Torre 5"
+          ],
+          "visualTrailId": "torre-5",
+          "publicMapUrl": "https://www.openstreetmap.org/way/741162897",
+          "description": "Sendero ciclista de la leyenda oficial. Los tramos OSM se conservan por separado y no acreditan la extensión completa ni la apertura actual.",
+          "sourceNote": "Nombre y distancia referencial de la leyenda ciclista del PDF oficial MapaParque.pdf; el prefijo de categoría «Sendero Ciclista» está registrado literalmente en OSM. Geometría OSM sin unión de vías, interpolación ni registro del esquema. La vigencia operacional no está confirmada.",
+          "color": "#b23f47",
+          "difficulty": null,
+          "officialDistanceM": 800,
+          "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+        },
+        {
+          "id": "piramide",
+          "name": "Pirámide",
+          "category": "cycling-trail",
+          "status": "osm-identified",
+          "osmWayIds": [
+            479774004
+          ],
+          "osmNames": [
+            "Sendero Ciclista Pirámide"
+          ],
+          "visualTrailId": "piramide",
+          "publicMapUrl": "https://www.openstreetmap.org/way/479774004",
+          "description": "Sendero ciclista de la leyenda oficial. Los tramos OSM se conservan por separado y no acreditan la extensión completa ni la apertura actual.",
+          "sourceNote": "Nombre y distancia referencial de la leyenda ciclista del PDF oficial MapaParque.pdf; el prefijo de categoría «Sendero Ciclista» está registrado literalmente en OSM. Geometría OSM sin unión de vías, interpolación ni registro del esquema. La vigencia operacional no está confirmada.",
+          "color": "#b23f47",
+          "difficulty": null,
+          "officialDistanceM": 600,
+          "officialDistanceNote": "Distancia referencial publicada en la leyenda del PDF; no es una medición de la geometría OSM.",
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf"
+        },
+        {
+          "id": "paseo-infancia",
+          "name": "Tramo Parque B. de la Infancia",
+          "category": "shared-trail",
+          "color": "#008b7b",
+          "status": "osm-identified",
+          "visualTrailId": "paseo-infancia",
+          "officialDistanceM": 940,
+          "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+          "osmWayIds": [
+            1022000923
+          ],
+          "osmNames": [
+            "Paseo Metropolitano - Parque Bicentenario de la Infancia"
+          ],
+          "geometryImported": true,
+          "geometry": null,
+          "publicMapUrl": "https://www.openstreetmap.org/relation/17934042",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "operationConfirmed": false,
+          "description": "Tramo del Paseo Metropolitano identificado para peatones y bicicletas en el plano oficial. La longitud publicada se conserva separada de la medida geográfica.",
+          "sourceNote": "Correspondencia de nombre, sector del plano, etiquetas de uso y relación OSM17934042. Longitud y ramas OSM no demuestran el recorrido exacto ni acceso vigente del plano.",
+          "sourceReferences": [
+            {
+              "id": 1022000923,
+              "version": 5,
+              "url": "https://www.openstreetmap.org/way/1022000923"
+            }
+          ]
+        },
+        {
+          "id": "paseo-sentidos",
+          "name": "Sendero de los Sentidos",
+          "category": "shared-trail",
+          "color": "#008b7b",
+          "status": "osm-identified",
+          "visualTrailId": "paseo-sentidos",
+          "officialDistanceM": 540,
+          "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+          "osmWayIds": [
+            777396164,
+            777396167,
+            777396168,
+            1498379319
+          ],
+          "osmNames": [
+            "Paseo Metropolitano - Sendero de los Sentidos"
+          ],
+          "geometryImported": true,
+          "geometry": null,
+          "publicMapUrl": "https://www.openstreetmap.org/relation/17934042",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "operationConfirmed": false,
+          "description": "Tramo del Paseo Metropolitano identificado para peatones y bicicletas en el plano oficial. La longitud publicada se conserva separada de la medida geográfica.",
+          "sourceNote": "Correspondencia de nombre, sector del plano, etiquetas de uso y relación OSM17934042. Longitud y ramas OSM no demuestran el recorrido exacto ni acceso vigente del plano.",
+          "sourceReferences": [
+            {
+              "id": 777396164,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/777396164"
+            },
+            {
+              "id": 777396167,
+              "version": 5,
+              "url": "https://www.openstreetmap.org/way/777396167"
+            },
+            {
+              "id": 777396168,
+              "version": 5,
+              "url": "https://www.openstreetmap.org/way/777396168"
+            },
+            {
+              "id": 1498379319,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1498379319"
+            }
+          ]
+        },
+        {
+          "id": "paseo-bellavista",
+          "name": "Tramo Bellavista",
+          "category": "shared-trail",
+          "color": "#008b7b",
+          "status": "osm-identified",
+          "visualTrailId": "paseo-bellavista",
+          "officialDistanceM": 1000,
+          "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+          "osmWayIds": [
+            777396165,
+            1307609502,
+            1498379320
+          ],
+          "osmNames": [
+            "Paseo Metropolitano - Sendero Bellavista"
+          ],
+          "geometryImported": true,
+          "geometry": null,
+          "publicMapUrl": "https://www.openstreetmap.org/relation/17934042",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "operationConfirmed": false,
+          "description": "Tramo del Paseo Metropolitano identificado para peatones y bicicletas en el plano oficial. La longitud publicada se conserva separada de la medida geográfica.",
+          "sourceNote": "Correspondencia de nombre, sector del plano, etiquetas de uso y relación OSM17934042. Longitud y ramas OSM no demuestran el recorrido exacto ni acceso vigente del plano.",
+          "sourceReferences": [
+            {
+              "id": 777396165,
+              "version": 9,
+              "url": "https://www.openstreetmap.org/way/777396165"
+            },
+            {
+              "id": 1307609502,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1307609502"
+            },
+            {
+              "id": 1498379320,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1498379320"
+            }
+          ]
+        },
+        {
+          "id": "paseo-pedro-valdivia",
+          "name": "Tramo Pedro de Valdivia",
+          "category": "shared-trail",
+          "color": "#008b7b",
+          "status": "osm-identified",
+          "visualTrailId": "paseo-pedro-valdivia",
+          "officialDistanceM": 1500,
+          "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+          "osmWayIds": [
+            256510467,
+            749561207,
+            981089817,
+            1233612936,
+            1307609504,
+            1308348019,
+            1308348023
+          ],
+          "osmNames": [
+            "Paseo Metropolitano - Sendero Pedro de Valdivia Norte",
+            "Paseo Metropolitano - Tramo Pedro de Valdivia Norte"
+          ],
+          "geometryImported": true,
+          "geometry": null,
+          "publicMapUrl": "https://www.openstreetmap.org/relation/17934042",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "operationConfirmed": false,
+          "description": "Tramo del Paseo Metropolitano identificado para peatones y bicicletas en el plano oficial. La longitud publicada se conserva separada de la medida geográfica.",
+          "sourceNote": "Correspondencia de nombre, sector del plano, etiquetas de uso y relación OSM17934042. Longitud y ramas OSM no demuestran el recorrido exacto ni acceso vigente del plano.",
+          "sourceReferences": [
+            {
+              "id": 256510467,
+              "version": 5,
+              "url": "https://www.openstreetmap.org/way/256510467"
+            },
+            {
+              "id": 749561207,
+              "version": 6,
+              "url": "https://www.openstreetmap.org/way/749561207"
+            },
+            {
+              "id": 981089817,
+              "version": 4,
+              "url": "https://www.openstreetmap.org/way/981089817"
+            },
+            {
+              "id": 1233612936,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/1233612936"
+            },
+            {
+              "id": 1307609504,
+              "version": 2,
+              "url": "https://www.openstreetmap.org/way/1307609504"
+            },
+            {
+              "id": 1308348019,
+              "version": 2,
+              "url": "https://www.openstreetmap.org/way/1308348019"
+            },
+            {
+              "id": 1308348023,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1308348023"
+            }
+          ]
+        },
+        {
+          "id": "paseo-piramide",
+          "name": "Tramo Pirámide / Jardín Japonés",
+          "category": "shared-trail",
+          "color": "#008b7b",
+          "status": "osm-identified",
+          "visualTrailId": "paseo-piramide",
+          "officialDistanceM": 3700,
+          "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+          "osmWayIds": [
+            180578702,
+            396817982,
+            727333973,
+            741162893,
+            741162909,
+            906717591,
+            906717592,
+            906717593,
+            906717594,
+            919016888,
+            1346024630,
+            1346033271
+          ],
+          "osmNames": [
+            "Paseo Metropolitano - Tramo Jardín Japonés / Pirámide"
+          ],
+          "geometryImported": true,
+          "geometry": null,
+          "publicMapUrl": "https://www.openstreetmap.org/relation/17934042",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "operationConfirmed": false,
+          "description": "Tramo del Paseo Metropolitano identificado para peatones y bicicletas en el plano oficial. La longitud publicada se conserva separada de la medida geográfica.",
+          "sourceNote": "Correspondencia de nombre, sector del plano, etiquetas de uso y relación OSM17934042. Longitud y ramas OSM no demuestran el recorrido exacto ni acceso vigente del plano.",
+          "sourceReferences": [
+            {
+              "id": 180578702,
+              "version": 19,
+              "url": "https://www.openstreetmap.org/way/180578702"
+            },
+            {
+              "id": 396817982,
+              "version": 11,
+              "url": "https://www.openstreetmap.org/way/396817982"
+            },
+            {
+              "id": 727333973,
+              "version": 9,
+              "url": "https://www.openstreetmap.org/way/727333973"
+            },
+            {
+              "id": 741162893,
+              "version": 6,
+              "url": "https://www.openstreetmap.org/way/741162893"
+            },
+            {
+              "id": 741162909,
+              "version": 6,
+              "url": "https://www.openstreetmap.org/way/741162909"
+            },
+            {
+              "id": 906717591,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/906717591"
+            },
+            {
+              "id": 906717592,
+              "version": 4,
+              "url": "https://www.openstreetmap.org/way/906717592"
+            },
+            {
+              "id": 906717593,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/906717593"
+            },
+            {
+              "id": 906717594,
+              "version": 4,
+              "url": "https://www.openstreetmap.org/way/906717594"
+            },
+            {
+              "id": 919016888,
+              "version": 5,
+              "url": "https://www.openstreetmap.org/way/919016888"
+            },
+            {
+              "id": 1346024630,
+              "version": 2,
+              "url": "https://www.openstreetmap.org/way/1346024630"
+            },
+            {
+              "id": 1346033271,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1346033271"
+            }
+          ]
+        },
+        {
+          "id": "paseo-cascada",
+          "name": "Tramo La Cascada",
+          "category": "shared-trail",
+          "color": "#008b7b",
+          "status": "osm-identified",
+          "visualTrailId": "paseo-cascada",
+          "officialDistanceM": 1200,
+          "officialDistanceSource": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+          "osmWayIds": [
+            555001286,
+            910105205,
+            910105206,
+            1345197424
+          ],
+          "osmNames": [
+            "Paseo Metropolitano - Sendero La Cascada"
+          ],
+          "geometryImported": true,
+          "geometry": null,
+          "publicMapUrl": "https://www.openstreetmap.org/relation/17934042",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "operationConfirmed": false,
+          "description": "Tramo del Paseo Metropolitano identificado para peatones y bicicletas en el plano oficial. La longitud publicada se conserva separada de la medida geográfica.",
+          "sourceNote": "Correspondencia de nombre, sector del plano, etiquetas de uso y relación OSM17934042. Longitud y ramas OSM no demuestran el recorrido exacto ni acceso vigente del plano.",
+          "sourceReferences": [
+            {
+              "id": 555001286,
+              "version": 6,
+              "url": "https://www.openstreetmap.org/way/555001286"
+            },
+            {
+              "id": 910105205,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/910105205"
+            },
+            {
+              "id": 910105206,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/910105206"
+            },
+            {
+              "id": 1345197424,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1345197424"
+            }
+          ]
+        },
+        {
+          "id": "avenida-pedro-bannen",
+          "name": "Av. Pedro Bannen",
+          "category": "avenue",
+          "status": "osm-identified",
+          "osmWayIds": [
+            169885900,
+            480868066,
+            482748524,
+            482748525,
+            923017128,
+            929919509,
+            929919510,
+            929919511,
+            929919512
+          ],
+          "osmNames": [
+            "Avenida Pedro Bannen"
+          ],
+          "visualTrailId": null,
+          "publicMapUrl": "https://www.openstreetmap.org/way/169885900",
+          "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+          "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+          "color": "#326f99",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialViewId": "avenida-pedro-bannen",
+          "officialViewKind": "document-crop"
+        },
+        {
+          "id": "avenida-alberto-mackenna",
+          "name": "Av. Alberto Mackenna",
+          "category": "avenue",
+          "status": "osm-identified",
+          "osmWayIds": [
+            44579782,
+            442629926,
+            919288128,
+            922756659,
+            1035844715
+          ],
+          "osmNames": [
+            "Avenida Alberto Mackenna"
+          ],
+          "visualTrailId": null,
+          "publicMapUrl": "https://www.openstreetmap.org/way/44579782",
+          "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+          "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+          "color": "#326f99",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialViewId": "avenida-alberto-mackenna",
+          "officialViewKind": "document-crop"
+        },
+        {
+          "id": "avenida-abate-molina",
+          "name": "Av. Abate Molina",
+          "category": "avenue",
+          "status": "osm-identified",
+          "osmWayIds": [
+            292124343,
+            363378017,
+            480868638,
+            741162913,
+            1308348020,
+            1308348021,
+            1343882813,
+            1343882814
+          ],
+          "osmNames": [
+            "Avenida Abate Molina"
+          ],
+          "visualTrailId": null,
+          "publicMapUrl": "https://www.openstreetmap.org/way/292124343",
+          "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+          "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+          "color": "#326f99",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialViewId": "avenida-abate-molina",
+          "officialViewKind": "document-crop"
+        },
+        {
+          "id": "avenida-carlos-martner",
+          "name": "Av. Carlos Martner",
+          "category": "avenue",
+          "status": "osm-identified",
+          "osmWayIds": [
+            40140801,
+            69889085,
+            442592613,
+            442592614,
+            442633595
+          ],
+          "osmNames": [
+            "Avenida Carlos Martner"
+          ],
+          "visualTrailId": null,
+          "publicMapUrl": "https://www.openstreetmap.org/way/40140801",
+          "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+          "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+          "color": "#326f99",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialViewId": "avenida-carlos-martner",
+          "officialViewKind": "document-crop"
+        },
+        {
+          "id": "avenida-carlos-reed",
+          "name": "Av. Carlos Reed",
+          "category": "avenue",
+          "status": "osm-identified",
+          "osmWayIds": [
+            48549531,
+            909201230,
+            909201231,
+            922756671,
+            922756672
+          ],
+          "osmNames": [
+            "Avenida Carlos Reed"
+          ],
+          "visualTrailId": null,
+          "publicMapUrl": "https://www.openstreetmap.org/way/48549531",
+          "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+          "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+          "color": "#326f99",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialViewId": "avenida-carlos-reed",
+          "officialViewKind": "document-crop"
+        },
+        {
+          "id": "avenida-claudio-gay",
+          "name": "Av. Claudio Gay",
+          "category": "avenue",
+          "status": "osm-identified",
+          "osmWayIds": [
+            41160817,
+            542847079
+          ],
+          "osmNames": [
+            "Avenida Claudio Gay"
+          ],
+          "visualTrailId": null,
+          "publicMapUrl": "https://www.openstreetmap.org/way/41160817",
+          "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+          "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+          "color": "#326f99",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialViewId": "avenida-claudio-gay",
+          "officialViewKind": "document-crop"
+        },
+        {
+          "id": "avenida-federico-albert",
+          "name": "Av. Federico Albert",
+          "category": "avenue",
+          "status": "osm-identified",
+          "osmWayIds": [
+            40140804
+          ],
+          "osmNames": [
+            "Avenida Federico Albert"
+          ],
+          "visualTrailId": null,
+          "publicMapUrl": "https://www.openstreetmap.org/way/40140804",
+          "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+          "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+          "color": "#326f99",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialViewId": "avenida-federico-albert",
+          "officialViewKind": "document-crop"
+        },
+        {
+          "id": "avenida-manuel-zanartu",
+          "name": "Av. Manuel Zañartu",
+          "category": "avenue",
+          "status": "osm-identified",
+          "osmWayIds": [
+            441864821,
+            577345674,
+            1345175047,
+            47776335,
+            1035844716,
+            802365175,
+            47727162
+          ],
+          "osmNames": [
+            "Avenida Manuel Zañartu"
+          ],
+          "visualTrailId": null,
+          "publicMapUrl": "https://www.openstreetmap.org/way/441864821",
+          "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+          "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+          "color": "#326f99",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialViewId": "avenida-manuel-zanartu",
+          "officialViewKind": "document-crop"
+        },
+        {
+          "id": "avenida-la-montana",
+          "name": "Av. La Montaña",
+          "category": "avenue",
+          "status": "osm-identified",
+          "osmWayIds": [
+            120389660,
+            520212770,
+            1292391201,
+            1292391202,
+            1223734901
+          ],
+          "osmNames": [
+            "Avenida La Montaña"
+          ],
+          "visualTrailId": null,
+          "publicMapUrl": "https://www.openstreetmap.org/way/120389660",
+          "description": "Avenida interior rotulada en el plano oficial, contrastada por nombre con OpenStreetMap. El recorte muestra su sector rotulado, no su extensión completa.",
+          "sourceNote": "Plano original conservado, sin curva individual extraída de la superficie vial común. Geometría OSM independiente, sin registrar el esquema sobre coordenadas. Operación y sentidos vigentes sin confirmar.",
+          "color": "#326f99",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "officialViewId": "avenida-la-montana",
+          "officialViewKind": "document-crop"
+        },
+        {
+          "id": "avenida-gabriela-mistral",
+          "name": "Av. Gabriela Mistral",
+          "category": "avenue",
+          "status": "osm-identified",
+          "osmWayIds": [
+            158170398,
+            480868075
+          ],
+          "osmNames": [
+            "Avenida Gabriela Mistral"
+          ],
+          "visualTrailId": null,
+          "officialViewId": "avenida-gabriela-mistral",
+          "officialViewKind": "document-crop",
+          "publicMapUrl": "https://www.openstreetmap.org/way/158170398",
+          "description": "Avenida peatonal rotulada en el plano. OSM registra bicycle=no y foot=yes en sus dos vías: se muestra como referencia, excluida del ajuste GPS ciclista.",
+          "sourceNote": "Identificación nominal y sector contrastados con el PDF oficial. Geometría OSM independiente, sin transformar el esquema ni inferir conexiones. Ver docs/evidence/parquemet-avenues-geographic.md.",
+          "color": "#326f99",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "checkedOn": "2026-10-20"
+        },
+        {
+          "id": "avenida-pablo-neruda",
+          "name": "Av. Pablo Neruda",
+          "category": "avenue",
+          "status": "osm-identified",
+          "osmWayIds": [
+            160691199
+          ],
+          "osmNames": [
+            "Avenida Pablo Neruda"
+          ],
+          "visualTrailId": null,
+          "officialViewId": "avenida-pablo-neruda",
+          "officialViewKind": "document-reference",
+          "publicMapUrl": "https://www.openstreetmap.org/way/160691199",
+          "description": "Avenida mencionada en la tabla oficial junto a Manuel Zañartu. OSM registra bicycle=permissive y cycleway=shared_lane; el permiso actual requiere consulta al parque. La tabla no identifica una curva individual en el plano.",
+          "sourceNote": "Identificación nominal y sector contrastados con el PDF oficial. Geometría OSM independiente, sin transformar el esquema ni inferir conexiones. Ver docs/evidence/parquemet-avenues-geographic.md.",
+          "color": "#326f99",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "checkedOn": "2026-10-20"
+        },
+        {
+          "id": "camino-rafael-elizalde",
+          "name": "Camino Rafael Elizalde",
+          "category": "avenue",
+          "status": "osm-identified",
+          "osmWayIds": [
+            919288157,
+            919288158,
+            1343882815
+          ],
+          "osmNames": [
+            "Camino Rafael Elizalde"
+          ],
+          "visualTrailId": null,
+          "officialViewId": "camino-rafael-elizalde",
+          "officialViewKind": "document-reference",
+          "publicMapUrl": "https://www.openstreetmap.org/way/919288157",
+          "description": "Acceso desde Pedro de Valdivia hacia Teleférico Oasis, documentado en la tabla oficial. OSM conserva tres vías con motor_vehicle=no; no figura permiso ciclista explícito y quedan fuera del ajuste GPS.",
+          "sourceNote": "Identificación nominal y sector contrastados con el PDF oficial. Geometría OSM independiente, sin transformar el esquema ni inferir conexiones. Ver docs/evidence/parquemet-avenues-geographic.md.",
+          "color": "#326f99",
+          "difficulty": null,
+          "elevationGainM": null,
+          "elevationLossM": null,
+          "geometry": null,
+          "geometryImported": true,
+          "operationConfirmed": false,
+          "checkedOn": "2026-10-20"
+        }
+      ]
+    }
+  ]
+}

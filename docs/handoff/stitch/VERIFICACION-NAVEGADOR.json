@@ -1,0 +1,9 @@
+{
+  "checkedOn": "2026-10-23T21:12:00.146Z",
+  "viewport": "390x844",
+  "checks": [
+    "public standalone El Durazno loads23 native paths and acquires Lomo in public demo; private photo not embedded",
+    "public standalone Parquemet loads26 routes, filters11 avenues and1 camino, no foreign demo",
+    "no JavaScript runtime errors"
+  ]
+}

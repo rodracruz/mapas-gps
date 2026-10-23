@@ -1,0 +1,28 @@
+Continúa el modelo que ya tengo abierto en este proyecto de Stitch y aplícalo a mi aplicación real Mapas GPS. Usa las capturas adjuntas como referencia funcional y el código adjunto como base de integración. Conserva el lenguaje visual de mi modelo de Stitch y adapta todas las pantallas y estados de la app a él.
+
+CONTEXTO
+Mapas GPS está orientada en un 95% a teléfonos. Permite elegir RKF El Durazno o Parquemet, consultar información y servicios, ver el plano oficial, explorar recorridos sobre un mapa mundial OSM y activar GPS con identificación experimental de pista probable. La versión base está en la rama test/gps-validation, commit31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f; main y GitHub Pages conservan la aplicación anterior.
+
+FLUJO QUE DEBES CONSERVAR
+1. Inicio y selección de parque.
+2. Ficha del parque: nombre, información, servicios y plano original ampliable.
+3. Filtros junto al mapa. El mapa conserva siempre su posición y tamaño; cambian los recorridos y su orden. Tipo según la fuente; longitud ascendente/descendente; cercanía ascendente/descendente; dificultad si hay datos.
+4. Tarjeta de mapa y tarjetas de recorridos del mismo tamaño en la lista. Los senderos principales van primero. Cada recorrido muestra una sección del plano oficial como fondo de su trazado. La ficha se despliega para consultar longitud, dificultad, desnivel y velocidad máxima cuando existen datos; los valores ausentes se indican expresamente.
+5. Al tocar el mapa se abre a pantalla completa. Senderos, avenidas y caminos conservan su geometría real y su relación con el mapa. Al elegir un recorrido aparece su información en una ficha inferior desplazable.
+6. Conservar capas, selección por trazado o lista, zoom, desplazamiento, encuadrar y comparación con el plano oficial.
+7. GPS: activar y detener, recentrar, lectura original con círculo de precisión y aro de ajuste probable. Conservar estados de permiso rechazado, búsqueda, pista probable, ambigüedad, lectura imprecisa, lectura antigua, pérdida de señal y posición fuera de la red. La posición se ve por encima de los rótulos y fuera de controles/fichas, incluso en móvil horizontal y con errores de conexión.
+8. Demo sin solicitar ubicación, sólo en El Durazno: Lomo Vetado → Calibre 12, pausa, siguiente lectura y progreso. No mostrar la demo de El Durazno dentro de Parquemet.
+9. Mantener el acceso a Mis mapas y la compatibilidad con las imágenes, calibraciones y mapas ya guardados.
+
+TUS PROPUESTAS NUEVAS
+Incorpora también todas las funciones que propones para este modelo. Para cada propuesta, diseña su pantalla, interacción, estados vacío/carga/error y regreso al mapa; anota los datos y conexiones que necesita para funcionar. Entrega una tabla que identifique qué funciones se conservan del código y cuáles se agregan como propuesta nueva. La implementación real de las propuestas se realizará y verificará al integrar el resultado con este repositorio.
+
+El objetivo posterior incluye elegir destinos, circuitos cerrados, distancia recorrida y restante siguiendo caminos. Si diseñas esos flujos, clasifícalos como ampliaciones pendientes de implementar y validar sobre una red navegable; no los presentes como funciones ya comprobadas.
+
+FIDELIDAD Y DATOS
+Usa las geometrías existentes de OSM y los vectores originales del plano. Conserva curvas, zigzags, extremos, identificadores, procedencia y huecos pendientes. Un cruce dibujado no acredita una conexión. La fotografía y los vectores visuales comparten coordenadas de imagen; los trazados OSM tienen coordenadas geográficas separadas. El cartel aproximado de El Durazno no se usa para ajustar GPS ni para calcular distancias de terreno. En Parquemet se distinguen8 senderos ciclistas,6 compartidos y12 avenidas/caminos; los senderos peatonales también figuran en el plano original, aunque no tienen todos una ficha interactiva propia. Las restricciones y permisos forman parte de la información.
+
+Los servicios, desniveles, velocidades y dificultades se muestran sólo cuando la fuente los respalda. Una propuesta gráfica puede ilustrar un estado, pero los datos de ejemplo deben quedar identificados. La ubicación requiere una acción del usuario y sus trazas no se guardan. Las teselas OSM solicitan el área visible al proveedor.
+
+ENTREGA
+Devuelve las pantallas móviles completas usando mi modelo de Stitch, las variantes horizontal y de pantalla pequeña, la tabla de funciones existentes/nuevas y los archivos de diseño/código que puedas exportar. Conserva los nombres e identificadores de controles o adjunta una tabla de correspondencia para integrarlos con los módulos existentes. El resultado debe permitir implementar las nuevas funciones sobre la app actual y comprobarlas con sus pruebas.
