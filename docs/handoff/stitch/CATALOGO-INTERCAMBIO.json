@@ -1,0 +1,349 @@
+{
+  "sourceCommit": "31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f",
+  "generatedFrom": [
+    "geographic/data.mjs:fromOsmSnapshot",
+    "geographic/route-filters.mjs:routeFilterModels"
+  ],
+  "lengthNote": "Longitudes OSM importadas y redondeadas en metros; pueden corresponder a tramos parciales. Null significa sin datos; no se infiere del dibujo. No acredita accesibilidad ni sentidos.",
+  "parques": [
+    {
+      "parque": "el-durazno",
+      "rutas": [
+        {
+          "id": "subida-buitrera",
+          "nombre": "Subida Buitrera",
+          "tipo": "Subida",
+          "dificultad": null,
+          "longitudOsmM": 4666
+        },
+        {
+          "id": "chilling",
+          "nombre": "Chilling",
+          "tipo": "Park",
+          "dificultad": "Principiante",
+          "longitudOsmM": null
+        },
+        {
+          "id": "papaya",
+          "nombre": "Papaya",
+          "tipo": "Trail",
+          "dificultad": "Principiante",
+          "longitudOsmM": 736
+        },
+        {
+          "id": "la-virgen",
+          "nombre": "La Virgen",
+          "tipo": "Park",
+          "dificultad": "Principiante",
+          "longitudOsmM": null
+        },
+        {
+          "id": "parcero",
+          "nombre": "Parcero",
+          "tipo": "Park",
+          "dificultad": "Principiante",
+          "longitudOsmM": 714
+        },
+        {
+          "id": "skills",
+          "nombre": "Skills",
+          "tipo": "Park",
+          "dificultad": "Intermedio",
+          "longitudOsmM": null
+        },
+        {
+          "id": "mampato",
+          "nombre": "Mampato",
+          "tipo": "Park",
+          "dificultad": "Intermedio",
+          "longitudOsmM": 931
+        },
+        {
+          "id": "starwars",
+          "nombre": "Starwars",
+          "tipo": "Trail",
+          "dificultad": "Intermedio",
+          "longitudOsmM": null
+        },
+        {
+          "id": "cactus",
+          "nombre": "Cactus",
+          "tipo": "Trail",
+          "dificultad": "Intermedio",
+          "longitudOsmM": null
+        },
+        {
+          "id": "lomo-vetado",
+          "nombre": "Lomo Vetado",
+          "tipo": "Park",
+          "dificultad": "Intermedio",
+          "longitudOsmM": 2786
+        },
+        {
+          "id": "la-bala",
+          "nombre": "La Bala",
+          "tipo": "Park",
+          "dificultad": "Intermedio",
+          "longitudOsmM": 736
+        },
+        {
+          "id": "cebolla",
+          "nombre": "Cebolla",
+          "tipo": "Park",
+          "dificultad": "Avanzado",
+          "longitudOsmM": 467
+        },
+        {
+          "id": "los-saltos",
+          "nombre": "Los Saltos",
+          "tipo": "Park",
+          "dificultad": "Avanzado",
+          "longitudOsmM": 436
+        },
+        {
+          "id": "el-gringo",
+          "nombre": "El Gringo",
+          "tipo": "Park",
+          "dificultad": "Avanzado",
+          "longitudOsmM": null
+        },
+        {
+          "id": "el-duro",
+          "nombre": "El Duro",
+          "tipo": "Trail",
+          "dificultad": "Avanzado",
+          "longitudOsmM": null
+        },
+        {
+          "id": "xl",
+          "nombre": "XL",
+          "tipo": "Trail",
+          "dificultad": "Experto",
+          "longitudOsmM": 4389
+        },
+        {
+          "id": "rock-n-roll",
+          "nombre": "Rock N’Roll",
+          "tipo": "Trail",
+          "dificultad": "Experto",
+          "longitudOsmM": 2055
+        },
+        {
+          "id": "las-nieves",
+          "nombre": "Las Nieves",
+          "tipo": "Trail",
+          "dificultad": "Experto",
+          "longitudOsmM": null
+        },
+        {
+          "id": "calibre-12",
+          "nombre": "Calibre 12",
+          "tipo": "Park",
+          "dificultad": "Experto",
+          "longitudOsmM": 2160
+        },
+        {
+          "id": "calibre-loco",
+          "nombre": "Calibre Loco",
+          "tipo": "Trail",
+          "dificultad": "Experto",
+          "longitudOsmM": null
+        },
+        {
+          "id": "mordor",
+          "nombre": "Mordor",
+          "tipo": "Park",
+          "dificultad": "Experto",
+          "longitudOsmM": null
+        }
+      ]
+    },
+    {
+      "parque": "parquemet",
+      "rutas": [
+        {
+          "id": "centenario",
+          "nombre": "Centenario",
+          "tipo": "Sendero ciclista",
+          "dificultad": null,
+          "longitudOsmM": 609
+        },
+        {
+          "id": "cuatro-y-medio",
+          "nombre": "4 ½",
+          "tipo": "Sendero ciclista",
+          "dificultad": null,
+          "longitudOsmM": 1571
+        },
+        {
+          "id": "anfiteatro",
+          "nombre": "Anfiteatro",
+          "tipo": "Sendero ciclista",
+          "dificultad": null,
+          "longitudOsmM": 1218
+        },
+        {
+          "id": "la-s",
+          "nombre": "La S",
+          "tipo": "Sendero ciclista",
+          "dificultad": null,
+          "longitudOsmM": 458
+        },
+        {
+          "id": "zorzal",
+          "nombre": "Zorzal",
+          "tipo": "Sendero ciclista",
+          "dificultad": null,
+          "longitudOsmM": 445
+        },
+        {
+          "id": "pa-arriba",
+          "nombre": "Pa’ arriba",
+          "tipo": "Sendero ciclista",
+          "dificultad": null,
+          "longitudOsmM": 610
+        },
+        {
+          "id": "torre-5",
+          "nombre": "Torre 5",
+          "tipo": "Sendero ciclista",
+          "dificultad": null,
+          "longitudOsmM": 787
+        },
+        {
+          "id": "piramide",
+          "nombre": "Pirámide",
+          "tipo": "Sendero ciclista",
+          "dificultad": null,
+          "longitudOsmM": 848
+        },
+        {
+          "id": "paseo-infancia",
+          "nombre": "Tramo Parque B. de la Infancia",
+          "tipo": "Paseo compartido",
+          "dificultad": null,
+          "longitudOsmM": 1059
+        },
+        {
+          "id": "paseo-sentidos",
+          "nombre": "Sendero de los Sentidos",
+          "tipo": "Paseo compartido",
+          "dificultad": null,
+          "longitudOsmM": 549
+        },
+        {
+          "id": "paseo-bellavista",
+          "nombre": "Tramo Bellavista",
+          "tipo": "Paseo compartido",
+          "dificultad": null,
+          "longitudOsmM": 1329
+        },
+        {
+          "id": "paseo-pedro-valdivia",
+          "nombre": "Tramo Pedro de Valdivia",
+          "tipo": "Paseo compartido",
+          "dificultad": null,
+          "longitudOsmM": 2329
+        },
+        {
+          "id": "paseo-piramide",
+          "nombre": "Tramo Pirámide / Jardín Japonés",
+          "tipo": "Paseo compartido",
+          "dificultad": null,
+          "longitudOsmM": 3777
+        },
+        {
+          "id": "paseo-cascada",
+          "nombre": "Tramo La Cascada",
+          "tipo": "Paseo compartido",
+          "dificultad": null,
+          "longitudOsmM": 1261
+        },
+        {
+          "id": "avenida-pedro-bannen",
+          "nombre": "Av. Pedro Bannen",
+          "tipo": "Avenida",
+          "dificultad": null,
+          "longitudOsmM": 2303
+        },
+        {
+          "id": "avenida-alberto-mackenna",
+          "nombre": "Av. Alberto Mackenna",
+          "tipo": "Avenida",
+          "dificultad": null,
+          "longitudOsmM": 3023
+        },
+        {
+          "id": "avenida-abate-molina",
+          "nombre": "Av. Abate Molina",
+          "tipo": "Avenida",
+          "dificultad": null,
+          "longitudOsmM": 1633
+        },
+        {
+          "id": "avenida-carlos-martner",
+          "nombre": "Av. Carlos Martner",
+          "tipo": "Avenida",
+          "dificultad": null,
+          "longitudOsmM": 1623
+        },
+        {
+          "id": "avenida-carlos-reed",
+          "nombre": "Av. Carlos Reed",
+          "tipo": "Avenida",
+          "dificultad": null,
+          "longitudOsmM": 1250
+        },
+        {
+          "id": "avenida-claudio-gay",
+          "nombre": "Av. Claudio Gay",
+          "tipo": "Avenida",
+          "dificultad": null,
+          "longitudOsmM": 1139
+        },
+        {
+          "id": "avenida-federico-albert",
+          "nombre": "Av. Federico Albert",
+          "tipo": "Avenida",
+          "dificultad": null,
+          "longitudOsmM": 1184
+        },
+        {
+          "id": "avenida-manuel-zanartu",
+          "nombre": "Av. Manuel Zañartu",
+          "tipo": "Avenida",
+          "dificultad": null,
+          "longitudOsmM": 1721
+        },
+        {
+          "id": "avenida-la-montana",
+          "nombre": "Av. La Montaña",
+          "tipo": "Avenida",
+          "dificultad": null,
+          "longitudOsmM": 2971
+        },
+        {
+          "id": "avenida-gabriela-mistral",
+          "nombre": "Av. Gabriela Mistral",
+          "tipo": "Avenida",
+          "dificultad": null,
+          "longitudOsmM": 836
+        },
+        {
+          "id": "avenida-pablo-neruda",
+          "nombre": "Av. Pablo Neruda",
+          "tipo": "Avenida",
+          "dificultad": null,
+          "longitudOsmM": 485
+        },
+        {
+          "id": "camino-rafael-elizalde",
+          "nombre": "Camino Rafael Elizalde",
+          "tipo": "Camino",
+          "dificultad": null,
+          "longitudOsmM": 184
+        }
+      ]
+    }
+  ]
+}
