@@ -14,12 +14,14 @@
       "name": "Parque Metropolitano de Santiago",
       "shortName": "Parquemet",
       "locality": "Santiago, Chile",
-      "description": "Ocho senderos ciclistas del mapa oficial, avenidas y recorridos sobre el mapa mundial.",
+      "description": "Ocho senderos ciclistas y seis tramos del Paseo Metropolitano, con planos originales y mapa mundial.",
       "entry": "./parquemet.html#parque=parquemet",
       "catalog": "./data/parquemet/geographic-catalog.json",
       "document": "./data/parquemet/official-document.json",
       "visual": "./data/parquemet/visual-cycling-trails.json",
-      "visualSha256": "10c75c0778494a0d4b04a2005316a351261a6fa5d95e45a7117d8ffa70169eba"
+      "visualSha256": "10c75c0778494a0d4b04a2005316a351261a6fa5d95e45a7117d8ffa70169eba",
+      "sharedVisual": "./data/parquemet/visual-paseo-trails.json",
+      "sharedVisualSha256": "e7b938e8d032feae33ffb67d0b5ab7e5b0e681b96657a6426e8bb4a10284e2e6"
     }
   ]
 }

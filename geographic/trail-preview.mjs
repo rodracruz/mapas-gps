@@ -9,7 +9,7 @@ export function officialTrailModels(data){
   for(const p of paths)if(typeof p.d!=='string'||!p.d.trim()||!/^[MmLlHhVvCcSsQqTtAaZz0-9eE+.,\s-]+$/.test(p.d)||!Array.isArray(p.bounds)||p.bounds.length!==4||!p.bounds.every(Number.isFinite)||p.bounds[2]<0||p.bounds[3]<0)throw new Error('Curva oficial inválida para miniatura.');
   const left=Math.min(...paths.map(p=>p.bounds[0])),top=Math.min(...paths.map(p=>p.bounds[1])),right=Math.max(...paths.map(p=>p.bounds[0]+p.bounds[2])),bottom=Math.max(...paths.map(p=>p.bounds[1]+p.bounds[3]));
   const width=Math.max(1,right-left),height=Math.max(1,bottom-top),padding=Math.max(width,height)*.07;
-  return{id:t.id,name:t.name,paths,bounds:[left,top,width,height],viewBox:{x:left-padding,y:top-padding,width:width+padding*2,height:height+padding*2}};
+  return{id:t.id,name:t.name,category:t.category,paths,bounds:[left,top,width,height],viewBox:{x:left-padding,y:top-padding,width:width+padding*2,height:height+padding*2}};
  }).filter(Boolean);
 }
 export function sourcePathNode(path,{thumbnail=false}={}){
@@ -29,7 +29,7 @@ export function createTrailPreview(model,onOpen,background){
  // the outer SVG's letterbox. Image and original paths use identical coordinates.
  const crop=document.createElementNS(svgNS,'svg');crop.classList.add('trail-preview-crop');for(const key of ['x','y','width','height'])crop.setAttribute(key,String(frame[key]));crop.setAttribute('viewBox',viewBox);crop.setAttribute('overflow','hidden');
  if(background){if(!background.imageUrl||![background.width,background.height].every(n=>Number.isFinite(n)&&n>0))throw new Error('Fondo del plano oficial inválido.');const image=document.createElementNS(svgNS,'image');image.classList.add('trail-preview-map');image.setAttribute('href',background.imageUrl);image.setAttribute('x','0');image.setAttribute('y','0');image.setAttribute('width',String(background.width));image.setAttribute('height',String(background.height));image.setAttribute('preserveAspectRatio','none');crop.append(image);}
- for(const path of model.paths)crop.append(sourcePathNode(path,{thumbnail:true}));svg.append(crop);button.append(svg);button.onclick=onOpen;
+ for(const path of model.paths)crop.append(sourcePathNode(path,{thumbnail:model.category!=='shared-trail'}));svg.append(crop);button.append(svg);button.onclick=onOpen;
  const caption=document.createElement('figcaption');caption.textContent='Plano oficial · Entorno de la ruta · Toca para ampliar';figure.append(button,caption);return figure;
 }
 export function attachTrailPreviews(data,{resolveId=id=>id,onOpen,background}={}){

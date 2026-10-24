@@ -7,7 +7,11 @@ import {validateCatalog} from '../geographic/catalog.mjs';
 
 const bytes=await readFile(new URL('../sources/parquemet-osm.json',import.meta.url));
 const source=JSON.parse(bytes);
-const catalog=JSON.parse(await readFile(new URL('../data/parquemet/geographic-catalog.json',import.meta.url)));
+// Historical receipt: retain its original geometry/version assertions while the
+// current catalog adds a fresh atomic Paseo receipt in parquemet-shared tests.
+const current=JSON.parse(await readFile(new URL('../data/parquemet/geographic-catalog.json',import.meta.url)));
+const oldNodes=source.elements.filter(e=>e.type==='node');
+const catalog={...current,targets:current.targets.filter(t=>t.category!=='shared-trail'),sourceSnapshot:'sources/parquemet-osm.json',sourceSnapshotSha256:'4cb185c60c137a15810fb941ca20954bcae6be09487cc27c580617ba156e3e1c',sourceUrl:source.url,queriedAt:source.queriedAt,geographicExtent:[Math.min(...oldNodes.map(n=>n.lon)),Math.min(...oldNodes.map(n=>n.lat)),Math.max(...oldNodes.map(n=>n.lon)),Math.max(...oldNodes.map(n=>n.lat))]};
 const geo=fromOsmSnapshot(source,catalog);
 const officialUrl='https://mapas.parquemet.cl/doc/MapaParque.pdf';
 const officialTrails=[['centenario','Centenario',900],['cuatro-y-medio','4 ½',1000],['anfiteatro','Anfiteatro',700],['la-s','La S',500],['zorzal','Zorzal',500],['pa-arriba','Pa’ arriba',600],['torre-5','Torre 5',800],['piramide','Pirámide',600]];

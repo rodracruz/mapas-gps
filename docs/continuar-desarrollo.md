@@ -1,6 +1,10 @@
 # Continuar Mapas GPS
 
-## Estado más reciente: fondo del plano en las vistas de ruta
+## Estado más reciente: los seis tramos compartidos que faltaban
+
+Rama `fix/parquemet-shared-routes` sobre `0055d5b`, worktree aislado `parquemet-coverage`. Parquemet incluye ahora las14rutas con uso ciclista de la edición recibida: ocho rojas y seis verdes del Paseo Metropolitano. Fichas/recortes del plano y selección en mapa mundial para todos; estilos nativos verdes y hueco de Los Sentidos conservados. La omisión geográfica se debía a excluir `highway=pedestrian`, aun cuando las vías declaran bicicletas. Nueva fuente atómica `sources/parquemet-shared-osm.json`:106vías/2615nodos,31vías nominales del Paseo,28con permiso ciclista explícito;84vías totales elegibles para el matcher. Las tres de Pedro restringidas/sin permiso quedan fuera. La fuente anterior permanece intacta y todos sus2042objetos son idénticos en la consulta nueva. [Implementación y pruebas](evidence/parquemet-shared.md), [versión privada14 comprobada y PR #8](evidence/parquemet-shared-release.md), [geografía contrastada](evidence/parquemet-paseo-geographic.md), [curvas originales](evidence/parquemet-paseo-pdf.md). No se georreferencia el PDF esquemático ni se mezclan ediciones.
+
+## Estado anterior: fondo del plano en las vistas de ruta
 
 Rama `fix/official-map-preview-background`, sobre `2a0786b`, reutiliza el worktree aislado `parquemet-coverage`. Las ocho fichas ciclistas de Parquemet y veinte de El Durazno muestran un recorte del plano oficial como fondo, tanto en miniatura como al desplegar y ampliar. Se conserva el entorno cercano y se resalta la curva original en el mismo sistema de píxeles. Las imágenes originales se comprueban por SHA256 y se comparten entre las fichas; no se genera ni modifica el contenido del plano. [Implementación, capturas y pruebas](evidence/map-preview-background.md), [versión privada13 verificada y PR #7](evidence/map-preview-background-release.md). Si falla el fondo, los vectores del mapa geográfico se mantienen. No alterar curvas/datos GPS para ajustar una miniatura.
 
