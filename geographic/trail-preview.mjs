@@ -21,16 +21,21 @@ export function sourcePathNode(path,{thumbnail=false}={}){
  if(!thumbnail&&path.strokeDashoffset)node.setAttribute('stroke-dashoffset',String(path.strokeDashoffset));
  return node;
 }
-export function createTrailPreview(model,onOpen){
+export function createTrailPreview(model,onOpen,background){
  const figure=document.createElement('figure');figure.className='trail-official-preview';figure.dataset.officialPreview=model.id;
  const button=document.createElement('button');button.type='button';button.className='trail-preview-open';button.setAttribute('aria-label','Ampliar trazado oficial de '+model.name);
- const svg=document.createElementNS(svgNS,'svg');svg.setAttribute('viewBox',[model.viewBox.x,model.viewBox.y,model.viewBox.width,model.viewBox.height].join(' '));svg.setAttribute('preserveAspectRatio','xMidYMid meet');svg.setAttribute('role','img');svg.setAttribute('aria-label','Sólo el recorrido de '+model.name+' del plano oficial');for(const path of model.paths)svg.append(sourcePathNode(path,{thumbnail:true}));button.append(svg);button.onclick=onOpen;
- const caption=document.createElement('figcaption');caption.textContent='Recorrido del plano oficial · Toca para ampliar';figure.append(button,caption);return figure;
+ const frame=model.viewBox,viewBox=[frame.x,frame.y,frame.width,frame.height].join(' '),svg=document.createElementNS(svgNS,'svg');svg.setAttribute('viewBox',viewBox);svg.setAttribute('preserveAspectRatio','xMidYMid meet');svg.setAttribute('role','img');svg.setAttribute('aria-label',model.name+' y su entorno en el plano oficial');
+ // A nested viewport clips the original map to the route neighbourhood even in
+ // the outer SVG's letterbox. Image and original paths use identical coordinates.
+ const crop=document.createElementNS(svgNS,'svg');crop.classList.add('trail-preview-crop');for(const key of ['x','y','width','height'])crop.setAttribute(key,String(frame[key]));crop.setAttribute('viewBox',viewBox);crop.setAttribute('overflow','hidden');
+ if(background){if(!background.imageUrl||![background.width,background.height].every(n=>Number.isFinite(n)&&n>0))throw new Error('Fondo del plano oficial inválido.');const image=document.createElementNS(svgNS,'image');image.classList.add('trail-preview-map');image.setAttribute('href',background.imageUrl);image.setAttribute('x','0');image.setAttribute('y','0');image.setAttribute('width',String(background.width));image.setAttribute('height',String(background.height));image.setAttribute('preserveAspectRatio','none');crop.append(image);}
+ for(const path of model.paths)crop.append(sourcePathNode(path,{thumbnail:true}));svg.append(crop);button.append(svg);button.onclick=onOpen;
+ const caption=document.createElement('figcaption');caption.textContent='Plano oficial · Entorno de la ruta · Toca para ampliar';figure.append(button,caption);return figure;
 }
-export function attachTrailPreviews(data,{resolveId=id=>id,onOpen}={}){
+export function attachTrailPreviews(data,{resolveId=id=>id,onOpen,background}={}){
  const models=officialTrailModels(data);for(const card of document.querySelectorAll('.trail-card')){
   const summary=card.querySelector('[data-trail-summary]'),id=summary?.dataset.trailSummary,model=models.find(t=>t.id===resolveId(id));if(!model)continue;
-  card.querySelectorAll('.trail-official-preview,.trail-miniature').forEach(n=>n.remove());const preview=createTrailPreview(model,()=>onOpen?.(model.id));card.querySelector('.trail-details').prepend(preview);
+  card.querySelectorAll('.trail-official-preview,.trail-miniature').forEach(n=>n.remove());const preview=createTrailPreview(model,()=>onOpen?.(model.id),background);card.querySelector('.trail-details').prepend(preview);
   const miniature=preview.querySelector('svg').cloneNode(true);miniature.classList.add('trail-miniature');miniature.setAttribute('aria-hidden','true');summary.classList.add('has-trail-miniature');summary.append(miniature);
  }
  return models;

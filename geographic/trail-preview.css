@@ -2,11 +2,12 @@
    The frame only fits the individual source path to the available screen area. */
 .has-trail-miniature .trail-topline{position:relative;z-index:1}
 .has-trail-miniature h3{max-width:62%;position:relative;z-index:1}
-.trail-miniature{position:absolute;right:16px;top:45px;width:34%;height:84px;pointer-events:none;overflow:visible}
+.trail-miniature{position:absolute;right:16px;top:45px;width:34%;height:84px;pointer-events:none;overflow:hidden;border-radius:7px}
 .trail-official-preview{margin:14px 0 18px;background:#f5f6ee;border:1px solid #dfe5d5;border-radius:10px;overflow:hidden}
-.trail-preview-open{display:block;width:100%;height:188px;border:0;padding:12px;background:transparent}
+.trail-preview-open{display:block;width:100%;height:228px;border:0;padding:10px;background:transparent}
 .trail-preview-open svg{display:block;width:100%;height:100%}
 .trail-official-preview figcaption{font-size:10px;line-height:1.5;color:#74806f;padding:9px 12px;border-top:1px solid #e0e5d8}
 .trail-preview-open:hover{background:#edf1e4}
+.trail-preview-crop>path{filter:drop-shadow(0 0 1px #fff)}
 .trail-preview-unavailable{padding:12px 0 0}
 @media(max-width:360px){.has-trail-miniature h3{max-width:60%;font-size:23px}.trail-miniature{right:12px;width:32%}}

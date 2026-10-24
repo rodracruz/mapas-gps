@@ -98,7 +98,12 @@ function setMapSource(source){
 }
 async function loadCartel(){
  const read=async(id,path)=>{const embedded=$(id);if(embedded)return embedded.textContent;const r=await fetch('./'+path);if(!r.ok)throw new Error('No se pudo cargar la capa del cartel.');return r.text();};
- const [raw,reg]=await Promise.all([read('embedded-all-visual','data/el-durazno/continuous-sign-trails.json'),read('embedded-cartel-registration','data/el-durazno/cartel-registration.json')]);registration=JSON.parse(reg);cartelData=validateContinuous(JSON.parse(raw));if(sha256(new TextEncoder().encode(raw))!==registration.sources.find(s=>s.id==='native-sign-artwork')?.sha256)throw new Error('El cartel no coincide con su fuente documentada.');attachTrailPreviews(cartelData,{resolveId:id=>catalog.targets.find(t=>t.id===id)?.visualTrailId,onOpen:id=>signReview.open(id,'vectors')});cartelLayer=createCartelLayer(map,cartelData,registration,selectCartel);setMapSource(mapSource);
+ const [raw,reg]=await Promise.all([read('embedded-all-visual','data/el-durazno/continuous-sign-trails.json'),read('embedded-cartel-registration','data/el-durazno/cartel-registration.json')]);registration=JSON.parse(reg);cartelData=validateContinuous(JSON.parse(raw));if(sha256(new TextEncoder().encode(raw))!==registration.sources.find(s=>s.id==='native-sign-artwork')?.sha256)throw new Error('El cartel no coincide con su fuente documentada.');
+ try{
+  const response=await fetch('./'+cartelData.image.url);if(!response.ok)throw new Error();const bytes=new Uint8Array(await response.arrayBuffer());if(sha256(bytes)!==cartelData.image.sha256)throw new Error();const imageUrl=URL.createObjectURL(new Blob([bytes],{type:'image/jpeg'}));
+  attachTrailPreviews(cartelData,{background:{imageUrl,width:cartelData.image.width,height:cartelData.image.height},resolveId:id=>catalog.targets.find(t=>t.id===id)?.visualTrailId,onOpen:id=>{$('sign-opacity').value='100';signReview.open(id,'overlay');}});
+ }catch{for(const card of document.querySelectorAll('.trail-card')){const note=document.createElement('p');note.className='fine-print';note.textContent='No se pudo cargar el recorte del plano oficial. Puedes abrir el plano y reintentar el fondo.';card.querySelector('.trail-details').prepend(note);}}
+ cartelLayer=createCartelLayer(map,cartelData,registration,selectCartel);setMapSource(mapSource);
 }
 async function ensureMap(){
  if(loadPromise)return loadPromise;

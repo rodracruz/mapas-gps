@@ -12,7 +12,7 @@ try{
  assert.equal(await page.locator('.trail-miniature').count(),20);assert.equal(await page.locator('.trail-official-preview').count(),20);
  for(const t of catalog.targets.filter(t=>t.visualTrailId)){
   const figure=page.locator(`[data-trail-details="${t.id}"] .trail-official-preview`),expected=data.routePaths.filter(p=>p.trailId===t.visualTrailId).map(p=>p.d);
-  assert.deepEqual(await figure.locator('path').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('d'))),expected,t.id+' preserves the exact official curves');assert.equal(await figure.locator('image').count(),0);
+  assert.deepEqual(await figure.locator('path').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('d'))),expected,t.id+' preserves the exact official curves');assert.equal(await figure.locator('image').count(),1);
  }
  assert.equal(await page.locator('[data-trail-details="subida-buitrera"] .trail-official-preview').count(),0);
  assert.match(await page.locator('.trail-preview-unavailable').textContent(),/aún no tiene un trazado específico/);
@@ -20,7 +20,7 @@ try{
  const layout=await page.locator('.has-trail-miniature').evaluateAll(nodes=>nodes.map(n=>{const title=n.querySelector('h3').getBoundingClientRect(),mini=n.querySelector('.trail-miniature').getBoundingClientRect();return {name:n.dataset.trailSummary,separate:title.right<=mini.left+1};}));assert.ok(layout.every(n=>n.separate),JSON.stringify(layout));
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
  await page.locator('[data-trail-summary="la-virgen"]').tap();await mkdir('test-results/trail-previews',{recursive:true});await page.screenshot({path:'test-results/trail-previews/el-durazno-expanded-mobile.png'});
- await page.locator('[data-trail-details="la-virgen"] .trail-preview-open').tap();await page.waitForSelector('#sign-dialog[open][data-ready=true]');await page.waitForFunction(()=>document.querySelector('[data-sign-mode="vectors"]').getAttribute('aria-pressed')==='true');assert.equal(await page.locator('[data-sign-select="la-virgen"]').getAttribute('aria-pressed'),'true');assert.equal(await page.locator('#sign-raster').getAttribute('hidden'),'');
+ await page.locator('[data-trail-details="la-virgen"] .trail-preview-open').tap();await page.waitForSelector('#sign-dialog[open][data-ready=true]');await page.waitForFunction(()=>document.querySelector('[data-sign-mode="overlay"]').getAttribute('aria-pressed')==='true');assert.equal(await page.locator('[data-sign-select="la-virgen"]').getAttribute('aria-pressed'),'true');assert.equal(await page.locator('#sign-raster').getAttribute('hidden'),null);
  await page.locator('#close-sign').tap();await page.locator('[data-trail-summary="la-virgen"]').tap();await page.locator('[data-trail-summary="chilling"]').scrollIntoViewIfNeeded();await page.screenshot({path:'test-results/trail-previews/el-durazno-cards-mobile.png'});
  await page.setViewportSize({width:320,height:740});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);const small=await page.locator('.tile-face').evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().height));assert.ok(small.every(h=>h===176));
  assert.deepEqual(errors,[]);console.log('PASS20 exact official route previews, no invented Buitrera illustration, fixed176px cards, mobile390/320 layout and selected vector enlargement');
