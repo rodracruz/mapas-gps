@@ -1,0 +1,2024 @@
+{
+  "schemaVersion": 1,
+  "id": "parquemet-official-cycling-trails",
+  "coordinateSystem": "document-pixels",
+  "origin": "top-left",
+  "image": {
+    "width": 6690,
+    "height": 2835
+  },
+  "page": {
+    "widthPt": 6689.759765625,
+    "heightPt": 2834.64990234375,
+    "rotation": 0
+  },
+  "transform": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "source": {
+    "path": "sources/parquemet-mapa-oficial.pdf",
+    "url": "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+    "sha256": "e7606172479a0fd585f7f3dcb4187556a202778cd647b31f44aaefcf9bd03cf8",
+    "bytes": 765376,
+    "page": 1,
+    "pageXref": 2,
+    "contentStreamXrefs": [
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126
+    ],
+    "contentStreams": [
+      {
+        "xref": 119,
+        "decodedSha256": "4b8b9f4a6471bc667981042d3189035609fa66b812d8b8b667eae84cbd42a1f1"
+      },
+      {
+        "xref": 120,
+        "decodedSha256": "86a35f8c1c89139cedafd90c7c83db8ba5020d296831aa51740552c3f00d2db9"
+      },
+      {
+        "xref": 121,
+        "decodedSha256": "cd6ef2aa7e241e2267b94e40ff9ed84d65555d9a692270c0c6692664b49beaf6"
+      },
+      {
+        "xref": 122,
+        "decodedSha256": "c8030f1b11bd270568b111bc967b1ebfee1fcdcfcc1bbc209c9654c911739004"
+      },
+      {
+        "xref": 123,
+        "decodedSha256": "65910e811a17c1e7d93903659b703b104b88914e32c81f312d0a78a53982fc83"
+      },
+      {
+        "xref": 124,
+        "decodedSha256": "4ed39a504fc13742372c8de05b8c0cb5e0e193699d0fdd8379ecd5300a1154ac"
+      },
+      {
+        "xref": 125,
+        "decodedSha256": "af507ef3b85228fd6a55ab6ed63fddf5d5f98bcb9098326a489509a29a7d8ad9"
+      },
+      {
+        "xref": 126,
+        "decodedSha256": "1f709e335e32f5f533389e0185931811aa755de00f41b5abd394001df51e50c0"
+      }
+    ],
+    "drawingCount": 3540,
+    "drawingIndexBase": 0,
+    "extractor": "PyMuPDF page.get_drawings",
+    "pyMuPdfVersion": "1.26.6",
+    "muPdfVersion": "1.26.11"
+  },
+  "fidelity": {
+    "geometry": "native-pdf-centerline",
+    "simplificationTolerance": 0,
+    "interpolatedSegments": 0,
+    "coordinateRounding": false,
+    "rasterTracing": false,
+    "preservesCubicControlPoints": true,
+    "preservesSeparateDrawings": true,
+    "preservesSourceDashPatterns": true,
+    "sourceOverpaintingRetainedInRasterOnly": true,
+    "boundsMeaning": "x,y,width,height; control-point box expanded by half source stroke width",
+    "svgColorNote": "Hex colors are rounded PyMuPDF RGB; original float RGB is retained. PDF color management may render differently."
+  },
+  "topology": {
+    "crossingsAreJunctions": false,
+    "connectionsInferred": false,
+    "networkAvailable": false
+  },
+  "georeferencing": {
+    "transform": null,
+    "crs": null,
+    "useForNavigation": false,
+    "useForGroundDistances": false
+  },
+  "trails": [
+    {
+      "id": "centenario",
+      "name": "Centenario",
+      "number": 1,
+      "officialDistanceM": 900,
+      "coordinateSystem": "document-pixels",
+      "fidelity": "native-pdf-centerline",
+      "sourceDrawingIds": [
+        1259,
+        1260,
+        1261,
+        1262,
+        1263,
+        1264,
+        1265
+      ],
+      "sourceDashedDrawingIds": [
+        1260,
+        1262
+      ],
+      "sharedEndpointDrawingIds": [
+        1269
+      ],
+      "paths": [
+        {
+          "id": "pdf-p1-drawing-1259",
+          "drawingIndex": 1259,
+          "seqno": 1288,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 1771.1689453125 1120.83837890625 L 1769.8309326171875 1122.746337890625",
+          "bounds": [
+            1768.6639325618744,
+            1119.671378850937,
+            3.6720128059387207,
+            4.241959095001221
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "7fcec2fca9fd8dead70dea78641ad94e2c8ace7921e98a35ced60ba69074b7d9"
+        },
+        {
+          "id": "pdf-p1-drawing-1260",
+          "drawingIndex": 1260,
+          "seqno": 1289,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 1766.4169921875 1127.6171875 L 1763.447998046875 1131.8521728515625 C 1760.18701171875 1136.4552001953125 1754.5570068359375 1138.754150390625 1749.0059814453125 1137.750244140625 L 1731.7120361328125 1134.6231689453125 C 1728.738037109375 1134.085205078125 1725.6700439453125 1134.4881591796875 1722.93603515625 1135.775146484375 L 1698.77294921875 1147.1531982421875 C 1693.3199462890625 1149.72119140625 1690.6710205078125 1155.980224609375 1692.625 1161.68212890625 L 1710.6739501953125 1214.3431396484375 C 1712.8759765625 1220.7701416015625 1706.9000244140625 1227.002197265625 1700.385986328125 1225.0711669921875 L 1654.365966796875 1211.4241943359375",
+          "bounds": [
+            1653.198966741562,
+            1126.450187444687,
+            114.38502550125122,
+            101.71900987625122
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [
+            4.759,
+            5.948
+          ],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "0a6d4d60d912bec16b392f95e1b264bf70d174d9399938847dd9f1de37d8afae"
+        },
+        {
+          "id": "pdf-p1-drawing-1261",
+          "drawingIndex": 1261,
+          "seqno": 1290,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 1654.36572265625 1211.4248046875 L 1652.1317138671875 1210.7628173828125 L 1651.253662109375 1208.603759765625",
+          "bounds": [
+            1650.086662054062,
+            1207.436759710312,
+            5.446060657501221,
+            5.155045032501221
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "0ef72592689611104fb6035a9b28961ae9f2494ac2eb11174e2fdb0d6a6f9707"
+        },
+        {
+          "id": "pdf-p1-drawing-1262",
+          "drawingIndex": 1262,
+          "seqno": 1291,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 1649.07470703125 1203.24365234375 L 1635.5186767578125 1169.9056396484375 C 1631.9456787109375 1161.11669921875 1622.313720703125 1156.443603515625 1613.19873046875 1159.07568359375 L 1600.895751953125 1162.628662109375 C 1598.212646484375 1163.4027099609375 1595.3616943359375 1162.1416015625 1594.1297607421875 1159.6365966796875 L 1593.128662109375 1157.599609375 C 1591.7977294921875 1154.890625 1592.78369140625 1151.6136474609375 1595.388671875 1150.088623046875 L 1608.53076171875 1142.398681640625 C 1610.88671875 1141.0186767578125 1611.95068359375 1138.1746826171875 1611.0787353515625 1135.587646484375 C 1610.2366943359375 1133.0926513671875 1607.8106689453125 1131.4866943359375 1605.186767578125 1131.6856689453125 L 1578.2156982421875 1133.730712890625 C 1569.3466796875 1134.402587890625 1561.8067626953125 1127.32958984375 1561.9127197265625 1118.4356689453125 L 1562.3726806640625 1079.5836181640625 C 1562.48876953125 1069.855712890625 1567.07373046875 1060.7216796875 1574.8067626953125 1054.815673828125 L 1636.47265625 1007.7276611328125",
+          "bounds": [
+            1560.6397626399994,
+            1006.5606610774994,
+            89.60194444656372,
+            197.84999132156372
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [
+            4.629,
+            5.786
+          ],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "9f1a56fd57be1d9e99ecdc00c7b455438b028b19dcbba7cc0897ef743f660547"
+        },
+        {
+          "id": "pdf-p1-drawing-1263",
+          "drawingIndex": 1263,
+          "seqno": 1292,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 1636.47265625 1007.7275390625 L 1638.32470703125 1006.3135375976562",
+          "bounds": [
+            1635.305656194687,
+            1005.1465375423431,
+            4.186050891876221,
+            3.7480015754699707
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "0473e20493c2198fb284c7ec48e2ebad1463a21340ccbce8063d642fac7a6a03"
+        },
+        {
+          "id": "pdf-p1-drawing-1264",
+          "drawingIndex": 1264,
+          "seqno": 1293,
+          "sourceLayer": "Capa 1",
+          "role": "endpoint-marker",
+          "d": "M 1767.93505859375 1118.5712890625 C 1769.18701171875 1116.7852783203125 1771.6500244140625 1116.352294921875 1773.43603515625 1117.604248046875 C 1775.2210693359375 1118.8563232421875 1775.654052734375 1121.3193359375 1774.403076171875 1123.104248046875 C 1773.1510009765625 1124.8902587890625 1770.6881103515625 1125.3232421875 1768.902099609375 1124.072265625 C 1767.1160888671875 1122.8203125 1766.68310546875 1120.3572998046875 1767.93505859375 1118.5712890625",
+          "bounds": [
+            1766.68310546875,
+            1116.352294921875,
+            8.970947265625,
+            8.970947265625
+          ],
+          "stroke": null,
+          "strokeRgb": null,
+          "strokeWidth": 0,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "butt",
+          "lineJoin": "miter",
+          "fill": "#e73938",
+          "fillRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "e7d442d75088aa3150bac757f55ced396754edf347fc637a0c4b41e531d406b5"
+        },
+        {
+          "id": "pdf-p1-drawing-1265",
+          "drawingIndex": 1265,
+          "seqno": 1294,
+          "sourceLayer": "Capa 1",
+          "role": "endpoint-marker",
+          "d": "M 1640.7216796875 1009.4521484375 C 1642.4547119140625 1008.129150390625 1642.7877197265625 1005.650146484375 1641.463623046875 1003.9161376953125 C 1640.1396484375 1002.1831665039062 1637.66162109375 1001.8511352539062 1635.927734375 1003.1751708984375 C 1634.1947021484375 1004.4981689453125 1633.8626708984375 1006.9771728515625 1635.1856689453125 1008.7101440429688 C 1636.5096435546875 1010.4431762695312 1638.9886474609375 1010.775146484375 1640.7216796875 1009.4521484375",
+          "bounds": [
+            1633.8626708984375,
+            1001.8511352539062,
+            8.925048828125,
+            8.92401123046875
+          ],
+          "stroke": null,
+          "strokeRgb": null,
+          "strokeWidth": 0,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "butt",
+          "lineJoin": "miter",
+          "fill": "#e73938",
+          "fillRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "8a368e3e0df276755fc22b07e934978d3d36f08b6d67cbc07a27486baee99318"
+        }
+      ],
+      "bounds": [
+        1560.6397626399994,
+        1001.8511352539062,
+        215.0142900943756,
+        226.31806206703186
+      ],
+      "label": {
+        "number": 1,
+        "text": "1",
+        "bounds": [
+          1576.5283203125,
+          1151.107177734375,
+          21.4747314453125,
+          40.09912109375
+        ],
+        "origin": [
+          1576.5283203125,
+          1182.06982421875
+        ],
+        "font": "TSInfo-Bold"
+      },
+      "legend": {
+        "text": "Centenario",
+        "bounds": [
+          4478.57421875,
+          2378.874755859375,
+          155.1416015625,
+          39.179443359375
+        ]
+      },
+      "leaderPaths": [],
+      "missingConnections": []
+    },
+    {
+      "id": "cuatro-y-medio",
+      "name": "4 ½",
+      "number": 2,
+      "officialDistanceM": 1000,
+      "coordinateSystem": "document-pixels",
+      "fidelity": "native-pdf-centerline",
+      "sourceDrawingIds": [
+        1266,
+        1267,
+        1268,
+        1269,
+        1270
+      ],
+      "sourceDashedDrawingIds": [
+        1267
+      ],
+      "sharedEndpointDrawingIds": [],
+      "paths": [
+        {
+          "id": "pdf-p1-drawing-1266",
+          "drawingIndex": 1266,
+          "seqno": 1295,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 1652.1318359375 1210.76220703125 L 1651.2318115234375 1212.9112548828125",
+          "bounds": [
+            1650.0648114681244,
+            1209.595206975937,
+            3.2340245246887207,
+            4.483047962188721
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "745bf1f68b38c84a863c1629381246f3a8ad886fac82695bf556ef019183def7"
+        },
+        {
+          "id": "pdf-p1-drawing-1267",
+          "drawingIndex": 1267,
+          "seqno": 1296,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 1648.97021484375 1218.30810546875 L 1648.5902099609375 1219.216064453125 C 1644.6302490234375 1228.6671142578125 1644.917236328125 1239.3641357421875 1649.378173828125 1248.589111328125 L 1681.59521484375 1315.2100830078125 C 1684.6192626953125 1321.465087890625 1691.0252685546875 1325.3701171875 1697.97119140625 1325.191162109375 L 1719.6741943359375 1324.6351318359375 C 1724.447265625 1324.5130615234375 1729.0672607421875 1326.3260498046875 1732.483154296875 1329.6611328125 L 1732.483154296875 1329.662109375 C 1738.6322021484375 1335.6640625 1742.90625 1343.3250732421875 1744.78515625 1351.7110595703125 L 1746.125244140625 1357.692138671875 L 1746.44921875 1365.173095703125 C 1746.8702392578125 1374.91015625 1755.6112060546875 1382.1480712890625 1765.254150390625 1380.7501220703125 L 1783.543212890625 1378.09912109375 C 1787.88623046875 1377.4691162109375 1815.26416015625 1399.0010986328125 1823.1171875 1405.485107421875",
+          "bounds": [
+            1643.4632489681244,
+            1217.141105413437,
+            180.82093858718872,
+            189.51100206375122
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [
+            4.681,
+            5.851
+          ],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "c982ce6e7df24aa5742da9b43cacbe20a0131490f173c0de7e2051e64f58e54b"
+        },
+        {
+          "id": "pdf-p1-drawing-1268",
+          "drawingIndex": 1268,
+          "seqno": 1297,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 1823.1171875 1405.48583984375 C 1823.942138671875 1406.1668701171875 1824.5511474609375 1406.681884765625 1824.896240234375 1406.98779296875",
+          "bounds": [
+            1821.950187444687,
+            1404.318839788437,
+            4.113052845001221,
+            3.8359532356262207
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "76d0f71a2615cfb894bf708fdbf3df5d71ff993c07d13830f3f47e3f2c18f82d"
+        },
+        {
+          "id": "pdf-p1-drawing-1269",
+          "drawingIndex": 1269,
+          "seqno": 1298,
+          "sourceLayer": "Capa 1",
+          "role": "endpoint-marker",
+          "d": "M 1648.4892578125 1209.236328125 C 1649.332275390625 1207.225341796875 1651.646240234375 1206.27734375 1653.6572265625 1207.120361328125 C 1655.6693115234375 1207.9622802734375 1656.6173095703125 1210.27734375 1655.7742919921875 1212.288330078125 C 1654.9312744140625 1214.29931640625 1652.6173095703125 1215.247314453125 1650.605224609375 1214.404296875 C 1648.59423828125 1213.5623779296875 1647.646240234375 1211.247314453125 1648.4892578125 1209.236328125",
+          "bounds": [
+            1647.646240234375,
+            1206.27734375,
+            8.9710693359375,
+            8.969970703125
+          ],
+          "stroke": null,
+          "strokeRgb": null,
+          "strokeWidth": 0,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "butt",
+          "lineJoin": "miter",
+          "fill": "#e73938",
+          "fillRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "17cc96317af8538033393a3b15e30eca089b005984f898a0b3d95d3a59d47991"
+        },
+        {
+          "id": "pdf-p1-drawing-1270",
+          "drawingIndex": 1270,
+          "seqno": 1299,
+          "sourceLayer": "Capa 1",
+          "role": "endpoint-marker",
+          "d": "M 1822.2744140625 1409.94140625 C 1823.9053955078125 1411.389404296875 1826.4013671875 1411.2403564453125 1827.849365234375 1409.609375 C 1829.29736328125 1407.9783935546875 1829.1484375 1405.4814453125 1827.5174560546875 1404.034423828125 C 1825.886474609375 1402.58642578125 1823.389404296875 1402.7353515625 1821.9423828125 1404.366455078125 C 1820.494384765625 1405.9974365234375 1820.6434326171875 1408.493408203125 1822.2744140625 1409.94140625",
+          "bounds": [
+            1820.494384765625,
+            1402.58642578125,
+            8.802978515625,
+            8.802978515625
+          ],
+          "stroke": null,
+          "strokeRgb": null,
+          "strokeWidth": 0,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "butt",
+          "lineJoin": "miter",
+          "fill": "#e73938",
+          "fillRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "c6df7495118ffb57e7c42e1ed45ad6d60e95b0780875a273a68cc394c60378a0"
+        }
+      ],
+      "bounds": [
+        1643.4632489681244,
+        1206.27734375,
+        185.8341143131256,
+        205.112060546875
+      ],
+      "label": {
+        "number": 2,
+        "text": "2",
+        "bounds": [
+          1644.03076171875,
+          1245.764892578125,
+          21.4747314453125,
+          40.09912109375
+        ],
+        "origin": [
+          1644.03076171875,
+          1276.7275390625
+        ],
+        "font": "TSInfo-Bold"
+      },
+      "legend": {
+        "text": "4 ½",
+        "bounds": [
+          4478.69140625,
+          2445.828857421875,
+          62.25244140625,
+          39.179443359375
+        ]
+      },
+      "leaderPaths": [],
+      "missingConnections": []
+    },
+    {
+      "id": "anfiteatro",
+      "name": "Anfiteatro",
+      "number": 3,
+      "officialDistanceM": 700,
+      "coordinateSystem": "document-pixels",
+      "fidelity": "native-pdf-centerline",
+      "sourceDrawingIds": [
+        1276,
+        1277,
+        1278,
+        1279,
+        1280,
+        1281,
+        1282,
+        1283,
+        1284,
+        1285,
+        1286
+      ],
+      "sourceDashedDrawingIds": [
+        1277,
+        1281,
+        1284
+      ],
+      "sharedEndpointDrawingIds": [],
+      "paths": [
+        {
+          "id": "pdf-p1-drawing-1276",
+          "drawingIndex": 1276,
+          "seqno": 1305,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3223.7001953125 1324.92578125 L 3225.09912109375 1323.062744140625",
+          "bounds": [
+            3222.533195257187,
+            1321.895744085312,
+            3.7329258918762207,
+            4.197037220001221
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "5b691c983876291f5722aa2ca77d17259a9199dd65e61d5092730249eefca93a"
+        },
+        {
+          "id": "pdf-p1-drawing-1277",
+          "drawingIndex": 1277,
+          "seqno": 1306,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3228.6328125 1318.36181640625 L 3250.788818359375 1288.8818359375 C 3251.841796875 1286.9718017578125 3253.415771484375 1285.40185546875 3255.326904296875 1284.352783203125 L 3306.059814453125 1256.5008544921875 C 3314.200927734375 1252.0318603515625 3322.764892578125 1248.3787841796875 3331.624755859375 1245.5938720703125 L 3353.58984375 1238.6898193359375 C 3362.077880859375 1236.0218505859375 3370.7998046875 1234.163818359375 3379.638916015625 1233.140869140625 C 3392.60791015625 1231.6397705078125 3405.721923828125 1231.94775390625 3418.605712890625 1234.0557861328125 L 3446.080810546875 1237.3758544921875 C 3453.85693359375 1238.6478271484375 3474.956787109375 1243.94580078125 3482.411865234375 1246.497802734375 L 3505.167724609375 1253.9248046875",
+          "bounds": [
+            3227.465812444687,
+            1230.4727704524994,
+            278.8689122200012,
+            89.05604600906372
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [
+            4.704,
+            5.88
+          ],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "901d9fee9ab66d9a6cde976081559861f2a0f61b67b08dd4b6d31c532bd024cd"
+        },
+        {
+          "id": "pdf-p1-drawing-1278",
+          "drawingIndex": 1278,
+          "seqno": 1307,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3505.16796875 1253.92529296875 L 3507.383056640625 1254.6483154296875",
+          "bounds": [
+            3504.000968694687,
+            1252.758292913437,
+            4.549088001251221,
+            3.0570225715637207
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "7ca52c1cfab2a69d3fcd0427cbd97310d0bae2eef69f01307be2fb0424d9cdb8"
+        },
+        {
+          "id": "pdf-p1-drawing-1279",
+          "drawingIndex": 1279,
+          "seqno": 1308,
+          "sourceLayer": "Capa 1",
+          "role": "endpoint-marker",
+          "d": "M 3506.1572265625 1258.40234375 C 3508.230224609375 1259.079345703125 3510.460205078125 1257.9462890625 3511.13623046875 1255.873291015625 C 3511.812255859375 1253.80029296875 3510.68115234375 1251.5703125 3508.608154296875 1250.893310546875 C 3506.5341796875 1250.21728515625 3504.30419921875 1251.349365234375 3503.628173828125 1253.42333984375 C 3502.951171875 1255.496337890625 3504.084228515625 1257.725341796875 3506.1572265625 1258.40234375",
+          "bounds": [
+            3502.951171875,
+            1250.21728515625,
+            8.861083984375,
+            8.862060546875
+          ],
+          "stroke": null,
+          "strokeRgb": null,
+          "strokeWidth": 0,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "butt",
+          "lineJoin": "miter",
+          "fill": "#e73938",
+          "fillRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "91d9dda0853d178a3b6e05b0ff14efc425e0e784a3a3e9d6943119b872181210"
+        },
+        {
+          "id": "pdf-p1-drawing-1280",
+          "drawingIndex": 1280,
+          "seqno": 1309,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3168.421875 1406.76806640625 L 3170.64599609375 1406.072021484375",
+          "bounds": [
+            3167.254874944687,
+            1404.905021429062,
+            4.558121204376221,
+            3.0300450325012207
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "7a936c72ec0722d7c70d44cb85c59dc2770fff60142a49282d28a8311ff76029"
+        },
+        {
+          "id": "pdf-p1-drawing-1281",
+          "drawingIndex": 1281,
+          "seqno": 1310,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3176.2548828125 1404.3173828125 L 3178.69091796875 1403.555419921875 C 3183.490966796875 1402.0533447265625 3186.760986328125 1397.6063232421875 3186.760986328125 1392.575439453125 L 3186.760986328125 1384.0013427734375 C 3186.760986328125 1379.909423828125 3184.5869140625 1376.1243896484375 3181.05078125 1374.0633544921875 L 3173.6669921875 1369.75732421875 C 3170.1318359375 1367.6964111328125 3167.957763671875 1363.912353515625 3167.957763671875 1359.8193359375 L 3167.957763671875 1357.2913818359375 C 3167.957763671875 1352.5654296875 3170.847900390625 1348.3193359375 3175.245849609375 1346.58740234375 L 3194.52197265625 1338.995361328125",
+          "bounds": [
+            3166.790763616562,
+            1337.828361272812,
+            28.89820909500122,
+            67.65602159500122
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [
+            4.702,
+            5.877
+          ],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "d1b83495afd609e3b7f11eac394a4a514e32efe9e7127aa8cffe4d816b11d1f9"
+        },
+        {
+          "id": "pdf-p1-drawing-1282",
+          "drawingIndex": 1282,
+          "seqno": 1311,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3194.52197265625 1338.99560546875 L 3196.68994140625 1338.1416015625",
+          "bounds": [
+            3193.354972600937,
+            1336.974601507187,
+            4.501968860626221,
+            3.1880040168762207
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "980d06efd7d7636aebaf24a443462b67a11446128d556a72b2ffe09d70d1ae7a"
+        },
+        {
+          "id": "pdf-p1-drawing-1283",
+          "drawingIndex": 1283,
+          "seqno": 1312,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3078.6953125 1414.09814453125 L 3081.025390625 1414.09814453125",
+          "bounds": [
+            3077.528312444687,
+            1412.931144475937,
+            4.664078235626221,
+            2.3340001106262207
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "c761525e94769ac28bcd33a4f491eefc123c40c781142bab5113b0607af65ff1"
+        },
+        {
+          "id": "pdf-p1-drawing-1284",
+          "drawingIndex": 1284,
+          "seqno": 1313,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3087.17578125 1414.09814453125 L 3090.413818359375 1414.09814453125 C 3094.28076171875 1414.09814453125 3097.888671875 1412.1551513671875 3100.017822265625 1408.9271240234375 C 3102.830810546875 1404.6611328125 3108.119873046875 1402.7620849609375 3113.002685546875 1404.26318359375 L 3116.671875 1405.39111328125",
+          "bounds": [
+            3086.008781194687,
+            1401.5950849056244,
+            31.83009386062622,
+            13.67005968093872
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [
+            4.921,
+            6.151
+          ],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "561a3093e6867a9a293627278a66340742db021ae3ad7db5cc4e21216ec63a42"
+        },
+        {
+          "id": "pdf-p1-drawing-1285",
+          "drawingIndex": 1285,
+          "seqno": 1314,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3116.67236328125 1405.3916015625 L 3118.8994140625 1406.07666015625",
+          "bounds": [
+            3115.505363225937,
+            1404.224601507187,
+            4.561050891876221,
+            3.0190587043762207
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "1bba33cc9e434b40f3e544c8daff6031c60546e2294f6051ae1bbd1f6e07b54e"
+        },
+        {
+          "id": "pdf-p1-drawing-1286",
+          "drawingIndex": 1286,
+          "seqno": 1315,
+          "sourceLayer": "Capa 1",
+          "role": "endpoint-marker",
+          "d": "M 3078.6953125 1418.04736328125 C 3076.513427734375 1418.04736328125 3074.746337890625 1416.2794189453125 3074.746337890625 1414.098388671875 C 3074.746337890625 1411.9173583984375 3076.513427734375 1410.1494140625 3078.6953125 1410.1494140625 C 3080.876220703125 1410.1494140625 3082.644287109375 1411.9173583984375 3082.644287109375 1414.098388671875 C 3082.644287109375 1416.2794189453125 3080.876220703125 1418.04736328125 3078.6953125 1418.04736328125",
+          "bounds": [
+            3074.746337890625,
+            1410.1494140625,
+            7.89794921875,
+            7.89794921875
+          ],
+          "stroke": null,
+          "strokeRgb": null,
+          "strokeWidth": 0,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "butt",
+          "lineJoin": "miter",
+          "fill": "#e73938",
+          "fillRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "c1a7115d907fb4fe7e871693d63a8e591fc47ec839397f2703fa3b0b892ab062"
+        }
+      ],
+      "bounds": [
+        3074.746337890625,
+        1230.4727704524994,
+        437.06591796875,
+        187.5745928287506
+      ],
+      "label": {
+        "number": 3,
+        "text": "3",
+        "bounds": [
+          3071.2421875,
+          1467.355224609375,
+          21.474853515625,
+          40.09912109375
+        ],
+        "origin": [
+          3071.2421875,
+          1498.31787109375
+        ],
+        "font": "TSInfo-Bold"
+      },
+      "legend": {
+        "text": "Anfiteatro",
+        "bounds": [
+          4478.75390625,
+          2513.047607421875,
+          145.302734375,
+          39.179443359375
+        ]
+      },
+      "leaderPaths": [
+        {
+          "id": "pdf-p1-drawing-1309",
+          "drawingIndex": 1309,
+          "seqno": 1339,
+          "sourceLayer": "Capa 1",
+          "role": "label-leader",
+          "d": "M 3078.6953125 1414.09814453125 L 3078.6953125 1474.1990966796875",
+          "bounds": [
+            3078.4033125042915,
+            1413.8061445355415,
+            0.5839999914169312,
+            60.68495213985443
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 0.5839999914169312,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "cb0252bb8dbc3fda18285dddfc8a5ad9dde1c520e2fe0e91a8f5c7952148ffb2"
+        }
+      ],
+      "missingConnections": [
+        {
+          "fromDrawingIndex": 1285,
+          "toDrawingIndex": 1280,
+          "from": [
+            3118.8994140625,
+            1406.07666015625
+          ],
+          "to": [
+            3168.421875,
+            1406.76806640625
+          ],
+          "documentGapPixels": 49.527287225414966,
+          "interpolated": false,
+          "reason": "No native red trail path between these source drawing groups"
+        },
+        {
+          "fromDrawingIndex": 1282,
+          "toDrawingIndex": 1276,
+          "from": [
+            3196.68994140625,
+            1338.1416015625
+          ],
+          "to": [
+            3223.7001953125,
+            1324.92578125
+          ],
+          "documentGapPixels": 30.070113445286186,
+          "interpolated": false,
+          "reason": "No native red trail path between these source drawing groups"
+        }
+      ]
+    },
+    {
+      "id": "la-s",
+      "name": "La S",
+      "number": 4,
+      "officialDistanceM": 500,
+      "coordinateSystem": "document-pixels",
+      "fidelity": "native-pdf-centerline",
+      "sourceDrawingIds": [
+        1287,
+        1288,
+        1289,
+        1290
+      ],
+      "sourceDashedDrawingIds": [
+        1288
+      ],
+      "sharedEndpointDrawingIds": [
+        1279
+      ],
+      "paths": [
+        {
+          "id": "pdf-p1-drawing-1287",
+          "drawingIndex": 1287,
+          "seqno": 1316,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3315.43896484375 1288.99560546875 L 3315.244873046875 1286.673583984375",
+          "bounds": [
+            3314.077872991562,
+            1285.506583929062,
+            2.5280919075012207,
+            4.656021595001221
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "b7cd7a9065be08eb634752eea88923abc41ba5a9e38d69ed4757bb135f22cb1e"
+        },
+        {
+          "id": "pdf-p1-drawing-1288",
+          "drawingIndex": 1288,
+          "seqno": 1317,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3314.9267578125 1280.84912109375 C 3315.412841796875 1275.2481689453125 3318.935791015625 1270.3121337890625 3324.165771484375 1268.0621337890625 C 3327.208740234375 1266.753173828125 3330.59375 1266.461181640625 3333.815673828125 1267.232177734375 L 3344.376708984375 1269.756103515625 C 3350.247802734375 1271.16015625 3356.398681640625 1268.9970703125 3360.098876953125 1264.22607421875 L 3366.0078125 1256.6060791015625 C 3368.095703125 1253.9140625 3371.019775390625 1251.9910888671875 3374.31982421875 1251.14111328125 L 3390.725830078125 1246.9130859375 C 3393.90283203125 1246.0941162109375 3397.2587890625 1246.3140869140625 3400.3017578125 1247.5390625 L 3415.90576171875 1253.820068359375 C 3418.749755859375 1254.965087890625 3421.86865234375 1255.233154296875 3424.86669921875 1254.591064453125 L 3442.941650390625 1250.7191162109375 C 3445.8017578125 1250.107177734375 3448.77783203125 1250.3231201171875 3451.519775390625 1251.3421630859375 L 3477.40087890625 1259.9051513671875 C 3479.228759765625 1260.5850830078125 3481.161865234375 1260.9080810546875 3483.0966796875 1260.8651123046875 C 3484.36279296875 1260.837158203125 3485.61376953125 1260.5831298828125 3486.834716796875 1260.2501220703125 L 3505.1318359375 1255.2620849609375",
+          "bounds": [
+            3313.759757757187,
+            1244.9271161556244,
+            192.53907823562622,
+            37.08900499343872
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [
+            4.673,
+            5.842
+          ],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "5f806ea277d4e1f5354c0c7d1423e5a7688cd68afff623a58fadcfa246ad2698"
+        },
+        {
+          "id": "pdf-p1-drawing-1289",
+          "drawingIndex": 1289,
+          "seqno": 1318,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3505.134765625 1255.26123046875 L 3507.3828125 1254.648193359375",
+          "bounds": [
+            3503.967765569687,
+            1253.481193304062,
+            4.582046985626221,
+            2.9470372200012207
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "07e57dbb767828759b10042320dc5d1b5f93cddb14165dd833f42b91dcf9aa7a"
+        },
+        {
+          "id": "pdf-p1-drawing-1290",
+          "drawingIndex": 1290,
+          "seqno": 1319,
+          "sourceLayer": "Capa 1",
+          "role": "endpoint-marker",
+          "d": "M 3319.37451171875 1288.66650390625 C 3319.556396484375 1290.8394775390625 3317.94140625 1292.74951171875 3315.7685546875 1292.9315185546875 C 3313.594482421875 1293.113525390625 3311.685546875 1291.49853515625 3311.50341796875 1289.324462890625 C 3311.321533203125 1287.1514892578125 3312.9365234375 1285.2425537109375 3315.109619140625 1285.060546875 C 3317.282470703125 1284.8785400390625 3319.192626953125 1286.4935302734375 3319.37451171875 1288.66650390625",
+          "bounds": [
+            3311.321533203125,
+            1284.8785400390625,
+            8.23486328125,
+            8.2349853515625
+          ],
+          "stroke": null,
+          "strokeRgb": null,
+          "strokeWidth": 0,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "butt",
+          "lineJoin": "miter",
+          "fill": "#e73938",
+          "fillRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "871be8e6029847c8fbe73229d0445adb688f34fdbdff50c1521165d46eb15aa6"
+        }
+      ],
+      "bounds": [
+        3311.321533203125,
+        1244.9271161556244,
+        197.2282793521881,
+        48.18640923500061
+      ],
+      "label": {
+        "number": 4,
+        "text": "4",
+        "bounds": [
+          3263.96435546875,
+          1137.968017578125,
+          21.474853515625,
+          40.09912109375
+        ],
+        "origin": [
+          3263.96435546875,
+          1168.9306640625
+        ],
+        "font": "TSInfo-Bold"
+      },
+      "legend": {
+        "text": "La S",
+        "bounds": [
+          4478.703125,
+          2576.766357421875,
+          56.685546875,
+          39.179443359375
+        ]
+      },
+      "leaderPaths": [
+        {
+          "id": "pdf-p1-drawing-1324",
+          "drawingIndex": 1324,
+          "seqno": 1356,
+          "sourceLayer": "Capa 1",
+          "role": "label-leader",
+          "d": "M 3315.43896484375 1288.99560546875 L 3264.654052734375 1238.2105712890625 C 3260.008056640625 1233.5645751953125 3257.39794921875 1227.2625732421875 3257.39794921875 1220.692626953125 L 3257.39794921875 1169.3045654296875",
+          "bounds": [
+            3257.1059492230415,
+            1169.012565433979,
+            58.62501561641693,
+            120.27504003047943
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 0.5839999914169312,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "db165efe1f194a29a0b22841695366e104c4cd6d058a87fee5b4a0987d011586"
+        }
+      ],
+      "missingConnections": []
+    },
+    {
+      "id": "zorzal",
+      "name": "Zorzal",
+      "number": 5,
+      "officialDistanceM": 500,
+      "coordinateSystem": "document-pixels",
+      "fidelity": "native-pdf-centerline",
+      "sourceDrawingIds": [
+        1291,
+        1292,
+        1293,
+        1294
+      ],
+      "sourceDashedDrawingIds": [
+        1292
+      ],
+      "sharedEndpointDrawingIds": [
+        1279
+      ],
+      "paths": [
+        {
+          "id": "pdf-p1-drawing-1291",
+          "drawingIndex": 1291,
+          "seqno": 1320,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3334.259765625 1289.15478515625 L 3336.580810546875 1288.954833984375",
+          "bounds": [
+            3333.092765569687,
+            1287.787833929062,
+            4.655045032501221,
+            2.5339512825012207
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "e57c4c3ddd26d4371d7424b01e6414f31a4a86cf330ce08190676cd586525940"
+        },
+        {
+          "id": "pdf-p1-drawing-1292",
+          "drawingIndex": 1292,
+          "seqno": 1321,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3342.37890625 1288.45458984375 L 3363.716796875 1286.6136474609375 C 3368.433837890625 1286.20654296875 3372.454833984375 1283.025634765625 3373.935791015625 1278.528564453125 C 3375.68798828125 1273.2095947265625 3380.929931640625 1269.8475341796875 3386.493896484375 1270.4736328125 L 3414.677978515625 1273.642578125 C 3416.4599609375 1273.842529296875 3418.263916015625 1273.6356201171875 3419.953857421875 1273.03564453125 L 3437.64599609375 1266.7615966796875 C 3439.535888671875 1266.091552734375 3441.56494140625 1265.91259765625 3443.54296875 1266.2415771484375 L 3480.73388671875 1272.43359375 C 3480.7578125 1272.4376220703125 3480.781005859375 1272.441650390625 3480.802978515625 1272.444580078125 C 3483.9228515625 1272.945556640625 3487.094970703125 1271.8875732421875 3489.5029296875 1269.841552734375 L 3505.60693359375 1256.1575927734375",
+          "bounds": [
+            3341.211906194687,
+            1254.9905927181244,
+            165.56202745437622,
+            34.63099718093872
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [
+            4.655,
+            5.819
+          ],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "dbe851dc1f7fbd4fc114fc9cdc7c92f92db4e247684562e8168215c0cca61546"
+        },
+        {
+          "id": "pdf-p1-drawing-1293",
+          "drawingIndex": 1293,
+          "seqno": 1322,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3505.607421875 1256.15673828125 L 3507.38232421875 1254.647705078125",
+          "bounds": [
+            3504.440421819687,
+            1253.480705022812,
+            4.108902454376221,
+            3.8430333137512207
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "f72c090e147850417f262ca5ec95472da193b9e96a699f13bf5a6e3cf761caa8"
+        },
+        {
+          "id": "pdf-p1-drawing-1294",
+          "drawingIndex": 1294,
+          "seqno": 1323,
+          "sourceLayer": "Capa 1",
+          "role": "endpoint-marker",
+          "d": "M 3334.59912109375 1293.08935546875 C 3332.426025390625 1293.2763671875 3330.51220703125 1291.6673583984375 3330.3251953125 1289.494384765625 C 3330.13720703125 1287.3214111328125 3331.7470703125 1285.4073486328125 3333.920166015625 1285.2203369140625 C 3336.093017578125 1285.0323486328125 3338.006103515625 1286.642333984375 3338.194091796875 1288.8153076171875 C 3338.381103515625 1290.9884033203125 3336.772216796875 1292.90234375 3334.59912109375 1293.08935546875",
+          "bounds": [
+            3330.13720703125,
+            1285.0323486328125,
+            8.243896484375,
+            8.2440185546875
+          ],
+          "stroke": null,
+          "strokeRgb": null,
+          "strokeWidth": 0,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "butt",
+          "lineJoin": "miter",
+          "fill": "#e73938",
+          "fillRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "341c233f073e7ac5157d8310b47068a01b6d6becbcfe7fee131844794a4a89a4"
+        }
+      ],
+      "bounds": [
+        3330.13720703125,
+        1253.480705022812,
+        178.4121172428131,
+        39.79566216468811
+      ],
+      "label": {
+        "number": 5,
+        "text": "5",
+        "bounds": [
+          3480.00390625,
+          1137.968017578125,
+          21.474853515625,
+          40.09912109375
+        ],
+        "origin": [
+          3480.00390625,
+          1168.9306640625
+        ],
+        "font": "TSInfo-Bold"
+      },
+      "legend": {
+        "text": "Zorzal",
+        "bounds": [
+          4478.447265625,
+          2645.155029296875,
+          85.43115234375,
+          39.179443359375
+        ]
+      },
+      "leaderPaths": [
+        {
+          "id": "pdf-p1-drawing-1325",
+          "drawingIndex": 1325,
+          "seqno": 1357,
+          "sourceLayer": "Capa 1",
+          "role": "label-leader",
+          "d": "M 3472.6826171875 1271.09326171875 L 3472.6826171875 1171.283203125",
+          "bounds": [
+            3472.3906171917915,
+            1170.9912031292915,
+            0.5839999914169312,
+            100.39405858516693
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 0.5839999914169312,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "58e5d0b2174d76cfad36dcb541581bd8882703e538760d3c5b44f3b855e4a2be"
+        }
+      ],
+      "missingConnections": []
+    },
+    {
+      "id": "pa-arriba",
+      "name": "Pa’ arriba",
+      "number": 6,
+      "officialDistanceM": 600,
+      "coordinateSystem": "document-pixels",
+      "fidelity": "native-pdf-centerline",
+      "sourceDrawingIds": [
+        1295,
+        1296,
+        1297,
+        1298
+      ],
+      "sourceDashedDrawingIds": [
+        1296
+      ],
+      "sharedEndpointDrawingIds": [
+        1279
+      ],
+      "paths": [
+        {
+          "id": "pdf-p1-drawing-1295",
+          "drawingIndex": 1295,
+          "seqno": 1324,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3360.603515625 1314.76318359375 L 3361.95751953125 1316.66015625",
+          "bounds": [
+            3359.436515569687,
+            1313.596183538437,
+            3.6880040168762207,
+            4.230972766876221
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "3c29a7af60cc083b217885a54197c08b92f6f1986378a4303bbaddfb11ad18f4"
+        },
+        {
+          "id": "pdf-p1-drawing-1296",
+          "drawingIndex": 1296,
+          "seqno": 1325,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3365.3515625 1321.4169921875 L 3378.263671875 1339.5140380859375 C 3380.33154296875 1342.4129638671875 3384.237548828125 1343.31494140625 3387.36865234375 1341.616943359375 C 3390.945556640625 1339.677001953125 3392.1435546875 1335.1219482421875 3389.983642578125 1331.6729736328125 L 3375.802490234375 1309.031982421875 C 3373.985595703125 1306.1300048828125 3374.82861328125 1302.304931640625 3377.699462890625 1300.43603515625 C 3379.74853515625 1299.1009521484375 3382.388671875 1299.0789794921875 3384.46044921875 1300.3790283203125 L 3424.990478515625 1325.7939453125 C 3427.192626953125 1327.175048828125 3429.986572265625 1327.18994140625 3432.20263671875 1325.8309326171875 C 3435.91162109375 1323.5579833984375 3436.58447265625 1318.447021484375 3433.593505859375 1315.2900390625 L 3413.259521484375 1293.8260498046875 C 3410.754638671875 1291.1829833984375 3411.25244140625 1286.9169921875 3414.298583984375 1284.9219970703125 C 3416.18359375 1283.68603515625 3418.612548828125 1283.64599609375 3420.53857421875 1284.8170166015625 L 3462.692626953125 1310.468017578125 C 3464.470458984375 1311.550048828125 3466.70458984375 1311.5479736328125 3468.4814453125 1310.4630126953125 C 3471.09765625 1308.864990234375 3471.927490234375 1305.4520263671875 3470.33544921875 1302.8309326171875 L 3457.95556640625 1282.446044921875 C 3456.90966796875 1280.7220458984375 3457.521484375 1278.470947265625 3459.296630859375 1277.5150146484375 C 3460.29052734375 1276.97900390625 3461.4814453125 1276.9520263671875 3462.49755859375 1277.4420166015625 L 3494.12353515625 1292.675048828125 C 3495.15869140625 1293.1729736328125 3496.37158203125 1293.135986328125 3497.37255859375 1292.574951171875 L 3505.880615234375 1287.8179931640625 C 3507.052490234375 1287.1629638671875 3507.74853515625 1285.9000244140625 3507.6796875 1284.5599365234375 L 3506.233642578125 1256.56103515625",
+          "bounds": [
+            3364.184562444687,
+            1255.394035100937,
+            144.73097276687622,
+            89.08790636062622
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [
+            4.675,
+            5.844
+          ],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "7de0302c95f8956ac1031f25e6737252b3097a0670c1ea730bb6f4358ce854b1"
+        },
+        {
+          "id": "pdf-p1-drawing-1297",
+          "drawingIndex": 1297,
+          "seqno": 1326,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3506.2333984375 1256.56103515625 L 3506.11328125 1254.2340087890625",
+          "bounds": [
+            3504.946281194687,
+            1253.0670087337494,
+            2.4541172981262207,
+            4.661026477813721
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "ab1b61393b1b9f155af380224e8107aca3d978a5131ba04aab506dd3292ae06b"
+        },
+        {
+          "id": "pdf-p1-drawing-1298",
+          "drawingIndex": 1298,
+          "seqno": 1327,
+          "sourceLayer": "Capa 1",
+          "role": "endpoint-marker",
+          "d": "M 3357.388671875 1317.05712890625 C 3356.12158203125 1315.2821044921875 3356.53466796875 1312.815185546875 3358.3095703125 1311.548095703125 C 3360.084716796875 1310.2821044921875 3362.5517578125 1310.694091796875 3363.818603515625 1312.4691162109375 C 3365.084716796875 1314.2451171875 3364.672607421875 1316.711181640625 3362.897705078125 1317.9781494140625 C 3361.12158203125 1319.2451171875 3358.65673828125 1318.8321533203125 3357.388671875 1317.05712890625",
+          "bounds": [
+            3356.12158203125,
+            1310.2821044921875,
+            8.963134765625,
+            8.9630126953125
+          ],
+          "stroke": null,
+          "strokeRgb": null,
+          "strokeWidth": 0,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "butt",
+          "lineJoin": "miter",
+          "fill": "#e73938",
+          "fillRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "01ffa7076c0e5c298695ae989ae5d71af50a876609fb477f39f699a3cce8fd7a"
+        }
+      ],
+      "bounds": [
+        3356.12158203125,
+        1253.0670087337494,
+        152.7939531803131,
+        91.41493272781372
+      ],
+      "label": {
+        "number": 6,
+        "text": "6",
+        "bounds": [
+          3480.00390625,
+          1390.090576171875,
+          21.474853515625,
+          40.09912109375
+        ],
+        "origin": [
+          3480.00390625,
+          1421.05322265625
+        ],
+        "font": "TSInfo-Bold"
+      },
+      "legend": {
+        "text": "Pa’ arriba",
+        "bounds": [
+          4478.751953125,
+          2709.380615234375,
+          133.013671875,
+          39.179443359375
+        ]
+      },
+      "leaderPaths": [
+        {
+          "id": "pdf-p1-drawing-1326",
+          "drawingIndex": 1326,
+          "seqno": 1358,
+          "sourceLayer": "Capa 1",
+          "role": "label-leader",
+          "d": "M 3474.0908203125 1399.7109375 L 3474.0908203125 1329.6279296875 C 3474.0908203125 1323.0579833984375 3471.480712890625 1316.7559814453125 3466.834716796875 1312.1099853515625",
+          "bounds": [
+            3466.5427168011665,
+            1311.817985355854,
+            7.840103507041931,
+            88.18495213985443
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 0.5839999914169312,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "873f2a2c327b4b9803be2df0c5ddc487f2215b831237b4454a86a70d10ff9476"
+        }
+      ],
+      "missingConnections": []
+    },
+    {
+      "id": "torre-5",
+      "name": "Torre 5",
+      "number": 7,
+      "officialDistanceM": 800,
+      "coordinateSystem": "document-pixels",
+      "fidelity": "native-pdf-centerline",
+      "sourceDrawingIds": [
+        1271,
+        1272,
+        1273,
+        1274,
+        1275
+      ],
+      "sourceDashedDrawingIds": [
+        1272
+      ],
+      "sharedEndpointDrawingIds": [],
+      "paths": [
+        {
+          "id": "pdf-p1-drawing-1271",
+          "drawingIndex": 1271,
+          "seqno": 1300,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3031.8017578125 1616.80419921875 L 3032.211669921875 1614.51025390625",
+          "bounds": [
+            3030.634757757187,
+            1613.343253850937,
+            2.7439122200012207,
+            4.627945423126221
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "199c4896517db0f5088e67d5be2a1348dd18d1c041fd50f1b21dafc42747da05"
+        },
+        {
+          "id": "pdf-p1-drawing-1272",
+          "drawingIndex": 1272,
+          "seqno": 1301,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3033.2578125 1608.83056640625 C 3036.075927734375 1595.279541015625 3042.184814453125 1584.74951171875 3055.98388671875 1581.9415283203125 L 3130.223876953125 1578.16162109375 L 3197.642822265625 1571.7515869140625 C 3207.5478515625 1570.2735595703125 3216.78076171875 1565.8575439453125 3224.147705078125 1559.0745849609375 C 3230.272705078125 1553.4345703125 3237.707763671875 1549.41357421875 3245.77880859375 1547.37451171875 L 3309.798828125 1531.1995849609375 C 3316.56689453125 1529.489501953125 3322.90283203125 1526.383544921875 3328.39794921875 1522.0765380859375 L 3403.44677734375 1463.277587890625 C 3420.73876953125 1449.7305908203125 3422.055908203125 1424.237548828125 3406.7607421875 1408.9595947265625",
+          "bounds": [
+            3032.090812444687,
+            1407.7925946712494,
+            391.1320958137512,
+            202.20497179031372
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [
+            4.618,
+            5.773
+          ],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "67a0b0c64f5764beacf4289d64e92cd6fd9693104ef58c8cb3c3e2ec34224763"
+        },
+        {
+          "id": "pdf-p1-drawing-1273",
+          "drawingIndex": 1273,
+          "seqno": 1302,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3406.76171875 1408.96044921875 C 3406.216796875 1408.4154052734375 3405.649658203125 1407.8834228515625 3405.061767578125 1407.365478515625",
+          "bounds": [
+            3403.894767522812,
+            1406.198478460312,
+            4.033951282501221,
+            3.9289708137512207
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "1e62218e6be407558ef2bf0e10626a00f12430cd566a2e889766de082ae20f35"
+        },
+        {
+          "id": "pdf-p1-drawing-1274",
+          "drawingIndex": 1274,
+          "seqno": 1303,
+          "sourceLayer": "Capa 1",
+          "role": "endpoint-marker",
+          "d": "M 3035.689453125 1617.49853515625 C 3035.305419921875 1619.6455078125 3033.25341796875 1621.0755615234375 3031.107421875 1620.6915283203125 C 3028.96044921875 1620.30859375 3027.530517578125 1618.256591796875 3027.91455078125 1616.1094970703125 C 3028.29736328125 1613.9635009765625 3030.349365234375 1612.5325927734375 3032.496337890625 1612.91748046875 C 3034.6435546875 1613.300537109375 3036.073486328125 1615.3525390625 3035.689453125 1617.49853515625",
+          "bounds": [
+            3027.530517578125,
+            1612.5325927734375,
+            8.54296875,
+            8.54296875
+          ],
+          "stroke": null,
+          "strokeRgb": null,
+          "strokeWidth": 0,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "butt",
+          "lineJoin": "miter",
+          "fill": "#e73938",
+          "fillRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "f3865c01e67fa368921bc8eb03909c69e7230e5718206625fa23e5f898541254"
+        },
+        {
+          "id": "pdf-p1-drawing-1275",
+          "drawingIndex": 1275,
+          "seqno": 1304,
+          "sourceLayer": "Capa 1",
+          "role": "endpoint-marker",
+          "d": "M 3407.671875 1404.40234375 C 3406.035888671875 1402.9603271484375 3403.539794921875 1403.1182861328125 3402.097900390625 1404.75439453125 C 3400.65576171875 1406.390380859375 3400.81494140625 1408.8863525390625 3402.449951171875 1410.328369140625 C 3404.0869140625 1411.7703857421875 3406.582763671875 1411.6123046875 3408.02392578125 1409.976318359375 C 3409.4658203125 1408.34033203125 3409.308837890625 1405.8443603515625 3407.671875 1404.40234375",
+          "bounds": [
+            3400.65576171875,
+            1402.9603271484375,
+            8.81005859375,
+            8.81005859375
+          ],
+          "stroke": null,
+          "strokeRgb": null,
+          "strokeWidth": 0,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "butt",
+          "lineJoin": "miter",
+          "fill": "#e73938",
+          "fillRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "30f348f1d3d8ae0b468e9ca6b74b14945fba2b0fbdffb3ed0dcbc4a1008215da"
+        }
+      ],
+      "bounds": [
+        3027.530517578125,
+        1402.9603271484375,
+        395.6923906803131,
+        218.115234375
+      ],
+      "label": {
+        "number": 7,
+        "text": "7",
+        "bounds": [
+          3378.7763671875,
+          1476.188232421875,
+          21.474853515625,
+          40.09912109375
+        ],
+        "origin": [
+          3378.7763671875,
+          1507.15087890625
+        ],
+        "font": "TSInfo-Bold"
+      },
+      "legend": {
+        "text": "Torre 5",
+        "bounds": [
+          4863.544921875,
+          2378.874755859375,
+          100.8369140625,
+          39.179443359375
+        ]
+      },
+      "leaderPaths": [],
+      "missingConnections": []
+    },
+    {
+      "id": "piramide",
+      "name": "Pirámide",
+      "number": 8,
+      "officialDistanceM": 600,
+      "coordinateSystem": "document-pixels",
+      "fidelity": "native-pdf-centerline",
+      "sourceDrawingIds": [
+        1299,
+        1300,
+        1301
+      ],
+      "sourceDashedDrawingIds": [
+        1299
+      ],
+      "sharedEndpointDrawingIds": [],
+      "paths": [
+        {
+          "id": "pdf-p1-drawing-1299",
+          "drawingIndex": 1299,
+          "seqno": 1328,
+          "sourceLayer": "Capa 1",
+          "role": "trail-stroke",
+          "d": "M 3853.150390625 1175.9375 L 3853.71630859375 1168.134521484375 C 3856.660400390625 1162.521484375 3863.08837890625 1159.6865234375 3869.21728515625 1161.299560546875 L 3926.076416015625 1176.260498046875 C 3945.367431640625 1181.3365478515625 3965.232421875 1183.906494140625 3985.181396484375 1183.906494140625 L 4025.823486328125 1183.906494140625 C 4044.157470703125 1183.906494140625 4062.25927734375 1187.990478515625 4078.818359375 1195.863525390625 C 4095.739501953125 1203.9095458984375 4114.271484375 1207.9964599609375 4133.00634765625 1207.814453125 L 4257.51318359375 1203.9764404296875",
+          "bounds": [
+            3851.983390569687,
+            1158.519523382187,
+            406.6967930793762,
+            50.64393663406372
+          ],
+          "stroke": "#e73938",
+          "strokeRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "strokeWidth": 2.3340001106262207,
+          "strokeDasharray": [
+            4.66,
+            5.825
+          ],
+          "strokeDashoffset": 0.0,
+          "lineCap": "round",
+          "lineJoin": "round",
+          "fill": null,
+          "fillRgb": null,
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "cfa04e6f6265ac45d24323a0ab0550c3da95efa3d053d2a9b86459fdcb77c4ed"
+        },
+        {
+          "id": "pdf-p1-drawing-1300",
+          "drawingIndex": 1300,
+          "seqno": 1329,
+          "sourceLayer": "Capa 1",
+          "role": "endpoint-marker",
+          "d": "M 3857.0888671875 1176.2236328125 C 3856.930908203125 1178.398681640625 3855.038818359375 1180.03466796875 3852.86376953125 1179.8765869140625 C 3850.68994140625 1179.7186279296875 3849.052978515625 1177.82666015625 3849.2109375 1175.651611328125 C 3849.368896484375 1173.4766845703125 3851.260986328125 1171.840576171875 3853.435791015625 1171.9986572265625 C 3855.61083984375 1172.1566162109375 3857.246826171875 1174.048583984375 3857.0888671875 1176.2236328125",
+          "bounds": [
+            3849.052978515625,
+            1171.840576171875,
+            8.19384765625,
+            8.194091796875
+          ],
+          "stroke": null,
+          "strokeRgb": null,
+          "strokeWidth": 0,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "butt",
+          "lineJoin": "miter",
+          "fill": "#e73938",
+          "fillRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "064f48d7bf4090bd3ea998c40b602e2db61f5f505f2e9a8f59875daef4477f21"
+        },
+        {
+          "id": "pdf-p1-drawing-1301",
+          "drawingIndex": 1301,
+          "seqno": 1330,
+          "sourceLayer": "Capa 1",
+          "role": "endpoint-marker",
+          "d": "M 4257.63671875 1207.92333984375 C 4259.81689453125 1207.8563232421875 4261.52978515625 1206.0343017578125 4261.4609375 1203.8543701171875 C 4261.39453125 1201.67431640625 4259.57275390625 1199.9613037109375 4257.392578125 1200.0283203125 C 4255.212890625 1200.0953369140625 4253.49951171875 1201.9183349609375 4253.56689453125 1204.0972900390625 C 4253.6337890625 1206.27734375 4255.45556640625 1207.9903564453125 4257.63671875 1207.92333984375",
+          "bounds": [
+            4253.49951171875,
+            1199.9613037109375,
+            8.0302734375,
+            8.029052734375
+          ],
+          "stroke": null,
+          "strokeRgb": null,
+          "strokeWidth": 0,
+          "strokeDasharray": [],
+          "strokeDashoffset": 0.0,
+          "lineCap": "butt",
+          "lineJoin": "miter",
+          "fill": "#e73938",
+          "fillRgb": [
+            0.9059891700744629,
+            0.2239871770143509,
+            0.21998931467533112
+          ],
+          "fillRule": "nonzero",
+          "opacity": 1.0,
+          "contentSha256": "7ac10f72470840274a631219f1e996f386a0305bc119a242dbcf071b52818db7"
+        }
+      ],
+      "bounds": [
+        3849.052978515625,
+        1158.519523382187,
+        412.476806640625,
+        50.64393663406372
+      ],
+      "label": {
+        "number": 8,
+        "text": "8",
+        "bounds": [
+          4007.82421875,
+          1161.939208984375,
+          21.474853515625,
+          40.09912109375
+        ],
+        "origin": [
+          4007.82421875,
+          1192.90185546875
+        ],
+        "font": "TSInfo-Bold"
+      },
+      "legend": {
+        "text": "Pirámide",
+        "bounds": [
+          4863.6630859375,
+          2445.828857421875,
+          125.8359375,
+          39.179443359375
+        ]
+      },
+      "leaderPaths": [],
+      "missingConnections": []
+    }
+  ],
+  "contentHashDefinition": "SHA-256 of UTF-8 JSON with sorted keys, ensure_ascii=false and separators=(',',':'), excluding top-level contentSha256",
+  "contentSha256": "9b5da4576d66b863c49ccf45096bac69d183098da60f68a0837bcb4f7573726e"
+}

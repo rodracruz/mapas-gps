@@ -1,7 +1,25 @@
 {
   "schemaVersion": 1,
   "parks": [
-    {"id":"el-durazno","name":"RKF El Durazno","shortName":"El Durazno","locality":"La Dehesa · Santiago, Chile","description":"Senderos de bikepark, servicios y el mapa original de El Durazno.","entry":"./mapa-geografico.html#parque=el-durazno"},
-    {"id":"parquemet","name":"Parque Metropolitano de Santiago","shortName":"Parquemet","locality":"Santiago, Chile","description":"Ocho senderos ciclistas del mapa oficial, avenidas y recorridos sobre el mapa mundial.","entry":"./parquemet.html#parque=parquemet","catalog":"./data/parquemet/geographic-catalog.json","document":"./data/parquemet/official-document.json"}
+    {
+      "id": "el-durazno",
+      "name": "RKF El Durazno",
+      "shortName": "El Durazno",
+      "locality": "La Dehesa · Santiago, Chile",
+      "description": "Senderos de bikepark, servicios y el mapa original de El Durazno.",
+      "entry": "./mapa-geografico.html#parque=el-durazno"
+    },
+    {
+      "id": "parquemet",
+      "name": "Parque Metropolitano de Santiago",
+      "shortName": "Parquemet",
+      "locality": "Santiago, Chile",
+      "description": "Ocho senderos ciclistas del mapa oficial, avenidas y recorridos sobre el mapa mundial.",
+      "entry": "./parquemet.html#parque=parquemet",
+      "catalog": "./data/parquemet/geographic-catalog.json",
+      "document": "./data/parquemet/official-document.json",
+      "visual": "./data/parquemet/visual-cycling-trails.json",
+      "visualSha256": "10c75c0778494a0d4b04a2005316a351261a6fa5d95e45a7117d8ffa70169eba"
+    }
   ]
 }

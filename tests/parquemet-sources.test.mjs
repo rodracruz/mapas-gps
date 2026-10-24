@@ -31,7 +31,6 @@ test('Parquemet preserves exactly eight cyclist names and distances from the sup
 
 test('the scoped OSM receipt is hash-bound and retains node and way versions without contributor metadata',()=>{
  assert.equal(createHash('sha256').update(bytes).digest('hex'),catalog.sourceSnapshotSha256);
- assert.equal(catalog.sourceSnapshotSha256,'5f804c6b89ceb2e5836429364cf87a8850cdfd57c347bb167d5be08b00dd29db');
  assert.equal(source.originalResponseSha256,'ad252f77463c909acceeee9fe3544a4c14e14d5fe925442933eaa9dbac231294');
  assert.equal(source.osmBaseTimestamp,'2026-10-20T15:03:08Z');
  assert.equal(source.queriedAt,catalog.queriedAt);
@@ -40,8 +39,8 @@ test('the scoped OSM receipt is hash-bound and retains node and way versions wit
  assert.equal(new URL(source.url).searchParams.get('data'),source.query);
  assert.equal(source.source,'OpenStreetMap');
  assert.equal(source.license,'ODbL-1.0');
- assert.equal(source.elements.filter(e=>e.type==='way').length,33);
- assert.equal(source.elements.filter(e=>e.type==='node').length,1260);
+ assert.equal(source.elements.filter(e=>e.type==='way').length,62);
+ assert.equal(source.elements.filter(e=>e.type==='node').length,1980);
  for(const e of source.elements){
   assert.ok(Number.isSafeInteger(e.version)&&e.version>0);
   assert.ok(Number.isFinite(Date.parse(e.timestamp)));
@@ -63,7 +62,13 @@ test('all imported coordinates are original ordered OSM nodes and the extent des
  assert.equal(used.size,nodes.size);
  const values=[...nodes.values()];
  assert.deepEqual(catalog.geographicExtent,[Math.min(...values.map(n=>n.lon)),Math.min(...values.map(n=>n.lat)),Math.max(...values.map(n=>n.lon)),Math.max(...values.map(n=>n.lat))]);
- assert.deepEqual(catalog.geographicExtent,[-70.6380693,-33.4306903,-70.6019812,-33.3894875]);
+ assert.deepEqual(catalog.geographicExtent,[-70.6380693,-33.4307172,-70.6017231,-33.3894875]);
+ // Independently computed from the selected elements in the original Overpass
+ // response, before expanding the scoped receipt. This pins every coordinate,
+ // ordered way node, object ID, version and timestamp to that original source.
+ const projection=[...source.elements].sort((a,b)=>a.type.localeCompare(b.type)||a.id-b.id)
+  .map(e=>[e.type,e.id,e.version,e.timestamp,e.type==='node'?[e.lon,e.lat]:e.nodes]);
+ assert.equal(createHash('sha256').update(JSON.stringify(projection)).digest('hex'),'5719f4586795a98115fce889bbbf2f19b1bd59838813b70992b73bb80bc2d43b');
  const piramide=geo.features.find(f=>f.properties.osmId===479774004);
  assert.equal(piramide.properties.osmVersion,9);
  for(const [index,id,coords] of [[0,6938700276,[-70.6019812,-33.3894875]],[48,4728218613,[-70.6035451,-33.3916628]],[96,4728218661,[-70.6070446,-33.3953692]]]){
@@ -74,28 +79,33 @@ test('all imported coordinates are original ordered OSM nodes and the extent des
  assert.equal(catalog.navigationValidated,false);
 });
 
-test('unconfirmed spelling variants remain unassigned context instead of acquiring a geographic route',()=>{
- assert.deepEqual(catalog.targets.filter(t=>t.category==='cycling-trail'&&t.status==='osm-identified').map(t=>t.id),['centenario','cuatro-y-medio','anfiteatro','la-s','torre-5','piramide']);
+test('all eight official cycling trails acquire their explicitly documented OSM names',()=>{
+ assert.deepEqual(catalog.targets.filter(t=>t.category==='cycling-trail'&&t.status==='osm-identified').map(t=>t.id),officialTrails.map(([id])=>id));
  for(const [id,osmId,name] of [['zorzal',862880882,'Sendero Ciclista El Zorzal'],['pa-arriba',691091446,"Sendero Ciclista Pa' Arriba"]]){
   const t=catalog.targets.find(t=>t.id===id),f=geo.features.find(f=>f.properties.osmId===osmId);
-  assert.equal(t.status,'public-reference');
-  assert.deepEqual(t.osmWayIds,[]);
-  assert.deepEqual(t.osmNames,[]);
-  assert.equal(t.geometryImported,false);
+  assert.equal(t.status,'osm-identified');
+  assert.deepEqual(t.osmWayIds,[osmId]);
+  assert.deepEqual(t.osmNames,[name]);
+  assert.equal(t.geometryImported,true);
   assert.equal(t.geometry,null);
-  assert.equal(t.publicMapUrl,officialUrl);
+  assert.equal(t.publicMapUrl,'https://www.openstreetmap.org/way/'+osmId);
   assert.equal(f.properties.name,name);
-  assert.equal(f.properties.targetId,null);
+  assert.equal(f.properties.targetId,id);
   assert.equal(f.properties.tags.access,'no');
+  assert.match(t.accessNote,/access=no/);
+  assert.equal(t.operationConfirmed,false);
+  assert.equal(t.unassignedOsmReferences,undefined);
  }
  const bad=structuredClone(catalog);
  bad.targets.find(t=>t.id==='centenario').osmWayIds.push(862880882);
  assert.throws(()=>fromOsmSnapshot(source,bad),/nombre|geogr/i);
 });
 
-test('two primary avenues have literal sourced names and explicit cycling infrastructure in every imported way',()=>{
- assert.deepEqual(catalog.park.primaryTargetIds,['avenida-pedro-bannen','avenida-alberto-mackenna']);
- for(const [id,name,count] of [['avenida-pedro-bannen','Avenida Pedro Bannen',9],['avenida-alberto-mackenna','Avenida Alberto Mackenna',5]]){
+test('cycling trails are primary and all nine secondary avenues have explicit cycling infrastructure per assigned way',()=>{
+ assert.deepEqual(catalog.park.primaryTargetIds,['centenario','cuatro-y-medio']);
+ const avenues=[['avenida-pedro-bannen','Avenida Pedro Bannen',9],['avenida-alberto-mackenna','Avenida Alberto Mackenna',5],['avenida-abate-molina','Avenida Abate Molina',8],['avenida-carlos-martner','Avenida Carlos Martner',5],['avenida-carlos-reed','Avenida Carlos Reed',5],['avenida-claudio-gay','Avenida Claudio Gay',2],['avenida-federico-albert','Avenida Federico Albert',1],['avenida-manuel-zanartu','Avenida Manuel Zañartu',1],['avenida-la-montana','Avenida La Montaña',4]];
+ assert.equal(catalog.targets.filter(t=>t.category==='avenue').length,avenues.length);
+ for(const [id,name,count] of avenues){
   const t=catalog.targets.find(t=>t.id===id);
   assert.equal(t.category,'avenue');
   assert.deepEqual(t.osmNames,[name]);
@@ -105,9 +115,22 @@ test('two primary avenues have literal sourced names and explicit cycling infras
    const tags=f.properties.tags;
    assert.equal(f.properties.name,name);
    assert.ok(Object.entries(tags).some(([key,value])=>/^cycleway(?::(?:left|right|both))?$/.test(key)&&['lane','shared_lane'].includes(value)));
-   assert.equal(tags.bicycle,undefined);
-   assert.equal(tags.access,undefined);
+   assert.ok(!['no','private'].includes(tags.bicycle));
+   assert.ok(!['no','private'].includes(tags.access));
   }
+ }
+});
+
+test('unverified La Montaña segment and bicycle-prohibited Gabriela Mistral remain inspectable context',()=>{
+ assert.deepEqual(geo.features.filter(f=>f.properties.targetId===null).map(f=>f.properties.osmId),[158170398,480868075,1223734901]);
+ const mountain=geo.features.find(f=>f.properties.osmId===1223734901);
+ assert.equal(mountain.properties.name,'Avenida La Montaña');
+ assert.equal(mountain.properties.tags.bicycle,undefined);
+ assert.equal(mountain.properties.tags.cycleway,undefined);
+ for(const id of [158170398,480868075]){
+  const f=geo.features.find(f=>f.properties.osmId===id);
+  assert.equal(f.properties.name,'Avenida Gabriela Mistral');
+  assert.equal(f.properties.tags.bicycle,'no');
  }
 });
 
