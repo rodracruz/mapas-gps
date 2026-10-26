@@ -1,0 +1,32 @@
+✔ GPX escapes text, preserves point order and exports disconnected ways as separate segments (5.377817ms)
+✔ GPX rejects invalid coordinates, timestamps, text controls and oversized names (0.588227ms)
+✔ calendar exports UTC time, stable safe identity, escaped content and CRLF lines (2.393219ms)
+✔ calendar folds unicode by UTF-8 octets and resists line injection (2.939444ms)
+✔ records haversine distance and active duration with detached snapshots (12.266538ms)
+✔ pause and resume exclude paused time and never bridge the route (0.442652ms)
+✔ a gap over 30 seconds starts another segment without a speed or distance bridge (2.412785ms)
+✔ discarded inaccurate, stale, future, unordered and impossible fixes break continuity (4.150623ms)
+✔ jitter does not accumulate distance while slow coherent progress eventually does (2.64314ms)
+✔ validates commands and rejects backwards time without changing the ride (0.387001ms)
+✔ quality limits are inclusive and exactly 30 seconds does not split a segment (0.18156ms)
+✔ haversine handles a dateline crossing without a globe-spanning jump (0.141354ms)
+✔ jitter threshold uses the previous accepted accuracy after accuracy deteriorates (2.977009ms)
+✔ finish rejects an end before the accepted trace tolerance without stranding the activity (4.890856ms)
+✔ finish accepts the exact future-fix tolerance and rejects one millisecond beyond it (3.985734ms)
+✔ session excludes fresh matcher teleport raw and starts the next accepted reading in a separate segment (41.614376ms)
+✔ session excludes retained raw rejection and ticks while preserving valid off-network recording, pause timing and demo exclusion (26.006845ms)
+✔ session records valid ambiguous raw positions without requiring a probable matched route (0.672353ms)
+✔ defaults are independent complete version-one states (2.324734ms)
+✔ validation normalizes omitted optional fields without mutating input (7.500611ms)
+✔ rejects unsafe ids, duplicate records, excessive text, impossible dates and invalid schema (3.834972ms)
+✔ rejects invalid activity values and keeps every point of long accepted traces (63.607234ms)
+✔ missing IndexedDB and the protected legacy database fail explicitly (0.526181ms)
+✔ rejects malformed downloads and nonmonotonic or negative activity records (1.084982ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 559.622767

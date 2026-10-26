@@ -1,0 +1,10 @@
+PASS live owner survives second-tab Profile boot
+PASS paused owner, transactional delete refusal and competing start
+PASS already-open contender can start after release
+PASS already-open survivor recovers abandoned paused trace before claiming a new recording
+PASS destination recovers committed trace without restarting GPS
+PASS revoked native ownership stops recording and shows an honest error
+PASS simultaneous cross-park starts create one recorder and one native watch
+PASS queued checkpoint/finish/release/delete ordering; missing, terminal and stale-owner guards
+PASS safe coordination fallback absent
+PASS safe coordination fallback rejected

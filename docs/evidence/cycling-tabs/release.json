@@ -1,7 +1,50 @@
 {
-  "status": "pending-private-deployment",
-  "codeCommit": "cb045275139383c3ce7b77e0ca9ac6e9ee7f33d8",
+  "status": "deployed-private",
+  "version": 22,
+  "url": "https://mapas-gps-revision-durazno.rodracruz.chatgpt.site",
+  "comparisonUrl": "https://mapas-gps-revision-durazno.rodracruz.chatgpt.site/comparacion-vistas.html",
+  "codeCommit": "5ab5d41778a4d4521b63e096ae0bb122d2e2a4df",
   "siteProjectId": "appgprj_6ad51f7eb4a08191bf1159e60380c2d4",
-  "previousPublishedVersion": 21,
+  "siteSourceCommit": "69b4b4a28d41229a7e266cfbfb4701ff563ce27f",
+  "deploymentId": "appgdep_6adf70016504819195217a4a995836e7",
+  "siteVersionId": "appgprj_6ad51f7eb4a08191bf1159e60380c2d4~appgver_c69803d77b088191adddf9901fb04e40",
+  "nativeStatus": "succeeded",
+  "archiveBytes": 31044467,
+  "archiveSha256": "20d2bee9c81eaaf359349c1a26aa63abbde27d59204da9f8e681c0cf0a069cb3",
+  "privateAudience": {
+    "ownerAccounts": 1,
+    "externalVisitors": 0,
+    "groups": 0
+  },
+  "httpBytesVerified": {
+    "origin": "https://mapas-gps-revision-durazno.rodracruz.chatgpt.site",
+    "checks": [
+      {
+        "route": "/",
+        "status": 200,
+        "sha256": "518bc438ccba28ada9acc7f79a96020f57059c60f1eeef138cafc081803964fa",
+        "matchesPackagedBytes": true
+      },
+      {
+        "route": "/parquemet.html",
+        "status": 200,
+        "sha256": "1ebde800102f057baf80072134b93db094dbb939abb1beffa88b167a0e668d6e",
+        "matchesPackagedBytes": true
+      },
+      {
+        "route": "/comparacion.html",
+        "status": 200,
+        "sha256": "ef3c826dac9e1bb01690838cc54c8d2ea3142cbde4fa0cc8f8f9294c9063f81e",
+        "matchesPackagedBytes": true
+      },
+      {
+        "route": "/comparacion-vistas.html",
+        "status": 200,
+        "sha256": "7c5923b16fe78eb0c02bc9b3ecaf28fd6ee4ea4d52a59f8da7689b2e7927a0a8",
+        "matchesPackagedBytes": true
+      }
+    ],
+    "privateReadVerified": true
+  },
   "githubMainWritten": false
 }

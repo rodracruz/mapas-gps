@@ -1,6 +1,6 @@
 # bikeride · Cinco vistas ciclistas
 
-Integración de las cinco pantallas aprobadas del segundo ZIP: mapa GPS en ruta, explorador, detalle técnico, perfil/actividad/garaje y encuentros. Expediciones y alquileres quedan fuera. La publicación exacta y sus hashes se registran en `release.json` al completar el despliegue privado.
+Integración de las cinco pantallas aprobadas del segundo ZIP: mapa GPS en ruta, explorador, detalle técnico, perfil/actividad/garaje y encuentros. Expediciones y alquileres quedan fuera. Publicación privada **22**, verificada por HTTP200 y hash de los archivos probados. [Abrir bikeride](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site) · [Comparar con Stitch](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site/comparacion-vistas.html). Identificadores y hashes en `release.json`.
 
 ## Qué funciona
 
@@ -12,7 +12,7 @@ Integración de las cinco pantallas aprobadas del segundo ZIP: mapa GPS en ruta,
 
 ## Evidencia
 
-Las diez capturas `*-390x844.png` muestran los cinco estados iniciales de cada parque. `garage-fixture-390x844.png` y `agenda-fixture-390x844.png` utilizan exclusivamente datos sintéticos en un contexto nuevo; no son datos personales ni valores iniciales del producto.
+Las diez capturas `*-390x844.png` muestran los cinco estados iniciales de cada parque. Todas las capturas con `fixture` utilizan exclusivamente datos sintéticos en contextos nuevos, incluidos garaje, agenda, grabación, errores y consentimiento; no son datos personales ni valores iniciales del producto.
 
 La comparación con los PNG originales se conserva únicamente en el sitio privado: `comparacion-vistas.html`. Las dos columnas usan 390px de anchura y una ventana de 844px. El ZIP no documenta el viewport CSS ni el DPR de origen: la comparación permite revisar composición y jerarquía, pero no acredita igualdad píxel a píxel. Marca, planos, datos comprobados y estados vacíos sustituyen las personas y cifras ficticias de Stitch.
 
@@ -48,3 +48,5 @@ python3 scripts/build-geographic-standalone.py --reference-photo /ruta/privada/8
 ```
 
 No ejecutar estos builds sobre una `dist` privada que deba conservarse: usar una copia aislada. La foto y los ZIP originales permanecen fuera del repositorio público. Código en `feat/bikeride-stitch-integration`; GitHub `main` se conserva.
+
+La entrega final pasa155 pruebas de código/construcción,10 grupos de propiedad entre pestañas,3 casos de sesión con matcher real,3 de procedencia y7 de cancelación de inicio. La revisión conjunta y sus correcciones están cerradas. La grabación necesita coordinación nativa compatible del navegador: si falta, los datos y la consulta GPS siguen disponibles y el registro se inhabilita con aviso claro.

@@ -1,24 +1,24 @@
 {
-  "codeCommit": "cb045275139383c3ce7b77e0ca9ac6e9ee7f33d8",
+  "codeCommit": "5ab5d41778a4d4521b63e096ae0bb122d2e2a4df",
   "unitBuildSuite": {
-    "tests": 152,
-    "passed": 152,
+    "tests": 155,
+    "passed": 155,
     "failed": 0,
     "log": "final-suite.log"
   },
   "privateBuild": {
     "files": {
       "parquemet.html": {
-        "bytes": 2498982,
-        "sha256": "608b65998c17f20e761989713f53f3176e819241e88b276dd2cd078c62ece1f2"
+        "bytes": 2505462,
+        "sha256": "1ebde800102f057baf80072134b93db094dbb939abb1beffa88b167a0e668d6e"
       },
       "index.html": {
-        "bytes": 4550917,
-        "sha256": "bcedcba2b8f9ffa933480533c053e0d112bd4e4a6132daf0738a20a069d53d15"
+        "bytes": 4557397,
+        "sha256": "518bc438ccba28ada9acc7f79a96020f57059c60f1eeef138cafc081803964fa"
       },
       "mapas-gps-parques.html": {
-        "bytes": 4550917,
-        "sha256": "bcedcba2b8f9ffa933480533c053e0d112bd4e4a6132daf0738a20a069d53d15"
+        "bytes": 4557397,
+        "sha256": "518bc438ccba28ada9acc7f79a96020f57059c60f1eeef138cafc081803964fa"
       },
       "mapas-gps-revision.html": {
         "bytes": 3182224,
@@ -154,7 +154,11 @@
     "native GPS simulated in both parks",
     "legacy Blob/calibration/trails with activeSW",
     "both private standalone bundles",
-    "12 source/private photo-tap and zoom combinations at320/390/768"
+    "12 source/private photo-tap and zoom combinations at320/390/768",
+    "10 native same-origin ownership/queue/recovery cases across parks",
+    "3 real session/matcher rejection cases",
+    "3 service provenance cases",
+    "7 blocked-start stop/demo/navigation/normal consent cases"
   ],
   "preservedInputFiles": 18,
   "sourceGeometryCatalogAndOldBuildUnchanged": true,
@@ -169,10 +173,11 @@
     "task1": "approved",
     "task2": "approved after3 Important fixes"
   },
-  "finalIntegrationReview": "pending",
+  "finalIntegrationReview": "approved: F1/F2/F3 and N1 addressed; no open findings",
   "notExecuted": [
     "physical field GPS",
     "physical phone or locked-screen/background durability",
     "external Beacon/events/offline-basemap services"
-  ]
+  ],
+  "recordingCompatibility": "Native Web Locks required; unsupported/rejected API preserves history and GPS consultation, disables recording/recovery safely"
 }

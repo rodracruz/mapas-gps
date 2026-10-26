@@ -2,7 +2,7 @@
 
 ## Última etapa
 
-Las cinco pantallas ciclistas del segundo ZIP están implementadas en `feat/bikeride-stitch-integration`: mapa GPS en ruta, explorador, detalle técnico, perfil/actividad/garaje y encuentros. La revisión independiente de implementación y la segunda revisión de sus tres correcciones están aprobadas. Se está preparando la verificación final y actualización del mismo sitio privado; la última publicación anterior verificada es la21. El resultado definitivo se registra en [release.json](../../evidence/cycling-tabs/release.json).
+Las cinco pantallas ciclistas del segundo ZIP están implementadas en `feat/bikeride-stitch-integration`: mapa GPS en ruta, explorador, detalle técnico, perfil/actividad/garaje y encuentros. La revisión independiente de implementación y la segunda revisión de sus tres correcciones están aprobadas. El sitio privado está actualizado a la **versión22**, con un propietario, cero visitantes/grupos externos y HTTP200/hash idéntico al paquete probado. Código final5ab5d4; GitHub main no se modificó. El resultado definitivo se registra en [release.json](../../evidence/cycling-tabs/release.json).
 
 [Entrega y límites de esta etapa](../../evidence/cycling-tabs/README.md) · [Plan](../../superpowers/plans/2026-10-26-cycling-tabs.md) · [Contratos de datos/UI](../../superpowers/specs/2026-10-26-cycling-tabs-design.md).
 
@@ -39,3 +39,5 @@ El primer ZIP `ee1a8c4d…` se recibió y verificó correctamente; no existe un 
 [Revisión estática y visual de las pantallas](REVISION-PESTANAS-2026-10-26.md) · [Inventario/hashes](PESTANAS-RECIBIDAS.json). Los scripts del prototipo nunca se utilizaron como servicios reales. Referencias de diseño y fotografía original permanecen privadas.
 
 Historial: [integración inicial](../../evidence/bikeride-stitch/README.md), [corrección visual](../../evidence/bikeride-visual/README.md), [atribución](../../evidence/bikeride-attribution/README.md), [recuperación resuelta](RECUPERACION-2026-10-26.md). El diagnóstico [SIGUIENTE-ETAPA.md](SIGUIENTE-ETAPA.md) es histórico; las funciones locales enumeradas arriba ya no deben tratarse como propuestas sin implementar.
+
+La revisión conjunta final corrigió propiedad entre pestañas y borrado/checkpoints, exclusión de saltos GPS rechazados y fuente real de servicios. Una revisión focalizada posterior corrigió el inicio pendiente para respetar Detener GPS/demo. Todo aprobado;155 pruebas finales y regresiones específicas verdes. La coordinación nativa entre pestañas es requisito de grabación; donde falta se conserva historial/consulta y se rechaza grabar/recuperar con aviso.

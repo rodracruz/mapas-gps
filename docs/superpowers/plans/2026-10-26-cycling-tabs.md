@@ -51,6 +51,6 @@
 **Interfaces:** reviewed Task1/2 source and private original photograph; current owner-only Site.
 - [x] Compare each supplied screenshot and current page at equivalent CSS viewport/scale. Inspect pixels; no completion based on tests alone. Fix with Task2 implementer if needed.
 - [x] Run full unit suite once source is final; relevant mobile/GPS/preservation/autonomous tests. Verify original photo and source geometry hashes.
-- [ ] Independent whole-branch review on the most capable model; resolve Important findings.
-- [ ] Push feature branch; package exact tested private build, sync existing Site source, native private deployment without audience changes.
-- [ ] Verify returned deployment and actual app paths/hashes; publish screenshots/evidence safe for public Git, retain design originals privately. Record accurate completed/pending list.
+- [x] Independent whole-branch review on the most capable model; resolve Important findings.
+- [x] Push feature branch; package exact tested private build, sync existing Site source, native private deployment without audience changes.
+- [x] Verify returned deployment and actual app paths/hashes; publish screenshots/evidence safe for public Git, retain design originals privately. Record accurate completed/pending list.

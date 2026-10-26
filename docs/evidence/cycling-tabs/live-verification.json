@@ -1,0 +1,30 @@
+{
+  "origin": "https://mapas-gps-revision-durazno.rodracruz.chatgpt.site",
+  "checks": [
+    {
+      "route": "/",
+      "status": 200,
+      "sha256": "518bc438ccba28ada9acc7f79a96020f57059c60f1eeef138cafc081803964fa",
+      "matchesPackagedBytes": true
+    },
+    {
+      "route": "/parquemet.html",
+      "status": 200,
+      "sha256": "1ebde800102f057baf80072134b93db094dbb939abb1beffa88b167a0e668d6e",
+      "matchesPackagedBytes": true
+    },
+    {
+      "route": "/comparacion.html",
+      "status": 200,
+      "sha256": "ef3c826dac9e1bb01690838cc54c8d2ea3142cbde4fa0cc8f8f9294c9063f81e",
+      "matchesPackagedBytes": true
+    },
+    {
+      "route": "/comparacion-vistas.html",
+      "status": 200,
+      "sha256": "7c5923b16fe78eb0c02bc9b3ecaf28fd6ee4ea4d52a59f8da7689b2e7927a0a8",
+      "matchesPackagedBytes": true
+    }
+  ],
+  "privateReadVerified": true
+}
