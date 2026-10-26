@@ -45,7 +45,7 @@ export function createRideRecorder({now=Date.now}={}) {
       const point={longitude:fix.longitude,latitude:fix.latitude,accuracy:fix.accuracy,timestamp:fix.timestamp,speed:fix.speed??null};
       if(broken || gap) {ride.segments.push([]);anchor=point;}
       else {
-        const step=distance(anchor,point),threshold=Math.max(3,Math.min(anchor.accuracy,point.accuracy)*.5);
+        const step=distance(anchor,point),threshold=Math.max(3,Math.min(previous.accuracy,point.accuracy)*.5);
         if(step>=threshold) {
           ride.distanceM+=step;
           const speed=step/((point.timestamp-anchor.timestamp)/1000);
@@ -71,6 +71,7 @@ export function createRideRecorder({now=Date.now}={}) {
       checkTime(time);
       if(!['finished','interrupted'].includes(status))throw new TypeError('Invalid final ride status');
       if(!['recording','paused'].includes(ride.status))throw new Error('The ride has already ended');
+      if(lastFixTime>time+5000)throw new TypeError('Final ride time precedes the accepted trace');
       if(activeSince!==null)elapsed+=time-activeSince;
       activeSince=null;ride.status=status;ride.endedAt=time;lastCommand=time;breakSegment();return snapshot(time);
     }

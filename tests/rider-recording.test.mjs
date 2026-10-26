@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {defaultRiderState,validateRiderState} from '../rider/store.mjs';
 const api=await import('../rider/recording.mjs').catch(()=>({}));
 const epoch=1000000, metres=6371008.8*Math.PI/180;
 const fix=(x,t,extra={})=>({longitude:x/metres,latitude:0,accuracy:4,timestamp:epoch+t,...extra});
@@ -43,4 +44,37 @@ test('quality limits are inclusive and exactly 30 seconds does not split a segme
 test('haversine handles a dateline crossing without a globe-spanning jump',()=>{
  const {r,at}=setup();assert.equal(at(0,0,{longitude:179.99999}),true);assert.equal(at(0,1000,{longitude:-179.99997}),true);
  const s=r.snapshot(epoch+1000);assert.ok(s.distanceM>4 && s.distanceM<5);
+});
+
+test('jitter threshold uses the previous accepted accuracy after accuracy deteriorates',()=>{
+ const {r,at}=setup();
+ assert.equal(at(0,0,{accuracy:1}),true);
+ assert.equal(at(1,1000,{accuracy:45}),true);
+ assert.equal(at(10,2000,{accuracy:45}),true);
+ const jitter=r.snapshot(epoch+2000);
+ assert.equal(jitter.distanceM,0);assert.equal(jitter.maxSpeedMps,null);
+ assert.equal(jitter.segments[0].length,3);
+ assert.equal(at(25,3000,{accuracy:45}),true);
+ assert.ok(Math.abs(r.snapshot(epoch+3000).distanceM-25)<.001);
+});
+test('finish rejects an end before the accepted trace tolerance without stranding the activity',()=>{
+ const {r,at}=setup();at(0,0);at(0,10000);at(0,20000);
+ const before=r.snapshot(epoch+20000);
+ assert.throws(()=>r.finish(epoch+10000),/time|trace/i);
+ assert.deepEqual(r.snapshot(epoch+20000),before);
+ const done=r.finish(epoch+20000);
+ const state=defaultRiderState();state.activities=[done];
+ assert.deepEqual(validateRiderState(state).activities[0],done);
+ assert.equal(done.status,'finished');assert.equal(done.endedAt,epoch+20000);
+});
+test('finish accepts the exact future-fix tolerance and rejects one millisecond beyond it',()=>{
+ for(const status of ['finished','interrupted']){
+  const {r,clock}=setup();clock(15000);assert.equal(r.ingest(fix(0,20000)),true);
+  const before=r.snapshot(epoch+15000);
+  assert.throws(()=>r.finish(epoch+14999,status),/time|trace/i);
+  assert.deepEqual(r.snapshot(epoch+15000),before);
+  const done=r.finish(epoch+15000,status),state=defaultRiderState();state.activities=[done];
+  assert.deepEqual(validateRiderState(state).activities[0],done);
+  assert.equal(done.endedAt,epoch+15000);assert.equal(done.status,status);
+ }
 });
