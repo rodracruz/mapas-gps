@@ -25,6 +25,14 @@ export function setupBikerideChrome({directory,park,catalog,onSwitchPark}){
  // Reuse the one live map, before filters/cards, as in the supplied design.
  const mapCard=document.getElementById('map-card'),filterAnchor=document.getElementById('route-filter-anchor');
  if(mapCard&&filterAnchor)parkView.insertBefore(mapCard,filterAnchor);
+ // Leaflet adds its control after this chrome is mounted. Reserve its actual
+ // wrapped height so source changes and mobile widths cannot cover the caption.
+ const observeAttribution=()=>{
+  const attribution=mapCard.querySelector('.leaflet-control-attribution');if(!attribution)return false;
+  const size=()=>mapCard.style.setProperty('--bikeride-attribution-height',Math.ceil(attribution.getBoundingClientRect().height)+'px');
+  const observer=new ResizeObserver(size);observer.observe(attribution);size();return true;
+ };
+ if(!observeAttribution()){const pending=new MutationObserver(()=>{if(observeAttribution())pending.disconnect();});pending.observe(document.getElementById('geo-map'),{childList:true,subtree:true});}
  const back=document.getElementById('back-to-parks');if(back)header?.append(back);
  const sources=document.querySelector('.park-sources');for(const node of [document.querySelector('.park-heading'),document.getElementById('amenities'),document.getElementById('data-status')])if(node&&sources)sources.append(node);
  const photo=document.querySelector('.park-photo-card');if(photo&&filterAnchor)filterAnchor.after(photo);

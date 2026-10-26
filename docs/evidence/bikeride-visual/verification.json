@@ -210,16 +210,16 @@
       ]
     },
     "after-parquemet.png": {
-      "sha256": "6de2a11640aaad06ad78f821c5d4eb54f61eb56baf6881520c51d55ec4318808",
-      "bytes": 243521,
+      "sha256": "48509b3e9bd00091a6f70170e7e3c63decf35830ad7cc2a94d8779f12c8d9879",
+      "bytes": 238277,
       "pixels": [
         544,
         830
       ]
     },
     "after-tall.png": {
-      "sha256": "b5d457c86efa0df565fdae6a418a395c7efa2014d5a860be0368d2a436c2ffa6",
-      "bytes": 166478,
+      "sha256": "d035d43b9499f7a1a4ed6107e7c5ed13741e69a45beca20c14283fff4752e3b9",
+      "bytes": 164143,
       "pixels": [
         544,
         1177
@@ -234,8 +234,8 @@
       ]
     },
     "after-el-durazno.png": {
-      "sha256": "148e008b62e90e47620e51902a350a67bf1787554ecd27db193c6995d6df99e1",
-      "bytes": 140081,
+      "sha256": "40a012dc1805ded3c0d65a00a84ac24ecdd54e5abd30a4c0dbd024d0f3dbc615",
+      "bytes": 143088,
       "pixels": [
         544,
         830
@@ -277,5 +277,6 @@
     "tableReferenceCaption": "Failing assertion reproduced; final design test passed.",
     "physicalGpsTested": false
   },
-  "qaRuntimeFilesCompared": 68
+  "qaRuntimeFilesCompared": 68,
+  "attributionFollowup": "../bikeride-attribution/README.md"
 }

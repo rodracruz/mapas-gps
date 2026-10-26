@@ -1,0 +1,92 @@
+{
+  "baseCommit": "068a629",
+  "unitSuite": {
+    "passed": 131,
+    "failed": 0
+  },
+  "attributionSourceChecks": {
+    "checks": [
+      "el-durazno 320px: full source text, reserved preview space, full map and source changes",
+      "el-durazno 390px: full source text, reserved preview space, full map and source changes",
+      "el-durazno 544px: full source text, reserved preview space, full map and source changes",
+      "parquemet 320px: full source text, reserved preview space, full map and source changes",
+      "parquemet 390px: full source text, reserved preview space, full map and source changes",
+      "parquemet 544px: full source text, reserved preview space, full map and source changes"
+    ]
+  },
+  "attributionBundledChecks": {
+    "bundled": true,
+    "checks": [
+      "el-durazno 320px: full source text, reserved preview space, full map and source changes",
+      "el-durazno 390px: full source text, reserved preview space, full map and source changes",
+      "el-durazno 544px: full source text, reserved preview space, full map and source changes",
+      "parquemet 320px: full source text, reserved preview space, full map and source changes",
+      "parquemet 390px: full source text, reserved preview space, full map and source changes",
+      "parquemet 544px: full source text, reserved preview space, full map and source changes"
+    ]
+  },
+  "regressions": [
+    "bikeride-design-browser",
+    "geographic-browser",
+    "bikeride-browser",
+    "gps-layout-browser:49 public fixes, five sizes",
+    "gps-follow-browser:both parks"
+  ],
+  "independentReview": {
+    "screenshots": 12,
+    "newIssues": 0
+  },
+  "screenshots": {
+    "preview-544.png": {
+      "sha256": "b062b4e20f1920b26c8874f76f49bb848c439400131ba5f6af839db24ffad305",
+      "pixels": [
+        544,
+        830
+      ]
+    },
+    "parquemet-card.png": {
+      "sha256": "b3b0fbbe7071c4e839307c7afea439c1472c6597b9145f908548ecff87f52121",
+      "pixels": [
+        488,
+        245
+      ]
+    },
+    "preview-390.png": {
+      "sha256": "1fe82574282248a0c04d176e173b7ec773427c3ae924cd7ea900805d4c51bd4d",
+      "pixels": [
+        390,
+        595
+      ]
+    },
+    "preview-320.png": {
+      "sha256": "ac473e3de888191dd4d6c84f4ca24b95e81301e1af567bd0c55bdd1363a917b5",
+      "pixels": [
+        320,
+        844
+      ]
+    },
+    "full-390.png": {
+      "sha256": "032f2a585b3cd0a1ceb75fb41ef4bf75a38e8c35aa57216a7880dee917fd3a21",
+      "pixels": [
+        390,
+        595
+      ]
+    },
+    "el-durazno-544x830.png": {
+      "sha256": "40a012dc1805ded3c0d65a00a84ac24ecdd54e5abd30a4c0dbd024d0f3dbc615",
+      "pixels": [
+        544,
+        830
+      ]
+    },
+    "el-durazno-card.png": {
+      "sha256": "45db08ba8ce9b12293f355b151f3943dd24768b8db7fc2572c87b64df3a291df",
+      "pixels": [
+        488,
+        245
+      ]
+    }
+  },
+  "privatePhotoPublished": false,
+  "physicalGpsValidation": false
+}
