@@ -21,6 +21,12 @@ Acción bloqueada: recuperar el código ya copiado desde el navegador automatiza
 
 Se necesita **un canal de transferencia de archivo desde el navegador autorizado** que entregue el ZIP/HTML real de la segunda iteración de ciclismo. Si se dispone de otro navegador conectado con esa capacidad, usar el mismo proyecto y sesión; no crear un reemplazo. Como alternativa mínima, basta recibir una exportación real de esa iteración. No hacen falta nuevos servicios, facturación, claves publicadas, acceso a ubicaciones ni otro inicio de sesión.
 
+Revisión de capacidades: no está expuesta una herramienta de recogida de descargas del navegador TinyFish ni un conector de exportación de Stitch. La descarga local mediante URL sería posible si se recibiera una URL de archivo, pero ninguno de los resultados la proporcionó. La herramienta de archivos adjuntos recibe archivos subidos a la tarea; no recoge descargas de ese navegador. No hay otra transferencia nativa pendiente de probar con las herramientas actuales.
+
+La identidad de la segunda versión sigue sin acreditarse: la última lectura del historial citó «Trabaja sobre la iteración de ciclismo SUDA Bike Trails…» como si fuera el encargo original del propietario, pero ese texto pertenece al encargo de integración enviado por este asistente. Es evidencia circular y no se acepta para identificar la versión. Los nombres Mapa GPS/Rutas/Perfil/Encuentros son una referencia temática, no un mapeo comprobado a pantallas exportables. Explore tampoco está acreditada como segunda versión. No se pide regenerar pantallas a partir de esa inferencia.
+
+Paso manual mínimo si no se habilita un canal de transferencia ya autorizado: en el proyecto original, el propietario selecciona **las pantallas que identifica como su segunda versión SUDA**, elige **Export → `.zip` → Export** y adjunta **el ZIP original, sin descomprimir, a esta misma tarea**. Así se recibe la versión que eligió el usuario, sin atribuirle Explore o el documento de integración por conjetura. No se solicita copiar código ni modificar permisos.
+
 Hasta recibir contenido recuperable, no se repiten la misma lectura denegada ni la confirmación ZIP sin una vía para recoger el resultado. Tampoco se integra una pantalla inicial de aventuras como si fuera la segunda versión de ciclismo.
 
 ## Trabajo que sigue pendiente
@@ -31,3 +37,5 @@ Hasta recibir contenido recuperable, no se repiten la misma lectura denegada ni 
 4. Ejecutar pruebas de datos, GPS simulado, almacenamiento y móvil con comparación visual del diseño recuperado. No se afirma validación física de GPS.
 
 En esta recuperación no se cambió código de producto, el sitio alojado, main, originales, permisos ni servicios. La preparación y los intentos de exportación no equivalen a una integración terminada.
+
+Verificación independiente adicional: `node --test tests/geographic.test.mjs tests/parks.test.mjs tests/navigation-matcher.test.mjs tests/navigation-demo.test.mjs` ejecutó **51 pruebas, 51 correctas, 0 fallos** sobre la base actual. No ejecuta la construcción que sustituye `dist/`, ni valida pantallas SUDA, GPS en terreno o servicios propuestos. El resultado íntegro queda en los artefactos de la tarea.
