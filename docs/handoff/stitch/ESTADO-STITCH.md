@@ -1,5 +1,7 @@
 # Estado del trabajo en Stitch
 
+**Actualización 2026-10-26:** acceso autenticado confirmado; selección y copia de una pantalla realizadas. La lectura del código copiado quedó bloqueada por permisos del navegador y el intento ZIP no entregó un archivo recuperable. No se repite la configuración ni se considera terminada la integración. Evidencia, límite concreto y continuación mínima: [RECUPERACION-2026-10-26.md](RECUPERACION-2026-10-26.md).
+
 Inicio de sesión de trabajo:2026-10-23. Base funcional: `31e5c69`. Rama de documentación: `docs/stitch-handoff`. Los enlaces de acceso, identificadores de sesión y reportes completos se conservan fuera del repositorio público.
 
 ## Trabajo realizado
