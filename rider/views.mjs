@@ -24,7 +24,19 @@ export function setupCyclingViews({directory,catalog,getGeo,getPreview,actions})
  for(const view of ['rutas','detalle','perfil','encuentros']){const node=document.createElement('section');node.id='rider-'+view;node.className='rider-view';node.hidden=true;host.append(node);roots.set(view,node);}
  const status=document.createElement('p');status.id='rider-message';status.className='rider-message';status.setAttribute('role','status');status.hidden=true;document.body.append(status);
  const dialog=document.createElement('dialog');dialog.id='rider-editor';dialog.className='rider-editor';document.body.append(dialog);
- function tell(text,error=false){status.textContent=text;status.hidden=false;status.dataset.error=String(error);}
+ function placeFeedback(){
+  const container=current==='mapa'?hud:roots.get(current)||byId('park-view');
+  const next=current==='mapa'?hud.querySelector('.rider-record-actions'):container.querySelector('.rider-create-meetup');
+  if(next){if(status.parentNode!==container||status.nextElementSibling!==next)next.before(status);}
+  else if(status.parentNode!==container)container.append(status);
+ }
+ function tell(text,error=false){
+  // Reserved flow space, never a floating overlay. Identical checkpoint success
+  // does not mutate live text or generate repeated announcements.
+  if(status.textContent!==text)status.textContent=text;
+  if(status.dataset.error!==String(error)){status.dataset.error=String(error);status.setAttribute('role',error?'alert':'status');}
+  status.hidden=false;placeFeedback();
+ }
  function failed(error){storeError='No se guardó el cambio. '+(error?.message||'Almacenamiento no disponible.');tell(storeError,true);}
  const initStore=openRiderStore().then(async value=>{
   if(disposed){value.close();return;}store=value;
@@ -153,7 +165,7 @@ export function setupCyclingViews({directory,catalog,getGeo,getPreview,actions})
   byId('rider-hud-accuracy').textContent=s.mode==='demo'?'Demo · Posición simulada':s.mode==='off'?'Ubicación desactivada':raw?`GPS ±${Math.round(raw.accuracy)} m · ${Math.max(0,Math.floor((Date.now()-raw.timestamp)/1000))} s`:'Esperando lectura GPS';
   byId('rider-hud-source').textContent=a?'Registro local':s.mode==='demo'?'No se graba':'Consulta GPS';byId('rider-route-heading').textContent=s.result?.route?'Pista probable: '+(target(s.result.route.targetId)?.name||s.result.route.name):target(targetId)?.name||'Mapa en ruta';
  }
- function render(){if(disposed)return;if(current==='rutas')renderRoutes();if(current==='detalle')renderDetail();if(current==='perfil')renderProfile();if(current==='encuentros')renderMeetups();renderHud();}
+ function render(){if(disposed)return;if(current==='rutas')renderRoutes();if(current==='detalle')renderDetail();if(current==='perfil')renderProfile();if(current==='encuentros')renderMeetups();placeFeedback();renderHud();}
  // Refresh previews/data only for the currently active route; no awaited render
  // may resurrect an old page after navigation.
  async function refreshData(){const epoch=routeEpoch;await initStore;if(!disposed&&epoch===routeEpoch)render();}
