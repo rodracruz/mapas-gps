@@ -50,7 +50,7 @@
 
 **Files:** documentación de evidencia e integración; correcciones sólo si pruebas/revisión encuentran problemas.
 
-- [ ] Ejecutar suite completa en copia aislada, pruebas GPS/móvil pertinentes y conservación de almacenamiento.
-- [ ] Revisar comparación visual y una revisión independiente del cambio completo.
-- [ ] Guardar código y evidencia en la rama de trabajo; documentar funciones implementadas y pendientes.
-- [ ] Preparar una vista ejecutable dentro del acceso ya autorizado; no cambiar main ni ampliar audiencia.
+- [x] Ejecutar suite completa en copia aislada, pruebas GPS/móvil pertinentes y conservación de almacenamiento.
+- [x] Revisar comparación visual y una revisión independiente del cambio completo.
+- [x] Guardar código y evidencia en la rama de trabajo; documentar funciones implementadas y pendientes.
+- [x] Preparar una vista ejecutable dentro del acceso ya autorizado; no cambiar main ni ampliar audiencia.

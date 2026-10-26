@@ -1,29 +1,26 @@
-# Estado del trabajo en Stitch
+# Estado actual: bikeride
 
-**Actualización 2026-10-26:** acceso autenticado confirmado; selección y copia de una pantalla realizadas. La lectura del código copiado quedó bloqueada por permisos del navegador y el intento ZIP no entregó un archivo recuperable. No se repite la configuración ni se considera terminada la integración. Evidencia, límite concreto y continuación mínima: [RECUPERACION-2026-10-26.md](RECUPERACION-2026-10-26.md).
+El usuario entregó el ZIP directamente a esta tarea y quedó resuelto el bloqueo de transferencia. No hace falta repetir inicio de sesión, exportación ni lectura de portapapeles. Se verificó su tamaño 278768 bytes, CRC y SHA256 `ee1a8c4dbc98642089f14dee7f0ef8cb150bd5d57b6f5b1454f7d59318daae06`; el original permanece fuera de Git.
 
-Inicio de sesión de trabajo:2026-10-23. Base funcional: `31e5c69`. Rama de documentación: `docs/stitch-handoff`. Los enlaces de acceso, identificadores de sesión y reportes completos se conservan fuera del repositorio público.
+El archivo contiene un HTML, una captura 544×830 y dos documentos de la revisión «Mapas GPS · Integración SUDA v2». Es una pantalla de referencia, no una aplicación completa ni prueba de servicios conectados. Sus scripts y mediciones de ejemplo no se ejecutaron ni importaron a la app.
 
-## Trabajo realizado
+## Resultado implementado
 
-- Se abrió el proyecto existente con la sesión autorizada y se revisó su historial. No hay una etiqueta numérica inequívoca de segunda versión; se identificó la iteración de ciclismo SUDA por su contenido e historial. La agrupación funcional Expeditions no se tomó como una versión.
-- Se envió el encargo funcional al chat del proyecto, con enlaces públicos al código exacto, funciones, contrato de controles y cuatro capturas. Se observó la revisión **Mapas GPS · Integración SUDA v2**, su documento de integración y una pantalla de rutas. No se afirma que se haya importado el ZIP completo ni todos sus archivos.
-- Se solicitaron pantallas y estados para parques, rutas, detalle, mapa/GPS, offline, actividad/perfil, garaje, encuentros y seguridad, distinguiendo implementación actual de propuestas.
-- Se detectaron categorías y medidas de ejemplo que no corresponden a las fuentes. Se enviaron correcciones generales y después el catálogo literal de 47 fichas para modificar la pantalla correspondiente.
-- Se regeneró ese catálogo con `fromOsmSnapshot` y `routeFilterModels`: El Durazno 21, Parquemet 26; tipos 8 Trail/12 Park/1 Subida y 8 Sendero ciclista/6 Paseo compartido/11 Avenida/1 Camino. Dificultades de Parquemet ausentes, sin inferirlas. Controles: Lomo Vetado 2786 m, Calibre 12 2160 m y Centenario 609 m de geometría OSM importada.
+La marca es **bikeride**, en minúsculas. Se aplicó el diseño a los visores reales, con fuentes locales licenciadas, selector horizontal, navegación Mapa GPS/Rutas, estado de red y tarjetas. Se mantienen los 47 recorridos de catálogo, geometrías y planos originales, filtros, fuentes, GPS voluntario, incertidumbre/continuidad y demo pública de 49 lecturas sólo en El Durazno. Los mapas locales guardados conservan su almacenamiento y compatibilidad.
 
-## Verificación que aún requiere evidencia
+La rama actual de producto es `feat/bikeride-stitch-integration`. Código funcional: `cacb996`. No volver a la rama documental antigua como si fuera el estado más reciente. No se cambió GitHub main ni el dominio.
 
-El envío del encargo no demuestra que todas las pantallas hayan aplicado las correcciones. En una revisión posterior seguían apareciendo categorías DH/XC y valores de ejemplo. Algunos títulos decían «Generating Screen…» y el navegador automatizado no entregó capturas descargables para una comparación independiente.
+La publicación privada existente se actualizó a **versión 19**, conservando un único propietario y cero visitantes externos:
 
-Los intentos de exportación mostraron «No screens selected». Esto indica que la automatización no seleccionó correctamente las pantallas; no acredita una restricción de permisos ni que el proyecto no permita exportar. El intento dirigido mediante Modify también terminó sin cambio visual confirmado ni exportación. La inspección detectó además que la pantalla Profile, identificada previamente como mapa, contenía estadísticas de aventura: no se debe reutilizar esa identificación como si estuviera verificada.
+- [Abrir bikeride](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site)
+- [Comparación visual privada](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site/comparacion.html)
 
-Se intentó recuperar directamente el HTML de la pantalla de rutas a partir de su DOM o de View Code, buscando los controles reales de selección de parque en lugar de confiar en títulos del lienzo. El navegador automatizado informó que los controles aparecían en una vista renderizada, pero View Code sólo devolvía una envoltura React y una referencia a un bundle, sin el HTML editable de esa pantalla. No se obtuvo el código ni una captura descargable que permitiera una revisión independiente. Esto describe el resultado de la automatización utilizada; no demuestra que Stitch carezca de exportación ni que haya un problema con la cuenta.
+Ambos parques y la comparación se verificaron por HTTP200 y hash idéntico a los archivos probados. La fotografía privada del usuario está preservada en esa construcción; no está en Git. La construcción anterior del worktree se conserva: para reconstruir usar los scripts actuales y el adjunto fotográfico privado, sin confundir la copia anterior de dist con esta publicación.
 
-**Resultado: encargo enviado; revisión creada; corrección visual completa y exportación sin verificar.** No se incorporó código de esas pantallas a la aplicación. Para continuar se necesitan una exportación real o contenido de pantalla recuperable y una comparación con el catálogo, sin volver a enviar el mismo encargo ni repetir la configuración de acceso.
+## Pruebas y pendientes
 
-## Límites de esta entrega
+Pasaron 130 pruebas unitarias, nueve comprobaciones nuevas de interfaz, nueve del flujo móvil existente, filtros de ambos paquetes autónomos, GPS simulado/continuidad/precisión/caducidad/permiso rechazado, cinco tamaños con 49 lecturas públicas, seguimiento en ambos parques, giro/recentrado y conservación de Blob/calibración/trazados con service worker activo. Una revisión independiente comprobó 320px, títulos, cambio de parque y preservación de motores. La falta de licencias tipográficas en la salida autónoma se reprodujo con prueba fallida y se corrigió. No se validó GPS en terreno ni restauración bfcache real en un dispositivo físico.
 
-El trabajo realizado en Stitch es diseño. No se han integrado en el producto servicios de perfil, eventos, Beacon, descargas offline ni navegación completa. Los controles dibujados no prueban su funcionamiento. Se conserva la aplicación actual y su construcción privada; no se cambia main, GitHub Pages ni la audiencia del sitio.
+Encuentros y Perfil figuran deshabilitados como «Próximamente». Offline completo, Beacon, garaje, estadísticas personales, eventos, capas satélite/3D, altimetría/obstáculos y destinos/loops siguen pendientes. No tienen servicios conectados ni datos personales inventados. No atribuirles implementación por lo que afirme el documento generado de Stitch.
 
-Antes de integrar una exportación: inspeccionar código y datos, conservar las geometrías/fuentes e identificadores del contrato, conectar controles al motor existente y ejecutar pruebas de datos, GPS y móvil. El plano visual no se convierte en geometría GPS por redibujarlo. Ver [PROPUESTAS-SUDA.md](PROPUESTAS-SUDA.md), [CATALOGO-INTERCAMBIO.json](CATALOGO-INTERCAMBIO.json) y [CONTRATO-INTEGRACION.json](CONTRATO-INTEGRACION.json).
+Evidencia y capturas: [bikeride-stitch](../../evidence/bikeride-stitch/README.md). Plan y límites: [diseño](../../superpowers/specs/2026-10-25-bikeride-design.md). Se conserva el historial del bloqueo en [RECUPERACION-2026-10-26.md](RECUPERACION-2026-10-26.md), como antecedente resuelto.

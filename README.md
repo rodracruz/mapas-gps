@@ -1,4 +1,20 @@
-# Mapas GPS · Senderos
+# bikeride
+
+Aplicación de parques y senderos para móvil, con planos originales, mapa mundial y GPS voluntario. El repositorio conserva su nombre `mapas-gps`; la marca visible es **bikeride**.
+
+La implementación actual está en `feat/bikeride-stitch-integration`. [Estado y continuación](docs/handoff/stitch/ESTADO-STITCH.md) · [Pruebas y capturas](docs/evidence/bikeride-stitch/README.md).
+
+La [publicación privada existente](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site) está actualizada. GitHub main y Pages no se han modificado.
+
+## Desarrollo
+
+Sirve el repositorio por HTTP (`python3 -m http.server 4174`) y abre `http://localhost:4174/mapa-geografico.html`. La biblioteca anterior de imágenes permanece en `index.html`, conservando su origen y almacenamiento.
+
+`npm test` ejecuta la suite de datos y construcción. Las pruebas de construcción escriben en `dist/`; usa una copia aislada para conservar cualquier construcción privada existente. `npm run build:geographic` genera la aplicación autónoma. La opción `--reference-photo` del constructor permite incorporar el adjunto privado sólo a una construcción privada, sin añadirlo al repositorio.
+
+## Referencia histórica de las entradas anteriores
+
+El estado vigente es el enlazado arriba; estas notas conservan el contexto de las primeras entregas.
 
 ## Parques y senderos · móvil
 
@@ -10,7 +26,7 @@ npm run serve:geographic
 # http://127.0.0.1:4174/mapa-geografico.html
 ```
 
-El primer catálogo es El Durazno: Subida Buitrera y Lomo Vetado tienen líneas nativas de OSM; La Virgen y Starwars tienen fichas y geometría pendiente. No se inventan velocidades, desniveles ni ubicaciones de servicios.
+Cada ficha distingue la geometría disponible, la fuente y lo pendiente. Los catálogos actuales incluyen21 fichas de El Durazno y26 de Parquemet; no se inventan velocidades, desniveles ni ubicaciones de servicios.
 
 Construir con `npm run build:geographic`. Pruebas: `npm test`, `npm run test:geographic:browser`, `npm run test:geographic:acceptance` y `npm run test:geographic:regressions`. [Evidencia y pendientes](docs/evidence/mobile-parks.md). El HTML y los datos se incluyen localmente; el fondo cartográfico requiere conexión.
 

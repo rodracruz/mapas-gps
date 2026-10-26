@@ -1,6 +1,6 @@
 # Mapas GPS para Stitch
 
-Base inspeccionada: `31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f` (`test/gps-validation`), 2026-10-23. El usuario compartió su proyecto de Stitch y eligió la segunda versión. El enlace permanece en la conversación privada. Se envió el encargo al proyecto mediante la sesión autorizada; la revisión derivada se llama **Mapas GPS · Integración SUDA v2**. El código de producto y la vista alojada conservan su versión anterior.
+Base inspeccionada: `31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f` (`test/gps-validation`), 2026-10-23. El usuario compartió su proyecto de Stitch y eligió la segunda versión. El enlace permanece en la conversación privada. Se envió el encargo al proyecto mediante la sesión autorizada; la revisión derivada se llama **Mapas GPS · Integración SUDA v2**. El ZIP adjunto posterior ya permitió integrar el diseño en bikeride; la publicación privada está en versión19. Ver ESTADO-STITCH.md para el estado actual.
 
 ## Material enviado y paquete de referencia
 
@@ -10,7 +10,7 @@ El ZIP conserva el encargo en `PROMPT-PARA-STITCH.txt`, las capturas originales,
 
 El modelo de Stitch define el diseño visual. Capturas y código definen el comportamiento existente. Las nuevas propuestas se representan con sus pantallas/estados y se incorporan después al desarrollo verificable de la app.
 
-Estado comprobado y límites de la automatización: [ESTADO-STITCH.md](ESTADO-STITCH.md). El encargo está enviado; no se obtuvo todavía una exportación de código verificable.
+Estado comprobado y límites de la automatización: [ESTADO-STITCH.md](ESTADO-STITCH.md). El ZIP recibido ya está comprobado y adaptado a la aplicación real; no hace falta exportarlo otra vez.
 
 ## Abrir la referencia ejecutable
 

@@ -32,12 +32,32 @@
     "geographicFlow": "9 checks passed",
     "gpsLayout": "49 public fixes across5 portrait/landscape viewports; Layers menu and GPS remain usable",
     "gpsFollow": "public test coordinates in both parks: acquisition, rotate, recenter, coarse accuracy, stop and failed tiles",
-    "storage": "Blob, calibration, trails, webCenter and active service worker preserved"
+    "storage": "Blob, calibration, trails, webCenter and active service worker preserved",
+    "gpsStatesStandalone": "voluntary activation, public demo/junction continuity, raw/snap, source guard, stale/denied signal and stop/close passed",
+    "bundledFilters": "both parks: types/difficulty, length/proximity order, denied location, stable map and mobile controls"
   },
   "limits": [
     "One exported screen adapted, not a complete service implementation.",
     "No physical GPS validation.",
     "Profile/meetups disabled; offline sync, Beacon, garage, satellite/3D and technical terrain records still pending.",
     "Repository screenshots use existing public source images, not the private uploaded photo."
-  ]
+  ],
+  "review": {
+    "independentReviewer": "gpt-6-astra",
+    "scope": "bd556a1..c80d29a",
+    "runtimeCriticalImportantFindings": 0,
+    "fontNoticeFix": "Full OFL notices embedded; failing assertion reproduced before fix; final unit suite130/130.",
+    "uncertainty": "Cached-page lifecycle simulated, no real physical-device bfcache restoration or GPS validation."
+  },
+  "standalonePrivate": {
+    "originalPhotoControl": true,
+    "crossParkSwitchBothDirections": true,
+    "comparisonPage": true,
+    "externalFontOrTailwindRequests": 0
+  },
+  "privateRelease": {
+    "version": 19,
+    "ownerOnly": true,
+    "allThreePathsHttp200AndByteIdentical": true
+  }
 }
