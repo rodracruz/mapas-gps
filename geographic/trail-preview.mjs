@@ -43,7 +43,8 @@ export function attachTrailPreviews(data,{resolveId=id=>id,onOpen,background}={}
  const models=officialTrailModels(data);for(const card of document.querySelectorAll('.trail-card')){
   const summary=card.querySelector('[data-trail-summary]'),id=summary?.dataset.trailSummary,model=models.find(t=>t.id===resolveId(id));if(!model)continue;
   card.querySelectorAll('.trail-official-preview,.trail-official-reference,.trail-miniature').forEach(n=>n.remove());const preview=createTrailPreview(model,()=>onOpen?.(model.id),background);card.querySelector('.trail-details').prepend(preview);
-  if(model.thumbnail!==false){const miniature=preview.querySelector('svg').cloneNode(true);miniature.classList.add('trail-miniature');miniature.setAttribute('aria-hidden','true');summary.classList.add('has-trail-miniature');summary.append(miniature);}
+  const note=card.querySelector('.bikeride-fragment-note');if(note)note.textContent=model.kind==='document-reference'?'Referencia en tabla oficial · Ubicación en el plano pendiente':model.kind==='document-crop'?'Sector del plano oficial · Trazado individual pendiente':'Fragmento del plano oficial · Amplía en la ficha';
+  if(model.thumbnail!==false){const miniature=preview.querySelector('svg').cloneNode(true);miniature.classList.add('trail-miniature');miniature.setAttribute('aria-hidden','true');miniature.setAttribute('preserveAspectRatio','xMidYMid slice');summary.classList.add('has-trail-miniature');(summary.querySelector('.bikeride-card-preview')||summary).append(miniature);}
  }
  return models;
 }

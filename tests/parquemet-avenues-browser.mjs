@@ -1,3 +1,4 @@
+import {chooseRouteFilter} from './helpers/route-filter-control.mjs';
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {readFile,mkdir} from 'node:fs/promises';
@@ -6,7 +7,7 @@ const base=process.env.GEOGRAPHIC_BASE_URL||'http://127.0.0.1:4181',entry=proces
 const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox'],proxy:process.env.HTTPS_PROXY?{server:process.env.HTTPS_PROXY}:undefined});
 try{
  const ctx=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true}),p=await ctx.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.route(base+'/**',async route=>{try{const r=await fetch(route.request().url());await route.fulfill({status:r.status,headers:Object.fromEntries(r.headers),body:Buffer.from(await r.arrayBuffer())});}catch{await route.abort();}});
- const chooseType=async value=>{const full=await p.locator('#map-card').evaluate(n=>n.classList.contains('fullscreen'));if(full)await p.locator('#filter-toggle').click();await p.locator('#filter-type').selectOption(value);if(full)await p.locator('#filter-toggle').click();};
+ const chooseType=async value=>{const full=await p.locator('#map-card').evaluate(n=>n.classList.contains('fullscreen'));if(full)await p.locator('#filter-toggle').click();await chooseRouteFilter(p,'type',value);if(full)await p.locator('#filter-toggle').click();};
  await p.goto(base+entry+'#parque=parquemet');await p.waitForSelector('#map-card[data-ready=true]');assert.equal(await p.locator('#app-error').isVisible(),false);assert.equal(await p.locator('.trail-card').count(),26);assert.equal(await p.locator('.avenue-card').count(),12);assert.equal(await p.locator('.avenue-card .trail-miniature image').count(),10);assert.equal(await p.locator('.trail-official-reference').count(),2);assert.match(await p.locator('#available-count').innerText(),/12 avenidas/);
  await chooseType('avenue');assert.equal(await p.locator('.trail-card:visible').count(),11);assert.equal(await p.locator('#map-card').isVisible(),true);assert.equal(await p.locator('.cycling-route,.shared-route').count(),0);assert.equal(await p.locator('#filter-type').inputValue(),'avenue');
  const source=JSON.parse(await readFile('data/parquemet/visual-avenues.json'));

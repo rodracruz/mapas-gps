@@ -1,0 +1,281 @@
+{
+  "baseCommit": "4cbe0e2",
+  "referencePixels": [
+    544,
+    830
+  ],
+  "cssViewport": [
+    390,
+    595
+  ],
+  "deviceScaleFactor": 1.3948717948717948,
+  "beforeRead": [
+    {
+      "route": "/comparacion.html",
+      "status": 200,
+      "bytes": 791260,
+      "sha256": "d9d432c8507d0a44b9c569df4df38dc3ec2a9671ea2a8ece7a8e8f15e65ad607",
+      "matchesPrivateCheckout": true
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "bytes": 4438234,
+      "sha256": "fdc7f46c2d91cfb67bb982528b2fd01de63889e16a7119dff0061351a4b0b9dd",
+      "matchesPrivateCheckout": true
+    }
+  ],
+  "boxes": [
+    {
+      "name": "before",
+      "cssViewport": [
+        390,
+        595
+      ],
+      "scale": 1.3948717948717948,
+      "boxes": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 82,
+          "top": 0,
+          "right": 390,
+          "bottom": 82,
+          "left": 0
+        },
+        "bikeride-park-switch": {
+          "x": 16,
+          "y": 106,
+          "width": 358,
+          "height": 84,
+          "top": 106,
+          "right": 374,
+          "bottom": 190,
+          "left": 16
+        },
+        "map-card": {
+          "x": 16,
+          "y": 1465.203125,
+          "width": 358,
+          "height": 206,
+          "top": 1465.203125,
+          "right": 374,
+          "bottom": 1671.203125,
+          "left": 16
+        },
+        "bikeride-navigation": {
+          "x": 0,
+          "y": 518,
+          "width": 390,
+          "height": 77,
+          "top": 518,
+          "right": 390,
+          "bottom": 595,
+          "left": 0
+        }
+      },
+      "tilesLoaded": "6"
+    },
+    {
+      "name": "after",
+      "cssViewport": [
+        390,
+        595
+      ],
+      "scale": 1.3948717948717948,
+      "boxes": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 64,
+          "top": 0,
+          "right": 390,
+          "bottom": 64,
+          "left": 0
+        },
+        "bikeride-summary": {
+          "x": 20,
+          "y": 80,
+          "width": 350,
+          "height": 160,
+          "top": 80,
+          "right": 370,
+          "bottom": 240,
+          "left": 20
+        },
+        "bikeride-park-switch": {
+          "x": 20,
+          "y": 252,
+          "width": 350,
+          "height": 90,
+          "top": 252,
+          "right": 370,
+          "bottom": 342,
+          "left": 20
+        },
+        "map-card": {
+          "x": 20,
+          "y": 354,
+          "width": 350,
+          "height": 176,
+          "top": 354,
+          "right": 370,
+          "bottom": 530,
+          "left": 20
+        },
+        "bikeride-navigation": {
+          "x": 0,
+          "y": 531,
+          "width": 390,
+          "height": 64,
+          "top": 531,
+          "right": 390,
+          "bottom": 595,
+          "left": 0
+        }
+      },
+      "tilesLoaded": "8"
+    },
+    {
+      "name": "parquemet",
+      "cssViewport": [
+        390,
+        595
+      ],
+      "scale": 1.3948717948717948,
+      "boxes": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 64,
+          "top": 0,
+          "right": 390,
+          "bottom": 64,
+          "left": 0
+        },
+        "bikeride-summary": {
+          "x": 20,
+          "y": 80,
+          "width": 350,
+          "height": 160,
+          "top": 80,
+          "right": 370,
+          "bottom": 240,
+          "left": 20
+        },
+        "bikeride-park-switch": {
+          "x": 20,
+          "y": 252,
+          "width": 350,
+          "height": 90,
+          "top": 252,
+          "right": 370,
+          "bottom": 342,
+          "left": 20
+        },
+        "map-card": {
+          "x": 20,
+          "y": 354,
+          "width": 350,
+          "height": 176,
+          "top": 354,
+          "right": 370,
+          "bottom": 530,
+          "left": 20
+        },
+        "bikeride-navigation": {
+          "x": 0,
+          "y": 531,
+          "width": 390,
+          "height": 64,
+          "top": 531,
+          "right": 390,
+          "bottom": 595,
+          "left": 0
+        }
+      },
+      "tilesLoaded": "7"
+    }
+  ],
+  "publicScreenshots": {
+    "before-v19.png": {
+      "sha256": "350605761136a891754b1d927e748666a12b9671b80193dc81133508396a52ca",
+      "bytes": 125415,
+      "pixels": [
+        544,
+        830
+      ]
+    },
+    "after-parquemet.png": {
+      "sha256": "6de2a11640aaad06ad78f821c5d4eb54f61eb56baf6881520c51d55ec4318808",
+      "bytes": 243521,
+      "pixels": [
+        544,
+        830
+      ]
+    },
+    "after-tall.png": {
+      "sha256": "b5d457c86efa0df565fdae6a418a395c7efa2014d5a860be0368d2a436c2ffa6",
+      "bytes": 166478,
+      "pixels": [
+        544,
+        1177
+      ]
+    },
+    "route-lomo.png": {
+      "sha256": "e66a2adbad739811967d31dc8965374cb221cddefd7707d89e6342d52165e1d7",
+      "bytes": 277562,
+      "pixels": [
+        544,
+        1177
+      ]
+    },
+    "after-el-durazno.png": {
+      "sha256": "148e008b62e90e47620e51902a350a67bf1787554ecd27db193c6995d6df99e1",
+      "bytes": 140081,
+      "pixels": [
+        544,
+        830
+      ]
+    }
+  },
+  "referenceOriginalPublishedToGit": false,
+  "privatePhotoPublishedToGit": false,
+  "physicalGpsValidation": false,
+  "unitSuite": {
+    "command": "npm test",
+    "passed": 131,
+    "failed": 0,
+    "execution": "Isolated source copy; original private dist preserved."
+  },
+  "browserChecks": {
+    "design": "Both parks, equal-size captures, first-screen map, visible descriptions/actions, technical expand/collapse, actual Layers, honest table-only references, responsive overflow checks.",
+    "existingMobileFlow": "9 checks passed",
+    "bikeride": "9 checks passed",
+    "avenues": "12 avenue/camino references, filters, original crops, restrictions and mobile passed",
+    "gpsLayout": "49 public fixes across five viewports; controls visible",
+    "gpsFollow": "Both parks, rotation/recenter/coarse accuracy/stopping/tile failure passed",
+    "gpsStates": "opt-in, continuity, ambiguity/stale/denied signal, standalone scopes passed",
+    "storage": "Legacy Blob/calibration/trails/webCenter/service worker preserved",
+    "bundledFilters": "Both private standalone parks passed",
+    "privateStandalone": {
+      "passed": true,
+      "checks": [
+        "Private standalone preserves original-photo control and21/26 cards.",
+        "Park switch works in both directions in compiled files.",
+        "Same-size comparison opens with reference, before/after and route evidence.",
+        "No remote font/Tailwind requests or JavaScript errors."
+      ]
+    }
+  },
+  "review": {
+    "criticalOrImportantRemaining": 0,
+    "cardBodyFix": "Failing assertion reproduced before real visible body/actions. Independently verified afterward.",
+    "tableReferenceCaption": "Failing assertion reproduced; final design test passed.",
+    "physicalGpsTested": false
+  },
+  "qaRuntimeFilesCompared": 68
+}

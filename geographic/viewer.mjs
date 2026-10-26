@@ -50,10 +50,11 @@ function renderCatalog(){
  $('osm-way').onchange=()=>{const f=geo.features.find(f=>f.id===$('osm-way').value);if(f){setMapSource('osm');selectFeature(f);fitFeatures([f]);}};
  $('download-geojson').onclick=()=>{if(!geo)return;const url=URL.createObjectURL(new Blob([JSON.stringify(geo,null,2)],{type:'application/geo+json'}));const a=document.createElement('a');a.href=url;a.download='el-durazno-trazados-osm.geojson';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
  updateCards();routeFilters=setupRouteFilters({getTargets:filterTargets,getGeo:()=>geo,onChange:applyRouteFilters});routeFilters.refresh();
- bikerideChrome=setupBikerideChrome({directory,park:p,onSwitchPark:next=>location.assign(next.entry)});
+ bikerideChrome=setupBikerideChrome({directory,park:p,catalog,onSwitchPark:next=>location.assign(next.entry)});
 }
 function updateCards(){
  for(const t of catalog.targets){const stats=describeTrail(t,geo?.features||[]);document.querySelector(`[data-stats="${t.id}"]`).innerHTML=metricMarkup({...stats,distance:featuresFor(t.id).length?stats.distance+' · OSM':stats.distance});document.querySelector(`[data-distance="${t.id}"]`).textContent=featuresFor(t.id).length?stats.distance+' en OSM · Ver información':'Trazado pendiente · Ver información';}
+ bikerideChrome?.refresh();
  const count=catalog.targets.filter(t=>featuresFor(t.id).length).length;
  routeFilters?.refresh();$('available-count').textContent='20 senderos del cartel';
  $('data-status').textContent=geo?'Las curvas del cartel se muestran sobre el mapa con ubicación aproximada. Puedes compararlas con '+count+' senderos de OSM.':'Los senderos se cargarán al abrir el parque.';
@@ -106,7 +107,7 @@ function setMapSource(source){
  const trails=visual?cartelData.trails:catalog.targets;
  $('map-trails').innerHTML=trails.map(t=>`<button data-map-target="${esc(t.id)}" data-pending="${!visual&&t.status!=='osm-identified'}" aria-pressed="false"><i class="trail-color" style="--trail-color:${t.color}"></i>${esc(t.name)}</button>`).join('');for(const button of $('map-trails').querySelectorAll('button'))button.onclick=()=>selectTarget(button.dataset.mapTarget);
  $('visibility-controls').innerHTML=trails.filter(t=>visual||t.status==='osm-identified').map(t=>`<label class="check-row"><input type="checkbox" data-visible-target="${esc(t.id)}" ${(visual?hiddenCartelTargets:hiddenTargets).has(t.id)?'':'checked'}> ${esc(t.name)}</label>`).join('');for(const input of $('visibility-controls').querySelectorAll('input'))input.onchange=()=>setTargetVisible(input.dataset.visibleTarget,input.checked);
- routeFilters?.refresh();fitAvailableRoutes();gpsTracking?.sourceChanged(source);
+ routeFilters?.refresh();bikerideChrome?.refresh();fitAvailableRoutes();gpsTracking?.sourceChanged(source);
 }
 async function loadCartel(){
  const read=async(id,path)=>{const embedded=$(id);if(embedded)return embedded.textContent;const r=await fetch('./'+path);if(!r.ok)throw new Error('No se pudo cargar la capa del cartel.');return r.text();};

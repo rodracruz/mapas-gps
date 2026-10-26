@@ -13,7 +13,7 @@ const byId=id=>document.getElementById(id);
 const htmlSafe=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const metres=value=>Number.isFinite(value)?Math.round(value).toLocaleString('es-CL')+' m':'Sin datos';
 let directory,catalog,geo,map,selection,contextLayer,gpsTracking,official,documentCycling,openOfficial=()=>{},full=false,selectedTarget=null,selectedFeature=null;
-const routeLayers=new Map(),hiddenRoutes=new Set(),cyclingLabels=[];let routeFilters;
+const routeLayers=new Map(),hiddenRoutes=new Set(),cyclingLabels=[];let routeFilters,bikerideChrome;
 const categoryMatches=id=>!routeFilters||routeFilters.includes(id);
 const routeVisible=id=>categoryMatches(id)&&!hiddenRoutes.has(id);
 function applyRouteFilters(){
@@ -44,6 +44,7 @@ function renderCards(){
 }
 function updateCards(){
  for(const t of catalog.targets){const fs=targetFeatures(t.id),stats=describeTrail(t,fs);document.querySelector(`[data-stats="${t.id}"]`).innerHTML=officialLength(t)+statsMarkup(stats);document.querySelector(`[data-access="${t.id}"]`).innerHTML=accessNote(fs);document.querySelector(`[data-distance="${t.id}"]`).textContent=fs.length?stats.distance+' en OSM · Ver información':Number.isFinite(t.officialDistanceM)?metres(t.officialDistanceM)+' en PDF · Ubicación por contrastar':'Geometría pendiente';}
+ bikerideChrome?.refresh();
  const cyclists=catalog.targets.filter(t=>t.category==='cycling-trail'||t.category==='shared-trail'),matched=cyclists.filter(t=>targetFeatures(t.id).length).length;
  routeFilters?.refresh();byId('data-status').textContent=geo?`${cyclists.length} recorridos ciclistas y compartidos en el plano; ${matched} con correspondencia nominal OSM. También ${catalog.targets.filter(t=>t.category==='avenue').length} avenidas y caminos; consulta sus restricciones antes de circular. Las longitudes publicadas y las medidas sobre OSM se muestran por separado. Los servicios figuran en el mapa; su disponibilidad actual está por confirmar.`:'Consultando los trazados geográficos de este parque.';
 }
@@ -110,7 +111,7 @@ async function initPark(){
  try{
   directory=await loadParkDirectory();const id=new URLSearchParams(location.hash.slice(1)).get('parque')||'parquemet',entry=parkById(directory,id);if(entry&&!entry.catalog){location.replace(entry.entry+(new URLSearchParams(location.hash.slice(1)).get('mapa')==='1'?'&mapa=1':''));return;}if(!entry?.catalog||!entry.document)throw new Error('Este parque no tiene una entrada de mapa disponible.');
   byId('park-name').textContent=entry.name;catalog=validateCatalog(await jsonResource('embedded-park-catalog',entry.catalog));if(catalog.park.id!==entry.id)throw new Error('El catálogo no corresponde al parque elegido.');renderCards();
-  setupBikerideChrome({directory,park:catalog.park,onSwitchPark:next=>location.assign(next.entry)});
+  bikerideChrome=setupBikerideChrome({directory,park:catalog.park,catalog,onSwitchPark:next=>location.assign(next.entry)});
   if(!window.L)throw new Error('No se pudo cargar el mapa. Reintenta con conexión.');const [west,south,east,north]=catalog.geographicExtent;map=L.map('geo-map',{zoomControl:false,zoomSnap:.25,minZoom:2,maxZoom:19}).setView([(south+north)/2,(west+east)/2],14);L.control.zoom({position:'topleft'}).addTo(map);L.control.scale({imperial:false,position:'bottomleft'}).addTo(map);
   const tiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>'}).addTo(map);let loaded=0;tiles.on('loading',()=>{byId('geo-map').dataset.tilesReady='false';});tiles.on('load',()=>{byId('geo-map').dataset.tilesReady='true';});tiles.on('tileload',()=>{byId('geo-map').dataset.loadedTiles=String(++loaded);byId('map-notice').hidden=true;});tiles.on('tileerror',()=>{if(!loaded){byId('map-notice').textContent='No se está cargando el fondo. Los trazados conservan sus coordenadas OSM.';byId('map-notice').hidden=false;}});
   map.on('moveend zoomend resize',()=>{layoutCyclingLabels();const c=map.getCenter();byId('geo-map').dataset.view=[c.lat.toFixed(7),c.lng.toFixed(7),map.getZoom()].join(',');});
