@@ -8,9 +8,9 @@ El archivo contiene un HTML, una captura 544×830 y dos documentos de la revisi�
 
 La marca es **bikeride**, en minúsculas. Se aplicó el diseño a los visores reales, con fuentes locales licenciadas, selector horizontal, navegación Mapa GPS/Rutas, estado de red y tarjetas. Se mantienen los 47 recorridos de catálogo, geometrías y planos originales, filtros, fuentes, GPS voluntario, incertidumbre/continuidad y demo pública de 49 lecturas sólo en El Durazno. Los mapas locales guardados conservan su almacenamiento y compatibilidad.
 
-La rama actual de producto es `feat/bikeride-stitch-integration`. Código funcional: `d6896a5`. No volver a la rama documental antigua como si fuera el estado más reciente. No se cambió GitHub main ni el dominio.
+La rama actual de producto es `feat/bikeride-stitch-integration`. Código funcional: `0cb0e79`. No volver a la rama documental antigua como si fuera el estado más reciente. No se cambió GitHub main ni el dominio.
 
-La publicación privada existente se actualizó a **versión 20**, conservando un único propietario y cero visitantes externos:
+La publicación privada existente se actualizó a **versión 21**, conservando un único propietario y cero visitantes externos:
 
 - [Abrir bikeride](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site)
 - [Comparación visual privada](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site/comparacion.html)
@@ -34,3 +34,9 @@ El usuario señaló diferencias reales en la página de comparación. Se corrigi
 Pasaron 131 pruebas unitarias, regresión de diseño, flujos móviles, avenidas, filtros de ambos autónomos, GPS simulado/disposición en cinco tamaños y conservación del almacenamiento. La revisión independiente confirmó resueltos los hallazgos importantes y se corrigió con prueba roja→verde la etiqueta de las dos referencias de tabla. App, Parquemet y comparación versión20 responden HTTP200 y coinciden byte a byte con el paquete probado, sin ampliar audiencia. [Evidencia actual](../../evidence/bikeride-visual/README.md).
 
 El diagnóstico de funciones futuras quedó pausado por esta prioridad; sus propuestas no están implementadas. No volver a exportación/login de Stitch ni declarar el producto completo por estas pruebas.
+
+## Seguimiento de atribución y nuevas referencias
+
+Se corrigió el recorte de atribución sin rediseñar: ajuste de línea a9px y reserva de la altura real del control Leaflet más8px. Fuente y autónomos pasan seis casos cada uno en ambos parques320/390/544, con ampliación y cambios de fuente; 131 unitarias y regresiones afectadas de diseño/interfaz/GPS verdes. Revisión independiente de12 capturas sin nuevos problemas. Publicación21 comprobada por HTTP200/hash y audiencia idéntica. [Capturas y prueba](../../evidence/bikeride-attribution/README.md).
+
+Rodrigo anunció que adjuntará otras pestañas de Stitch para revisión. Aún no se han recibido esas referencias y no se han diseñado ni implementado por inferencia. Se terminó esta corrección; el diagnóstico de funciones futuras permanece pausado.

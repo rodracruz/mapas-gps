@@ -1,0 +1,34 @@
+{
+  "origin": "https://mapas-gps-revision-durazno.rodracruz.chatgpt.site",
+  "checks": [
+    {
+      "route": "/",
+      "status": 200,
+      "sha256": "bb20b43a544bc4bae83ae8b17f63aefdfbac031f62d9d3922a17c87bd1c06928",
+      "matchesPackagedBytes": true
+    },
+    {
+      "route": "/parquemet.html",
+      "status": 200,
+      "sha256": "aa50b874f27e29603dd9a6888c38e51b2591b3d793af998c04b2ff87bb76d074",
+      "matchesPackagedBytes": true
+    },
+    {
+      "route": "/comparacion.html",
+      "status": 200,
+      "sha256": "ef3c826dac9e1bb01690838cc54c8d2ea3142cbde4fa0cc8f8f9294c9063f81e",
+      "matchesPackagedBytes": true
+    }
+  ],
+  "privateReadVerified": true,
+  "siteVersion": 21,
+  "ownerOnly": true,
+  "externalVisitors": 0,
+  "audienceChanged": false,
+  "sourceCodeCommit": "0cb0e795dba26cd093473a6d43d35bd525098a0d",
+  "siteSourceCommit": "569d3295386218f1868af0792970421cc6e81641",
+  "deploymentId": "appgdep_6adf44f20a788191b7a34e141f117597",
+  "deploymentStatus": "succeeded",
+  "archiveBytes": 27619169,
+  "archiveSha256": "5694885dce1454bd726f2452532687ac60ad54e4694bcc2c606414c500e3b576"
+}

@@ -18,4 +18,4 @@ Son capturas de la fuente comprobada con planos públicos, sin fotografía priva
 
 Pasaron 131 pruebas unitarias, la regresión de diseño, los dos flujos de interfaz móvil, disposición GPS con 49 lecturas públicas en cinco tamaños y seguimiento en ambos parques. La revisión independiente inspeccionó las 12 capturas y no detectó problemas atribuibles a este ajuste. Ver [verification.json](verification.json). No se repitió validación física de GPS ni se modificó almacenamiento del usuario.
 
-La actualización alojada se registra en release.json después de comprobarla; este documento no presupone otra audiencia ni un despliegue por sí solo.
+Publicación privada versión 21 comprobada: la app, Parquemet y comparación responden HTTP200 con bytes idénticos al paquete verificado. Se conserva el único propietario y cero visitantes externos. [Resultado del despliegue y hashes](release.json).

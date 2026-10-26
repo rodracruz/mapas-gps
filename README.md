@@ -4,7 +4,7 @@ Aplicación de parques y senderos para móvil, con planos originales, mapa mundi
 
 La implementación actual está en `feat/bikeride-stitch-integration`. [Estado y continuación](docs/handoff/stitch/ESTADO-STITCH.md) · [Corrección visual, pruebas y capturas](docs/evidence/bikeride-visual/README.md).
 
-La [publicación privada existente](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site) está actualizada a la versión 20, con comparación al mismo tamaño y fichas con cuerpo/acciones visibles. GitHub main y Pages no se han modificado.
+La [publicación privada existente](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site) está actualizada a la versión 21, con comparación al mismo tamaño y fichas con cuerpo/acciones visibles. GitHub main y Pages no se han modificado.
 
 ## Desarrollo
 
