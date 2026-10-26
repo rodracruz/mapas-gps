@@ -27,11 +27,11 @@
 
 **Files:** create rider/store.mjs, rider/recording.mjs, rider/exports.mjs; tests/rider-state.test.mjs, tests/rider-recording.test.mjs, tests/rider-exports.test.mjs and tests/rider-store-browser.mjs.
 **Interfaces:** implement exact schema/functions in spec. No UI/controller/build modifications.
-- [ ] Write failing unit tests for validation/defaults, XML/ICS escaping/segments, recorder pause/gaps/jitter/stale/jumps; run red.
-- [ ] Implement pure functions and atomic IndexedDB read/update. Store concurrency stays in one readwrite transaction; no async mutator.
-- [ ] Browser test actual IndexedDB across reload and simultaneous updates, invalid mutation rollback and separate legacy map store preservation.
-- [ ] Run scoped tests; full npm test in an isolated copy, not the product dist. Commit only owned files and report evidence.
-- [ ] Task-scoped independent spec+quality review and corrections.
+- [x] Write failing unit tests for validation/defaults, XML/ICS escaping/segments, recorder pause/gaps/jitter/stale/jumps; run red.
+- [x] Implement pure functions and atomic IndexedDB read/update. Store concurrency stays in one readwrite transaction; no async mutator.
+- [x] Browser test actual IndexedDB across reload and simultaneous updates, invalid mutation rollback and separate legacy map store preservation.
+- [x] Run scoped tests; full npm test in an isolated copy, not the product dist. Commit only owned files and report evidence.
+- [x] Task-scoped independent spec+quality review and corrections.
 
 ### Task 2: Five faithful cycling views and controller integration
 
