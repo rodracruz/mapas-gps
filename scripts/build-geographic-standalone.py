@@ -64,10 +64,11 @@ for path,namespace,exports,bindings in [
     ('rider/store.mjs','RiderStore','openRiderStore,defaultRiderState,validateRiderState',''),
     ('rider/recording.mjs','RiderRecorder','createRideRecorder','const {defaultRiderState,validateRiderState}=RiderStore;'),
     ('rider/exports.mjs','RiderExports','buildGpx,meetupCalendar','const {defaultRiderState,validateRiderState}=RiderStore;'),
+    ('rider/ownership.mjs','RiderOwnership','createRecordingOwnership,deleteActivity,coordinationUnavailable,recordingLockName',''),
     ('rider/session.mjs','RiderSession','createRiderSession','const {createRideRecorder}=RiderRecorder;'),
-    ('rider/views.mjs','RiderViews','setupCyclingViews,currentOfficialPreview','const {openRiderStore,defaultRiderState}=RiderStore;const {buildGpx,meetupCalendar}=RiderExports;const {createRiderSession}=RiderSession;const {routeFilterModels,filterRoutes,validFilterLocation}=RouteFilterData;'),
+    ('rider/views.mjs','RiderViews','setupCyclingViews,currentOfficialPreview','const {openRiderStore,defaultRiderState}=RiderStore;const {buildGpx,meetupCalendar}=RiderExports;const {createRiderSession}=RiderSession;const {createRecordingOwnership,deleteActivity,coordinationUnavailable}=RiderOwnership;const {routeFilterModels,filterRoutes,validFilterLocation}=RouteFilterData;'),
 ]:
-    code=re.sub(r'^import .*?;\n','',(root/path).read_text(),flags=re.M).replace('export function ','function ').replace('export async function ','async function ')
+    code=re.sub(r'^import .*?;\n','',(root/path).read_text(),flags=re.M).replace('export const ','const ').replace('export function ','function ').replace('export async function ','async function ')
     modules.append(f'const {namespace}=(()=>{{\n{bindings}\n{code}\nreturn {{{exports}}};\n}})();')
 modules.append('const {setupRouteFilters,filterMapPadding}=RouteFilterUI;')
 modules.append('const {setupBikerideChrome}=BikerideChrome;const {setupCyclingViews,currentOfficialPreview}=RiderViews;')
