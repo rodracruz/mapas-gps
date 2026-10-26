@@ -13,7 +13,7 @@ Estas tres capturas usan el mismo viewport CSS 390×595 y escala 544/390, produc
 - [Pantalla más alta](after-tall.png) y [Lomo Vetado con cuerpo/acciones](route-lomo.png).
 - [Coordenadas, dimensiones y hashes](verification.json).
 
-El PNG original de Stitch no se incorpora a Git público. Se conserva en el ZIP privado intacto y se muestra, junto a antes/después de igual tamaño, en la [comparación del sitio privado existente](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site/comparacion.html). La actualización alojada se registra separadamente después de comprobar la publicación; este documento por sí solo no acredita despliegue.
+El PNG original de Stitch no se incorpora a Git público. Se conserva en el ZIP privado intacto y se muestra, junto a antes/después de igual tamaño, en la [comparación del sitio privado existente](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site/comparacion.html). La publicación privada versión 20 se comprobó por HTTP200 en la app, Parquemet y comparación, con hashes idénticos al paquete probado; ver [release.json](release.json). Conserva el único propietario y cero visitantes externos.
 
 ## Correcciones y diferencias deliberadas
 

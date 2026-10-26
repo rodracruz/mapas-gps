@@ -22,7 +22,7 @@ Base:31e5c698dd00f3e8ea8f0a7641c6a709a4d93b9f. La etiqueta «existente» describ
 
 ## Ampliaciones previstas, pendientes de implementar
 
-Destino, loops y distancias recorrida/restante por caminos forman parte del objetivo del usuario. Requieren construir y validar la red, sus conexiones, accesos y sentidos. Tampoco existe un catálogo confirmado de las propuestas del modelo de Stitch: falta recibir ese proyecto. Representarlas como nuevas funciones y documentar requisitos concretos al conocerlas. No atribuir funciones nuevas a la base actual.
+Destino, loops y distancias recorrida/restante por caminos forman parte del objetivo del usuario. Requieren construir y validar la red, sus conexiones, accesos y sentidos. El ZIP de Stitch ya se recibió y se integró su diseño en bikeride, conservando los motores reales; no hace falta pedirlo de nuevo. Las funciones propuestas siguen pendientes según [PROPUESTAS-SUDA.md](PROPUESTAS-SUDA.md). El [diagnóstico de siguiente etapa](SIGUIENTE-ETAPA.md) distingue qué puede completarse localmente, qué necesita servicios/datos y cómo verificarlo. No atribuir esas ampliaciones a la base actual.
 
 ## Módulos de integración
 

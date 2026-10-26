@@ -1,5 +1,7 @@
 # Entrega preparada para Stitch
 
+**Documento histórico, actualizado el 2026-10-26:** la recepción del ZIP resolvió el bloqueo descrito más abajo y su diseño ya se integró en **bikeride**, en la rama `feat/bikeride-stitch-integration`. La publicación privada comprobada es versión20. No repetir solicitudes de acceso/exportación ni tratar el ZIP histórico de salida como la última aplicación. Ver [estado actual](ESTADO-STITCH.md) y [funciones pendientes/siguiente etapa](SIGUIENTE-ETAPA.md). El texto restante registra la preparación anterior.
+
 2026-10-23. Paquete documental de la base `31e5c69`, rama de preparación `docs/stitch-handoff`. Conserva main, la vista previa privada versión18 y la construcción privada existentes.
 
 ZIP local: `/workspace/artifacts/mapas-gps-para-stitch.zip`, 26340006 bytes, SHA256 `58306cf1022c5e2042ef3f045bc06950e91093af40babf24a8e439a7718eb922`. Incluye12 capturas originales, instrucciones para Stitch, matriz de funciones, catálogos reales, código público y app ejecutable con construcción pública. La foto privada no está incluida.

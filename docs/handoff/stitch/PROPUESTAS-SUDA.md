@@ -2,6 +2,8 @@
 
 2026-10-23. Base funcional del repositorio: `31e5c69`, sin cambios de producto en esta preparación. El usuario eligió la segunda iteración de su proyecto de Stitch y autorizó incorporar el trabajo actual y las propuestas de ese diseño.
 
+Actualización 2026-10-26: este documento conserva la comparación histórica. El ZIP ya se recibió y se aplicó su diseño a **bikeride**; eso no completa las funciones propuestas de la tabla. Estado actual: [ESTADO-STITCH.md](ESTADO-STITCH.md). Alcance local, dependencias y criterios del próximo cierre: [SIGUIENTE-ETAPA.md](SIGUIENTE-ETAPA.md).
+
 ## Identificación del diseño
 
 La iteración de ciclismo contiene pantallas **SUDA Bike Mapa GPS**, **SUDA Bike Rutas**, **SUDA Bike Perfil** y **SUDA Bike Encuentros**. El historial describe rutas offline, Mi Garaje & Calibración y Beacon de Seguridad en vivo, y después un detalle técnico de sendero.
