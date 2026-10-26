@@ -1,0 +1,1033 @@
+{
+  "failures": [],
+  "evidence": [
+    {
+      "prefix": "el-durazno-320x568",
+      "phase": "off-accessibility",
+      "description": "OSM carga teselas del área visible. Consultar el GPS no graba tu recorrido; la demo no graba. Sólo «Registrar actividad» guarda lecturas y recorrido localmente en este dispositivo."
+    },
+    {
+      "prefix": "el-durazno-320x568",
+      "phase": "recording",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 10,
+          "y": 422.609375,
+          "width": 300,
+          "height": 29.390625,
+          "top": 422.609375,
+          "right": 310,
+          "bottom": 452,
+          "left": 10
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-pause",
+          "text": "Ⅱ Pausar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "el-durazno-320x568",
+      "phase": "recording-accessibility",
+      "description": "OSM carga teselas del área visible. Consultar el GPS no graba tu recorrido; la demo no graba. Sólo «Registrar actividad» guarda lecturas y recorrido localmente en este dispositivo."
+    },
+    {
+      "prefix": "el-durazno-320x568",
+      "phase": "checkpoint",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 10,
+          "y": 422.609375,
+          "width": 300,
+          "height": 29.390625,
+          "top": 422.609375,
+          "right": 310,
+          "bottom": 452,
+          "left": 10
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-pause",
+          "text": "Ⅱ Pausar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "el-durazno-320x568",
+      "phase": "paused",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 10,
+          "y": 422.609375,
+          "width": 300,
+          "height": 29.390625,
+          "top": 422.609375,
+          "right": 310,
+          "bottom": 452,
+          "left": 10
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-resume",
+          "text": "▷ Reanudar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "el-durazno-320x568",
+      "phase": "finished",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 10,
+          "y": 422.609375,
+          "width": 300,
+          "height": 29.390625,
+          "top": 422.609375,
+          "right": 310,
+          "bottom": 452,
+          "left": 10
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-start",
+          "text": "Registrar actividad",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "el-durazno-320x568",
+      "phase": "storage-error",
+      "message": {
+        "text": "No se guardó el cambio. Revisa los datos e inténtalo de nuevo. Los datos guardados antes se conservan.",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 10,
+          "y": 407.21875,
+          "width": 300,
+          "height": 44.78125,
+          "top": 407.21875,
+          "right": 310,
+          "bottom": 452,
+          "left": 10
+        },
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(147, 0, 10)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-pause",
+          "text": "Ⅱ Pausar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "el-durazno-320x568",
+      "phase": "agenda-date",
+      "text": "jue, 5 nov, 09:30 a. m.",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(149, 73, 21)",
+      "contrast": 6.477966100238992,
+      "rect": {
+        "x": 32,
+        "y": 270.6875,
+        "width": 152.3125,
+        "height": 25.71875,
+        "top": 270.6875,
+        "right": 184.3125,
+        "bottom": 296.40625,
+        "left": 32
+      },
+      "textRect": {
+        "x": 41,
+        "y": 275.6875,
+        "width": 134.3125,
+        "height": 14.859375,
+        "top": 275.6875,
+        "right": 175.3125,
+        "bottom": 290.546875,
+        "left": 41
+      },
+      "visible": true
+    },
+    {
+      "prefix": "el-durazno-320x568",
+      "phase": "agenda-feedback",
+      "message": {
+        "text": "Guardado en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 16,
+          "y": 212.734375,
+          "width": 288,
+          "height": 29.9375,
+          "top": 212.734375,
+          "right": 304,
+          "bottom": 242.671875,
+          "left": 16
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "[data-rider-action=new-meetup]",
+          "text": "Crear encuentro personal",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "el-durazno-390x844",
+      "phase": "off-accessibility",
+      "description": "OSM carga teselas del área visible. Consultar el GPS no graba tu recorrido; la demo no graba. Sólo «Registrar actividad» guarda lecturas y recorrido localmente en este dispositivo."
+    },
+    {
+      "prefix": "el-durazno-390x844",
+      "phase": "recording",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 16,
+          "y": 657.421875,
+          "width": 358,
+          "height": 29.390625,
+          "top": 657.421875,
+          "right": 374,
+          "bottom": 686.8125,
+          "left": 16
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-pause",
+          "text": "Ⅱ Pausar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "el-durazno-390x844",
+      "phase": "recording-accessibility",
+      "description": "OSM carga teselas del área visible. Consultar el GPS no graba tu recorrido; la demo no graba. Sólo «Registrar actividad» guarda lecturas y recorrido localmente en este dispositivo."
+    },
+    {
+      "prefix": "el-durazno-390x844",
+      "phase": "checkpoint",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 16,
+          "y": 657.421875,
+          "width": 358,
+          "height": 29.390625,
+          "top": 657.421875,
+          "right": 374,
+          "bottom": 686.8125,
+          "left": 16
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-pause",
+          "text": "Ⅱ Pausar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "el-durazno-390x844",
+      "phase": "paused",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 16,
+          "y": 657.421875,
+          "width": 358,
+          "height": 29.390625,
+          "top": 657.421875,
+          "right": 374,
+          "bottom": 686.8125,
+          "left": 16
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-resume",
+          "text": "▷ Reanudar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "el-durazno-390x844",
+      "phase": "finished",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 16,
+          "y": 657.421875,
+          "width": 358,
+          "height": 29.390625,
+          "top": 657.421875,
+          "right": 374,
+          "bottom": 686.8125,
+          "left": 16
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-start",
+          "text": "Registrar actividad",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "el-durazno-390x844",
+      "phase": "storage-error",
+      "message": {
+        "text": "No se guardó el cambio. Revisa los datos e inténtalo de nuevo. Los datos guardados antes se conservan.",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 16,
+          "y": 642.03125,
+          "width": 358,
+          "height": 44.78125,
+          "top": 642.03125,
+          "right": 374,
+          "bottom": 686.8125,
+          "left": 16
+        },
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(147, 0, 10)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-pause",
+          "text": "Ⅱ Pausar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "el-durazno-390x844",
+      "phase": "agenda-date",
+      "text": "jue, 5 nov, 09:30 a. m.",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(149, 73, 21)",
+      "contrast": 6.477966100238992,
+      "rect": {
+        "x": 36,
+        "y": 218.921875,
+        "width": 152.3125,
+        "height": 25.71875,
+        "top": 218.921875,
+        "right": 188.3125,
+        "bottom": 244.640625,
+        "left": 36
+      },
+      "textRect": {
+        "x": 45,
+        "y": 223.921875,
+        "width": 134.3125,
+        "height": 14.859375,
+        "top": 223.921875,
+        "right": 179.3125,
+        "bottom": 238.78125,
+        "left": 45
+      },
+      "visible": true
+    },
+    {
+      "prefix": "el-durazno-390x844",
+      "phase": "agenda-feedback",
+      "message": {
+        "text": "Guardado en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 20,
+          "y": 671.25,
+          "width": 350,
+          "height": 29.9375,
+          "top": 671.25,
+          "right": 370,
+          "bottom": 701.1875,
+          "left": 20
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "[data-rider-action=new-meetup]",
+          "text": "Crear encuentro personal",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "parquemet-320x568",
+      "phase": "off-accessibility",
+      "description": "OSM carga teselas del área visible. Consultar el GPS no graba tu recorrido; la demo no graba. Sólo «Registrar actividad» guarda lecturas y recorrido localmente en este dispositivo."
+    },
+    {
+      "prefix": "parquemet-320x568",
+      "phase": "recording",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 10,
+          "y": 422.609375,
+          "width": 300,
+          "height": 29.390625,
+          "top": 422.609375,
+          "right": 310,
+          "bottom": 452,
+          "left": 10
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-pause",
+          "text": "Ⅱ Pausar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "parquemet-320x568",
+      "phase": "recording-accessibility",
+      "description": "OSM carga teselas del área visible. Consultar el GPS no graba tu recorrido; la demo no graba. Sólo «Registrar actividad» guarda lecturas y recorrido localmente en este dispositivo."
+    },
+    {
+      "prefix": "parquemet-320x568",
+      "phase": "checkpoint",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 10,
+          "y": 422.609375,
+          "width": 300,
+          "height": 29.390625,
+          "top": 422.609375,
+          "right": 310,
+          "bottom": 452,
+          "left": 10
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-pause",
+          "text": "Ⅱ Pausar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "parquemet-320x568",
+      "phase": "paused",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 10,
+          "y": 422.609375,
+          "width": 300,
+          "height": 29.390625,
+          "top": 422.609375,
+          "right": 310,
+          "bottom": 452,
+          "left": 10
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-resume",
+          "text": "▷ Reanudar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "parquemet-320x568",
+      "phase": "finished",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 10,
+          "y": 422.609375,
+          "width": 300,
+          "height": 29.390625,
+          "top": 422.609375,
+          "right": 310,
+          "bottom": 452,
+          "left": 10
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-start",
+          "text": "Registrar actividad",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "parquemet-320x568",
+      "phase": "storage-error",
+      "message": {
+        "text": "No se guardó el cambio. Revisa los datos e inténtalo de nuevo. Los datos guardados antes se conservan.",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 10,
+          "y": 407.21875,
+          "width": 300,
+          "height": 44.78125,
+          "top": 407.21875,
+          "right": 310,
+          "bottom": 452,
+          "left": 10
+        },
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(147, 0, 10)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-pause",
+          "text": "Ⅱ Pausar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "parquemet-320x568",
+      "phase": "agenda-date",
+      "text": "jue, 5 nov, 09:30 a. m.",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(149, 73, 21)",
+      "contrast": 6.477966100238992,
+      "rect": {
+        "x": 32,
+        "y": 270.90625,
+        "width": 152.3125,
+        "height": 25.71875,
+        "top": 270.90625,
+        "right": 184.3125,
+        "bottom": 296.625,
+        "left": 32
+      },
+      "textRect": {
+        "x": 41,
+        "y": 275.90625,
+        "width": 134.3125,
+        "height": 14.859375,
+        "top": 275.90625,
+        "right": 175.3125,
+        "bottom": 290.765625,
+        "left": 41
+      },
+      "visible": true
+    },
+    {
+      "prefix": "parquemet-320x568",
+      "phase": "agenda-feedback",
+      "message": {
+        "text": "Guardado en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 16,
+          "y": 212.953125,
+          "width": 288,
+          "height": 29.9375,
+          "top": 212.953125,
+          "right": 304,
+          "bottom": 242.890625,
+          "left": 16
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "[data-rider-action=new-meetup]",
+          "text": "Crear encuentro personal",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "parquemet-390x844",
+      "phase": "off-accessibility",
+      "description": "OSM carga teselas del área visible. Consultar el GPS no graba tu recorrido; la demo no graba. Sólo «Registrar actividad» guarda lecturas y recorrido localmente en este dispositivo."
+    },
+    {
+      "prefix": "parquemet-390x844",
+      "phase": "recording",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 16,
+          "y": 657.421875,
+          "width": 358,
+          "height": 29.390625,
+          "top": 657.421875,
+          "right": 374,
+          "bottom": 686.8125,
+          "left": 16
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-pause",
+          "text": "Ⅱ Pausar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "parquemet-390x844",
+      "phase": "recording-accessibility",
+      "description": "OSM carga teselas del área visible. Consultar el GPS no graba tu recorrido; la demo no graba. Sólo «Registrar actividad» guarda lecturas y recorrido localmente en este dispositivo."
+    },
+    {
+      "prefix": "parquemet-390x844",
+      "phase": "checkpoint",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 16,
+          "y": 657.421875,
+          "width": 358,
+          "height": 29.390625,
+          "top": 657.421875,
+          "right": 374,
+          "bottom": 686.8125,
+          "left": 16
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-pause",
+          "text": "Ⅱ Pausar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "parquemet-390x844",
+      "phase": "paused",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 16,
+          "y": 657.421875,
+          "width": 358,
+          "height": 29.390625,
+          "top": 657.421875,
+          "right": 374,
+          "bottom": 686.8125,
+          "left": 16
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-resume",
+          "text": "▷ Reanudar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "parquemet-390x844",
+      "phase": "finished",
+      "message": {
+        "text": "Actividad guardada en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 16,
+          "y": 657.421875,
+          "width": 358,
+          "height": 29.390625,
+          "top": 657.421875,
+          "right": 374,
+          "bottom": 686.8125,
+          "left": 16
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-start",
+          "text": "Registrar actividad",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "parquemet-390x844",
+      "phase": "storage-error",
+      "message": {
+        "text": "No se guardó el cambio. Revisa los datos e inténtalo de nuevo. Los datos guardados antes se conservan.",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 16,
+          "y": 642.03125,
+          "width": 358,
+          "height": 44.78125,
+          "top": 642.03125,
+          "right": 374,
+          "bottom": 686.8125,
+          "left": 16
+        },
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(147, 0, 10)"
+      },
+      "actions": [
+        {
+          "selector": "#rider-record-pause",
+          "text": "Ⅱ Pausar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        },
+        {
+          "selector": "#rider-record-finish",
+          "text": "Finalizar",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    },
+    {
+      "prefix": "parquemet-390x844",
+      "phase": "agenda-date",
+      "text": "jue, 5 nov, 09:30 a. m.",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(149, 73, 21)",
+      "contrast": 6.477966100238992,
+      "rect": {
+        "x": 36,
+        "y": 219.265625,
+        "width": 152.3125,
+        "height": 25.71875,
+        "top": 219.265625,
+        "right": 188.3125,
+        "bottom": 244.984375,
+        "left": 36
+      },
+      "textRect": {
+        "x": 45,
+        "y": 224.265625,
+        "width": 134.3125,
+        "height": 14.859375,
+        "top": 224.265625,
+        "right": 179.3125,
+        "bottom": 239.125,
+        "left": 45
+      },
+      "visible": true
+    },
+    {
+      "prefix": "parquemet-390x844",
+      "phase": "agenda-feedback",
+      "message": {
+        "text": "Guardado en este dispositivo",
+        "shown": true,
+        "position": "static",
+        "rect": {
+          "x": 20,
+          "y": 671.59375,
+          "width": 350,
+          "height": 29.9375,
+          "top": 671.59375,
+          "right": 370,
+          "bottom": 701.53125,
+          "left": 20
+        },
+        "color": "rgb(3, 37, 23)",
+        "background": "rgb(231, 233, 228)"
+      },
+      "actions": [
+        {
+          "selector": "[data-rider-action=new-meetup]",
+          "text": "Crear encuentro personal",
+          "visible": true,
+          "withinViewport": true,
+          "overlap": 0,
+          "labelOverlap": 0
+        }
+      ]
+    }
+  ]
+}

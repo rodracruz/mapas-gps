@@ -1,0 +1,13 @@
+PASS private-el-durazno 320px: unobstructed real source tap, original dimensions, unchanged thumbnail/card, map enlargement and zoom, private960x1280 preserved
+PASS private-el-durazno 390px: unobstructed real source tap, original dimensions, unchanged thumbnail/card, map enlargement and zoom, private960x1280 preserved
+PASS private-el-durazno 768px: unobstructed real source tap, original dimensions, unchanged thumbnail/card, map enlargement and zoom, private960x1280 preserved
+PASS private-parquemet 320px: unobstructed real source tap, original dimensions, unchanged thumbnail/card, map enlargement and zoom
+PASS private-parquemet 390px: unobstructed real source tap, original dimensions, unchanged thumbnail/card, map enlargement and zoom
+PASS private-parquemet 768px: unobstructed real source tap, original dimensions, unchanged thumbnail/card, map enlargement and zoom
+PASS source-el-durazno 320px: unobstructed real source tap, original dimensions, unchanged thumbnail/card, map enlargement and zoom
+PASS source-el-durazno 390px: unobstructed real source tap, original dimensions, unchanged thumbnail/card, map enlargement and zoom
+PASS source-el-durazno 768px: unobstructed real source tap, original dimensions, unchanged thumbnail/card, map enlargement and zoom
+PASS source-parquemet 320px: unobstructed real source tap, original dimensions, unchanged thumbnail/card, map enlargement and zoom
+PASS source-parquemet 390px: unobstructed real source tap, original dimensions, unchanged thumbnail/card, map enlargement and zoom
+PASS source-parquemet 768px: unobstructed real source tap, original dimensions, unchanged thumbnail/card, map enlargement and zoom
+PASS both parks in source and private bundles at320/390/768: actual source/arrow taps, enlargement/zoom and preserved private original

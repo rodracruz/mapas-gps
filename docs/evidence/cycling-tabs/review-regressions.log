@@ -1,0 +1,45 @@
+PASS el-durazno-320x568 inactive GPS accessibility
+PASS el-durazno-320x568 start feedback keeps action labels visible
+PASS el-durazno-320x568 recording GPS accessibility
+PASS el-durazno-320x568 checkpoint does not reannounce unchanged success
+PASS el-durazno-320x568 checkpoint feedback stays in a reserved region
+PASS el-durazno-320x568 pause feedback keeps actions visible
+PASS el-durazno-320x568 finish feedback keeps new recording action visible
+PASS el-durazno-320x568 storage error is visible without covering actions
+PASS el-durazno-320x568 agenda renders readable actual date and time
+PASS el-durazno-320x568 agenda save feedback does not obscure create action
+PASS el-durazno-320x568 no JavaScript errors
+PASS el-durazno-390x844 inactive GPS accessibility
+PASS el-durazno-390x844 start feedback keeps action labels visible
+PASS el-durazno-390x844 recording GPS accessibility
+PASS el-durazno-390x844 checkpoint does not reannounce unchanged success
+PASS el-durazno-390x844 checkpoint feedback stays in a reserved region
+PASS el-durazno-390x844 pause feedback keeps actions visible
+PASS el-durazno-390x844 finish feedback keeps new recording action visible
+PASS el-durazno-390x844 storage error is visible without covering actions
+PASS el-durazno-390x844 agenda renders readable actual date and time
+PASS el-durazno-390x844 agenda save feedback does not obscure create action
+PASS el-durazno-390x844 no JavaScript errors
+PASS parquemet-320x568 inactive GPS accessibility
+PASS parquemet-320x568 start feedback keeps action labels visible
+PASS parquemet-320x568 recording GPS accessibility
+PASS parquemet-320x568 checkpoint does not reannounce unchanged success
+PASS parquemet-320x568 checkpoint feedback stays in a reserved region
+PASS parquemet-320x568 pause feedback keeps actions visible
+PASS parquemet-320x568 finish feedback keeps new recording action visible
+PASS parquemet-320x568 storage error is visible without covering actions
+PASS parquemet-320x568 agenda renders readable actual date and time
+PASS parquemet-320x568 agenda save feedback does not obscure create action
+PASS parquemet-320x568 no JavaScript errors
+PASS parquemet-390x844 inactive GPS accessibility
+PASS parquemet-390x844 start feedback keeps action labels visible
+PASS parquemet-390x844 recording GPS accessibility
+PASS parquemet-390x844 checkpoint does not reannounce unchanged success
+PASS parquemet-390x844 checkpoint feedback stays in a reserved region
+PASS parquemet-390x844 pause feedback keeps actions visible
+PASS parquemet-390x844 finish feedback keeps new recording action visible
+PASS parquemet-390x844 storage error is visible without covering actions
+PASS parquemet-390x844 agenda renders readable actual date and time
+PASS parquemet-390x844 agenda save feedback does not obscure create action
+PASS parquemet-390x844 no JavaScript errors
+PASS review regressions: rendered recording/save/error actions, agenda date contrast, and actual GPS AX descriptions in both parks at320x568 and390x844

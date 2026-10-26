@@ -1,48 +1,41 @@
 # Estado actual: bikeride
 
-El usuario entregó el ZIP directamente a esta tarea y quedó resuelto el bloqueo de transferencia. No hace falta repetir inicio de sesión, exportación ni lectura de portapapeles. Se verificó su tamaño 278768 bytes, CRC y SHA256 `ee1a8c4dbc98642089f14dee7f0ef8cb150bd5d57b6f5b1454f7d59318daae06`; el original permanece fuera de Git.
+## Última etapa
 
-El archivo contiene un HTML, una captura 544×830 y dos documentos de la revisión «Mapas GPS · Integración SUDA v2». Es una pantalla de referencia, no una aplicación completa ni prueba de servicios conectados. Sus scripts y mediciones de ejemplo no se ejecutaron ni importaron a la app.
+Las cinco pantallas ciclistas del segundo ZIP están implementadas en `feat/bikeride-stitch-integration`: mapa GPS en ruta, explorador, detalle técnico, perfil/actividad/garaje y encuentros. La revisión independiente de implementación y la segunda revisión de sus tres correcciones están aprobadas. Se está preparando la verificación final y actualización del mismo sitio privado; la última publicación anterior verificada es la21. El resultado definitivo se registra en [release.json](../../evidence/cycling-tabs/release.json).
 
-## Resultado implementado
+[Entrega y límites de esta etapa](../../evidence/cycling-tabs/README.md) · [Plan](../../superpowers/plans/2026-10-26-cycling-tabs.md) · [Contratos de datos/UI](../../superpowers/specs/2026-10-26-cycling-tabs-design.md).
 
-La marca es **bikeride**, en minúsculas. Se aplicó el diseño a los visores reales, con fuentes locales licenciadas, selector horizontal, navegación Mapa GPS/Rutas, estado de red y tarjetas. Se mantienen los 47 recorridos de catálogo, geometrías y planos originales, filtros, fuentes, GPS voluntario, incertidumbre/continuidad y demo pública de 49 lecturas sólo en El Durazno. Los mapas locales guardados conservan su almacenamiento y compatibilidad.
+## Comportamiento real
 
-La rama actual de producto es `feat/bikeride-stitch-integration`. Código funcional: `0cb0e79`. No volver a la rama documental antigua como si fuera el estado más reciente. No se cambió GitHub main ni el dominio.
+- 21 fichas en El Durazno y26 en Parquemet. Planos originales, geometrías, catálogo y antiguo almacenamiento de mapas conservados. Las rutas tienen búsqueda/filtros/favoritos y fichas técnicas; longitudes OSM/PDF separadas, referencias de tabla identificadas y datos desconocidos explícitos.
+- Perfil opcional, bicicletas, notas de mantenimiento, archivos GPX e historial GPS en la base separada `bikeride-local-v1`. No hay persona, bicicleta, actividad ni estadísticas precargadas. Los PSI son datos introducidos, no recomendaciones.
+- Agenda personal con creación/edición/cancelación/reactivación/eliminación y exportación ICS real. No hay reservas, cupos ni participantes compartidos.
+- Un solo Leaflet y un solo controlador GPS por página. Consultar GPS y la demo no registran actividad. «Registrar actividad» guarda lecturas localmente con pausa/reanudación/cierre, cortes entre segmentos y recuperación de datos confirmados tras recargar. El ajuste probable/incertidumbre/continuidad anterior permanece. Se evita prometer ejecución en segundo plano o recuperación de datos no confirmados.
+- GPX real de segmentos geográficos OSM documentados, con atribución y enlaces de procedencia; GPX propio de actividades sin atribución OSM. No es descarga del mapa base.
 
-La publicación privada existente se actualizó a **versión 21**, conservando un único propietario y cero visitantes externos:
+La marca visible es **bikeride**, en minúsculas. No renombrar repositorio/dominio ni cambiar GitHub `main`. No copiar HTML/PNG/ZIP originales de Stitch, foto privada, datos de agenda o recorridos del usuario al repositorio público.
 
-- [Abrir bikeride](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site)
-- [Comparación visual privada](https://mapas-gps-revision-durazno.rodracruz.chatgpt.site/comparacion.html)
+## Verificación y revisiones
 
-Ambos parques y la comparación se verificaron por HTTP200 y hash idéntico a los archivos probados. La fotografía privada del usuario está preservada en esa construcción; no está en Git. La construcción anterior del worktree se conserva: para reconstruir usar los scripts actuales y el adjunto fotográfico privado, sin confundir la copia anterior de dist con esta publicación.
+La nueva implementación se probó en fuente y en ambos paquetes autónomos, usando copias aisladas. Formularios reales, IndexedDB/rollback, recarga, historial/archivos, rutas profundas, navegación repetida y GPS voluntario/demostración están cubiertos. Los mapas antiguos conservan Blob, calibración y senderos con service worker activo. La regresión GPS usa49 posiciones públicas en cinco tamaños y seguimiento simulado en ambos parques.
 
-## Pruebas y pendientes
+La revisión encontró y corrigió: aviso que tapaba acciones, fechas con contraste1:1 y descripción accesible antigua que prometía no guardar. La regresión nueva verifica44 comprobaciones visuales/AX en ambos parques320×568 y390×844; contraste final6.48:1 y superposición0. Mensajes de error claros conservan los datos previos.
 
-En la integración anterior pasaron 130 pruebas unitarias, nueve comprobaciones nuevas de interfaz, nueve del flujo móvil existente, filtros de ambos paquetes autónomos, GPS simulado/continuidad/precisión/caducidad/permiso rechazado, cinco tamaños con 49 lecturas públicas, seguimiento en ambos parques, giro/recentrado y conservación de Blob/calibración/trazados con service worker activo. Una revisión independiente comprobó 320px, títulos, cambio de parque y preservación de motores. La falta de licencias tipográficas en la salida autónoma se reprodujo con prueba fallida y se corrigió. No se validó GPS en terreno ni restauración bfcache real en un dispositivo físico.
+La comprobación final de la foto también detectó una flecha que interceptaba el toque en la versión21. El selector se restringió al botón fotográfico, conservando miniaturas y medidas. La prueba compara dimensiones del diseño vigente y utiliza toques normales para ampliar/zoom, incluyendo la foto privada960×1280. No confundir el test antiguo de imagen a ancho completo con el diseño vigente de bikeride.
 
-Encuentros y Perfil figuran deshabilitados como «Próximamente». Offline completo, Beacon, garaje, estadísticas personales, eventos, capas satélite/3D, altimetría/obstáculos y destinos/loops siguen pendientes. No tienen servicios conectados ni datos personales inventados. No atribuirles implementación por lo que afirme el documento generado de Stitch.
+Los resultados definitivos y los hashes del código/paquete se recogen en [verification.json](../../evidence/cycling-tabs/verification.json) y las revisiones archivadas junto a la entrega. La construcción privada anterior de la `dist` del worktree se conserva; no representa necesariamente la publicación actual.
 
-Se preparó un [diagnóstico de siguiente etapa](SIGUIENTE-ETAPA.md): Perfil/actividad, garaje y agenda personal pueden avanzar con almacenamiento local; sincronización, encuentros compartidos y Beacon requieren decisiones de servicio y acceso. El modo offline necesita paquetes explícitos y una fuente de fondo permitida; no se pueden precargar los mosaicos estándar de OSM. Es una propuesta pendiente de ejecución, no otra publicación ni declaración de producto completo.
+## Pendientes reales
 
-Evidencia y capturas: [bikeride-stitch](../../evidence/bikeride-stitch/README.md). Plan y límites: [diseño](../../superpowers/specs/2026-10-25-bikeride-design.md). Se conserva el historial del bloqueo en [RECUPERACION-2026-10-26.md](RECUPERACION-2026-10-26.md), como antecedente resuelto.
+Beacon/SOS, sincronización/cuentas, participación colaborativa y servicios/reservas en tiempo real necesitan decisiones de producto y servicios externos; no están conectados. Offline completo requiere paquetes y una fuente permitida de cartografía base: no precargar masivamente teselas estándar de OSM. Satélite/3D, altimetría, obstáculos, patrulla/clima y accesos/sentidos necesitan fuentes verificadas.
 
-## Corrección visual posterior
+La navegación por red con indicaciones, loops y distancia restante sigue pendiente de validar geografía/conexiones. La distancia registrada aquí es una estimación sobre lecturas GPS aceptadas. Las pruebas de navegador no equivalen a GPS en terreno, teléfono físico o pantalla bloqueada. Expediciones y alquileres quedaron expresamente fuera de esta etapa.
 
-El usuario señaló diferencias reales en la página de comparación. Se corrigieron jerarquía bienvenida→selector→mapa, medidas, espaciados, tipografía, iconos, filtros horizontales y cuerpo/acciones visibles de las fichas. La comparación ahora muestra referencia y antes/después con capturas544×830 y viewport CSS390×595 equivalente. El plano general y las referencias en tabla permanecen diferenciados de una ruta identificada.
+## Fuentes y continuidad
 
-Pasaron 131 pruebas unitarias, regresión de diseño, flujos móviles, avenidas, filtros de ambos autónomos, GPS simulado/disposición en cinco tamaños y conservación del almacenamiento. La revisión independiente confirmó resueltos los hallazgos importantes y se corrigió con prueba roja→verde la etiqueta de las dos referencias de tabla. App, Parquemet y comparación versión20 responden HTTP200 y coinciden byte a byte con el paquete probado, sin ampliar audiencia. [Evidencia actual](../../evidence/bikeride-visual/README.md).
+El primer ZIP `ee1a8c4d…` se recibió y verificó correctamente; no existe un bloqueo actual de login, portapapeles ni transferencia. El segundo ZIP tiene3916289 bytes y SHA256 `84a113e38416289740c8871fea025451c1e761b9edfeaefeb3d5f8b1aa6d14bc`. Diez pantallas fueron inspeccionadas: se aprobaron las cinco nuevas ciclistas y se excluyó la familia outdoor general. El HTML de Parques/senderos v2 coincide con el primer ZIP.
 
-El diagnóstico de funciones futuras quedó pausado por esta prioridad; sus propuestas no están implementadas. No volver a exportación/login de Stitch ni declarar el producto completo por estas pruebas.
+[Revisión estática y visual de las pantallas](REVISION-PESTANAS-2026-10-26.md) · [Inventario/hashes](PESTANAS-RECIBIDAS.json). Los scripts del prototipo nunca se utilizaron como servicios reales. Referencias de diseño y fotografía original permanecen privadas.
 
-## Seguimiento de atribución y nuevas referencias
-
-Se corrigió el recorte de atribución sin rediseñar: ajuste de línea a9px y reserva de la altura real del control Leaflet más8px. Fuente y autónomos pasan seis casos cada uno en ambos parques320/390/544, con ampliación y cambios de fuente; 131 unitarias y regresiones afectadas de diseño/interfaz/GPS verdes. Revisión independiente de12 capturas sin nuevos problemas. Publicación21 comprobada por HTTP200/hash y audiencia idéntica. [Capturas y prueba](../../evidence/bikeride-attribution/README.md).
-
-Rodrigo anunció otras pestañas de Stitch para revisión. El segundo ZIP ya se recibió y revisó; el resultado se registra en la sección siguiente. Se terminó esta corrección y el diagnóstico de funciones futuras permanece pausado.
-
-## Nuevas pestañas recibidas y revisadas
-
-Ya llegó el segundo ZIP, 3916289 bytes, SHA256 `84a113e38416289740c8871fea025451c1e761b9edfeaefeb3d5f8b1aa6d14bc`: diez pantallas HTML/PNG y dos documentos. Se revisaron los píxeles y scripts de las diez. Seis corresponden a la navegación ciclista y cuatro a la familia outdoor general. El HTML de Parques y senderos v2 y ambos documentos coinciden con la exportación anterior; las otras nueve pantallas son nuevas para esta tarea.
-
-[Revisión y correspondencia con bikeride](REVISION-PESTANAS-2026-10-26.md) · [Inventario y hashes](PESTANAS-RECIBIDAS.json). Los originales quedan privados. Es revisión estática/visual, sin ejecutar prototipos, integrar funciones ni desplegar otra versión; el producto sigue en versión 21. El diagnóstico previo ya puede contrastarse con estas pantallas concretas, pero su ejecución sigue pausada.
+Historial: [integración inicial](../../evidence/bikeride-stitch/README.md), [corrección visual](../../evidence/bikeride-visual/README.md), [atribución](../../evidence/bikeride-attribution/README.md), [recuperación resuelta](RECUPERACION-2026-10-26.md). El diagnóstico [SIGUIENTE-ETAPA.md](SIGUIENTE-ETAPA.md) es histórico; las funciones locales enumeradas arriba ya no deben tratarse como propuestas sin implementar.

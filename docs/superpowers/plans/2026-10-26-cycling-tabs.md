@@ -37,20 +37,20 @@
 
 **Files:** create rider/views.mjs, rider/views.css (split UI helpers into focused rider/*.mjs as useful); modify geographic/bikeride.mjs, viewer.mjs, park-viewer.mjs, gps.mjs, gps-viewport.mjs only where necessary, both HTML entries and both autonomous builders. Tests/rider-views-browser.mjs and relevant existing browser tests/helpers.
 **Interfaces:** consume Task1 exports. `setupCyclingViews`/actions/GPS snapshot+subscribe contract is in spec. Reuse one live Leaflet instance and real source previews.
-- [ ] Write failing browser tests for navigation to five views,47 cards across parks, local CRUD/favorites/downloads, honest missing-data sections and voluntary recording. Run red.
-- [ ] Inspect all five original PNGs and HTML. Implement reference structure/styles/components and real data binding, route/park hash preservation and repeated back/close.
-- [ ] Enable real Profile/Encuentros and dedicated Rutas/Detalle views. Local forms persist; actual GPX/ICS downloads and session history work, empty states are explicit.
-- [ ] Integrate in-route HUD with existing GPS subscription; add explicit recording/pause/resume/end and checkpoint recovery, source uncertainty and demo guards. New panels participate in visible map calculation.
-- [ ] Bundle modules/styles in both private/public builds; preserve legacy storage/photo and local fonts/OFL.
-- [ ] Run new browser flow plus affected existing tests, including actual stored Blob/calibration before/after. Capture mobile and landscape for every view.
-- [ ] Commit owned changes, report remaining external/data blockers; independent scoped spec+quality review and fixes.
+- [x] Write failing browser tests for navigation to five views,47 cards across parks, local CRUD/favorites/downloads, honest missing-data sections and voluntary recording. Run red.
+- [x] Inspect all five original PNGs and HTML. Implement reference structure/styles/components and real data binding, route/park hash preservation and repeated back/close.
+- [x] Enable real Profile/Encuentros and dedicated Rutas/Detalle views. Local forms persist; actual GPX/ICS downloads and session history work, empty states are explicit.
+- [x] Integrate in-route HUD with existing GPS subscription; add explicit recording/pause/resume/end and checkpoint recovery, source uncertainty and demo guards. New panels participate in visible map calculation.
+- [x] Bundle modules/styles in both private/public builds; preserve legacy storage/photo and local fonts/OFL.
+- [x] Run new browser flow plus affected existing tests, including actual stored Blob/calibration before/after. Capture mobile and landscape for every view.
+- [x] Commit owned changes, report remaining external/data blockers; independent scoped spec+quality review and fixes.
 
 ### Task 3: Whole-branch visual verification and release
 
 **Files:** docs/evidence/cycling-tabs/* and handoff state; existing private Site dist/archive, no new hosting project.
 **Interfaces:** reviewed Task1/2 source and private original photograph; current owner-only Site.
-- [ ] Compare each supplied screenshot and current page at equivalent CSS viewport/scale. Inspect pixels; no completion based on tests alone. Fix with Task2 implementer if needed.
-- [ ] Run full unit suite once source is final; relevant mobile/GPS/preservation/autonomous tests. Verify original photo and source geometry hashes.
+- [x] Compare each supplied screenshot and current page at equivalent CSS viewport/scale. Inspect pixels; no completion based on tests alone. Fix with Task2 implementer if needed.
+- [x] Run full unit suite once source is final; relevant mobile/GPS/preservation/autonomous tests. Verify original photo and source geometry hashes.
 - [ ] Independent whole-branch review on the most capable model; resolve Important findings.
 - [ ] Push feature branch; package exact tested private build, sync existing Site source, native private deployment without audience changes.
 - [ ] Verify returned deployment and actual app paths/hashes; publish screenshots/evidence safe for public Git, retain design originals privately. Record accurate completed/pending list.

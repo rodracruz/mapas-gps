@@ -1,0 +1,178 @@
+{
+  "codeCommit": "cb045275139383c3ce7b77e0ca9ac6e9ee7f33d8",
+  "unitBuildSuite": {
+    "tests": 152,
+    "passed": 152,
+    "failed": 0,
+    "log": "final-suite.log"
+  },
+  "privateBuild": {
+    "files": {
+      "parquemet.html": {
+        "bytes": 2498982,
+        "sha256": "608b65998c17f20e761989713f53f3176e819241e88b276dd2cd078c62ece1f2"
+      },
+      "index.html": {
+        "bytes": 4550917,
+        "sha256": "bcedcba2b8f9ffa933480533c053e0d112bd4e4a6132daf0738a20a069d53d15"
+      },
+      "mapas-gps-parques.html": {
+        "bytes": 4550917,
+        "sha256": "bcedcba2b8f9ffa933480533c053e0d112bd4e4a6132daf0738a20a069d53d15"
+      },
+      "mapas-gps-revision.html": {
+        "bytes": 3182224,
+        "sha256": "4a8aa84cbd64d5ae7d621f03d84b1099575c659256fc55e09aa0789ed6893372"
+      }
+    },
+    "originalPhotoPreserved": true
+  },
+  "screens": {
+    "captures": [
+      {
+        "park": "el-durazno",
+        "view": "rutas",
+        "file": "el-durazno-rutas-390x844.png",
+        "viewport": [
+          390,
+          844
+        ],
+        "documentWidth": 390,
+        "mapCount": 1
+      },
+      {
+        "park": "el-durazno",
+        "view": "detalle",
+        "file": "el-durazno-detalle-390x844.png",
+        "viewport": [
+          390,
+          844
+        ],
+        "documentWidth": 390,
+        "mapCount": 1
+      },
+      {
+        "park": "el-durazno",
+        "view": "perfil",
+        "file": "el-durazno-perfil-390x844.png",
+        "viewport": [
+          390,
+          844
+        ],
+        "documentWidth": 390,
+        "mapCount": 1
+      },
+      {
+        "park": "el-durazno",
+        "view": "encuentros",
+        "file": "el-durazno-encuentros-390x844.png",
+        "viewport": [
+          390,
+          844
+        ],
+        "documentWidth": 390,
+        "mapCount": 1
+      },
+      {
+        "park": "el-durazno",
+        "view": "mapa",
+        "file": "el-durazno-mapa-390x844.png",
+        "viewport": [
+          390,
+          844
+        ],
+        "documentWidth": 390,
+        "mapCount": 1
+      },
+      {
+        "park": "parquemet",
+        "view": "rutas",
+        "file": "parquemet-rutas-390x844.png",
+        "viewport": [
+          390,
+          844
+        ],
+        "documentWidth": 390,
+        "mapCount": 1
+      },
+      {
+        "park": "parquemet",
+        "view": "detalle",
+        "file": "parquemet-detalle-390x844.png",
+        "viewport": [
+          390,
+          844
+        ],
+        "documentWidth": 390,
+        "mapCount": 1
+      },
+      {
+        "park": "parquemet",
+        "view": "perfil",
+        "file": "parquemet-perfil-390x844.png",
+        "viewport": [
+          390,
+          844
+        ],
+        "documentWidth": 390,
+        "mapCount": 1
+      },
+      {
+        "park": "parquemet",
+        "view": "encuentros",
+        "file": "parquemet-encuentros-390x844.png",
+        "viewport": [
+          390,
+          844
+        ],
+        "documentWidth": 390,
+        "mapCount": 1
+      },
+      {
+        "park": "parquemet",
+        "view": "mapa",
+        "file": "parquemet-mapa-390x844.png",
+        "viewport": [
+          390,
+          844
+        ],
+        "documentWidth": 390,
+        "mapCount": 1
+      }
+    ],
+    "errors": [],
+    "writes": []
+  },
+  "browserChecks": [
+    "five views and47 catalog cards",
+    "local profile/garage/agenda CRUD and reload",
+    "real GPX/ICS downloads with provenance",
+    "storage abort and rollback",
+    "explicit GPS recording/pause/resume/finish/interruption and demo exclusion",
+    "44 focused feedback/date contrast/computed accessibility checks",
+    "49 public demo positions across5 phone viewports",
+    "native GPS simulated in both parks",
+    "legacy Blob/calibration/trails with activeSW",
+    "both private standalone bundles",
+    "12 source/private photo-tap and zoom combinations at320/390/768"
+  ],
+  "preservedInputFiles": 18,
+  "sourceGeometryCatalogAndOldBuildUnchanged": true,
+  "referenceComparison": {
+    "imageWidth": 390,
+    "visibleHeight": 844,
+    "referenceCssViewportDpr": "undocumented",
+    "pixelPerfectClaim": false,
+    "comparisonPublication": "private only"
+  },
+  "independentTaskReviews": {
+    "task1": "approved",
+    "task2": "approved after3 Important fixes"
+  },
+  "finalIntegrationReview": "pending",
+  "notExecuted": [
+    "physical field GPS",
+    "physical phone or locked-screen/background durability",
+    "external Beacon/events/offline-basemap services"
+  ]
+}
