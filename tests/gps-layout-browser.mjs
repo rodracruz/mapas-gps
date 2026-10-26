@@ -20,6 +20,8 @@ try{
  // Normal entry creates GPS before filters move into the fullscreen map.
  const ctx=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true}),p=await ctx.newPage();
  await p.goto(base+(process.env.GPS_ENTRY||'/mapa-geografico.html')+'#parque=el-durazno');await p.waitForSelector('#map-card[data-ready="true"]');await p.locator('#open-map').tap();await p.locator('#gps-demo').tap();await p.locator('#gps-demo-pause').tap();await p.locator('#filter-toggle').tap();await p.waitForTimeout(200);
- assert.equal(await p.locator('.gps-raw-dot').evaluate(e=>{const r=e.getBoundingClientRect();return !!document.elementFromPoint(r.x+r.width/2,r.y+r.height/2)?.closest('.route-filters,.map-trails,.gps-panel');}),false,'paused demo repositions when filters expand after normal entry');await ctx.close();
+ assert.equal(await p.locator('.gps-raw-dot').evaluate(e=>{const r=e.getBoundingClientRect();return !!document.elementFromPoint(r.x+r.width/2,r.y+r.height/2)?.closest('.route-filters,.map-trails,.gps-panel');}),false,'paused demo repositions when filters expand after normal entry');
+ await p.locator('#filter-toggle').tap();await p.locator('#map-options summary').tap();await p.locator('#show-context').uncheck();await p.waitForTimeout(200);
+ assert.equal(await p.locator('.gps-raw-dot').evaluate(e=>{const r=e.getBoundingClientRect();return !!document.elementFromPoint(r.x+r.width/2,r.y+r.height/2)?.closest('.map-options,.gps-panel,.route-sheet');}),false,'GPS remains visible when the usable layers menu is expanded');await ctx.close();
  console.log('PASS 49 public positions visible without control overlap at390x844,844x390,320x740,667x375,320x568; hollow adjusted ring, reachable GPS button with trail sheet and paused-demo filter expansion');
 }finally{await browser.close();}

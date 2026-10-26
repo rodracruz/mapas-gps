@@ -1,0 +1,64 @@
+/* Visual tokens from the supplied Stitch design; no prototype scripts or data. */
+@font-face{font-family:Inter;src:url('../vendor/fonts/inter-regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url('../vendor/fonts/inter-semibold.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:Sora;src:url('../vendor/fonts/sora-semibold.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:Sora;src:url('../vendor/fonts/sora-bold.ttf') format('truetype');font-weight:700;font-display:swap}
+.bikeride-ui{--ink:#032517;--accent:#d47a43;--line:#d9ded7;--card-height:204px;background:#f9faf5;color:#1a1c19;font-family:Inter,system-ui,sans-serif}
+.bikeride-ui h1,.bikeride-ui h2,.bikeride-ui h3{font-family:Sora,system-ui,sans-serif;color:var(--ink)}
+.bikeride-ui .app-header{height:82px;padding:12px 20px;background:#f9faf5;border-bottom:1px solid #edeee9;gap:12px}
+.bikeride-ui .brand{font-family:Sora,system-ui,sans-serif;font-size:23px;font-weight:700;letter-spacing:-.045em;color:var(--ink);gap:9px;flex-shrink:0}
+.bikeride-ui .brand-icon{font-size:32px;color:var(--accent)}
+.bikeride-ui .brand small{font-family:Inter,system-ui,sans-serif;font-size:7px;letter-spacing:.1em;font-weight:600;margin-top:5px}
+.bikeride-ui .library-link{margin-left:auto;font-size:11px;white-space:nowrap}
+.bikeride-network{border-radius:999px;background:#e7e9e4;padding:7px 10px;font-size:10px;white-space:nowrap;color:#424843;display:flex;align-items:center;gap:6px}
+.bikeride-network::before{content:'';width:7px;height:7px;border-radius:50%;background:#83a590;flex-shrink:0}
+.bikeride-network[data-online=false]::before{background:#d47a43}
+.bikeride-ui #app{max-width:980px;padding:24px 20px 116px}
+.bikeride-ui .intro{padding:20px 0 28px}
+.bikeride-ui .intro h1{font-size:36px;font-weight:700;line-height:1.18;letter-spacing:-.04em}
+.bikeride-ui .park-choice{border-radius:12px;background:#fff;border-color:#e2e3de;box-shadow:0 3px 12px #03251706}
+.bikeride-ui .park-choice h2{font:600 27px/1.25 Sora,system-ui,sans-serif;letter-spacing:-.035em}
+.bikeride-ui .park-art{background-color:#e7e9e4;color:#456553}
+.bikeride-ui .primary-button{border-radius:9px;background:#1b3b2b;font-family:Inter,system-ui,sans-serif;font-weight:600}
+.bikeride-ui .park-heading{padding:22px;background:#e7e9e4;border-radius:12px;margin:12px 0 20px}
+.bikeride-ui .park-heading h1{font-size:29px;line-height:1.2;font-weight:700;letter-spacing:-.035em;margin-bottom:12px}
+.bikeride-ui .park-heading>p:last-child{color:#424843;font-size:13px;line-height:1.6}
+.bikeride-ui .eyebrow{color:#456553;font-weight:600}
+.bikeride-park-switch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;padding:6px;background:#edeee9;border-radius:12px;margin:0 0 12px}
+.bikeride-park-switch button{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-width:0;min-height:72px;padding:12px;border:0;border-radius:8px;text-align:left;background:transparent;color:#424843}
+.bikeride-park-switch button[aria-current=true]{background:#fff;color:#032517;box-shadow:0 2px 6px #03251709}
+.bikeride-park-switch strong{font:600 14px/1.35 Inter,system-ui,sans-serif}
+.bikeride-park-switch button>span{font-size:11px;color:#5c665e}
+.bikeride-ui .park-photo-card{border-radius:12px;background:#fff;border-color:#e2e3de}
+.bikeride-ui .amenities{gap:7px;margin-bottom:25px}
+.bikeride-ui .amenities li{background:#edeee9;color:#424843;border-color:#e2e3de;font-size:10px}
+.bikeride-ui .section-heading h2{font-size:18px;font-weight:600}
+.bikeride-ui .tile-card{border-radius:12px;border-color:#e2e3de;background:#fff}
+.bikeride-ui .trail-card summary{padding:20px}
+.bikeride-ui .trail-card h3{font:600 23px/1.2 Sora,system-ui,sans-serif;letter-spacing:-.025em}
+.bikeride-ui .trail-badge{color:#424843;line-height:1.4}
+.bikeride-ui .trail-details{background:#f9faf5;border-top-color:#e7e9e4}
+.bikeride-ui .trail-details>p,.bikeride-ui .trail-footer{color:#5b665d}
+.bikeride-ui .stats dd{color:#1b3b2b}
+.bikeride-ui .route-filters{border-color:#e2e3de;background:#edeee9;border-radius:12px}
+.bikeride-ui .route-filter-body select{background:#fff;border-radius:7px;border-color:#c1c8c2;color:#1b3b2b}
+.bikeride-ui .route-filters header{background:transparent}
+.bikeride-ui .map-card:not(.fullscreen) .map-cover{display:flex;align-items:flex-end;background:linear-gradient(0deg,#032517f0 0%,#03251765 45%,#03251714 100%);color:#fff}
+.bikeride-ui .map-caption .eyebrow{color:#c7ebd4;font-size:9px;margin-bottom:7px}
+.bikeride-ui .map-caption strong{font:600 23px/1.2 Sora,system-ui,sans-serif;max-width:220px;letter-spacing:-.025em}
+.bikeride-ui .map-open-label{border-radius:8px;background:#f9faf5;color:#032517;padding:10px 13px;margin-top:12px;border:0;font-size:11px;font-weight:600}
+.bikeride-ui .map-toolbar{background:linear-gradient(#f9faf5 80%,#f9faf5ed)}
+.bikeride-ui .map-toolbar strong{font-family:Sora,system-ui,sans-serif;font-weight:600}
+.bikeride-ui .map-options[open]{z-index:1350}
+.bikeride-ui .route-sheet h2{font-size:21px;line-height:1.25}
+.bikeride-ui .park-sources{background:#edeee9;border-radius:10px}
+.bikeride-ui .app-footer{padding-bottom:112px}
+.bikeride-navigation{position:fixed;bottom:0;left:50%;transform:translateX(-50%);z-index:1500;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:min(100%,760px);padding:5px 10px calc(5px + env(safe-area-inset-bottom));background:#f3f4eff5;border:1px solid #e2e3de;border-bottom:0;box-shadow:0 -4px 24px #03251708;backdrop-filter:blur(12px);border-radius:12px 12px 0 0}
+.bikeride-navigation button{min-height:66px;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:0;background:none;color:#424843;font:600 11px/1.2 Inter,system-ui,sans-serif;border-radius:8px}
+.bikeride-navigation button[aria-current=page]{color:#032517;background:#e7e9e4}
+.bikeride-navigation button:disabled{opacity:.55;cursor:default}
+.bikeride-navigation small{font-size:8px;font-weight:400}
+.bikeride-nav-icon svg{width:24px;height:24px;display:block}
+.map-open .bikeride-navigation{display:none}
+@media(min-width:700px){.bikeride-ui .park-list{max-width:none;display:grid;grid-template-columns:1fr 1fr;gap:16px}.bikeride-ui .park-heading h1{font-size:34px}.bikeride-park-switch{max-width:620px}.bikeride-ui .app-header{padding-left:max(24px,calc((100vw - 940px)/2));padding-right:max(24px,calc((100vw - 940px)/2))}}
+@media(max-width:400px){.bikeride-ui .app-header{padding:10px 14px;gap:8px}.bikeride-ui .brand{font-size:20px;gap:6px}.bikeride-ui .brand small{font-size:6px}.bikeride-ui .library-link{font-size:10px}.bikeride-network{font-size:9px;padding:6px 8px}.bikeride-ui #app{padding-left:16px;padding-right:16px}.bikeride-ui .park-heading{padding:18px}.bikeride-ui .park-heading h1{font-size:27px}}

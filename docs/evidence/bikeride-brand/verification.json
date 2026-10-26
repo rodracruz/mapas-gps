@@ -1,0 +1,18 @@
+{
+  "viewport": "390x844",
+  "checks": [
+    "Mobile park picker displays lowercase bikeride and branded title.",
+    "El Durazno retains21 cards,23 visual paths and fullscreen/back flow; titles use bikeride.",
+    "Parquemet retains26 cards and11-avenue filtering; fullscreen and normal titles use bikeride.",
+    "Visual review header, accessible brand and title use bikeride.",
+    "Legacy map library uses bikeride and preserves window.MapasGPS compatibility.",
+    "PWA name and short_name are bikeride; launch URL and scope preserved.",
+    "No JavaScript page errors across the tested pages."
+  ],
+  "limits": [
+    "Branding only; ZIP unavailable in this executor.",
+    "No SUDA visual integration or physical GPS validation.",
+    "Local browser check; no site publication."
+  ],
+  "scope": "Authorized visible-name change to lowercase bikeride only. Stitch ZIP not read in this executor; SUDA layout and proposed services not integrated."
+}

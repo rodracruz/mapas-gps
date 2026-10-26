@@ -1,0 +1,43 @@
+{
+  "viewport": "390x844 and844x390",
+  "checks": [
+    "El Durazno shows real21-card/23-path catalog in the integrated chrome.",
+    "Unavailable services are disabled and network status does not claim offline sync.",
+    "Network indicator updates after restoring a cached page and never claims downloaded maps.",
+    "Routes navigation works and filters preserve the same map node with12 real Park routes.",
+    "Map and route cards keep equal sizes without horizontal overflow.",
+    "Map navigation opens real GPS map; bottom nav hides to preserve the viewport.",
+    "Park switch loads Parquemet26,11 avenues, difficulty unknown and no foreign demo.",
+    "Landscape map retains844×390 viewport without extra bottom navigation.",
+    "No JavaScript errors or unsolicited GPS calls."
+  ],
+  "unitSuite": {
+    "command": "npm test",
+    "passed": 130,
+    "failed": 0,
+    "execution": "Isolated source copy to avoid overwriting the private build."
+  },
+  "sourceZip": {
+    "bytes": 278768,
+    "sha256": "ee1a8c4dbc98642089f14dee7f0ef8cb150bd5d57b6f5b1454f7d59318daae06",
+    "files": 4,
+    "imageDimensions": [
+      544,
+      830
+    ],
+    "originalPublishedToGit": false,
+    "prototypeScriptsExecuted": false
+  },
+  "existingBrowserRegressions": {
+    "geographicFlow": "9 checks passed",
+    "gpsLayout": "49 public fixes across5 portrait/landscape viewports; Layers menu and GPS remain usable",
+    "gpsFollow": "public test coordinates in both parks: acquisition, rotate, recenter, coarse accuracy, stop and failed tiles",
+    "storage": "Blob, calibration, trails, webCenter and active service worker preserved"
+  },
+  "limits": [
+    "One exported screen adapted, not a complete service implementation.",
+    "No physical GPS validation.",
+    "Profile/meetups disabled; offline sync, Beacon, garage, satellite/3D and technical terrain records still pending.",
+    "Repository screenshots use existing public source images, not the private uploaded photo."
+  ]
+}

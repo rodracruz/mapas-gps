@@ -1,0 +1,25 @@
+{
+  "note": "Unmodified Google Fonts TTF assets, self-hosted to avoid runtime third-party font requests.",
+  "files": [
+    {
+      "file": "inter-regular.ttf",
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+      "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+    },
+    {
+      "file": "inter-semibold.ttf",
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+      "sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7"
+    },
+    {
+      "file": "sora-semibold.ttf",
+      "source": "https://fonts.gstatic.com/s/sora/v17/xMQOuFFYT72X5wkB_18qmnndmSeMmX-K.ttf",
+      "sha256": "4e79171a1720d04b72eb68bd7604f85888c31c05bb6b432147d4524e9439af30"
+    },
+    {
+      "file": "sora-bold.ttf",
+      "source": "https://fonts.gstatic.com/s/sora/v17/xMQOuFFYT72X5wkB_18qmnndmSe1mX-K.ttf",
+      "sha256": "a50f5d254fc0fb83125fceffb72a95d036b8ce964a77fb8cc42ecb9ce16b0427"
+    }
+  ]
+}
