@@ -39,4 +39,10 @@ El diagnóstico de funciones futuras quedó pausado por esta prioridad; sus prop
 
 Se corrigió el recorte de atribución sin rediseñar: ajuste de línea a9px y reserva de la altura real del control Leaflet más8px. Fuente y autónomos pasan seis casos cada uno en ambos parques320/390/544, con ampliación y cambios de fuente; 131 unitarias y regresiones afectadas de diseño/interfaz/GPS verdes. Revisión independiente de12 capturas sin nuevos problemas. Publicación21 comprobada por HTTP200/hash y audiencia idéntica. [Capturas y prueba](../../evidence/bikeride-attribution/README.md).
 
-Rodrigo anunció que adjuntará otras pestañas de Stitch para revisión. Aún no se han recibido esas referencias y no se han diseñado ni implementado por inferencia. Se terminó esta corrección; el diagnóstico de funciones futuras permanece pausado.
+Rodrigo anunció otras pestañas de Stitch para revisión. El segundo ZIP ya se recibió y revisó; el resultado se registra en la sección siguiente. Se terminó esta corrección y el diagnóstico de funciones futuras permanece pausado.
+
+## Nuevas pestañas recibidas y revisadas
+
+Ya llegó el segundo ZIP, 3916289 bytes, SHA256 `84a113e38416289740c8871fea025451c1e761b9edfeaefeb3d5f8b1aa6d14bc`: diez pantallas HTML/PNG y dos documentos. Se revisaron los píxeles y scripts de las diez. Seis corresponden a la navegación ciclista y cuatro a la familia outdoor general. El HTML de Parques y senderos v2 y ambos documentos coinciden con la exportación anterior; las otras nueve pantallas son nuevas para esta tarea.
+
+[Revisión y correspondencia con bikeride](REVISION-PESTANAS-2026-10-26.md) · [Inventario y hashes](PESTANAS-RECIBIDAS.json). Los originales quedan privados. Es revisión estática/visual, sin ejecutar prototipos, integrar funciones ni desplegar otra versión; el producto sigue en versión 21. El diagnóstico previo ya puede contrastarse con estas pantallas concretas, pero su ejecución sigue pausada.

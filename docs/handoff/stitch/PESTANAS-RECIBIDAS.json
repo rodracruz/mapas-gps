@@ -1,0 +1,260 @@
+{
+  "reviewedAt": "2026-10-26",
+  "archive": {
+    "name": "stitch_outdoor_activity_finder (1).zip",
+    "bytes": 3916289,
+    "sha256": "84a113e38416289740c8871fea025451c1e761b9edfeaefeb3d5f8b1aa6d14bc",
+    "crcValid": true,
+    "regularFiles": 22,
+    "originalsPublishedToGit": false
+  },
+  "scope": "Visual and static-code review only. No prototype scripts executed; no new app functions or deployment.",
+  "sourceCodeBase": "75c9707a1914f3ac2fbfc5e53007a35e28970270",
+  "currentSiteVersion": 21,
+  "items": [
+    {
+      "id": "detalle_t_cnico_de_sendero",
+      "family": "cycling",
+      "imagePath": "detalle_t_cnico_de_sendero/screen.png",
+      "htmlPath": "detalle_t_cnico_de_sendero/code.html",
+      "pixels": [
+        345,
+        1600
+      ],
+      "htmlBytes": 27094,
+      "imageSha256": "3d9f29df2b04ffcd5ac2bd69d962cd9f43b9f89cfdd6b3a239ef3941d95f137b",
+      "htmlSha256": "ffd1e9f1a55d9d42a250b1444a3ac1c9e45e6a6eed56c199cab479300b040d20",
+      "pixelsReviewed": true,
+      "inlineLogicRead": true,
+      "inlineLogicExecuted": false,
+      "sameHtmlAsPreviousExport": false,
+      "inlineCapabilities": {
+        "geolocation": false,
+        "dataFetch": false,
+        "persistentStorage": false,
+        "nativeShareCallPresent": true,
+        "allNavigationLinksAreHashPlaceholders": true
+      }
+    },
+    {
+      "id": "expeditions",
+      "family": "outdoor-general",
+      "imagePath": "expeditions/screen.png",
+      "htmlPath": "expeditions/code.html",
+      "pixels": [
+        300,
+        1600
+      ],
+      "htmlBytes": 23184,
+      "imageSha256": "78b77f9373eb603f16c8f4302c81de53f8de49250d3728059e3c53628be6ac27",
+      "htmlSha256": "3305188f94a9dfdab1ef5bef24b495c5de3f872b3e41c623bb10c76a8d8e5da2",
+      "pixelsReviewed": true,
+      "inlineLogicRead": true,
+      "inlineLogicExecuted": false,
+      "sameHtmlAsPreviousExport": false,
+      "inlineCapabilities": {
+        "geolocation": false,
+        "dataFetch": false,
+        "persistentStorage": false,
+        "nativeShareCallPresent": false,
+        "allNavigationLinksAreHashPlaceholders": true
+      }
+    },
+    {
+      "id": "explorador_de_rutas",
+      "family": "cycling",
+      "imagePath": "explorador_de_rutas/screen.png",
+      "htmlPath": "explorador_de_rutas/code.html",
+      "pixels": [
+        404,
+        1600
+      ],
+      "htmlBytes": 28940,
+      "imageSha256": "29c7912691740d4411a7f46124aebeeb207e58973f0746ac6ed09c2d78e90815",
+      "htmlSha256": "7e6b645d210da930e998c975a7a91ab41829ba3789570c250b5a14c933011bb7",
+      "pixelsReviewed": true,
+      "inlineLogicRead": true,
+      "inlineLogicExecuted": false,
+      "sameHtmlAsPreviousExport": false,
+      "inlineCapabilities": {
+        "geolocation": false,
+        "dataFetch": false,
+        "persistentStorage": false,
+        "nativeShareCallPresent": false,
+        "allNavigationLinksAreHashPlaceholders": true
+      }
+    },
+    {
+      "id": "explore",
+      "family": "outdoor-general",
+      "imagePath": "explore/screen.png",
+      "htmlPath": "explore/code.html",
+      "pixels": [
+        687,
+        1600
+      ],
+      "htmlBytes": 14337,
+      "imageSha256": "b8ec2d680b210c61ab77d9680f306c8ecb66ae5ba9f5c14c2b2fe90f415ab654",
+      "htmlSha256": "ac48563477bac5fb89c174060865bc51acdc367f224ecc4be8619728516e5e85",
+      "pixelsReviewed": true,
+      "inlineLogicRead": true,
+      "inlineLogicExecuted": false,
+      "sameHtmlAsPreviousExport": false,
+      "inlineCapabilities": {
+        "geolocation": false,
+        "dataFetch": false,
+        "persistentStorage": false,
+        "nativeShareCallPresent": false,
+        "allNavigationLinksAreHashPlaceholders": true
+      }
+    },
+    {
+      "id": "mapa_gps_en_ruta",
+      "family": "cycling",
+      "imagePath": "mapa_gps_en_ruta/screen.png",
+      "htmlPath": "mapa_gps_en_ruta/code.html",
+      "pixels": [
+        555,
+        1600
+      ],
+      "htmlBytes": 27349,
+      "imageSha256": "ab7d8f45fd8c25dfbde5012b56efb8a9a24ebb16200df5a42b49c272dd7dfc9b",
+      "htmlSha256": "04dd0d9bce65cf1cc76ffe9b18f01ba0644865d715ca20f7a4eaf5fc61623503",
+      "pixelsReviewed": true,
+      "inlineLogicRead": true,
+      "inlineLogicExecuted": false,
+      "sameHtmlAsPreviousExport": false,
+      "inlineCapabilities": {
+        "geolocation": false,
+        "dataFetch": false,
+        "persistentStorage": false,
+        "nativeShareCallPresent": false,
+        "allNavigationLinksAreHashPlaceholders": true
+      }
+    },
+    {
+      "id": "mapas_gps_parques_senderos_v2",
+      "family": "cycling",
+      "imagePath": "mapas_gps_parques_senderos_v2/screen.png",
+      "htmlPath": "mapas_gps_parques_senderos_v2/code.html",
+      "pixels": [
+        322,
+        1600
+      ],
+      "htmlBytes": 47599,
+      "imageSha256": "1fae3e36eeec7ca41425af6a5439198fd5c0e10872f255a45acc8723e00293e6",
+      "htmlSha256": "afeafc9b538f0dec004409238084d1d34d7817ba5c1508fe3f14dc2e5c215ed1",
+      "pixelsReviewed": true,
+      "inlineLogicRead": true,
+      "inlineLogicExecuted": false,
+      "sameHtmlAsPreviousExport": true,
+      "inlineCapabilities": {
+        "geolocation": false,
+        "dataFetch": false,
+        "persistentStorage": false,
+        "nativeShareCallPresent": false,
+        "allNavigationLinksAreHashPlaceholders": true
+      }
+    },
+    {
+      "id": "perfil_y_mi_actividad",
+      "family": "cycling",
+      "imagePath": "perfil_y_mi_actividad/screen.png",
+      "htmlPath": "perfil_y_mi_actividad/code.html",
+      "pixels": [
+        335,
+        1600
+      ],
+      "htmlBytes": 28782,
+      "imageSha256": "43e7459d4f14eec5be3645398f7b87bfe940182de1f2845955aa904cd3cfd937",
+      "htmlSha256": "882766f82e6100b63a48a0852aa82daf70860bd0bb1a2291738e5cb9261b6dcb",
+      "pixelsReviewed": true,
+      "inlineLogicRead": true,
+      "inlineLogicExecuted": false,
+      "sameHtmlAsPreviousExport": false,
+      "inlineCapabilities": {
+        "geolocation": false,
+        "dataFetch": false,
+        "persistentStorage": false,
+        "nativeShareCallPresent": false,
+        "allNavigationLinksAreHashPlaceholders": true
+      }
+    },
+    {
+      "id": "profile",
+      "family": "outdoor-general",
+      "imagePath": "profile/screen.png",
+      "htmlPath": "profile/code.html",
+      "pixels": [
+        603,
+        1600
+      ],
+      "htmlBytes": 19996,
+      "imageSha256": "c3d0bd37632815af0f055b101325014332be3f3d023b339da21867c0f7742654",
+      "htmlSha256": "36e5db0fdb7396af2a89df3f882597d1d09d3c32ebf6bb981eeff3f20850005d",
+      "pixelsReviewed": true,
+      "inlineLogicRead": true,
+      "inlineLogicExecuted": false,
+      "sameHtmlAsPreviousExport": false,
+      "inlineCapabilities": {
+        "geolocation": false,
+        "dataFetch": false,
+        "persistentStorage": false,
+        "nativeShareCallPresent": false,
+        "allNavigationLinksAreHashPlaceholders": true
+      }
+    },
+    {
+      "id": "puntos_de_encuentro",
+      "family": "cycling",
+      "imagePath": "puntos_de_encuentro/screen.png",
+      "htmlPath": "puntos_de_encuentro/code.html",
+      "pixels": [
+        392,
+        1600
+      ],
+      "htmlBytes": 33098,
+      "imageSha256": "dfdf96b3fecccea594e4b66b66e2f99f106b5bf5a72bd2d8eba4e9078182bf20",
+      "htmlSha256": "c611cfb9f8532f8a402a2dc543a3b11e2d17d3b54df43d9e9d7fc53c9fa49c1d",
+      "pixelsReviewed": true,
+      "inlineLogicRead": true,
+      "inlineLogicExecuted": false,
+      "sameHtmlAsPreviousExport": false,
+      "inlineCapabilities": {
+        "geolocation": false,
+        "dataFetch": false,
+        "persistentStorage": false,
+        "nativeShareCallPresent": false,
+        "allNavigationLinksAreHashPlaceholders": true
+      }
+    },
+    {
+      "id": "rentals",
+      "family": "outdoor-general",
+      "imagePath": "rentals/screen.png",
+      "htmlPath": "rentals/code.html",
+      "pixels": [
+        256,
+        1600
+      ],
+      "htmlBytes": 18546,
+      "imageSha256": "608d73fae17f8cad971fdea8b6c1940df2446afc919717cb622af6aecb33dcec",
+      "htmlSha256": "de3100a83f56a7fefb3cf11c7e36469134230c139b1adda3a6594eb0052d2192",
+      "pixelsReviewed": true,
+      "inlineLogicRead": true,
+      "inlineLogicExecuted": false,
+      "sameHtmlAsPreviousExport": false,
+      "inlineCapabilities": {
+        "geolocation": false,
+        "dataFetch": false,
+        "persistentStorage": false,
+        "nativeShareCallPresent": false,
+        "allNavigationLinksAreHashPlaceholders": true
+      }
+    }
+  ],
+  "unchangedDocuments": [
+    "documento_integraci_n_suda_v2.md",
+    "rugged_modern_outdoor_adventure/DESIGN.md"
+  ]
+}
