@@ -14,7 +14,7 @@ Encuentros y Perfil están deshabilitados y marcados «Próximamente». Offline 
 
 ## Evidencia
 
-[verification.json](verification.json) registra la suite130/130, nueve comprobaciones nuevas, flujo móvil existente, GPS simulado en cinco tamaños/rotación, seguimiento en ambos parques y conservación de almacenamiento. Hubo dos correcciones verificadas con fallo previo: restablecimiento del indicador de red tras volver a una página en caché y alcance del menú Capas sobre paneles GPS/ficha. No se realizó validación GPS en terreno.
+[verification.json](verification.json) registra la suite130/130, nueve comprobaciones nuevas, flujo móvil existente, GPS simulado en cinco tamaños/rotación, seguimiento en ambos parques y conservación de almacenamiento. Hubo dos correcciones verificadas con fallo previo: actualización del indicador de red tras eventos simulados de restauración de página y alcance del menú Capas sobre paneles GPS/ficha. No se realizó validación GPS en terreno.
 
 Capturas de la construcción de referencia con fuentes públicas:
 
@@ -22,3 +22,5 @@ Capturas de la construcción de referencia con fuentes públicas:
 - [Parquemet, inicio](parquemet-mobile.png) y [rutas](parquemet-routes.png).
 
 La foto privada del usuario se conserva en la construcción privada y no se incorpora a estas capturas públicas ni al repositorio. Los originales del ZIP tampoco se publican aquí. La rama de producto es `feat/bikeride-stitch-integration`; main permanece sin cambios. La publicación privada y su URL se registrarán tras comprobar el despliegue, sin ampliar audiencia.
+
+La revisión independiente no detectó problemas críticos de ejecución. Detectó la ausencia de los textos OFL en la construcción autónoma; se añadió su inclusión íntegra y una comprobación que falló antes de corregir el empaquetado. No se ha comprobado una restauración bfcache real en un dispositivo físico.

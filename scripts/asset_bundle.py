@@ -5,6 +5,12 @@ import re
 
 def inline_css(root, relative_path):
     css = (root / relative_path).read_text()
+    if relative_path == 'geographic/bikeride.css':
+        notices = '\n\n'.join((root / 'vendor' / 'fonts' / name).read_text().strip()
+                              for name in ['LICENSE-Inter.txt', 'LICENSE-Sora.txt'])
+        if '*/' in notices:
+            raise ValueError('Font notice cannot be preserved inside a CSS comment')
+        css = '/* Font copyright and license notices accompanying embedded fonts:\n' + notices + '\n*/\n' + css
 
     def font(match):
         path = root / 'vendor' / 'fonts' / match.group(1)
