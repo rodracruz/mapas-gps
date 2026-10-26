@@ -6,7 +6,7 @@ from asset_bundle import inline_css
 root=Path(__file__).resolve().parent.parent
 output=root/'dist';output.mkdir(exist_ok=True)
 html=(root/'parquemet.html').read_text()
-for path in ['vendor/leaflet/leaflet.css','geographic/style.css','geographic/trail-preview.css','geographic/route-filter-ui.css','geographic/bikeride.css']:
+for path in ['vendor/leaflet/leaflet.css','geographic/style.css','geographic/trail-preview.css','geographic/route-filter-ui.css','geographic/bikeride.css', 'rider/views.css']:
  html=html.replace(f'<link rel="stylesheet" href="./{path}">','<style>'+inline_css(root,path)+'</style>')
 html=html.replace('<script src="./vendor/leaflet/leaflet.js" defer></script>','<script>'+(root/'vendor/leaflet/leaflet.js').read_text()+'</script>')
 catalog=json.loads((root/'data/parquemet/geographic-catalog.json').read_text());document=json.loads((root/'data/parquemet/official-document.json').read_text());directory=json.loads((root/'data/parks.json').read_text())
@@ -43,7 +43,12 @@ for path,namespace,exports,bindings in [
  ('geographic/route-filters.mjs','RouteFilterData','routeType,routeFilterModels,filterRoutes,validFilterLocation,distanceToRoute','const {lineLength}=ParkGeo;'),
  ('geographic/route-filter-ui.mjs','RouteFilterUI','setupRouteFilters,filterMapPadding','const {routeFilterModels,filterRoutes,validFilterLocation}=RouteFilterData;'),
  ('geographic/bikeride.mjs','BikerideChrome','setupBikerideChrome',''),
- ('geographic/park-viewer.mjs','ParkApp','', 'const {setupBikerideChrome}=BikerideChrome;const {setupRouteFilters,filterMapPadding}=RouteFilterUI;const {attachTrailPreviews}=ParkPreviews;const {setupDocumentCycling}=ParkCycling;const {bikeAccessRestricted,bikeMatchingNetwork,bikePermissionConfirmed}=ParkNetwork;const {loadParkDirectory,parkById}=ParkDirectory;const {validateCatalog,describeTrail}=ParkCatalog;const {fromOsmSnapshot}=ParkGeo;const {sha256}=ParkHash;const {setupOfficialDocument}=ParkDocument;const {setupGpsTracking}=ParkGPS;')]:
+    ('rider/store.mjs','RiderStore','openRiderStore,defaultRiderState,validateRiderState',''),
+    ('rider/recording.mjs','RiderRecorder','createRideRecorder','const {defaultRiderState,validateRiderState}=RiderStore;'),
+    ('rider/exports.mjs','RiderExports','buildGpx,meetupCalendar','const {defaultRiderState,validateRiderState}=RiderStore;'),
+    ('rider/session.mjs','RiderSession','createRiderSession','const {createRideRecorder}=RiderRecorder;'),
+    ('rider/views.mjs','RiderViews','setupCyclingViews,currentOfficialPreview','const {openRiderStore,defaultRiderState}=RiderStore;const {buildGpx,meetupCalendar}=RiderExports;const {createRiderSession}=RiderSession;const {routeFilterModels,filterRoutes,validFilterLocation}=RouteFilterData;'),
+ ('geographic/park-viewer.mjs','ParkApp','', 'const {setupCyclingViews,currentOfficialPreview}=RiderViews;const {setupBikerideChrome}=BikerideChrome;const {setupRouteFilters,filterMapPadding}=RouteFilterUI;const {attachTrailPreviews}=ParkPreviews;const {setupDocumentCycling}=ParkCycling;const {bikeAccessRestricted,bikeMatchingNetwork,bikePermissionConfirmed}=ParkNetwork;const {loadParkDirectory,parkById}=ParkDirectory;const {validateCatalog,describeTrail}=ParkCatalog;const {fromOsmSnapshot}=ParkGeo;const {sha256}=ParkHash;const {setupOfficialDocument}=ParkDocument;const {setupGpsTracking}=ParkGPS;')]:
  code=re.sub(r'^import .*?;\n','',(root/path).read_text(),flags=re.M);code=re.sub(r'\bexport (function|const|let|class) ',r'\1 ',code);code=code.replace('export async function ','async function ')
  modules.append(f'const {namespace}=(()=>{{\n{bindings}\n{code}\nreturn {{{exports}}};\n}})();')
 html=html.replace('<script type="module" src="./geographic/park-viewer.mjs"></script>',payload+'<script type="module">\n'+'\n'.join(modules)+'\n</script>')

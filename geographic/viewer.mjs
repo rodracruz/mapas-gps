@@ -1,3 +1,4 @@
+import {setupCyclingViews,currentOfficialPreview} from '../rider/views.mjs';
 import {setupRouteFilters,filterMapPadding} from './route-filter-ui.mjs';
 import {setupBikerideChrome} from './bikeride.mjs';
 import {validateContinuous,createCartelLayer} from './cartel.mjs';
@@ -12,7 +13,7 @@ const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let directory,catalog,map,geo,contextLayer,selectionLayer,selectedFeature=null,selectedTarget=null,loadPromise,full=false;
 const targetLayers=new Map(),hiddenTargets=new Set(),hiddenCartelTargets=new Set();
-let routeFilters,gpsTracking,signReview,cartelData,cartelLayer,registration,bikerideChrome,mapSource=new URLSearchParams(location.hash.slice(1)).get('fuente')==='osm'?'osm':'cartel';
+let routeFilters,gpsTracking,signReview,cartelData,cartelLayer,registration,bikerideChrome,cyclingViews,mapSource=new URLSearchParams(location.hash.slice(1)).get('fuente')==='osm'?'osm':'cartel';
 function applyRouteFilters(){
  for(const [id,group]of targetLayers)if(mapSource==='osm'&&!hiddenTargets.has(id)&&routeFilters.includes(id))group.addTo(map);else map.removeLayer(group);
  if(cartelLayer)for(const t of cartelData.trails)cartelLayer.setVisible(t.id,!hiddenCartelTargets.has(t.id)&&routeFilters.includes(t.id));
@@ -21,8 +22,8 @@ function applyRouteFilters(){
 }
 const filterTargets=()=>[...catalog.targets,...(cartelData?.trails||[]).filter(t=>!catalog.targets.some(c=>c.id===t.id))];
 const metricMarkup=stats=>[['Longitud',stats.distance],['Dificultad',stats.difficulty],['Vel. máxima',stats.maxSpeed],['Ascenso',stats.elevationGain],['Descenso',stats.elevationLoss]].map(([name,value])=>`<div><dt>${esc(name)}</dt><dd>${esc(value)}</dd></div>`).join('');
-function routeState(){const p=new URLSearchParams(location.hash.slice(1));return {park:p.get('parque'),map:p.get('mapa')==='1'};}
-function navigate(park,showMap=false,replace=false){const hash=park?'#'+new URLSearchParams({parque:park,...(showMap?{mapa:'1'}:{})}):'';history[replace?'replaceState':'pushState']({mapasGPS:true,mapasMap:showMap},'',location.pathname+location.search+hash);renderRoute();}
+function routeState(){const p=new URLSearchParams(location.hash.slice(1));return {park:p.get('parque'),map:p.get('vista')==='mapa'||(!p.get('vista')&&p.get('mapa')==='1')};}
+function navigate(park,showMap=false,replace=false){if(cyclingViews&&park===catalog.park.id)return cyclingViews.navigate(showMap?'mapa':'parque',null,replace);const hash=park?'#'+new URLSearchParams({parque:park,...(showMap?{mapa:'1'}:{})}):'';history[replace?'replaceState':'pushState']({mapasGPS:true,mapasMap:showMap},'',location.pathname+location.search+hash);renderRoute();}
 function featuresFor(id){return geo?.features.filter(f=>f.properties.targetId===id)||[];}
 function renderCatalog(){
  const p=catalog.park;
@@ -51,10 +52,11 @@ function renderCatalog(){
  $('download-geojson').onclick=()=>{if(!geo)return;const url=URL.createObjectURL(new Blob([JSON.stringify(geo,null,2)],{type:'application/geo+json'}));const a=document.createElement('a');a.href=url;a.download='el-durazno-trazados-osm.geojson';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
  updateCards();routeFilters=setupRouteFilters({getTargets:filterTargets,getGeo:()=>geo,onChange:applyRouteFilters});routeFilters.refresh();
  bikerideChrome=setupBikerideChrome({directory,park:p,catalog,onSwitchPark:next=>location.assign(next.entry)});
+ cyclingViews=setupCyclingViews({directory,catalog,getGeo:()=>geo,getPreview:currentOfficialPreview,actions:{routeChanged:renderRoute,openOfficial:id=>signReview.open(catalog.targets.find(t=>t.id===id)?.visualTrailId||null),selectTrail:id=>{if(geo)selectTarget(id);}}});
 }
 function updateCards(){
  for(const t of catalog.targets){const stats=describeTrail(t,geo?.features||[]);document.querySelector(`[data-stats="${t.id}"]`).innerHTML=metricMarkup({...stats,distance:featuresFor(t.id).length?stats.distance+' · OSM':stats.distance});document.querySelector(`[data-distance="${t.id}"]`).textContent=featuresFor(t.id).length?stats.distance+' en OSM · Ver información':'Trazado pendiente · Ver información';}
- bikerideChrome?.refresh();
+ bikerideChrome?.refresh();cyclingViews?.refreshData();
  const count=catalog.targets.filter(t=>featuresFor(t.id).length).length;
  routeFilters?.refresh();$('available-count').textContent='20 senderos del cartel';
  $('data-status').textContent=geo?'Las curvas del cartel se muestran sobre el mapa con ubicación aproximada. Puedes compararlas con '+count+' senderos de OSM.':'Los senderos se cargarán al abrir el parque.';
@@ -135,18 +137,18 @@ async function ensureMap(){
    for(const t of catalog.targets){const group=L.layerGroup();for(const f of featuresFor(t.id)){const points=f.geometry.coordinates.map(([lon,lat])=>[lat,lon]);L.polyline(points,{color:'#fffefa',weight:8,opacity:.95,interactive:false,smoothFactor:0}).addTo(group);L.polyline(points,{color:t.color,weight:4.5,opacity:1,interactive:false,smoothFactor:0,className:'trail-line'}).addTo(group);L.polyline(points,{color:t.color,weight:22,opacity:0,smoothFactor:0,className:'route-hit'}).on('click',()=>selectFeature(f)).addTo(group);}targetLayers.set(t.id,group);group.addTo(map);}
    $('osm-way').innerHTML=geo.features.map(f=>`<option value="${f.id}">${esc(f.properties.name||'Sendero sin nombre')} · ${f.properties.osmId}</option>`).join('');$('osm-way').disabled=false;$('download-geojson').disabled=false;
    updateCards();const requestedTarget=selectedTarget;try{await loadCartel();}catch(error){setMapSource('osm');$('map-notice').textContent=error.message+' Se muestran sólo datos OSM.';$('map-notice').dataset.kind='source';$('map-notice').hidden=false;}fitAvailableRoutes();if(requestedTarget)selectTarget(requestedTarget);
-   gpsTracking=setupGpsTracking({map,geo,setSource:setMapSource,getSource:()=>mapSource,routeName:route=>catalog.targets.find(t=>t.id===route.targetId)?.name||route.name});gpsTracking.setMapOpen(full);
+   gpsTracking=setupGpsTracking({map,geo,setSource:setMapSource,getSource:()=>mapSource,routeName:route=>catalog.targets.find(t=>t.id===route.targetId)?.name||route.name});gpsTracking.setMapOpen(full);cyclingViews?.connectGps(gpsTracking);cyclingViews?.refreshData();
   }catch(error){$('data-status').textContent=error.message;$('map-notice').textContent=error.message;$('map-notice').dataset.kind='source';$('map-notice').hidden=false;$('download-geojson').disabled=true;}
   finally{$('map-card').dataset.ready='true';}
  })();return loadPromise;
 }
 async function renderRoute(){
- if(!catalog)return;const route=routeState();const destination=directory.parks.find(p=>p.id===route.park&&p.id!==catalog.park.id);if(destination){gpsTracking?.stop();location.replace(destination.entry+(route.map?'&mapa=1':''));return;}const show=route.park===catalog.park.id;
+ if(!catalog)return;const route=routeState();const destination=directory.parks.find(p=>p.id===route.park&&p.id!==catalog.park.id);if(destination){gpsTracking?.stop();const url=new URL(destination.entry,location.href);url.hash=location.hash;location.replace(url.href);return;}const show=route.park===catalog.park.id;
  $('park-picker').hidden=show;$('park-view').hidden=!show;bikerideChrome?.setParkOpen(show);full=show&&route.map;routeFilters?.setFullscreen(full);$('map-card').classList.toggle('fullscreen',full);document.body.classList.toggle('map-open',full);
- gpsTracking?.setMapOpen(full);
+ cyclingViews?.syncRoute();gpsTracking?.setMapOpen(full);
  if(!show){document.title='bikeride · Elige un parque';return;}
  document.title=(full?'Mapa · ':'')+catalog.park.shortName+' · bikeride';await ensureMap();if(map){map.invalidateSize({animate:false});if(full&&!selectedTarget)fitAvailableRoutes();}
- if(full)$('close-map').focus({preventScroll:true});
+ if(full)$('close-map').focus({preventScroll:true});cyclingViews?.syncRoute();const id=new URLSearchParams(location.hash.slice(1)).get('sendero');if(full&&id&&selectedTarget!==id)selectTarget(id);
 }
 async function init(){try{directory=await loadParkDirectory();const embedded=$('embedded-geographic-catalog');if(embedded)catalog=JSON.parse(embedded.textContent);else{const response=await fetch('./data/el-durazno/geographic-catalog.json');if(!response.ok)throw new Error('No se pudo cargar la información del parque.');catalog=await response.json();}validateCatalog(catalog);signReview=setupSignReview();renderCatalog();await renderRoute();}catch(error){$('app-error').textContent=error.message;$('app-error').hidden=false;$('park-list').replaceChildren();}}
 window.addEventListener('popstate',renderRoute);window.addEventListener('hashchange',renderRoute);window.addEventListener('resize',()=>map?.invalidateSize({animate:false}));window.addEventListener('keydown',event=>{if(event.key==='Escape'&&full)$('close-map').click();});init();

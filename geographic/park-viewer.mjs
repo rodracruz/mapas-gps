@@ -1,3 +1,4 @@
+import {setupCyclingViews,currentOfficialPreview} from '../rider/views.mjs';
 import {setupRouteFilters,filterMapPadding} from './route-filter-ui.mjs';
 import {setupBikerideChrome} from './bikeride.mjs';
 import {loadParkDirectory,parkById} from './parks.mjs';
@@ -13,7 +14,7 @@ const byId=id=>document.getElementById(id);
 const htmlSafe=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const metres=value=>Number.isFinite(value)?Math.round(value).toLocaleString('es-CL')+' m':'Sin datos';
 let directory,catalog,geo,map,selection,contextLayer,gpsTracking,official,documentCycling,openOfficial=()=>{},full=false,selectedTarget=null,selectedFeature=null;
-const routeLayers=new Map(),hiddenRoutes=new Set(),cyclingLabels=[];let routeFilters,bikerideChrome;
+const routeLayers=new Map(),hiddenRoutes=new Set(),cyclingLabels=[];let routeFilters,bikerideChrome,cyclingViews;
 const categoryMatches=id=>!routeFilters||routeFilters.includes(id);
 const routeVisible=id=>categoryMatches(id)&&!hiddenRoutes.has(id);
 function applyRouteFilters(){
@@ -75,8 +76,9 @@ function selectTarget(id){
 }
 function selectFeature(f){byId('compare-official').hidden=true;if(f.properties.targetId)return selectTarget(f.properties.targetId);routeFilters?.clearConstraints();selectedTarget=null;selectedFeature=f;for(const b of byId('map-trails').querySelectorAll('button'))b.setAttribute('aria-pressed','false');paint([f]);byId('sheet-title').textContent=f.properties.name||'Camino OSM sin nombre';byId('sheet-level').textContent='CONTEXTO OSM · IDENTIDAD POR CONTRASTAR';byId('sheet-description').textContent='Nombre literal de OSM. No se atribuye este tramo a un sendero diferente del PDF ni se acredita acceso actual.';byId('sheet-stats').innerHTML=statsMarkup(describeTrail({id:'context',elevationGainM:null,elevationLossM:null},[{...f,properties:{...f.properties,targetId:'context'}}]));byId('sheet-access').innerHTML=accessNote([f]);byId('sheet-source').href=f.properties.sourceUrl;byId('sheet-source').textContent='Vía original OSM ↗';byId('fit-selected').hidden=false;byId('route-sheet').hidden=false;layoutCyclingLabels();}
 function setVisible(id,visible){const group=routeLayers.get(id);if(!group)return;if(visible){hiddenRoutes.delete(id);if(categoryMatches(id))group.addTo(map);}else{hiddenRoutes.add(id);map.removeLayer(group);if(selectedTarget===id)selection.clearLayers();}const input=document.querySelector(`[data-visible-target="${id}"]`);if(input)input.checked=visible;applyRouteFilters();}
-function setMapOpen(open,replace=false){
- full=open;routeFilters?.setFullscreen(full);byId('map-card').classList.toggle('fullscreen',full);document.body.classList.toggle('map-open',full);gpsTracking?.setMapOpen(full);const params=new URLSearchParams({parque:catalog.park.id,...(full?{mapa:'1'}:{})});history[replace?'replaceState':'pushState']({park:catalog.park.id,map:full},'',location.pathname+location.search+'#'+params);document.title=(full?'Mapa · ':'')+catalog.park.shortName+' · bikeride';map?.invalidateSize({animate:false});if(full){if(!selectedTarget)fitAll();layoutCyclingLabels();byId('close-map').focus({preventScroll:true});}
+function setMapOpen(open,replace=false,sync=false){
+ if(cyclingViews&&!sync)return cyclingViews.navigate(open?'mapa':'parque',null,replace);
+ full=open;routeFilters?.setFullscreen(full);byId('map-card').classList.toggle('fullscreen',full);document.body.classList.toggle('map-open',full);gpsTracking?.setMapOpen(full);if(!sync){const params=new URLSearchParams(location.hash.slice(1));params.set('parque',catalog.park.id);if(full)params.set('mapa','1');else params.delete('mapa');history[replace?'replaceState':'pushState']({park:catalog.park.id,map:full},'',location.pathname+location.search+'#'+params);}document.title=(full?'Mapa · ':'')+catalog.park.shortName+' · bikeride';map?.invalidateSize({animate:false});if(full){if(!selectedTarget)fitAll();layoutCyclingLabels();byId('close-map').focus({preventScroll:true});}
 }
 async function loadDocument(meta,entry){
  if(!meta.image||!meta.pdf||!Number.isFinite(meta.image.width)||!Number.isFinite(meta.image.height)||(!/^sources\/[a-z0-9-]+\.jpg$/.test(meta.image.path)||!meta.image.path.startsWith('sources/'+catalog.park.id+'-'))||!/^[0-9a-f]{64}$/.test(meta.image.sha256))throw new Error('Los datos del documento oficial no son válidos.');
@@ -105,24 +107,25 @@ async function loadGeography(){
  byId('download-geojson').disabled=false;byId('download-geojson').onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(geo,null,2)],{type:'application/geo+json'})),a=document.createElement('a');a.href=url;a.download=catalog.park.id+'-osm.geojson';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
  const matchingGeo=bikeMatchingNetwork(geo);
  if(matchingGeo.features.length){byId('gps-toggle').disabled=false;gpsTracking=setupGpsTracking({map,geo:matchingGeo,setSource:()=>{},getSource:()=> 'osm',routeName:route=>catalog.targets.find(t=>t.id===route.targetId)?.name||route.name,demoFactory:null});}else{byId('gps-toggle').disabled=true;byId('gps-demo').hidden=true;byId('gps-detail').textContent='No hay una red de tramos compatible disponible para ajustar GPS.';}
- updateCards();fitAll();gpsTracking?.setMapOpen(full);
+ updateCards();fitAll();gpsTracking?.setMapOpen(full);if(gpsTracking)cyclingViews?.connectGps(gpsTracking);
 }
 async function initPark(){
  try{
-  directory=await loadParkDirectory();const id=new URLSearchParams(location.hash.slice(1)).get('parque')||'parquemet',entry=parkById(directory,id);if(entry&&!entry.catalog){location.replace(entry.entry+(new URLSearchParams(location.hash.slice(1)).get('mapa')==='1'?'&mapa=1':''));return;}if(!entry?.catalog||!entry.document)throw new Error('Este parque no tiene una entrada de mapa disponible.');
+  directory=await loadParkDirectory();const id=new URLSearchParams(location.hash.slice(1)).get('parque')||'parquemet',entry=parkById(directory,id);if(entry&&!entry.catalog){const url=new URL(entry.entry,location.href);url.hash=location.hash;location.replace(url.href);return;}if(!entry?.catalog||!entry.document)throw new Error('Este parque no tiene una entrada de mapa disponible.');
   byId('park-name').textContent=entry.name;catalog=validateCatalog(await jsonResource('embedded-park-catalog',entry.catalog));if(catalog.park.id!==entry.id)throw new Error('El catálogo no corresponde al parque elegido.');renderCards();
   bikerideChrome=setupBikerideChrome({directory,park:catalog.park,catalog,onSwitchPark:next=>location.assign(next.entry)});
+  cyclingViews=setupCyclingViews({directory,catalog,getGeo:()=>geo,getPreview:currentOfficialPreview,actions:{routeChanged:syncParkRoute,openOfficial:id=>openOfficial(id),selectTrail:selectTarget}});
   if(!window.L)throw new Error('No se pudo cargar el mapa. Reintenta con conexión.');const [west,south,east,north]=catalog.geographicExtent;map=L.map('geo-map',{zoomControl:false,zoomSnap:.25,minZoom:2,maxZoom:19}).setView([(south+north)/2,(west+east)/2],14);L.control.zoom({position:'topleft'}).addTo(map);L.control.scale({imperial:false,position:'bottomleft'}).addTo(map);
   const tiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>'}).addTo(map);let loaded=0;tiles.on('loading',()=>{byId('geo-map').dataset.tilesReady='false';});tiles.on('load',()=>{byId('geo-map').dataset.tilesReady='true';});tiles.on('tileload',()=>{byId('geo-map').dataset.loadedTiles=String(++loaded);byId('map-notice').hidden=true;});tiles.on('tileerror',()=>{if(!loaded){byId('map-notice').textContent='No se está cargando el fondo. Los trazados conservan sus coordenadas OSM.';byId('map-notice').hidden=false;}});
   map.on('moveend zoomend resize',()=>{layoutCyclingLabels();const c=map.getCenter();byId('geo-map').dataset.view=[c.lat.toFixed(7),c.lng.toFixed(7),map.getZoom()].join(',');});
   byId('open-map').onclick=()=>setMapOpen(true);byId('close-map').onclick=()=>setMapOpen(false);byId('fit-routes').onclick=fitAll;byId('close-sheet').onclick=()=>{byId('route-sheet').hidden=true;selection?.clearLayers();selectedFeature=selectedTarget=null;layoutCyclingLabels();for(const b of byId('map-trails').querySelectorAll('button'))b.setAttribute('aria-pressed','false');};byId('fit-selected').onclick=()=>fitFeatures(selectedTarget?targetFeatures(selectedTarget):selectedFeature?[selectedFeature]:[]);
   const results=await Promise.allSettled([jsonResource('embedded-park-document',entry.document).then(meta=>loadDocument(meta,entry)),loadGeography()]);for(const result of results)if(result.status==='rejected')message(result.reason);
-  routeFilters?.refresh();byId('source-loading').hidden=true;byId('map-card').dataset.ready='true';setMapOpen(new URLSearchParams(location.hash.slice(1)).get('mapa')==='1',true);
+  routeFilters?.refresh();byId('source-loading').hidden=true;byId('map-card').dataset.ready='true';syncParkRoute();cyclingViews?.refreshData();
  }catch(error){message(error);byId('map-card').dataset.ready='true';}
 }
 function syncParkRoute(){
  if(!catalog)return;const params=new URLSearchParams(location.hash.slice(1)),id=params.get('parque')||catalog.park.id;
- if(id!==catalog.park.id){gpsTracking?.stop();const destination=parkById(directory,id);if(destination){location.replace(destination.entry+(params.get('mapa')==='1'?'&mapa=1':''));}else{const error=new Error('El parque elegido no está en el directorio.');message(error);byId('map-notice').textContent=error.message;byId('map-notice').hidden=false;}return;}
- setMapOpen(params.get('mapa')==='1',true);
+ if(id!==catalog.park.id){gpsTracking?.stop();const destination=parkById(directory,id);if(destination){const url=new URL(destination.entry,location.href);url.hash=location.hash;location.replace(url.href);}else{const error=new Error('El parque elegido no está en el directorio.');message(error);byId('map-notice').textContent=error.message;byId('map-notice').hidden=false;}return;}
+ cyclingViews?.syncRoute();setMapOpen(params.get('vista')==='mapa'||(!params.get('vista')&&params.get('mapa')==='1'),true,true);cyclingViews?.syncRoute();const trailId=params.get('sendero');if(full&&trailId&&selectedTarget!==trailId)selectTarget(trailId);
 }
 window.addEventListener('popstate',syncParkRoute);window.addEventListener('hashchange',syncParkRoute);window.addEventListener('resize',()=>map?.invalidateSize({animate:false}));window.addEventListener('keydown',event=>{if(event.key==='Escape'&&full&&!byId('official-dialog').open)setMapOpen(false);});initPark();

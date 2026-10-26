@@ -25,7 +25,7 @@ try{
   assert.equal(await page.locator('[data-filter-type]').count()>1,true,'Main view presents the supplied horizontal type chips');
   await page.locator('[data-filter-type="'+(park==='parquemet'?'avenue':'park')+'"]').click();
   assert.equal(await node.evaluate(n=>n===document.getElementById('geo-map')),true);assert.equal(await page.locator('#map-card').evaluate(n=>n.getBoundingClientRect().top+scrollY),map.y);
-  await page.locator('#filter-reset').click();await page.locator('#bikeride-routes').click();
+  await page.locator('#filter-reset').click();await page.locator('#bikeride-routes').click();await page.waitForSelector('#rider-rutas:not([hidden])');assert.equal(await page.locator('.rider-route-card').count(),count);await page.goBack();await page.waitForSelector('#park-view:not([hidden])');
   const face=page.locator('.trail-card summary.has-trail-miniature').first(),crop=face.locator('.trail-miniature');
   const f=await face.boundingBox(),c=await crop.boundingBox();assert.ok(c.width>f.width*.9&&c.height>=100,'Official route crop spans the card header');
   const card=face.locator('..');
@@ -35,7 +35,7 @@ try{
   await card.getByRole('button',{name:'Ver ficha técnica',exact:true}).click();assert.equal(await card.locator('.trail-details').isVisible(),true);await card.getByRole('button',{name:'Ver ficha técnica',exact:true}).click();assert.equal(await card.locator('.trail-details').isVisible(),false);
   await page.screenshot({path:new URL(park+'-routes.png',out).pathname});
   await page.locator('#bikeride-map').click();await page.waitForSelector('#map-card.fullscreen');
-  assert.equal(await page.locator('#bikeride-navigation').isVisible(),false);assert.equal(await page.locator('#gps-panel').isVisible(),true);await page.locator('#close-map').click();
+  assert.equal(await page.locator('#bikeride-navigation').isVisible(),true);assert.equal(await page.locator('#gps-panel').isVisible(),true);await page.locator('#close-map').click();
   await page.locator('#open-map .map-open-label').click();await page.waitForSelector('#map-card.fullscreen');assert.equal(await page.locator('#map-options').getAttribute('open')!==null,true,'Ver capas opens the real Layers menu');await page.locator('#map-options summary').click();await page.locator('#close-map').click();
   checks.push(park+': reference layout, original source preserved, real cards/filters, same map node and full-screen GPS');
  }

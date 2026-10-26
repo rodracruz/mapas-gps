@@ -14,7 +14,7 @@ if args.reference_photo:
     legacy += ['--reference-photo', str(args.reference_photo.resolve())]
 subprocess.run(legacy, check=True, capture_output=True)
 html = (root / 'mapa-geografico.html').read_text()
-for href in ['vendor/leaflet/leaflet.css', 'geographic/style.css', 'geographic/trail-preview.css', 'geographic/route-filter-ui.css', 'geographic/bikeride.css']:
+for href in ['vendor/leaflet/leaflet.css', 'geographic/style.css', 'geographic/trail-preview.css', 'geographic/route-filter-ui.css', 'geographic/bikeride.css', 'rider/views.css']:
     html = html.replace(f'<link rel="stylesheet" href="./{href}">', '<style>' + inline_css(root, href) + '</style>')
 vendor = (root / 'vendor/leaflet/leaflet.js').read_text()
 html = html.replace('<script src="./vendor/leaflet/leaflet.js" defer></script>', '<script>' + vendor + '</script>')
@@ -60,11 +60,17 @@ modules.append('const {attachTrailPreviews}=TrailPreview;')
 for path,namespace,exports,bindings in [
     ('geographic/route-filters.mjs','RouteFilterData','routeType,routeFilterModels,filterRoutes,validFilterLocation,distanceToRoute',''),
     ('geographic/route-filter-ui.mjs','RouteFilterUI','setupRouteFilters,filterMapPadding','const {routeFilterModels,filterRoutes,validFilterLocation}=RouteFilterData;'),
-    ('geographic/bikeride.mjs','BikerideChrome','setupBikerideChrome','')]:
-    code=re.sub(r'^import .*?;\n','',(root/path).read_text(),flags=re.M).replace('export function ','function ')
+    ('geographic/bikeride.mjs','BikerideChrome','setupBikerideChrome',''),
+    ('rider/store.mjs','RiderStore','openRiderStore,defaultRiderState,validateRiderState',''),
+    ('rider/recording.mjs','RiderRecorder','createRideRecorder','const {defaultRiderState,validateRiderState}=RiderStore;'),
+    ('rider/exports.mjs','RiderExports','buildGpx,meetupCalendar','const {defaultRiderState,validateRiderState}=RiderStore;'),
+    ('rider/session.mjs','RiderSession','createRiderSession','const {createRideRecorder}=RiderRecorder;'),
+    ('rider/views.mjs','RiderViews','setupCyclingViews,currentOfficialPreview','const {openRiderStore,defaultRiderState}=RiderStore;const {buildGpx,meetupCalendar}=RiderExports;const {createRiderSession}=RiderSession;const {routeFilterModels,filterRoutes,validFilterLocation}=RouteFilterData;'),
+]:
+    code=re.sub(r'^import .*?;\n','',(root/path).read_text(),flags=re.M).replace('export function ','function ').replace('export async function ','async function ')
     modules.append(f'const {namespace}=(()=>{{\n{bindings}\n{code}\nreturn {{{exports}}};\n}})();')
 modules.append('const {setupRouteFilters,filterMapPadding}=RouteFilterUI;')
-modules.append('const {setupBikerideChrome}=BikerideChrome;')
+modules.append('const {setupBikerideChrome}=BikerideChrome;const {setupCyclingViews,currentOfficialPreview}=RiderViews;')
 modules.append(re.sub(r'^import .*?;\n', '', (root / 'geographic/viewer.mjs').read_text(), flags=re.M))
 html = html.replace('<script type="module" src="./geographic/viewer.mjs"></script>', payload + '<script type="module">\n' + '\n'.join(modules) + '\n</script>')
 html = html.replace('href="./index.html"', 'href="https://rodracruz.github.io/mapas-gps/"')

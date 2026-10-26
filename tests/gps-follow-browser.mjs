@@ -1,3 +1,4 @@
+import {selectMapTrail} from './helpers/route-filter-control.mjs';
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {readFile,mkdir} from 'node:fs/promises';
@@ -12,7 +13,7 @@ const pkCatalog=JSON.parse(await readFile('data/parquemet/geographic-catalog.jso
 const pkGeo=bikeMatchingNetwork(fromOsmSnapshot(JSON.parse(await readFile(pkCatalog.sourceSnapshot)),pkCatalog));
 const pkFeature=pkGeo.features.find(f=>{const p=f.geometry.coordinates[Math.floor(f.geometry.coordinates.length/2)],matcher=createRouteMatcher(pkGeo);let result;for(let i=0;i<4;i++)result=matcher.update({longitude:p[0],latitude:p[1],accuracy:5,timestamp:100000+i*1000},100000+i*1000);return result.status==='probable'&&result.route.id===f.properties.targetId;}),pk=pkFeature.geometry.coordinates[Math.floor(pkFeature.geometry.coordinates.length/2)];
 const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox'],proxy:process.env.HTTPS_PROXY?{server:process.env.HTTPS_PROXY}:undefined});
-const obstacles='.map-toolbar,.map-source-switch,.map-trails,.map-options,.gps-panel,.route-sheet,.route-filters,.leaflet-control-zoom,.map-notice';
+const obstacles='#rider-map-hud,#rider-map-banner,#rider-map-controls,.leaflet-control-attribution,.map-toolbar,.map-source-switch,.map-trails,.map-options,.gps-panel,.route-sheet,.route-filters,.leaflet-control-zoom,.map-notice';
 async function visiblePoint(page,label){
  await page.waitForTimeout(150);
  const point=await page.locator('.gps-raw-dot').evaluate((e,selectors)=>{const r=e.getBoundingClientRect(),x=r.x+r.width/2,y=r.y+r.height/2;return{x,y,visible:x>=5&&y>=5&&x<=innerWidth-5&&y<=innerHeight-5,blocked:!!document.elementFromPoint(x,y)?.closest(selectors)};},obstacles);
@@ -33,7 +34,7 @@ try{
   assert.equal(await page.locator('.gps-raw-dot').evaluate(e=>{const pane=e.closest('.leaflet-pane'),markers=document.querySelector('.leaflet-marker-pane');return Number(getComputedStyle(pane).zIndex)>Number(getComputedStyle(markers).zIndex)&&getComputedStyle(pane).pointerEvents==='none';}),true,'GPS paints above route labels without blocking touches');
   for(let i=1;i<9;i++){const fix=park.id==='el-durazno'?fixes[i]:park.fix;await context.setGeolocation({longitude:fix.longitude,latitude:fix.latitude,accuracy:5+i*.01});await page.waitForTimeout(500);}
   await page.waitForSelector('#gps-status[data-state="probable"][data-route-id="'+park.target+'"]');
-  await page.locator('[data-map-target="'+park.target+'"]').tap();await visiblePoint(page,park.id+' selected sheet');
+  await selectMapTrail(page,park.target);await visiblePoint(page,park.id+' selected sheet');
   for(const [width,height]of [[844,390],[320,568],[390,844]]){
    await page.setViewportSize({width,height});await page.waitForTimeout(400);await visiblePoint(page,park.id+` rotated ${width}x${height}`);
   }
@@ -45,7 +46,7 @@ try{
   const offline=await browser.newContext({viewport:{width:320,height:568},isMobile:true,hasTouch:true,permissions:['geolocation'],geolocation:{longitude:park.fix.longitude,latitude:park.fix.latitude,accuracy:5}}),op=await offline.newPage();
   await op.route('https://tile.openstreetmap.org/**',r=>r.abort());
   await op.route(base+'/**',async r=>{const response=await fetch(r.request().url());await r.fulfill({status:response.status,headers:Object.fromEntries(response.headers),body:Buffer.from(await response.arrayBuffer())});});
-  await op.goto(base+park.entry+'#parque='+park.id+'&mapa=1');await op.waitForSelector('#map-card[data-ready=true]');await op.locator('#gps-toggle').tap();await op.waitForSelector('.gps-raw-dot');await op.locator('[data-map-target="'+park.target+'"]').tap();await op.waitForSelector('#gps-panel>#map-notice:not([hidden])');await visiblePoint(op,park.id+' failed map tiles with sheet');
+  await op.goto(base+park.entry+'#parque='+park.id+'&mapa=1');await op.waitForSelector('#map-card[data-ready=true]');await op.locator('#gps-toggle').tap();await op.waitForSelector('.gps-raw-dot');await selectMapTrail(op,park.target);await op.waitForSelector('#gps-panel>#map-notice:not([hidden])');await visiblePoint(op,park.id+' failed map tiles with sheet');
   await op.screenshot({path:`test-results/gps/no-tiles-${park.id}.png`});await op.locator('#gps-toggle').tap();assert.equal(await op.locator('#map-card>#map-notice').count(),1,'warning returns to map after stopping');await op.unrouteAll({behavior:'wait'});await offline.close();
  }
  console.log('PASS native GPS with public coordinates in both parks: probable acquisition, unobscured fix, sheet, rotation, recenter, coarse accuracy, stop, failed tiles and no foreign demo');

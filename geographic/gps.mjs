@@ -8,7 +8,10 @@ export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>r
  const pane='gps-location',gpsPane=map.getPane(pane)||map.createPane(pane);
  gpsPane.style.zIndex='650';gpsPane.style.pointerEvents='none';
  let mode='off',watchId=null,timer=null,ageTimer=null,session=0,result=matcher.snapshot(),demo=null,index=-1,paused=false,follow=false,firstFix=true,signalError=null,demoFit=false,frame=null;
- const controls='.map-toolbar,.map-source-switch,#map-filter-slot,.route-filters.in-map .route-filter-body,#map-trails,.leaflet-control-zoom,#map-options,#gps-panel,#route-sheet,#map-notice';
+ const subscribers=new Set();
+ const snapshot=()=>structuredClone({mode,result});
+ const publish=()=>{for(const callback of subscribers)callback(snapshot());};
+ const controls='#rider-map-hud,#rider-map-banner,#rider-map-controls,.leaflet-control-attribution,.map-toolbar,.map-source-switch,#map-filter-slot,.route-filters.in-map .route-filter-body,#map-trails,.leaflet-control-zoom,#map-options,#gps-panel,#route-sheet,#map-notice';
  const notice=el('map-notice'),noticeParent=notice.parentNode,noticeNext=notice.nextSibling;
  function viewport(){
   const container=map.getContainer().getBoundingClientRect(),size=map.getSize();
@@ -42,6 +45,7 @@ export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>r
   'teleport-reacquiring':'El salto entre lecturas no es coherente. Comprobando de nuevo.'
  };
  function render(){
+  publish();
   el('gps-panel').dataset.mode=mode;layer.clearLayers();const active=mode!=='off',isDemo=mode==='demo',sign=getSource()==='cartel';
   // A connection warning belongs with GPS status while tracking, so it cannot
   // cover the last free strip of map on a short phone. Restore it on stop.
@@ -97,5 +101,5 @@ export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>r
  const dragged=()=>{follow=false;demoFit=false;};map.on('dragstart',dragged);map.on('resize',refreshCamera);window.addEventListener('pagehide',stop);
  // The filter body moves into the map after setup; observe its stable ID too.
  const observer=new ResizeObserver(refreshCamera);for(const node of document.querySelectorAll(controls+',#route-filter-body'))observer.observe(node);
- render();return {stop,sourceChanged:()=>{render();refreshCamera();},setMapOpen:open=>{if(!open)stop();},destroy(){stop();observer.disconnect();if(frame!==null)cancelAnimationFrame(frame);map.off('dragstart',dragged);map.off('resize',refreshCamera);window.removeEventListener('pagehide',stop);layer.remove();}};
+ render();return {snapshot,subscribe(fn){subscribers.add(fn);return ()=>subscribers.delete(fn);},stop,sourceChanged:()=>{render();refreshCamera();},setMapOpen:open=>{if(!open)stop();},destroy(){stop();subscribers.clear();observer.disconnect();if(frame!==null)cancelAnimationFrame(frame);map.off('dragstart',dragged);map.off('resize',refreshCamera);window.removeEventListener('pagehide',stop);layer.remove();}};
 }
