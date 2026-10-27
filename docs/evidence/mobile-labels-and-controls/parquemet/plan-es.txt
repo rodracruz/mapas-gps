@@ -1,0 +1,19 @@
+Parquemet — cinco referencias priorizadas para desbloqueo remoto
+
+Estado: 0 controles aceptados. No se propone una transformación del panorama. Coordenadas OSM en orden longitud, latitud. Regiones del JPEG 6690×2835 en x,y,ancho,alto: son zonas a revisar, no puntos topográficos.
+
+| Prioridad / referencia | Región del plano | Candidato geográfico retenido | Dato mínimo faltante |
+| --- | --- | --- | --- |
+| 1. Centenario: círculo 1269 compartido con 4 ½ | [1647.646240234375,1206.27734375,8.9710693359375,8.969970703125] | Nodos 4728164940 (-70.6271614,-33.4243958) y 5009936028 (-70.6294587,-33.4229047): ambos son contactos de esas rutas, separados 270,09 m | Traza/croquis oficial o referencia pública con extremos descritos que indique cuál representa el círculo 1269. Un nombre coincidente no decide. |
+| 2. Zorzal: círculo 1279 compartido con Anfiteatro | [3502.951171875,1250.21728515625,8.861083984375,8.862060546875] | Contacto Zorzal/Anfiteatro: 6484453802 (-70.6103459,-33.400559). Otro extremo de Zorzal: 8613999020 (-70.6101738,-33.4032642) | Identificar los extremos hacia Embalse y hacia Anfiteatro y aclarar si 1279 representa una unión física o una agrupación editorial. La S y Pa’ arriba contactan Anfiteatro en otros nodos. No confundir con 1269. |
+| 3. Acceso Carlos Reed | Flecha editorial [1748,1424,33,35]; no portón físico extraído | No hay coordenada precisa de puerta. Nodo 4728182188 (-70.6234948,-33.4247722): solo contexto 4 ½/Bellavista | Pin público sobre el umbral/portón concreto o capa oficial del acceso, distinguiéndolo del contacto de senderos. Para ser control faltaría una correspondencia expresa con la marca del dibujo. |
+| 4. Estación Teleférico Cumbre | Edificio ilustrado [1446,964,62,62] | Sin nodo/huella nominal de estación en el snapshot | Huella/entrada geográfica pública u oficial identificada. Usar primero para identidad/orientación: el centro del icono no es un control. |
+| 5. Estación Teleférico Tupahue | Edificio ilustrado [2176,1108,68,68] | Sin coordenada de estación. Nodo 2953717033 (-70.6225809,-33.415885): cruce vial de contexto | Pin/huella pública de la estación, diferenciada de piscina/mural. Solo identidad/orientación mientras no exista correspondencia a un punto del suelo. |
+
+Fuente oficial revisada: https://mapas.parquemet.cl/ respondió 200 el 2026-10-27T12:02:05–06Z; 6365 bytes; SHA-256 4bdfd1c42275b9a8acc701cee2c4eba73a7a41034c90fdf585b29412e1568456, idéntico al portal revisado el 20 de octubre. Enlaza PDFs, portal de parques urbanos, perfil SUDA y sitio principal. No se encontró allí un enlace GIS/GPX/KML/GeoJSON que resuelva estos extremos. Las consultas históricas 503 y la traza Running de SUDA ya estaban documentadas y no se repitieron. Esta revisión acotada no prueba que no exista GIS oficial en otro lugar.
+
+Historia y acceso: los metadatos actuales y su versión inicial 3c22980 conservan crs/transform null y no tienen georreferencia de página. No se hallaron controles aceptados de Parquemet en el material revisado. No se inspeccionaron las calibraciones reales del navegador/dispositivo del usuario ni se atribuye a Rodrigo/Google Maps un contenido no leído. La revisión histórica general de Rodrigo está separada.
+
+Siguiente dato útil: resolver primero las filas 1 y 2, idealmente con un solo archivo GPX/KML/GeoJSON público u oficial con extremos rotulados, nombre, fecha y procedencia. Ese archivo puede confirmar identidades o deshacer ambigüedades; no garantiza que todo el panorama sea registrable. No se solicita una cantidad arbitraria de controles ni una salida al terreno.
+
+No se modificó producción, fuentes o geometrías, ni se publicó. Recibos: control-action-plan.json; official-portal-receipt.json; recortes *-source.png.

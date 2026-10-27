@@ -1,0 +1,1153 @@
+[
+  {
+    "name": "overview-390",
+    "labels": [
+      {
+        "name": "Centenario",
+        "cycling": true,
+        "rect": {
+          "x": 143.78125,
+          "y": 299,
+          "width": 69.359375,
+          "height": 29,
+          "top": 299,
+          "right": 213.140625,
+          "bottom": 328,
+          "left": 143.78125
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "4 ½",
+        "cycling": true,
+        "rect": {
+          "x": 155,
+          "y": 267.5,
+          "width": 33.890625,
+          "height": 29,
+          "top": 267.5,
+          "right": 188.890625,
+          "bottom": 296.5,
+          "left": 155
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Anfiteatro",
+        "cycling": true,
+        "rect": {
+          "x": 191.5,
+          "y": 239,
+          "width": 64.515625,
+          "height": 29,
+          "top": 239,
+          "right": 256.015625,
+          "bottom": 268,
+          "left": 191.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "La S",
+        "cycling": true,
+        "rect": {
+          "x": 195,
+          "y": 207.5,
+          "width": 36.421875,
+          "height": 29,
+          "top": 207.5,
+          "right": 231.421875,
+          "bottom": 236.5,
+          "left": 195
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Zorzal",
+        "cycling": true,
+        "rect": {
+          "x": 215.28125,
+          "y": 270.5,
+          "width": 46.609375,
+          "height": 29,
+          "top": 270.5,
+          "right": 261.890625,
+          "bottom": 299.5,
+          "left": 215.28125
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Pa’ arriba",
+        "cycling": true,
+        "rect": {
+          "x": 233.5,
+          "y": 207.5,
+          "width": 61.875,
+          "height": 29,
+          "top": 207.5,
+          "right": 295.375,
+          "bottom": 236.5,
+          "left": 233.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Torre 5",
+        "cycling": true,
+        "rect": {
+          "x": 259,
+          "y": 239,
+          "width": 50.296875,
+          "height": 29,
+          "top": 239,
+          "right": 309.296875,
+          "bottom": 268,
+          "left": 259
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Pirámide",
+        "cycling": true,
+        "rect": {
+          "x": 134.5,
+          "y": 199,
+          "width": 58.46875,
+          "height": 29,
+          "top": 199,
+          "right": 192.96875,
+          "bottom": 228,
+          "left": 134.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P1 · Parque B. de la Infancia",
+        "cycling": false,
+        "rect": {
+          "x": 54,
+          "y": 236,
+          "width": 134.671875,
+          "height": 29,
+          "top": 236,
+          "right": 188.671875,
+          "bottom": 265,
+          "left": 54
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P2 · los Sentidos",
+        "cycling": false,
+        "rect": {
+          "x": 53.28125,
+          "y": 309,
+          "width": 88.125,
+          "height": 29,
+          "top": 309,
+          "right": 141.40625,
+          "bottom": 338,
+          "left": 53.28125
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P3 · Bellavista",
+        "cycling": false,
+        "rect": {
+          "x": 75.5,
+          "y": 267.5,
+          "width": 76.890625,
+          "height": 29,
+          "top": 267.5,
+          "right": 152.390625,
+          "bottom": 296.5,
+          "left": 75.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P4 · Pedro de Valdivia",
+        "cycling": false,
+        "rect": {
+          "x": 215.28125,
+          "y": 302,
+          "width": 110.5625,
+          "height": 29,
+          "top": 302,
+          "right": 325.84375,
+          "bottom": 331,
+          "left": 215.28125
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P6 · La Cascada",
+        "cycling": false,
+        "rect": {
+          "x": 46,
+          "y": 204.5,
+          "width": 85.53125,
+          "height": 29,
+          "top": 204.5,
+          "right": 131.53125,
+          "bottom": 233.5,
+          "left": 46
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      }
+    ],
+    "collisions": [],
+    "width": 390,
+    "height": 844
+  },
+  {
+    "name": "selected-390",
+    "labels": [
+      {
+        "name": "Centenario",
+        "cycling": true,
+        "rect": {
+          "x": 5,
+          "y": 198.5,
+          "width": 69.359375,
+          "height": 29,
+          "top": 198.5,
+          "right": 74.359375,
+          "bottom": 227.5,
+          "left": 5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "4 ½",
+        "cycling": true,
+        "rect": {
+          "x": 76.5,
+          "y": 198.5,
+          "width": 33.890625,
+          "height": 29,
+          "top": 198.5,
+          "right": 110.390625,
+          "bottom": 227.5,
+          "left": 76.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Anfiteatro",
+        "cycling": true,
+        "rect": {
+          "x": 165,
+          "y": 198.5,
+          "width": 64.515625,
+          "height": 29,
+          "top": 198.5,
+          "right": 229.515625,
+          "bottom": 227.5,
+          "left": 165
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "La S",
+        "cycling": true,
+        "rect": {
+          "x": 126.5,
+          "y": 198.5,
+          "width": 36.421875,
+          "height": 29,
+          "top": 198.5,
+          "right": 162.921875,
+          "bottom": 227.5,
+          "left": 126.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Zorzal",
+        "cycling": true,
+        "rect": {
+          "x": 232.5,
+          "y": 198.5,
+          "width": 46.609375,
+          "height": 29,
+          "top": 198.5,
+          "right": 279.109375,
+          "bottom": 227.5,
+          "left": 232.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      }
+    ],
+    "collisions": [],
+    "width": 390,
+    "height": 844
+  },
+  {
+    "name": "rotated-320x568",
+    "labels": [
+      {
+        "name": "Anfiteatro",
+        "cycling": true,
+        "rect": {
+          "x": 125,
+          "y": 160.5,
+          "width": 64.515625,
+          "height": 29,
+          "top": 160.5,
+          "right": 189.515625,
+          "bottom": 189.5,
+          "left": 125
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "La S",
+        "cycling": true,
+        "rect": {
+          "x": 86.5,
+          "y": 160.5,
+          "width": 36.421875,
+          "height": 29,
+          "top": 160.5,
+          "right": 122.921875,
+          "bottom": 189.5,
+          "left": 86.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Zorzal",
+        "cycling": true,
+        "rect": {
+          "x": 192.5,
+          "y": 160.5,
+          "width": 46.609375,
+          "height": 29,
+          "top": 160.5,
+          "right": 239.109375,
+          "bottom": 189.5,
+          "left": 192.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Pa’ arriba",
+        "cycling": true,
+        "rect": {
+          "x": 135,
+          "y": 192,
+          "width": 61.875,
+          "height": 29,
+          "top": 192,
+          "right": 196.875,
+          "bottom": 221,
+          "left": 135
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Torre 5",
+        "cycling": true,
+        "rect": {
+          "x": 199.5,
+          "y": 192,
+          "width": 50.296875,
+          "height": 29,
+          "top": 192,
+          "right": 249.796875,
+          "bottom": 221,
+          "left": 199.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P4 · Pedro de Valdivia",
+        "cycling": false,
+        "rect": {
+          "x": 21.5,
+          "y": 198.5,
+          "width": 110.5625,
+          "height": 29,
+          "top": 198.5,
+          "right": 132.0625,
+          "bottom": 227.5,
+          "left": 21.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      }
+    ],
+    "collisions": [],
+    "width": 320,
+    "height": 568
+  },
+  {
+    "name": "rotated-844x390",
+    "labels": [
+      {
+        "name": "Centenario",
+        "cycling": true,
+        "rect": {
+          "x": 205,
+          "y": 196.78125,
+          "width": 69.359375,
+          "height": 29,
+          "top": 196.78125,
+          "right": 274.359375,
+          "bottom": 225.78125,
+          "left": 205
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "4 ½",
+        "cycling": true,
+        "rect": {
+          "x": 235,
+          "y": 165.28125,
+          "width": 33.890625,
+          "height": 29,
+          "top": 165.28125,
+          "right": 268.890625,
+          "bottom": 194.28125,
+          "left": 235
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P1 · Parque B. de la Infancia",
+        "cycling": false,
+        "rect": {
+          "x": 67.5,
+          "y": 196.78125,
+          "width": 134.671875,
+          "height": 29,
+          "top": 196.78125,
+          "right": 202.171875,
+          "bottom": 225.78125,
+          "left": 67.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P2 · los Sentidos",
+        "cycling": false,
+        "rect": {
+          "x": 115,
+          "y": 165.28125,
+          "width": 88.125,
+          "height": 29,
+          "top": 165.28125,
+          "right": 203.125,
+          "bottom": 194.28125,
+          "left": 115
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P3 · Bellavista",
+        "cycling": false,
+        "rect": {
+          "x": 276.5,
+          "y": 196.78125,
+          "width": 76.890625,
+          "height": 29,
+          "top": 196.78125,
+          "right": 353.390625,
+          "bottom": 225.78125,
+          "left": 276.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P4 · Pedro de Valdivia",
+        "cycling": false,
+        "rect": {
+          "x": 295,
+          "y": 143.5,
+          "width": 110.5625,
+          "height": 29,
+          "top": 143.5,
+          "right": 405.5625,
+          "bottom": 172.5,
+          "left": 295
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      }
+    ],
+    "collisions": [],
+    "width": 844,
+    "height": 390
+  },
+  {
+    "name": "rotated-390x844",
+    "labels": [
+      {
+        "name": "Centenario",
+        "cycling": true,
+        "rect": {
+          "x": 5,
+          "y": 321.5,
+          "width": 69.359375,
+          "height": 29,
+          "top": 321.5,
+          "right": 74.359375,
+          "bottom": 350.5,
+          "left": 5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "4 ½",
+        "cycling": true,
+        "rect": {
+          "x": 76.5,
+          "y": 321.5,
+          "width": 33.890625,
+          "height": 29,
+          "top": 321.5,
+          "right": 110.390625,
+          "bottom": 350.5,
+          "left": 76.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Anfiteatro",
+        "cycling": true,
+        "rect": {
+          "x": 165,
+          "y": 229,
+          "width": 64.515625,
+          "height": 29,
+          "top": 229,
+          "right": 229.515625,
+          "bottom": 258,
+          "left": 165
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "La S",
+        "cycling": true,
+        "rect": {
+          "x": 175,
+          "y": 197.5,
+          "width": 36.421875,
+          "height": 29,
+          "top": 197.5,
+          "right": 211.421875,
+          "bottom": 226.5,
+          "left": 175
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Zorzal",
+        "cycling": true,
+        "rect": {
+          "x": 213.5,
+          "y": 197.5,
+          "width": 46.609375,
+          "height": 29,
+          "top": 197.5,
+          "right": 260.109375,
+          "bottom": 226.5,
+          "left": 213.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Pa’ arriba",
+        "cycling": true,
+        "rect": {
+          "x": 175,
+          "y": 260.5,
+          "width": 61.875,
+          "height": 29,
+          "top": 260.5,
+          "right": 236.875,
+          "bottom": 289.5,
+          "left": 175
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Torre 5",
+        "cycling": true,
+        "rect": {
+          "x": 232.5,
+          "y": 229,
+          "width": 50.296875,
+          "height": 29,
+          "top": 229,
+          "right": 282.796875,
+          "bottom": 258,
+          "left": 232.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Pirámide",
+        "cycling": true,
+        "rect": {
+          "x": 263,
+          "y": 190.28125,
+          "width": 58.46875,
+          "height": 29,
+          "top": 190.28125,
+          "right": 321.46875,
+          "bottom": 219.28125,
+          "left": 263
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P3 · Bellavista",
+        "cycling": false,
+        "rect": {
+          "x": 5,
+          "y": 290,
+          "width": 76.890625,
+          "height": 29,
+          "top": 290,
+          "right": 81.890625,
+          "bottom": 319,
+          "left": 5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P4 · Pedro de Valdivia",
+        "cycling": false,
+        "rect": {
+          "x": 113,
+          "y": 321.5,
+          "width": 110.5625,
+          "height": 29,
+          "top": 321.5,
+          "right": 223.5625,
+          "bottom": 350.5,
+          "left": 113
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P5 · Pirámide / Jardín Japonés",
+        "cycling": false,
+        "rect": {
+          "x": 32.5,
+          "y": 190.28125,
+          "width": 140,
+          "height": 29,
+          "top": 190.28125,
+          "right": 172.5,
+          "bottom": 219.28125,
+          "left": 32.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P6 · La Cascada",
+        "cycling": false,
+        "rect": {
+          "x": 76.5,
+          "y": 221.78125,
+          "width": 85.53125,
+          "height": 29,
+          "top": 221.78125,
+          "right": 162.03125,
+          "bottom": 250.78125,
+          "left": 76.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      }
+    ],
+    "collisions": [],
+    "width": 390,
+    "height": 844
+  },
+  {
+    "name": "drawer-open",
+    "labels": [],
+    "collisions": [],
+    "width": 390,
+    "height": 844
+  },
+  {
+    "name": "drawer-closed",
+    "labels": [
+      {
+        "name": "Centenario",
+        "cycling": true,
+        "rect": {
+          "x": 5,
+          "y": 321.5,
+          "width": 69.359375,
+          "height": 29,
+          "top": 321.5,
+          "right": 74.359375,
+          "bottom": 350.5,
+          "left": 5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "4 ½",
+        "cycling": true,
+        "rect": {
+          "x": 76.5,
+          "y": 321.5,
+          "width": 33.890625,
+          "height": 29,
+          "top": 321.5,
+          "right": 110.390625,
+          "bottom": 350.5,
+          "left": 76.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Anfiteatro",
+        "cycling": true,
+        "rect": {
+          "x": 165,
+          "y": 229,
+          "width": 64.515625,
+          "height": 29,
+          "top": 229,
+          "right": 229.515625,
+          "bottom": 258,
+          "left": 165
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "La S",
+        "cycling": true,
+        "rect": {
+          "x": 175,
+          "y": 197.5,
+          "width": 36.421875,
+          "height": 29,
+          "top": 197.5,
+          "right": 211.421875,
+          "bottom": 226.5,
+          "left": 175
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Zorzal",
+        "cycling": true,
+        "rect": {
+          "x": 213.5,
+          "y": 197.5,
+          "width": 46.609375,
+          "height": 29,
+          "top": 197.5,
+          "right": 260.109375,
+          "bottom": 226.5,
+          "left": 213.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Pa’ arriba",
+        "cycling": true,
+        "rect": {
+          "x": 175,
+          "y": 260.5,
+          "width": 61.875,
+          "height": 29,
+          "top": 260.5,
+          "right": 236.875,
+          "bottom": 289.5,
+          "left": 175
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Torre 5",
+        "cycling": true,
+        "rect": {
+          "x": 232.5,
+          "y": 229,
+          "width": 50.296875,
+          "height": 29,
+          "top": 229,
+          "right": 282.796875,
+          "bottom": 258,
+          "left": 232.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Pirámide",
+        "cycling": true,
+        "rect": {
+          "x": 263,
+          "y": 190.28125,
+          "width": 58.46875,
+          "height": 29,
+          "top": 190.28125,
+          "right": 321.46875,
+          "bottom": 219.28125,
+          "left": 263
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P3 · Bellavista",
+        "cycling": false,
+        "rect": {
+          "x": 5,
+          "y": 290,
+          "width": 76.890625,
+          "height": 29,
+          "top": 290,
+          "right": 81.890625,
+          "bottom": 319,
+          "left": 5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P4 · Pedro de Valdivia",
+        "cycling": false,
+        "rect": {
+          "x": 113,
+          "y": 321.5,
+          "width": 110.5625,
+          "height": 29,
+          "top": 321.5,
+          "right": 223.5625,
+          "bottom": 350.5,
+          "left": 113
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P5 · Pirámide / Jardín Japonés",
+        "cycling": false,
+        "rect": {
+          "x": 32.5,
+          "y": 190.28125,
+          "width": 140,
+          "height": 29,
+          "top": 190.28125,
+          "right": 172.5,
+          "bottom": 219.28125,
+          "left": 32.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "P6 · La Cascada",
+        "cycling": false,
+        "rect": {
+          "x": 76.5,
+          "y": 221.78125,
+          "width": 85.53125,
+          "height": 29,
+          "top": 221.78125,
+          "right": 162.03125,
+          "bottom": 250.78125,
+          "left": 76.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      }
+    ],
+    "collisions": [],
+    "width": 390,
+    "height": 844
+  },
+  {
+    "name": "avenue-filter",
+    "labels": [
+      {
+        "name": "Av. Pedro Bannen",
+        "cycling": false,
+        "rect": {
+          "x": 5,
+          "y": 321.5,
+          "width": 92.5625,
+          "height": 29,
+          "top": 321.5,
+          "right": 97.5625,
+          "bottom": 350.5,
+          "left": 5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Av. Abate Molina",
+        "cycling": false,
+        "rect": {
+          "x": 100.5,
+          "y": 321.5,
+          "width": 89.078125,
+          "height": 29,
+          "top": 321.5,
+          "right": 189.578125,
+          "bottom": 350.5,
+          "left": 100.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Av. Carlos Martner",
+        "cycling": false,
+        "rect": {
+          "x": 45,
+          "y": 290,
+          "width": 97.15625,
+          "height": 29,
+          "top": 290,
+          "right": 142.15625,
+          "bottom": 319,
+          "left": 45
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Av. Carlos Reed",
+        "cycling": false,
+        "rect": {
+          "x": 5,
+          "y": 258.5,
+          "width": 84.390625,
+          "height": 29,
+          "top": 258.5,
+          "right": 89.390625,
+          "bottom": 287.5,
+          "left": 5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Av. Claudio Gay",
+        "cycling": false,
+        "rect": {
+          "x": 175,
+          "y": 227,
+          "width": 84.25,
+          "height": 29,
+          "top": 227,
+          "right": 259.25,
+          "bottom": 256,
+          "left": 175
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Av. Federico Albert",
+        "cycling": false,
+        "rect": {
+          "x": 135,
+          "y": 195.5,
+          "width": 98.8125,
+          "height": 29,
+          "top": 195.5,
+          "right": 233.8125,
+          "bottom": 224.5,
+          "left": 135
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Av. Manuel Zañartu",
+        "cycling": false,
+        "rect": {
+          "x": 195,
+          "y": 258.5,
+          "width": 100.375,
+          "height": 29,
+          "top": 258.5,
+          "right": 295.375,
+          "bottom": 287.5,
+          "left": 195
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Av. La Montaña",
+        "cycling": false,
+        "rect": {
+          "x": 91.5,
+          "y": 258.5,
+          "width": 82.6875,
+          "height": 29,
+          "top": 258.5,
+          "right": 174.1875,
+          "bottom": 287.5,
+          "left": 91.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Av. Gabriela Mistral",
+        "cycling": false,
+        "rect": {
+          "x": 144.5,
+          "y": 290,
+          "width": 100.234375,
+          "height": 29,
+          "top": 290,
+          "right": 244.734375,
+          "bottom": 319,
+          "left": 144.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      },
+      {
+        "name": "Av. Pablo Neruda",
+        "cycling": false,
+        "rect": {
+          "x": 82.5,
+          "y": 227,
+          "width": 90.453125,
+          "height": 29,
+          "top": 227,
+          "right": 172.953125,
+          "bottom": 256,
+          "left": 82.5
+        },
+        "blocked": [],
+        "reachable": true,
+        "inside": true
+      }
+    ],
+    "collisions": [],
+    "width": 390,
+    "height": 844
+  }
+]

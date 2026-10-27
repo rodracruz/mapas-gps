@@ -47,7 +47,7 @@ export function setupRouteFilters({getTargets,getGeo,onChange}){
 // Reserve the actual controls and lateral panels, including short landscape.
 export function filterMapPadding(map,full){
  if(!full)return{paddingTopLeft:[15,10],paddingBottomRight:[15,10]};
- const size=map.getSize(),origin=el('geo-map').getBoundingClientRect();let left=35,right=35,top=Math.max(0,...['.map-toolbar','.map-source-switch','#map-filter-slot','#map-trails'].map(s=>el('map-card').querySelector(s)).filter(n=>n?.getClientRects().length).map(n=>n.getBoundingClientRect().bottom-origin.top))+14,bottom=45;
- for(const id of ['route-sheet','gps-panel']){const n=el(id);if(!n?.getClientRects().length)continue;const r=n.getBoundingClientRect();if(r.width<size.x*.6&&r.left-origin.left>size.x*.4)right=Math.max(right,size.x-(r.left-origin.left)+16);else if(r.width<size.x*.6&&r.right-origin.left<size.x*.6)left=Math.max(left,r.right-origin.left+16);else bottom=Math.max(bottom,size.y-(r.top-origin.top)+20);}
+ const size=map.getSize(),origin=el('geo-map').getBoundingClientRect();let left=35,right=35,top=Math.max(0,...['.map-toolbar','.map-source-switch','#map-filter-slot','#map-trails','#rider-map-banner'].map(s=>el('map-card').querySelector(s)).filter(n=>n?.getClientRects().length).map(n=>n.getBoundingClientRect().bottom-origin.top))+14,bottom=45;
+ for(const id of ['route-sheet','gps-panel','rider-map-hud']){const n=el(id);if(!n?.getClientRects().length)continue;const r=n.getBoundingClientRect();if(r.width<size.x*.6&&r.left-origin.left>size.x*.4)right=Math.max(right,size.x-(r.left-origin.left)+16);else if(r.width<size.x*.6&&r.right-origin.left<size.x*.6)left=Math.max(left,r.right-origin.left+16);else bottom=Math.max(bottom,size.y-(r.top-origin.top)+20);}
  const v=Math.min(1,Math.max(0,size.y-100)/(top+bottom)),h=Math.min(1,Math.max(0,size.x-120)/(left+right));return{paddingTopLeft:[left*h,top*v],paddingBottomRight:[right*h,bottom*v]};
 }

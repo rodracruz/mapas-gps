@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "park": "parquemet",
+  "auditDateUTC": "2026-10-27T12:06:32.885011+00:00",
+  "baselineCommit": "0d1f442",
+  "scope": "Candidatos públicos para desbloqueo geográfico remoto; sin modificar fuentes, geometría protegida ni publicación.",
+  "acceptedControls": [],
+  "proposedTransform": null,
+  "coordinateConvention": {
+    "geographic": "EPSG:4326, longitude latitude",
+    "image": "6690×2835; top-left x,y; regions x,y,width,height"
+  },
+  "historyReview": {
+    "reviewed": [
+      "data/parquemet/official-document.json",
+      "git show 3c22980:data/parquemet/official-document.json",
+      "docs/evidence/parquemet-official-document.md",
+      "docs/evidence/parquemet-coverage-sources.md",
+      "docs/evidence/parquemet-paseo-geographic.md",
+      "docs/evidence/parquemet-avenues-geographic.md"
+    ],
+    "findings": "Los metadatos actuales y los introducidos en 3c22980 tienen crs/transform null y carecen de VP/Measure/LGIDict. No se identificó un archivo de controles aceptados de Parquemet en ese material.",
+    "historicalRodrigoGoogleMaps": "No hay una referencia de Rodrigo/Google Maps asociada a Parquemet en los documentos/datos revisados. La revisión histórica general de Rodrigo se realiza por separado; no se infiere su contenido.",
+    "browserLocalCalibration": "No se inspeccionó el navegador/dispositivo del usuario ni su Indexed DB/local Storage. Las pruebas del repositorio sobre calibraciones conservadas no permiten leer ni validar sus calibraciones reales."
+  },
+  "officialSourceSearch": {
+    "priorResearchReviewed": "2026-10-20 portal 200 sin GIS/GPX/KML; páginas nominales de 5 senderos 503;SUDA 9 actividades públicas sin los 8 nombres rojos, una traza Running no acreditaba equivalencia. No se repitieron esas peticiones.",
+    "freshPortalReceipt": "official-portal-receipt.json",
+    "freshOutcome": "Portal 200,6365 bytes y mismo SHA 256 de 2026-10-20; enlaces PDFs/portalparquesurbanos/perfil SUDA/sitioprincipal; ninguna referencia GIS/GPX/KML/KMZ/Geo JSON/Arc GIS/WFS en HTML. No se encontró aquí un recurso oficial que resuelva estos extremos. Esto no prueba inexistencia global de GIS oficial.",
+    "requestedUrl": "https://mapas.parquemet.cl/",
+    "timeUTC": "2026-10-27T12:02:05.048064+00:00",
+    "status": 200,
+    "sha256": "4bdfd1c42275b9a8acc701cee2c4eba73a7a41034c90fdf585b29412e1568456"
+  },
+  "points": [
+    {
+      "priority": 1,
+      "id": "centenario-shared1269",
+      "name": "Centenario: símbolo 1269 compartido con 4 ½",
+      "purpose": "Resolver un extremo/contacto concreto del sendero antes de cualquier cambio geográfico.",
+      "source": {
+        "drawingIndex": 1269,
+        "ownerTrailId": "cuatro-y-medio",
+        "referencingTrailIds": [
+          "centenario",
+          "cuatro-y-medio"
+        ],
+        "regionXYWH": [
+          1647.646240234375,
+          1206.27734375,
+          8.9710693359375,
+          8.969970703125
+        ],
+        "coordinateSystem": "document-pixels",
+        "origin": "top-left",
+        "pointAcceptedAsGeographicAnchor": false,
+        "meaning": "Símbolo compartido del dibujo, no unión transitable acreditada"
+      },
+      "sourceCrop": "centenario-shared1269-source.png",
+      "osmCandidates": [
+        {
+          "osmType": "node",
+          "osmId": 4728164940,
+          "version": 2,
+          "coordinateOrder": "longitude,latitude",
+          "coordinate": [
+            -70.6271614,
+            -33.4243958
+          ],
+          "role": "Contacto exacto OSM Centenario/4 ½",
+          "acceptedAsControl": false,
+          "url": "https://www.openstreetmap.org/node/4728164940"
+        },
+        {
+          "osmType": "node",
+          "osmId": 5009936028,
+          "version": 1,
+          "coordinateOrder": "longitude,latitude",
+          "coordinate": [
+            -70.6294587,
+            -33.4229047
+          ],
+          "role": "Segundo contacto exacto OSM Centenario/4 ½",
+          "acceptedAsControl": false,
+          "url": "https://www.openstreetmap.org/node/5009936028"
+        }
+      ],
+      "candidateStatus": "Ambiguo: los 2 contactos OSM están separados 270,09 m; el nombre compartido no elige uno. El círculo 1269 no debe asignarse automáticamente a ninguno.",
+      "minimumRemoteDatum": "Un croquis o traza pública/archivo oficial de Centenario y 4 ½ con extremos identificados que indique cuál de esos contactos corresponde al círculo 1269, o si el símbolo resume otro sector. Debe incluir procedencia/fecha y una referencia física reconocible del contacto, no solo el nombre de la ruta.",
+      "unblocks": "Atribución de ese extremo/contacto y contraste de continuidad; no valida cada curva intermedia del panorama."
+    },
+    {
+      "priority": 2,
+      "id": "zorzal-shared1279",
+      "name": "Zorzal: símbolo 1279 compartido con Anfiteatro",
+      "purpose": "Identificar el extremo de Zorzal sin confundirlo con el símbolo 1269 de Centenario.",
+      "source": {
+        "drawingIndex": 1279,
+        "ownerTrailId": "anfiteatro",
+        "referencingTrailIds": [
+          "anfiteatro",
+          "la-s",
+          "zorzal",
+          "pa-arriba"
+        ],
+        "regionXYWH": [
+          3502.951171875,
+          1250.21728515625,
+          8.861083984375,
+          8.862060546875
+        ],
+        "coordinateSystem": "document-pixels",
+        "origin": "top-left",
+        "pointAcceptedAsGeographicAnchor": false,
+        "meaning": "Símbolo compartido del dibujo, no unión transitable acreditada"
+      },
+      "sourceCrop": "zorzal-shared1279-source.png",
+      "osmCandidates": [
+        {
+          "osmType": "node",
+          "osmId": 6484453802,
+          "version": 2,
+          "coordinateOrder": "longitude,latitude",
+          "coordinate": [
+            -70.6103459,
+            -33.400559
+          ],
+          "role": "Contacto Zorzal/Anfiteatro en OSM",
+          "acceptedAsControl": false,
+          "url": "https://www.openstreetmap.org/node/6484453802"
+        },
+        {
+          "osmType": "node",
+          "osmId": 8613999020,
+          "version": 1,
+          "coordinateOrder": "longitude,latitude",
+          "coordinate": [
+            -70.6101738,
+            -33.4032642
+          ],
+          "role": "Otro extremo de Zorzal, en Pa’ arriba",
+          "acceptedAsControl": false,
+          "url": "https://www.openstreetmap.org/node/8613999020"
+        }
+      ],
+      "otherSourceSharedRouteContacts": [
+        {
+          "osmType": "node",
+          "osmId": 8421729918,
+          "version": 2,
+          "coordinateOrder": "longitude,latitude",
+          "coordinate": [
+            -70.6103148,
+            -33.4007293
+          ],
+          "role": "Contacto La S/Anfiteatro: distinto del de Zorzal,19,16 m",
+          "acceptedAsControl": false,
+          "url": "https://www.openstreetmap.org/node/8421729918"
+        },
+        {
+          "osmType": "node",
+          "osmId": 6484453796,
+          "version": 3,
+          "coordinateOrder": "longitude,latitude",
+          "coordinate": [
+            -70.6092837,
+            -33.3999925
+          ],
+          "role": "Contacto Pa’ arriba/Anfiteatro: distinto del de Zorzal,117,01 m",
+          "acceptedAsControl": false,
+          "url": "https://www.openstreetmap.org/node/6484453796"
+        }
+      ],
+      "candidateStatus": "No hay un nodo OSM único común a las 4 rutas del círculo 1279. Que la tinta comparta el símbolo no acredita una unión geográfica común.",
+      "minimumRemoteDatum": "Referencia pública/archivo oficial con inicio y fin de Zorzal identificados hacia Embalse y hacia Anfiteatro, más una indicación explícita de qué representa el círculo 1279: unión física o agrupación editorial. Una GPX/KML con nombre, fecha y extremos descritos puede resolver el sendero; no basta para aceptar el icono como control.",
+      "unblocks": "Identidad de los extremos de Zorzal y revisión de la continuidad con Anfiteatro; evita fusionar nodos distintos."
+    },
+    {
+      "priority": 3,
+      "id": "carlos-reed-access",
+      "name": "Acceso Carlos Reed",
+      "purpose": "Disponer de una referencia de acceso independiente de los símbolos de senderos.",
+      "source": {
+        "regionXYWH": [
+          1748,
+          1424,
+          33,
+          35
+        ],
+        "regionMeaning": "Flecha editorial junto al rótulo Acceso Carlos Reed; no se dibuja una barrera física identificable en este recorte.",
+        "contextCropXYWH": [
+          1680,
+          1300,
+          300,
+          200
+        ],
+        "labelEvidenceBlockIndex": 198,
+        "pointAcceptedAsGeographicAnchor": false
+      },
+      "sourceCrop": "carlos-reed-source.png",
+      "osmCandidates": [],
+      "osmContextOnly": [
+        {
+          "osmType": "node",
+          "osmId": 4728182188,
+          "version": 2,
+          "coordinateOrder": "longitude,latitude",
+          "coordinate": [
+            -70.6234948,
+            -33.4247722
+          ],
+          "role": "Contacto 4 ½/Paseo Bellavista en el sector; no está etiquetado como puerta Carlos Reed",
+          "acceptedAsControl": false,
+          "url": "https://www.openstreetmap.org/node/4728182188"
+        }
+      ],
+      "candidateStatus": "Falta coordenada del acceso físico preciso. No usar el nodo de contexto ni el centro de la flecha como puerta.",
+      "minimumRemoteDatum": "Un enlace público con pin sobre el umbral/portón concreto de Acceso Carlos Reed, visible en cartografía/aérea autorizada, o un KML/Geo JSON oficial del acceso. Debe distinguirlo del contacto 4 ½/Bellavista; si se quiere control del dibujo, también falta que el autor identifique qué marca del esquema representa ese umbral.",
+      "unblocks": "Identidad y ubicación del acceso; referencia de orientación sin mover rutas cercanas por proximidad."
+    },
+    {
+      "priority": 4,
+      "id": "cumbre-station",
+      "name": "Estación Teleférico Cumbre",
+      "purpose": "Identidad/orientación del sector occidental; no ancla geométrica por centro de icono.",
+      "source": {
+        "regionXYWH": [
+          1446,
+          964,
+          62,
+          62
+        ],
+        "regionMeaning": "Edificio ilustrado del Teleférico Cumbre; la base/cubierta está dibujada en perspectiva.",
+        "contextCropXYWH": [
+          1430,
+          860,
+          340,
+          240
+        ],
+        "labelEvidenceBlockIndex": 181,
+        "pointAcceptedAsGeographicAnchor": false
+      },
+      "sourceCrop": "cumbre-source.png",
+      "osmCandidates": [],
+      "candidateStatus": "El snapshot retenido no contiene un nodo/huella nominal de esta estación. El edificio dibujado no proporciona un punto de suelo identificable por sí solo.",
+      "minimumRemoteDatum": "Referencia pública oficial de la estación con huella/entrada identificada y coordenada, o cartografía geográfica publicada con metadatos. Para usarla como control del plano haría falta una correspondencia del autor entre un punto del suelo y una marca del dibujo; un pin general de Cumbre no lo aporta.",
+      "unblocks": "Confirmar estación/sector y orientación del recorrido del teleférico; no ajustar automáticamente el panorama."
+    },
+    {
+      "priority": 5,
+      "id": "tupahue-station",
+      "name": "Estación Teleférico Tupahue",
+      "purpose": "Segunda referencia de identidad/orientación, separada de Piscina Tupahue y del Mural Tupahue.",
+      "source": {
+        "regionXYWH": [
+          2176,
+          1108,
+          68,
+          68
+        ],
+        "regionMeaning": "Edificio ilustrado del Teleférico Tupahue junto a la línea del teleférico; no el icono de piscina.",
+        "contextCropXYWH": [
+          2130,
+          940,
+          320,
+          310
+        ],
+        "labelEvidenceBlockIndex": 150,
+        "pointAcceptedAsGeographicAnchor": false
+      },
+      "sourceCrop": "tupahue-source.png",
+      "osmCandidates": [],
+      "osmContextOnly": [
+        {
+          "osmType": "node",
+          "osmId": 2953717033,
+          "version": 6,
+          "coordinateOrder": "longitude,latitude",
+          "coordinate": [
+            -70.6225809,
+            -33.415885
+          ],
+          "role": "Cruce Carlos Martner/Pedro Bannen del sector, no un nodo de estación",
+          "acceptedAsControl": false,
+          "url": "https://www.openstreetmap.org/node/2953717033"
+        }
+      ],
+      "candidateStatus": "Falta coordenada de la estación/entrada precisa. El cruce vial es contexto, no una ubicación de Teleférico Tupahue.",
+      "minimumRemoteDatum": "Pin público/huella geográfica oficial de la entrada o edificio de Teleférico Tupahue, con referencia que lo distinga de piscina/mural. La relación con el icono sirve primero para identidad/orientación; se requeriría una correspondencia explícita a un punto de suelo para promoverla a control.",
+      "unblocks": "Orientación Cumbre↔Tupahue e identificación de sector; no precisión local ni geometría completa de senderos."
+    }
+  ],
+  "minimumUsefulNextArtifact": "Primero resolver solo las filas 1 y 2 con un archivo/croquis oficial o una referencia pública que identifique sus extremos. Puede recibirse un solo GPX/KML/Geo JSON con nombre/fecha/procedencia y extremos rotulados. Después se evalúa si la geometría fuente permite una correspondencia; no se promete registrar todo el panorama. Filas 3–5 pueden confirmar acceso/orientación sin convertirse en controles.",
+  "acceptanceLimits": [
+    "Cinco candidatos no constituyen una garantía de precisión ni un mínimo matemático de controles.",
+    "Una coordenada de hito y una correspondencia imagen↔terreno son dos evidencias distintas.",
+    "El PDF es panorámico; los iconos, rótulos y símbolos compartidos pueden estar desplazados o agruparlugares. No se ajusta una transformación global ni se fuerzanuniones.",
+    "No hace falta una visita para aportar la evidencia solicitada: un archivo geográfico público/oficial o referencia cartográfica autorizada y una identificación inequívoca pueden bastar para un contraste remoto."
+  ],
+  "sourceHashes": {
+    "sources/parquemet-mapa-oficial.pdf": "e7606172479a0fd585f7f3dcb4187556a202778cd647b31f44aaefcf9bd03cf8",
+    "sources/parquemet-mapa-oficial.jpg": "e0d91c5e90bbc290ae1af71d1b51e29960f682ab5dd242c3b24ede003f0a7dd3",
+    "sources/parquemet-avenues-osm.json": "cf2aa2e2e548e1181a230966e7b6954b4403a6493212cea3c375032e775bc7bc"
+  },
+  "productionChanges": false,
+  "publication": false
+}

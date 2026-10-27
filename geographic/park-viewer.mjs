@@ -10,6 +10,7 @@ import {setupDocumentCycling} from './document-cycling.mjs';
 import {attachTrailPreviews} from './trail-preview.mjs';
 import {setupGpsTracking} from './gps.mjs';
 import {bikeAccessRestricted,bikeMatchingNetwork,bikePermissionConfirmed} from './network.mjs';
+import {placeRouteLabels} from './label-layout.mjs';
 const byId=id=>document.getElementById(id);
 const htmlSafe=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const metres=value=>Number.isFinite(value)?Math.round(value).toLocaleString('es-CL')+' m':'Sin datos';
@@ -49,23 +50,22 @@ function updateCards(){
  const cyclists=catalog.targets.filter(t=>t.category==='cycling-trail'||t.category==='shared-trail'),matched=cyclists.filter(t=>targetFeatures(t.id).length).length;
  routeFilters?.refresh();byId('data-status').textContent=geo?`${cyclists.length} recorridos ciclistas y compartidos en el plano; ${matched} con correspondencia nominal OSM. También ${catalog.targets.filter(t=>t.category==='avenue').length} avenidas y caminos; consulta sus restricciones antes de circular. Las longitudes publicadas y las medidas sobre OSM se muestran por separado. Los servicios figuran en el mapa; su disponibilidad actual está por confirmar.`:'Consultando los trazados geográficos de este parque.';
 }
-function topMapInset(){
- const origin=byId('geo-map').getBoundingClientRect();return Math.max(0,...['.map-toolbar','.map-source-switch','#map-filter-slot','#map-trails'].map(selector=>byId('map-card').querySelector(selector)).filter(el=>el?.getClientRects().length).map(el=>el.getBoundingClientRect().bottom-origin.top));
-}
 function fitFeatures(features){
  if(!map||!features.length)return;map.fitBounds(L.latLngBounds(features.flatMap(f=>f.geometry.coordinates.map(([lon,lat])=>[lat,lon]))),{...filterMapPadding(map,full),maxZoom:17,animate:false});
 }
 function fitAll(){fitFeatures(geo?.features.filter(f=>f.properties.targetId&&routeVisible(f.properties.targetId))||[]);}
 function layoutCyclingLabels(){
- if(!map||!full)return;const size=map.getSize(),origin=byId('geo-map').getBoundingClientRect(),placed=[];
- const obstacles=['.map-toolbar','.map-source-switch','#map-filter-slot','#map-trails','#map-options','#gps-panel','#route-sheet','.leaflet-control-zoom'].map(selector=>byId('map-card').querySelector(selector)).filter(el=>el&&el.getClientRects().length).map(el=>{const r=el.getBoundingClientRect();return{x:r.left-origin.left-4,y:r.top-origin.top-4,width:r.width+8,height:r.height+8};});
- const overlaps=(a,b)=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y;
- for(const item of cyclingLabels){const el=item.marker.getElement(),button=el?.querySelector('button');if(!button)continue;if(!routeVisible(item.id)||(item.category==='avenue'&&!['avenue','camino'].includes(routeFilters?.state.type)&&selectedTarget!==item.id)){el.style.visibility='hidden';item.leader.setLatLngs([]);continue;}const anchor=map.latLngToContainerPoint(item.marker.getLatLng()),w=button.offsetWidth,h=button.offsetHeight;let chosen=null;
-  if(anchor.x<0||anchor.y<0||anchor.x>size.x||anchor.y>size.y){el.style.visibility='hidden';item.leader.setLatLngs([]);continue;}
-  for(let radius=0;radius<=180&&!chosen;radius+=18){for(const [dx,dy]of radius?[[0,-radius],[0,radius],[-radius,0],[radius,0],[-radius,-radius],[radius,-radius],[-radius,radius],[radius,radius]]:[[0,-20]]){const rect={x:anchor.x-w/2+dx,y:anchor.y-h/2+dy,width:w+5,height:h+5};if(rect.x<6||rect.y<6||rect.x+w>size.x-6||rect.y+h>size.y-25||[...obstacles,...placed].some(other=>overlaps(rect,other)))continue;chosen=rect;break;}}
-  if(!chosen&&item.category==='avenue'){el.style.visibility='hidden';item.leader.setLatLngs([]);continue;}
-  if(!chosen)chosen={x:Math.max(6,Math.min(size.x-w-6,anchor.x-w/2)),y:Math.max(topMapInset()+8,Math.min(size.y-h-25,anchor.y-h-5)),width:w,height:h};
-  el.style.visibility=hiddenRoutes.has(item.id)?'hidden':'visible';button.style.transform=`translate(${chosen.x-anchor.x}px,${chosen.y-anchor.y}px)`;placed.push(chosen);const centre=L.point(chosen.x+w/2,chosen.y+h/2);item.leader.setLatLngs(hiddenRoutes.has(item.id)?[]:[item.marker.getLatLng(),map.containerPointToLatLng(centre)]);
+ if(!map||!full)return;const size=map.getSize(),origin=byId('geo-map').getBoundingClientRect(),labels=[];
+ const obstacles=['.map-toolbar','.map-source-switch','#map-filter-slot','#map-trails','#map-options','#gps-panel','#route-sheet','#rider-map-banner','#rider-map-hud','#rider-map-controls','.leaflet-control-zoom','.leaflet-control-attribution','.leaflet-control-scale','#map-notice'].map(selector=>byId('map-card').querySelector(selector)).filter(el=>el&&el.getClientRects().length).map(el=>{const r=el.getBoundingClientRect();return{x:r.left-origin.left-4,y:r.top-origin.top-4,width:r.width+8,height:r.height+8};});
+ for(const item of cyclingLabels){const el=item.marker.getElement(),button=el?.querySelector('button');if(!button)continue;
+  el.style.pointerEvents='none';button.style.pointerEvents='auto';
+  if(!routeVisible(item.id)||(item.category==='avenue'&&!['avenue','camino'].includes(routeFilters?.state.type)&&selectedTarget!==item.id)){el.style.visibility='hidden';item.leader.setLatLngs([]);continue;}
+  const anchor=map.latLngToContainerPoint(item.marker.getLatLng());labels.push({id:item.id,x:anchor.x,y:anchor.y,width:button.offsetWidth,height:button.offsetHeight,priority:item.id===selectedTarget?-1:item.category==='cycling-trail'?0:item.category==='shared-trail'?1:2});
+ }
+ const positions=placeRouteLabels({width:size.x,height:size.y,labels,obstacles});
+ for(const item of cyclingLabels){const el=item.marker.getElement(),button=el?.querySelector('button');if(!button)continue;const chosen=positions.get(item.id);
+  if(!chosen){el.style.visibility='hidden';item.leader.setLatLngs([]);continue;}
+  const anchor=map.latLngToContainerPoint(item.marker.getLatLng());el.style.visibility='visible';button.style.transform=`translate(${chosen.x-anchor.x}px,${chosen.y-anchor.y}px)`;const centre=L.point(chosen.x+chosen.width/2,chosen.y+chosen.height/2);item.leader.setLatLngs([item.marker.getLatLng(),map.containerPointToLatLng(centre)]);
  }
 }
 function paint(features){selection?.clearLayers();for(const f of features){const color=catalog.targets.find(t=>t.id===f.properties.targetId)?.color||'#657c60',points=f.geometry.coordinates.map(([lon,lat])=>[lat,lon]);L.polyline(points,{color:'#fffefa',weight:11,interactive:false,smoothFactor:0,className:'selected-route'}).addTo(selection);L.polyline(points,{color,weight:6,interactive:false,smoothFactor:0,dashArray:restricted(f)?'7 5':null,className:'selected-route'}).addTo(selection);}}
@@ -118,6 +118,9 @@ async function initPark(){
   if(!window.L)throw new Error('No se pudo cargar el mapa. Reintenta con conexión.');const [west,south,east,north]=catalog.geographicExtent;map=L.map('geo-map',{zoomControl:false,zoomSnap:.25,minZoom:2,maxZoom:19}).setView([(south+north)/2,(west+east)/2],14);L.control.zoom({position:'topleft'}).addTo(map);L.control.scale({imperial:false,position:'bottomleft'}).addTo(map);
   const tiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>'}).addTo(map);let loaded=0;tiles.on('loading',()=>{byId('geo-map').dataset.tilesReady='false';});tiles.on('load',()=>{byId('geo-map').dataset.tilesReady='true';});tiles.on('tileload',()=>{byId('geo-map').dataset.loadedTiles=String(++loaded);byId('map-notice').hidden=true;});tiles.on('tileerror',()=>{if(!loaded){byId('map-notice').textContent='No se está cargando el fondo. Los trazados conservan sus coordenadas OSM.';byId('map-notice').hidden=false;}});
   map.on('moveend zoomend resize',()=>{layoutCyclingLabels();const c=map.getCenter();byId('geo-map').dataset.view=[c.lat.toFixed(7),c.lng.toFixed(7),map.getZoom()].join(',');});
+  let labelFrame=null;const queueLabelLayout=()=>{if(labelFrame!==null)return;labelFrame=requestAnimationFrame(()=>{labelFrame=null;layoutCyclingLabels();});};
+  const labelResize=new ResizeObserver(queueLabelLayout),labelVisibility=new MutationObserver(queueLabelLayout);
+  for(const selector of ['#rider-map-banner','#rider-map-hud','#rider-map-controls','#gps-panel','#route-sheet','#map-notice']){const element=byId('map-card').querySelector(selector);if(element){labelResize.observe(element);labelVisibility.observe(element,{attributes:true,attributeFilter:['hidden','class','open']});}}
   byId('open-map').onclick=()=>setMapOpen(true);byId('close-map').onclick=()=>setMapOpen(false);byId('fit-routes').onclick=fitAll;byId('close-sheet').onclick=()=>{byId('route-sheet').hidden=true;selection?.clearLayers();selectedFeature=selectedTarget=null;layoutCyclingLabels();for(const b of byId('map-trails').querySelectorAll('button'))b.setAttribute('aria-pressed','false');};byId('fit-selected').onclick=()=>fitFeatures(selectedTarget?targetFeatures(selectedTarget):selectedFeature?[selectedFeature]:[]);
   const results=await Promise.allSettled([jsonResource('embedded-park-document',entry.document).then(meta=>loadDocument(meta,entry)),loadGeography()]);for(const result of results)if(result.status==='rejected')message(result.reason);
   routeFilters?.refresh();byId('source-loading').hidden=true;byId('map-card').dataset.ready='true';syncParkRoute();cyclingViews?.refreshData();

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "race",
+    "url": "https://www.outlife.cl/noticias/rey-de-la-buitrera-cronometraje-tercer-tiempo-en-rkf-el-durazno/",
+    "finalUrl": "https://www.outlife.cl/noticias/rey-de-la-buitrera-cronometraje-tercer-tiempo-en-rkf-el-durazno/",
+    "retrievedAt": "2026-10-27T12:03:24.863943+00:00",
+    "status": 200,
+    "bytes": 80827,
+    "sha256": "a4e1eb0ea8439c27fa3655ea300ddf9b23d543c69f7d3c8e927eba2792b80259",
+    "geographicDownloadsOrGeoportalLinks": []
+  },
+  {
+    "id": "project",
+    "url": "https://www.outlife.cl/proyectos/rkf-el-durazno/",
+    "finalUrl": "https://www.outlife.cl/proyectos/rkf-el-durazno/",
+    "retrievedAt": "2026-10-27T12:03:24.864547+00:00",
+    "status": 200,
+    "bytes": 119418,
+    "sha256": "ed1ad8847ed500f39d219693d18a6905ad91370d6e7c75729cdf84e1ea8cb812",
+    "geographicDownloadsOrGeoportalLinks": []
+  },
+  {
+    "id": "changes-2022",
+    "url": "https://www.outlife.cl/noticias/preparate-para-las-novedades-que-se-vienen-en-rkf-el-durazno/",
+    "finalUrl": "https://www.outlife.cl/noticias/preparate-para-las-novedades-que-se-vienen-en-rkf-el-durazno/",
+    "retrievedAt": "2026-10-27T12:03:24.865088+00:00",
+    "status": 200,
+    "bytes": 79594,
+    "sha256": "dd652a222236a0d8a9b589b4c5ca5ee57e3e33cf2a873aecaae649c0806e8bc4",
+    "geographicDownloadsOrGeoportalLinks": []
+  }
+]

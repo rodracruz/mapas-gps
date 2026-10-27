@@ -1,0 +1,23 @@
+{
+  "baselineCommit": "0d1f442ac65c2841ecfe3d67285b6af984375b00",
+  "scope": "label placement and actionable geographic control plan; no publication",
+  "unitTests": {
+    "passed": 160,
+    "failed": 0
+  },
+  "browserSuitesPassed": 12,
+  "previousCoverageFailure": "resolved; complete suite passes in source and standalone",
+  "overview390": {
+    "visibleCyclists": 8,
+    "visibleLabels": 13,
+    "collisions": 0,
+    "allTappable": true
+  },
+  "geographicControlsAccepted": 0,
+  "published": false,
+  "mainSha": "87edc6c9f8097a9eb34cfc1f7e955a74edfe3ab9",
+  "privateBundles": {
+    "index.html": "762a652ef9ef6108aca5accde4a8f99a36ae3907937af76db382f9d75b5c325d",
+    "parquemet.html": "f91fd3b261bca7a7941f0460f3a808cb32122b2643297651f918dbdf758ff950"
+  }
+}

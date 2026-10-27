@@ -1,5 +1,7 @@
 # Corrección documental y comprobación geográfica pendiente
 
+Actualización posterior: la regresión de rótulos descrita como pendiente en este registro histórico quedó corregida en el candidato. [Pruebas finales y plan de controles por parque](../mobile-labels-and-controls/README.md). La publicación activa no cambió.
+
 27-10-2026. Candidato sobre `8f6d6ca`, misma rama `feat/bikeride-stitch-integration`. **No sustituye la publicación privada v22 ni acredita equivalencia geográfica.** Main, almacenamiento y originales conservados.
 
 [Comparación ejecutable](index.html) · [Inventario trazable](inventory.json) · [17 candidatos geográficos](registration-review.json) · [Revisión independiente](final-review.md) · [Originales conservados](preserved-inputs.json).

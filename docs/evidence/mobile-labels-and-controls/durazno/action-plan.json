@@ -1,0 +1,512 @@
+{
+  "parkId": "el-durazno",
+  "asOf": "2026-10-27",
+  "worktreeHead": "0d1f442ac65c2841ecfe3d67285b6af984375b00",
+  "coordinateSystem": "official image pixels:2570x3077,x right,y down",
+  "sourceImage": {
+    "path": "sources/el-durazno-official-2022.jpg",
+    "sha256": "ee124136bc9930ca1928d2df1f79a9810fb4d245c66503a2d4c6ae888aea29af"
+  },
+  "acceptedControlCount": 0,
+  "acceptedTransform": null,
+  "matrixUnchanged": [
+    1.7954033321768108,
+    -0.04585917216400048,
+    -0.04585917216400048,
+    -1.7954033321768108,
+    -7850590.02345322,
+    -3934056.979365916
+  ],
+  "historicalReview": {
+    "legacyTwoReferenceViewer": {
+      "commit": "44cca103d385a3f93922a4f39645fb661ba94a5c",
+      "date": "2026-10-18T13:51:48-03:00",
+      "path": "visor-vectorial.html",
+      "sha256": "f60da626b5cd2edbb4eaa7ad0cf0e60689d7784ee5745f1a3baabe3dee6b997b",
+      "coordinateFrame": "independent illustrative SVG viewBox230 90 820 1060; no image element tying this drawing to the official JPG or native photo",
+      "points": [
+        {
+          "id": "A",
+          "label": "Acceso / Base",
+          "svgPoint": [
+            303,
+            971
+          ],
+          "latitude": -33.32184,
+          "longitude": -70.51284,
+          "matchingPublicNode": 9258698134,
+          "matchMeaning": "rounded generic sports_centre marker, not gate",
+          "distanceToEntranceNodeM": 170.972
+        },
+        {
+          "id": "B",
+          "label": "La Buitrera",
+          "svgPoint": [
+            774,
+            345
+          ],
+          "latitude": -33.30132,
+          "longitude": -70.49373,
+          "matchingPublicNode": 4705647672,
+          "matchMeaning": "rounded named viewpoint, not statue or unnamed ascent endpoint",
+          "roundingDistanceM": 0.217
+        }
+      ],
+      "exportMetadata": "ILLUSTRATIVE_ONLY; NOT FOR NAVIGATION / two approximate landmarks",
+      "authorshipCaution": "A commit under the owner account does not prove these were owner-measured control points or recover their original chat provenance."
+    },
+    "legacyGisPage": {
+      "path": "gps-real.html",
+      "commit": "87edc6c",
+      "sourceLabels": [
+        "OpenStreetMap / Mapcarta",
+        "Trailforks trailhead references"
+      ],
+      "status": "Not accepted controls. No Trailforks geometry used or fetched."
+    },
+    "localCalibration": {
+      "code": "app.js",
+      "database": "mapas-gps-v1",
+      "store": "maps",
+      "pointSchema": [
+        "px",
+        "py",
+        "lat",
+        "lon"
+      ],
+      "seedPoints": [],
+      "storageScope": "user browser/origin IndexedDB; not uploaded by app",
+      "availablePersonalExportFound": false,
+      "browserProfilesOrSessionFilesRead": false,
+      "limitation": "The user browser IndexedDB and full previous conversation are not available in these task materials. Existing calibration records may exist there; do not claim they do not exist or ask for re-entry before checking an owner-provided existing export/capture."
+    },
+    "photos": [
+      {
+        "path": "Retained local evidence: elh-durazno.jpg",
+        "width": 900,
+        "height": 1100,
+        "bytes": 453793,
+        "sha256": "c9fde34725691801933b3ba72f887a31677dba305d30f0f938f0ddf81211d018",
+        "hasGpsExif": false,
+        "privateBinaryCopied": false
+      },
+      {
+        "path": "Retained local evidence: 81184.jpg",
+        "width": 960,
+        "height": 1280,
+        "bytes": 177187,
+        "sha256": "c6391281460cc5c6ad65d61069bd310bdd1dd64b8fedbb4d2c12d81898668fb9",
+        "hasGpsExif": false,
+        "privateBinaryCopied": false
+      }
+    ],
+    "knownPackageInspections": [
+      {
+        "path": "Retained local evidence: mapas-gps-hito1.zip",
+        "memberCount": 99,
+        "calibrationNamedExportMembers": [],
+        "interpretedAs": "application/design source package, not an identified personal calibration export"
+      },
+      {
+        "path": "Retained local evidence: mapas-gps-mobile.zip",
+        "memberCount": 5,
+        "calibrationNamedExportMembers": [],
+        "interpretedAs": "application/design source package, not an identified personal calibration export"
+      },
+      {
+        "path": "Retained local evidence: mapas-gps-todos-senderos.zip",
+        "memberCount": 24,
+        "calibrationNamedExportMembers": [],
+        "interpretedAs": "application/design source package, not an identified personal calibration export"
+      },
+      {
+        "path": "Retained local evidence: stitch_outdoor_activity_finder.zip",
+        "memberCount": 7,
+        "calibrationNamedExportMembers": [],
+        "interpretedAs": "application/design source package, not an identified personal calibration export"
+      }
+    ],
+    "googleLinks": {
+      "userProvidedLinkFoundInAccessibleMaterials": false,
+      "scope": "current tracked source/docs, relevant complete git history searches, known artifact notes and available task attachment filenames/ZIP listings",
+      "actualThirdPartyLink": {
+        "foundIn": "retained third-party Wikiexplora HTML",
+        "url": "https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d106604.77763292217!2d-70.65796709040713!3d-33.386745341070494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m5!1s0x9662c5410425af2f%3A0x8475d53c400f0931!2sSantiago%20de%20Chile!3m2!1d-33.448889699999995!2d-70.6692655!4m3!3m2!1d-33.3249299!2d-70.5118743!5e0!3m2!1ses-419!2scl!4v1634000084584!5m2!1ses-419!2scl",
+        "destinationCoordinateLatLonFromLiteralUrl": [
+          -33.3249299,
+          -70.5118743
+        ],
+        "userProvided": false,
+        "acceptedControl": false,
+        "reason": "Route/destination embed from a third-party guide; not proof of park gate or a point in the sign. No route geometry was extracted."
+      },
+      "limitation": "No claim about unavailable prior chat messages or the owner browser history."
+    },
+    "syntheticStorageTests": "docs/evidence/verification.md and gps-storage-browser.mjs identify their fixtures as synthetic/disposable. They are not recovered user calibrations."
+  },
+  "candidates": [
+    {
+      "id": "D1",
+      "name": "Llegadas inferiores de Lomo Vetado y Calibre12, junto al inicio de Los Saltos",
+      "regionNativeXYWH": [
+        1175,
+        1560,
+        115,
+        125
+      ],
+      "imageFeatures": [
+        {
+          "label": "Lomo Vetado: punto azul lleno",
+          "pixel": [
+            1214.56054,
+            1605.57163
+          ],
+          "drawingIndices": [
+            40
+          ]
+        },
+        {
+          "label": "Calibre12: punto negro lleno",
+          "pixel": [
+            1243.32234,
+            1616.35474
+          ],
+          "drawingIndices": [
+            46
+          ]
+        },
+        {
+          "label": "Los Saltos: círculo blanco cercano",
+          "pixel": [
+            1238.97706,
+            1645.38224
+          ],
+          "drawingIndices": [
+            37,
+            38
+          ]
+        }
+      ],
+      "geographicCandidates": [
+        {
+          "type": "node",
+          "id": 4705608441,
+          "latitude": -33.3138365,
+          "longitude": -70.5036907,
+          "url": "https://www.openstreetmap.org/node/4705608441",
+          "meaning": "Mapa informativo y extremo compartido OSM; candidato que no puede asignarse a dos píxeles distintos por defecto"
+        },
+        {
+          "type": "node",
+          "id": 9258698201,
+          "latitude": -33.3136744,
+          "longitude": -70.5037364,
+          "url": "https://www.openstreetmap.org/node/9258698201",
+          "meaning": "Plaza de Los Saltos: mirador distinto, aproximadamente18.5m del mapa informativo"
+        }
+      ],
+      "alreadyAvailable": "Los centros originales están recuperados exactamente del PDF. El registro previo ya conserva las dos hipótesis que usan el nodo4705608441. Noticia oficial2025 documenta el recorrido Lomo Vetado→Plaza Saltos→Cebolla, pero no ubica estos puntos.",
+      "specificConflict": "Los puntos Lomo/Calibre están separados30.71672px; una semejanza no puede hacerlos coincidir a la vez con el mismo nodo. La separación bajo el modelo actual es46.12m; no es error de terreno medido.",
+      "minimumNewDatum": "Revisar primero el enlace/pin o anotación anterior, si está disponible, e indicar cuál de estos círculos representa el mapa/cruce físico4705608441. Si ambos senderos llegan realmente al mismo sitio, hace falta evidencia que explique la separación gráfica; si son sitios distintos, basta identificar el segundo hito concreto y su coordenada/procedencia. Una captura o croquis ya existente que nombre el cruce puede resolverlo, sin volver a trazar rutas.",
+      "acceptanceEvidence": "Un par píxel↔objeto físico identificado sin intercambiar mirador, mapa informativo y final de sendero, con fuente/fecha de la coordenada. Mantener los otros círculos separados hasta aclararlos.",
+      "priority": 1,
+      "status": "pendiente-de-correspondencia-inequívoca",
+      "acceptedControl": false
+    },
+    {
+      "id": "D2",
+      "name": "Estatua de la Virgen, sector norte",
+      "regionNativeXYWH": [
+        1785,
+        550,
+        155,
+        100
+      ],
+      "imageFeatures": [
+        {
+          "label": "Centro gráfico del icono Virgen: candidato, no ancla física aceptada",
+          "pixel": [
+            1860.20534,
+            595.51355
+          ],
+          "drawingIndices": [
+            2054,
+            2055
+          ]
+        },
+        {
+          "label": "Círculo del final de La Virgen, distinto del icono",
+          "pixel": [
+            1831.30068,
+            604.39403
+          ],
+          "drawingIndices": [
+            33,
+            34
+          ]
+        }
+      ],
+      "geographicCandidates": [
+        {
+          "type": "node",
+          "id": 9258698197,
+          "latitude": -33.300859,
+          "longitude": -70.4937586,
+          "url": "https://www.openstreetmap.org/node/9258698197",
+          "meaning": "Estatua Virgen; no es el mirador Buitrera ni el final de Subida"
+        }
+      ],
+      "alreadyAvailable": "El PDF contiene el icono específico; OSM identifica una estatua Virgen. Hay un candidato semántico fuerte y coordenada pública ya disponible.",
+      "specificConflict": "El icono y el círculo verde están30.23809px separados. Elegir el centro del cuadrado o el final verde cambia el punto de ajuste; no hay ancla declarada por el mapa.",
+      "minimumNewDatum": "Una anotación, fotografía identificada o referencia previa que vincule la estatua física con un punto preciso del plano. Reutilizar la coordenada existente si se confirma el mismo objeto; no pedir otra coordenada solo por formato.",
+      "acceptanceEvidence": "Confirmación del objeto físico y de dónde se ancla en el mapa; dejar explícita la incertidumbre de colocación del símbolo.",
+      "priority": 2,
+      "status": "candidato-semántico-sin-ancla-cartográfica",
+      "acceptedControl": false
+    },
+    {
+      "id": "D3",
+      "name": "Mirador La Buitrera y final de Subida: objetos distintos",
+      "regionNativeXYWH": [
+        1790,
+        610,
+        200,
+        110
+      ],
+      "imageFeatures": [
+        {
+          "label": "Centro gráfico del icono Mirador/Buitrera",
+          "pixel": [
+            1869.52205,
+            634.28324
+          ],
+          "drawingIndices": [
+            1090
+          ]
+        },
+        {
+          "label": "Punto rojo superior Subida",
+          "pixel": [
+            1843.20521,
+            662.29337
+          ],
+          "drawingIndices": [
+            243
+          ]
+        }
+      ],
+      "geographicCandidates": [
+        {
+          "type": "node",
+          "id": 4705647672,
+          "latitude": -33.301319,
+          "longitude": -70.493732,
+          "url": "https://www.openstreetmap.org/node/4705647672",
+          "meaning": "Mirador Buitrera: coincide por redondeo con la referencia B histórica"
+        },
+        {
+          "type": "node",
+          "id": 397645997,
+          "latitude": -33.3013392,
+          "longitude": -70.4938151,
+          "url": "https://www.openstreetmap.org/node/397645997",
+          "meaning": "Extremo OSM Subida Buitrera/conexión; nodo sin nombre distinto del mirador"
+        }
+      ],
+      "alreadyAvailable": "El visor antiguo ya conserva B[-33.30132,-70.49373], aproximadamente0.22m del nodo del mirador por redondeo. Ese dato se conserva como candidato; su píxel[774,345] pertenece al SVG ilustrativo viejo.",
+      "specificConflict": "La estatua, el mirador y el extremo de Subida son tres referencias diferentes. El mirador y el nodo de sendero están aproximadamente8m separados; no intercambiar sus coordenadas.",
+      "minimumNewDatum": "Identificar en este recorte cuál era el hito físico marcado como B: mirador o final de sendero. Una marca/captura del enlace antiguo basta para avanzar la identidad; después se revisa dónde se representa ese objeto en el JPG oficial, sin trasladar los píxeles del SVG viejo.",
+      "acceptanceEvidence": "B solo puede reutilizarse con el objeto que realmente señalaba; cualquier otro punto necesita su propia correspondencia. No se supone que el centro del icono sea la posición del mirador.",
+      "priority": 3,
+      "status": "reutilizar-B-con-desambiguación",
+      "acceptedControl": false
+    },
+    {
+      "id": "D4",
+      "name": "Acceso físico y centro de operaciones, extremo suroeste",
+      "regionNativeXYWH": [
+        600,
+        2170,
+        235,
+        326
+      ],
+      "imageFeatures": [
+        {
+          "label": "Región del mapa principal con edificios y subida; no hay píxel de portón aceptado",
+          "pixel": null,
+          "region": [
+            600,
+            2170,
+            235,
+            326
+          ],
+          "drawingIndices": [
+            239,
+            2797,
+            2798
+          ]
+        },
+        {
+          "label": "ACCESO del inserto: marco/escalado separado; no usar como punto del mapa principal",
+          "pixel": null,
+          "region": [
+            578.7,
+            115.06,
+            694.1,
+            689.16
+          ]
+        }
+      ],
+      "geographicCandidates": [
+        {
+          "type": "node",
+          "id": 9258698133,
+          "latitude": -33.3232656,
+          "longitude": -70.5121506,
+          "url": "https://www.openstreetmap.org/node/9258698133",
+          "meaning": "Entrada OSM, compartida por cerca y subida"
+        },
+        {
+          "type": "node",
+          "id": 9258698134,
+          "latitude": -33.3218441,
+          "longitude": -70.5128438,
+          "url": "https://www.openstreetmap.org/node/9258698134",
+          "meaning": "Marcador genérico sports_centre: coincide por redondeo con A histórica, no representa el portón"
+        }
+      ],
+      "alreadyAvailable": "A[-33.32184,-70.51284] ya existe en el visor ilustrativo. El original fotográfico y el JPG oficial ya están conservados; no hay que volver a fotografiar el cartel.",
+      "specificConflict": "A coincide con el marcador general del parque y está aproximadamente171m del nodo de entrada. El inserto ampliado y la silueta de edificios no identifican automáticamente el portón en la red principal.",
+      "minimumNewDatum": "Recuperar primero qué objeto señalaba el pin/captura anterior de Acceso/Base. Si era el portón, identificar el portón concreto en una referencia existente y el punto correspondiente del mapa principal; si era la base/tienda, conservar ese significado y no renombrarlo como portón. Puede resolverse con documentación o imagen geográfica autorizada, sin exigir visita.",
+      "acceptanceEvidence": "Objeto preciso y punto correspondiente en el marco del mapa principal, distinguiendo portón, tienda/base y marcador del parque.",
+      "priority": 4,
+      "status": "A-no-identifica-portón",
+      "acceptedControl": false
+    },
+    {
+      "id": "D5",
+      "name": "Sector este: círculos de El Duro y Rock N’Roll junto a XL",
+      "regionNativeXYWH": [
+        2190,
+        1920,
+        160,
+        140
+      ],
+      "imageFeatures": [
+        {
+          "label": "Círculo de El Duro",
+          "pixel": [
+            2283.68301,
+            1988.12227
+          ],
+          "drawingIndices": [
+            13,
+            14
+          ]
+        },
+        {
+          "label": "Círculo de Rock N’Roll",
+          "pixel": [
+            2280.09384,
+            2005.0297
+          ],
+          "drawingIndices": [
+            10,
+            11
+          ]
+        }
+      ],
+      "geographicCandidates": [
+        {
+          "type": "node",
+          "id": 397646284,
+          "latitude": -33.319469,
+          "longitude": -70.487609,
+          "url": "https://www.openstreetmap.org/node/397646284",
+          "meaning": "Extremo nominal Rock N’Roll y nodo compartido por dos vías nominales XL"
+        }
+      ],
+      "alreadyAvailable": "Los dos círculos están exactamente conservados y las vías OSM nominales Rock/XL ya están retenidas. No hay vía OSM El Duro identificada por el catálogo actual.",
+      "specificConflict": "Son dos círculos distintos y las extensiones completas nominales OSM difieren del dibujo. Asignarles el mismo cruce o identificar El Duro por proximidad inventaría correspondencias.",
+      "minimumNewDatum": "Un pin/anotación o referencia geográfica ya existente que identifique el cruce real de Rock N’Roll con XL y cuál círculo del cartel le corresponde, indicando edición/fecha si se conoce. Mantener el otro círculo sin asignación hasta identificarlo.",
+      "acceptanceEvidence": "Correspondencia de cruce con identidad y límites de ruta contrastados. Podría servir como comprobación al este si se mantiene fuera del ajuste; por sí solo el mismo OSM no aporta validación independiente.",
+      "priority": 5,
+      "status": "candidato-para-comprobación-este",
+      "acceptedControl": false
+    }
+  ],
+  "boundedOfficialSearch": {
+    "queries": [
+      "site:outlife.cl El Durazno GPX KML KMZ GPS georreferenciado",
+      "site:lobarnechea.cl El Durazno Buitrera coordenadas senderos GIS",
+      "El Durazno Lomo Vetado GPX KML georreferenciado excluding provider geometry",
+      "El Durazno Buitrera cartografía geoportal coordenadas"
+    ],
+    "reusedOperatorPageReceipt": "Retained local evidence: operator-fetch.json",
+    "freshSourceReceipts": [
+      {
+        "id": "race",
+        "url": "https://www.outlife.cl/noticias/rey-de-la-buitrera-cronometraje-tercer-tiempo-en-rkf-el-durazno/",
+        "finalUrl": "https://www.outlife.cl/noticias/rey-de-la-buitrera-cronometraje-tercer-tiempo-en-rkf-el-durazno/",
+        "retrievedAt": "2026-10-27T12:03:24.863943+00:00",
+        "status": 200,
+        "bytes": 80827,
+        "sha256": "a4e1eb0ea8439c27fa3655ea300ddf9b23d543c69f7d3c8e927eba2792b80259",
+        "geographicDownloadsOrGeoportalLinks": []
+      },
+      {
+        "id": "project",
+        "url": "https://www.outlife.cl/proyectos/rkf-el-durazno/",
+        "finalUrl": "https://www.outlife.cl/proyectos/rkf-el-durazno/",
+        "retrievedAt": "2026-10-27T12:03:24.864547+00:00",
+        "status": 200,
+        "bytes": 119418,
+        "sha256": "ed1ad8847ed500f39d219693d18a6905ad91370d6e7c75729cdf84e1ea8cb812",
+        "geographicDownloadsOrGeoportalLinks": []
+      },
+      {
+        "id": "changes-2022",
+        "url": "https://www.outlife.cl/noticias/preparate-para-las-novedades-que-se-vienen-en-rkf-el-durazno/",
+        "finalUrl": "https://www.outlife.cl/noticias/preparate-para-las-novedades-que-se-vienen-en-rkf-el-durazno/",
+        "retrievedAt": "2026-10-27T12:03:24.865088+00:00",
+        "status": 200,
+        "bytes": 79594,
+        "sha256": "dd652a222236a0d8a9b589b4c5ca5ee57e3e33cf2a873aecaae649c0806e8bc4",
+        "geographicDownloadsOrGeoportalLinks": []
+      }
+    ],
+    "findings": [
+      {
+        "url": "https://www.outlife.cl/noticias/rey-de-la-buitrera-cronometraje-tercer-tiempo-en-rkf-el-durazno/",
+        "supports": "Operator confirms named event sequence Lomo Vetado→Plaza Saltos→Cebolla in2025; no mapped coordinates or geodata download."
+      },
+      {
+        "url": "https://www.outlife.cl/proyectos/rkf-el-durazno/",
+        "supports": "Operator confirms maps, pumptrack, ticket office, toilets and store at access; no georeferenced plan."
+      },
+      {
+        "url": "https://www.outlife.cl/noticias/preparate-para-las-novedades-que-se-vienen-en-rkf-el-durazno/",
+        "supports": "Operator documents2022 structural trail changes/new e-bike ascent; no usable point coordinates."
+      }
+    ],
+    "newOfficialGeographicControlSourceFound": false,
+    "accessDenialBypass": false,
+    "providerGeometryUsed": false
+  },
+  "nextSteps": [
+    "Reuse historical A/B and any pre-existing owner calibration/capture with provenance; keep their original coordinate frame.",
+    "Resolve D1 first and identify what B represents in D3. This advances identity without asking the owner to repeat a full mapping exercise.",
+    "Accept only reviewed pixel/physical-object/coordinate pairs. Fit an appropriate model after resolving contradictions; do not impose an arbitrary point quota.",
+    "Keep some genuine evidence outside the fit for spatial checks, especially the eastern/northern area. Same-OSM holdouts are shape checks, not independent surveyed validation."
+  ],
+  "userFieldTripRequired": false,
+  "productionEdits": false,
+  "published": false,
+  "inputHashes": {
+    "/workspace/mapas-gps/.worktrees/parquemet-coverage/visor-vectorial.html": "f60da626b5cd2edbb4eaa7ad0cf0e60689d7784ee5745f1a3baabe3dee6b997b",
+    "/workspace/mapas-gps/.worktrees/parquemet-coverage/app.js": "6e5e0d672980abd8bfc97fb295e35222563c88eabfc78900e09ab99dd609dc70",
+    "/workspace/mapas-gps/.worktrees/parquemet-coverage/data/el-durazno/cartel-registration.json": "758e441e97492650a1b178941ea097ec0ab5339b153904c45f7921216ad26177",
+    "/workspace/mapas-gps/.worktrees/parquemet-coverage/data/el-durazno/continuous-sign-trails.json": "73521732a4b58bcd14a0aefc17697dca35e5aa05f8f7bd5d3830f2c661f56f78",
+    "/workspace/mapas-gps/.worktrees/parquemet-coverage/sources/el-durazno-osm.json": "b8926fb02ddcc2410850d831312e64a5c51e5aeb9db49ce970a86e418a0df318"
+  }
+}

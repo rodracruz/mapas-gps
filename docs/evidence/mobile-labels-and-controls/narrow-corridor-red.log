@@ -1,0 +1,27 @@
+✔ labels pack into free mobile map space without a collision fallback (7.991168ms)
+✔ selected labels take priority and impossible labels are hidden rather than covering a control (0.597996ms)
+✖ a selected label uses a narrow internal corridor between measured controls (2.914263ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 88.213905
+
+✖ failing tests:
+
+test at tests/label-layout.test.mjs:17:1
+✖ a selected label uses a narrow internal corridor between measured controls (2.914263ms)
+  AssertionError [ERR_ASSERTION]: a10px grid must not overlook the safe strip between banner and GPS
+      at TestContext.<anonymous> (file:///workspace/mapas-gps/.worktrees/parquemet-coverage/tests/label-layout.test.mjs:19:80)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

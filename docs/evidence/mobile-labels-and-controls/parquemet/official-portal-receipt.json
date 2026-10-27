@@ -1,0 +1,27 @@
+{
+  "requestedUrl": "https://mapas.parquemet.cl/",
+  "startedAtUTC": "2026-10-27T12:02:05.048064+00:00",
+  "purpose": "One bounded fresh inspection of official map portal for GIS/GPX/KML/GeoJSON resources resolving cycling trail endpoints; prior 2026-10-20 portal inspection reviewed first.",
+  "resolvedUrl": "https://mapas.parquemet.cl/",
+  "status": 200,
+  "bytes": 6365,
+  "sha256": "4bdfd1c42275b9a8acc701cee2c4eba73a7a41034c90fdf585b29412e1568456",
+  "contentType": "text/html; charset=UTF-8",
+  "links": [
+    "https://mapas.parquemet.cl/doc/MapaParque.pdf",
+    "https://mapas.parquemet.cl/doc/MAPA_ZOOLOGICO_PARQUEMET.pdf",
+    "https://mapas.parquemet.cl/doc/MAP_BosqueStgo_2023.pdf",
+    "https://mapas.parquemet.cl/pu/index.html",
+    "https://suda.io/profile/tbeE4GSQz2",
+    "tel:1466",
+    "https://www.parquemet.cl"
+  ],
+  "scripts": [
+    "https://www.googletagmanager.com/gtag/js?id=UA-146128441-1",
+    "https://code.jquery.com/jquery-3.6.0.slim.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js",
+    "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  ],
+  "geographicFormatMentions": [],
+  "finishedAtUTC": "2026-10-27T12:02:06.460114+00:00"
+}

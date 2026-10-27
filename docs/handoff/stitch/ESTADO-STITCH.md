@@ -2,7 +2,7 @@
 
 ## Trabajo actual: fidelidad cartográfica, 27-10-2026
 
-Hay una corrección documental candidata sobre v22:68 objetos punteados originales recuperados, estilos y símbolos del PDF conservados y GPS sin sustitución silenciosa de fuente. **No está publicada ni cierra la georreferenciación.** Cero controles aceptados; Parquemet sigue siendo un esquema comparado con OSM independiente.157 pruebas unitarias y regresiones focalizadas pasan; el test anterior de rótulos móviles de Parquemet falla también en v22 y queda documentado. Consultar [comparación/inventario/pruebas y límites](../../evidence/cartographic-fidelity/README.md). La versión activa sigue siendo22 y main no cambió.
+Hay una corrección documental candidata sobre v22:68 objetos punteados originales recuperados, estilos y símbolos del PDF conservados y GPS sin sustitución silenciosa de fuente. **No está publicada ni cierra la georreferenciación.** Cero controles aceptados; Parquemet sigue siendo un esquema comparado con OSM independiente.La regresión de rótulos móviles de Parquemet ya está corregida en el candidato:160 pruebas unitarias y12 suites de navegador finales pasan, incluida la cobertura completa anterior en fuente/paquete. Se documentó un plan de cinco hitos por parque y revisión de A/B/calibraciones históricas. [Rótulos y controles geográficos accionables](../../evidence/mobile-labels-and-controls/README.md). Consultar [comparación/inventario/pruebas y límites](../../evidence/cartographic-fidelity/README.md). La versión activa sigue siendo22 y main no cambió.
 
 ## Última etapa publicada
 
