@@ -1,0 +1,117 @@
+[
+  {
+    "path": "data/el-durazno/all-visual-trails.json",
+    "sha256": "f68ae492e04724e2cbad56a3bf64910868c237a486a4576b6c48fb0f526d1368"
+  },
+  {
+    "path": "data/el-durazno/cartel-registration.json",
+    "sha256": "758e441e97492650a1b178941ea097ec0ab5339b153904c45f7921216ad26177"
+  },
+  {
+    "path": "data/el-durazno/centerline-samples.json",
+    "sha256": "4ef843143198c43c06e6d9e6170a80c4e0313ae1ce03403a86172115257d6499"
+  },
+  {
+    "path": "data/el-durazno/continuous-sign-trails.json",
+    "sha256": "73521732a4b58bcd14a0aefc17697dca35e5aa05f8f7bd5d3830f2c661f56f78"
+  },
+  {
+    "path": "data/el-durazno/geographic-catalog.json",
+    "sha256": "88c93ae8cf5444659a0c5de90e615b9698695dbc37ee4f761ecd3718133b49fb"
+  },
+  {
+    "path": "data/el-durazno/geographic-references.json",
+    "sha256": "c6fbf94dd71896b867d78b668ffd58e4fabf11a5c518e7c599cc770f8f20d8a8"
+  },
+  {
+    "path": "data/el-durazno/image-registration.json",
+    "sha256": "c2259dc4715c4314464f012a4425d573991892feabfe31b56d1477b0d7db0081"
+  },
+  {
+    "path": "data/el-durazno/review-images.json",
+    "sha256": "ae0416c03d359222cd55849a903fee41122c5a966a6139bdf49c9dadc0997548"
+  },
+  {
+    "path": "data/el-durazno/visual-corrections.json",
+    "sha256": "faabf62b1811e26489803dac1c65a1a0910dc08704a0ead24aff618e91cd6a8f"
+  },
+  {
+    "path": "data/el-durazno/visual-trails.json",
+    "sha256": "14882b099a1d29e81bdd5b5d94bfa3c721a37b9c50442a8e11cd53aa5263cd1f"
+  },
+  {
+    "path": "data/parks.json",
+    "sha256": "d6e3724b9a6d851b06162305408b245f4f0da65579b86f5afac437cf12e3f3fc"
+  },
+  {
+    "path": "data/parquemet/geographic-catalog.json",
+    "sha256": "e98ad7b424dccf74fd0b795c17138e594ad391a614d14a707c60020a590e0de6"
+  },
+  {
+    "path": "data/parquemet/official-document.json",
+    "sha256": "13cf15529e3a572e654681912ee09ba9c718cd070c3c688fb58c485a9b44d268"
+  },
+  {
+    "path": "data/parquemet/visual-avenues.json",
+    "sha256": "828f1e45b2d18ce35b0547b672f5cfa346c6541873f6c6f7eaa0b6ba4a12ea20"
+  },
+  {
+    "path": "data/parquemet/visual-cycling-trails.json",
+    "sha256": "10c75c0778494a0d4b04a2005316a351261a6fa5d95e45a7117d8ffa70169eba"
+  },
+  {
+    "path": "data/parquemet/visual-paseo-trails.json",
+    "sha256": "e7b938e8d032feae33ffb67d0b5ab7e5b0e681b96657a6426e8bb4a10284e2e6"
+  },
+  {
+    "path": "sources/el-durazno-official-2022.jpg",
+    "sha256": "ee124136bc9930ca1928d2df1f79a9810fb4d245c66503a2d4c6ae888aea29af"
+  },
+  {
+    "path": "sources/el-durazno-official-aligned-2x.jpg",
+    "sha256": "d53d3b522b945842e816556a27c11c103463852d2f9d2f50b190cec7d3c9294f"
+  },
+  {
+    "path": "sources/el-durazno-osm.json",
+    "sha256": "b8926fb02ddcc2410850d831312e64a5c51e5aeb9db49ce970a86e418a0df318"
+  },
+  {
+    "path": "sources/parquemet-avenues-osm.json",
+    "sha256": "cf2aa2e2e548e1181a230966e7b6954b4403a6493212cea3c375032e775bc7bc"
+  },
+  {
+    "path": "sources/parquemet-mapa-oficial.jpg",
+    "sha256": "e0d91c5e90bbc290ae1af71d1b51e29960f682ab5dd242c3b24ede003f0a7dd3"
+  },
+  {
+    "path": "sources/parquemet-mapa-oficial.pdf",
+    "sha256": "e7606172479a0fd585f7f3dcb4187556a202778cd647b31f44aaefcf9bd03cf8"
+  },
+  {
+    "path": "sources/parquemet-osm.json",
+    "sha256": "4cb185c60c137a15810fb941ca20954bcae6be09487cc27c580617ba156e3e1c"
+  },
+  {
+    "path": "sources/parquemet-shared-osm.json",
+    "sha256": "0954dccc4a9256fcb1a73a4af744efa8a0f0040770dc2e36c8506212cbcb1cbc"
+  },
+  {
+    "path": "dist/index.html",
+    "sha256": "02a3ac487972443cb6909a3c7ee37627e018c23f4cd2343af4e793d3a6c70727",
+    "historicalPrivateBuildPreserved": true
+  },
+  {
+    "path": "dist/mapas-gps-parques.html",
+    "sha256": "02a3ac487972443cb6909a3c7ee37627e018c23f4cd2343af4e793d3a6c70727",
+    "historicalPrivateBuildPreserved": true
+  },
+  {
+    "path": "dist/parquemet.html",
+    "sha256": "ef015d055b6ef00d7f1c88bbcbae51c99fb1d94f5e92f02fff7882511ca8351c",
+    "historicalPrivateBuildPreserved": true
+  },
+  {
+    "path": "private user photograph (not in public repository)",
+    "sha256": "c6391281460cc5c6ad65d61069bd310bdd1dd64b8fedbb4d2c12d81898668fb9"
+  }
+]

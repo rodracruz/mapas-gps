@@ -23,20 +23,29 @@ export function signShape(p){
  for(const [k,v] of Object.entries({d:p.d,fill:p.fill||'none','fill-rule':p.fillRule||'nonzero',stroke:p.stroke||'none','stroke-width':p.strokeWidth||0,'stroke-linecap':p.lineCap||'round','stroke-linejoin':p.lineJoin||'round'}))n.setAttribute(k,String(v));
  return n;
 }
-export function createCartelLayer(map,d,registration,onSelect){
+export function createCartelLayer(map,d,registration,onSelect,contextArtwork=null){
  validateContinuous(d);const L=window.L,ns='http://www.w3.org/2000/svg',layer=L.layerGroup(),byTrail=new Map(d.trails.map(t=>[t.id,L.layerGroup().addTo(layer)]));
  const latlng=p=>{const [x,y]=imageToMercator(p,registration);return L.CRS.EPSG3857.unproject(L.point(x,y));};
  const corners=[[0,0],[d.image.width,0],[0,d.image.height],[d.image.width,d.image.height]].map(p=>imageToMercator(p,registration));
  const xs=corners.map(p=>p[0]),ys=corners.map(p=>p[1]),xmin=Math.min(...xs),xmax=Math.max(...xs),ymin=Math.min(...ys),ymax=Math.max(...ys),[a,b,c,d0,e0,f0]=registration.experimentalModel.matrix;
  const svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox',`0 0 ${xmax-xmin} ${ymax-ymin}`);svg.classList.add('cartel-artwork');
  const root=document.createElementNS(ns,'g');root.setAttribute('transform',`matrix(${a} ${-b} ${c} ${-d0} ${e0-xmin} ${ymax-f0})`);svg.append(root);
+ // The source itself clips artwork at the image edge (drawing303 extends past it).
+ const defs=document.createElementNS(ns,'defs'),clip=document.createElementNS(ns,'clipPath'),rect=document.createElementNS(ns,'rect'),clipId='cartel-source-clip';clip.id=clipId;rect.setAttribute('width',d.image.width);rect.setAttribute('height',d.image.height);clip.append(rect);defs.append(clip);svg.prepend(defs);root.setAttribute('clip-path',`url(#${clipId})`);
+ const context=document.createElementNS(ns,'g');context.classList.add('cartel-context');context.style.pointerEvents='none';root.append(context);
+ for(const p of contextArtwork?.paths||[]){const node=signShape(p);node.classList.add('cartel-connection-artwork');node.dataset.sourcePath=p.id;node.dataset.connectionKind=p.role;context.append(node);}
  const groups=new Map(),labels=new Map();
  for(const t of d.trails){const group=document.createElementNS(ns,'g');group.dataset.cartelTrail=t.id;groups.set(t.id,group);root.append(group);}
- for(const p of d.routePaths){const t=d.trails.find(t=>t.id===p.trailId),group=groups.get(t.id),halo=signShape(p),line=signShape(p),hit=signShape(p);
-  for(const [n,color,width]of [[halo,'#fffefa',6],[line,t.color,2]]){n.setAttribute('stroke',color);n.setAttribute('stroke-width',width);n.setAttribute('vector-effect','non-scaling-stroke');n.style.pointerEvents='none';}
+ for(const p of d.routePaths){const t=d.trails.find(t=>t.id===p.trailId),group=groups.get(t.id),halo=signShape(p),emphasis=signShape(p),line=signShape(p),hit=signShape(p);
+  // A separate light halo aids contrast on base tiles. The source shape itself
+  // keeps its native filled ribbon or stroke; never outline both ribbon edges.
+  halo.setAttribute('stroke','#fffefa');halo.setAttribute('stroke-width','3');halo.setAttribute('vector-effect','non-scaling-stroke');halo.style.pointerEvents='none';line.style.pointerEvents='none';
+  // Minimum overview visibility is a separate display aid, not a replacement
+  // of native widths. At close zoom the original shape covers this thin aid.
+  emphasis.setAttribute('stroke',p.stroke==='none'?p.fill:p.stroke);emphasis.setAttribute('stroke-width','1');emphasis.setAttribute('vector-effect','non-scaling-stroke');emphasis.style.pointerEvents='none';emphasis.classList.add('cartel-display-emphasis');
   line.classList.add('cartel-route');line.dataset.trail=t.id;line.dataset.sourcePath=p.id;
   hit.setAttribute('stroke','transparent');hit.setAttribute('stroke-width','20');hit.setAttribute('fill','transparent');hit.setAttribute('vector-effect','non-scaling-stroke');hit.style.pointerEvents='all';hit.classList.add('cartel-hit');hit.dataset.trail=t.id;
-  hit.addEventListener('click',event=>{if(map.dragging?.moved())return;L.DomEvent.stopPropagation(event);onSelect(t.id);});group.append(halo,line,hit);
+  hit.addEventListener('click',event=>{if(map.dragging?.moved())return;L.DomEvent.stopPropagation(event);onSelect(t.id);});group.append(halo,emphasis,line,hit);
  }
  const glyphs=document.createElementNS(ns,'g');glyphs.classList.add('cartel-native-labels');root.append(glyphs);for(const l of d.labels){const g=document.createElementNS(ns,'g');g.dataset.trail=l.trailId;for(const p of l.paths)g.append(signShape(p));g.style.pointerEvents='none';glyphs.append(g);}
  const symbols=document.createElementNS(ns,'g');symbols.classList.add('cartel-symbols');root.append(symbols);

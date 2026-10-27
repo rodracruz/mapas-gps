@@ -7,7 +7,14 @@ export function setupDocumentCycling({data,viewer}){
  const layer=get('document-cycling'),raster=get('document-image'),navigation=get('document-cycling-trails');let selected=null,mode='overlay',tap=null,isolated=false;
  for(const trail of data.trails){
   const group=document.createElementNS('http://www.w3.org/2000/svg','g');group.classList.add('document-cycling-trail');group.dataset.trailId=trail.id;group.setAttribute('aria-label',trail.name);
-  for(const path of trail.paths){const node=sourcePathNode(path);if(path.role==='trail-stroke'&&trail.category!=='shared-trail'){node.setAttribute('vector-effect','non-scaling-stroke');node.setAttribute('stroke-width','3');node.removeAttribute('stroke-dasharray');}group.append(node);}
+  for(const path of trail.paths)group.append(sourcePathNode(path));
+  // Some official dots belong to one PDF object yet mark several drawn routes.
+  // Reuse that exact symbol for isolation; it does not establish a graph edge.
+  for(const index of trail.sharedEndpointDrawingIds||[]){
+   if(trail.paths.some(p=>p.drawingIndex===index))continue;
+   const path=data.trails.flatMap(t=>t.paths).find(p=>p.drawingIndex===index&&p.role==='endpoint-marker');
+   if(path){const node=sourcePathNode(path);node.dataset.sharedSymbol='true';group.append(node);}
+  }
   layer.append(group);groups.set(trail.id,group);
  }
  for(const model of models){

@@ -85,7 +85,9 @@ export function setupGpsTracking({map,geo,setSource,getSource,routeName=route=>r
  }
  function startGps(){
   stop();if(!window.isSecureContext||!navigator.geolocation){text('gps-status','Ubicación no disponible');text('gps-detail','Abre la app mediante HTTPS o localhost en un navegador con geolocalización.');return;}
-  setSource('osm');mode='gps';follow=true;const current=session;render();
+  // Real location does not silently replace the rider's chosen official map.
+  // Matching still uses OSM, but its adjusted position is shown only on OSM.
+  mode='gps';follow=true;const current=session;render();
   watchId=navigator.geolocation.watchPosition(p=>{if(current!==session||mode!=='gps')return;signalError=null;const c=p.coords;show(matcher.update({longitude:c.longitude,latitude:c.latitude,accuracy:c.accuracy,timestamp:p.timestamp,heading:c.heading,speed:c.speed},Date.now()));},e=>{if(current===session)fail(e);},{enableHighAccuracy:true,maximumAge:0,timeout:15000});
   ageTimer=setInterval(()=>{if(current!==session||mode!=='gps')return;const s=matcher.snapshot(Date.now());show(signalError&&s.status!=='stale'?{...s,status:'searching',route:null,snapped:null,...signalError}:s);},1000);
  }

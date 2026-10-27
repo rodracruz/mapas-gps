@@ -1,0 +1,41 @@
+# Scoped cartographic correction review
+
+Reviewed 2026-10-27 in `/workspace/mapas-gps/.worktrees/parquemet-coverage`, branch `feat/bikeride-stitch-integration`, against HEAD `8f6d6ca`. The review covers the current uncommitted correction, additive files, plan `docs/superpowers/plans/2026-10-27-cartographic-fidelity.md`, actual comparison pixels, source server 4210 and private candidate server 4212. No production files were edited, publication performed, access changed, or real user stores opened by this review.
+
+## Findings
+
+**No Critical or Important defect was reproduced in this scoped correction.** The correction is suitable to present as a documentary fidelity improvement. It does **not** complete the user's geographic fidelity requirement.
+
+- **Document fidelity:** The additive El Durazno artifact reproduces 68 genuine filled PDF objects (4 red, 64 green), with no inferred centerlines or links. Native-coordinate north/lower/Skills comparisons show the formerly missing dotted artwork restored in the correct source positions. The selected route paths retain their native geometry, fills and widths. The geographic display separately adds its 1 px emphasis and 3 px light halo. Parquemet comparison pixels show the native cycling dash patterns restored; exact shared endpoint objects 1269/1279 are also present for the affected isolated trails.
+- **Topology preservation:** Original trail datasets, registration matrix, OSM snapshots, navigation input and recording/storage modules have no tracked diff. The new artwork has `connections: []`, `transform: null`, and navigation/ground-distance flags false. A single invertible similarity still carries the original artwork to the comparison layer; no route-specific deformation or connection inference was introduced. This preserves drawing topology, not geographic truth.
+- **Geographic validity remains unresolved:** `acceptedTransform` is null and there are zero accepted geographic controls. El Durazno remains an approximate comparison; Parquemet remains a schematic document compared independently with OSM. Same names, route IDs and nearby graphic marks do not verify matching trail endpoints or extent. The review page states these limits clearly. No reviewed evidence supports accepting new controls or authorizing navigation over official artwork.
+
+**Known pre-existing UI failure — Important, outside this correction:** `tests/parquemet-coverage-browser.mjs:11` fails its 390×844 mobile label-bounds assertion (`y >= 175`, unobstructed map) on both candidate 4210 and untouched `8f6d6ca` baseline 4211. The implementer's logs `/workspace/artifacts/cartography-coverage.log` and `/workspace/artifacts/cartography-coverage-baseline.log` reproduce the same first assertion. I inspected both logs and the test. This confirms an unresolved existing label/header/HUD layout problem, not evidence that geographic geometry changed in this correction. It should be disclosed and tracked separately; the broader coverage-browser suite is **not green** and halts before its later assertions. Reproduction: `GEOGRAPHIC_BASE_URL=http://127.0.0.1:4210 node tests/parquemet-coverage-browser.mjs`, then substitute 4211 for the baseline. No UI redesign or publication is recommended as part of this scoped review.
+
+## Independent verification
+
+All checks below were run against the current implementation unless explicitly identified as supplied evidence.
+
+| Check | Result |
+|---|---|
+| `npm test` | 157/157 passing, no skipped tests. Includes new artwork and topology checks. |
+| `node tests/cartography-fidelity-browser.mjs` with `GEOGRAPHIC_BASE_URL=http://127.0.0.1:4210` | Pass: native world styles, 68 artwork objects, source retained on GPS activation, no snapped marker over official artwork, editable download includes `graphicContext`, small-phone Stop control, Parquemet native paths/dashes/shared symbols; no page errors. Independent screenshots: `final-review-browser/`. |
+| `python3 scripts/extract-cartel-context.py --pdf /workspace/scratch/geo/official-map.pdf --check` | Byte-exact regeneration; source hash pinned; artifact SHA-256 `e59fdc9967ebb5e84362a290b20708f5c72193290cb72a6f22138a8a7545663c`. |
+| Independent browser response interception: context 404 and corrupt JSON/hash | Both fail closed for the supplemental artwork, retain all 23 original route paths in world/sign review, display a supplemental-resource warning, and keep 13 independently sourced OSM trail lines available. No page errors. |
+| Independent canvas pixel check at native right edge | With source clip: 217 painted pixels inside x2570 and **0 outside**; removing the clip produces 185 painted pixels outside. This exercises drawing 303, whose retained native bound reaches x2620.27532. World SVG also attaches its 2570-wide native clip to the transformed root. |
+| `GEOGRAPHIC_BASE_URL=http://127.0.0.1:4210 node tests/gps-follow-browser.mjs` | Clean rerun passes both parks: acquisition, visible raw fix, selected sheet, portrait/landscape/320×568 rotation, recenter, coarse accuracy, stop, failed tiles, and no El Durazno demo in Parquemet. Log: `final-review-follow.log`. |
+| `RIDER_BASE_URL=http://127.0.0.1:4210 node tests/rider-start-consent-browser.mjs` | All seven scenarios pass, including cancellation during pending recovery and successful recording controls. Log and evidence: `final-review-consent.log`, `final-review-consent/`. |
+| `GEOGRAPHIC_BASE_URL=http://127.0.0.1:4210 node tests/gps-storage-browser.mjs` | Pass: seeded legacy Blob, calibration, trails, web center and storage survive app → demo → app under active service worker. Uses disposable browser context. |
+| `RIDER_BUNDLE_URL=http://127.0.0.1:4212 node tests/rider-bundle-browser.mjs` | Pass for both private standalone entries: 47 cards, local profile/agenda/ICS, opt-in recording/pause/finish persistence; no module/CDN requests or page errors. |
+| Additional private standalone artwork/export check at 4212 | 68 embedded context objects in both world and sign views; downloaded `graphicContext` contains all 68 with no graph or transform. No page errors. |
+| Review page at 4210 | Eight native-PDF/OSM pairs and ten comparison images load without page errors. Read its generated script and geographic-limit wording. |
+| Supplied baseline/candidate Parquemet coverage-browser logs | Both fail the same first mobile label-bounds assertion. Existing issue, disclosed above; do not count this suite as passing. |
+| `git diff --check` and scoped immutable-path diff | Pass; no tracked changes under original `data`, `sources`, `navigation`, user store/session/recording modules, or legacy `app.js`. Additive context data is intentionally untracked before integration. |
+
+Inspected actual pixel artifacts: `durazno-north-comparison.png`, `durazno-lower-comparison.png`, `durazno-skills-comparison.png`, `parquemet-west-comparison.png`, `parquemet-middle-comparison.png`, `parquemet-east-comparison.png`, both after-world captures, and the independent current GPS capture. Supplied source-path parity and geographic-control evidence were also read; they are supporting evidence, not new geographic validation.
+
+## Verification limits and non-blocking observation
+
+One initial GPS-follow invocation, run concurrently with three other browser suites, failed immediately after rotating El Durazno to 320×568: the raw marker returned a zero bounding box. A subsequent isolated rerun passed all corresponding scenarios. No repeatable code defect was established; retain this as an intermittent browser timing observation rather than a verified Important finding. An initial consent invocation used the wrong environment variable and contacted its absent default server; the corrected invocation passed all scenarios.
+
+This was a software and source-pixel review with public simulated/browser geolocation, not a field accuracy survey or an exhaustive complete-PDF artwork audit. The private build was exercised through the running 4212 server; this reviewer did not replace historical private dist or publish a release. Final narrative/checklist files were still being assembled by the implementer during review and may change after this report. The user requirement for geographically valid official trail extents remains open.

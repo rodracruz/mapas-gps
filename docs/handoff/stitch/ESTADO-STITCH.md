@@ -1,6 +1,10 @@
 # Estado actual: bikeride
 
-## Última etapa
+## Trabajo actual: fidelidad cartográfica, 27-10-2026
+
+Hay una corrección documental candidata sobre v22:68 objetos punteados originales recuperados, estilos y símbolos del PDF conservados y GPS sin sustitución silenciosa de fuente. **No está publicada ni cierra la georreferenciación.** Cero controles aceptados; Parquemet sigue siendo un esquema comparado con OSM independiente.157 pruebas unitarias y regresiones focalizadas pasan; el test anterior de rótulos móviles de Parquemet falla también en v22 y queda documentado. Consultar [comparación/inventario/pruebas y límites](../../evidence/cartographic-fidelity/README.md). La versión activa sigue siendo22 y main no cambió.
+
+## Última etapa publicada
 
 Las cinco pantallas ciclistas del segundo ZIP están implementadas en `feat/bikeride-stitch-integration`: mapa GPS en ruta, explorador, detalle técnico, perfil/actividad/garaje y encuentros. La revisión independiente de implementación y la segunda revisión de sus tres correcciones están aprobadas. El sitio privado está actualizado a la **versión22**, con un propietario, cero visitantes/grupos externos y HTTP200/hash idéntico al paquete probado. Código final5ab5d4; GitHub main no se modificó. El resultado definitivo se registra en [release.json](../../evidence/cycling-tabs/release.json).
 

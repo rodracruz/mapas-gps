@@ -1,0 +1,5008 @@
+{
+  "schemaVersion": 1,
+  "scope": "Official document versus geographic source; nominal correspondence is not surveyed equality.",
+  "parks": [
+    {
+      "id": "el-durazno",
+      "sourceImage": "sources/el-durazno-official-2022.jpg",
+      "documentSha256": "9a67123b027197042da8e47d0c6dbe61e800d11e0e7fe01a5d85172b65ef39ab",
+      "snapshotPath": "sources/el-durazno-osm.json",
+      "snapshotSha256": "b8926fb02ddcc2410850d831312e64a5c51e5aeb9db49ce970a86e418a0df318",
+      "visualToGeographicTransform": null,
+      "navigationValidated": false,
+      "acceptedGeographicControlCount": 0,
+      "routes": [
+        {
+          "id": "chilling",
+          "name": "Chilling",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "chilling-route-drawing-2833"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "chilling",
+          "correspondence": "geographic-correspondence-missing",
+          "osmWays": [],
+          "officialDistanceM": null,
+          "osmLengthM": null,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "papaya",
+          "name": "Papaya",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "papaya-route-drawing-19"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "papaya",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 747369689,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/747369689",
+              "nodeIds": [
+                6993096511,
+                6993096493,
+                6993096492,
+                6993096491,
+                6993096490,
+                6993096489,
+                6993096488,
+                6993096487,
+                6993096486,
+                6993096485,
+                6993090784,
+                6993090783,
+                6993090782,
+                6993090781,
+                6993090780,
+                6993090779,
+                6993090778,
+                6993090777,
+                6993090776,
+                6993090775,
+                6993090774,
+                6993090773,
+                6993090772,
+                6993090771,
+                6993090770,
+                6993090769,
+                6993090768,
+                6993090767,
+                6993090766,
+                6993090765,
+                6993090764,
+                6993090763,
+                6993090762,
+                6993090761,
+                6993090760,
+                6993090759,
+                6993090758,
+                6993090757,
+                6993090756,
+                6993090755,
+                6993090754,
+                6993090753,
+                6993090752,
+                6993090751,
+                6993090750,
+                6993090749,
+                6993090748,
+                6993090747,
+                6993090746,
+                6993090745,
+                6993090744,
+                6993090743,
+                6993090742,
+                6993090741,
+                6993090740,
+                6993090739,
+                6993090738,
+                6993090737,
+                6993090736,
+                6993090735,
+                6993090734,
+                6993090733,
+                6993090732
+              ],
+              "pointCount": 63
+            }
+          ],
+          "officialDistanceM": null,
+          "osmLengthM": 736,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "la-virgen",
+          "name": "La Virgen",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "la-virgen-route-drawing-31"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "la-virgen",
+          "correspondence": "geographic-correspondence-missing",
+          "osmWays": [],
+          "officialDistanceM": null,
+          "osmLengthM": null,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "parcero",
+          "name": "Parcero",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "parcero-route-drawing-23"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "parcero",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 1003300262,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1003300262",
+              "nodeIds": [
+                6993096492,
+                9258698309,
+                9258698310,
+                9258698311,
+                9258698312,
+                9258698313,
+                9258698314,
+                9258698315,
+                9258698316,
+                9258698317,
+                9258698318,
+                9258698319,
+                9258698320,
+                9258698321,
+                9258698322,
+                9258698323,
+                9258698324,
+                9258698325,
+                9258698326,
+                9258698327,
+                9258698328,
+                9258698329,
+                9258698330,
+                9258698331,
+                9258698332,
+                9258698333,
+                9258698334,
+                9258698335,
+                9258698336,
+                9258698337,
+                9258698338,
+                9258698339,
+                9258698340,
+                9258698341,
+                9258698342,
+                9258698343,
+                9258698344,
+                6993090732,
+                4718549998
+              ],
+              "pointCount": 39
+            }
+          ],
+          "officialDistanceM": null,
+          "osmLengthM": 714,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "skills",
+          "name": "Skills",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "skills-route-drawing-258"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "skills",
+          "correspondence": "geographic-correspondence-missing",
+          "osmWays": [],
+          "officialDistanceM": null,
+          "osmLengthM": null,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "mampato",
+          "name": "Mampato",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "mampato-route-drawing-67"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "mampato",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 478641797,
+              "version": 4,
+              "url": "https://www.openstreetmap.org/way/478641797",
+              "nodeIds": [
+                4705617587,
+                4718550001,
+                4718550000,
+                4718549999,
+                4718549998,
+                4718549997,
+                6993081742,
+                6993081741,
+                4718549996,
+                4718549995,
+                4718549994,
+                4718549993,
+                4718549992,
+                4718549991,
+                4718549990,
+                6993081740,
+                4718549989,
+                4718548388,
+                4718548387,
+                4718548386,
+                4718548385,
+                4718548384,
+                4718548383,
+                4718548382,
+                4718548381,
+                4718548380,
+                4718548379,
+                4718548378,
+                4718548376,
+                4718548375,
+                4718548374,
+                4718548373,
+                4718548372,
+                4718548371,
+                4705617541
+              ],
+              "pointCount": 35
+            },
+            {
+              "id": 1003300261,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1003300261",
+              "nodeIds": [
+                9258698298,
+                9258698299,
+                9258698300,
+                9258698301,
+                9258698302,
+                9258698303,
+                9258698304,
+                9258698305,
+                9258698306,
+                9258698307,
+                9258698308,
+                4718548374
+              ],
+              "pointCount": 12
+            }
+          ],
+          "officialDistanceM": null,
+          "osmLengthM": 931,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "starwars",
+          "name": "Starwars",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "starwars-route-drawing-51"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "starwars",
+          "correspondence": "geographic-correspondence-missing",
+          "osmWays": [],
+          "officialDistanceM": null,
+          "osmLengthM": null,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "cactus",
+          "name": "Cactus",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "cactus-route-drawing-55"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "cactus",
+          "correspondence": "geographic-correspondence-missing",
+          "osmWays": [],
+          "officialDistanceM": null,
+          "osmLengthM": null,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "lomo-vetado",
+          "name": "Lomo Vetado",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "lomo-vetado-route-drawing-39"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "lomo-vetado",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 477170097,
+              "version": 6,
+              "url": "https://www.openstreetmap.org/way/477170097",
+              "nodeIds": [
+                4705608466,
+                4705609096,
+                4705609090,
+                4705608449,
+                4705609104,
+                4705609100,
+                4705608461,
+                4705608456,
+                4705608486,
+                4705608484,
+                4705608477,
+                4705609115,
+                4705608474,
+                4705609133,
+                4705609131,
+                4705609116,
+                4705608463,
+                4705609140,
+                4705608467,
+                4705609091,
+                4705609125,
+                4705608469,
+                4705608451,
+                4705609112,
+                4705608442,
+                4705609135,
+                4705609123,
+                4705609142,
+                4705609102,
+                4705609098,
+                4705609118,
+                4705609127,
+                4705609145,
+                4705609139,
+                4705609146,
+                4705608446,
+                6993025977,
+                4705608448,
+                4705608468,
+                4705609093,
+                4705608443,
+                4705608452,
+                4705608462,
+                4705609092,
+                4705608465,
+                4705608464,
+                4705609126,
+                4705609124,
+                4705608476,
+                4705609095,
+                4705609094,
+                4705609089,
+                4781906545,
+                4781906546,
+                4705609120,
+                4781906547,
+                4705609121,
+                4781906548,
+                4781906549,
+                4781906550,
+                4781906551,
+                4705608450,
+                4781906552,
+                4705609117,
+                4781906553,
+                4781906554,
+                4705609107,
+                4781906555,
+                4705609106,
+                4705609105,
+                4705609101,
+                4705609099,
+                4705608460,
+                4705608458,
+                4705608457,
+                4705608459,
+                4705608454,
+                4705608455,
+                4705608487,
+                4705608488,
+                4705608483,
+                4705608482,
+                6993018023,
+                4705608481,
+                4705608480,
+                4705608479,
+                4705608478,
+                4705609114,
+                4705609113,
+                10616806703,
+                4705608471,
+                4705608470,
+                4705608473,
+                4705608475,
+                4705608472,
+                4705609129,
+                4705609132,
+                4705609134,
+                4705609130,
+                4705609143,
+                4705609144,
+                4705609119,
+                4705609097,
+                4705608485,
+                4705608447,
+                4705609141,
+                4705609110,
+                4705608440,
+                4705608453,
+                4705609128,
+                4705608439,
+                4705609109,
+                4705609108,
+                4705608436,
+                4705608435,
+                4705608445,
+                4705608438,
+                4705609122,
+                4705609137,
+                4705609138,
+                4705608444,
+                4705608437,
+                4705609136,
+                4705609111,
+                4705609103,
+                10616867670,
+                4705608441
+              ],
+              "pointCount": 127
+            }
+          ],
+          "officialDistanceM": null,
+          "osmLengthM": 2786,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "la-bala",
+          "name": "La Bala",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "la-bala-route-drawing-343"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "la-bala",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 1003300263,
+              "version": 2,
+              "url": "https://www.openstreetmap.org/way/1003300263",
+              "nodeIds": [
+                4705617515,
+                9258698345,
+                9258698346,
+                9258698347,
+                9258698348,
+                9258698349,
+                9258698350,
+                9258698351,
+                9515129874,
+                9258698352,
+                9515129873,
+                9515129871,
+                9515129872,
+                9258698353,
+                9515129870,
+                9258698354,
+                9258698355,
+                9515129869,
+                9258698356,
+                9515129868,
+                9258698357,
+                9515129867,
+                9258698358,
+                9258698359,
+                9258698360,
+                9258698361,
+                9515129866,
+                9258698362,
+                9515129865,
+                9258698363,
+                9258698364,
+                9515129864,
+                9258698365,
+                9258698366,
+                9515129863,
+                9515129862,
+                9515129861,
+                9515129860,
+                9515129858,
+                9258698367,
+                9515129859,
+                9258698368,
+                9258698369,
+                9258698370,
+                9258698371,
+                9258698372,
+                9258698373,
+                9258698374,
+                9258698375,
+                9515129857,
+                9258698376,
+                9515129856,
+                9258698377,
+                9258698378,
+                9258698379,
+                9258698380,
+                9258698381
+              ],
+              "pointCount": 57
+            }
+          ],
+          "officialDistanceM": null,
+          "osmLengthM": 736,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "cebolla",
+          "name": "Cebolla",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "cebolla-route-drawing-15"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "cebolla",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 1003300260,
+              "version": 2,
+              "url": "https://www.openstreetmap.org/way/1003300260",
+              "nodeIds": [
+                4705617587,
+                4705617551,
+                4705617550,
+                4705617791,
+                4705617555,
+                4705617792,
+                9515119192,
+                4705617789,
+                9515119193,
+                9515119194,
+                4705617522,
+                9515119197,
+                9515119196,
+                4705617567,
+                9515119198,
+                9515119199,
+                9515119195,
+                4705617581,
+                9515119200,
+                4705617575,
+                4705617532,
+                4705617557,
+                9515119201,
+                4705617565,
+                9515119202,
+                4705617584,
+                9515119203,
+                4705617554,
+                9515119204,
+                4705617524,
+                4705617559,
+                9515119205,
+                4705617568,
+                9515119206,
+                4705617579,
+                4705617582,
+                4705617527,
+                9515119209,
+                9515119210,
+                9515119208,
+                9515119207,
+                4705617562,
+                4705617544,
+                4705617586,
+                4705617574,
+                4705617534,
+                4705617539,
+                4705617519,
+                4705617526,
+                4705617577,
+                4705617530
+              ],
+              "pointCount": 51
+            }
+          ],
+          "officialDistanceM": null,
+          "osmLengthM": 467,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "los-saltos",
+          "name": "Los Saltos",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "los-saltos-route-drawing-35"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "los-saltos",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 1003300259,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1003300259",
+              "nodeIds": [
+                4705608441,
+                4705617518,
+                4705617563,
+                4705617528,
+                4705617572,
+                4705617583,
+                4705617516,
+                4705617588,
+                4705617553,
+                4705617552,
+                4705617560,
+                4705617529,
+                4705617585,
+                4705617521,
+                4705617520,
+                4705617570,
+                4705617525,
+                4705617573,
+                4705617571,
+                6993081750,
+                4705617578,
+                4705617587
+              ],
+              "pointCount": 22
+            }
+          ],
+          "officialDistanceM": null,
+          "osmLengthM": 436,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "el-gringo",
+          "name": "El Gringo",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "el-gringo-route-drawing-47"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "el-gringo",
+          "correspondence": "geographic-correspondence-missing",
+          "osmWays": [],
+          "officialDistanceM": null,
+          "osmLengthM": null,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "el-duro",
+          "name": "El Duro",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "el-duro-route-drawing-12"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "el-duro",
+          "correspondence": "geographic-correspondence-missing",
+          "osmWays": [],
+          "officialDistanceM": null,
+          "osmLengthM": null,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "xl",
+          "name": "XL",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "xl-route-drawing-4"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "xl",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 75311770,
+              "version": 4,
+              "url": "https://www.openstreetmap.org/way/75311770",
+              "nodeIds": [
+                397646568,
+                889298239,
+                889298241,
+                889298242,
+                889298245,
+                889298247,
+                889298250,
+                889298254,
+                889298257,
+                889298262,
+                889298265,
+                889298267,
+                889298270,
+                889298272,
+                889298274,
+                889298278,
+                889298280,
+                889298283,
+                889298285,
+                889298290,
+                889298293,
+                889298296,
+                889298298,
+                889298303,
+                889298308,
+                889298310,
+                889298314,
+                889298317,
+                889298320,
+                889298323,
+                889298326,
+                889298327,
+                889298328,
+                889298329,
+                889298330,
+                889298331,
+                889298332,
+                889298335,
+                889298338,
+                889298343,
+                889298346,
+                889298351,
+                889298356,
+                889298357,
+                889298359,
+                889298361,
+                889298378,
+                889298381,
+                397646284
+              ],
+              "pointCount": 49
+            },
+            {
+              "id": 477174835,
+              "version": 5,
+              "url": "https://www.openstreetmap.org/way/477174835",
+              "nodeIds": [
+                397646020,
+                397646025,
+                397646030,
+                397646035,
+                397646039,
+                397646044,
+                397646048,
+                397646061,
+                397646064,
+                397646067,
+                397646069,
+                397646072,
+                397646074,
+                397646077,
+                397646080,
+                397646083,
+                397646086,
+                397646089,
+                397646092,
+                397646095,
+                397646098,
+                397646101,
+                397646104,
+                397646107,
+                397646109,
+                397646112,
+                397646115,
+                397646118,
+                397646122,
+                397646130,
+                397646133,
+                397646136,
+                397646138,
+                397646141,
+                397646149,
+                397646153,
+                397646157,
+                397646160,
+                397646163,
+                397646169,
+                397646173,
+                397646177,
+                397646183,
+                397646192,
+                397646199,
+                397646208,
+                397646215,
+                397646222,
+                397646227,
+                397646232,
+                397646239,
+                397646252,
+                397646257,
+                397646262,
+                397646267,
+                397646272,
+                11942851844,
+                397646276,
+                397646279,
+                397646284
+              ],
+              "pointCount": 60
+            }
+          ],
+          "officialDistanceM": null,
+          "osmLengthM": 4389,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "rock-n-roll",
+          "name": "Rock N’Roll",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "rock-n-roll-route-drawing-8"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "rock-n-roll",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 1003300257,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1003300257",
+              "nodeIds": [
+                397646284,
+                397646288,
+                397646293,
+                397646299,
+                397646304,
+                397646308,
+                397646313,
+                397646319,
+                397646325,
+                397646330,
+                397646335,
+                397646340,
+                397646344,
+                397646347,
+                397646350,
+                397646353,
+                397646360,
+                397646366,
+                397646372,
+                397646379,
+                397646384,
+                397646390,
+                397646397,
+                397646404,
+                397646410,
+                397646417,
+                397646423,
+                397646429,
+                397646436,
+                397646440,
+                397646444,
+                397646449,
+                397646453,
+                397646457,
+                397646462,
+                397646467,
+                397646474,
+                397646479,
+                397646499,
+                397646503,
+                397646508,
+                397646513,
+                397646517,
+                397646522,
+                397646527,
+                397646531,
+                397646535,
+                7813732721,
+                397646540,
+                397646543,
+                397646548,
+                397646554,
+                397646560,
+                397646564,
+                397646568,
+                397646575,
+                397646582,
+                397646588,
+                6462912310,
+                5431892985
+              ],
+              "pointCount": 60
+            }
+          ],
+          "officialDistanceM": null,
+          "osmLengthM": 2055,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "las-nieves",
+          "name": "Las Nieves",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "las-nieves-route-drawing-59"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "las-nieves",
+          "correspondence": "geographic-correspondence-missing",
+          "osmWays": [],
+          "officialDistanceM": null,
+          "osmLengthM": null,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "calibre-12",
+          "name": "Calibre12",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "calibre-12-route-drawing-43"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "calibre-12",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 1003300258,
+              "version": 2,
+              "url": "https://www.openstreetmap.org/way/1003300258",
+              "nodeIds": [
+                4705609090,
+                9258698204,
+                9258698205,
+                9258698206,
+                9258698207,
+                9258698208,
+                9258698209,
+                9258698210,
+                9258698211,
+                9258698212,
+                9258698213,
+                9258698214,
+                9258698215,
+                9258698216,
+                9258698217,
+                9258698218,
+                9258698219,
+                9258698220,
+                9258698221,
+                9258698222,
+                9258698223,
+                9258698224,
+                9258698225,
+                9258698226,
+                9258698227,
+                9258698228,
+                9258698229,
+                9258698230,
+                9258698231,
+                9258698232,
+                9258698233,
+                9258698234,
+                9258698235,
+                9258698236,
+                9258698237,
+                9258698238,
+                9258698239,
+                9258698240,
+                9258698241,
+                9258698242,
+                9258698243,
+                9258698244,
+                9258698245,
+                9258698246,
+                9258698247,
+                9258698248,
+                9258698249,
+                9258698250,
+                9258698251,
+                9258698252,
+                9258698253,
+                9258698254,
+                9258698255,
+                9258698256,
+                9258698257,
+                9258698258,
+                9258698259,
+                9258698260,
+                9258698261,
+                9258698262,
+                9258698263,
+                9258698264,
+                9258698265,
+                9258698266,
+                9258698267,
+                9258698268,
+                9258698269,
+                9258698270,
+                9258698271,
+                9258698272,
+                9258698273,
+                9258698274,
+                9258698275,
+                9258698276,
+                9258698277,
+                9258698278,
+                9258698279,
+                9258698280,
+                9258698281,
+                9258698282,
+                9258698283,
+                12820959894,
+                9258698284,
+                9258698285,
+                9258698286,
+                9258698287,
+                9258698288,
+                9258698289,
+                9258698290,
+                9258698291,
+                9258698292,
+                9258698293,
+                9258698294,
+                9258698295,
+                12820992513,
+                12820992512,
+                9258698296,
+                12820992521,
+                9258698297,
+                4705608441
+              ],
+              "pointCount": 100
+            }
+          ],
+          "officialDistanceM": null,
+          "osmLengthM": 2160,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "calibre-loco",
+          "name": "Calibre Loco",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "calibre-loco-route-drawing-27"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "calibre-loco",
+          "correspondence": "geographic-correspondence-missing",
+          "osmWays": [],
+          "officialDistanceM": null,
+          "osmLengthM": null,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "mordor",
+          "name": "Mordor",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "mordor-route-drawing-63"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "mordor",
+          "correspondence": "geographic-correspondence-missing",
+          "osmWays": [],
+          "officialDistanceM": null,
+          "osmLengthM": null,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "subida-cartel",
+          "name": "Subida",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "subida-cartel-route-drawing-239",
+            "subida-cartel-route-drawing-240"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": null,
+          "correspondence": "geographic-correspondence-missing",
+          "osmWays": [],
+          "officialDistanceM": null,
+          "osmLengthM": null,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "subida-e-bike",
+          "name": "Subida E-Bike",
+          "documentCoordinateSystem": "image-pixels",
+          "sourcePathIds": [
+            "subida-e-bike-route-drawing-356"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": null,
+          "correspondence": "geographic-correspondence-missing",
+          "osmWays": [],
+          "officialDistanceM": null,
+          "osmLengthM": null,
+          "equalityOfExtentsVerified": false
+        }
+      ],
+      "graphicConnections": [
+        {
+          "id": "cartel-context-artwork-drawing-0",
+          "sourceDrawingIndices": [
+            0
+          ],
+          "bounds": [
+            1717.00367,
+            663.07048,
+            127.4312,
+            83.51662
+          ],
+          "role": "expert-connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-1",
+          "sourceDrawingIndices": [
+            1
+          ],
+          "bounds": [
+            989.89415,
+            1545.48943,
+            115.72447,
+            168.3709
+          ],
+          "role": "expert-connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-2",
+          "sourceDrawingIndices": [
+            2
+          ],
+          "bounds": [
+            1107.82146,
+            1443.62434,
+            28.0076,
+            68.16545
+          ],
+          "role": "expert-connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-3",
+          "sourceDrawingIndices": [
+            3
+          ],
+          "bounds": [
+            1213.77156,
+            1294.70857,
+            42.68536,
+            33.14825
+          ],
+          "role": "expert-connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-278",
+          "sourceDrawingIndices": [
+            278
+          ],
+          "bounds": [
+            1066.95428,
+            2216.13087,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-279",
+          "sourceDrawingIndices": [
+            279
+          ],
+          "bounds": [
+            1038.74506,
+            2020.35518,
+            249.22457,
+            320.49252
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-280",
+          "sourceDrawingIndices": [
+            280
+          ],
+          "bounds": [
+            1238.5964,
+            2016.14522,
+            3.6628,
+            3.74402
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-281",
+          "sourceDrawingIndices": [
+            281
+          ],
+          "bounds": [
+            993.39851,
+            1758.34555,
+            3.66267,
+            3.74402
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-282",
+          "sourceDrawingIndices": [
+            282
+          ],
+          "bounds": [
+            999.48509,
+            1756.37766,
+            105.69469,
+            30.56487
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-283",
+          "sourceDrawingIndices": [
+            283
+          ],
+          "bounds": [
+            1106.23104,
+            1787.20576,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-284",
+          "sourceDrawingIndices": [
+            284
+          ],
+          "bounds": [
+            1207.34921,
+            1621.32401,
+            3.66063,
+            3.74402
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-285",
+          "sourceDrawingIndices": [
+            285
+          ],
+          "bounds": [
+            1102.72236,
+            1548.09646,
+            102.85089,
+            91.42768
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-286",
+          "sourceDrawingIndices": [
+            286
+          ],
+          "bounds": [
+            1098.47919,
+            1543.5551,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-287",
+          "sourceDrawingIndices": [
+            287
+          ],
+          "bounds": [
+            1006.7073,
+            2063.93536,
+            3.66267,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-288",
+          "sourceDrawingIndices": [
+            288
+          ],
+          "bounds": [
+            1012.77633,
+            2017.33549,
+            188.8133,
+            48.9162
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-289",
+          "sourceDrawingIndices": [
+            289
+          ],
+          "bounds": [
+            1204.12538,
+            2023.44951,
+            3.6628,
+            3.67116
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-290",
+          "sourceDrawingIndices": [
+            290
+          ],
+          "bounds": [
+            1204.12538,
+            2023.44951,
+            3.6628,
+            3.67116
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-291",
+          "sourceDrawingIndices": [
+            291
+          ],
+          "bounds": [
+            1210.02878,
+            2015.08338,
+            65.81359,
+            10.61747
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-292",
+          "sourceDrawingIndices": [
+            292
+          ],
+          "bounds": [
+            1278.34023,
+            2014.64415,
+            3.6628,
+            3.74402
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-293",
+          "sourceDrawingIndices": [
+            293
+          ],
+          "bounds": [
+            1910.75864,
+            889.28261,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-294",
+          "sourceDrawingIndices": [
+            294
+          ],
+          "bounds": [
+            1909.52402,
+            670.78056,
+            60.69466,
+            217.61411
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-295",
+          "sourceDrawingIndices": [
+            295
+          ],
+          "bounds": [
+            1905.05603,
+            666.55,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-296",
+          "sourceDrawingIndices": [
+            296
+          ],
+          "bounds": [
+            1968.97337,
+            785.72926,
+            3.6628,
+            3.74402
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-297",
+          "sourceDrawingIndices": [
+            297
+          ],
+          "bounds": [
+            1972.89113,
+            790.43357,
+            164.98923,
+            506.73985
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-298",
+          "sourceDrawingIndices": [
+            298
+          ],
+          "bounds": [
+            2065.92467,
+            1299.26862,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-299",
+          "sourceDrawingIndices": [
+            299
+          ],
+          "bounds": [
+            2076.71647,
+            1256.26538,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-300",
+          "sourceDrawingIndices": [
+            300
+          ],
+          "bounds": [
+            2083.17023,
+            1256.82453,
+            111.4326,
+            30.42524
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-301",
+          "sourceDrawingIndices": [
+            301
+          ],
+          "bounds": [
+            2196.53341,
+            1286.3441,
+            3.6628,
+            3.67116
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-302",
+          "sourceDrawingIndices": [
+            302
+          ],
+          "bounds": [
+            2094.43761,
+            1257.56502,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-303",
+          "sourceDrawingIndices": [
+            303
+          ],
+          "bounds": [
+            2100.31469,
+            1228.65852,
+            519.96063,
+            242.7432
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-304",
+          "sourceDrawingIndices": [
+            304
+          ],
+          "bounds": [
+            1118.34049,
+            1788.16752,
+            3.6628,
+            3.67116
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-305",
+          "sourceDrawingIndices": [
+            305
+          ],
+          "bounds": [
+            1124.41022,
+            1789.48636,
+            317.75506,
+            596.34226
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-306",
+          "sourceDrawingIndices": [
+            306
+          ],
+          "bounds": [
+            1384.5547,
+            2388.23536,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-307",
+          "sourceDrawingIndices": [
+            307
+          ],
+          "bounds": [
+            1276.89363,
+            2116.27525,
+            3.6628,
+            3.67116
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-308",
+          "sourceDrawingIndices": [
+            308
+          ],
+          "bounds": [
+            1282.80644,
+            2117.97877,
+            47.62525,
+            134.04344
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-309",
+          "sourceDrawingIndices": [
+            309
+          ],
+          "bounds": [
+            1331.30085,
+            2252.51638,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-310",
+          "sourceDrawingIndices": [
+            310
+          ],
+          "bounds": [
+            1181.80056,
+            1798.712,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-311",
+          "sourceDrawingIndices": [
+            311
+          ],
+          "bounds": [
+            1187.49503,
+            1753.05418,
+            53.08803,
+            47.114
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-312",
+          "sourceDrawingIndices": [
+            312
+          ],
+          "bounds": [
+            1237.59881,
+            1746.70198,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-313",
+          "sourceDrawingIndices": [
+            313
+          ],
+          "bounds": [
+            1115.79609,
+            1785.49436,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-314",
+          "sourceDrawingIndices": [
+            314
+          ],
+          "bounds": [
+            1122.06763,
+            1580.81298,
+            318.35094,
+            207.59247
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-315",
+          "sourceDrawingIndices": [
+            315
+          ],
+          "bounds": [
+            1443.09026,
+            1599.46226,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-316",
+          "sourceDrawingIndices": [
+            316
+          ],
+          "bounds": [
+            1207.34921,
+            1621.32401,
+            3.66063,
+            3.74402
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-317",
+          "sourceDrawingIndices": [
+            317
+          ],
+          "bounds": [
+            1213.20442,
+            1621.40591,
+            26.16793,
+            8.95694
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-318",
+          "sourceDrawingIndices": [
+            318
+          ],
+          "bounds": [
+            1239.99786,
+            1630.25755,
+            3.6628,
+            3.80659
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-319",
+          "sourceDrawingIndices": [
+            319
+          ],
+          "bounds": [
+            1207.34921,
+            1621.32401,
+            3.66063,
+            3.74402
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-320",
+          "sourceDrawingIndices": [
+            320
+          ],
+          "bounds": [
+            1205.97471,
+            1627.19349,
+            8.42123,
+            45.83255
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-321",
+          "sourceDrawingIndices": [
+            321
+          ],
+          "bounds": [
+            1204.58291,
+            1675.10304,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-322",
+          "sourceDrawingIndices": [
+            322
+          ],
+          "bounds": [
+            1832.39752,
+            2228.65342,
+            3.6628,
+            3.74402
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-323",
+          "sourceDrawingIndices": [
+            323
+          ],
+          "bounds": [
+            1837.04761,
+            2104.67873,
+            126.04983,
+            123.50723
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-324",
+          "sourceDrawingIndices": [
+            324
+          ],
+          "bounds": [
+            1930.22777,
+            2099.02086,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-325",
+          "sourceDrawingIndices": [
+            325
+          ],
+          "bounds": [
+            1488.58172,
+            1884.1143,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-326",
+          "sourceDrawingIndices": [
+            326
+          ],
+          "bounds": [
+            1494.59525,
+            1871.76737,
+            153.33667,
+            156.91794
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-327",
+          "sourceDrawingIndices": [
+            327
+          ],
+          "bounds": [
+            1606.82363,
+            2031.37666,
+            3.6628,
+            3.74402
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-328",
+          "sourceDrawingIndices": [
+            328
+          ],
+          "bounds": [
+            1412.39902,
+            2037.91248,
+            3.6628,
+            3.74402
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-329",
+          "sourceDrawingIndices": [
+            329
+          ],
+          "bounds": [
+            1413.70931,
+            1889.5523,
+            72.90559,
+            145.96297
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-330",
+          "sourceDrawingIndices": [
+            330
+          ],
+          "bounds": [
+            1486.55882,
+            1884.62704,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-331",
+          "sourceDrawingIndices": [
+            331
+          ],
+          "bounds": [
+            1487.10803,
+            1881.02137,
+            3.6628,
+            3.74402
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-332",
+          "sourceDrawingIndices": [
+            332
+          ],
+          "bounds": [
+            1484.51913,
+            1683.36985,
+            47.22927,
+            194.93334
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-333",
+          "sourceDrawingIndices": [
+            333
+          ],
+          "bounds": [
+            1524.68221,
+            1676.97098,
+            3.6628,
+            3.74402
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-334",
+          "sourceDrawingIndices": [
+            334
+          ],
+          "bounds": [
+            1356.93012,
+            1899.47418,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-335",
+          "sourceDrawingIndices": [
+            335
+          ],
+          "bounds": [
+            1362.11099,
+            1668.54051,
+            108.99705,
+            231.25477
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-336",
+          "sourceDrawingIndices": [
+            336
+          ],
+          "bounds": [
+            1472.96639,
+            1665.90779,
+            3.6628,
+            3.74606
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-337",
+          "sourceDrawingIndices": [
+            337
+          ],
+          "bounds": [
+            1524.68221,
+            1676.97098,
+            3.6628,
+            3.74402
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-338",
+          "sourceDrawingIndices": [
+            338
+          ],
+          "bounds": [
+            1438.20251,
+            1605.52757,
+            84.11867,
+            73.26583
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-339",
+          "sourceDrawingIndices": [
+            339
+          ],
+          "bounds": [
+            1443.09026,
+            1599.46226,
+            3.6628,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-357",
+          "sourceDrawingIndices": [
+            357
+          ],
+          "bounds": [
+            830.64556,
+            2036.20083,
+            176.53777,
+            33.59422
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        },
+        {
+          "id": "cartel-context-artwork-drawing-358",
+          "sourceDrawingIndices": [
+            358
+          ],
+          "bounds": [
+            824.8409,
+            2052.13639,
+            3.66267,
+            3.80862
+          ],
+          "role": "connection-artwork",
+          "connectionVerified": false
+        }
+      ],
+      "unattributedDocumentGroups": [],
+      "sourceOsmSharedNodes": [
+        {
+          "osmNodeId": 397646568,
+          "coordinateLonLat": [
+            -70.5016869,
+            -33.3245736
+          ],
+          "targetIds": [
+            "xl",
+            "rock-n-roll"
+          ],
+          "wayIds": [
+            75311770,
+            1003300257
+          ]
+        },
+        {
+          "osmNodeId": 397646284,
+          "coordinateLonLat": [
+            -70.487609,
+            -33.319469
+          ],
+          "targetIds": [
+            "xl",
+            "rock-n-roll"
+          ],
+          "wayIds": [
+            75311770,
+            477174835,
+            1003300257
+          ]
+        },
+        {
+          "osmNodeId": 4705609090,
+          "coordinateLonLat": [
+            -70.4928546,
+            -33.3043399
+          ],
+          "targetIds": [
+            "lomo-vetado",
+            "calibre-12"
+          ],
+          "wayIds": [
+            477170097,
+            1003300258
+          ]
+        },
+        {
+          "osmNodeId": 4705608441,
+          "coordinateLonLat": [
+            -70.5036907,
+            -33.3138365
+          ],
+          "targetIds": [
+            "lomo-vetado",
+            "calibre-12",
+            "los-saltos"
+          ],
+          "wayIds": [
+            477170097,
+            1003300258,
+            1003300259
+          ]
+        },
+        {
+          "osmNodeId": 4705617587,
+          "coordinateLonLat": [
+            -70.5048325,
+            -33.3161822
+          ],
+          "targetIds": [
+            "mampato",
+            "los-saltos",
+            "cebolla"
+          ],
+          "wayIds": [
+            478641797,
+            1003300259,
+            1003300260
+          ]
+        },
+        {
+          "osmNodeId": 4718549998,
+          "coordinateLonLat": [
+            -70.5057756,
+            -33.3159629
+          ],
+          "targetIds": [
+            "mampato",
+            "parcero"
+          ],
+          "wayIds": [
+            478641797,
+            1003300262
+          ]
+        },
+        {
+          "osmNodeId": 6993096492,
+          "coordinateLonLat": [
+            -70.5097711,
+            -33.3191924
+          ],
+          "targetIds": [
+            "papaya",
+            "parcero"
+          ],
+          "wayIds": [
+            747369689,
+            1003300262
+          ]
+        },
+        {
+          "osmNodeId": 6993090732,
+          "coordinateLonLat": [
+            -70.5059531,
+            -33.3159794
+          ],
+          "targetIds": [
+            "papaya",
+            "parcero"
+          ],
+          "wayIds": [
+            747369689,
+            1003300262
+          ]
+        }
+      ],
+      "topologyStatus": "OSM shared node IDs describe only that database. Graphic symbols/crossings create no traversable edges.",
+      "documentOnlyScope": null
+    },
+    {
+      "id": "parquemet",
+      "sourceImage": "sources/parquemet-mapa-oficial.jpg",
+      "documentSha256": "e7606172479a0fd585f7f3dcb4187556a202778cd647b31f44aaefcf9bd03cf8",
+      "snapshotPath": "sources/parquemet-avenues-osm.json",
+      "snapshotSha256": "cf2aa2e2e548e1181a230966e7b6954b4403a6493212cea3c375032e775bc7bc",
+      "visualToGeographicTransform": null,
+      "navigationValidated": false,
+      "acceptedGeographicControlCount": 0,
+      "routes": [
+        {
+          "id": "centenario",
+          "name": "Centenario",
+          "documentCoordinateSystem": "document-pixels",
+          "sourcePathIds": [
+            "pdf-p1-drawing-1259",
+            "pdf-p1-drawing-1260",
+            "pdf-p1-drawing-1261",
+            "pdf-p1-drawing-1262",
+            "pdf-p1-drawing-1263",
+            "pdf-p1-drawing-1264",
+            "pdf-p1-drawing-1265"
+          ],
+          "sharedGraphicSymbols": [
+            1269
+          ],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "centenario",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 749895576,
+              "version": 6,
+              "url": "https://www.openstreetmap.org/way/749895576",
+              "nodeIds": [
+                2953737630,
+                4738194532,
+                7012231566,
+                7012231567,
+                12109669239,
+                7012231568,
+                7012231569,
+                7012231570,
+                7012231571,
+                7012231572,
+                7012231573,
+                7012231574,
+                7012231575,
+                7012231576,
+                7012231577,
+                7012231578,
+                7012231579,
+                7012231580,
+                7012231581,
+                7012231582,
+                7012231583,
+                7012231584,
+                7012264085,
+                7012264086,
+                7012264087,
+                7012264088,
+                7012264089,
+                7012264090,
+                7012264091,
+                7012264092,
+                7012264093,
+                4728186359
+              ],
+              "pointCount": 32
+            },
+            {
+              "id": 1307648383,
+              "version": 2,
+              "url": "https://www.openstreetmap.org/way/1307648383",
+              "nodeIds": [
+                4728186359,
+                4728186358,
+                4728186357,
+                4728186356,
+                4728186355,
+                4728186354,
+                4728186353,
+                4728186352,
+                4728186351,
+                4728186350,
+                4728186349,
+                4728186348,
+                4728186347,
+                7012233166,
+                4728186346,
+                4728164940
+              ],
+              "pointCount": 16
+            },
+            {
+              "id": 1307648385,
+              "version": 4,
+              "url": "https://www.openstreetmap.org/way/1307648385",
+              "nodeIds": [
+                5009936028,
+                5009936027,
+                5009936026,
+                5009936025,
+                5009936024,
+                5009936023,
+                5009936022,
+                5009936021,
+                5009935120,
+                5009935119,
+                5009935118,
+                5009935117,
+                5009935116,
+                5009935115,
+                5009935114,
+                5009935113,
+                5009935112,
+                5009935111,
+                5009935110,
+                5009935109,
+                5009935108,
+                5009935107,
+                5009935106,
+                5009935105,
+                5009935104,
+                5009935103,
+                5009935102,
+                5009935100,
+                2953737630
+              ],
+              "pointCount": 29
+            }
+          ],
+          "officialDistanceM": 900,
+          "osmLengthM": 609,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "cuatro-y-medio",
+          "name": "4 ½",
+          "documentCoordinateSystem": "document-pixels",
+          "sourcePathIds": [
+            "pdf-p1-drawing-1266",
+            "pdf-p1-drawing-1267",
+            "pdf-p1-drawing-1268",
+            "pdf-p1-drawing-1269",
+            "pdf-p1-drawing-1270"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "cuatro-y-medio",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 479769031,
+              "version": 9,
+              "url": "https://www.openstreetmap.org/way/479769031",
+              "nodeIds": [
+                265686542,
+                4728165422,
+                4728165421,
+                4728165420,
+                4728165417,
+                4728165416,
+                4728165415,
+                4728165414,
+                4728165413,
+                4728165412,
+                4728165411,
+                4728165410,
+                4728165409,
+                4728165408,
+                4728165407,
+                4728165406,
+                4728165405,
+                4728165404,
+                4728165403,
+                4728165402,
+                4728165401,
+                4728165400,
+                4728165399,
+                4728165398,
+                4728165397,
+                4728165396,
+                4728165395,
+                4728165394,
+                4728165393,
+                4728165392,
+                4728165391,
+                4728165390,
+                4728165389,
+                4728164988,
+                4728164987,
+                4728164986,
+                4728164985,
+                4728164984,
+                4728164983,
+                4728164982,
+                4728164981,
+                4728164980,
+                4728164979,
+                4728164978,
+                4728164977,
+                4728164976,
+                4728164975,
+                6456689350,
+                4728164974,
+                4728164973,
+                4728164972,
+                4728164971,
+                4728164970,
+                4728164969,
+                4728164968,
+                4728164967,
+                4728164966,
+                4728164965,
+                4728164964,
+                6456689360,
+                4728164961,
+                4728164960,
+                4728164959,
+                4728164958,
+                4728164957,
+                4728164954,
+                4728164953,
+                4728164952,
+                4728164951,
+                4728164950,
+                4728164949,
+                4728164948,
+                4728164947,
+                4728164946,
+                7012233184,
+                4728164945,
+                4728164944,
+                4728164943,
+                4728164942,
+                4728164941,
+                4728164940
+              ],
+              "pointCount": 81
+            },
+            {
+              "id": 479771255,
+              "version": 8,
+              "url": "https://www.openstreetmap.org/way/479771255",
+              "nodeIds": [
+                4728164940,
+                4728186345,
+                4728186344,
+                4728186343,
+                4728186342,
+                4728186341,
+                4728186340,
+                4728186339,
+                4728186338,
+                4728186337,
+                4728186336,
+                4728186335,
+                4728186334,
+                4728186333,
+                4728186332,
+                4728186331,
+                4728186330,
+                4728186329,
+                4728186328,
+                4728186327,
+                4728186326,
+                4728186325,
+                4728186324,
+                4728186323,
+                4728186322,
+                4728186321,
+                4728186320,
+                4728186319,
+                4728186318,
+                4728186317,
+                4728186316,
+                4728186315,
+                4728186314,
+                4728186313,
+                4728186312,
+                4728186311,
+                4728186310,
+                4728186309,
+                4728186308,
+                4728186307,
+                4728186306,
+                4728186305,
+                4728186304,
+                4728186303,
+                4728186302,
+                4728186301,
+                4728186300,
+                4728186299,
+                4728186298,
+                4728186297,
+                4728186296,
+                4728186295,
+                4728186294,
+                4728186293,
+                4728186292,
+                4728186291,
+                4728186290,
+                4728186289,
+                4728182188
+              ],
+              "pointCount": 59
+            },
+            {
+              "id": 512366462,
+              "version": 8,
+              "url": "https://www.openstreetmap.org/way/512366462",
+              "nodeIds": [
+                4728165417,
+                5009936084,
+                5009936083,
+                5009936082,
+                5009936081,
+                5009936080,
+                5009936079,
+                5009936078,
+                5009936077,
+                5009936076,
+                5009936075,
+                5009936074,
+                5009936073,
+                5009936072,
+                5009936071,
+                5009936070,
+                5009936069,
+                5009936068,
+                5009936067,
+                5009936066,
+                5009936065,
+                5009936064,
+                5009936063,
+                5009936062,
+                5009936061,
+                5009936060,
+                5009936059,
+                5009936058,
+                5009936057,
+                5009936056,
+                8735501266,
+                5009936055,
+                8735501267,
+                5009936054,
+                5009936053,
+                5009936052,
+                5009936051,
+                5009936050,
+                5009936049,
+                6456689350,
+                5009936048,
+                5009936047,
+                5009936046,
+                5009936045,
+                5009936044,
+                5009936043,
+                5009936042,
+                5009936041,
+                5009936040,
+                5009936039,
+                5009936038,
+                5009936037,
+                5009936036,
+                5009936035,
+                5009936034,
+                5009936033,
+                5009936032,
+                5009936031,
+                5009936030,
+                5009936029,
+                5009936028
+              ],
+              "pointCount": 61
+            }
+          ],
+          "officialDistanceM": 1000,
+          "osmLengthM": 1571,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "anfiteatro",
+          "name": "Anfiteatro",
+          "documentCoordinateSystem": "document-pixels",
+          "sourcePathIds": [
+            "pdf-p1-drawing-1276",
+            "pdf-p1-drawing-1277",
+            "pdf-p1-drawing-1278",
+            "pdf-p1-drawing-1279",
+            "pdf-p1-drawing-1280",
+            "pdf-p1-drawing-1281",
+            "pdf-p1-drawing-1282",
+            "pdf-p1-drawing-1283",
+            "pdf-p1-drawing-1284",
+            "pdf-p1-drawing-1285",
+            "pdf-p1-drawing-1286"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [
+            {
+              "fromDrawingIndex": 1285,
+              "toDrawingIndex": 1280,
+              "from": [
+                3118.8994140625,
+                1406.07666015625
+              ],
+              "to": [
+                3168.421875,
+                1406.76806640625
+              ],
+              "documentGapPixels": 49.527287225414966,
+              "interpolated": false,
+              "reason": "No native red trail path between these source drawing groups"
+            },
+            {
+              "fromDrawingIndex": 1282,
+              "toDrawingIndex": 1276,
+              "from": [
+                3196.68994140625,
+                1338.1416015625
+              ],
+              "to": [
+                3223.7001953125,
+                1324.92578125
+              ],
+              "documentGapPixels": 30.070113445286186,
+              "interpolated": false,
+              "reason": "No native red trail path between these source drawing groups"
+            }
+          ],
+          "geographicTargetId": "anfiteatro",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 479769658,
+              "version": 11,
+              "url": "https://www.openstreetmap.org/way/479769658",
+              "nodeIds": [
+                2832925053,
+                2832925055,
+                4728170849,
+                4728170850,
+                4728170851,
+                4728170852,
+                8038457266,
+                8038457267,
+                8038457268,
+                4728170853,
+                2953717126,
+                4728170854,
+                4728170855,
+                8038457269,
+                8038457270,
+                8038457271,
+                8038457272,
+                8038457273,
+                4728170856,
+                4728170857,
+                8038457274,
+                4728170858,
+                8038457275,
+                8038457276,
+                8038457277,
+                4728170859,
+                8038457278,
+                8038457279,
+                8038457280,
+                4728170860,
+                8038457281,
+                8038457282,
+                8038457283,
+                8038457284,
+                4728170861,
+                8038505185,
+                8038505186,
+                8038505187,
+                5247968801,
+                8038505188,
+                4728170862,
+                8038505189,
+                8038505190,
+                8038505191
+              ],
+              "pointCount": 44
+            },
+            {
+              "id": 691091448,
+              "version": 6,
+              "url": "https://www.openstreetmap.org/way/691091448",
+              "nodeIds": [
+                4728170869,
+                8613999013,
+                6484453811,
+                8613999012,
+                8613999011,
+                8613999010,
+                8613999008,
+                6484453810,
+                8613999009,
+                8613999007,
+                6484453809,
+                6484453808,
+                8613999006,
+                6484453807,
+                6484453806,
+                8613999004,
+                8613999005,
+                6484453805,
+                6484453804,
+                6484453803,
+                8613999002,
+                8613999003,
+                8421729918,
+                6484453802,
+                8613998971,
+                6484453801,
+                6484453800,
+                8613998965,
+                8613998966,
+                6484453799,
+                8613998967,
+                8613998963,
+                6484453798,
+                8613998968,
+                8613998969,
+                6484453796
+              ],
+              "pointCount": 36
+            },
+            {
+              "id": 929919497,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/929919497",
+              "nodeIds": [
+                5247968776,
+                5247970148,
+                5247970149,
+                5247970150,
+                5247970151,
+                5247970152,
+                5247970153,
+                5247970154,
+                5247970155,
+                5247970156,
+                5247970157,
+                5247970158,
+                5247970159,
+                5247970160,
+                5247970161,
+                5247970162,
+                5247970163,
+                5247970164,
+                5247970165,
+                5247970166,
+                5247970167,
+                5247970168,
+                5247970169,
+                5247970170,
+                5247970171,
+                5247970172,
+                5247970173,
+                6816215861
+              ],
+              "pointCount": 28
+            },
+            {
+              "id": 929919498,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/929919498",
+              "nodeIds": [
+                5247970178,
+                8623607487,
+                8623607486,
+                8623607485,
+                6816215859,
+                8623607484,
+                8623607483,
+                8623607482,
+                8623607481,
+                8623607480,
+                8623607479,
+                2832925053
+              ],
+              "pointCount": 12
+            },
+            {
+              "id": 929919499,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/929919499",
+              "nodeIds": [
+                6816215861,
+                5247970174,
+                5247970175,
+                5247970176,
+                5247970177,
+                5247970178
+              ],
+              "pointCount": 6
+            },
+            {
+              "id": 1309108626,
+              "version": 2,
+              "url": "https://www.openstreetmap.org/way/1309108626",
+              "nodeIds": [
+                8038505191,
+                4728170866,
+                12122817390,
+                4728170867,
+                4728170868,
+                4728170869
+              ],
+              "pointCount": 6
+            }
+          ],
+          "officialDistanceM": 700,
+          "osmLengthM": 1218,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "la-s",
+          "name": "La S",
+          "documentCoordinateSystem": "document-pixels",
+          "sourcePathIds": [
+            "pdf-p1-drawing-1287",
+            "pdf-p1-drawing-1288",
+            "pdf-p1-drawing-1289",
+            "pdf-p1-drawing-1290"
+          ],
+          "sharedGraphicSymbols": [
+            1279
+          ],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "la-s",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 906948595,
+              "version": 6,
+              "url": "https://www.openstreetmap.org/way/906948595",
+              "nodeIds": [
+                8613999021,
+                8421720533,
+                8421720534,
+                8421720535,
+                8421720536,
+                8421720537,
+                8421720538,
+                8421720539,
+                8421720540,
+                8421720541,
+                8421720542,
+                8421720543,
+                8421720544,
+                8421720545,
+                8421720546,
+                8421720547,
+                8421720548,
+                8421720549,
+                8421720550,
+                8421720551,
+                8421720552,
+                8421720553,
+                8421720554,
+                8421720555,
+                8421720556,
+                8421720557,
+                8421720558,
+                8421720559,
+                8421720560,
+                8421720561,
+                8421720562,
+                8421720563,
+                8421720564,
+                8421720565,
+                8421720566,
+                8421720567,
+                8421720568,
+                8421720569,
+                8421720570,
+                8421720571,
+                8421720572,
+                8421720573,
+                8421720574,
+                8421720575,
+                8421720576,
+                8421720577,
+                8421720578,
+                8421720579,
+                8421729919,
+                8421720580,
+                8421720581,
+                8421720582,
+                8421720583,
+                8421720584,
+                8421720585,
+                8421720586,
+                8421720587,
+                8421720588,
+                8421720589,
+                8421720590,
+                8421720591,
+                8421720592,
+                8421720593,
+                8421720594,
+                8421720595,
+                8421720596,
+                8421720597,
+                8421720598,
+                8421720599,
+                8421720600,
+                8421720601,
+                8421720602,
+                8421720603,
+                8421720604,
+                8421720605,
+                8421720606,
+                8421720607,
+                8421720608,
+                8421720609,
+                8421720610,
+                8421720611,
+                8421720612,
+                8421720613,
+                8421720614,
+                8421720615,
+                8421720616,
+                8421729917,
+                8421729918
+              ],
+              "pointCount": 88
+            }
+          ],
+          "officialDistanceM": 500,
+          "osmLengthM": 458,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "zorzal",
+          "name": "Zorzal",
+          "documentCoordinateSystem": "document-pixels",
+          "sourcePathIds": [
+            "pdf-p1-drawing-1291",
+            "pdf-p1-drawing-1292",
+            "pdf-p1-drawing-1293",
+            "pdf-p1-drawing-1294"
+          ],
+          "sharedGraphicSymbols": [
+            1279
+          ],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "zorzal",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 862880882,
+              "version": 6,
+              "url": "https://www.openstreetmap.org/way/862880882",
+              "nodeIds": [
+                8613999020,
+                8613999019,
+                8038499701,
+                8038499702,
+                8038499703,
+                8038499704,
+                8038499705,
+                8613999017,
+                8038499706,
+                8038499707,
+                8038499708,
+                8038499778,
+                8038499709,
+                8038499710,
+                8038499711,
+                8038499712,
+                8038499713,
+                8038499714,
+                8038499715,
+                8038499716,
+                8038499717,
+                8038499718,
+                8038499719,
+                8038499720,
+                8038499721,
+                8038499722,
+                8038499723,
+                8038499724,
+                8038499725,
+                8038499726,
+                8038499727,
+                8038499728,
+                8038499729,
+                8038499730,
+                8038499731,
+                8038499732,
+                8038499733,
+                8038499734,
+                8038499735,
+                8038499736,
+                8038499737,
+                8038499738,
+                8038499739,
+                8038499740,
+                8038499741,
+                8038499742,
+                8038499743,
+                8038499777,
+                8038499744,
+                8038499745,
+                8038499746,
+                8038499747,
+                8038499748,
+                8038499749,
+                8038499750,
+                8038499751,
+                8038499752,
+                8038499753,
+                8038499754,
+                8038499755,
+                8038499756,
+                8038499757,
+                8038499758,
+                8038499759,
+                8038499760,
+                8038499761,
+                8038499762,
+                8038499763,
+                8038499764,
+                8038499765,
+                8038499766,
+                8038499767,
+                8038499768,
+                8038499769,
+                8038499770,
+                8038499771,
+                8038499772,
+                8038499773,
+                8038499774,
+                8038499775,
+                8038499776,
+                6484453802
+              ],
+              "pointCount": 82
+            }
+          ],
+          "officialDistanceM": 500,
+          "osmLengthM": 445,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "pa-arriba",
+          "name": "Pa’ arriba",
+          "documentCoordinateSystem": "document-pixels",
+          "sourcePathIds": [
+            "pdf-p1-drawing-1295",
+            "pdf-p1-drawing-1296",
+            "pdf-p1-drawing-1297",
+            "pdf-p1-drawing-1298"
+          ],
+          "sharedGraphicSymbols": [
+            1279
+          ],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "pa-arriba",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 691091446,
+              "version": 6,
+              "url": "https://www.openstreetmap.org/way/691091446",
+              "nodeIds": [
+                6484453796,
+                12122817389,
+                12122817388,
+                12122817387,
+                12122817386,
+                12122817385,
+                12122817384,
+                12122817383,
+                12122817382,
+                8555484860,
+                6484453787,
+                8555484861,
+                8555484862,
+                8555484863,
+                8555484864,
+                8555484865,
+                8555484866,
+                8555484867,
+                8555484868,
+                8555484869,
+                8555484870,
+                8555484871,
+                8555484872,
+                8555484873,
+                8555484874,
+                8555484875,
+                8555484876,
+                8555484877,
+                8555484878,
+                8555484879,
+                8555484880,
+                6484453786,
+                8555484881,
+                8555484882,
+                8555484883,
+                8555484884,
+                8555484885,
+                8555484886,
+                8555484887,
+                8555484888,
+                8555484889,
+                5247970272,
+                8555484890,
+                8555484891,
+                8555484892,
+                8555484893,
+                8555484894,
+                8555484895,
+                8555484896,
+                8555484897,
+                8555484898,
+                8555484899,
+                8555484900,
+                8555484901,
+                8555484902,
+                8555484903,
+                8555484904,
+                8555484905,
+                8555484906,
+                8555484907,
+                8555484908,
+                8555484909,
+                8555484910,
+                8555484911,
+                8555484912,
+                8555484913,
+                8555484914,
+                8555484915,
+                8555484916,
+                8555529917,
+                8555529918,
+                8555529919,
+                8555530000,
+                8555529920,
+                8555529921,
+                8555529922,
+                8555529923,
+                8555529924,
+                8555529925,
+                8613998974,
+                8555529926,
+                8555529927,
+                8555529928,
+                8555529929,
+                8555529930,
+                8555529931,
+                8555529932,
+                8555529933,
+                8555529934,
+                8555529935,
+                8555529936,
+                8555529937,
+                8555529938,
+                8555529939,
+                8555529940,
+                8555529941,
+                8555529942,
+                8555529943,
+                8555529944,
+                8555529945,
+                8555529946,
+                8555529947,
+                8555529948,
+                8555529949,
+                8555529950,
+                8555529951,
+                8555529952,
+                8555529953,
+                8555529954,
+                8555529955,
+                8555529956,
+                8555529957,
+                8555529958,
+                8555529959,
+                8555529960,
+                8555529961,
+                8555529962,
+                8555529963,
+                8555529964,
+                8555529965,
+                8555529966,
+                8555529967,
+                8555529968,
+                8555529969,
+                8555529970,
+                8555529971,
+                8555529972,
+                8555529973,
+                8555529974,
+                8555529975,
+                8555529976,
+                8555529977,
+                8555529978,
+                8555529979,
+                8555529980,
+                8555529981,
+                8555529982,
+                8555529983,
+                8555529984,
+                8555529985,
+                8555529986,
+                8555529987,
+                8555529988,
+                8555529989,
+                8555529990,
+                8555529991,
+                8555529992,
+                8555529993,
+                8555529994,
+                8555529995,
+                8555529996,
+                8613999088,
+                8555530001,
+                8555529997,
+                8555529998,
+                8555529999,
+                8613999020,
+                8613999021
+              ],
+              "pointCount": 158
+            }
+          ],
+          "officialDistanceM": 600,
+          "osmLengthM": 610,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "torre-5",
+          "name": "Torre 5",
+          "documentCoordinateSystem": "document-pixels",
+          "sourcePathIds": [
+            "pdf-p1-drawing-1271",
+            "pdf-p1-drawing-1272",
+            "pdf-p1-drawing-1273",
+            "pdf-p1-drawing-1274",
+            "pdf-p1-drawing-1275"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "torre-5",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 741162897,
+              "version": 8,
+              "url": "https://www.openstreetmap.org/way/741162897",
+              "nodeIds": [
+                2956544641,
+                2956544642,
+                6361379656,
+                2956544643,
+                2956544644,
+                2956544645,
+                2956544646,
+                2956544647,
+                2956544648,
+                2956544649,
+                2956544650,
+                2956544651,
+                2956544652,
+                2956544653,
+                2956544654,
+                2956544655,
+                2956544656,
+                2956544657,
+                2956544658,
+                2956544659,
+                2956544661,
+                2956544662,
+                2956544663,
+                2956544664,
+                2956544665,
+                2956544666,
+                2956544668,
+                2956544670,
+                2956544671,
+                2956544673,
+                2956544674,
+                2956544675,
+                2956544676,
+                2956544677,
+                2956544678,
+                2956544679,
+                2956544681,
+                2956544682,
+                2956544685,
+                2956544686,
+                2956544689,
+                8419677939,
+                6361379613,
+                2956544688,
+                2956544687,
+                2956544691,
+                2956544692,
+                2956544694
+              ],
+              "pointCount": 48
+            },
+            {
+              "id": 1316047257,
+              "version": 2,
+              "url": "https://www.openstreetmap.org/way/1316047257",
+              "nodeIds": [
+                5709141427,
+                5709141428,
+                5709141429,
+                5709141430,
+                5709141431,
+                5709141432,
+                5709141433,
+                2956544641
+              ],
+              "pointCount": 8
+            },
+            {
+              "id": 1316047258,
+              "version": 2,
+              "url": "https://www.openstreetmap.org/way/1316047258",
+              "nodeIds": [
+                8419677912,
+                5709141427
+              ],
+              "pointCount": 2
+            }
+          ],
+          "officialDistanceM": 800,
+          "osmLengthM": 787,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "piramide",
+          "name": "Pirámide",
+          "documentCoordinateSystem": "document-pixels",
+          "sourcePathIds": [
+            "pdf-p1-drawing-1299",
+            "pdf-p1-drawing-1300",
+            "pdf-p1-drawing-1301"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "piramide",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 479774004,
+              "version": 9,
+              "url": "https://www.openstreetmap.org/way/479774004",
+              "nodeIds": [
+                6938700276,
+                4728218266,
+                4728218267,
+                4728218268,
+                4728218269,
+                4728218270,
+                4728218271,
+                4728218272,
+                4728218273,
+                4728218274,
+                4728218275,
+                4728218276,
+                4728218277,
+                4728218278,
+                4728218279,
+                4728218280,
+                4728218281,
+                4728218282,
+                4728218283,
+                4728218284,
+                4728218285,
+                4728218286,
+                4728218287,
+                4728218288,
+                4728218589,
+                4728218590,
+                4728218591,
+                4728218592,
+                4728218593,
+                4728218594,
+                4728218595,
+                4728218596,
+                4728218597,
+                4728218598,
+                4728218599,
+                4728218600,
+                4728218601,
+                4728218602,
+                4728218603,
+                4728218604,
+                4728218605,
+                4728218606,
+                4728218607,
+                4728218608,
+                4728218609,
+                4728218610,
+                4728218611,
+                4728218612,
+                4728218613,
+                4728218614,
+                4728218615,
+                4728218616,
+                4728218617,
+                4728218618,
+                4728218619,
+                4728218620,
+                4728218621,
+                4728218622,
+                4728218623,
+                4728218624,
+                4728218625,
+                4728218626,
+                4728218627,
+                4728218628,
+                4728218629,
+                4728218630,
+                4728218631,
+                4728218632,
+                4728218633,
+                4728218634,
+                4728218635,
+                4728218636,
+                4728218637,
+                4728218638,
+                4728218639,
+                4728218640,
+                4728218641,
+                4728218642,
+                4728218643,
+                4728218644,
+                4728218645,
+                4728218646,
+                4728218647,
+                4728218648,
+                4728218649,
+                4728218650,
+                4728218651,
+                4728218652,
+                4728218653,
+                4728218654,
+                4728218655,
+                4728218656,
+                4728218657,
+                4728218658,
+                4728218659,
+                4728218660,
+                4728218661
+              ],
+              "pointCount": 97
+            }
+          ],
+          "officialDistanceM": 600,
+          "osmLengthM": 848,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "paseo-infancia",
+          "name": "Tramo Parque B. de la Infancia",
+          "documentCoordinateSystem": "document-pixels",
+          "sourcePathIds": [
+            "pdf-p1-drawing-1362",
+            "pdf-p1-drawing-1365",
+            "pdf-p1-drawing-1366",
+            "pdf-p1-drawing-1367"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "paseo-infancia",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 1022000923,
+              "version": 5,
+              "url": "https://www.openstreetmap.org/way/1022000923",
+              "nodeIds": [
+                2589703313,
+                5357382009,
+                2589703311,
+                2589703310,
+                2589703309,
+                2589703308,
+                2589703307,
+                2589703306,
+                2589703305,
+                3995847202,
+                5180914572,
+                2589703304,
+                2589703303,
+                2589703302,
+                2589703301,
+                3995847203,
+                2589703300,
+                2954755711,
+                5180914571,
+                2589703299,
+                5180914569,
+                2589703298,
+                2589703297,
+                2589703296,
+                2589703295,
+                5180914570,
+                2589703294,
+                2589703293,
+                2589703292,
+                2589703291,
+                2589703290,
+                2589703289,
+                2589703286,
+                2589703283,
+                2589703282,
+                2589703281,
+                2589703280,
+                2589703279,
+                2589703277,
+                2589703275,
+                2589703274,
+                5457873864,
+                8566030229,
+                2589703273
+              ],
+              "pointCount": 44
+            }
+          ],
+          "officialDistanceM": 940,
+          "osmLengthM": 1059,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "paseo-sentidos",
+          "name": "Sendero de los Sentidos",
+          "documentCoordinateSystem": "document-pixels",
+          "sourcePathIds": [
+            "pdf-p1-drawing-1363",
+            "pdf-p1-drawing-1364",
+            "pdf-p1-drawing-1368",
+            "pdf-p1-drawing-1369"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [
+            {
+              "fromDrawingIndex": 1363,
+              "toDrawingIndex": 1368,
+              "fromEndpoint": "end",
+              "toEndpoint": "start",
+              "from": [
+                1163.5987548828125,
+                1005.093017578125
+              ],
+              "to": [
+                1156.2177734375,
+                1061.35595703125
+              ],
+              "documentGapPixels": 56.74501954358688,
+              "interpolated": false,
+              "reason": "No native green trail path between the two Sentidos source drawing groups near the funicular"
+            }
+          ],
+          "geographicTargetId": "paseo-sentidos",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 777396164,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/777396164",
+              "nodeIds": [
+                2589703313,
+                7254389281,
+                7254389280,
+                7254389279,
+                7254389278,
+                7254389277,
+                7002802960,
+                7002802959,
+                7002802958,
+                7002802957,
+                7002802956,
+                7002802955,
+                7002802954,
+                7002802953,
+                7002802952,
+                7002802951,
+                7002802950,
+                7002802949,
+                7002802948,
+                7002802947,
+                7002802946,
+                7254389275
+              ],
+              "pointCount": 22
+            },
+            {
+              "id": 777396167,
+              "version": 5,
+              "url": "https://www.openstreetmap.org/way/777396167",
+              "nodeIds": [
+                7254389274,
+                13722450394,
+                13722450393,
+                13722450392,
+                13722450391,
+                13722450389,
+                13722450390
+              ],
+              "pointCount": 7
+            },
+            {
+              "id": 777396168,
+              "version": 5,
+              "url": "https://www.openstreetmap.org/way/777396168",
+              "nodeIds": [
+                7254389275,
+                7254389274
+              ],
+              "pointCount": 2
+            },
+            {
+              "id": 1498379319,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1498379319",
+              "nodeIds": [
+                13722450390,
+                13722450388,
+                13722450387,
+                8566030160
+              ],
+              "pointCount": 4
+            }
+          ],
+          "officialDistanceM": 540,
+          "osmLengthM": 549,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "paseo-bellavista",
+          "name": "Tramo Bellavista",
+          "documentCoordinateSystem": "document-pixels",
+          "sourcePathIds": [
+            "pdf-p1-drawing-1370",
+            "pdf-p1-drawing-1371"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "paseo-bellavista",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 777396165,
+              "version": 9,
+              "url": "https://www.openstreetmap.org/way/777396165",
+              "nodeIds": [
+                13722450386,
+                8566030173,
+                13722450381,
+                5357381976,
+                6946305163,
+                6946305164,
+                5357381972,
+                8566030164,
+                5357381971,
+                8566030165,
+                5357381969,
+                5357381968,
+                5357381967,
+                5357381966,
+                5357381965,
+                5357381964,
+                5357381963,
+                5357381962,
+                5357381961,
+                5357381960,
+                5357381959,
+                5357381958,
+                5357381957,
+                5357381956,
+                12784694127,
+                5357381955,
+                5357381954,
+                5357381953,
+                5357381952,
+                5357381945,
+                8566030167,
+                4738194523,
+                4738194522,
+                4738194521,
+                4738194520,
+                8735502011,
+                8735502013,
+                405912200
+              ],
+              "pointCount": 38
+            },
+            {
+              "id": 1307609502,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1307609502",
+              "nodeIds": [
+                405912200,
+                8735502014,
+                4738194517,
+                4738194516,
+                4738194515,
+                4738194514,
+                8735500946,
+                4738194513,
+                2512216671,
+                4728182188,
+                5357381944
+              ],
+              "pointCount": 11
+            },
+            {
+              "id": 1498379320,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1498379320",
+              "nodeIds": [
+                835432125,
+                13722450386
+              ],
+              "pointCount": 2
+            }
+          ],
+          "officialDistanceM": 1000,
+          "osmLengthM": 1329,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "paseo-pedro-valdivia",
+          "name": "Tramo Pedro de Valdivia",
+          "documentCoordinateSystem": "document-pixels",
+          "sourcePathIds": [
+            "pdf-p1-drawing-1372",
+            "pdf-p1-drawing-1373",
+            "pdf-p1-drawing-1374",
+            "pdf-p1-drawing-1375"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "paseo-pedro-valdivia",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 256510467,
+              "version": 5,
+              "url": "https://www.openstreetmap.org/way/256510467",
+              "nodeIds": [
+                6938709907,
+                8538143350,
+                8538143351,
+                8538143352,
+                8538143353,
+                8538143354,
+                8538143370,
+                8538143355,
+                8538143356,
+                8538143357,
+                8538143358
+              ],
+              "pointCount": 11
+            },
+            {
+              "id": 749561207,
+              "version": 6,
+              "url": "https://www.openstreetmap.org/way/749561207",
+              "nodeIds": [
+                8538143358,
+                7009215341,
+                7009215340,
+                7009215339,
+                8538143371,
+                8538143404,
+                2545317622
+              ],
+              "pointCount": 7
+            },
+            {
+              "id": 981089817,
+              "version": 4,
+              "url": "https://www.openstreetmap.org/way/981089817",
+              "nodeIds": [
+                6938709789,
+                6938709798,
+                6938709797,
+                6938709796,
+                6938709795,
+                6938709794,
+                6938709793,
+                2594837142,
+                4740422214
+              ],
+              "pointCount": 9
+            },
+            {
+              "id": 1233612936,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/1233612936",
+              "nodeIds": [
+                5357381944,
+                2512216672,
+                5357381942,
+                2512216673,
+                2512216674,
+                13616033214,
+                5189608952,
+                2512216675,
+                5852834864,
+                2512216676,
+                6938709907
+              ],
+              "pointCount": 11
+            },
+            {
+              "id": 1307609504,
+              "version": 2,
+              "url": "https://www.openstreetmap.org/way/1307609504",
+              "nodeIds": [
+                6938709907,
+                2512216677,
+                7009138697,
+                7009138698,
+                6938709910,
+                6938709909,
+                7009138696,
+                6938709908,
+                7009138695,
+                2512216678,
+                3660404591,
+                6938709789
+              ],
+              "pointCount": 12
+            },
+            {
+              "id": 1308348019,
+              "version": 2,
+              "url": "https://www.openstreetmap.org/way/1308348019",
+              "nodeIds": [
+                4740422214,
+                12115910260,
+                12115910261,
+                12115910262,
+                12115910263,
+                12115910266,
+                12115910264,
+                12115910265,
+                12115910267,
+                12115910268,
+                12115910269,
+                8538143497,
+                8538143496,
+                8538143495,
+                8735354661,
+                8538143494,
+                8538143493,
+                12115910270,
+                12115910271,
+                12115910272,
+                12115910273,
+                12115910274,
+                12115910275,
+                12115910276,
+                12115910277,
+                12115910278,
+                12115910279,
+                12115910280,
+                12115910281,
+                12115910282,
+                12115910283,
+                12115910284,
+                12115910285,
+                12115910286,
+                12115910287,
+                6938709763
+              ],
+              "pointCount": 36
+            },
+            {
+              "id": 1308348023,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1308348023",
+              "nodeIds": [
+                6938709763,
+                8735159376,
+                8735159377,
+                8735159378,
+                8735159379,
+                8735159380,
+                8735159381,
+                12115910288,
+                12115910289,
+                12115910290,
+                12115910291,
+                12115910292,
+                12115910293,
+                12115910294,
+                12115910295,
+                12115910296
+              ],
+              "pointCount": 16
+            }
+          ],
+          "officialDistanceM": 1500,
+          "osmLengthM": 2329,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "paseo-piramide",
+          "name": "Tramo Pirámide / Jardín Japonés",
+          "documentCoordinateSystem": "document-pixels",
+          "sourcePathIds": [
+            "pdf-p1-drawing-1376",
+            "pdf-p1-drawing-1377",
+            "pdf-p1-drawing-1378",
+            "pdf-p1-drawing-1379",
+            "pdf-p1-drawing-1380",
+            "pdf-p1-drawing-1381",
+            "pdf-p1-drawing-1382",
+            "pdf-p1-drawing-1383",
+            "pdf-p1-drawing-1384",
+            "pdf-p1-drawing-1385",
+            "pdf-p1-drawing-1386",
+            "pdf-p1-drawing-1387",
+            "pdf-p1-drawing-1388",
+            "pdf-p1-drawing-1389",
+            "pdf-p1-drawing-1390"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "paseo-piramide",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 180578702,
+              "version": 19,
+              "url": "https://www.openstreetmap.org/way/180578702",
+              "nodeIds": [
+                3996624005,
+                2341975052,
+                5349175211,
+                2341975043,
+                2341975044,
+                5349176138,
+                5349176139,
+                2341975041,
+                2341975058,
+                2341975059,
+                5349176137,
+                2341975053,
+                5349176136,
+                5349175210,
+                2341975046,
+                1910022179,
+                1910022168,
+                1910022121,
+                1910022114,
+                1910022203,
+                1910022165,
+                1910022198,
+                5349176135,
+                1910022194,
+                5349176134,
+                1910022162,
+                1910022200,
+                1910022196,
+                1910022175,
+                5349176133,
+                1910022144,
+                1910022147,
+                1910022214,
+                1910022112,
+                1910022173,
+                1910022123,
+                1910022151,
+                1910022192,
+                1910022180,
+                1910022154,
+                1910022118,
+                1910022142,
+                1910022116,
+                1910022145,
+                1910022209,
+                1910022125,
+                1910022171,
+                1910022106,
+                1910022140,
+                1910022109,
+                1910022177,
+                1910022205,
+                1910022202
+              ],
+              "pointCount": 53
+            },
+            {
+              "id": 396817982,
+              "version": 11,
+              "url": "https://www.openstreetmap.org/way/396817982",
+              "nodeIds": [
+                3996624005,
+                3996624001,
+                5349176140,
+                3996624002,
+                3996624000,
+                5349175212,
+                5349176141,
+                5349176143,
+                5349176144,
+                4004744321,
+                5349176142,
+                3996624004,
+                5349175213,
+                5349176156,
+                5349176155,
+                3996624003,
+                4728105387
+              ],
+              "pointCount": 17
+            },
+            {
+              "id": 727333973,
+              "version": 9,
+              "url": "https://www.openstreetmap.org/way/727333973",
+              "nodeIds": [
+                12449754633,
+                6983753717,
+                6816200527,
+                6816200528,
+                6816200530,
+                6816200531,
+                6983753718,
+                6816200532,
+                6983753719,
+                6816200533,
+                6816200534,
+                6816200535,
+                12181239579,
+                6816200536,
+                6983753720,
+                6816200537,
+                6816200538,
+                6816200539,
+                6816200540,
+                6816200541,
+                6816200542,
+                6816200543,
+                6816200544,
+                6816200545,
+                6816200546,
+                6816200547,
+                6983753721,
+                6983753722,
+                6983753723,
+                6983753724,
+                6983753725,
+                6983753726,
+                6983753727,
+                6983753728,
+                6983753729,
+                6983753730,
+                6983753731,
+                6983753732,
+                6983753733,
+                6983753734,
+                6983753735,
+                6983753736,
+                6816200548,
+                6816200549,
+                6816200550,
+                6816200551,
+                6816200552,
+                6816200553,
+                6816200554,
+                6983753737,
+                6816200555,
+                6816200556,
+                6816200557,
+                6816200558
+              ],
+              "pointCount": 54
+            },
+            {
+              "id": 741162893,
+              "version": 6,
+              "url": "https://www.openstreetmap.org/way/741162893",
+              "nodeIds": [
+                6816215689,
+                6983753754,
+                6938709633,
+                6938709627,
+                8419677997,
+                6938709690,
+                6938709691,
+                6983753757,
+                6983753758
+              ],
+              "pointCount": 9
+            },
+            {
+              "id": 741162909,
+              "version": 6,
+              "url": "https://www.openstreetmap.org/way/741162909",
+              "nodeIds": [
+                4728105387,
+                9075188870,
+                12115910296,
+                2341975054
+              ],
+              "pointCount": 4
+            },
+            {
+              "id": 906717591,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/906717591",
+              "nodeIds": [
+                6816200558,
+                6816200559,
+                6816200560,
+                6816200561,
+                6983753738,
+                6816200562,
+                6816200563,
+                6816200564,
+                6816200565,
+                6816200566,
+                6816200567,
+                6816200568,
+                6816200569,
+                6816200570,
+                6816200571,
+                6816200572,
+                6816200573,
+                6816200574,
+                6816200575,
+                6816200576,
+                6816200577,
+                6816200578,
+                6816200579,
+                6816200580,
+                6983753739,
+                6816200581,
+                6816200582,
+                6816200583,
+                6816200584,
+                6816215685
+              ],
+              "pointCount": 30
+            },
+            {
+              "id": 906717592,
+              "version": 4,
+              "url": "https://www.openstreetmap.org/way/906717592",
+              "nodeIds": [
+                6816215685,
+                6816215686,
+                6983753740,
+                6983753741,
+                6983753742,
+                6983753743,
+                6983753744,
+                6983753745,
+                6983753746,
+                6983753747,
+                6983753748,
+                6983753749,
+                6816215687,
+                6938709634,
+                6816215688,
+                6816215689
+              ],
+              "pointCount": 16
+            },
+            {
+              "id": 906717593,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/906717593",
+              "nodeIds": [
+                6983753758,
+                6816215703,
+                6816215704,
+                6983753750,
+                6983753751,
+                6983753752,
+                6816215705,
+                6816215706,
+                6816215707
+              ],
+              "pointCount": 9
+            },
+            {
+              "id": 906717594,
+              "version": 4,
+              "url": "https://www.openstreetmap.org/way/906717594",
+              "nodeIds": [
+                6816215707,
+                6816215708,
+                6816215709,
+                6816215710,
+                6983753753,
+                1910022202
+              ],
+              "pointCount": 6
+            },
+            {
+              "id": 919016888,
+              "version": 5,
+              "url": "https://www.openstreetmap.org/way/919016888",
+              "nodeIds": [
+                6983753709,
+                6983753710,
+                6983753713,
+                6983753714,
+                6983753715,
+                6816200523,
+                6816200524,
+                6816200529,
+                6816200525,
+                6816200526,
+                12425580492,
+                12449853545
+              ],
+              "pointCount": 12
+            },
+            {
+              "id": 1346024630,
+              "version": 2,
+              "url": "https://www.openstreetmap.org/way/1346024630",
+              "nodeIds": [
+                6983753716,
+                12449754633
+              ],
+              "pointCount": 2
+            },
+            {
+              "id": 1346033271,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1346033271",
+              "nodeIds": [
+                12449853545,
+                6983753716
+              ],
+              "pointCount": 2
+            }
+          ],
+          "officialDistanceM": 3700,
+          "osmLengthM": 3777,
+          "equalityOfExtentsVerified": false
+        },
+        {
+          "id": "paseo-cascada",
+          "name": "Tramo La Cascada",
+          "documentCoordinateSystem": "document-pixels",
+          "sourcePathIds": [
+            "pdf-p1-drawing-1391",
+            "pdf-p1-drawing-1392",
+            "pdf-p1-drawing-1393"
+          ],
+          "sharedGraphicSymbols": [],
+          "unpaintedDocumentGaps": [],
+          "geographicTargetId": "paseo-cascada",
+          "correspondence": "declared-name-and-ID-only",
+          "osmWays": [
+            {
+              "id": 555001286,
+              "version": 6,
+              "url": "https://www.openstreetmap.org/way/555001286",
+              "nodeIds": [
+                5355615893,
+                5355615894,
+                8450343484,
+                5355615895,
+                5355615962,
+                5355615963,
+                5355615964,
+                5355615965,
+                5355615966,
+                5355615967,
+                5355615968,
+                5355615969,
+                8450343457,
+                5355615970,
+                5355615971,
+                5355615972,
+                5355615973,
+                5355615974,
+                5355615975,
+                5355615976,
+                5355615977,
+                5355615978,
+                5355615979,
+                5355615980,
+                5355615981,
+                5355615982,
+                5355615983,
+                5355615984,
+                5355615985,
+                5355615986,
+                5355615987,
+                5355615988,
+                5355615989,
+                5355615990,
+                5355615991,
+                5355615992,
+                5355615993,
+                12115910258,
+                8534893325,
+                5355615994,
+                5355615995,
+                12115910259,
+                5355615996,
+                5349176215
+              ],
+              "pointCount": 44
+            },
+            {
+              "id": 910105205,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/910105205",
+              "nodeIds": [
+                1350005243,
+                5355615844,
+                5355615845,
+                5355615846,
+                5355615847,
+                5355615848,
+                5355615849,
+                5355615850,
+                5355615851,
+                5355615852,
+                5355615853,
+                5355615854,
+                5355615855,
+                5355615856,
+                5355615857,
+                5355615858,
+                5355615961,
+                5355615882,
+                5355615859,
+                5355615860,
+                5355615861
+              ],
+              "pointCount": 21
+            },
+            {
+              "id": 910105206,
+              "version": 3,
+              "url": "https://www.openstreetmap.org/way/910105206",
+              "nodeIds": [
+                12444912980,
+                5355615885,
+                5355615884,
+                5355615893
+              ],
+              "pointCount": 4
+            },
+            {
+              "id": 1345197424,
+              "version": 1,
+              "url": "https://www.openstreetmap.org/way/1345197424",
+              "nodeIds": [
+                5355615861,
+                12444912980
+              ],
+              "pointCount": 2
+            }
+          ],
+          "officialDistanceM": 1200,
+          "osmLengthM": 1261,
+          "equalityOfExtentsVerified": false
+        }
+      ],
+      "graphicConnections": [],
+      "unattributedDocumentGroups": [
+        {
+          "drawingIndices": [
+            1394,
+            1395,
+            1396
+          ],
+          "assignedToTrail": false,
+          "bounds": [
+            2190.654296875,
+            917.71044921875,
+            548.78515625,
+            114.138916015625
+          ],
+          "reason": "Unnumbered dotted green source objects are not visibly linked to a numbered Paseo badge; nearby red no-entry artwork does not establish their route identity"
+        },
+        {
+          "drawingIndices": [
+            1397,
+            1398,
+            1399
+          ],
+          "assignedToTrail": false,
+          "bounds": [
+            1915.546875,
+            690.36572265625,
+            213.20361328125,
+            154.1298828125
+          ],
+          "reason": "Unnumbered dotted green source objects are not visibly linked to a numbered Paseo badge; nearby red no-entry artwork does not establish their route identity"
+        },
+        {
+          "drawingIndices": [
+            1400,
+            1401,
+            1402
+          ],
+          "assignedToTrail": false,
+          "bounds": [
+            1718.6904296875,
+            595.78125,
+            181.29931640625,
+            64.31396484375
+          ],
+          "reason": "Unnumbered dotted green source objects are not visibly linked to a numbered Paseo badge; nearby red no-entry artwork does not establish their route identity"
+        }
+      ],
+      "sourceOsmSharedNodes": [
+        {
+          "osmNodeId": 483172194,
+          "coordinateLonLat": [
+            -70.6084064,
+            -33.3993794
+          ],
+          "targetIds": [
+            "avenida-federico-albert",
+            "avenida-claudio-gay",
+            "avenida-manuel-zanartu"
+          ],
+          "wayIds": [
+            40140804,
+            41160817,
+            441864821
+          ]
+        },
+        {
+          "osmNodeId": 5247970255,
+          "coordinateLonLat": [
+            -70.6086538,
+            -33.3995034
+          ],
+          "targetIds": [
+            "avenida-federico-albert",
+            "avenida-claudio-gay"
+          ],
+          "wayIds": [
+            40140804,
+            542847079
+          ]
+        },
+        {
+          "osmNodeId": 4402908298,
+          "coordinateLonLat": [
+            -70.6361604,
+            -33.4294623
+          ],
+          "targetIds": [
+            "avenida-alberto-mackenna",
+            "avenida-carlos-reed"
+          ],
+          "wayIds": [
+            44579782,
+            442629926,
+            909201230
+          ]
+        },
+        {
+          "osmNodeId": 2589703313,
+          "coordinateLonLat": [
+            -70.6378791,
+            -33.4274791
+          ],
+          "targetIds": [
+            "avenida-alberto-mackenna",
+            "paseo-sentidos",
+            "paseo-infancia"
+          ],
+          "wayIds": [
+            44579782,
+            777396164,
+            1022000923
+          ]
+        },
+        {
+          "osmNodeId": 4403004171,
+          "coordinateLonLat": [
+            -70.6230049,
+            -33.4161214
+          ],
+          "targetIds": [
+            "avenida-alberto-mackenna",
+            "avenida-pedro-bannen"
+          ],
+          "wayIds": [
+            44579782,
+            482748524,
+            1035844715
+          ]
+        },
+        {
+          "osmNodeId": 405912200,
+          "coordinateLonLat": [
+            -70.625576,
+            -33.4254284
+          ],
+          "targetIds": [
+            "avenida-carlos-reed",
+            "paseo-bellavista"
+          ],
+          "wayIds": [
+            48549531,
+            777396165,
+            1307609502
+          ]
+        },
+        {
+          "osmNodeId": 835432125,
+          "coordinateLonLat": [
+            -70.6341132,
+            -33.4307163
+          ],
+          "targetIds": [
+            "avenida-carlos-reed",
+            "paseo-bellavista"
+          ],
+          "wayIds": [
+            48549531,
+            922756672,
+            1498379320
+          ]
+        },
+        {
+          "osmNodeId": 2953717033,
+          "coordinateLonLat": [
+            -70.6225809,
+            -33.415885
+          ],
+          "targetIds": [
+            "avenida-carlos-martner",
+            "avenida-pedro-bannen"
+          ],
+          "wayIds": [
+            69889085,
+            482748524,
+            482748525
+          ]
+        },
+        {
+          "osmNodeId": 1350005243,
+          "coordinateLonLat": [
+            -70.6206597,
+            -33.4077352
+          ],
+          "targetIds": [
+            "avenida-la-montana",
+            "paseo-cascada"
+          ],
+          "wayIds": [
+            120389660,
+            910105205
+          ]
+        },
+        {
+          "osmNodeId": 2953717039,
+          "coordinateLonLat": [
+            -70.6227673,
+            -33.4160619
+          ],
+          "targetIds": [
+            "avenida-gabriela-mistral",
+            "avenida-pedro-bannen"
+          ],
+          "wayIds": [
+            158170398,
+            482748525
+          ]
+        },
+        {
+          "osmNodeId": 265686725,
+          "coordinateLonLat": [
+            -70.6179437,
+            -33.4140727
+          ],
+          "targetIds": [
+            "avenida-gabriela-mistral",
+            "avenida-abate-molina"
+          ],
+          "wayIds": [
+            158170398,
+            292124343
+          ]
+        },
+        {
+          "osmNodeId": 8038505191,
+          "coordinateLonLat": [
+            -70.6103354,
+            -33.4041458
+          ],
+          "targetIds": [
+            "avenida-pablo-neruda",
+            "anfiteatro"
+          ],
+          "wayIds": [
+            160691199,
+            479769658,
+            1309108626
+          ]
+        },
+        {
+          "osmNodeId": 5247968776,
+          "coordinateLonLat": [
+            -70.6106148,
+            -33.4072453
+          ],
+          "targetIds": [
+            "avenida-pablo-neruda",
+            "anfiteatro"
+          ],
+          "wayIds": [
+            160691199,
+            929919497
+          ]
+        },
+        {
+          "osmNodeId": 265686747,
+          "coordinateLonLat": [
+            -70.6175274,
+            -33.4152185
+          ],
+          "targetIds": [
+            "avenida-abate-molina",
+            "camino-rafael-elizalde"
+          ],
+          "wayIds": [
+            363378017,
+            741162913,
+            1343882814,
+            1343882815
+          ]
+        },
+        {
+          "osmNodeId": 4728218661,
+          "coordinateLonLat": [
+            -70.6070446,
+            -33.3953692
+          ],
+          "targetIds": [
+            "avenida-manuel-zanartu",
+            "piramide"
+          ],
+          "wayIds": [
+            441864821,
+            479774004
+          ]
+        },
+        {
+          "osmNodeId": 5290653540,
+          "coordinateLonLat": [
+            -70.62076,
+            -33.4137985
+          ],
+          "targetIds": [
+            "avenida-carlos-martner",
+            "avenida-abate-molina"
+          ],
+          "wayIds": [
+            442592614,
+            480868638,
+            1308348020
+          ]
+        },
+        {
+          "osmNodeId": 4760402170,
+          "coordinateLonLat": [
+            -70.6211989,
+            -33.4138198
+          ],
+          "targetIds": [
+            "avenida-carlos-martner",
+            "avenida-la-montana"
+          ],
+          "wayIds": [
+            442633595,
+            1223734901
+          ]
+        },
+        {
+          "osmNodeId": 5290653549,
+          "coordinateLonLat": [
+            -70.6211256,
+            -33.4138101
+          ],
+          "targetIds": [
+            "avenida-carlos-martner",
+            "avenida-abate-molina"
+          ],
+          "wayIds": [
+            442633595,
+            480868638
+          ]
+        },
+        {
+          "osmNodeId": 265686542,
+          "coordinateLonLat": [
+            -70.627193,
+            -33.4218731
+          ],
+          "targetIds": [
+            "cuatro-y-medio",
+            "avenida-pedro-bannen"
+          ],
+          "wayIds": [
+            479769031,
+            480868066
+          ]
+        },
+        {
+          "osmNodeId": 4728164940,
+          "coordinateLonLat": [
+            -70.6271614,
+            -33.4243958
+          ],
+          "targetIds": [
+            "cuatro-y-medio",
+            "centenario"
+          ],
+          "wayIds": [
+            479769031,
+            479771255,
+            1307648383
+          ]
+        },
+        {
+          "osmNodeId": 4728182188,
+          "coordinateLonLat": [
+            -70.6234948,
+            -33.4247722
+          ],
+          "targetIds": [
+            "cuatro-y-medio",
+            "paseo-bellavista"
+          ],
+          "wayIds": [
+            479771255,
+            1307609502
+          ]
+        },
+        {
+          "osmNodeId": 6938700276,
+          "coordinateLonLat": [
+            -70.6019812,
+            -33.3894875
+          ],
+          "targetIds": [
+            "piramide",
+            "avenida-manuel-zanartu"
+          ],
+          "wayIds": [
+            479774004,
+            577345674,
+            1345175047
+          ]
+        },
+        {
+          "osmNodeId": 265686597,
+          "coordinateLonLat": [
+            -70.6229236,
+            -33.4162298
+          ],
+          "targetIds": [
+            "avenida-pedro-bannen",
+            "avenida-alberto-mackenna"
+          ],
+          "wayIds": [
+            480868066,
+            482748525,
+            1035844715
+          ]
+        },
+        {
+          "osmNodeId": 5009936028,
+          "coordinateLonLat": [
+            -70.6294587,
+            -33.4229047
+          ],
+          "targetIds": [
+            "cuatro-y-medio",
+            "centenario"
+          ],
+          "wayIds": [
+            512366462,
+            1307648385
+          ]
+        },
+        {
+          "osmNodeId": 5349176215,
+          "coordinateLonLat": [
+            -70.6179659,
+            -33.4037026
+          ],
+          "targetIds": [
+            "avenida-la-montana",
+            "paseo-cascada"
+          ],
+          "wayIds": [
+            520212770,
+            555001286
+          ]
+        },
+        {
+          "osmNodeId": 6484453796,
+          "coordinateLonLat": [
+            -70.6092837,
+            -33.3999925
+          ],
+          "targetIds": [
+            "pa-arriba",
+            "anfiteatro"
+          ],
+          "wayIds": [
+            691091446,
+            691091448
+          ]
+        },
+        {
+          "osmNodeId": 8613999020,
+          "coordinateLonLat": [
+            -70.6101738,
+            -33.4032642
+          ],
+          "targetIds": [
+            "pa-arriba",
+            "zorzal"
+          ],
+          "wayIds": [
+            691091446,
+            862880882
+          ]
+        },
+        {
+          "osmNodeId": 8613999021,
+          "coordinateLonLat": [
+            -70.6101951,
+            -33.4033109
+          ],
+          "targetIds": [
+            "pa-arriba",
+            "la-s"
+          ],
+          "wayIds": [
+            691091446,
+            906948595
+          ]
+        },
+        {
+          "osmNodeId": 8421729918,
+          "coordinateLonLat": [
+            -70.6103148,
+            -33.4007293
+          ],
+          "targetIds": [
+            "anfiteatro",
+            "la-s"
+          ],
+          "wayIds": [
+            691091448,
+            906948595
+          ]
+        },
+        {
+          "osmNodeId": 6484453802,
+          "coordinateLonLat": [
+            -70.6103459,
+            -33.400559
+          ],
+          "targetIds": [
+            "anfiteatro",
+            "zorzal"
+          ],
+          "wayIds": [
+            691091448,
+            862880882
+          ]
+        },
+        {
+          "osmNodeId": 12115910296,
+          "coordinateLonLat": [
+            -70.6155769,
+            -33.4130738
+          ],
+          "targetIds": [
+            "paseo-piramide",
+            "paseo-pedro-valdivia"
+          ],
+          "wayIds": [
+            741162909,
+            1308348023
+          ]
+        },
+        {
+          "osmNodeId": 2341975054,
+          "coordinateLonLat": [
+            -70.6156242,
+            -33.4131015
+          ],
+          "targetIds": [
+            "paseo-piramide",
+            "avenida-abate-molina"
+          ],
+          "wayIds": [
+            741162909,
+            1308348020,
+            1308348021
+          ]
+        },
+        {
+          "osmNodeId": 2594837142,
+          "coordinateLonLat": [
+            -70.6191453,
+            -33.416238
+          ],
+          "targetIds": [
+            "avenida-abate-molina",
+            "paseo-pedro-valdivia"
+          ],
+          "wayIds": [
+            741162913,
+            981089817
+          ]
+        },
+        {
+          "osmNodeId": 2545317622,
+          "coordinateLonLat": [
+            -70.6175354,
+            -33.4152925
+          ],
+          "targetIds": [
+            "paseo-pedro-valdivia",
+            "avenida-abate-molina"
+          ],
+          "wayIds": [
+            749561207,
+            1343882814
+          ]
+        },
+        {
+          "osmNodeId": 5357381944,
+          "coordinateLonLat": [
+            -70.6233866,
+            -33.4240511
+          ],
+          "targetIds": [
+            "paseo-pedro-valdivia",
+            "paseo-bellavista"
+          ],
+          "wayIds": [
+            1233612936,
+            1307609502
+          ]
+        }
+      ],
+      "topologyStatus": "OSM shared node IDs describe only that database. Graphic symbols/crossings create no traversable edges.",
+      "documentOnlyScope": "8 yellow pedestrian entries remain in the original, outside the cycling catalog. Avenue views are source crops/table references, not extracted road axes."
+    }
+  ]
+}

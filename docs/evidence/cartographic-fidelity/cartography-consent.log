@@ -1,0 +1,7 @@
+PASS pending start consent stop
+PASS pending start consent demo
+PASS pending start consent demo-off
+PASS pending start consent off-demo-off
+PASS pending start consent navigation
+PASS pending start consent control-gps
+PASS pending start consent control-off

@@ -1,0 +1,19 @@
+{
+  "baseline": "8f6d6cade812121e2e3efdb359cb25339c6e5d26",
+  "unitTests": {
+    "passed": 157,
+    "failed": 0
+  },
+  "documentFidelity": "corrected verified omissions and source-style loss",
+  "geographicEquivalence": "unvalidated; not completed",
+  "acceptedGeographicControls": 0,
+  "activePrivateVersion": 22,
+  "published": false,
+  "mainUnchanged": "87edc6c9f8097a9eb34cfc1f7e955a74edfe3ab9",
+  "knownFailure": "parquemet-coverage-browser.mjs label bounds fails on unchanged baseline and candidate",
+  "privateBuildFiles": {
+    "index.html": "014822cd0e386138418d2bf37b761c8c0fcdfa551ecb3cd5296ada78bb61b24e",
+    "parquemet.html": "ef015d055b6ef00d7f1c88bbcbae51c99fb1d94f5e92f02fff7882511ca8351c",
+    "mapas-gps-parques.html": "014822cd0e386138418d2bf37b761c8c0fcdfa551ecb3cd5296ada78bb61b24e"
+  }
+}

@@ -2,6 +2,7 @@ import {setupCyclingViews,currentOfficialPreview} from '../rider/views.mjs';
 import {setupRouteFilters,filterMapPadding} from './route-filter-ui.mjs';
 import {setupBikerideChrome} from './bikeride.mjs';
 import {validateContinuous,createCartelLayer} from './cartel.mjs';
+import {loadContextArtwork} from './cartel-context.mjs';
 import {fromOsmSnapshot} from './data.mjs';
 import {validateCatalog,describeTrail} from './catalog.mjs';
 import {sha256} from '../review/sha256.mjs';
@@ -118,7 +119,10 @@ async function loadCartel(){
   const response=await fetch('./'+cartelData.image.url);if(!response.ok)throw new Error();const bytes=new Uint8Array(await response.arrayBuffer());if(sha256(bytes)!==cartelData.image.sha256)throw new Error();const imageUrl=URL.createObjectURL(new Blob([bytes],{type:'image/jpeg'}));
   attachTrailPreviews(cartelData,{background:{imageUrl,width:cartelData.image.width,height:cartelData.image.height},resolveId:id=>catalog.targets.find(t=>t.id===id)?.visualTrailId,onOpen:id=>{$('sign-opacity').value='100';signReview.open(id,'overlay');}});
  }catch{for(const card of document.querySelectorAll('.trail-card')){const note=document.createElement('p');note.className='fine-print';note.textContent='No se pudo cargar el recorte del plano oficial. Puedes abrir el plano y reintentar el fondo.';card.querySelector('.trail-details').prepend(note);}}
- cartelLayer=createCartelLayer(map,cartelData,registration,selectCartel);setMapSource(mapSource);
+ let contextArtwork=null;
+ try{contextArtwork=await loadContextArtwork(cartelData);$('map-card').dataset.contextStatus='ready';}
+ catch(error){$('map-card').dataset.contextStatus='error';$('map-notice').textContent=error.message+' Los senderos originales siguen disponibles.';$('map-notice').dataset.kind='source';$('map-notice').hidden=false;}
+ cartelLayer=createCartelLayer(map,cartelData,registration,selectCartel,contextArtwork);setMapSource(mapSource);
 }
 async function ensureMap(){
  if(loadPromise)return loadPromise;

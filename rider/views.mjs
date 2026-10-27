@@ -171,7 +171,9 @@ export function setupCyclingViews({directory,catalog,getGeo,getPreview,actions})
   byId('rider-record-pause').hidden=a?.status!=='recording';byId('rider-record-resume').hidden=a?.status!=='paused';byId('rider-record-finish').hidden=!a;
   byId('rider-speed').textContent=s.mode==='gps'&&recent&&Number.isFinite(raw.speed)&&raw.speed>=0?(raw.speed*3.6).toFixed(1):'—';byId('rider-time').textContent=duration(a?.durationMs||0);byId('rider-distance').textContent=km(a?.distanceM||0);byId('rider-record-state').textContent=a?.status==='recording'?'Grabando · Auto-pausa no disponible':a?'Pausada':'Sin grabación';
   byId('rider-hud-accuracy').textContent=s.mode==='demo'?'Demo · Posición simulada':s.mode==='off'?'Ubicación desactivada':raw?`GPS ±${Math.round(raw.accuracy)} m · ${Math.max(0,Math.floor((Date.now()-raw.timestamp)/1000))} s`:'Esperando lectura GPS';
-  byId('rider-hud-source').textContent=a?'Registro local':s.mode==='demo'?'No se graba':'Consulta GPS';byId('rider-route-heading').textContent=s.result?.route?'Pista probable: '+(target(s.result.route.targetId)?.name||s.result.route.name):target(targetId)?.name||'Mapa en ruta';
+  const official=byId('map-card').dataset.source==='cartel';
+  byId('rider-route-guidance').textContent=official?'Plano oficial · Ubicación aproximada, GPS sin ajuste':'Pista probable sobre OSM · Sin indicaciones de giro';
+  byId('rider-hud-source').textContent=a?'Registro local':s.mode==='demo'?'No se graba':'Consulta GPS';byId('rider-route-heading').textContent=official?(target(targetId)?.name||'Mapa en ruta'):s.result?.route?'Pista probable: '+(target(s.result.route.targetId)?.name||s.result.route.name):target(targetId)?.name||'Mapa en ruta';
  }
  function render(){if(disposed)return;if(current==='rutas')renderRoutes();if(current==='detalle')renderDetail();if(current==='perfil')renderProfile();if(current==='encuentros')renderMeetups();placeFeedback();renderHud();}
  // Refresh previews/data only for the currently active route; no awaited render

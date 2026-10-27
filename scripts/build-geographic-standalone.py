@@ -37,10 +37,11 @@ if visual_path.exists():
 registration = (root / 'data/el-durazno/cartel-registration.json').read_text()
 assert hashlib.sha256(visual_path.read_bytes()).hexdigest() == next(s['sha256'] for s in json.loads(registration)['sources'] if s['id'] == 'native-sign-artwork'), 'Cartel source artwork changed'
 payload += '<script id="embedded-cartel-registration" type="application/json">' + registration.replace('<', '\\u003c') + '</script>'
+payload += '<script id="embedded-cartel-context" type="application/json">' + (root / 'data/el-durazno/cartel-context.json').read_text().replace('<', '\\u003c') + '</script>'
 modules = []
-for path in ['geographic/cartel.mjs', 'geographic/data.mjs', 'geographic/catalog.mjs', 'review/geometry.mjs', 'review/sha256.mjs', 'geographic/sign.mjs']:
+for path in ['geographic/cartel.mjs', 'geographic/cartel-context.mjs', 'geographic/data.mjs', 'geographic/catalog.mjs', 'review/geometry.mjs', 'review/sha256.mjs', 'geographic/sign.mjs']:
     text = re.sub(r'^import .*?;\n', '', (root / path).read_text(), flags=re.M)
-    modules.append(text.replace('export function ', 'function '))
+    modules.append(text.replace('export function ', 'function ').replace('export async function ', 'async function ').replace('export const ', 'const '))
 # Preserve independent lexical scopes when bundling navigation modules.
 for path, namespace, exports, bindings in [
     ('navigation/matcher.mjs', 'MapasGPSMatcher', 'createRouteMatcher', ''),

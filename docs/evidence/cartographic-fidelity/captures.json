@@ -1,0 +1,50 @@
+[
+  {
+    "version": "before",
+    "park": "el-durazno",
+    "viewport": [
+      390,
+      844
+    ],
+    "source": "cartel",
+    "view": "-33.3427769,-70.4986581,12.75",
+    "loadedTiles": 15,
+    "errors": []
+  },
+  {
+    "version": "before",
+    "park": "parquemet",
+    "viewport": [
+      390,
+      844
+    ],
+    "source": "osm",
+    "view": "-33.4483048,-70.6204111,12.5",
+    "loadedTiles": 20,
+    "errors": []
+  },
+  {
+    "version": "after",
+    "park": "el-durazno",
+    "viewport": [
+      390,
+      844
+    ],
+    "source": "cartel",
+    "view": "-33.3427769,-70.4986581,12.75",
+    "loadedTiles": 15,
+    "errors": []
+  },
+  {
+    "version": "after",
+    "park": "parquemet",
+    "viewport": [
+      390,
+      844
+    ],
+    "source": "osm",
+    "view": "-33.4483048,-70.6204111,12.5",
+    "loadedTiles": 20,
+    "errors": []
+  }
+]

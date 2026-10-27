@@ -1,0 +1,610 @@
+{
+  "status": "unvalidated-no-new-accepted-controls",
+  "acceptedControlCount": 0,
+  "independentAcceptedCheckPointCount": 0,
+  "registrationMatrixUnchanged": [
+    1.7954033321768108,
+    -0.04585917216400048,
+    -0.04585917216400048,
+    -1.7954033321768108,
+    -7850590.02345322,
+    -3934056.979365916
+  ],
+  "acceptedTransform": null,
+  "candidateRows": [
+    {
+      "feature": "Buitrera viewpoint symbol center",
+      "imagePixel": [
+        1869.52205,
+        634.28324
+      ],
+      "imageDrawingIndices": [
+        1090
+      ],
+      "osmType": "node",
+      "osmId": 4705647672,
+      "coordinateLonLat": [
+        -70.493732,
+        -33.301319
+      ],
+      "osmTags": {
+        "name": "Buitrera",
+        "tourism": "viewpoint"
+      },
+      "osmVersion": {
+        "version": "2",
+        "changeset": "113876046",
+        "timestamp": "2021-11-17T01:25:04Z"
+      },
+      "currentExperimentalDifferenceM": 89.408,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "Exact place name and viewpoint category form a plausible semantic match. Its square icon is graphic placement, with no point, leader or stated anchor tying its center to that coordinate. Viewpoint, ascent endpoint and nearby statue are different features.",
+      "status": "candidate-not-accepted",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "Virgen statue symbol center",
+      "imagePixel": [
+        1860.20534,
+        595.51355
+      ],
+      "imageDrawingIndices": [
+        2054,
+        2055
+      ],
+      "osmType": "node",
+      "osmId": 9258698197,
+      "coordinateLonLat": [
+        -70.4937586,
+        -33.300859
+      ],
+      "osmTags": {
+        "artwork_type": "statue",
+        "name": "Virgen",
+        "tourism": "artwork"
+      },
+      "osmVersion": {
+        "version": "1",
+        "changeset": "113876046",
+        "timestamp": "2021-11-17T01:25:04Z"
+      },
+      "currentExperimentalDifferenceM": 90.139,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "Distinctive Virgen icon and OSM artwork_type=statue are the strongest semantic match. The symbol center is displaced from the nearby La Virgen endpoint. Neither source specifies the physical statue anchor within this cartographic symbol.",
+      "status": "candidate-not-accepted",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "La Virgen upper hollow endpoint",
+      "imagePixel": [
+        1831.30068,
+        604.39403
+      ],
+      "imageDrawingIndices": [
+        33,
+        34
+      ],
+      "osmType": "node",
+      "osmId": 9258698197,
+      "coordinateLonLat": [
+        -70.4937586,
+        -33.300859
+      ],
+      "osmTags": {
+        "artwork_type": "statue",
+        "name": "Virgen",
+        "tourism": "artwork"
+      },
+      "osmVersion": {
+        "version": "1",
+        "changeset": "113876046",
+        "timestamp": "2021-11-17T01:25:04Z"
+      },
+      "currentExperimentalDifferenceM": 66.868,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "A trail endpoint and a statue are not interchangeable. Source artwork separates the hollow endpoint from the statue icon; OSM statue identity does not prove this circle is the same real location.",
+      "status": "rejected-as-interchangeable-control",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "papaya-marker-1",
+      "imagePixel": [
+        885.47719,
+        2030.07181
+      ],
+      "imageDrawingIndices": [
+        20
+      ],
+      "osmType": "node",
+      "osmId": 6993096511,
+      "coordinateLonLat": [
+        -70.5098757,
+        -33.3194703
+      ],
+      "osmTags": {},
+      "osmVersion": {
+        "version": "1",
+        "changeset": "77337384",
+        "timestamp": "2019-11-20T16:56:59Z"
+      },
+      "currentExperimentalDifferenceM": 43.847,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "Same-name route end is a hypothesis only; no physical endpoint identity, source survey or independent image correspondence establishes this pair.",
+      "status": "candidate-not-accepted",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "papaya-marker-2",
+      "imagePixel": [
+        1100.67587,
+        1797.74382
+      ],
+      "imageDrawingIndices": [
+        21,
+        22
+      ],
+      "osmType": "node",
+      "osmId": 6993090732,
+      "coordinateLonLat": [
+        -70.5059531,
+        -33.3159794
+      ],
+      "osmTags": {},
+      "osmVersion": {
+        "version": "1",
+        "changeset": "77337384",
+        "timestamp": "2019-11-20T16:56:59Z"
+      },
+      "currentExperimentalDifferenceM": 14.591,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "Same-name route end is a hypothesis only; no physical endpoint identity, source survey or independent image correspondence establishes this pair.",
+      "status": "candidate-not-accepted",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "lomo-vetado-marker-1",
+      "imagePixel": [
+        1214.56054,
+        1605.57163
+      ],
+      "imageDrawingIndices": [
+        40
+      ],
+      "osmType": "node",
+      "osmId": 4705608441,
+      "coordinateLonLat": [
+        -70.5036907,
+        -33.3138365
+      ],
+      "osmTags": {
+        "information": "map",
+        "map_size": "route",
+        "map_type": "cycleway",
+        "name": "Bikepark El Durazno",
+        "tourism": "information"
+      },
+      "osmVersion": {
+        "version": "3",
+        "changeset": "113876046",
+        "timestamp": "2021-11-17T01:25:04Z"
+      },
+      "currentExperimentalDifferenceM": 52.038,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "Same-name route end is a hypothesis only; no physical endpoint identity, source survey or independent image correspondence establishes this pair. Material conflict: two separate image endpoints (Lomo Vetado and Calibre12) are proposed for this same OSM node.",
+      "status": "candidate-not-accepted",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "lomo-vetado-marker-2",
+      "imagePixel": [
+        1901.8542,
+        890.99299
+      ],
+      "imageDrawingIndices": [
+        41,
+        42
+      ],
+      "osmType": "node",
+      "osmId": 4705608466,
+      "coordinateLonLat": [
+        -70.4923871,
+        -33.3040099
+      ],
+      "osmTags": {},
+      "osmVersion": {
+        "version": "1",
+        "changeset": "46400952",
+        "timestamp": "2017-02-25T19:36:27Z"
+      },
+      "currentExperimentalDifferenceM": 36.34,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "Same-name route end is a hypothesis only; no physical endpoint identity, source survey or independent image correspondence establishes this pair. The two upper image ends are about10.27px apart while the corresponding OSM nodes are about56.9m apart, another unverified map/OSM extent discrepancy.",
+      "status": "candidate-not-accepted",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "calibre-12-marker-1",
+      "imagePixel": [
+        1906.90834,
+        899.93483
+      ],
+      "imageDrawingIndices": [
+        44,
+        45
+      ],
+      "osmType": "node",
+      "osmId": 4705609090,
+      "coordinateLonLat": [
+        -70.4928546,
+        -33.3043399
+      ],
+      "osmTags": {},
+      "osmVersion": {
+        "version": "1",
+        "changeset": "46400952",
+        "timestamp": "2017-02-25T19:36:27Z"
+      },
+      "currentExperimentalDifferenceM": 19.427,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "Same-name route end is a hypothesis only; no physical endpoint identity, source survey or independent image correspondence establishes this pair. The two upper image ends are about10.27px apart while the corresponding OSM nodes are about56.9m apart, another unverified map/OSM extent discrepancy.",
+      "status": "candidate-not-accepted",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "calibre-12-marker-2",
+      "imagePixel": [
+        1243.32234,
+        1616.35474
+      ],
+      "imageDrawingIndices": [
+        46
+      ],
+      "osmType": "node",
+      "osmId": 4705608441,
+      "coordinateLonLat": [
+        -70.5036907,
+        -33.3138365
+      ],
+      "osmTags": {
+        "information": "map",
+        "map_size": "route",
+        "map_type": "cycleway",
+        "name": "Bikepark El Durazno",
+        "tourism": "information"
+      },
+      "osmVersion": {
+        "version": "3",
+        "changeset": "113876046",
+        "timestamp": "2021-11-17T01:25:04Z"
+      },
+      "currentExperimentalDifferenceM": 16.008,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "Same-name route end is a hypothesis only; no physical endpoint identity, source survey or independent image correspondence establishes this pair. Material conflict: two separate image endpoints (Lomo Vetado and Calibre12) are proposed for this same OSM node.",
+      "status": "candidate-not-accepted",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "parcero-marker-1",
+      "imagePixel": [
+        881.79891,
+        2012.18902
+      ],
+      "imageDrawingIndices": [
+        24
+      ],
+      "osmType": "node",
+      "osmId": 6993096492,
+      "coordinateLonLat": [
+        -70.5097711,
+        -33.3191924
+      ],
+      "osmTags": {},
+      "osmVersion": {
+        "version": "1",
+        "changeset": "77337384",
+        "timestamp": "2019-11-20T16:56:59Z"
+      },
+      "currentExperimentalDifferenceM": 33.65,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "Same-name route end is a hypothesis only; no physical endpoint identity, source survey or independent image correspondence establishes this pair.",
+      "status": "candidate-not-accepted",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "parcero-marker-2",
+      "imagePixel": [
+        1093.56741,
+        1786.58328
+      ],
+      "imageDrawingIndices": [
+        25,
+        26
+      ],
+      "osmType": "node",
+      "osmId": 4718549998,
+      "coordinateLonLat": [
+        -70.5057756,
+        -33.3159629
+      ],
+      "osmTags": {},
+      "osmVersion": {
+        "version": "1",
+        "changeset": "46598584",
+        "timestamp": "2017-03-05T15:20:17Z"
+      },
+      "currentExperimentalDifferenceM": 34.856,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "Same-name route end is a hypothesis only; no physical endpoint identity, source survey or independent image correspondence establishes this pair.",
+      "status": "candidate-not-accepted",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "cebolla-marker-1",
+      "imagePixel": [
+        1216.54861,
+        2010.09701
+      ],
+      "imageDrawingIndices": [
+        16
+      ],
+      "osmType": "node",
+      "osmId": 4705617530,
+      "coordinateLonLat": [
+        -70.5043398,
+        -33.3191802
+      ],
+      "osmTags": {},
+      "osmVersion": {
+        "version": "2",
+        "changeset": "117540504",
+        "timestamp": "2022-02-17T22:31:19Z"
+      },
+      "currentExperimentalDifferenceM": 22.292,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "Same-name route end is a hypothesis only; no physical endpoint identity, source survey or independent image correspondence establishes this pair.",
+      "status": "candidate-not-accepted",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "cebolla-marker-2",
+      "imagePixel": [
+        1182.98966,
+        1809.8995
+      ],
+      "imageDrawingIndices": [
+        17,
+        18
+      ],
+      "osmType": "node",
+      "osmId": 4705617587,
+      "coordinateLonLat": [
+        -70.5048325,
+        -33.3161822
+      ],
+      "osmTags": {},
+      "osmVersion": {
+        "version": "1",
+        "changeset": "46400952",
+        "timestamp": "2017-02-25T19:42:15Z"
+      },
+      "currentExperimentalDifferenceM": 15.488,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "Same-name route end is a hypothesis only; no physical endpoint identity, source survey or independent image correspondence establishes this pair.",
+      "status": "candidate-not-accepted",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "Main map entrance / inset ACCESO",
+      "imagePixel": null,
+      "imageDrawingIndices": null,
+      "osmType": "node",
+      "osmId": 9258698133,
+      "coordinateLonLat": [
+        -70.5121506,
+        -33.3232656
+      ],
+      "osmTags": {
+        "entrance": "yes"
+      },
+      "osmVersion": {
+        "version": "1",
+        "changeset": "113876046",
+        "timestamp": "2021-11-17T01:25:04Z"
+      },
+      "currentExperimentalDifferenceM": null,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "OSM entrance belongs to fence and ascent, but no unique entrance anchor is marked on the main trail map. ACCESO exists in a separately boxed enlarged operations inset and cannot be transformed with the main map as one coordinate frame.",
+      "status": "blocked-no-main-map-pixel",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "Generic park marker",
+      "imagePixel": null,
+      "imageDrawingIndices": null,
+      "osmType": "node",
+      "osmId": 9258698134,
+      "coordinateLonLat": [
+        -70.5128438,
+        -33.3218441
+      ],
+      "osmTags": {
+        "leisure": "sports_centre",
+        "name": "Bikepark RKF El Durazno",
+        "website": "https://www.outlife.cl/parques/rkf-el-durazno/"
+      },
+      "osmVersion": {
+        "version": "1",
+        "changeset": "113876046",
+        "timestamp": "2021-11-17T01:25:04Z"
+      },
+      "currentExperimentalDifferenceM": null,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "A sports_centre/name point is not a gate or a specific ground feature. It is about171m from the separately mapped entrance; no image pixel can be assigned defensibly.",
+      "status": "rejected-generic-park-marker",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "Plaza de Los Saltos viewpoint",
+      "imagePixel": null,
+      "imageDrawingIndices": null,
+      "osmType": "node",
+      "osmId": 9258698201,
+      "coordinateLonLat": [
+        -70.5037364,
+        -33.3136744
+      ],
+      "osmTags": {
+        "name": "Plaza de Los Saltos",
+        "tourism": "viewpoint"
+      },
+      "osmVersion": {
+        "version": "1",
+        "changeset": "113876046",
+        "timestamp": "2021-11-17T01:25:04Z"
+      },
+      "currentExperimentalDifferenceM": null,
+      "differenceMeaning": "Diagnostic displacement under current experimental model, not measured positional accuracy.",
+      "reason": "OSM has a named viewpoint, but the official map has several viewpoint symbols without this name and no unique pixel match. The nearby information-map node4705608441 is about18.5m away and is not interchangeable.",
+      "status": "blocked-no-unique-pixel",
+      "acceptedControl": false,
+      "independentHoldout": false
+    },
+    {
+      "feature": "Main operations building drawn footprint",
+      "imagePixel": [
+        752.77096,
+        2260.8965
+      ],
+      "imagePixelMeaning": "bounding-box center, not accepted ground point",
+      "imageDrawingIndices": [
+        2797,
+        2798
+      ],
+      "osmType": "way",
+      "osmId": 1003300252,
+      "coordinateLonLat": [
+        -70.51258435,
+        -33.32176455
+      ],
+      "osmTags": {
+        "building": "yes",
+        "name": "Outlife",
+        "operator": "RKF",
+        "shop": "bicycle"
+      },
+      "osmCornerNodes": [
+        {
+          "osmNodeId": 9258698162,
+          "coordinateLonLat": [
+            -70.5126494,
+            -33.3217881
+          ]
+        },
+        {
+          "osmNodeId": 9258698163,
+          "coordinateLonLat": [
+            -70.5125662,
+            -33.3218239
+          ]
+        },
+        {
+          "osmNodeId": 9258698164,
+          "coordinateLonLat": [
+            -70.512518,
+            -33.3217388
+          ]
+        },
+        {
+          "osmNodeId": 9258698165,
+          "coordinateLonLat": [
+            -70.5126038,
+            -33.3217074
+          ]
+        }
+      ],
+      "currentExperimentalDifferenceM": 85.21,
+      "reason": "Outlife bicycle-shop building is a plausible contextual identity, but its OSM footprint is roughly8.7x10m; the main source silhouette is an elongated irregular quadrilateral whose long sides are122.76px. At the current scale that is about184m. Building corner correspondences cannot be accepted from this schematic silhouette; inset is a separate scale.",
+      "status": "blocked-unverified-and-incompatible-footprint",
+      "acceptedControl": false,
+      "independentHoldout": false
+    }
+  ],
+  "contradictions": [
+    {
+      "name": "Lomo Vetado and Calibre12 lower endpoints",
+      "imageSeparationPx": 30.71672,
+      "currentModelSeparationLocalM": 46.12,
+      "osmSeparationLocalM": 0.0
+    },
+    {
+      "name": "Lomo Vetado and Calibre12 upper endpoints",
+      "imageSeparationPx": 10.27136,
+      "currentModelSeparationLocalM": 15.377,
+      "osmSeparationLocalM": 56.877
+    },
+    {
+      "name": "Virgen icon versus La Virgen upper trail dot",
+      "imageSeparationPx": 30.23809,
+      "currentModelSeparationLocalM": 45.416,
+      "osmSeparationLocalM": 0.0
+    }
+  ],
+  "pdfGeospatialMetadataXrefHits": [],
+  "pdfMetadata": {
+    "format": "PDF 1.6",
+    "title": "Mapa_El Durazno 2022_web",
+    "author": "",
+    "subject": "",
+    "keywords": "",
+    "creator": "Adobe Illustrator 27.0 (Windows)",
+    "producer": "Adobe PDF library 16.07",
+    "creationDate": "D:20230418092633-03'00'",
+    "modDate": "D:20230418092634-04'00'",
+    "trapped": "",
+    "encryption": null
+  },
+  "currentOperatorFetch": {
+    "requestedUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+    "finalUrl": "https://www.outlife.cl/parques/rkf-el-durazno/",
+    "retrievedAt": "2026-10-27T11:39:17.344209+00:00",
+    "status": 200,
+    "bytes": 233165,
+    "sha256": "436874d7f5ff3de9b2218fe4cbd3022d8d97ae80d861ef9b6d92a9ea3988d298",
+    "contentType": "text/html; charset=UTF-8",
+    "lastModified": "Tue, 27 Oct 2026 01:14:04 GMT"
+  },
+  "inputHashes": {
+    "data/el-durazno/geographic-references.json": "c6fbf94dd71896b867d78b668ffd58e4fabf11a5c518e7c599cc770f8f20d8a8",
+    "data/el-durazno/cartel-registration.json": "758e441e97492650a1b178941ea097ec0ab5339b153904c45f7921216ad26177",
+    "sources/el-durazno-osm.json": "b8926fb02ddcc2410850d831312e64a5c51e5aeb9db49ce970a86e418a0df318",
+    "data/el-durazno/continuous-sign-trails.json": "73521732a4b58bcd14a0aefc17697dca35e5aa05f8f7bd5d3830f2c661f56f78"
+  },
+  "retainedFullOsmXml": {
+    "path": "Local evidence retained: osm-area.xml",
+    "sha256": "d8aae668ead1085372efecd2078d7abf83fd06473fd6ba4b301b6f5705ba374b"
+  },
+  "independentEvidenceAssessment": [
+    "Operator JPG/PDF/current page are one source family; current page still links2022 artwork and gives address, no coordinate pairs or GPX/KML/GeoJSON.",
+    "Seven held-out routes are excluded from fitting, but derive from the same OSM source and are not independent surveyed validation.",
+    "Named OSM POIs and operations building were edited together in changeset113876046; matching mapper/source dates do not establish independent accuracy.",
+    "Municipal documents corroborate broad road context only; no precise gate/trail coordinates were published in retained evidence. Previously denied direct municipal requests were not retried.",
+    "The main operations silhouette and enlarged operations inset are not valid building-corner controls.",
+    "No Trailforks geometry, paid imagery, guessed endpoint, field GPS or new private source was used."
+  ],
+  "actualBlocker": "No reviewed unambiguous main-map pixel/ground-coordinate pairs and no independent checks distributed across the trail area, especially north/east. Need legitimate georeferenced operator source or a controlled remote landmark/orthophoto comparison with known datum and independent checkpoints; merely changing the matrix cannot establish improvement."
+}

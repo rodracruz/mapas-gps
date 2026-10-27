@@ -1,0 +1,219 @@
+{
+  "auditDateUTC": "2026-10-27",
+  "scope": "read-only Parquemet official document versus native visual datasets and geographic renderer",
+  "baselineCommit": "8f6d6ca",
+  "conclusion": "No omitted or misassigned numbered red route geometry was found. Bounded rendering defects are loss of native red stroke styling and omitted shared endpoint graphics in isolated vector mode. No geographic coordinate correction is justified by the panoramic schematic.",
+  "verifiedCounts": {
+    "redOfficialNames": 8,
+    "greenOfficialNames": 6,
+    "currentGeographicRedTargets": 8,
+    "currentGeographicGreenTargets": 6,
+    "nativeRedRouteDrawings": 43,
+    "mappedNativeRedRouteDrawings": 43,
+    "redLeaderDrawingsStoredSeparately": [
+      1309,
+      1324,
+      1325,
+      1326
+    ],
+    "missingNativeRedRouteDrawings": [],
+    "nativeRedDashedCenterlines": 11,
+    "browserGeometryAndCountsMatchAllEightRoutes": true
+  },
+  "renderFindings": [
+    {
+      "id": "red-native-style-loss",
+      "type": "verified display discrepancy, not coordinate corruption",
+      "location": "geographic/document-cycling.mjs setupDocumentCycling; geographic/trail-preview.mjs thumbnail style",
+      "drawingIndices": [
+        1260,
+        1262,
+        1267,
+        1277,
+        1281,
+        1284,
+        1288,
+        1292,
+        1296,
+        1272,
+        1299
+      ],
+      "sourceStyle": "Each listed native centerline has a nonempty strokeDasharray; original widths/dash offsets are present in visual JSON.",
+      "currentBehavior": "Document renderer removes stroke-dasharray and forces width 3/non-scaling-stroke for red trail strokes; thumbnail renderer also omits dashes. Geometry d values remain exact. Overlay also paints source curves above labels, including the badge 1 and cable car.",
+      "boundedAction": "Preserve native line styling in faithful document modes. Keep source paths and source gaps unchanged. Any optional emphasis should be distinguished from the native rendering.",
+      "evidence": [
+        "centenario-native-raster-browser.png",
+        "centenario-current-overlay-browser.png",
+        "browser-render-comparison.json"
+      ]
+    },
+    {
+      "id": "isolated-shared-endpoint-graphics",
+      "type": "verified omitted source graphic in isolated vectors, not a missing centerline",
+      "currentBehavior": "Renderer creates each group from trail.paths only. sharedEndpointDrawingIds are not consumed. In isolated mode the group owning the shared marker is hidden. Raster-backed mode may still show the original circle underneath.",
+      "affectedReferences": [
+        {
+          "referencingTrailId": "centenario",
+          "sourceOwnerTrailId": "cuatro-y-medio",
+          "drawingIndex": 1269,
+          "boundsDocumentXYWH": [
+            1647.646240234375,
+            1206.27734375,
+            8.9710693359375,
+            8.969970703125
+          ],
+          "centerDocumentXY": [
+            1652.1317749023438,
+            1210.7623291015625
+          ],
+          "role": "endpoint-marker",
+          "meaning": "shared source graphic only; no inferred traversable junction"
+        },
+        {
+          "referencingTrailId": "la-s",
+          "sourceOwnerTrailId": "anfiteatro",
+          "drawingIndex": 1279,
+          "boundsDocumentXYWH": [
+            3502.951171875,
+            1250.21728515625,
+            8.861083984375,
+            8.862060546875
+          ],
+          "centerDocumentXY": [
+            3507.3817138671875,
+            1254.6483154296875
+          ],
+          "role": "endpoint-marker",
+          "meaning": "shared source graphic only; no inferred traversable junction"
+        },
+        {
+          "referencingTrailId": "zorzal",
+          "sourceOwnerTrailId": "anfiteatro",
+          "drawingIndex": 1279,
+          "boundsDocumentXYWH": [
+            3502.951171875,
+            1250.21728515625,
+            8.861083984375,
+            8.862060546875
+          ],
+          "centerDocumentXY": [
+            3507.3817138671875,
+            1254.6483154296875
+          ],
+          "role": "endpoint-marker",
+          "meaning": "shared source graphic only; no inferred traversable junction"
+        },
+        {
+          "referencingTrailId": "pa-arriba",
+          "sourceOwnerTrailId": "anfiteatro",
+          "drawingIndex": 1279,
+          "boundsDocumentXYWH": [
+            3502.951171875,
+            1250.21728515625,
+            8.861083984375,
+            8.862060546875
+          ],
+          "centerDocumentXY": [
+            3507.3817138671875,
+            1254.6483154296875
+          ],
+          "role": "endpoint-marker",
+          "meaning": "shared source graphic only; no inferred traversable junction"
+        }
+      ],
+      "boundedAction": "Resolve shared marker references for display when isolating their referencing trail; deduplicate by drawingIndex in combined display if necessary. Reusing a graphic must not create topological or GPS links.",
+      "evidence": [
+        "centenario-current-vectors-browser.png",
+        "red-route-inventory.json"
+      ]
+    }
+  ],
+  "notNewRedGeometryBugs": {
+    "anfiteatroSourceGaps": [
+      {
+        "fromDrawingIndex": 1285,
+        "toDrawingIndex": 1280,
+        "from": [
+          3118.8994140625,
+          1406.07666015625
+        ],
+        "to": [
+          3168.421875,
+          1406.76806640625
+        ],
+        "documentGapPixels": 49.527287225414966,
+        "interpolated": false,
+        "reason": "No native red trail path between these source drawing groups"
+      },
+      {
+        "fromDrawingIndex": 1282,
+        "toDrawingIndex": 1276,
+        "from": [
+          3196.68994140625,
+          1338.1416015625
+        ],
+        "to": [
+          3223.7001953125,
+          1324.92578125
+        ],
+        "documentGapPixels": 30.070113445286186,
+        "interpolated": false,
+        "reason": "No native red trail path between these source drawing groups"
+      }
+    ],
+    "greenUnassignedDrawings": [
+      [
+        1394,
+        1395,
+        1396
+      ],
+      [
+        1397,
+        1398,
+        1399
+      ],
+      [
+        1400,
+        1401,
+        1402
+      ]
+    ],
+    "greenUnassignedExplanation": "Unnumbered dotted green source paths near red Paso no habilitado signs are explicitly pending; source image retains them. They do not justify attribution to a numbered red trail or geographic coordinates.",
+    "pedestrianScope": "The 8 yellow pedestrian legend entries are visible in the original PDF and intentionally outside the current cycling/shared route layers. Their absence is not a missing numbered red branch.",
+    "avenueScope": "visual-avenues contains reviewed raster crops/references, zero extracted road centerlines. Compound source road polygons 738 and748 cannot be assigned individually by proximity."
+  },
+  "geographicLimits": {
+    "visualToGeographicTransform": null,
+    "navigationValidated": false,
+    "acceptedCRSOrControlPoints": false,
+    "conclusion": "The official PDF is a panoramic relief schematic without accepted page georeferencing. Its curves are faithful in document pixels only. Current EPSG:4326 lines come from complete, ordered OSM ways attributed by explicit names/IDs, not from the PDF. Name/sector correspondence and separate published distances do not certify identical path extent, shape or current access. No global affine/geographic registration or endpoint interpolation can be justified by the retained material.",
+    "osmSourceSnapshot": "sources/parquemet-avenues-osm.json",
+    "osmSnapshotSha256": "cf2aa2e2e548e1181a230966e7b6954b4403a6493212cea3c375032e775bc7bc"
+  },
+  "validation": {
+    "allThreeExtractorsCheck": "pass byte-for-byte: cycling, Paseo, avenues",
+    "targetedNodeTests": {
+      "passed": 25,
+      "failed": 0
+    },
+    "browser": {
+      "viewport": [
+        1200,
+        900
+      ],
+      "errors": [],
+      "externalRequests": "aborted; local assets only",
+      "allEightRedDValuesAndPathCounts": "match native datasets exactly"
+    },
+    "productionEdits": false,
+    "publication": false,
+    "networkResearch": false
+  },
+  "sourceSha256": {
+    "sources/parquemet-mapa-oficial.pdf": "e7606172479a0fd585f7f3dcb4187556a202778cd647b31f44aaefcf9bd03cf8",
+    "sources/parquemet-mapa-oficial.jpg": "e0d91c5e90bbc290ae1af71d1b51e29960f682ab5dd242c3b24ede003f0a7dd3",
+    "data/parquemet/visual-cycling-trails.json": "10c75c0778494a0d4b04a2005316a351261a6fa5d95e45a7117d8ffa70169eba",
+    "data/parquemet/visual-paseo-trails.json": "e7b938e8d032feae33ffb67d0b5ab7e5b0e681b96657a6426e8bb4a10284e2e6",
+    "data/parquemet/visual-avenues.json": "828f1e45b2d18ce35b0547b672f5cfa346c6541873f6c6f7eaa0b6ba4a12ea20"
+  }
+}

@@ -58,3 +58,9 @@ body[data-rider-view=mapa] .fullscreen:has(.route-sheet:not([hidden])) .gps-pane
 }
 /* Keep opt-in GPS reachable when Parquemet's legacy route sheet is selected. */
 body[data-rider-view=mapa] .fullscreen .gps-panel{display:block!important}
+/* Legacy failed-tile rules use two IDs and otherwise place Stop GPS behind the
+   activity HUD. Keep the actual controls above it when reviewing a source route. */
+@media(orientation:portrait) and (max-height:620px){
+ body[data-rider-view=mapa] #map-card.fullscreen:has(#gps-panel>#map-notice:not([hidden])) .route-sheet{max-height:45px}
+ body[data-rider-view=mapa] #map-card.fullscreen:has(.route-sheet:not([hidden])):has(#gps-panel>#map-notice:not([hidden])) .gps-panel{bottom:calc(var(--rider-hud-height,155px) + 72px)}
+}
